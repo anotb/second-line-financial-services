@@ -28,10 +28,10 @@
       "from": "../../capability-plugins/ai-governance-model-risk/skills/ai-act-triage"
     },
     {
-      "from": "../../capability-plugins/ai-governance-model-risk/skills/ai-vendor-review"
+      "from": "../../capability-plugins/ai-governance-model-risk/skills/board-ai-risk-pack"
     },
     {
-      "from": "../../capability-plugins/ai-governance-model-risk/skills/board-ai-risk-pack"
+      "from": "../../capability-plugins/ai-governance-model-risk/skills/prompt-injection-risk"
     }
   ]
 }

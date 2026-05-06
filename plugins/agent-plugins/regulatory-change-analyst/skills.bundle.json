@@ -13,7 +13,7 @@
       "from": "../../capability-plugins/regulatory-change-management/skills/regulatory-impact-assessment"
     },
     {
-      "from": "../../capability-plugins/regulatory-change-management/skills/rule-to-obligation-map"
+      "from": "../../capability-plugins/regulatory-change-management/skills/rule-to-obligation-extraction"
     },
     {
       "from": "../../capability-plugins/regulatory-change-management/skills/policy-diff"

@@ -48,7 +48,7 @@ The named, dated regulatory sources this skill anchors to. Sector and cross-cutt
 
 - **FINRA Rule book** indexed at https://www.finra.org/rules-guidance/rulebooks/finra-rules . FINRA rule-filing alignment matters when an SEC adopting release implicates FINRA rule changes (the FINRA filing follows under SEC Rule 19b-4) [verify Rule 19b-4 subsection].
 
-- **FINRA Annual Regulatory Oversight Report** (annual). Combined examination priorities and findings; the assessment's strategy lens reads against this for FINRA-side examiner posture. https://www.finra.org/rules-guidance/guidance/reports .
+- **FINRA Annual Regulatory Oversight Report** (annual) [verify section in most recent annual report]. Combined examination priorities and findings; the assessment's strategy lens reads against this for FINRA-side examiner posture. https://www.finra.org/rules-guidance/guidance/reports .
 
 ## NYDFS and state regulators — Industry Letters, regulations, market-conduct frame
 
@@ -70,17 +70,17 @@ The named, dated regulatory sources this skill anchors to. Sector and cross-cutt
 
 ## FinCEN — advisories, rules, geographic targeting orders
 
-- **FinCEN Advisories** indexed at https://www.fincen.gov/resources/advisories . Topic-specific advisories on emerging typologies, sanctions evasion patterns, and red-flag indicators; the assessment cites the advisory by FIN-XXXX-A-XXX number [verify advisory number and date per assessment].
+- **FinCEN Advisories** indexed at https://www.fincen.gov/resources/advisories [verify section in specific advisory]. Topic-specific advisories on emerging typologies, sanctions evasion patterns, and red-flag indicators; the assessment cites the advisory by FIN-XXXX-A-XXX number [verify advisory number and date per assessment].
 
 - **FinCEN final rules** (e.g., 31 CFR 1010.230 beneficial ownership) [verify subsection labels]. https://www.ecfr.gov/current/title-31/chapter-X .
 
-- **FinCEN Geographic Targeting Orders** [verify GTO publication date and scope]. Time-limited reporting requirements that can shift the firm's BSA reporting posture for specific transaction types and geographies. https://www.fincen.gov/resources/financial-institutions/geographic-targeting-orders .
+- **FinCEN Geographic Targeting Orders** [verify GTO publication date, section, and scope]. Time-limited reporting requirements that can shift the firm's BSA reporting posture for specific transaction types and geographies. https://www.fincen.gov/resources/financial-institutions/geographic-targeting-orders .
 
 ## OMB Circular A-4 and federal regulatory-analysis convention
 
 - **OMB Circular A-4 — Regulatory Analysis** (revised November 9, 2023). The Office of Management and Budget's framework for federal regulatory analysis; section 4 baseline construction; section 5 benefits and costs; section 6 distributional effects; section 7 alternatives. The assessment's cost-to-comply read calibrates against agency cost-and-benefit analyses prepared under A-4 but does not adopt them as ground truth without firm-side validation. https://www.whitehouse.gov/wp-content/uploads/2023/11/CircularA-4.pdf .
 
-- **Executive Order 12866 — Regulatory Planning and Review** (September 30, 1993; as amended). The framework under which federal agencies submit significant rulemakings to OIRA review and publish regulatory-impact analyses; the assessment's strategy lens reads against the agency's RIA when one is published. https://www.archives.gov/files/federal-register/executive-orders/pdf/12866.pdf .
+- **Executive Order 12866 — Regulatory Planning and Review** (September 30, 1993; as amended) [verify section in current executive-order text]. The framework under which federal agencies submit significant rulemakings to OIRA review and publish regulatory-impact analyses; the assessment's strategy lens reads against the agency's RIA when one is published. https://www.archives.gov/files/federal-register/executive-orders/pdf/12866.pdf .
 
 - **Federal Register impact-analysis convention**. Each Federal Register adopting release for a significant rule includes an "Effects of the Rule," "Regulatory Flexibility Act analysis," "Paperwork Reduction Act analysis," "Unfunded Mandates Reform Act analysis," and "Congressional Review Act analysis" section [verify section labels]. The assessment's source-identification block reads against these sections for the agency's own scoping read; the firm-side read calibrates against, and where appropriate diverges from, the agency analysis. https://www.federalregister.gov/ .
 
@@ -96,23 +96,21 @@ The named, dated regulatory sources this skill anchors to. Sector and cross-cutt
 
 - **FRB Supervisory Priorities communications** [verify specific publication]. FRB publishes supervisory priorities communications periodically (the FRB's annual report on banking-supervision activities includes a forward-looking section); the assessment's strategy lens reads against these communications for FRB-side signal. https://www.federalreserve.gov/publications/annual-report.htm .
 
-- **FDIC Supervisory Insights** (periodic) and FDIC's supervisory-priorities communications [verify edition]. https://www.fdic.gov/regulations/examinations/supervisory/insights/ .
+- **FDIC Supervisory Insights** (periodic) and FDIC's supervisory-priorities communications [verify edition and section]. https://www.fdic.gov/regulations/examinations/supervisory/insights/ .
 
-- **FFIEC inter-agency communications** [verify specific communication]. The FFIEC publishes interagency statements that signal coordinated supervisory direction across the federal banking agencies; the assessment's strategy lens reads against these for inter-agency signal. https://www.ffiec.gov/ .
+- **FFIEC inter-agency communications** [verify specific communication and section]. The FFIEC publishes interagency statements that signal coordinated supervisory direction across the federal banking agencies; the assessment's strategy lens reads against these for inter-agency signal. https://www.ffiec.gov/ .
 
 ## Industry associations — strategy-lens engagement channels
 
-The skill names industry-association engagement as a strategy posture in the assessment. The named associations operate public-comment-letter channels and supervisory-engagement meetings. Public sources only:
+The skill names industry-association engagement as a strategy posture in the assessment. The named associations operate public-comment-letter channels and supervisory-engagement meetings. Public sources only. Trade-association engagement channels are not regulatory citations; the assessment cites the association's public-comment-letter or position paper by document title and date when it is the source of a posture claim.
 
-- **Bank Policy Institute (BPI)** — large-bank policy and engagement. https://bpi.com/ .
-- **American Bankers Association (ABA)** — bank-trade-association policy and engagement. https://www.aba.com/ .
-- **Independent Community Bankers of America (ICBA)** — community-bank trade-association policy. https://www.icba.org/ .
-- **Securities Industry and Financial Markets Association (SIFMA)** — securities-industry policy. https://www.sifma.org/ .
-- **Investment Company Institute (ICI)** — fund-industry policy. https://www.ici.org/ .
-- **Investment Adviser Association (IAA)** — adviser-industry policy. https://www.investmentadviser.org/ .
-- **American Council of Life Insurers (ACLI)** — life-insurance-industry policy. https://www.acli.com/ .
-- **Mortgage Bankers Association (MBA)** — mortgage-industry policy. https://www.mba.org/ .
-- **National Association of Federally-Insured Credit Unions (NAFCU)** — credit-union-industry policy. https://www.nafcu.org/ .
+Banking and credit union: Bank Policy Institute (BPI; large-bank engagement), American Bankers Association (ABA), Independent Community Bankers of America (ICBA), National Association of Federally-Insured Credit Unions (NAFCU), Credit Union National Association (CUNA), Mid-Size Bank Coalition of America (MBCA).
+
+Capital markets: Securities Industry and Financial Markets Association (SIFMA), Investment Company Institute (ICI), Investment Adviser Association (IAA), Managed Funds Association (MFA), Alternative Investment Management Association (AIMA).
+
+Insurance: American Council of Life Insurers (ACLI), American Property Casualty Insurance Association (APCIA), AHIP (health), National Association of Mutual Insurance Companies (NAMIC), National Association of Insurance and Financial Advisors (NAIFA).
+
+Mortgage and consumer finance: Mortgage Bankers Association (MBA), Consumer Bankers Association (CBA), Financial Technology Association (FTA), American Fintech Council (AFC).
 
 The strategy-lens section names where the firm aligns with which association on the rule under assessment, where the firm diverges from industry consensus, and what that divergence implies for the firm's engagement posture.
 
