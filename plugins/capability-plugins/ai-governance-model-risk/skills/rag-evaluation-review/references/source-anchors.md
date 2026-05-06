@@ -24,7 +24,7 @@ A practitioner note before the list. RAG evaluation sits at a particular interse
 
 - Citation: NIST AI 600-1, "Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile" (July 2024). Relevant subcategories include Measure 2.9 (information integrity, including provenance and verifiability), Measure 1.1 (hallucination/confabulation), Manage 4.1 (deployment monitoring), and Govern 6.1 (third-party considerations) [verify exact subcategory numbering].
 - Excerpt-paraphrase: The Generative AI Profile extends the NIST AI RMF for GenAI-specific concerns. Information integrity (Measure 2.9) covers provenance and verifiability, which maps directly to the corpus-fitness and citation-precision elements of a RAG evaluation. Confabulation/hallucination (Measure 1.1) is named explicitly; the GenAI Profile recommends measurement and monitoring for confabulation rate. Deployment monitoring (Manage 4.1) covers the production-monitoring expectations. Third-party considerations (Govern 6.1) cover the foundation-model and vendor dependencies.
-- Link: https://www.nist.gov/itl/ai-risk-management-framework — Generative AI Profile (NIST AI 600-1) [verify subcategory numbering]
+- Link: https://www.nist.gov/itl/ai-risk-management-framework — Generative AI Profile (NIST AI 600-1), Measure and Manage section [verify section] for subcategory numbering
 - Notes: NIST AI RMF and the GenAI Profile are voluntary, not binding. They are the leading-practice anchor most second-line AI governance functions cite when framing grounding evaluation. The Profile names hallucination and information integrity as risks but does not specify particular metric formulas; the metric-family selection is left to the firm.
 
 ### 4. ISO/IEC 42001:2023 — Artificial Intelligence Management System
@@ -47,7 +47,7 @@ A practitioner note before the list. RAG evaluation sits at a particular interse
 
 - Citation: Industry-practice grounding-evaluation metric families commonly referenced as RAGAS-style: faithfulness (claim is entailed by retrieved context), answer relevance (response addresses the query), context precision (retrieved context contains content supporting the claim), context recall (retrieved context is sufficient to support the claim). The RAGAS framework (Es, Shahul et al., open-source library) is one named implementation; equivalent named frameworks include TruLens, DeepEval, and various in-house pipelines.
 - Excerpt-paraphrase: These metric families are the practitioner-community standard for RAG evaluation as of 2024-2026. They are not specified in any US financial-services regulator's published guidance. The metric semantics differ across implementations; in particular, "citation precision" in some implementations measures whether the output contains a citation marker, and in other implementations measures whether the cited document section supports the claim. The latter definition is the meaningful one for second-line review purposes.
-- Link: https://docs.ragas.io/ (RAGAS reference implementation, open source) and equivalent framework documentation
+- Link: https://docs.ragas.io/ — RAGAS reference implementation, metrics section (open source), and equivalent framework documentation
 - Notes: Industry-practice reference, **not binding regulation**. The skill treats this family as the practitioner-standard vocabulary for grounding evaluation. Any equivalent named framework or in-house equivalent is acceptable as long as the metric semantics are documented in the review (the `metric_definition` field carries the documentation). The skill does not endorse any specific framework; it requires that the metric semantics be explicit and that citation precision in particular be defined as supports-the-claim, not contains-a-marker.
 
 ## Sector and other secondary anchors
@@ -98,7 +98,7 @@ A practitioner note before the list. RAG evaluation sits at a particular interse
 
 - Citation: Dodd-Frank Wall Street Reform and Consumer Protection Act, §1031 (prohibition on unfair, deceptive, or abusive acts or practices) and §1036 (CFPB enforcement authority); CFPB Consumer Financial Protection Circulars on UDAAP including circulars on chatbots and AI in consumer finance.
 - Excerpt-paraphrase: The CFPB enforces the UDAAP framework for consumer-facing financial services. Inaccurate AI-generated communications (deception by inaccurate statement) are within UDAAP scope. The grounding-quality outputs and the residual risk on grounding failures are inputs to the firm's UDAAP exposure posture for any customer-facing use case.
-- Link: https://www.consumerfinance.gov/compliance/circulars/ — CFPB Circulars index, including circulars on chatbot supervision in consumer finance
+- Link: https://www.consumerfinance.gov/compliance/circulars/ — CFPB Circulars index section, including circulars on chatbot supervision in consumer finance
 - Notes: Conduct cross-cutting overlay anchor.
 
 ## Verification flags

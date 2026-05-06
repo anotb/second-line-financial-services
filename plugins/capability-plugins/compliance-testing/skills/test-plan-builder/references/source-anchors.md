@@ -48,7 +48,7 @@ The named, dated regulatory and methodology sources this skill anchors to. SKILL
 
 - **Reg B / ECOA — 12 CFR Part 1002**. §1002.4 (general rule), §1002.6 (rules concerning evaluation of applications), §1002.9 (notifications), §1002.13 (information for monitoring purposes) [verify subsection labels]. https://www.ecfr.gov/current/title-12/chapter-X/part-1002 .
 
-- **FFIEC BSA/AML Examination Manual** (current edition) [verify last-revision date], CDD module covering the periodic refresh expectation for high-risk customers. Used as the criteria anchor for CDD-refresh test plans. https://bsaaml.ffiec.gov/manual .
+- **FFIEC BSA/AML Examination Manual** (current edition) [verify section labels and last-revision date], CDD module section covering the periodic refresh expectation for high-risk customers. Used as the criteria anchor for CDD-refresh test plans. https://bsaaml.ffiec.gov/manual .
 
 - **31 CFR §1010.230 — Beneficial Ownership Requirements for Legal Entity Customers** [verify subsection labels]. FinCEN beneficial-ownership rule for entity customers; informs the CDD-refresh test plan procedures for legal-entity recertification. https://www.ecfr.gov/current/title-31/subtitle-B/chapter-X/part-1010/subpart-C/section-1010.230 .
 
@@ -102,7 +102,7 @@ The named, dated regulatory and methodology sources this skill anchors to. SKILL
 
 - **NACHA Operating Rules (current edition)** Third-Party Sender risk-management rules and ODFI obligations [verify rule citations against the firm's licensed copy]. Paywalled; cite as "current edition; specific sections to be confirmed against the firm's licensed copy." https://www.nacha.org/ .
 
-- **FFIEC BSA/AML Examination Manual** (current edition) [verify last-revision date], MSB and money-transmitter modules where applicable. https://bsaaml.ffiec.gov/manual .
+- **FFIEC BSA/AML Examination Manual** (current edition) [verify section labels and last-revision date], MSB and money-transmitter module sections where applicable. https://bsaaml.ffiec.gov/manual .
 
 ## Plugin-level shared references
 
