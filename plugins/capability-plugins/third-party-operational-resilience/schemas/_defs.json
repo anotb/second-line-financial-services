@@ -1,0 +1,93 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "third-party-operational-resilience/_defs.json",
+  "title": "Shared definitions for third-party-operational-resilience skill schemas",
+  "description": "Shared $defs that per-skill schemas in this plugin commonly redefine. Per-skill schemas should $ref these via \"../_defs.json#/$defs/<name>\" rather than redefining the same enums and shapes inline. Plugin-specific extras (criticality_tier_enum, dora_function_type_enum) sit alongside the base definitions; they show up across vendor-diligence, criticality-assessment, dora-register-builder, exit-plan, concentration-risk-review.",
+  "$defs": {
+    "severity_enum": {
+      "type": "string",
+      "enum": ["low", "medium", "high", "critical"],
+      "description": "Standard four-step severity ladder for vendor risks, contract gaps, resilience-test findings, concentration exposures."
+    },
+    "severity_enum_with_moderate": {
+      "type": "string",
+      "enum": ["low", "moderate", "high", "critical"],
+      "description": "Variant ladder used by audit findings and exam-letter ingestion where 'moderate' has settled meaning."
+    },
+    "confidence_label": {
+      "type": "string",
+      "enum": ["high", "medium", "low", "unknown"],
+      "description": "Author confidence in the artifact as a whole."
+    },
+    "owner_role": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Named firm function or role with accountability (e.g., 'Head of TPRM', 'Chief Procurement Officer', 'Head of Operational Resilience', 'CISO', 'Business Service Owner'). Never an individual person."
+    },
+    "source_trace_entry": {
+      "type": "object",
+      "required": ["claim", "source", "confidence"],
+      "additionalProperties": false,
+      "properties": {
+        "claim": {"type": "string"},
+        "source": {
+          "type": "string",
+          "description": "Document, system, person, intake field, named regulatory citation, or '[evidence needed]'."
+        },
+        "evidence_pointer": {"type": "string"},
+        "confidence": {
+          "type": "string",
+          "enum": ["high", "medium", "low", "evidence-needed"]
+        }
+      }
+    },
+    "human_review_gate": {
+      "type": "object",
+      "required": ["gate_name", "criterion", "required_reviewer_role", "stop_condition", "evidence_required", "downstream_action"],
+      "additionalProperties": false,
+      "properties": {
+        "gate_name": {"type": "string"},
+        "criterion": {"type": "string"},
+        "required_reviewer_role": {"$ref": "#/$defs/owner_role"},
+        "stop_condition": {"type": "string"},
+        "evidence_required": {
+          "type": "array",
+          "items": {"type": "string"},
+          "minItems": 1
+        },
+        "downstream_action": {"type": "string"}
+      },
+      "description": "Embedded human-review-gate descriptor. Common TPRM gates: pre-contract diligence sign-off, criticality classification approval, exit-plan testing attestation, DORA register quarterly attestation."
+    },
+    "iso_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "engagement_scope_ref": {
+      "type": "object",
+      "required": ["engagement_id", "supplied"],
+      "additionalProperties": false,
+      "properties": {
+        "engagement_id": {"type": "string"},
+        "supplied": {"type": "boolean"}
+      }
+    },
+    "criticality_tier_enum": {
+      "type": "string",
+      "enum": ["critical", "important", "standard", "low", "unassigned"],
+      "description": "Vendor or third-party criticality classification. 'critical' triggers Interagency TPRM heightened expectations and DORA Article 28 ICT-services-supporting-critical-functions treatment. 'important' triggers DORA important-function treatment under Article 8."
+    },
+    "dora_function_type_enum": {
+      "type": "string",
+      "enum": [
+        "critical-or-important-function",
+        "non-critical-non-important-function",
+        "intra-group-arrangement",
+        "ict-third-party-service-provider",
+        "subcontractor-of-ict-tpsp",
+        "n/a"
+      ],
+      "description": "DORA register classification used by dora-register-builder. 'n/a' is for non-EU-scope arrangements where the DORA classification does not apply."
+    }
+  }
+}

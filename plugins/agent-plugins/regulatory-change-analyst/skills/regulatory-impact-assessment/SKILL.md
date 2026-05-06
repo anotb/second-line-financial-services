@@ -15,7 +15,7 @@ description: |
   - Gaps are already documented and the next step is sequencing the remediation (use implementation-plan).
   - The engagement is a live exam window and the artifact needed is the engagement playbook (use exam-brief).
 
-  Anchored to: 12 CFR Part 30 Appendix B (Interagency Heightened Standards), OCC Bulletin 2013-29 and the June 2023 interagency third-party-risk guidance, FRB SR 11-7 and OCC Bulletin 2026-13 on model risk, FFIEC BSA/AML Examination Manual, CFPB Circulars and Bulletins, NYDFS Industry Letters and 23 NYCRR Part 500, SEC final rules and adopting releases via Federal Register, FinCEN advisories and rules, NCUA Letters to Credit Unions, NAIC model law adoption mechanics, ISO/IEC 42001 and NIST AI RMF for AI-related rules, OMB Circular A-4 for the cost-and-benefit baseline, the federal agencies' published statements of supervisory priorities for the strategy lens. Citations and excerpts live in `references/source-anchors.md`.
+  Anchored to: Interagency Heightened Standards, OCC Bulletin 2013-29 and the interagency third-party-risk guidance, SR 11-7, OCC Bulletin 2026-13, FFIEC BSA/AML Examination Manual, CFPB Circulars and Bulletins, NYDFS Industry Letters and 23 NYCRR Part 500, SEC final rules and adopting releases, FinCEN advisories and rules, NCUA Letters to Credit Unions, NAIC model law adoption mechanics, ISO/IEC 42001, NIST AI RMF, OMB Circular A-4, and federal agencies' published statements of supervisory priorities.
 argument-hint: "[regulatory source: rule, letter, bulletin, circular, advisory, speech, enforcement theme]"
 ---
 

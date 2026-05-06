@@ -15,7 +15,7 @@ description: |
   - The work is alert-disposition or SAR-decision QA rather than the underlying CDD posture; use `sar-decision-qa`.
   - The decision being asked for is final onboarding approval, a rating change, or a relationship exit. The skill produces review artifacts; humans rate, file, exit.
 
-  Anchored to: FFIEC BSA/AML Examination Manual (Customer Due Diligence and Beneficial Ownership Requirements for Legal Entity Customers sections), FinCEN Customer Due Diligence Final Rule (May 2016, compliance date May 11, 2018), 31 CFR §1010.230 Beneficial Ownership Rule, 31 CFR §1020.220 / §1023.220 / §1024.220 / §1025.220 / §1026.220 Customer Identification Program rules, FinCEN Beneficial Ownership Information Reporting Rule (CTA implementing rule, 31 CFR §1010.380; current effectiveness varies — date the read), FinCEN final AML rule for investment advisers (August 2024), OCC / FRB / FDIC / NCUA Joint Statement on Risk-Focused BSA/AML Supervision (July 22, 2021), and 31 CFR §1010.610 / §1010.620 (correspondent and private-banking due diligence). Citations and excerpts live in `references/source-anchors.md`.
+  Anchored to: FFIEC BSA/AML Examination Manual, FinCEN Customer Due Diligence Final Rule, FinCEN Beneficial Ownership Rule, FinCEN Customer Identification Program rules, FinCEN Beneficial Ownership Information Reporting Rule (CTA implementing rule), FinCEN final AML rule for investment advisers, OCC / FRB / FDIC / NCUA Joint Statement on Risk-Focused BSA/AML Supervision, and FinCEN correspondent and private-banking due diligence rules.
 argument-hint: "[CDD file: customer record, CIP evidence, beneficial-ownership certification, risk rating and drivers, expected-activity profile, monitoring trigger set, refresh history]"
 ---
 

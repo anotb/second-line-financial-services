@@ -1,0 +1,121 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "ai-governance-model-risk/_defs.json",
+  "title": "Shared definitions for ai-governance-model-risk skill schemas",
+  "description": "Shared $defs that per-skill schemas in this plugin commonly redefine. Per-skill schemas should $ref these via \"../_defs.json#/$defs/<name>\" rather than redefining the same enums and shapes inline. Plugin-specific extras (model_tier_enum, autonomy_level_enum, validation_depth_enum, ai_act_risk_category_enum) sit alongside the base definitions; they are common across multiple AI-governance skills (ai-risk-tiering, model-card-builder, validation-plan, agentic-ai-controls, board-ai-risk-pack, genai-pre-prod-review).",
+  "$defs": {
+    "severity_enum": {
+      "type": "string",
+      "enum": ["low", "medium", "high", "critical"],
+      "description": "Standard four-step severity ladder for risks, findings, control gaps, residual exposures, and similar ratings. Always paired with a free-text rationale field on the consuming object; severity assignment carries human review."
+    },
+    "severity_enum_with_moderate": {
+      "type": "string",
+      "enum": ["low", "moderate", "high", "critical"],
+      "description": "Variant ladder used by audit findings, exam-letter ingestion, and any artifact where 'moderate' has settled meaning in the source taxonomy."
+    },
+    "confidence_label": {
+      "type": "string",
+      "enum": ["high", "medium", "low", "unknown"],
+      "description": "Author confidence in the artifact as a whole."
+    },
+    "owner_role": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Named firm function or role with accountability (e.g., 'Head of Model Risk', 'Chief AI Officer', 'Independent Validator', 'Head of TPRM', 'CISO', 'Business Sponsor'). Never an individual person. Generic team labels are insufficient."
+    },
+    "source_trace_entry": {
+      "type": "object",
+      "required": ["claim", "source", "confidence"],
+      "additionalProperties": false,
+      "properties": {
+        "claim": {"type": "string"},
+        "source": {
+          "type": "string",
+          "description": "Document, system, person, intake field, named regulatory citation, or '[evidence needed]' when the source is not yet anchored."
+        },
+        "evidence_pointer": {
+          "type": "string",
+          "description": "Pointer back to the underlying evidence: file path, system-of-record record ID, source-anchors entry, or sample report ID."
+        },
+        "confidence": {
+          "type": "string",
+          "enum": ["high", "medium", "low", "evidence-needed"]
+        }
+      }
+    },
+    "human_review_gate": {
+      "type": "object",
+      "required": ["gate_name", "criterion", "required_reviewer_role", "stop_condition", "evidence_required", "downstream_action"],
+      "additionalProperties": false,
+      "properties": {
+        "gate_name": {"type": "string"},
+        "criterion": {"type": "string"},
+        "required_reviewer_role": {"$ref": "#/$defs/owner_role"},
+        "stop_condition": {"type": "string"},
+        "evidence_required": {
+          "type": "array",
+          "items": {"type": "string"},
+          "minItems": 1
+        },
+        "downstream_action": {"type": "string"}
+      },
+      "description": "Embedded human-review-gate descriptor. Common AI gates: independent validation (SR 11-7), AI risk committee approval, pre-prod gate, EU AI Act Article 14 oversight, agentic-controls go-live."
+    },
+    "iso_date": {
+      "type": "string",
+      "format": "date",
+      "description": "ISO 8601 calendar date (YYYY-MM-DD)."
+    },
+    "engagement_scope_ref": {
+      "type": "object",
+      "required": ["engagement_id", "supplied"],
+      "additionalProperties": false,
+      "properties": {
+        "engagement_id": {"type": "string"},
+        "supplied": {"type": "boolean"}
+      }
+    },
+    "model_tier_enum": {
+      "type": "string",
+      "enum": ["tier-1", "tier-2", "tier-3", "tier-4", "tier-unassigned"],
+      "description": "AI / model risk tier. Tier-1 = enterprise-material or customer-binding. Tier-4 = minimal exposure, monitor-only. tier-unassigned is used during intake before ai-risk-tiering has run."
+    },
+    "autonomy_level_enum": {
+      "type": "string",
+      "enum": [
+        "advisory",
+        "advisory-with-suggested-action",
+        "human-in-the-loop",
+        "human-on-the-loop",
+        "agentic-with-tool-use",
+        "fully-autonomous"
+      ],
+      "description": "Autonomy posture for an AI use case. Drives validation depth, monitoring frequency, and gate selection. Agentic-with-tool-use and fully-autonomous always escalate to AI risk committee under the v1 default policy."
+    },
+    "validation_depth_enum": {
+      "type": "string",
+      "enum": ["full", "targeted", "light-touch", "monitor-only"],
+      "description": "Validation depth the validation-plan skill should consume. Set by ai-risk-tiering; not editable downstream."
+    },
+    "lifecycle_stage_enum": {
+      "type": "string",
+      "enum": ["development", "pre-prod", "prod", "monitoring-only", "retirement"],
+      "description": "Where in the model lifecycle the artifact applies. Drives gate routing in human-review-gates and triggers re-tiering events in ai-risk-tiering."
+    },
+    "ai_act_risk_category_enum": {
+      "type": "string",
+      "enum": [
+        "prohibited",
+        "high-risk-annex-iii",
+        "high-risk-annex-i",
+        "limited-risk-transparency",
+        "minimal-risk",
+        "general-purpose-ai",
+        "out-of-scope",
+        "pending-classification"
+      ],
+      "description": "EU AI Act categorisation. Owned by ai-act-triage; downstream skills carry the value as a routing flag, not a fresh classification. 'pending-classification' is the default before ai-act-triage has run."
+    }
+  }
+}

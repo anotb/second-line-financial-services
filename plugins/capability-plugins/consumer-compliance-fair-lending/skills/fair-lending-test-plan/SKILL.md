@@ -15,7 +15,7 @@ description: |
   - The question is Section 1071 small-business reporting readiness (use `section1071-readiness`).
   - A final fair-lending determination is required. The plan is reviewed and approved by counsel and the fair-lending committee; the determination follows the test, not the plan.
 
-  Anchored to: ECOA 15 U.S.C. §1691; Regulation B 12 CFR Part 1002; Fair Housing Act 42 U.S.C. §3601 to §3619; HUD Disparate Impact Rule 24 CFR §100.500; HMDA / Regulation C 12 CFR Part 1003; FFIEC Interagency Fair Lending Examination Procedures; CFPB Fair Lending Report; CFPB Circular 2022-03; CFPB Circular 2023-03; April 2023 Joint Statement on Enforcement Efforts Against Discrimination and Bias in Automated Systems; HUD FHEO algorithmic-underwriting guidance; CFPB UDAAP Examination Manual; DOJ Combatting Redlining Initiative; CFPB BISG methodology; CFPB Section 1071 small-business data rule. Citations and excerpts live in `references/source-anchors.md`.
+  Anchored to: ECOA, Regulation B, Fair Housing Act, HUD Disparate Impact Rule, HMDA / Regulation C, FFIEC Interagency Fair Lending Examination Procedures, CFPB Fair Lending Report, CFPB Circulars, Joint Statement on Enforcement Efforts Against Discrimination and Bias in Automated Systems, HUD FHEO algorithmic-underwriting guidance, CFPB UDAAP Examination Manual, DOJ Combatting Redlining Initiative, CFPB BISG methodology, CFPB Section 1071 small-business data rule.
 argument-hint: "[risk-assessment ref, complaint-theme output, adverse-action review output, scope statement, model inventory pointer, or exam-readiness brief]"
 ---
 

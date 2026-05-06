@@ -48,3 +48,7 @@ Sector overlays (banking, insurance, capital markets, payments and fintech) and 
 ## Operating posture
 
 This plugin drafts second-line work product for qualified review. It does not approve, file, rate, onboard, decline, notify, or close items. Every artifact carries a confidence label and an explicit reviewer sign-off block. Public examples in this repository are derived from public regulatory and standards material; real implementation requires firm policy overlays, jurisdiction-specific legal review, and system-of-record evidence.
+
+## Shared schema definitions
+
+`schemas/_defs.json` holds shared JSON Schema `$defs` (severity_enum, confidence_label, owner_role, source_trace_entry, human_review_gate, iso_date, engagement_scope_ref) plus testing-specific shapes (sampling_methodology_enum, test_method_enum, exception_disposition_enum) that per-skill schemas can `$ref` instead of redefining inline. Per-skill schemas should reference these via `"$ref": "../_defs.json#/$defs/<name>"`. Additive changes only between minor versions.

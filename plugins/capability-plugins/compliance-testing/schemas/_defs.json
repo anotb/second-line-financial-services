@@ -1,0 +1,88 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "compliance-testing/_defs.json",
+  "title": "Shared definitions for compliance-testing skill schemas",
+  "description": "Shared $defs that per-skill schemas in this plugin commonly redefine. Per-skill schemas should $ref these via \"../_defs.json#/$defs/<name>\" rather than redefining the same enums and shapes inline. Plugin-specific extras (sampling_methodology_enum, test_method_enum, exception_disposition_enum) sit alongside the base definitions; they show up across test-plan-builder, control-sampling, workpaper-drafter, exception-analysis.",
+  "$defs": {
+    "severity_enum": {
+      "type": "string",
+      "enum": ["low", "medium", "high", "critical"],
+      "description": "Standard four-step severity ladder. Compliance-testing exception severities use severity_enum_with_moderate where the firm policy uses 'moderate'."
+    },
+    "severity_enum_with_moderate": {
+      "type": "string",
+      "enum": ["low", "moderate", "high", "critical"],
+      "description": "Variant ladder used by exception write-ups, workpaper findings, and any artifact that feeds the firm issue log where 'moderate' has settled meaning."
+    },
+    "confidence_label": {
+      "type": "string",
+      "enum": ["high", "medium", "low", "unknown"],
+      "description": "Author confidence in the artifact as a whole."
+    },
+    "owner_role": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Named firm function or role with accountability (e.g., 'Head of Compliance Testing', 'Chief Compliance Officer', 'Control Owner', 'Business Process Owner'). Never an individual person."
+    },
+    "source_trace_entry": {
+      "type": "object",
+      "required": ["claim", "source", "confidence"],
+      "additionalProperties": false,
+      "properties": {
+        "claim": {"type": "string"},
+        "source": {"type": "string"},
+        "evidence_pointer": {"type": "string"},
+        "confidence": {
+          "type": "string",
+          "enum": ["high", "medium", "low", "evidence-needed"]
+        }
+      }
+    },
+    "human_review_gate": {
+      "type": "object",
+      "required": ["gate_name", "criterion", "required_reviewer_role", "stop_condition", "evidence_required", "downstream_action"],
+      "additionalProperties": false,
+      "properties": {
+        "gate_name": {"type": "string"},
+        "criterion": {"type": "string"},
+        "required_reviewer_role": {"$ref": "#/$defs/owner_role"},
+        "stop_condition": {"type": "string"},
+        "evidence_required": {
+          "type": "array",
+          "items": {"type": "string"},
+          "minItems": 1
+        },
+        "downstream_action": {"type": "string"}
+      },
+      "description": "Embedded human-review-gate descriptor. Common compliance-testing gates: test-plan approval, sampling-methodology sign-off, workpaper QA review, exception disposition gate before issue write-up."
+    },
+    "iso_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "engagement_scope_ref": {
+      "type": "object",
+      "required": ["engagement_id", "supplied"],
+      "additionalProperties": false,
+      "properties": {
+        "engagement_id": {"type": "string"},
+        "supplied": {"type": "boolean"}
+      }
+    },
+    "sampling_methodology_enum": {
+      "type": "string",
+      "enum": ["random", "risk-based", "judgmental", "population-based", "stratified", "attribute", "monetary-unit", "other"],
+      "description": "Sampling methodology used to select the test population. Drives confidence-interval reporting in workpaper-drafter and projection treatment in exception-analysis."
+    },
+    "test_method_enum": {
+      "type": "string",
+      "enum": ["inquiry", "inspection", "observation", "reperformance", "data-analysis", "walkthrough", "hybrid"],
+      "description": "How the control was tested. Inquiry alone is insufficient evidence of operating effectiveness under most firm testing standards."
+    },
+    "exception_disposition_enum": {
+      "type": "string",
+      "enum": ["genuine-exception", "documentation-gap", "scope-misalignment", "false-positive", "compensating-control-applied", "pending-investigation"],
+      "description": "How a flagged exception was resolved at the disposition gate. 'genuine-exception' routes to issue-writeup; 'pending-investigation' carries an open action with a target date."
+    }
+  }
+}

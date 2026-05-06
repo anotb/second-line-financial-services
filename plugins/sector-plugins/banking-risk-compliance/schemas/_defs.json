@@ -1,0 +1,88 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "banking-risk-compliance/_defs.json",
+  "title": "Shared definitions for banking-risk-compliance skill schemas",
+  "description": "Shared $defs that per-skill schemas in this plugin commonly redefine. Per-skill schemas should $ref these via \"../_defs.json#/$defs/<name>\" rather than redefining the same enums and shapes inline. Plugin-specific extras (banking_supervisor_enum, mra_mria_classification_enum, heightened_standards_applicability_enum) sit alongside the base definitions.",
+  "$defs": {
+    "severity_enum": {
+      "type": "string",
+      "enum": ["low", "medium", "high", "critical"],
+      "description": "Standard four-step severity ladder."
+    },
+    "severity_enum_with_moderate": {
+      "type": "string",
+      "enum": ["low", "moderate", "high", "critical"],
+      "description": "Variant ladder used by FRB / OCC / FDIC / NYDFS exam findings and audit reports where 'moderate' has settled meaning."
+    },
+    "confidence_label": {
+      "type": "string",
+      "enum": ["high", "medium", "low", "unknown"],
+      "description": "Author confidence in the artifact as a whole."
+    },
+    "owner_role": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Named firm function or role with accountability (e.g., 'CRO', 'Chief Compliance Officer', 'Chief Credit Officer', 'Treasurer', 'Head of Capital', 'BSA Officer'). Never an individual person."
+    },
+    "source_trace_entry": {
+      "type": "object",
+      "required": ["claim", "source", "confidence"],
+      "additionalProperties": false,
+      "properties": {
+        "claim": {"type": "string"},
+        "source": {"type": "string"},
+        "evidence_pointer": {"type": "string"},
+        "confidence": {
+          "type": "string",
+          "enum": ["high", "medium", "low", "evidence-needed"]
+        }
+      }
+    },
+    "human_review_gate": {
+      "type": "object",
+      "required": ["gate_name", "criterion", "required_reviewer_role", "stop_condition", "evidence_required", "downstream_action"],
+      "additionalProperties": false,
+      "properties": {
+        "gate_name": {"type": "string"},
+        "criterion": {"type": "string"},
+        "required_reviewer_role": {"$ref": "#/$defs/owner_role"},
+        "stop_condition": {"type": "string"},
+        "evidence_required": {
+          "type": "array",
+          "items": {"type": "string"},
+          "minItems": 1
+        },
+        "downstream_action": {"type": "string"}
+      },
+      "description": "Embedded human-review-gate descriptor. Common banking gates: pre-exam materials sign-off, MRA / MRIA response approval, board risk-committee adoption (Reg YY, Heightened Standards)."
+    },
+    "iso_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "engagement_scope_ref": {
+      "type": "object",
+      "required": ["engagement_id", "supplied"],
+      "additionalProperties": false,
+      "properties": {
+        "engagement_id": {"type": "string"},
+        "supplied": {"type": "boolean"}
+      }
+    },
+    "banking_supervisor_enum": {
+      "type": "string",
+      "enum": ["FRB", "OCC", "FDIC", "NCUA", "CFPB", "NYDFS", "state-banking-department", "FinCEN", "OFAC", "other-state", "other-federal"],
+      "description": "Primary or relevant supervisor named in the artifact. Drives terminology (MRA vs. MRBA), exam-cycle expectations, and report formatting."
+    },
+    "mra_mria_classification_enum": {
+      "type": "string",
+      "enum": ["MRA", "MRIA", "MRBA", "n/a"],
+      "description": "Examiner finding classification. MRA = Matter Requiring Attention (FRB, OCC). MRIA = Matter Requiring Immediate Attention (FRB). MRBA = Matter Requiring Board Attention (FDIC). 'n/a' for findings outside US banking supervision."
+    },
+    "heightened_standards_applicability_enum": {
+      "type": "string",
+      "enum": ["in-scope-large-bank", "in-scope-IHC", "out-of-scope", "voluntary-adoption", "pending-determination"],
+      "description": "OCC Heightened Standards (12 CFR 30 Appendix D) applicability. Drives risk-governance framework expectations and second-line independence requirements."
+    }
+  }
+}

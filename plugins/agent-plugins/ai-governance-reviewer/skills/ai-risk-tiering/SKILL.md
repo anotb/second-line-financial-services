@@ -13,7 +13,7 @@ description: |
   - The question is whether the use case is high-risk under the EU AI Act specifically. Route to `ai-act-triage`; the AI Act has a regulation-driven classification, not a firm-defined rubric. This skill flags Annex III overlap as a routing trigger, not a determination.
   - The question is the validation plan itself. Route to `validation-plan`; this skill sets the depth, the next skill scopes the work.
 
-  Anchored to: SR 11-7 §III and §IV (model risk rating and materiality); OCC Bulletin 2026-13 (revised interagency model risk guidance, 2026, [verify section]); NIST AI RMF 1.0 Map 5.1 and Measure 2.6; NIST AI 600-1 (Generative AI Profile) Map 1.1 and Measure 2.6; ISO/IEC 42001:2023 §6.1.2; EU AI Act Article 6 and Annex III (routing flag only). Citations and excerpts live in `references/source-anchors.md`.
+  Anchored to: SR 11-7, OCC Bulletin 2026-13, NIST AI RMF, NIST AI 600-1 (Generative AI Profile), ISO/IEC 42001, EU AI Act.
 argument-hint: "[use-case ID, intake record, engagement-scope record, or scenario]"
 ---
 

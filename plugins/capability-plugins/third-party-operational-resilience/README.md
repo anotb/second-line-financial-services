@@ -60,3 +60,7 @@ The plugin drafts second-line work product for qualified review. It does not app
 ## Boundary with `ai-governance-model-risk`
 
 `vendor-diligence` is the firm-side, third-party-risk-perimeter pack on an AI vendor. `llm-vendor-evidence-review` (in `ai-governance-model-risk`) is the model-risk lens on a published evidence pack (system card, evaluation report, red-team summary). They chain: `vendor-diligence` triggers `llm-vendor-evidence-review` when the AI vendor is in scope and an evidence pack is provided; the output flows into `vendor-diligence`'s AI-specific findings.
+
+## Shared schema definitions
+
+`schemas/_defs.json` holds shared JSON Schema `$defs` (severity_enum, confidence_label, owner_role, source_trace_entry, human_review_gate, iso_date, engagement_scope_ref) plus TPRM-specific shapes (criticality_tier_enum, dora_function_type_enum) that per-skill schemas can `$ref` instead of redefining inline. Per-skill schemas should reference these via `"$ref": "../_defs.json#/$defs/<name>"`. Additive changes only between minor versions.

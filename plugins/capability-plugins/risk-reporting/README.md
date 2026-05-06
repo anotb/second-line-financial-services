@@ -59,3 +59,7 @@ Public anchors only. The substantive set:
 ## Disclaimer
 
 This plugin produces draft second-line risk-reporting artifacts for qualified review. It does not provide legal advice, regulatory interpretation, or filing decisions. Materiality determinations, 8-K and 10-K disclosure decisions, attestations, and responses to supervisory findings remain the responsibility of the firm's named officers and counsel. Public regulatory and standards sources cited here are anchors, not legal interpretations, and several of the rules referenced (notably the SEC Climate Disclosure Rule) are subject to ongoing litigation or staff guidance evolution; verify current effectiveness as of the report date.
+
+## Shared schema definitions
+
+`schemas/_defs.json` holds shared JSON Schema `$defs` (severity_enum, confidence_label, owner_role, source_trace_entry, human_review_gate, iso_date, engagement_scope_ref) plus reporting-specific shapes (rag_status_enum, materiality_classification_enum) that per-skill schemas can `$ref` instead of redefining inline. Per-skill schemas should reference these via `"$ref": "../_defs.json#/$defs/<name>"`. Additive changes only between minor versions.

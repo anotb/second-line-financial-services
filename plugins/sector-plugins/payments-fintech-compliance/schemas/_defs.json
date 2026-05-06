@@ -1,0 +1,118 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "payments-fintech-compliance/_defs.json",
+  "title": "Shared definitions for payments-fintech-compliance skill schemas",
+  "description": "Shared $defs that per-skill schemas in this plugin commonly redefine. Per-skill schemas should $ref these via \"../_defs.json#/$defs/<name>\" rather than redefining the same enums and shapes inline. Plugin-specific extras (payments_regulator_enum, payment_rail_enum, baas_partnership_role_enum) sit alongside the base definitions.",
+  "$defs": {
+    "severity_enum": {
+      "type": "string",
+      "enum": ["low", "medium", "high", "critical"],
+      "description": "Standard four-step severity ladder."
+    },
+    "severity_enum_with_moderate": {
+      "type": "string",
+      "enum": ["low", "moderate", "high", "critical"],
+      "description": "Variant ladder used by exam-letter ingestion (CFPB, OCC, FDIC, state MTL examiners) and audit findings where 'moderate' has settled meaning."
+    },
+    "confidence_label": {
+      "type": "string",
+      "enum": ["high", "medium", "low", "unknown"],
+      "description": "Author confidence in the artifact as a whole."
+    },
+    "owner_role": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Named firm function or role with accountability (e.g., 'Chief Compliance Officer', 'Head of Payments Risk', 'BSA Officer', 'Head of Partner Bank Oversight', 'Head of Card Operations', 'Money-Laundering Reporting Officer'). Never an individual person."
+    },
+    "source_trace_entry": {
+      "type": "object",
+      "required": ["claim", "source", "confidence"],
+      "additionalProperties": false,
+      "properties": {
+        "claim": {"type": "string"},
+        "source": {"type": "string"},
+        "evidence_pointer": {"type": "string"},
+        "confidence": {
+          "type": "string",
+          "enum": ["high", "medium", "low", "evidence-needed"]
+        }
+      }
+    },
+    "human_review_gate": {
+      "type": "object",
+      "required": ["gate_name", "criterion", "required_reviewer_role", "stop_condition", "evidence_required", "downstream_action"],
+      "additionalProperties": false,
+      "properties": {
+        "gate_name": {"type": "string"},
+        "criterion": {"type": "string"},
+        "required_reviewer_role": {"$ref": "#/$defs/owner_role"},
+        "stop_condition": {"type": "string"},
+        "evidence_required": {
+          "type": "array",
+          "items": {"type": "string"},
+          "minItems": 1
+        },
+        "downstream_action": {"type": "string"}
+      },
+      "description": "Embedded human-review-gate descriptor. Common payments / fintech gates: partner-bank pre-launch oversight, BSA/AML risk-rating refresh, Reg E error-resolution disposition, money-transmitter licensing change attestation."
+    },
+    "iso_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "engagement_scope_ref": {
+      "type": "object",
+      "required": ["engagement_id", "supplied"],
+      "additionalProperties": false,
+      "properties": {
+        "engagement_id": {"type": "string"},
+        "supplied": {"type": "boolean"}
+      }
+    },
+    "payments_regulator_enum": {
+      "type": "string",
+      "enum": [
+        "CFPB",
+        "OCC",
+        "FRB",
+        "FDIC",
+        "FinCEN",
+        "OFAC",
+        "state-MTL-regulator",
+        "NYDFS",
+        "FCA",
+        "EBA",
+        "Bank-of-Lithuania",
+        "other-international",
+        "n/a"
+      ],
+      "description": "Primary or relevant payments / fintech regulator. State-MTL-regulator is used as a placeholder for the lead state in a multi-state MTL footprint; the named lead state is captured in a separate field."
+    },
+    "payment_rail_enum": {
+      "type": "string",
+      "enum": [
+        "ACH",
+        "wire-Fedwire",
+        "wire-CHIPS",
+        "card-credit",
+        "card-debit",
+        "card-prepaid",
+        "RTP",
+        "FedNow",
+        "SWIFT",
+        "SEPA",
+        "Faster-Payments",
+        "stablecoin-onchain",
+        "crypto-onchain",
+        "internal-ledger",
+        "other"
+      ],
+      "description": "Payment rail or instrument the artifact addresses. Drives applicable rules (Reg E, Reg CC, NACHA, card-network rules, BSA travel-rule treatment)."
+    },
+    "baas_partnership_role_enum": {
+      "type": "string",
+      "enum": ["partner-bank", "fintech-program-manager", "middleware-platform", "ledger-provider", "card-issuer-processor", "BIN-sponsor", "n/a"],
+      "description": "Role in a banking-as-a-service / partner-bank arrangement. Drives Interagency Third-Party Risk Management responsibilities and the OCC / FRB / FDIC partner-bank oversight expectations published in the 2023 BaaS guidance."
+    }
+  }
+}

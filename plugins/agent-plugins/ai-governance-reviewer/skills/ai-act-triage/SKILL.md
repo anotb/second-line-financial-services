@@ -15,7 +15,7 @@ description: |
   - The artifact required is the Annex IV technical documentation itself (use model-card-builder for the firm-side card; this skill scopes the Annex IV deltas).
   - The work is generic third-party diligence on the vendor (use third-party-operational-resilience vendor diligence with the AI vendor mode).
 
-  Anchored to: EU AI Act (Regulation (EU) 2024/1689) Articles 3, 5, 6, 9, 10, 11, 13, 14, 15, 25, 26, 27, 50, 51 to 55, 71, 113; Annex I, Annex III, Annex IV, Annex VIII. Cross-cutting: GDPR Article 35 (DPIA), NIS2, DORA Articles 5 to 14 (ICT risk management), ISO/IEC 42001 §6.1.2 and §8.1 (informational). Citations and excerpts live in `references/source-anchors.md`.
+  Anchored to: EU AI Act (Regulation (EU) 2024/1689), GDPR, NIS2, DORA, ISO/IEC 42001.
 argument-hint: "[use-case ID, intake record, vendor system card, engagement-scope record, or scope statement]"
 ---
 
