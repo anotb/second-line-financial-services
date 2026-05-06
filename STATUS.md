@@ -5,7 +5,7 @@
 - Managed-agent cookbook scaffolding removed.
 - Source taxonomy changed from vertical plugins to capability plugins plus sector overlays.
 - Standalone agent plugins retained and expanded with focused plugin-shipped subagents.
-- Public-source-derived examples added under `examples/public-regulatory/`.
+- Public-source-derived examples added per skill under `plugins/<type>/<plugin>/skills/<skill>/examples/`.
 - Shared policy, risk, control, source, review-gate, and output-template references added.
 - JSON schemas added for obligations, controls, issues, AI use cases, vendors, test plans, and risk reports.
 - Repository validation and public-content test scripts added and passing locally.
@@ -22,5 +22,5 @@
 ## Known limitations
 
 - Public-source-derived examples are useful for scaffolding and testing, but they are not substitutes for legal review or firm policy overlays.
-- Some regulatory obligations evolve. Refresh `common/references/source-map.md` before production use.
+- Some regulatory obligations evolve. Refresh `docs/source-map.md` and per-skill `references/source-anchors.md` before production use.
 - Agent subagents are plugin-shipped Claude Code agents, not API-level delegation manifests.

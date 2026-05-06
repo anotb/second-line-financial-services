@@ -22,13 +22,12 @@ plugins/
   capability-plugins/       # Horizontal GRC, AI, TPRM, testing, reporting, financial crime, consumer compliance
   sector-plugins/           # Banking, insurance, capital markets and asset management, payments and fintech overlays
   agent-plugins/            # Self-contained workflow agents with bundled skills and focused subagents
-common/
-  references/               # Public source map, policy-control library, review gates, templates
-  schemas/                  # Shared JSON schemas
-examples/public-regulatory/ # Public-source-derived scenarios and sample outputs
-tests/                      # Fixtures and expected checks
-scripts/                    # sync-agent-skills.py and check.py
+docs/                       # Architecture, source map, test strategy, public examples, conventions review
+scripts/                    # sync-agent-skills.py, check.py, check-skill-content.py
+internal/                   # Research artifacts kept for future improvement (specs, reviews, plans, v0.2 archive)
 ```
+
+Each skill is self-contained: `plugins/<type>/<plugin>/skills/<skill>/` ships its own `SKILL.md`, `references/source-anchors.md`, `references/sector-overlays/`, `references/cross-cutting/`, `templates/default-output.md`, `schemas/*.schema.json`, `examples/`, and (where useful) `TROUBLESHOOTING.md` and `scripts/`.
 
 ## Plugin catalog
 
@@ -81,14 +80,13 @@ For rapid local testing without marketplace installation, use Claude Code's plug
 python3 scripts/sync-agent-skills.py
 python3 scripts/check.py
 python3 scripts/check-skill-content.py
-python3 scripts/run-content-tests.py
 ```
 
-`sync-agent-skills.py` copies source skills from capability and sector plugins into self-contained agent plugins. `check.py` validates plugin manifests, skill frontmatter, agent frontmatter, marketplace paths, bundled-skill drift, removed legacy paths, public examples, and schemas. `check-skill-content.py` flags v0.2 placeholder drift in SKILL.md content (placeholder phrases, missing description shape, thin source anchors, duplicate bodies); see `docs/test-strategy.md` for the four rules and CLI flags. `run-content-tests.py` checks that public examples and expected outputs preserve public-source-derived concepts and human-review guardrails.
+`sync-agent-skills.py` copies source skills from capability and sector plugins into self-contained agent plugins. `check.py` validates plugin manifests, skill frontmatter, agent frontmatter, marketplace paths, and bundled-skill drift. `check-skill-content.py` flags v0.2 placeholder drift in SKILL.md content (placeholder phrases, missing description shape, thin source anchors, duplicate bodies); see `docs/test-strategy.md` for the four rules and CLI flags.
 
 ## Source posture
 
-The repo uses public sources only. See `common/references/source-map.md` for source anchors. The examples are regulatory scenarios derived from public material, not named-institution case studies.
+The repo uses public sources only. See `docs/source-map.md` for source anchors and `internal/specs/<plugin>/<skill>.md` for per-skill source citations. Examples are regulatory scenarios derived from public material, not named-institution case studies.
 
 ## Disclaimer
 

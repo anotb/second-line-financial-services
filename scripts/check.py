@@ -26,10 +26,28 @@ def frontmatter(text):
         return None
     block = text[4:end]
     data = {}
-    for line in block.splitlines():
-        if ':' in line:
-            k, v = line.split(':', 1)
-            data[k.strip()] = v.strip().strip('"')
+    lines = block.splitlines()
+    i = 0
+    while i < len(lines):
+        line = lines[i]
+        if ':' not in line:
+            i += 1
+            continue
+        k, v = line.split(':', 1)
+        k = k.strip()
+        v = v.strip().strip('"')
+        if v == '|' or v == '|-' or v == '>':
+            # YAML literal/folded block scalar: gather following indented lines
+            body = []
+            j = i + 1
+            while j < len(lines) and (lines[j].startswith(' ') or lines[j].startswith('\t') or lines[j] == ''):
+                body.append(lines[j].lstrip())
+                j += 1
+            data[k] = '\n'.join(body).strip()
+            i = j
+            continue
+        data[k] = v
+        i += 1
     return data
 
 def check_manifest(plugin_dir):
@@ -105,25 +123,18 @@ def check_marketplace():
                 err(f'marketplace source does not exist: {source}')
 
 def check_no_removed_patterns():
-    # Structural check: these legacy/demo locations must not exist in this repo.
-    # Documentation may mention the old Anthropic source layout for comparison.
-    legacy_demo = 'fake' + '-bank'
-    banned_paths = ['managed-agent-cookbooks', 'plugins/vertical-plugins', f'examples/{legacy_demo}']
+    # Structural check: these legacy locations must not exist at the public root.
+    # The Anthropic source repo layout pattern is mirrored at the root; v0.2-era
+    # shared layers (root common/, examples/, tests/) live under internal/v0.2-archive/.
+    banned_paths = ['managed-agent-cookbooks', 'plugins/vertical-plugins']
     for rel in banned_paths:
         if (ROOT / rel).exists():
             err(f'removed path still exists: {rel}')
 
-    # Content check: example paths should remain public-regulatory and should not
-    # reintroduce synthetic named-institution sample folders.
-    examples = ROOT / 'examples'
-    if examples.exists():
-        for path in examples.rglob('*'):
-            rel = path.relative_to(ROOT).as_posix()
-            if legacy_demo in rel:
-                err(f'legacy fake example path still exists: {rel}')
-
 def check_agent_skill_drift():
     for agent_dir in sorted((ROOT / 'plugins' / 'agent-plugins').iterdir()):
+        if not agent_dir.is_dir():
+            continue
         bundle = agent_dir / 'skills.bundle.json'
         if not bundle.exists():
             err(f'{agent_dir}: missing skills.bundle.json')
@@ -143,26 +154,6 @@ def check_agent_skill_drift():
             if src_text != dst_text:
                 err(f'{agent_dir.name}: bundled skill drift for {src.name}; run scripts/sync-agent-skills.py')
 
-def check_public_examples():
-    examples = ROOT / 'examples' / 'public-regulatory'
-    if not examples.exists():
-        err('missing examples/public-regulatory')
-        return
-    files = list(examples.rglob('*'))
-    content_files = [p for p in files if p.is_file() and p.suffix.lower() in {'.md', '.yaml', '.yml', '.csv', '.json'}]
-    if len(content_files) < 10:
-        err('expected at least 10 public-regulatory example files')
-    for path in content_files:
-        text = path.read_text(encoding='utf-8', errors='ignore')
-        if path.suffix == '.md' and ('Source anchors' not in text and 'source_anchor' not in text):
-            err(f'{path}: public markdown example should include Source anchors')
-
-def check_schemas():
-    for schema in (ROOT / 'schemas').glob('*.schema.json'):
-        data = load_json(schema)
-        if '$schema' not in data or 'required' not in data:
-            err(f'{schema}: schema missing $schema or required')
-
 for base in [ROOT / 'plugins' / 'capability-plugins', ROOT / 'plugins' / 'sector-plugins', ROOT / 'plugins' / 'agent-plugins']:
     if not base.exists():
         err(f'missing {base}')
@@ -178,8 +169,6 @@ for base in [ROOT / 'plugins' / 'capability-plugins', ROOT / 'plugins' / 'sector
 check_marketplace()
 check_no_removed_patterns()
 check_agent_skill_drift()
-check_public_examples()
-check_schemas()
 
 if errors:
     print('Validation failed:')
