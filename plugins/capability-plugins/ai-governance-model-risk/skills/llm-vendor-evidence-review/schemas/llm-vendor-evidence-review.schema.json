@@ -1,0 +1,251 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.org/second-line-financial-services/llm-vendor-evidence-review.schema.json",
+  "title": "LLM vendor evidence review",
+  "description": "Structured record of a foundation-model vendor evidence-pack review against firm criteria for a defined deployment context. Consumed by genai-pre-prod-review and chained to vendor-diligence where eval_evidence_status = deferred-to-evidence-review.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "review_metadata",
+    "vendor",
+    "model",
+    "evidence_pack_date",
+    "in_firm_use_cases",
+    "evidence_inventory",
+    "sufficiency_view",
+    "gaps",
+    "residual_reliance",
+    "recommended_actions",
+    "rereview_triggers",
+    "source_trace"
+  ],
+  "properties": {
+    "review_metadata": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["reviewer_role", "review_stage", "review_date"],
+      "properties": {
+        "reviewer_role": {
+          "type": "string",
+          "description": "Reviewer function (never an individual). Examples: AI Governance Lead, MRMO, Head of TPRM."
+        },
+        "review_stage": {
+          "type": "string",
+          "enum": ["onboarding", "version-delta", "periodic-reattestation", "post-incident", "exam-readiness"]
+        },
+        "review_date": {
+          "type": "string",
+          "format": "date"
+        },
+        "engagement_scope_id": {"type": "string"},
+        "linked_vendor_diligence_id": {
+          "type": "string",
+          "description": "ID of the upstream vendor-diligence record where this review was chained from eval_evidence_status = deferred-to-evidence-review."
+        }
+      }
+    },
+    "vendor": {
+      "type": "string",
+      "description": "Vendor or provider name."
+    },
+    "model": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "version"],
+      "properties": {
+        "name": {"type": "string"},
+        "version": {"type": "string"},
+        "deployment_form": {
+          "type": "string",
+          "enum": ["hosted-api", "open-weights-self-hosted", "open-weights-vendor-hosted", "on-prem-appliance", "fine-tuned-derivative", "unknown"]
+        },
+        "version_pinning_posture": {
+          "type": "string",
+          "enum": ["pinned", "floating", "rolling-with-notice", "unknown"]
+        }
+      }
+    },
+    "evidence_pack_date": {
+      "type": "string",
+      "format": "date",
+      "description": "ISO date of the evidence pack reviewed (latest document in the pack)."
+    },
+    "in_firm_use_cases": {
+      "type": "array",
+      "description": "Use case IDs in scope of this evidence review (links to ai-use-case-intake records).",
+      "items": {"type": "string"},
+      "minItems": 1
+    },
+    "evidence_inventory": {
+      "type": "array",
+      "description": "Documents reviewed. Confidentiality field on every entry.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["document", "date", "confidentiality"],
+        "properties": {
+          "document": {"type": "string"},
+          "date": {"type": "string"},
+          "source_url": {"type": "string"},
+          "confidentiality": {
+            "type": "string",
+            "enum": ["public", "nda-bound", "trust-center-gated", "regulator-confidential", "firm-internal"]
+          },
+          "vendor_self_attestation": {
+            "type": "boolean",
+            "description": "True for vendor-authored documents (system card, model card, vendor red-team summary). False for third-party attestations (SOC 2 by named auditor, ISO certificate)."
+          }
+        }
+      }
+    },
+    "sufficiency_view": {
+      "type": "array",
+      "description": "Per-criterion sufficiency read against the in-firm deployment context, not against the vendor's general claim.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["criterion", "status", "basis"],
+        "properties": {
+          "criterion": {
+            "type": "string",
+            "enum": [
+              "intended-use-scope",
+              "training-data-posture",
+              "evaluation-coverage",
+              "dangerous-capability-evaluations",
+              "red-team-coverage",
+              "security-posture",
+              "privacy-posture",
+              "content-provenance",
+              "incident-disclosure-history",
+              "support-and-escalation",
+              "regulator-engagement-history",
+              "change-and-version-control",
+              "responsible-use-policy",
+              "abuse-monitoring-and-data-retention"
+            ]
+          },
+          "status": {
+            "type": "string",
+            "enum": ["sufficient", "partial", "insufficient", "missing", "not-applicable"]
+          },
+          "basis": {
+            "type": "string",
+            "description": "What the in-firm use needs and how the evidence read against that need (not against the vendor's general claim)."
+          },
+          "evidence_ref": {
+            "type": "string",
+            "description": "Pointer into evidence_inventory[]. `[evidence needed]` if absent."
+          }
+        }
+      }
+    },
+    "gaps": {
+      "type": "array",
+      "description": "Named gaps with supplemental evidence requested.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["criterion", "gap", "severity", "supplemental_evidence_requested", "owner_role"],
+        "properties": {
+          "criterion": {"type": "string"},
+          "gap": {"type": "string"},
+          "severity": {
+            "type": "string",
+            "enum": ["low", "medium", "high", "critical"]
+          },
+          "supplemental_evidence_requested": {"type": "string"},
+          "owner_role": {
+            "type": "string",
+            "description": "Function, never an individual."
+          },
+          "deadline": {"type": "string", "format": "date"},
+          "accepted_as_best_available": {
+            "type": "boolean",
+            "description": "True where the gap is acknowledged unfillable (e.g., open-weights training-data disclosure) and the firm absorbs the residual."
+          }
+        }
+      }
+    },
+    "residual_reliance": {
+      "type": "array",
+      "description": "What the firm is relying on the vendor for, with named caveats and accepted owner role.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["reliance", "caveat", "accepted_owner_role"],
+        "properties": {
+          "reliance": {"type": "string"},
+          "caveat": {"type": "string"},
+          "accepted_owner_role": {"type": "string"},
+          "accepted_date": {"type": "string", "format": "date"}
+        }
+      }
+    },
+    "recommended_actions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["action", "owner_role", "severity"],
+        "properties": {
+          "action": {"type": "string"},
+          "owner_role": {"type": "string"},
+          "deadline": {"type": "string", "format": "date"},
+          "severity": {
+            "type": "string",
+            "enum": ["low", "medium", "high", "critical"]
+          },
+          "linked_gap": {"type": "string"}
+        }
+      }
+    },
+    "rereview_triggers": {
+      "type": "array",
+      "description": "Named events that require a re-review. Version-swap and new-system-card are always present for hosted-API and open-weights-vendor-hosted forms.",
+      "items": {"type": "string"},
+      "minItems": 1
+    },
+    "source_trace": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["claim", "source", "confidence"],
+        "properties": {
+          "claim": {"type": "string"},
+          "source": {"type": "string"},
+          "evidence_ref": {"type": "string"},
+          "confidence": {
+            "type": "string",
+            "enum": ["high", "medium", "low", "evidence-needed", "vendor-self-attestation"]
+          }
+        }
+      }
+    },
+    "sector_overlay_notes": {
+      "type": "object",
+      "description": "Sector-specific findings populated by the loaded sector overlay.",
+      "additionalProperties": true
+    },
+    "cross_cutting_overlay_notes": {
+      "type": "object",
+      "description": "Cross-cutting findings populated by loaded cyber, privacy, conduct overlays.",
+      "additionalProperties": true
+    },
+    "reviewer_attestation": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "reviewer_role": {"type": "string"},
+        "reviewer_date": {"type": "string", "format": "date"},
+        "decision": {
+          "type": "string",
+          "enum": ["sufficient-for-deployment", "sufficient-with-conditions", "insufficient-defer", "insufficient-decline", "escalate"]
+        },
+        "conditions": {"type": "string"},
+        "onward_routing": {"type": "string"}
+      }
+    }
+  }
+}

@@ -1,0 +1,257 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://second-line-financial-services/plugins/capability-plugins/third-party-operational-resilience/skills/criticality-assessment/schemas/criticality-assessment.schema.json",
+  "title": "criticality-assessment",
+  "description": "Structured second-line criticality assessment for a single third-party arrangement. Carries the criticality tier, the supported business process and important business service, recovery objectives read against firm impact tolerance, customer and regulatory impact, operational and concentration considerations, and the named owner. Upstream artifact: vendor-diligence consumes the criticality field; contract-gap-review, exit-plan, concentration-risk-review, and dora-register-builder also consume the record.",
+  "type": "object",
+  "required": [
+    "arrangement_id",
+    "service_in_scope",
+    "business_process_supported",
+    "tier",
+    "tier_rationale",
+    "owner",
+    "confidence_label"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "description": "Semver of this schema. Default 1.0.0.",
+      "default": "1.0.0",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "arrangement_id": {
+      "type": "string",
+      "description": "Stable identifier for the vendor arrangement. Reused across vendor-diligence, contract-gap-review, exit-plan, and concentration-risk-review.",
+      "minLength": 1
+    },
+    "engagement_id": {
+      "type": "string",
+      "description": "Optional pointer to the engagement-scope record under which this assessment was produced."
+    },
+    "as_of_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date the assessment was last revised."
+    },
+    "review_type": {
+      "type": "string",
+      "enum": [
+        "pre-onboarding",
+        "annual-recertification",
+        "off-cycle-trigger",
+        "material-change-re-review",
+        "post-incident-re-review",
+        "ibs-change-re-review",
+        "contract-renewal-re-review"
+      ],
+      "description": "Why this assessment is being produced. Drives depth and the next-review trigger."
+    },
+    "vendor_legal_name": {
+      "type": "string",
+      "description": "Counterparty legal entity name. Use the contracting entity, not the brand."
+    },
+    "vendor_brand_name": {
+      "type": "string",
+      "description": "Brand or product name if it differs from the legal entity."
+    },
+    "service_in_scope": {
+      "type": "string",
+      "description": "Concise service description, e.g., core banking SaaS, claims TPA, foundation-model API, BIN-sponsor processor.",
+      "minLength": 1
+    },
+    "business_process_supported": {
+      "type": "string",
+      "description": "Name of the firm's business process the arrangement supports.",
+      "minLength": 1
+    },
+    "important_business_service": {
+      "type": ["string", "null"],
+      "description": "If the firm has an IBS map, the IBS the arrangement sits in. Drives impact-tolerance test. Null where the firm has not formalised the map or the arrangement does not sit on an IBS chain."
+    },
+    "ai_vendor": {
+      "type": "boolean",
+      "description": "True when the arrangement supplies an AI system or AI-adjacent capability the firm relies on for inference, generation, classification, or autonomous action. Includes embedded-AI features that are enabled."
+    },
+    "data_scope": {
+      "type": "array",
+      "description": "Categories of firm or customer data the arrangement touches.",
+      "items": {
+        "type": "string",
+        "enum": [
+          "NPI",
+          "PHI",
+          "PCI",
+          "PII-non-sensitive",
+          "confidential-business",
+          "trading-data",
+          "model-prompts",
+          "model-outputs",
+          "training-data",
+          "logs-only",
+          "metadata-only",
+          "none"
+        ]
+      }
+    },
+    "cross_border_flows": {
+      "type": "boolean",
+      "description": "True if customer or firm data crosses a regulated border."
+    },
+    "rto_firm_tolerance": {
+      "type": "string",
+      "description": "Firm impact tolerance for recovery time, sourced from the IBS impact analysis. Not the vendor commitment."
+    },
+    "rto_vendor_commitment": {
+      "type": "string",
+      "description": "Vendor-claimed Recovery Time Objective from the contract or evidence pack."
+    },
+    "rpo_firm_tolerance": {
+      "type": "string",
+      "description": "Firm impact tolerance for recovery point. Not the vendor commitment."
+    },
+    "rpo_vendor_commitment": {
+      "type": "string",
+      "description": "Vendor-claimed Recovery Point Objective from the contract or evidence pack."
+    },
+    "recovery_meets_firm_tolerance": {
+      "type": "string",
+      "enum": ["yes", "no", "partial", "unknown"],
+      "description": "Whether the vendor's commitment meets the firm's tolerance. A 'no' or 'partial' is a finding for contract-gap-review."
+    },
+    "customer_impact": {
+      "type": "object",
+      "description": "Customer impact read on disruption, degradation, or unavailability.",
+      "additionalProperties": false,
+      "properties": {
+        "severity": {
+          "type": "string",
+          "enum": ["low", "medium", "high", "severe"]
+        },
+        "populations": {
+          "type": "array",
+          "description": "Affected customer populations: retail-deposit, small-business, commercial, policyholder, fund-shareholder, other.",
+          "items": { "type": "string" }
+        },
+        "harm_modes": {
+          "type": "array",
+          "description": "Modes of harm: financial-loss, fairness, accessibility, complaint-exposure, fraud-exposure, privacy-breach, fiduciary-breach.",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "regulatory_impact": {
+      "type": "object",
+      "description": "Regulatory impact read on disruption, breach, or sustained outage.",
+      "additionalProperties": false,
+      "properties": {
+        "severity": {
+          "type": "string",
+          "enum": ["low", "medium", "high", "severe"]
+        },
+        "regimes": {
+          "type": "array",
+          "description": "Regimes the arrangement intersects, e.g., bank-prudential, ICT-resilience, securities-compliance, insurance-solvency, BSA-AML, consumer-compliance, market-conduct, privacy.",
+          "items": { "type": "string" }
+        },
+        "notification_triggers": {
+          "type": "array",
+          "description": "Named notification clocks the arrangement could trigger on disruption.",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "operational_impact": {
+      "type": "object",
+      "description": "Operational impact and substitutability read.",
+      "additionalProperties": false,
+      "properties": {
+        "substitutability": {
+          "type": "string",
+          "enum": ["easy", "moderate", "hard", "none"],
+          "description": "How easily the firm could substitute the arrangement under a forced or planned exit."
+        },
+        "time_to_restore_estimate": {
+          "type": "string",
+          "description": "Realistic estimate of time-to-restore the supported process under a forced cutover. Compare to firm tolerance."
+        },
+        "manual_workaround_viable": {
+          "type": "boolean",
+          "description": "True only when the firm can keep the supported process running without the vendor for the full tolerance window."
+        }
+      }
+    },
+    "concentration_considerations": {
+      "type": "string",
+      "description": "Concentration considerations raised here: hyperscaler region, sponsor-bank, BIN sponsor, foundation-model vendor, transfer agent, custodian, claims TPA, fund accountant, etc. Full portfolio analysis lives in concentration-risk-review."
+    },
+    "concentration_record_id": {
+      "type": "string",
+      "description": "Pointer to the concentration-risk-review record where present."
+    },
+    "tier": {
+      "type": "string",
+      "enum": ["critical", "important", "not-critical", "unknown"],
+      "description": "Criticality tier. The single field every downstream skill consumes."
+    },
+    "tier_rationale": {
+      "type": "string",
+      "description": "Why the tier was set. Must name the criteria that drove the call (impact, substitutability, customer-facing position, regulatory exposure).",
+      "minLength": 1
+    },
+    "dora_critical_or_important_function": {
+      "type": "string",
+      "enum": ["yes", "no", "not-in-scope"],
+      "description": "DORA critical-or-important-function determination. 'not-in-scope' where DORA does not apply to the entity."
+    },
+    "dora_rationale": {
+      "type": "string",
+      "description": "Rationale for the DORA call. The criteria are not identical to the firm's own tiering; record both calls separately."
+    },
+    "uk_ibs_flag": {
+      "type": "string",
+      "enum": ["yes", "no", "not-in-scope"],
+      "description": "UK PRA important-business-service applicability flag. 'not-in-scope' where the UK overlay does not apply."
+    },
+    "owner": {
+      "type": "string",
+      "description": "Role (not person) accountable for the arrangement on the firm side. Examples: head of TPRM, business owner SVP, IBS owner, head of operational resilience.",
+      "minLength": 1
+    },
+    "approver": {
+      "type": "string",
+      "description": "Role of the human approver of the criticality call per firm policy."
+    },
+    "reviewer_questions": {
+      "type": "array",
+      "description": "Questions for the human approver. Each question names the decision it supports.",
+      "items": { "type": "string" }
+    },
+    "next_review_trigger": {
+      "type": "string",
+      "description": "Annual cycle date, contract-renewal trigger, IBS-change trigger, material-service-change trigger, or incident-driven re-review condition."
+    },
+    "confidence_label": {
+      "type": "string",
+      "enum": ["high", "medium", "low", "unknown"],
+      "description": "Confidence in the tier call, per references/review-gates.md."
+    },
+    "source_trace": {
+      "type": "array",
+      "description": "Citations supporting material claims. Every claim should be traceable.",
+      "items": {
+        "type": "object",
+        "required": ["claim", "source"],
+        "additionalProperties": false,
+        "properties": {
+          "claim": { "type": "string" },
+          "source": { "type": "string" },
+          "section": { "type": "string" },
+          "date": { "type": "string", "format": "date" },
+          "url": { "type": "string", "format": "uri" }
+        }
+      }
+    }
+  }
+}

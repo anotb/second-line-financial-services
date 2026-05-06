@@ -1,0 +1,318 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://second-line-financial-services/schemas/rag-evaluation-review.schema.json",
+  "title": "RAGEvaluationReview",
+  "description": "Second-line review of the retrieval and grounding evaluation for a RAG-based GenAI use case. Corpus fitness, retrieval quality, grounding evaluation, failure modes, mitigations, monitoring, residual risk, recommended owner actions. Consumed by genai-pre-prod-review, board-ai-risk-pack, ai-governance-reviewer, and the firm's model risk programme.",
+  "type": "object",
+  "required": [
+    "review_metadata",
+    "use_case_reference",
+    "architecture_summary",
+    "corpus_fitness",
+    "retrieval_quality",
+    "grounding_evaluation",
+    "failure_modes",
+    "mitigations",
+    "monitoring",
+    "residual_risk",
+    "recommended_actions",
+    "source_trace"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "review_metadata": {
+      "type": "object",
+      "required": ["reviewer_role", "review_date", "review_stage"],
+      "properties": {
+        "reviewer_role": { "type": "string", "description": "Function performing the review (e.g., AI Governance Lead, MRMO, second-line model risk)." },
+        "review_date": { "type": "string", "format": "date" },
+        "review_stage": {
+          "type": "string",
+          "enum": ["pre-prod-gate", "in-prod-periodic", "post-incident", "post-foundation-model-swap", "post-retrieval-stack-change", "annual-revalidation", "exam-readiness"]
+        },
+        "engagement_scope_id": { "type": "string" },
+        "model_card_id": { "type": "string", "description": "Links to the model-card-builder output when the card is in hand." },
+        "validation_plan_id": { "type": "string", "description": "Links to the validation-plan output when the testing block is in hand." }
+      }
+    },
+    "use_case_reference": {
+      "type": "object",
+      "required": ["use_case_id"],
+      "properties": {
+        "use_case_id": { "type": "string", "description": "Links to ai-use-case-intake record." },
+        "tier": {
+          "type": "string",
+          "enum": ["tier-1", "tier-2", "tier-3", "tier-4", "tier-unassigned"]
+        },
+        "lifecycle_stage": {
+          "type": "string",
+          "enum": ["development", "pre-prod", "prod", "monitoring-only", "retirement"]
+        },
+        "intended_purpose": { "type": "string", "description": "Stated use-case purpose; reliance assertion is judged against this." }
+      }
+    },
+    "architecture_summary": {
+      "type": "object",
+      "required": ["foundation_model", "retriever_type", "corpus_count"],
+      "properties": {
+        "foundation_model": {
+          "type": "object",
+          "properties": {
+            "provider": { "type": "string" },
+            "name": { "type": "string" },
+            "version": { "type": "string" },
+            "version_pinning": {
+              "type": "string",
+              "enum": ["pinned", "floating", "rolling-with-notice", "unknown"]
+            }
+          }
+        },
+        "retriever_type": {
+          "type": "string",
+          "enum": ["dense-vector", "sparse-bm25", "hybrid", "graph", "structured-query", "rerank-stack", "other"]
+        },
+        "embedding_model": { "type": "string" },
+        "reranker": { "type": "string" },
+        "corpus_count": { "type": "integer", "minimum": 1, "description": "Number of distinct corpora the retriever indexes." },
+        "refresh_cadence_summary": { "type": "string", "description": "One-line summary across corpora; per-corpus cadence lives in corpus_fitness." },
+        "scoping_rules": { "type": "string", "description": "Per-user, per-tenant, per-case retrieval scoping rules." }
+      }
+    },
+    "corpus_fitness": {
+      "type": "array",
+      "minItems": 1,
+      "description": "Per-source enumeration. A 'corpus' that is actually three sources records as three rows.",
+      "items": {
+        "type": "object",
+        "required": ["corpus", "source", "freshness", "coverage_assessment", "sensitivity", "provenance", "owner"],
+        "properties": {
+          "corpus": { "type": "string" },
+          "source": { "type": "string", "description": "Per-source detail. 'Internal policy library' is not enough; name the underlying source system." },
+          "freshness": { "type": "string", "description": "Refresh cadence, last refresh, known lag." },
+          "coverage_assessment": { "type": "string", "description": "Whether the corpus covers the use case's intended question space; gaps named." },
+          "sensitivity": {
+            "type": "string",
+            "enum": ["public", "internal", "confidential", "regulated-NPI", "regulated-PHI", "MNPI", "privileged"]
+          },
+          "provenance": { "type": "string", "description": "Per-document provenance posture: tagged, untagged, partial; basis." },
+          "owner": { "type": "string", "description": "Function owning corpus curation and refresh." },
+          "access_controls": { "type": "string", "description": "Retrieval-side access enforcement; pointer to cyber overlay if applicable." }
+        }
+      }
+    },
+    "retrieval_quality": {
+      "type": "array",
+      "minItems": 1,
+      "description": "Retrieval-side metrics. Industry-practice families (RAGAS-style: context precision, context recall) plus latency. Equivalent in-house metrics acceptable when semantics are documented.",
+      "items": {
+        "type": "object",
+        "required": ["metric", "method", "result", "owner"],
+        "properties": {
+          "metric": {
+            "type": "string",
+            "enum": ["context_precision", "context_recall", "retrieval_latency", "rerank_lift", "scoping_correctness", "other"]
+          },
+          "metric_definition": { "type": "string", "description": "Plain-language definition of what the metric measures in this implementation." },
+          "method": { "type": "string", "description": "How the metric was computed; framework named (e.g., RAGAS, in-house pipeline) with version where relevant." },
+          "dataset_ref": { "type": "string", "description": "Test set identifier; for context_recall and refusal-rate the labelled out-of-scope or ground-truth set is required." },
+          "segmentation": { "type": "array", "items": { "type": "string" }, "description": "Segments reported (query type, corpus, population). A single number with no segmentation hides systematic failure." },
+          "result": { "type": "string", "description": "Headline value; segment-level values land in segmentation_results or in the memo body." },
+          "threshold": { "type": "string", "description": "Acceptance threshold tied to the use case's intended purpose." },
+          "evidence_pointer": { "type": "string" },
+          "owner": { "type": "string", "description": "Function owning the evaluation pipeline." }
+        }
+      }
+    },
+    "grounding_evaluation": {
+      "type": "array",
+      "minItems": 1,
+      "description": "Grounding-side metrics. Industry-practice families (RAGAS-style: faithfulness, answer relevance) plus citation precision and refusal rate on out-of-scope. Equivalent in-house metrics acceptable when semantics are documented.",
+      "items": {
+        "type": "object",
+        "required": ["metric", "method", "result", "owner"],
+        "properties": {
+          "metric": {
+            "type": "string",
+            "enum": ["faithfulness", "answer_relevance", "citation_precision", "refusal_rate_on_out_of_scope", "hallucination_rate", "stale_content_rate", "other"]
+          },
+          "metric_definition": { "type": "string", "description": "Plain-language definition. Citation precision must be defined as supports-the-claim, not contains-a-marker." },
+          "method": { "type": "string", "description": "How the metric was computed; framework named with version where relevant; LLM-judge basis if used." },
+          "dataset_ref": { "type": "string", "description": "Test set identifier. Refusal rate requires a labelled out-of-scope set; without it the number is meaningless." },
+          "segmentation": { "type": "array", "items": { "type": "string" }, "description": "Segments reported (query type, corpus, population)." },
+          "result": { "type": "string", "description": "Headline value." },
+          "threshold": { "type": "string", "description": "Acceptance threshold tied to the use case's intended purpose." },
+          "evidence_pointer": { "type": "string" },
+          "owner": { "type": "string", "description": "Function owning the evaluation pipeline." }
+        }
+      }
+    },
+    "failure_modes": {
+      "type": "array",
+      "minItems": 1,
+      "description": "Catalogued failure modes. Baseline set: hallucination, off-corpus answer, citation fabrication, stale-content answer, retrieval bias, cross-scope leakage.",
+      "items": {
+        "type": "object",
+        "required": ["failure_mode", "frequency", "mitigation"],
+        "properties": {
+          "failure_mode": {
+            "type": "string",
+            "enum": [
+              "hallucination",
+              "off_corpus_answer",
+              "citation_fabrication",
+              "stale_content_answer",
+              "retrieval_bias",
+              "cross_scope_leakage",
+              "ocr_or_parsing_miss",
+              "refusal_failure_on_out_of_scope",
+              "over_refusal_on_in_scope",
+              "other"
+            ]
+          },
+          "frequency": { "type": "string", "description": "Observed rate, basis (sampled set, monitoring window), or [evidence needed]." },
+          "example": { "type": "string", "description": "Concrete example anonymised; pattern, not specific facts." },
+          "mitigation": { "type": "string", "description": "Linked mitigation reference, or [evidence needed]." }
+        }
+      }
+    },
+    "mitigations": {
+      "type": "array",
+      "minItems": 1,
+      "description": "Controls in place. Each entry needs an evidence pointer; a mitigation without evidence is policy, not a control.",
+      "items": {
+        "type": "object",
+        "required": ["mitigation", "type", "evidence_pointer"],
+        "properties": {
+          "mitigation": { "type": "string" },
+          "type": {
+            "type": "string",
+            "enum": [
+              "corpus_curation",
+              "source_vetting",
+              "retrieval_scoping",
+              "reranking",
+              "prompt_design",
+              "citation_enforcement",
+              "structured_output",
+              "refusal_behavior",
+              "human_in_the_loop_gate",
+              "freshness_gate",
+              "ocr_confidence_gate",
+              "output_filter",
+              "logging_and_monitoring"
+            ]
+          },
+          "evidence_pointer": { "type": "string", "description": "Config link, test report, change record, or [evidence needed]." },
+          "owner": { "type": "string" },
+          "exercised_in_test": { "type": "boolean", "description": "True if at least one evaluation run exercises this mitigation." }
+        }
+      }
+    },
+    "monitoring": {
+      "type": "array",
+      "minItems": 1,
+      "description": "Production signals captured for grounding-relevant events. Each entry has all five fields. User-feedback thumbs alone is insufficient; a ground-truth pipeline at a defined cadence is required.",
+      "items": {
+        "type": "object",
+        "required": ["signal", "sampling_cadence", "ground_truth_pipeline", "owner", "escalation_path"],
+        "properties": {
+          "signal": { "type": "string" },
+          "sampling_cadence": { "type": "string", "description": "Continuous, daily, weekly, monthly, or event-driven." },
+          "ground_truth_pipeline": { "type": "string", "description": "How ground truth is established for the signal: sampled adjudication, golden-set replay, SME review, automated scoring." },
+          "threshold": { "type": "string" },
+          "owner": { "type": "string" },
+          "escalation_path": { "type": "string", "description": "Named committee, officer, or process; CISO function for cyber-tagged signals." }
+        }
+      }
+    },
+    "residual_risk": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["risk", "likelihood", "impact"],
+        "properties": {
+          "risk": { "type": "string", "description": "Concrete residual risk (e.g., stale-policy answer where the policy library refresh lag exceeds two weeks)." },
+          "likelihood": {
+            "type": "string",
+            "enum": ["low", "medium", "high"]
+          },
+          "impact": {
+            "type": "string",
+            "enum": ["low", "medium", "high"]
+          },
+          "basis": { "type": "string", "description": "One-line basis for the likelihood and impact rating." },
+          "accepted_owner_role": { "type": "string", "description": "Role accepting the residual risk; never a named individual." },
+          "accepted_date": { "type": "string", "format": "date" },
+          "review_cadence": { "type": "string", "description": "When the acceptance is re-examined (e.g., quarterly, on foundation-model swap, on corpus refresh-cadence change)." }
+        }
+      }
+    },
+    "recommended_actions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["gap", "owner_role", "severity"],
+        "properties": {
+          "gap": { "type": "string" },
+          "owner_role": { "type": "string" },
+          "deadline": { "type": "string", "format": "date" },
+          "severity": {
+            "type": "string",
+            "enum": ["low", "medium", "high", "critical"]
+          },
+          "depends_on": { "type": "string", "description": "Cross-reference to another recommended action, an upstream artifact, or an external dependency." }
+        }
+      }
+    },
+    "source_trace": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["claim", "source", "confidence"],
+        "properties": {
+          "claim": { "type": "string" },
+          "source": { "type": "string", "description": "Document, system, person, vendor evidence, or [evidence needed]." },
+          "evidence_reference": { "type": "string" },
+          "confidence": {
+            "type": "string",
+            "enum": ["high", "medium", "low", "evidence-needed"]
+          }
+        }
+      }
+    },
+    "sector_overlay_notes": {
+      "type": "object",
+      "description": "Sector-specific fields raised by the loaded sector overlay reference doc.",
+      "properties": {
+        "banking": { "type": "object", "additionalProperties": true },
+        "insurance": { "type": "object", "additionalProperties": true },
+        "capital_markets": { "type": "object", "additionalProperties": true },
+        "payments_fintech": { "type": "object", "additionalProperties": true }
+      }
+    },
+    "cross_cutting_overlay_notes": {
+      "type": "object",
+      "description": "Cross-cutting fields raised by the loaded cross-cutting overlay reference doc.",
+      "properties": {
+        "cyber": { "type": "object", "additionalProperties": true },
+        "privacy": { "type": "object", "additionalProperties": true },
+        "conduct": { "type": "object", "additionalProperties": true }
+      }
+    },
+    "reviewer_attestation": {
+      "type": "object",
+      "properties": {
+        "reviewer_role": { "type": "string" },
+        "decision": {
+          "type": "string",
+          "enum": ["accept", "accept-with-conditions", "reject-and-rework"]
+        },
+        "decision_date": { "type": "string", "format": "date" },
+        "conditions": { "type": "array", "items": { "type": "string" } },
+        "onward_routing": { "type": "string", "description": "AI risk committee, pre-prod gate, MRMO challenge file, exam response file, board pack." }
+      }
+    }
+  }
+}

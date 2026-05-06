@@ -1,0 +1,278 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://second-line-financial-services/schemas/genai-pre-prod-review.schema.json",
+  "title": "GenAIPreProdReview",
+  "description": "Pre-production gate review for a GenAI use case before initial release or material expansion. Rolls up upstream artifacts (intake, tier, model card, validation plan results, prompt-injection review, RAG evaluation, vendor evidence review where applicable) and produces a recommended decision with conditions, named gates, owners, and source trace. Consumed by the AI risk committee, the AI Governance Lead, MRMO, the model owner, and a regulator response file when one is built.",
+  "type": "object",
+  "required": [
+    "gate_metadata",
+    "use_case_reference",
+    "recommended_decision",
+    "upstream_artifacts",
+    "open_conditions",
+    "residual_risk",
+    "monitoring_readiness",
+    "incident_response_readiness",
+    "human_oversight",
+    "foundation_model_posture",
+    "signoff",
+    "source_trace"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "gate_metadata": {
+      "type": "object",
+      "required": ["gate_id", "gate_type", "review_date"],
+      "properties": {
+        "gate_id": { "type": "string", "description": "Canonical gate ID for this review." },
+        "gate_type": {
+          "type": "string",
+          "enum": ["initial_release", "material_expansion", "recurring_revalidation", "regulatory_response"]
+        },
+        "requested_date": { "type": "string", "format": "date" },
+        "review_date": { "type": "string", "format": "date" },
+        "recommended_decision_date": { "type": "string", "format": "date" },
+        "engagement_scope_id": { "type": "string" },
+        "reviewer_role": { "type": "string", "description": "Function consolidating the review (typically AI Governance Lead or AI risk committee secretary)." }
+      }
+    },
+    "use_case_reference": {
+      "type": "object",
+      "required": ["use_case_id"],
+      "properties": {
+        "use_case_id": { "type": "string", "description": "Links to ai-use-case-intake record." },
+        "tier": {
+          "type": "string",
+          "enum": ["tier-1", "tier-2", "tier-3", "tier-4", "tier-unassigned"]
+        },
+        "lifecycle_stage": {
+          "type": "string",
+          "enum": ["development", "pre-prod", "prod", "monitoring-only", "retirement"]
+        },
+        "architecture_summary": { "type": "string", "description": "One-paragraph summary; pointer to the model card system description is preferable." }
+      }
+    },
+    "recommended_decision": {
+      "type": "object",
+      "required": ["decision", "rationale"],
+      "properties": {
+        "decision": {
+          "type": "string",
+          "enum": ["go", "go_with_conditions", "hold", "no_go"]
+        },
+        "rationale": { "type": "string", "description": "One paragraph, regulator-readable, naming the conditions that drove the call." },
+        "blocking_vs_tracking": { "type": "string", "description": "Explicit identification of which open conditions are blocking and which are tracking. Required when decision is go_with_conditions." }
+      }
+    },
+    "upstream_artifacts": {
+      "type": "array",
+      "minItems": 1,
+      "description": "Roll-up of upstream artifacts the gate review depends on. Any artifact stale or missing should be reflected in the recommended decision.",
+      "items": {
+        "type": "object",
+        "required": ["artifact", "status"],
+        "properties": {
+          "artifact": {
+            "type": "string",
+            "enum": [
+              "ai-use-case-intake",
+              "ai-risk-tiering",
+              "ai-act-triage",
+              "model-card",
+              "validation-plan-results",
+              "prompt-injection-review",
+              "rag-evaluation-review",
+              "llm-vendor-evidence-review",
+              "agentic-ai-controls"
+            ]
+          },
+          "status": {
+            "type": "string",
+            "enum": ["current", "stale", "missing", "not-applicable"]
+          },
+          "last_updated": { "type": "string", "format": "date" },
+          "link": { "type": "string", "description": "Pointer to the artifact (record ID, file path, system reference, or [evidence needed])." },
+          "notes": { "type": "string" }
+        }
+      }
+    },
+    "open_conditions": {
+      "type": "array",
+      "description": "Conditions that must close before go (blocking) or that track to a defined date (tracking). Empty array is allowed for go decisions.",
+      "items": {
+        "type": "object",
+        "required": ["condition", "owner_role", "severity"],
+        "properties": {
+          "condition": { "type": "string" },
+          "owner_role": { "type": "string", "description": "Function, never a named individual." },
+          "sla": { "type": "string", "description": "Date or milestone (e.g., pre-prod gate, go-live + 30 days)." },
+          "severity": {
+            "type": "string",
+            "enum": ["low", "medium", "high", "critical"]
+          },
+          "blocking": { "type": "boolean", "description": "True if condition blocks go-live; false if tracking only." }
+        }
+      }
+    },
+    "residual_risk": {
+      "type": "array",
+      "minItems": 1,
+      "description": "Top residual risks, typically three to five for a tier-2 use case and more for tier-1. Each entry requires likelihood, impact, and accepted owner role.",
+      "items": {
+        "type": "object",
+        "required": ["risk", "likelihood", "impact", "accepted_owner_role"],
+        "properties": {
+          "risk": { "type": "string" },
+          "likelihood": {
+            "type": "string",
+            "enum": ["low", "medium", "high"]
+          },
+          "impact": {
+            "type": "string",
+            "enum": ["low", "medium", "high"]
+          },
+          "basis": { "type": "string", "description": "One-line basis for the rating; cross-reference to upstream artifact where possible." },
+          "accepted_owner_role": { "type": "string" },
+          "review_cadence": { "type": "string" }
+        }
+      }
+    },
+    "monitoring_readiness": {
+      "type": "array",
+      "minItems": 1,
+      "description": "Production signals and detection capabilities live before go-live. Each entry requires owner and escalation path.",
+      "items": {
+        "type": "object",
+        "required": ["signal", "live_before_golive", "owner_role", "escalation_path"],
+        "properties": {
+          "signal": { "type": "string" },
+          "threshold": { "type": "string", "description": "In firm policy units." },
+          "frequency": { "type": "string" },
+          "live_before_golive": { "type": "boolean" },
+          "owner_role": { "type": "string" },
+          "escalation_path": { "type": "string" }
+        }
+      }
+    },
+    "incident_response_readiness": {
+      "type": "object",
+      "required": ["procedures_documented", "regulator_notification_triggers"],
+      "properties": {
+        "procedures_documented": { "type": "boolean" },
+        "last_drilled": { "type": "string", "format": "date" },
+        "drill_scope": { "type": "string", "description": "Which incident classes the most recent drill exercised." },
+        "regulator_notification_triggers": {
+          "type": "array",
+          "description": "Named notification regimes evaluated for this use case (e.g., NYDFS Part 500 §500.17(a), SEC 8-K Item 1.05, GLBA Safeguards Rule, state breach laws, sector-specific notifications). Per the loaded overlays.",
+          "items": { "type": "string" }
+        },
+        "off_switch_documented": { "type": "boolean", "description": "Whether the operational off-switch criteria are documented and exercised." }
+      }
+    },
+    "human_oversight": {
+      "type": "object",
+      "required": ["decision_points", "sampling_expectation", "effective_oversight_evidence"],
+      "properties": {
+        "decision_points": {
+          "type": "array",
+          "description": "Named human-in-the-loop or human-on-the-loop decision points and the role accountable.",
+          "items": { "type": "string" }
+        },
+        "sampling_expectation": { "type": "string", "description": "Sampling cadence and scope for output review or override audit." },
+        "effective_oversight_evidence": { "type": "string", "description": "Evidence the oversight is operative and not nominal (training, sampling results, override-rate baseline)." },
+        "off_switch_criterion": { "type": "string", "description": "When the human oversight is judged ineffective and the system pauses; e.g., agent-edit rate falling below threshold for two periods." }
+      }
+    },
+    "foundation_model_posture": {
+      "type": "object",
+      "required": ["dependency_present", "swap_revalidation_policy"],
+      "properties": {
+        "dependency_present": { "type": "boolean" },
+        "provider": { "type": "string" },
+        "model_name": { "type": "string" },
+        "model_version": { "type": "string" },
+        "version_pinning": {
+          "type": "string",
+          "enum": ["pinned", "floating", "rolling-with-notice", "unknown", "not-applicable"]
+        },
+        "swap_revalidation_policy": { "type": "string", "description": "Documented policy for re-validation on vendor change-of-version notice; required when dependency_present is true." },
+        "vendor_evidence_review_id": { "type": "string", "description": "Links to the llm-vendor-evidence-review record where applicable." }
+      }
+    },
+    "overlay_signoffs": {
+      "type": "array",
+      "description": "Sign-off status for each loaded sector overlay and cross-cutting overlay.",
+      "items": {
+        "type": "object",
+        "required": ["overlay", "owner_role", "status"],
+        "properties": {
+          "overlay": {
+            "type": "string",
+            "enum": ["banking", "insurance", "capital_markets", "payments_fintech", "cyber", "privacy", "conduct"]
+          },
+          "owner_role": { "type": "string" },
+          "status": {
+            "type": "string",
+            "enum": ["signed", "pending", "dissent", "not-applicable"]
+          },
+          "notes": { "type": "string" }
+        }
+      }
+    },
+    "signoff": {
+      "type": "array",
+      "minItems": 1,
+      "description": "Named sign-off block. Reviewer roles, never named individuals. A single-name sign-off block is itself a finding.",
+      "items": {
+        "type": "object",
+        "required": ["reviewer_role", "position"],
+        "properties": {
+          "reviewer_role": { "type": "string" },
+          "function": { "type": "string", "description": "AI governance, model risk, cyber, compliance, privacy, consumer compliance, BSA, legal, etc." },
+          "decision_date": { "type": "string", "format": "date" },
+          "position": {
+            "type": "string",
+            "enum": ["signed", "signed-with-conditions", "dissent", "pending"]
+          },
+          "basis": { "type": "string", "description": "One-line basis for the position; required for dissent." }
+        }
+      }
+    },
+    "source_trace": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["claim", "source", "confidence"],
+        "properties": {
+          "claim": { "type": "string" },
+          "source": { "type": "string", "description": "Document, system, person, vendor evidence, upstream artifact ID, or [evidence needed]." },
+          "evidence_reference": { "type": "string" },
+          "confidence": {
+            "type": "string",
+            "enum": ["high", "medium", "low", "evidence-needed"]
+          }
+        }
+      }
+    },
+    "sector_overlay_notes": {
+      "type": "object",
+      "description": "Sector-specific fields raised by the loaded sector overlay reference doc.",
+      "properties": {
+        "banking": { "type": "object", "additionalProperties": true },
+        "insurance": { "type": "object", "additionalProperties": true },
+        "capital_markets": { "type": "object", "additionalProperties": true },
+        "payments_fintech": { "type": "object", "additionalProperties": true }
+      }
+    },
+    "cross_cutting_overlay_notes": {
+      "type": "object",
+      "description": "Cross-cutting fields raised by the loaded cross-cutting overlay reference doc.",
+      "properties": {
+        "cyber": { "type": "object", "additionalProperties": true },
+        "privacy": { "type": "object", "additionalProperties": true },
+        "conduct": { "type": "object", "additionalProperties": true }
+      }
+    }
+  }
+}

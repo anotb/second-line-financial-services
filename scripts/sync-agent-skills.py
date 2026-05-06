@@ -5,7 +5,6 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 AGENTS = ROOT / 'plugins' / 'agent-plugins'
-COMMON = ROOT / 'common'
 
 for agent_dir in sorted(p for p in AGENTS.iterdir() if p.is_dir()):
     bundle = agent_dir / 'skills.bundle.json'
@@ -24,9 +23,4 @@ for agent_dir in sorted(p for p in AGENTS.iterdir() if p.is_dir()):
         target = skills_dir / source.name
         shutil.copytree(source, target)
         count += 1
-    for folder in ['references', 'schemas']:
-        target = agent_dir / folder
-        if target.exists():
-            shutil.rmtree(target)
-        shutil.copytree(COMMON / folder, target)
     print(f'synced {agent_dir.name}: {count} skills')

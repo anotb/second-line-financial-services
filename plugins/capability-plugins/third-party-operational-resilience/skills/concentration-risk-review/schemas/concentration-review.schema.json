@@ -1,0 +1,325 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://second-line-financial-services/plugins/capability-plugins/third-party-operational-resilience/skills/concentration-risk-review/schemas/concentration-review.schema.json",
+  "title": "concentration-review",
+  "description": "Structured second-line concentration-risk review record. Carries the portfolio-level concentration view across single-vendor, fourth-party, geographic, jurisdictional, technology-stack, AI-provider, sponsor-bank/BaaS/rails, and function-level dimensions. The substitutability read and single-points-of-failure list anchor the recommended-actions set. The artifact is the draft input for the operational-resilience committee, the head of TPRM, the head of operational resilience, and the CRO office; in EU regimes the same record is the draft input to the firm's signed pre-contract preliminary assessment under DORA Article 29.",
+  "type": "object",
+  "required": [
+    "assessment_id",
+    "as_of_date",
+    "scope",
+    "cycle_type",
+    "dimensions",
+    "single_points_of_failure",
+    "substitutability_read",
+    "recommended_actions",
+    "confidence_label"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "description": "Semver of this schema. Default 1.0.0.",
+      "default": "1.0.0",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "assessment_id": {
+      "type": "string",
+      "description": "Stable identifier for the concentration review record.",
+      "minLength": 1
+    },
+    "engagement_id": {
+      "type": "string",
+      "description": "Optional pointer to the engagement-scope record under which this review was produced."
+    },
+    "as_of_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date the review was last revised."
+    },
+    "cycle_type": {
+      "type": "string",
+      "enum": [
+        "annual-portfolio",
+        "pre-contract-preliminary-assessment",
+        "supervisor-information-request",
+        "stress-event-readiness",
+        "post-incident-re-review",
+        "off-cycle-trigger"
+      ],
+      "description": "Why this review is being produced. Drives depth, audience, and review-gate set."
+    },
+    "scope": {
+      "type": "object",
+      "description": "In-scope entities, register source, criticality cutoff, and data-quality caveats.",
+      "additionalProperties": false,
+      "required": ["entities", "register_source", "arrangements_in_scope_count"],
+      "properties": {
+        "entities": {
+          "type": "array",
+          "description": "Legal entities in scope, with LEI where available.",
+          "items": {
+            "type": "object",
+            "required": ["name"],
+            "additionalProperties": false,
+            "properties": {
+              "name": { "type": "string" },
+              "lei": { "type": "string" },
+              "country": { "type": "string" },
+              "consolidation_role": {
+                "type": "string",
+                "enum": ["individual", "sub-consolidated", "consolidated", "parent-only"]
+              }
+            }
+          }
+        },
+        "consolidation_level": {
+          "type": "string",
+          "enum": ["individual", "sub-consolidated", "consolidated"]
+        },
+        "register_source": {
+          "type": "string",
+          "description": "TPRM register, DORA register of information, EBA outsourcing register, hybrid view, or other; with date and version."
+        },
+        "criticality_cutoff": {
+          "type": "string",
+          "enum": ["critical-only", "critical-or-important", "important-business-service-supporting", "all"],
+          "description": "Which arrangements are included in the analysis. critical-or-important is the typical cutoff."
+        },
+        "arrangements_in_scope_count": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "fourth_party_visibility": {
+          "type": "string",
+          "enum": ["full", "rank-2-and-deeper", "rank-1-only", "none"],
+          "description": "How deep the sub-contractor chain is documented in the source register."
+        },
+        "data_quality_caveats": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "dimensions": {
+      "type": "array",
+      "description": "Per-dimension findings. Each dimension carries a metric, threshold reference, observed distribution, top concentrations, severity, and substitutability read pointer.",
+      "items": {
+        "type": "object",
+        "required": ["dimension", "metric", "severity"],
+        "additionalProperties": false,
+        "properties": {
+          "dimension": {
+            "type": "string",
+            "enum": [
+              "single-vendor",
+              "fourth-party",
+              "geographic",
+              "jurisdictional",
+              "technology-stack-hyperscaler",
+              "technology-stack-foundation-model",
+              "technology-stack-shared-utility",
+              "technology-stack-other",
+              "sponsor-bank-baas",
+              "bin-sponsor",
+              "payment-rails",
+              "ai-provider",
+              "function-level",
+              "other"
+            ]
+          },
+          "metric": {
+            "type": "string",
+            "description": "Criticality-weighted count, transaction or operational-volume share, function-dependency count, time-to-substitute, or other named metric. Spend is not the metric."
+          },
+          "threshold_reference": {
+            "type": "string",
+            "description": "Firm policy threshold and/or supervisory framing in the named source anchors."
+          },
+          "distribution_summary": {
+            "type": "string",
+            "description": "Plain-language summary of how the portfolio distributes across this dimension."
+          },
+          "top_concentrations": {
+            "type": "array",
+            "description": "The top concentration nodes on this dimension, with vendor or node identifier, share, and affected functions.",
+            "items": {
+              "type": "object",
+              "required": ["node", "share"],
+              "additionalProperties": false,
+              "properties": {
+                "node": { "type": "string" },
+                "node_identifier": { "type": "string", "description": "LEI or other identifier where applicable." },
+                "share": { "type": "string", "description": "Quantified share or count, e.g., '60% of critical-or-important arrangements' or '14 of 22 arrangements'." },
+                "affected_functions": {
+                  "type": "array",
+                  "items": { "type": "string" }
+                }
+              }
+            }
+          },
+          "severity": {
+            "type": "string",
+            "enum": ["clear", "watch", "elevated", "breach"],
+            "description": "clear = within tolerance; watch = above policy soft-threshold but below hard-threshold; elevated = above hard-threshold or surfacing a single-point-of-failure; breach = above firm risk-appetite or above the supervisory threshold cited."
+          },
+          "substitutability_read_pointer": {
+            "type": "string",
+            "description": "Pointer to the substitutability-read entry that anchors this dimension's finding."
+          },
+          "notes": { "type": "string" }
+        }
+      }
+    },
+    "single_points_of_failure": {
+      "type": "array",
+      "description": "Functions where one failure removes the function entirely with no ready substitute. Sourced from the function-level dimension and the cross-dimension read.",
+      "items": {
+        "type": "object",
+        "required": ["function", "rationale", "severity"],
+        "additionalProperties": false,
+        "properties": {
+          "function": { "type": "string" },
+          "arrangement_ids": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "rationale": { "type": "string" },
+          "severity": {
+            "type": "string",
+            "enum": ["watch", "elevated", "breach"]
+          }
+        }
+      }
+    },
+    "substitutability_read": {
+      "type": "array",
+      "description": "Per-concentration substitutability test. Each entry names the concentration, alternative vendors known, time-to-substitute estimate, contractual portability posture, operational substitutability, and stressed-substitutability.",
+      "items": {
+        "type": "object",
+        "required": ["concentration_ref", "stressed_substitutability"],
+        "additionalProperties": false,
+        "properties": {
+          "concentration_ref": { "type": "string", "description": "Pointer to the dimension and node this entry covers." },
+          "alternatives_known": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "time_to_substitute_estimate": { "type": "string" },
+          "contractual_portability": {
+            "type": "string",
+            "enum": ["strong", "partial", "weak", "absent", "unknown"]
+          },
+          "operational_substitutability": {
+            "type": "string",
+            "enum": ["strong", "partial", "weak", "absent", "unknown"]
+          },
+          "stressed_substitutability": {
+            "type": "string",
+            "enum": ["strong", "partial", "weak", "absent", "unknown"],
+            "description": "Substitutability under a wider sector-event scenario where the substitute itself may be in demand."
+          },
+          "exit_plan_record_id": { "type": "string" },
+          "contract_gap_record_id": { "type": "string" },
+          "notes": { "type": "string" }
+        }
+      }
+    },
+    "cloud_concentration_view": {
+      "type": "object",
+      "description": "Optional consolidated view of cloud concentration across hyperscaler, region, sub-region, and shared-control-plane considerations.",
+      "additionalProperties": true
+    },
+    "ai_provider_concentration_view": {
+      "type": ["object", "null"],
+      "description": "Optional view where AI is in scope. Captures foundation-model-vendor share, inference-region share, fine-tuning-vendor share, and the use-case spread the concentration covers.",
+      "additionalProperties": true
+    },
+    "geographic_concentration_view": {
+      "type": "object",
+      "description": "Consolidated view of country, sub-region, and cross-border data-flow concentration.",
+      "additionalProperties": true
+    },
+    "recommended_actions": {
+      "type": "array",
+      "description": "Recommended actions for the named forum. The skill drafts; the forum decides.",
+      "items": {
+        "type": "object",
+        "required": ["action", "owner_role", "rationale"],
+        "additionalProperties": false,
+        "properties": {
+          "action": { "type": "string" },
+          "owner_role": {
+            "type": "string",
+            "description": "Role, not person. Examples: head of TPRM, head of operational resilience, CRO office, ICT-asset owner, business owner SVP."
+          },
+          "rationale": { "type": "string" },
+          "dependent_skill": {
+            "type": "string",
+            "enum": [
+              "vendor-diligence",
+              "contract-gap-review",
+              "exit-plan",
+              "resilience-testing-pack",
+              "criticality-assessment",
+              "dora-register-builder",
+              "none"
+            ]
+          },
+          "due_date": { "type": "string", "format": "date" }
+        }
+      }
+    },
+    "reviewer_questions": {
+      "type": "array",
+      "description": "Questions for the named forum. Each question names the decision it supports.",
+      "items": { "type": "string" }
+    },
+    "open_questions": {
+      "type": "array",
+      "description": "Items routed to legal, compliance, or supervisor dialogue.",
+      "items": { "type": "string" }
+    },
+    "review_gates": {
+      "type": "array",
+      "description": "Named human-review gates this artifact must clear. Drawn from references/review-gates.md.",
+      "items": {
+        "type": "string",
+        "enum": ["scope", "evidence", "authority", "impact", "decision"]
+      }
+    },
+    "owner": {
+      "type": "string",
+      "description": "Role, not person. Examples: head of TPRM, head of operational resilience, ICT third-party programme lead."
+    },
+    "approver": {
+      "type": "string",
+      "description": "Role of the human approver. Operational-resilience committee chair, head of TPRM, head of operational resilience, or CRO office, per firm policy. In EU pre-contract cycles, the firm's accountable executive who signs the preliminary assessment."
+    },
+    "confidence_label": {
+      "type": "string",
+      "enum": ["high", "medium", "low", "unknown"],
+      "description": "Confidence in the overall concentration read, per references/review-gates.md."
+    },
+    "source_trace": {
+      "type": "array",
+      "description": "Citations supporting material claims. Every claim should be traceable. Verification status is captured per claim.",
+      "items": {
+        "type": "object",
+        "required": ["claim", "source"],
+        "additionalProperties": false,
+        "properties": {
+          "claim": { "type": "string" },
+          "source": { "type": "string" },
+          "section": { "type": "string" },
+          "verification_status": {
+            "type": "string",
+            "enum": ["verified", "verify-pending", "inferred"]
+          },
+          "date": { "type": "string", "format": "date" },
+          "url": { "type": "string", "format": "uri" }
+        }
+      }
+    }
+  }
+}

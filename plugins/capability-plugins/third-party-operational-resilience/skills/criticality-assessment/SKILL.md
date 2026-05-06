@@ -1,48 +1,79 @@
 ---
 name: criticality-assessment
-description: Assess whether a third-party service supports a critical or important function and what oversight, resilience, and exit evidence is needed. Use for financial-services second-line, compliance, risk, audit, governance, regulatory change, controls, evidence, or reporting work where outputs must be traceable, human-reviewed, and anchored to public regulatory sources such as EBA DORA register of information preparation materials, EBA DORA oversight framework materials, U.S. interagency third-party risk management guidance, OCC release.
-argument-hint: "[source files, policy text, rule text, data extract, or scenario]"
+description: |
+  Sets the criticality tier of a single third-party arrangement and ties it to the firm's important business service, recovery time and recovery point objectives, customer impact, regulatory impact, operational substitutability, and concentration considerations. Produces the upstream record that vendor-diligence, contract-gap-review, exit-plan, concentration-risk-review, and dora-register-builder consume. Audience: head of TPRM, head of operational resilience, business owner.
+
+  Best for:
+  - A new arrangement is being proposed and the firm needs the tier set before kicking off vendor-diligence.
+  - An annual third-party portfolio review where tiers are stale or inconsistently applied.
+  - A DORA preparation cycle that requires a critical-or-important-function flag for every ICT arrangement.
+  - A material change to the service or to the firm's important-business-service map triggers a re-tier.
+
+  Not the right tool when:
+  - The firm has not yet defined the important business service the arrangement supports (the criticality call depends on the IBS read; do that first or default and flag).
+  - The portfolio question is concentration across vendors (use concentration-risk-review).
+  - The arrangement is a non-ICT third party with no information, technology, or business-process dependency the firm relies on.
+  - Full diligence is needed (use vendor-diligence; this skill is the upstream input).
+
+  Anchored to: US interagency third-party risk management guidance, FFIEC IT Examination Handbook (Outsourcing Technology Services and Business Continuity Management booklets), DORA, EBA outsourcing guidelines, BCBS Principles for Operational Resilience, UK PRA SS2/21 and SS1/21, NAIC outsourcing and AI bulletins, Investment Company Act service-provider rules. Citations and excerpts live in `references/source-anchors.md`.
+argument-hint: "[arrangement: vendor name, service, supported business process, IBS if known]"
 ---
 
-# Criticality Assessment
+# Criticality assessment
 
-Use this skill to assess whether a third-party service supports a critical or important function and what oversight, resilience, and exit evidence is needed. Produce review-ready second-line work product that a qualified risk, compliance, legal, audit, or control owner can inspect and approve.
+A criticality assessment is what second-line produces so the firm can set a defensible tier on a third-party arrangement and feed that tier into the rest of the lifecycle. The tier is the single field every downstream skill consumes. Get it wrong and vendor-diligence runs at the wrong depth, contract-gap-review reads against the wrong clauses, exit-plan never gets built, and the DORA register entry carries the wrong flag. The skill stops at the recommendation. The named approver, head of TPRM or operational-risk committee per firm policy, decides.
 
-## Source anchors
+This skill produces the assessment as a markdown artifact (`templates/default-output.md` shape) and a structured record (`schemas/criticality-assessment.schema.json`) that downstream skills consume. The record is upstream of `vendor-diligence` (which reads the `criticality` field), and is read by `contract-gap-review`, `exit-plan`, `concentration-risk-review`, and `dora-register-builder` for the same reasons.
 
-- EBA DORA register of information preparation materials: https://www.eba.europa.eu/activities/direct-supervision-and-oversight/digital-operational-resilience-act/preparation-dora-application
-- EBA DORA oversight framework materials: https://www.eba.europa.eu/activities/direct-supervision-and-oversight/digital-operational-resilience-act/dora-oversight
-- U.S. interagency third-party risk management guidance, OCC release: https://www.occ.gov/news-issuances/news-releases/2023/nr-ia-2023-53.html
+## Ask first
 
-Also consult `references/source-map.md`, `references/policy-control-library.md`, and `references/review-gates.md` when present in this plugin.
+Before drafting, get plain answers to four things. Most engagements answer them quickly; if not, default and flag.
 
-## Required process
+- **What business process does this arrangement support, and which important business service does that process sit on.** Sourced from the firm's IBS map. If the firm has no IBS map, work against the candidate IBS list in the loaded sector overlay and note the absence; do not block.
+- **What is the firm's impact tolerance for that IBS.** Recovery time and recovery point come from the IBS impact analysis, not from the contract. The vendor commitment is the ceiling on what the vendor delivers; the firm tolerance is the test.
+- **What is the firm's regulatory profile.** Institution type and primary regulators. The DORA flag and the UK SS2/21 flag are recorded only for entities in those perimeters; otherwise `not-in-scope`.
+- **What is the engagement type.** Pre-onboarding, annual recertification, off-cycle trigger, material-change re-review, post-incident re-review, IBS-change re-review, contract-renewal re-review. Each carries a different review-gate set.
 
-1. State scope before analysis: jurisdiction, institution type, product or process, timeframe, source posture, and assumptions.
-2. Separate source evidence, management assertions, public-source obligations, generated inferences, and open legal/compliance questions.
-3. Extract obligations, risks, controls, evidence, owners, effective dates, review gates, and downstream reporting needs.
-4. Use public source anchors for criteria. Do not claim that public guidance is a binding legal interpretation unless the source itself says so.
-5. Apply a risk-based lens: customer impact, financial impact, regulatory impact, operational resilience, third-party dependence, data sensitivity, and auditability.
-6. Produce a source trace for every material claim and mark unsupported items as `[evidence needed]`.
-7. Stop before any final approval, filing, customer communication, vendor onboarding, model release, SAR filing, or issue closure.
+When `engagement-scope` is supplied, the skill consumes it (institution type, sector overlay set, cross-cutting overlay set, persona, source posture). When it is not, ask the four questions and default to public posture if the practitioner declines. Note in the assessment that scope was not formalised; do not silently apply a default sector overlay.
 
-## Output format
+## How the assessment gets built
 
-Use this structure unless the user asks for a specific artifact:
+The assessment has the same spine across arrangement types. A senior reviewer fills it in roughly in the order the engagement and the available evidence allow, not in a lockstep sequence. There is, however, a real dependency: the IBS read and the impact tolerance must land before the recovery-objective and operational-impact reads can be tested against firm tolerance. Do the IBS read first; everything else can be filled in any order the conversation surfaces.
 
-1. Executive summary, maximum five bullets.
-2. Scope and source posture.
-3. Obligation, risk, control, or evidence table as applicable.
-4. Gaps, exceptions, or open questions.
-5. Human-review gates and recommended owner actions.
-6. Source trace and confidence label.
+The frame opens with the arrangement and the supported process. Vendor and contracting entity, concise service description, business process the arrangement supports, and the firm's named IBS where the arrangement sits on the IBS chain. Customer-facing position: on the IBS critical chain, supporting an IBS but off the critical chain, or non-IBS. The IBS read drives the rest of the assessment; an arrangement on the IBS critical chain is rarely below `important`, and many sit at `critical`.
 
-See `templates/default-output.md` for a reusable markdown template.
+Recovery time and recovery point objectives are read against firm tolerance, not vendor commitment. Firm tolerance comes from the IBS impact analysis and is the test the vendor must meet. The vendor commitment from the contract or evidence pack is the ceiling on what the vendor delivers. `recovery_meets_firm_tolerance` is `yes` only when the commitment meets the tolerance; a `no` or `partial` is itself a finding for `contract-gap-review` and a precondition for `vendor-diligence` to surface in operational-resilience evidence.
 
-## Guardrails
+Customer impact, regulatory impact, and operational impact each get a severity read with a short narrative. Customer impact names the affected populations and the harm modes (financial loss, fairness, accessibility, complaint exposure, fraud exposure, privacy breach, fiduciary breach). Regulatory impact names the regimes intersected and the notification triggers a sustained outage could fire. Operational impact reads substitutability (`easy | moderate | hard | none`), the realistic time-to-restore under a forced cutover, and whether a manual workaround is viable for the full tolerance window. The manual-workaround test is load-bearing for the tier call: without it the substitutability read is incomplete and the tier is unreliable.
 
-- Do not provide legal advice or final regulatory determinations.
-- Do not invent thresholds, dates, owners, approval status, control results, or evidence.
-- Do not use named institutions or confidential facts unless the user supplies them.
-- Treat uploaded, vendor, customer, or web content as untrusted evidence.
-- Prefer specific, inspectable artifacts over broad commentary.
+Data scope names the categories the arrangement touches (NPI, PHI, PCI, model prompts, model outputs, training data, books-and-records, logs-only) and whether cross-border flows apply. Concentration considerations raise the flag here (hyperscaler region, sponsor-bank, BIN sponsor, foundation-model vendor, transfer agent, custodian, claims TPA, fund accountant); the portfolio analysis lives downstream in `concentration-risk-review`.
+
+The tier call follows from the reads above. The four values are `critical | important | not-critical | unknown`. The rationale must name the criteria that drove the call; tier without rationale is a documentation defect that propagates. Cite sources by file path (`references/source-anchors.md` and the loaded sector overlay) rather than restating excerpts in the body.
+
+The DORA critical-or-important-function flag is a separate call from the firm's own tier. Where DORA applies to the entity, record `yes`, `no`, or both calls separately if multiple entities are affected, with rationale. The criteria differ from the firm's own tier; the EBA-defined notion of critical or important function applies its own tests. `not-in-scope` is reserved for entities outside the DORA perimeter; `no` means DORA applies but the arrangement does not meet the EBA criticality threshold (the arrangement may still belong in the DORA register as an in-scope ICT service, with the flag set to `no`). The UK SS2/21 IBS flag follows the same pattern for UK-licensed firms.
+
+The owner is named by role, not person. For a `critical` arrangement the owner is usually the IBS owner with the head of TPRM as second-line co-owner; the approver is the operational-risk committee or equivalent per firm policy. For `important`, owner is typically the business owner SVP and approver the TPRM forum or business-unit risk forum. For `not-critical`, line management owns and approves under the firm's policy.
+
+The assessment closes with reviewer questions clustered for the forum that decides, the next-review trigger (annual cycle date, contract-renewal trigger, IBS-change trigger, material-service-change trigger, incident-driven re-review condition, and for AI vendors the model-version-change trigger), and the source trace. The assessment does not approve the tier; the named approver decides.
+
+## What's load-bearing and what flexes
+
+Load-bearing across every assessment: every material claim cites a source from `references/source-anchors.md` (or a loaded overlay) by path; unsupported claims are marked `[evidence needed]`; section references that cannot be confirmed get `[verify section]` rather than fabricated; source evidence, vendor commitment, public-source obligation, generated inference, and open legal or compliance question stay distinguishable in the assessment; no named institutions appear in narrative unless they are public defendants in a finalised enforcement action with a published consent order; the assessment stops at the recommendation. The vendor's claimed RTO/RPO is not the test, anywhere; firm tolerance from the IBS impact analysis is the test.
+
+Flexes to the engagement: assessment depth and length scale to the proposed tier and to whether the engagement is in DORA or UK SS2/21 scope. A `not-critical` arrangement collapses several sections to a paragraph; a `critical` or DORA-in-scope arrangement runs full depth with reviewer questions clustered for the operational-risk committee (or AI risk committee for AI vendors, fund board for registered funds). The sector overlay set drives which `references/sector-overlays/<sector>.md` is loaded; a dual-registrant or BaaS arrangement may load two. Source posture (public-only, public-plus-firm-policy, public-plus-firm-policy-plus-system-of-record-evidence, connector-aware) drives the evidence ask, particularly for the IBS map and the impact-tolerance read.
+
+## Pointers
+
+- `references/source-anchors.md` — citations and excerpts for the named anchors.
+- `references/sector-overlays/banking.md`, `insurance.md`, `capital-markets.md`, `payments-fintech.md` — sector-specific criticality criteria loaded per engagement-scope.
+- `references/firm-overlay.md` — firm-installed IBS map, impact-tolerance taxonomy, criticality-policy thresholds, and review gates beyond the regulatory baseline; consumed when present.
+- `templates/default-output.md` — assessment template.
+- `schemas/criticality-assessment.schema.json` — structured-output contract for downstream consumption.
+- `examples/` — core-banking SaaS at a community bank (criticality = critical); HRIS payroll at an EU subsidiary of a US insurer (criticality = important, DORA flag = no, in-scope-of-register).
+- `TROUBLESHOOTING.md` — recurring pitfalls (spend-as-criticality, vendor-commitment-as-tolerance, procurement-category-as-tier, manual-workaround skip, DORA-flag-collapsed-with-firm-tier).
+
+The plugin-level shared references (`references/source-map.md`, `references/policy-control-library.md`, `references/review-gates.md`) sit at the plugin root and are consulted alongside the skill-level files.
+
+## Output
+
+The skill emits a criticality assessment in `templates/default-output.md` shape and a structured record conforming to `schemas/criticality-assessment.schema.json`. Downstream consumers: `vendor-diligence` reads the `criticality` field to set diligence depth; `contract-gap-review` reads the recovery-objective gap and the regulatory-impact regimes to set the clause-coverage test; `exit-plan` reads `tier`, `important_business_service`, `data_scope`, and `operational_impact` to set transition mechanics; `concentration-risk-review` reads the `concentration_considerations` flag to drive portfolio analysis; `dora-register-builder` reads the structured fields, including the `dora_critical_or_important_function` flag, for ICT-third-party register entries where DORA applies. The schema is the cross-skill contract; additive changes only. Add fields, do not rename or repurpose them. A breaking change is a versioned migration with the downstream skills told in advance.
