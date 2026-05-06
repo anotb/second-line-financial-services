@@ -1,0 +1,8 @@
+{
+  "name": "third-party-risk-reviewer",
+  "version": "0.2.0",
+  "description": "Reviews third-party and operational-resilience evidence, including ICT arrangements, DORA-style registers, due diligence packs, contract gaps, exit plans, and concentration risk.",
+  "author": {
+    "name": "Second Line Financial Services contributors"
+  }
+}

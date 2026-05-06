@@ -1,0 +1,8 @@
+{
+  "name": "risk-reporting-analyst",
+  "version": "0.2.0",
+  "description": "Produces risk committee, BCBS 239, KRI, cyber disclosure readiness, attestation, and management-response materials from risk metrics and evidence.",
+  "author": {
+    "name": "Second Line Financial Services contributors"
+  }
+}

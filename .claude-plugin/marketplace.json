@@ -1,0 +1,98 @@
+{
+  "name": "second-line-financial-services",
+  "owner": {
+    "name": "Second Line Financial Services contributors"
+  },
+  "plugins": [
+    {
+      "name": "risk-compliance-core",
+      "source": "./plugins/capability-plugins/risk-compliance-core",
+      "description": "Core GRC workflow skills for obligation mapping, control matrices, evidence binders, issue write-ups, human-review gates, and policy gap reviews."
+    },
+    {
+      "name": "regulatory-change-management",
+      "source": "./plugins/capability-plugins/regulatory-change-management",
+      "description": "Regulatory change management skills for impact assessment, obligation extraction, policy diffing, implementation planning, and exam brief preparation."
+    },
+    {
+      "name": "ai-governance-model-risk",
+      "source": "./plugins/capability-plugins/ai-governance-model-risk",
+      "description": "AI governance and model risk skills for AI intake, risk tiering, model cards, validation planning, agentic controls, EU AI Act triage, AI vendor review, and board risk packs."
+    },
+    {
+      "name": "third-party-operational-resilience",
+      "source": "./plugins/capability-plugins/third-party-operational-resilience",
+      "description": "Third-party risk and operational resilience skills for vendor diligence, criticality assessment, DORA registers, contract gaps, exit plans, resilience testing, and concentration risk."
+    },
+    {
+      "name": "compliance-testing",
+      "source": "./plugins/capability-plugins/compliance-testing",
+      "description": "Compliance and controls testing skills for test plans, sampling, evidence requests, workpapers, exception analysis, issue drafting, and QA review."
+    },
+    {
+      "name": "risk-reporting",
+      "source": "./plugins/capability-plugins/risk-reporting",
+      "description": "Risk and regulatory reporting skills for risk committee packs, BCBS 239 gap assessment, KRI commentary, SEC cyber disclosure readiness, attestations, and management responses."
+    },
+    {
+      "name": "financial-crime-governance",
+      "source": "./plugins/capability-plugins/financial-crime-governance",
+      "description": "Financial crime governance skills for CDD, SAR decision QA, AML monitoring model governance, sanctions screening QA, EDD escalation, and negative-news triage."
+    },
+    {
+      "name": "consumer-compliance-fair-lending",
+      "source": "./plugins/capability-plugins/consumer-compliance-fair-lending",
+      "description": "Consumer compliance and fair lending skills for fair-lending testing, adverse action review, UDAAP risk review, Section 1071 readiness, complaint themes, and marketing claim review."
+    },
+    {
+      "name": "banking-risk-compliance",
+      "source": "./plugins/sector-plugins/banking-risk-compliance",
+      "description": "Banking-sector overlays for supervision readiness, credit risk governance, deposit operations controls, and bank-fintech partnership review."
+    },
+    {
+      "name": "insurance-risk-compliance",
+      "source": "./plugins/sector-plugins/insurance-risk-compliance",
+      "description": "Insurance-sector overlays for AI triage, life and health pricing governance, claims AI controls, and outsourcing resilience."
+    },
+    {
+      "name": "capital-markets-asset-management-compliance",
+      "source": "./plugins/sector-plugins/capital-markets-asset-management-compliance",
+      "description": "Capital markets and asset-management overlays for adviser exam readiness, marketing evidence, best-execution surveillance, and fund board reporting."
+    },
+    {
+      "name": "payments-fintech-compliance",
+      "source": "./plugins/sector-plugins/payments-fintech-compliance",
+      "description": "Payments and fintech overlays for payments risk assessment, fintech partner controls, payment operations incidents, and open-banking data controls."
+    },
+    {
+      "name": "ai-governance-reviewer",
+      "source": "./plugins/agent-plugins/ai-governance-reviewer",
+      "description": "Runs end-to-end second-line review of AI use cases, model-risk artifacts, agentic controls, EU AI Act triage, AI vendor evidence, and AI risk committee materials."
+    },
+    {
+      "name": "regulatory-change-analyst",
+      "source": "./plugins/agent-plugins/regulatory-change-analyst",
+      "description": "Converts new public rules, guidance, supervisory expectations, and policy changes into obligation maps, impact assessments, policy diffs, controls, and implementation plans."
+    },
+    {
+      "name": "third-party-risk-reviewer",
+      "source": "./plugins/agent-plugins/third-party-risk-reviewer",
+      "description": "Reviews third-party and operational-resilience evidence, including ICT arrangements, DORA-style registers, due diligence packs, contract gaps, exit plans, and concentration risk."
+    },
+    {
+      "name": "controls-testing-analyst",
+      "source": "./plugins/agent-plugins/controls-testing-analyst",
+      "description": "Builds and QA-reviews compliance and control testing workpapers, including test plans, sampling, evidence requests, exception analysis, issue write-ups, and remediation tracking."
+    },
+    {
+      "name": "risk-reporting-analyst",
+      "source": "./plugins/agent-plugins/risk-reporting-analyst",
+      "description": "Produces risk committee, BCBS 239, KRI, cyber disclosure readiness, attestation, and management-response materials from risk metrics and evidence."
+    },
+    {
+      "name": "financial-crime-governance-reviewer",
+      "source": "./plugins/agent-plugins/financial-crime-governance-reviewer",
+      "description": "Reviews CDD, EDD, SAR decision QA, sanctions screening QA, negative-news triage, and AML monitoring governance without making final onboarding, SAR, or sanctions decisions."
+    }
+  ]
+}

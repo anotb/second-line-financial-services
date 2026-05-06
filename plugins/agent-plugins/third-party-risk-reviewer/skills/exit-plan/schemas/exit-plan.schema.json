@@ -1,0 +1,500 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://second-line-financial-services/plugins/capability-plugins/third-party-operational-resilience/skills/exit-plan/schemas/exit-plan.schema.json",
+  "title": "exit-plan",
+  "description": "Structured second-line exit plan record for a third-party arrangement at a regulated financial institution. Carries the trigger set, transition target options and the chosen target, time-to-transition against the firm's impact tolerance, the data-extraction-return-and-destruction set, the contract-termination mechanics, the customer- and regulator-notice posture, the supervisory-readiness posture during transition, the test history, and the named approver. Consumes the vendor-diligence record (criticality, subcontractors, data_access, residual_risk, exit_plan_status). Downstream consumers: dora-register-builder for ICT-third-party register entries where DORA applies; resilience-testing-pack for exit-rehearsal scenarios; concentration-risk-review for the substitutability read.",
+  "type": "object",
+  "required": [
+    "arrangement_id",
+    "vendor_legal_name",
+    "criticality",
+    "exit_plan_status",
+    "selected_transition_target",
+    "time_to_transition_vs_tolerance",
+    "approver",
+    "confidence_label"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "description": "Semver of this schema. Default 1.0.0.",
+      "default": "1.0.0",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "arrangement_id": {
+      "type": "string",
+      "description": "Stable identifier for the vendor arrangement. Reused across criticality-assessment, vendor-diligence, contract-gap-review, concentration-risk-review.",
+      "minLength": 1
+    },
+    "vendor_diligence_record_id": {
+      "type": "string",
+      "description": "Pointer to the vendor-diligence record this plan was built against. The plan consumes criticality, subcontractors, data_access, residual_risk, exit_plan_status from that record."
+    },
+    "engagement_id": {
+      "type": "string",
+      "description": "Optional pointer to the engagement-scope record under which this plan was produced."
+    },
+    "as_of_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date the plan was last revised."
+    },
+    "review_type": {
+      "type": "string",
+      "enum": [
+        "pre-onboarding",
+        "annual-recertification",
+        "off-cycle-trigger",
+        "post-incident-re-review",
+        "concentration-driven-re-review",
+        "scope-change-re-review"
+      ],
+      "description": "Why this plan is being produced or revised. Drives depth and review-gate set."
+    },
+    "vendor_legal_name": {
+      "type": "string",
+      "description": "Counterparty legal entity name. Use the contracting entity, not the brand.",
+      "minLength": 1
+    },
+    "service_type": {
+      "type": "string",
+      "description": "Concise service description, e.g., core banking SaaS, transfer agent, claims TPA, foundation-model API, BIN-sponsor processor."
+    },
+    "business_process_supported": {
+      "type": "string",
+      "description": "Name of the firm's business process the vendor supports."
+    },
+    "important_business_service": {
+      "type": "string",
+      "description": "If the firm has an IBS map, the IBS the vendor sits in. Drives the impact-tolerance test."
+    },
+    "criticality": {
+      "type": "string",
+      "enum": ["not-critical", "important", "critical", "unknown"],
+      "description": "Sourced from criticality-assessment via vendor-diligence. The plan consumes; it does not set."
+    },
+    "dora_in_scope": {
+      "type": "boolean",
+      "description": "True when the arrangement supports a critical or important function under DORA Article 28(8). Triggers the DORA exit-strategy expectation set."
+    },
+    "data_access": {
+      "type": "array",
+      "description": "Categories of firm or customer data the vendor holds at termination. Drives the data-return-and-destruction obligation set. Sourced from vendor-diligence.",
+      "items": {
+        "type": "string",
+        "enum": [
+          "NPI",
+          "PHI",
+          "PCI",
+          "PII-non-sensitive",
+          "confidential-business",
+          "trading-data",
+          "books-and-records",
+          "model-prompts",
+          "model-outputs",
+          "training-data",
+          "logs-only",
+          "metadata-only",
+          "none"
+        ]
+      }
+    },
+    "subcontractors": {
+      "type": "array",
+      "description": "Material fourth parties in the chain. Drives fourth-party-bottleneck analysis on transition.",
+      "items": { "type": "string" }
+    },
+    "residual_risk_input": {
+      "type": "string",
+      "enum": ["low", "medium", "high", "unacceptable"],
+      "description": "Residual risk read from the vendor-diligence record at the time of plan drafting."
+    },
+    "ai_vendor": {
+      "type": "boolean",
+      "description": "True when the vendor supplies an AI system. Triggers AI-specific transition considerations: prompt-template portability, RAG-corpus migration, model-version pinning, deprecation-notice handling."
+    },
+    "triggers": {
+      "type": "array",
+      "description": "Events that would activate this plan. Cover vendor-driven, firm-driven, regulator-driven, and market-driven categories. A plan covering only one category is incomplete.",
+      "items": {
+        "type": "object",
+        "required": ["category", "description"],
+        "additionalProperties": false,
+        "properties": {
+          "category": {
+            "type": "string",
+            "enum": [
+              "vendor-driven",
+              "firm-driven",
+              "regulator-driven",
+              "market-driven"
+            ]
+          },
+          "description": { "type": "string" },
+          "lead_time_assumption": {
+            "type": "string",
+            "description": "Realistic lead time the firm would have under this trigger. Distress and unexpected termination usually have shorter lead times than annual recertification."
+          },
+          "detection_signal": {
+            "type": "string",
+            "description": "How the firm would learn the trigger fired. Press, regulator notice, vendor notice, monitoring KRI breach, fourth-party event."
+          }
+        }
+      }
+    },
+    "transition_target_options": {
+      "type": "array",
+      "description": "The realistic alternatives the firm has assessed. Each option is scored on viability and time-to-transition. A plan with one option only is a single point of failure.",
+      "items": {
+        "type": "object",
+        "required": ["option", "viability"],
+        "additionalProperties": false,
+        "properties": {
+          "option": {
+            "type": "string",
+            "enum": [
+              "substitute-vendor",
+              "in-source",
+              "hybrid-substitute-and-in-source",
+              "retire-service",
+              "graceful-degradation"
+            ]
+          },
+          "candidate_named": {
+            "type": "string",
+            "description": "Specific substitute candidate or in-source target where identified. May be 'unidentified' for an unsourced substitute."
+          },
+          "viability": {
+            "type": "string",
+            "enum": ["primary", "viable", "weak", "not-viable"]
+          },
+          "time_to_transition": {
+            "type": "string",
+            "description": "Realistic elapsed time. State the assumption set."
+          },
+          "dependencies": {
+            "type": "array",
+            "description": "Capabilities, contracts, hires, builds, or fourth-party arrangements required to make this option real.",
+            "items": { "type": "string" }
+          },
+          "notes": { "type": "string" }
+        }
+      }
+    },
+    "selected_transition_target": {
+      "type": "string",
+      "description": "The firm's primary planned transition target. Names the option from transition_target_options designated 'primary'."
+    },
+    "secondary_transition_target": {
+      "type": "string",
+      "description": "Backup option for cases where the primary is unavailable (regulator forces a faster cutover, candidate substitute fails its own diligence, fourth-party bottleneck blocks the primary path)."
+    },
+    "time_to_transition_vs_tolerance": {
+      "type": "string",
+      "enum": ["within", "near", "breach", "unknown"],
+      "description": "Whether the planned time-to-transition fits the firm's impact tolerance for the supported important business service. 'breach' is itself a finding, not a plan."
+    },
+    "data_return_and_destruction": {
+      "type": "object",
+      "description": "The data-return, data-migration, and data-destruction set. Build for every data category in data_access.",
+      "additionalProperties": false,
+      "properties": {
+        "extraction_format": {
+          "type": "string",
+          "description": "Format the vendor will return data in. Specify file format, schema, and whether vendor-proprietary or open."
+        },
+        "schema_mapping_required": {
+          "type": "boolean",
+          "description": "True when the substitute or in-source target uses a different schema. Drives migration-engineering effort."
+        },
+        "volume_estimate": {
+          "type": "string",
+          "description": "Order-of-magnitude volume. Drives extraction-window planning."
+        },
+        "extraction_window": {
+          "type": "string",
+          "description": "Realistic time the extraction itself takes once initiated."
+        },
+        "validation_against_firm_of_record": {
+          "type": "string",
+          "description": "How the firm will validate the returned data against its own books-and-records or system-of-record."
+        },
+        "vendor_obligations": {
+          "type": "string",
+          "description": "What the contract obligates the vendor to do (formats, windows, transition assistance, key-material return). Pointer to contract-gap-review for the clause-by-clause read."
+        },
+        "firm_obligations": {
+          "type": "string",
+          "description": "What the firm must do (provision target, supply credentials, accept handover, schedule cutover, run UAT)."
+        },
+        "destruction_evidence_required": {
+          "type": "string",
+          "description": "Form of vendor attestation of destruction (signed certificate, log evidence, third-party audit). Specify retention of the destruction evidence at the firm."
+        },
+        "post_termination_retention": {
+          "type": "string",
+          "description": "Lawful retention by the vendor after termination (regulatory archive, fraud investigation, legal hold). Must be carved out of the destruction obligation explicitly."
+        },
+        "key_rotation_and_revocation": {
+          "type": "string",
+          "description": "Cyber-side cutover: revoke vendor access, rotate shared keys and tokens, decommission tunnels, remove DNS, update DLP rules."
+        }
+      }
+    },
+    "knowledge_transfer": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "documentation_set": {
+          "type": "string",
+          "description": "What documentation the vendor must hand over: runbooks, configuration baselines, integration specs, model cards and prompt templates for AI vendors."
+        },
+        "personnel_transition": {
+          "type": "string",
+          "description": "Vendor-personnel posture during transition: named SMEs, knowledge-transfer sessions, reverse-shadowing for in-source paths."
+        },
+        "code_and_artifact_escrow": {
+          "type": "string",
+          "description": "Source code, build artifacts, container images, model weights, prompt libraries, RAG corpora held in escrow or returned at termination."
+        }
+      }
+    },
+    "contract_termination_mechanics": {
+      "type": "object",
+      "description": "Reads the operative termination terms. Pointer to contract-gap-review for the gap analysis.",
+      "additionalProperties": false,
+      "properties": {
+        "termination_clause_reference": {
+          "type": "string",
+          "description": "Section reference in the executed agreement. Note jurisdictional governing law."
+        },
+        "termination_for_convenience": {
+          "type": "boolean",
+          "description": "True when the firm has a unilateral termination-for-convenience right."
+        },
+        "termination_assistance_period": {
+          "type": "string",
+          "description": "Vendor's contractual transition-assistance commitment. The clause is not the plan."
+        },
+        "termination_fees": {
+          "type": "string",
+          "description": "Fee posture on early or for-convenience termination."
+        },
+        "regulator_directed_termination_clause": {
+          "type": "boolean",
+          "description": "True when the contract explicitly preserves the firm's ability to terminate on regulator direction without penalty. Banking and EBA-outsourcing-aligned contracts expect this."
+        },
+        "in_flight_data_lock_in": {
+          "type": "string",
+          "description": "Where the contract or product creates lock-in independent of the termination clause: vendor-proprietary data formats, model-fine-tune artifacts, custodial assets requiring third-party movement, regulator-licensed registrations."
+        }
+      }
+    },
+    "customer_notice_posture": {
+      "type": "object",
+      "description": "Customer-facing notification on planned and unexpected termination. Sector-specific obligations (Reg E, Reg DD, NACHA, fund prospectus updates, policyholder notices) live in the sector overlays.",
+      "additionalProperties": false,
+      "properties": {
+        "notification_required": {
+          "type": "boolean"
+        },
+        "lead_time": {
+          "type": "string",
+          "description": "Required lead time. Reg E §1005.8 change-in-terms is one common anchor; sector overlays carry the rest."
+        },
+        "channel": {
+          "type": "string",
+          "description": "Statement, email, in-app notice, mailed letter, advance change-in-terms notice."
+        },
+        "regulated_clock": {
+          "type": "string",
+          "description": "Named regulator clock that drives the lead time, where one applies."
+        }
+      }
+    },
+    "regulator_notice_posture": {
+      "type": "object",
+      "description": "Supervisory notification on activation, in-flight, and post-cutover. A critical or important function exit usually lands on a supervisory notification clock; missing this is itself a finding.",
+      "additionalProperties": false,
+      "properties": {
+        "notifiable_regimes": {
+          "type": "array",
+          "description": "Named regimes (DORA Article 28 ICT-third-party register update; bank-regulator material-vendor change notification; Form ADV brochure update; Form N-CEN service-provider change; NAIC ORSA update; NYDFS event-reporting).",
+          "items": { "type": "string" }
+        },
+        "windows": {
+          "type": "string",
+          "description": "Notification clocks by regime."
+        },
+        "filings_triggered": {
+          "type": "array",
+          "description": "Specific filings or registrations that have to update on transition.",
+          "items": { "type": "string" }
+        },
+        "supervisory_engagement_posture": {
+          "type": "string",
+          "description": "How the firm will keep its supervisor informed during transition. For a critical or important function transition, expect proactive supervisory engagement, not only on-paper notice."
+        }
+      }
+    },
+    "cyber_considerations": {
+      "type": "string",
+      "description": "Cyber overlay during transition: secure data extraction; key rotation; access revocation choreography; vendor-side destruction certification; SEC cyber-disclosure exposure on a forced or contested termination; SIEM and DLP rule updates. Detail in references/cross-cutting/cyber.md."
+    },
+    "privacy_considerations": {
+      "type": "string",
+      "description": "Privacy overlay during transition: GLBA Safeguards data-handling on transition; state-privacy-law deletion and return obligations; HIPAA business-associate transition where in scope; cross-border data flows during transition. Detail in references/cross-cutting/privacy.md."
+    },
+    "supervisory_readiness_during_transition": {
+      "type": "string",
+      "description": "How the firm sustains supervisory and audit readiness during a multi-month transition: dual-running controls, evidence-collection across both vendors, MRA / MRIA exposure, examination-access continuity under the Bank Service Company Act for banks, books-and-records continuity for advisers and BDs."
+    },
+    "fourth_party_dependencies": {
+      "type": "array",
+      "description": "Subcontractors of the exiting vendor whose own posture creates a transition bottleneck (hyperscaler region, BIN-sponsor processor, KYC vendor, fund-accountant subcontractor, foundation-model upstream).",
+      "items": {
+        "type": "object",
+        "required": ["fourth_party"],
+        "additionalProperties": false,
+        "properties": {
+          "fourth_party": { "type": "string" },
+          "dependency_type": { "type": "string" },
+          "transition_impact": { "type": "string" }
+        }
+      }
+    },
+    "ai_specific_transition_considerations": {
+      "type": "object",
+      "description": "Populated only when ai_vendor is true. AI-specific transition engineering does not collapse into generic data-extraction language.",
+      "additionalProperties": false,
+      "properties": {
+        "prompt_template_portability": {
+          "type": "string",
+          "description": "Whether the firm's prompt templates carry across to the substitute model vendor. Templates are usually model-specific."
+        },
+        "rag_corpus_migration": {
+          "type": "string",
+          "description": "Whether the embedded knowledge base, retrieval pipelines, and vector indices are vendor-portable or require re-embedding and re-indexing."
+        },
+        "fine_tune_artifact_handling": {
+          "type": "string",
+          "description": "Whether vendor-side fine-tune artifacts are returned, destroyed, or stranded."
+        },
+        "model_version_pin_handling": {
+          "type": "string",
+          "description": "The deployed checkpoint at termination; whether the vendor provides a final-version export or whether deprecation forces an earlier transition."
+        },
+        "guardrail_and_eval_porting": {
+          "type": "string",
+          "description": "Carrier-side guardrails and evaluation harnesses configured against the outgoing model usually need rework on the new model."
+        },
+        "agent_tool_offboarding": {
+          "type": "string",
+          "description": "For agentic vendors, the action-authorisation surface, tool whitelists, and audit-trail sinks must be revoked and rewired to the substitute or to the in-source agent."
+        }
+      }
+    },
+    "cost_estimate_range": {
+      "type": "string",
+      "description": "Order-of-magnitude transition cost band. Specify the cost-driver assumptions, not a false-precision number."
+    },
+    "testing_plan": {
+      "type": "object",
+      "description": "Test cadence, methods, and history. A plan never tested has unknown viability.",
+      "additionalProperties": false,
+      "properties": {
+        "cadence": {
+          "type": "string",
+          "description": "Tabletop / walkthrough / partial-simulation / full-live cadence per criticality tier and the firm's policy."
+        },
+        "methods_planned": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "tabletop",
+              "walkthrough",
+              "partial-simulation",
+              "full-live-exercise",
+              "data-extraction-rehearsal",
+              "shadow-cutover"
+            ]
+          }
+        },
+        "last_test_date": {
+          "type": "string",
+          "format": "date"
+        },
+        "last_test_outcome": {
+          "type": "string",
+          "description": "Pass / pass-with-findings / fail; summarise findings. 'Never tested' is honest and gets surfaced."
+        },
+        "next_test_due": {
+          "type": "string",
+          "format": "date"
+        },
+        "resilience_testing_pack_record_id": {
+          "type": "string",
+          "description": "Pointer to the resilience-testing-pack record where the exit rehearsal sits in the integrated test programme."
+        }
+      }
+    },
+    "exit_plan_status": {
+      "type": "string",
+      "enum": ["complete", "draft", "missing", "not-applicable"],
+      "description": "Status flowing back to vendor-diligence and to dora-register-builder. 'Missing' on a critical or important arrangement is itself a finding."
+    },
+    "open_dependencies_and_risks": {
+      "type": "array",
+      "description": "Dependencies and risks that have to close before the plan is anything more than paper.",
+      "items": { "type": "string" }
+    },
+    "reviewer_questions": {
+      "type": "array",
+      "description": "Questions for the human approver. Each names the decision it supports.",
+      "items": { "type": "string" }
+    },
+    "review_gates": {
+      "type": "array",
+      "description": "Named human-review gates this plan must clear. Drawn from references/review-gates.md.",
+      "items": {
+        "type": "string",
+        "enum": ["scope", "evidence", "authority", "impact", "decision"]
+      }
+    },
+    "owner": {
+      "type": "string",
+      "description": "Role accountable for keeping the plan current and tested. Usually the IBS owner or the head of TPRM. Procurement supports execution but does not own customer-facing impact."
+    },
+    "approver": {
+      "type": "string",
+      "description": "Role of the human approver named in the firm's third-party-risk and operational-resilience policy for this criticality tier."
+    },
+    "next_review_trigger": {
+      "type": "string",
+      "description": "Annual cycle date, scope-change trigger, contract-amendment trigger, vendor-incident-driven re-review condition."
+    },
+    "confidence_label": {
+      "type": "string",
+      "enum": ["high", "medium", "low", "unknown"],
+      "description": "Confidence in the overall plan, per references/review-gates.md."
+    },
+    "source_trace": {
+      "type": "array",
+      "description": "Citations supporting material claims. Every claim should be traceable.",
+      "items": {
+        "type": "object",
+        "required": ["claim", "source"],
+        "additionalProperties": false,
+        "properties": {
+          "claim": { "type": "string" },
+          "source": { "type": "string" },
+          "section": { "type": "string" },
+          "date": { "type": "string", "format": "date" },
+          "url": { "type": "string", "format": "uri" }
+        }
+      }
+    }
+  }
+}

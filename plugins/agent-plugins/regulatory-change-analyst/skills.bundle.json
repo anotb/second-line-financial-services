@@ -1,0 +1,28 @@
+{
+  "bundled_skills": [
+    {
+      "from": "../../capability-plugins/risk-compliance-core/skills/obligation-mapping"
+    },
+    {
+      "from": "../../capability-plugins/risk-compliance-core/skills/policy-gap-review"
+    },
+    {
+      "from": "../../capability-plugins/risk-compliance-core/skills/control-matrix"
+    },
+    {
+      "from": "../../capability-plugins/regulatory-change-management/skills/regulatory-impact-assessment"
+    },
+    {
+      "from": "../../capability-plugins/regulatory-change-management/skills/rule-to-obligation-map"
+    },
+    {
+      "from": "../../capability-plugins/regulatory-change-management/skills/policy-diff"
+    },
+    {
+      "from": "../../capability-plugins/regulatory-change-management/skills/implementation-plan"
+    },
+    {
+      "from": "../../capability-plugins/regulatory-change-management/skills/exam-brief"
+    }
+  ]
+}

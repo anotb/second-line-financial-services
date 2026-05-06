@@ -1,0 +1,309 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://second-line-financial-services/schemas/ai-act-triage.schema.json",
+  "title": "AIActTriage",
+  "description": "Triage decision under EU AI Act (Regulation (EU) 2024/1689) for a single AI use case. Consumed by ai-use-case intake of record, model-card-builder (Annex IV deltas), genai-pre-prod-review, llm-vendor-evidence-review, board-ai-risk-pack, and the EU-applicability flag for downstream skills.",
+  "type": "object",
+  "required": [
+    "use_case_id",
+    "eu_exposure",
+    "operator_roles",
+    "prohibited_screen",
+    "classification",
+    "obligations_summary",
+    "applicable_date",
+    "source_trace"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "use_case_id": {
+      "type": "string",
+      "description": "Links to ai-use-case-intake record."
+    },
+    "engagement_scope_id": {
+      "type": "string",
+      "description": "Links to engagement-scoping record if supplied."
+    },
+    "triage_metadata": {
+      "type": "object",
+      "properties": {
+        "triage_date": { "type": "string", "format": "date" },
+        "triager": { "type": "string", "description": "Function or role; never named individual." },
+        "second_line_reviewer": { "type": "string" },
+        "legal_reviewer": { "type": "string", "description": "Legal sign-off audience; the triage is a draft until legal/compliance review." },
+        "confidence_overall": {
+          "type": "string",
+          "enum": ["high", "medium", "low"]
+        }
+      }
+    },
+    "eu_exposure": {
+      "type": "object",
+      "required": ["in_scope"],
+      "properties": {
+        "in_scope": { "type": "boolean", "description": "True if any of eu_users, eu_operations, eu_data_subjects, market_placement is true." },
+        "eu_users": { "type": "boolean", "description": "Output is used by people in the EU." },
+        "eu_operations": { "type": "boolean", "description": "System is operated from an EU establishment." },
+        "eu_data_subjects": { "type": "boolean", "description": "Personal data of EU data subjects is in scope." },
+        "market_placement": { "type": "boolean", "description": "System is placed on the EU market or put into service in the EU (Article 2)." },
+        "exposure_basis": { "type": "string", "description": "Short narrative of the EU touch-point." }
+      }
+    },
+    "operator_roles": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["role", "basis"],
+        "properties": {
+          "role": {
+            "type": "string",
+            "enum": ["provider", "deployer", "importer", "distributor", "authorised_representative", "product_manufacturer"]
+          },
+          "basis": { "type": "string", "description": "Why the firm holds this role under Article 3." },
+          "counterparty": { "type": "string", "description": "Other operator(s) in the chain (e.g., the vendor that is the provider when the firm is deployer)." }
+        }
+      }
+    },
+    "prohibited_screen": {
+      "type": "object",
+      "description": "Article 5 sub-practice screen. Each item is screened explicitly; do not omit a sub-practice.",
+      "required": ["overall_result"],
+      "properties": {
+        "overall_result": {
+          "type": "string",
+          "enum": ["clear", "applies", "ambiguous-needs-legal"]
+        },
+        "subliminal_manipulative_techniques": { "$ref": "#/$defs/screen_item" },
+        "exploitation_of_vulnerabilities": { "$ref": "#/$defs/screen_item" },
+        "social_scoring": { "$ref": "#/$defs/screen_item" },
+        "predictive_policing_individual": { "$ref": "#/$defs/screen_item" },
+        "untargeted_facial_image_scraping": { "$ref": "#/$defs/screen_item" },
+        "emotion_recognition_workplace_education": { "$ref": "#/$defs/screen_item" },
+        "biometric_categorisation_sensitive_attributes": { "$ref": "#/$defs/screen_item" },
+        "real_time_remote_biometric_id_law_enforcement": { "$ref": "#/$defs/screen_item" }
+      }
+    },
+    "classification": {
+      "type": "object",
+      "required": ["primary"],
+      "properties": {
+        "primary": {
+          "type": "string",
+          "enum": [
+            "prohibited",
+            "high_risk_annex_I",
+            "high_risk_annex_III",
+            "limited_risk_article_50",
+            "minimal_risk",
+            "gpai",
+            "gpai_systemic_risk",
+            "out_of_scope"
+          ]
+        },
+        "annex_iii_row": {
+          "type": "string",
+          "description": "Cited Annex III row when primary is high_risk_annex_III (e.g., 'Annex III(5)(b)' for credit scoring)."
+        },
+        "annex_i_legislation": {
+          "type": "string",
+          "description": "Cited Annex I product-safety legislation when primary is high_risk_annex_I."
+        },
+        "article_6_3_derogation_considered": {
+          "type": "boolean",
+          "description": "Whether Article 6(3) derogation (no significant risk to health, safety, fundamental rights) was considered for an Annex III use case."
+        },
+        "article_6_3_derogation_basis": {
+          "type": "string",
+          "description": "If derogation invoked, the basis (narrow procedural task, output preparatory, etc.) and confidence."
+        },
+        "secondary": {
+          "type": "array",
+          "description": "Additional classifications that coexist (e.g., a high-risk system whose GenAI output also triggers Article 50 transparency).",
+          "items": {
+            "type": "string",
+            "enum": [
+              "limited_risk_article_50",
+              "gpai",
+              "gpai_systemic_risk"
+            ]
+          }
+        },
+        "classification_basis": { "type": "string", "description": "Reasoning chain from the use case to the classification." }
+      }
+    },
+    "transparency_obligations": {
+      "type": "array",
+      "description": "Article 50 sub-obligations, each screened explicitly when limited_risk_article_50 is in classification (primary or secondary).",
+      "items": {
+        "type": "object",
+        "required": ["sub_obligation", "applies"],
+        "properties": {
+          "sub_obligation": {
+            "type": "string",
+            "enum": [
+              "interaction_with_ai_system_disclosure",
+              "synthetic_content_marking",
+              "deepfake_disclosure",
+              "emotion_recognition_disclosure",
+              "biometric_categorisation_disclosure",
+              "ai_generated_text_of_public_interest_disclosure"
+            ]
+          },
+          "applies": { "type": "boolean" },
+          "disclosure_content": { "type": "string", "description": "Required content of the disclosure when applies is true." },
+          "disclosure_owner": { "type": "string" }
+        }
+      }
+    },
+    "gpai_considerations": {
+      "type": "object",
+      "description": "Article 51-55 obligations when the use case includes a general-purpose AI model (typical for foundation-model-based deployments). Note: GPAI obligations land on the GPAI provider, not the deployer; this block records the deployer's downstream evidence asks.",
+      "properties": {
+        "gpai_in_scope": { "type": "boolean" },
+        "systemic_risk_designated": { "type": "boolean", "description": "Vendor's GPAI model meets Article 51(2) thresholds and obligations under Article 55 apply." },
+        "code_of_practice_status": { "type": "string", "description": "EU AI Office Code of Practice signature status of the vendor (signed / not signed / unknown)." },
+        "vendor_evidence_asks": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "What the deployer needs from the GPAI provider to evidence its own deployer obligations (training-data summary per Article 53, copyright posture, transparency documentation, evaluation evidence)."
+        }
+      }
+    },
+    "obligations_summary": {
+      "type": "array",
+      "minItems": 1,
+      "description": "Obligations the firm picks up at the determined classification, with article references and the operator role each obligation attaches to.",
+      "items": {
+        "type": "object",
+        "required": ["obligation", "article", "operator_role", "owner"],
+        "properties": {
+          "obligation": { "type": "string" },
+          "article": { "type": "string", "description": "EU AI Act article reference (e.g., 'Article 9', 'Article 13', 'Article 26', 'Article 50(2)')." },
+          "operator_role": {
+            "type": "string",
+            "enum": ["provider", "deployer", "importer", "distributor", "authorised_representative", "shared"]
+          },
+          "owner": { "type": "string", "description": "Function or role inside the firm." },
+          "target_date": { "type": "string", "format": "date" },
+          "current_state": { "type": "string", "description": "Met / partial / gap, with one-line basis." }
+        }
+      }
+    },
+    "annex_iv_documentation_deltas": {
+      "type": "array",
+      "description": "Annex IV technical-documentation gaps when the firm is a high-risk provider (or where the deployer must produce supporting documentation under Article 26).",
+      "items": {
+        "type": "object",
+        "required": ["section", "current_state", "gap", "owner"],
+        "properties": {
+          "section": { "type": "string", "description": "Annex IV section reference (e.g., 'Annex IV(1)(a) intended purpose', 'Annex IV(2)(c) training methodology')." },
+          "current_state": { "type": "string" },
+          "gap": { "type": "string" },
+          "owner": { "type": "string" },
+          "links_to_model_card": { "type": "boolean", "description": "True if the gap is closed (in part) by an existing model-card section." }
+        }
+      }
+    },
+    "fria_required": {
+      "type": "object",
+      "description": "Article 27 fundamental rights impact assessment scope.",
+      "properties": {
+        "required": { "type": "boolean" },
+        "basis": { "type": "string", "description": "Why required (Article 27(1)(a) public-body deployer, Article 27(1)(b) credit institution under Annex III(5)(b) or (5)(c) life-or-health insurance, etc.) or why not." },
+        "dpia_overlap_status": { "type": "string", "description": "Reconciliation note: FRIA is not the same as DPIA; each captures distinct elements. Both may be required where personal data is processed." }
+      }
+    },
+    "registration_required": {
+      "type": "object",
+      "description": "Article 71 / Annex VIII EU database registration scope.",
+      "properties": {
+        "required": { "type": "boolean" },
+        "register_path": { "type": "string", "description": "EU database (provider) or Section B (deployer that is public body, EU-institution, or law-enforcement)." }
+      }
+    },
+    "applicable_date": {
+      "type": "object",
+      "required": ["earliest_applicable"],
+      "properties": {
+        "earliest_applicable": { "type": "string", "format": "date", "description": "Earliest applicable date for the obligations attached to this classification, per Article 113 phasing." },
+        "phasing_basis": { "type": "string", "description": "Reference to Article 113 sub-paragraph driving the date (e.g., 'Article 5 prohibited practices applicable from 2 February 2025'; 'high-risk Article 6/Annex III applicable from 2 August 2026'; 'GPAI obligations applicable from 2 August 2025')." },
+        "later_milestones": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "date": { "type": "string", "format": "date" },
+              "milestone": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "monitoring_for_reclassification": {
+      "type": "array",
+      "description": "Triggers that would change this triage decision (architecture change, autonomy-level change, EU footprint change, vendor GPAI status change, new state-of-the-art interpretation by the AI Office).",
+      "items": {
+        "type": "object",
+        "required": ["trigger", "owner"],
+        "properties": {
+          "trigger": { "type": "string" },
+          "owner": { "type": "string" },
+          "frequency": { "type": "string" }
+        }
+      }
+    },
+    "open_questions_and_dissent": {
+      "type": "array",
+      "description": "Items flagged for legal or compliance review; reviewers and basis recorded.",
+      "items": {
+        "type": "object",
+        "required": ["item"],
+        "properties": {
+          "item": { "type": "string" },
+          "reviewer": { "type": "string" },
+          "position": { "type": "string" },
+          "basis": { "type": "string" }
+        }
+      }
+    },
+    "source_trace": {
+      "type": "array",
+      "minItems": 1,
+      "description": "Every material claim with its source (article and annex reference), evidence pointer, and confidence label.",
+      "items": {
+        "type": "object",
+        "required": ["claim", "source", "confidence"],
+        "properties": {
+          "claim": { "type": "string" },
+          "source": { "type": "string", "description": "Article and annex reference, supplemented by Code of Practice or AI Office Q&A where relevant." },
+          "evidence_reference": { "type": "string" },
+          "confidence": {
+            "type": "string",
+            "enum": ["high", "medium", "low", "evidence-needed"]
+          }
+        }
+      }
+    },
+    "sector_overlay_notes": {
+      "type": "object",
+      "description": "Sector-specific findings raised by the loaded sector overlay reference doc.",
+      "properties": {
+        "banking": { "type": "object", "additionalProperties": true },
+        "insurance": { "type": "object", "additionalProperties": true },
+        "capital_markets": { "type": "object", "additionalProperties": true },
+        "payments_fintech": { "type": "object", "additionalProperties": true }
+      }
+    }
+  },
+  "$defs": {
+    "screen_item": {
+      "type": "object",
+      "required": ["applies"],
+      "properties": {
+        "applies": { "type": "boolean" },
+        "basis": { "type": "string", "description": "One-line reason; cite Article 5 sub-paragraph." }
+      }
+    }
+  }
+}

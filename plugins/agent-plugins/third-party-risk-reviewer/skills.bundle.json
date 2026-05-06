@@ -1,0 +1,31 @@
+{
+  "bundled_skills": [
+    {
+      "from": "../../capability-plugins/risk-compliance-core/skills/control-matrix"
+    },
+    {
+      "from": "../../capability-plugins/risk-compliance-core/skills/evidence-binder"
+    },
+    {
+      "from": "../../capability-plugins/third-party-operational-resilience/skills/vendor-diligence"
+    },
+    {
+      "from": "../../capability-plugins/third-party-operational-resilience/skills/criticality-assessment"
+    },
+    {
+      "from": "../../capability-plugins/third-party-operational-resilience/skills/dora-register-builder"
+    },
+    {
+      "from": "../../capability-plugins/third-party-operational-resilience/skills/contract-gap-review"
+    },
+    {
+      "from": "../../capability-plugins/third-party-operational-resilience/skills/exit-plan"
+    },
+    {
+      "from": "../../capability-plugins/third-party-operational-resilience/skills/resilience-testing-pack"
+    },
+    {
+      "from": "../../capability-plugins/third-party-operational-resilience/skills/concentration-risk-review"
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Issue",
+  "type": "object",
+  "required": [
+    "issue_id",
+    "condition",
+    "criteria",
+    "cause",
+    "impact",
+    "severity",
+    "remediation",
+    "owner"
+  ],
+  "properties": {
+    "issue_id": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "condition": {
+      "type": "string"
+    },
+    "criteria": {
+      "type": "string"
+    },
+    "cause": {
+      "type": "string"
+    },
+    "impact": {
+      "type": "string"
+    },
+    "severity": {
+      "enum": [
+        "low",
+        "moderate",
+        "high",
+        "critical"
+      ]
+    },
+    "remediation": {
+      "type": "string"
+    },
+    "owner": {
+      "type": "string"
+    },
+    "target_date": {
+      "type": "string"
+    },
+    "evidence_gap": {
+      "type": "boolean"
+    }
+  }
+}

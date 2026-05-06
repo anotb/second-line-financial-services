@@ -1,0 +1,351 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://second-line-financial-services/plugins/capability-plugins/third-party-operational-resilience/skills/vendor-diligence/schemas/vendor-diligence.schema.json",
+  "title": "vendor-diligence",
+  "description": "Structured second-line vendor diligence record. Carries inherent risk, criticality input, due-diligence evidence read, residual risk, exit posture, and the gap-and-question set a control owner needs to close before onboarding or recertification. The same record handles non-AI and AI vendors via the ai_vendor boolean and the conditional ai_specific_findings block. Downstream consumers: contract-gap-review, exit-plan, concentration-risk-review, dora-register-builder, llm-vendor-evidence-review (AI vendors only).",
+  "type": "object",
+  "required": [
+    "arrangement_id",
+    "vendor_legal_name",
+    "service_type",
+    "business_process_supported",
+    "criticality",
+    "ai_vendor",
+    "residual_risk",
+    "confidence_label"
+  ],
+  "additionalProperties": false,
+  "allOf": [
+    {
+      "if": {
+        "properties": { "ai_vendor": { "const": true } },
+        "required": ["ai_vendor"]
+      },
+      "then": {
+        "required": ["ai_specific_findings"]
+      }
+    }
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "description": "Semver of this schema. Default 1.0.0.",
+      "default": "1.0.0",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "arrangement_id": {
+      "type": "string",
+      "description": "Stable identifier for the vendor arrangement. Reused across criticality-assessment, contract-gap-review, exit-plan, and concentration-risk-review.",
+      "minLength": 1
+    },
+    "engagement_id": {
+      "type": "string",
+      "description": "Optional pointer to the engagement-scope record under which this diligence was produced."
+    },
+    "as_of_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date the diligence pack was last revised."
+    },
+    "review_type": {
+      "type": "string",
+      "enum": [
+        "pre-onboarding",
+        "annual-recertification",
+        "off-cycle-trigger",
+        "exit-triggered-re-review",
+        "post-incident-re-review",
+        "scope-change-re-review"
+      ],
+      "description": "Why this diligence is being produced. Drives depth and review-gate set."
+    },
+    "vendor_legal_name": {
+      "type": "string",
+      "description": "Counterparty legal entity name. Use the contracting entity, not the brand.",
+      "minLength": 1
+    },
+    "vendor_brand_name": {
+      "type": "string",
+      "description": "Brand or product name if it differs from the legal entity."
+    },
+    "vendor_jurisdictions": {
+      "type": "array",
+      "description": "Country / state codes where the vendor is incorporated, licensed, or hosts material services.",
+      "items": { "type": "string" }
+    },
+    "service_type": {
+      "type": "string",
+      "description": "Concise service description, e.g., cloud IaaS, core banking SaaS, foundation-model API, ACH processor, KYC/CIP vendor, claims TPA, sub-adviser, fund accountant.",
+      "minLength": 1
+    },
+    "business_process_supported": {
+      "type": "string",
+      "description": "Name of the firm's business process or important business service the vendor supports.",
+      "minLength": 1
+    },
+    "important_business_service": {
+      "type": "string",
+      "description": "If the firm has an IBS map, the IBS the vendor sits in. Drives impact-tolerance test."
+    },
+    "criticality": {
+      "type": "string",
+      "enum": ["not-critical", "important", "critical", "unknown"],
+      "description": "Sourced from criticality-assessment. The diligence pack consumes; it does not set."
+    },
+    "criticality_source": {
+      "type": "string",
+      "description": "Pointer to the criticality-assessment record, or 'inline' if set in this pack."
+    },
+    "data_access": {
+      "type": "array",
+      "description": "Categories of firm or customer data the vendor touches. Includes prompts and model outputs for AI vendors.",
+      "items": {
+        "type": "string",
+        "enum": [
+          "NPI",
+          "PHI",
+          "PCI",
+          "PII-non-sensitive",
+          "confidential-business",
+          "trading-data",
+          "model-prompts",
+          "model-outputs",
+          "training-data",
+          "logs-only",
+          "metadata-only",
+          "none"
+        ]
+      }
+    },
+    "data_locations": {
+      "type": "array",
+      "description": "Regions where data is processed or stored. Use ISO country codes or named cloud regions.",
+      "items": { "type": "string" }
+    },
+    "cross_border_flows": {
+      "type": "boolean",
+      "description": "True if customer or firm data crosses a regulated border."
+    },
+    "subcontractors": {
+      "type": "array",
+      "description": "Material fourth parties known to be in the chain.",
+      "items": { "type": "string" }
+    },
+    "subcontractor_visibility": {
+      "type": "string",
+      "enum": ["full", "partial", "none"],
+      "description": "How much of the subcontractor chain is visible to the firm. Flow-down clauses do not count as visibility."
+    },
+    "cyber_evidence_status": {
+      "type": "string",
+      "enum": ["sufficient", "partial", "missing", "not-applicable"],
+      "description": "Read-through of SOC 2 Type II, ISO 27001, pen-test, vulnerability-management evidence. Scope and exceptions matter, not just clean opinion."
+    },
+    "cyber_evidence_notes": {
+      "type": "string",
+      "description": "What was inspected, what was missing, what CUECs are not addressed by the firm."
+    },
+    "bcdr_rto_claimed": {
+      "type": "string",
+      "description": "Vendor-claimed Recovery Time Objective."
+    },
+    "bcdr_rpo_claimed": {
+      "type": "string",
+      "description": "Vendor-claimed Recovery Point Objective."
+    },
+    "bcdr_evidence_status": {
+      "type": "string",
+      "enum": ["sufficient", "partial", "missing", "not-applicable"],
+      "description": "Read-through of BCDR test reports against the firm's impact tolerance for the supported business service."
+    },
+    "bcdr_meets_firm_tolerance": {
+      "type": "boolean",
+      "description": "True only when the vendor's evidenced (not claimed) recovery objectives meet the firm's impact tolerance."
+    },
+    "privacy_evidence_status": {
+      "type": "string",
+      "enum": ["sufficient", "partial", "missing", "not-applicable"],
+      "description": "Read-through of GLBA Safeguards posture, state-privacy-law compliance, HIPAA BAA where applicable, AI training-data and prompt-handling commitments where applicable."
+    },
+    "financial_condition_status": {
+      "type": "string",
+      "enum": ["sound", "watch", "concern", "unknown"],
+      "description": "Going-concern read of the vendor."
+    },
+    "financial_condition_notes": {
+      "type": "string",
+      "description": "What was reviewed: audited financials, public filings, D&B, credit-rating, going-concern qualifier, runway disclosure for non-public early-stage vendors."
+    },
+    "regulatory_posture_flags": {
+      "type": "array",
+      "description": "Sanctions, enforcement, litigation, jurisdictional or registration concerns.",
+      "items": { "type": "string" }
+    },
+    "contract_gap_summary": {
+      "type": "string",
+      "description": "One-paragraph summary of contract coverage findings. Pointer to contract-gap-review record."
+    },
+    "contract_gap_record_id": {
+      "type": "string",
+      "description": "ID of the contract-gap-review record carrying the full clause-by-clause analysis."
+    },
+    "exit_plan_status": {
+      "type": "string",
+      "enum": ["complete", "draft", "missing", "not-applicable"],
+      "description": "Status of the corresponding exit-plan artifact. A critical or important vendor with exit_plan_status of 'missing' is itself a finding."
+    },
+    "exit_plan_record_id": {
+      "type": "string",
+      "description": "ID of the exit-plan record."
+    },
+    "concentration_flag": {
+      "type": "string",
+      "enum": ["none", "watch", "breach"],
+      "description": "Concentration consideration raised here; full analysis lives in concentration-risk-review."
+    },
+    "concentration_notes": {
+      "type": "string",
+      "description": "Why the flag was raised: hyperscaler region, BIN sponsor, sponsor-bank program, sub-adviser, claims-TPA, foundation-model concentration, etc."
+    },
+    "ai_vendor": {
+      "type": "boolean",
+      "description": "Gates the AI-specific findings block. True when the vendor supplies an AI system or AI-adjacent capability the firm relies on for inference, generation, classification, or autonomous action. Includes embedded-AI features in an otherwise non-AI SaaS."
+    },
+    "ai_specific_findings": {
+      "type": "object",
+      "description": "Populated only when ai_vendor is true. Captures the AI-overlay diligence findings. The narrower model-risk evidence-pack review chains to llm-vendor-evidence-review via eval_evidence_status.",
+      "additionalProperties": false,
+      "properties": {
+        "ai_use_case_category": {
+          "type": "string",
+          "enum": [
+            "foundation-model-api",
+            "ai-saas-product",
+            "embedded-ai-feature",
+            "agentic-system",
+            "rag-application",
+            "fine-tuned-model",
+            "specialised-classifier",
+            "other"
+          ]
+        },
+        "model_provenance": {
+          "type": "string",
+          "description": "Who built the model, on what base, what is licensed vs proprietary. Includes whether the deployment is base, fine-tuned, RAG-augmented, or agent-orchestrated."
+        },
+        "training_data_posture": {
+          "type": "string",
+          "description": "What the vendor publicly commits to on training data, customer-data-isolation, opt-out posture for API inputs, and abuse-monitoring exceptions to the default."
+        },
+        "eval_evidence_status": {
+          "type": "string",
+          "enum": ["sufficient", "partial", "missing", "deferred-to-evidence-review"],
+          "description": "Read-through of system-card, model-report, evaluation-report, red-team-summary against the firm's deployment context. 'deferred-to-evidence-review' means the deeper question is being handed to llm-vendor-evidence-review in ai-governance-model-risk."
+        },
+        "eval_coverage_on_deployed_system": {
+          "type": "boolean",
+          "description": "True only when published evals cover the deployed system (fine-tune + RAG + retrieval quality + grounding behavior), not only the base model on the vendor's benchmarks."
+        },
+        "shared_responsibility_clarity": {
+          "type": "string",
+          "enum": ["clear", "partial", "unclear"],
+          "description": "Clarity of the responsibility split for safety, content moderation, abuse handling, prompt-injection defence, and incident-response."
+        },
+        "fine_tune_data_isolation": {
+          "type": "string",
+          "enum": ["isolated", "shared-tenant", "not-applicable", "unknown"],
+          "description": "Posture on customer fine-tuning data and customer prompts being used to train, evaluate, or improve the vendor's models."
+        },
+        "agent_tool_posture": {
+          "type": "string",
+          "description": "Where the vendor offers agentic capabilities, the tool-use boundary, action-authorisation, and audit-trail posture."
+        },
+        "system_card_fit_to_deployment": {
+          "type": "string",
+          "enum": ["fit", "partial-fit", "not-fit", "no-system-card"],
+          "description": "Whether the vendor's published system card or model report addresses the firm's actual deployment context, data, and downstream decisioning."
+        },
+        "prompt_as_customer_data_assessment": {
+          "type": "string",
+          "description": "Privacy lens on customer prompts. Flag NPI, PHI, PCI, or other regulated data that customer interactions may carry to the vendor."
+        },
+        "llm_vendor_evidence_review_record_id": {
+          "type": "string",
+          "description": "ID of the linked llm-vendor-evidence-review record (ai-governance-model-risk skill) when chained."
+        }
+      }
+    },
+    "residual_risk": {
+      "type": "string",
+      "enum": ["low", "medium", "high", "unacceptable"],
+      "description": "Residual risk after current and committed controls."
+    },
+    "open_evidence_gaps": {
+      "type": "array",
+      "description": "Specific evidence the firm asked for and did not receive, or received in insufficient form.",
+      "items": { "type": "string" }
+    },
+    "reviewer_questions": {
+      "type": "array",
+      "description": "Questions for the human approver. Each question names the decision it supports.",
+      "items": { "type": "string" }
+    },
+    "recommended_decision": {
+      "type": "string",
+      "enum": [
+        "approve",
+        "approve-with-conditions",
+        "defer",
+        "decline",
+        "escalate"
+      ],
+      "description": "The diligence team's recommendation. Final decision sits with the named approver, not the skill."
+    },
+    "recommended_conditions": {
+      "type": "array",
+      "description": "If approve-with-conditions, the conditions the vendor or first line must meet before or after onboarding.",
+      "items": { "type": "string" }
+    },
+    "review_gates": {
+      "type": "array",
+      "description": "Named human-review gates this pack must clear. Drawn from references/review-gates.md.",
+      "items": {
+        "type": "string",
+        "enum": ["scope", "evidence", "authority", "impact", "decision"]
+      }
+    },
+    "next_review_trigger": {
+      "type": "string",
+      "description": "Annual cycle date, scope-change trigger, or incident-driven re-review condition."
+    },
+    "owner": {
+      "type": "string",
+      "description": "Role, not person. Examples: third-party risk manager, business owner, CISO delegate, BSA officer, AI governance lead."
+    },
+    "approver": {
+      "type": "string",
+      "description": "Role of the human approver named in the firm's third-party-risk policy for this criticality tier."
+    },
+    "confidence_label": {
+      "type": "string",
+      "enum": ["high", "medium", "low", "unknown"],
+      "description": "Confidence in the overall diligence read, per references/review-gates.md."
+    },
+    "source_trace": {
+      "type": "array",
+      "description": "Citations supporting material claims. Every claim should be traceable.",
+      "items": {
+        "type": "object",
+        "required": ["claim", "source"],
+        "additionalProperties": false,
+        "properties": {
+          "claim": { "type": "string" },
+          "source": { "type": "string" },
+          "section": { "type": "string" },
+          "date": { "type": "string", "format": "date" },
+          "url": { "type": "string", "format": "uri" }
+        }
+      }
+    }
+  }
+}

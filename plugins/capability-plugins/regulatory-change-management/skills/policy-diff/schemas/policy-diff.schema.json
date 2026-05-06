@@ -1,0 +1,394 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Policy diff change log",
+  "description": "Structured output produced by the policy-diff skill. One record per diff run between two versions of a firm policy. Downstream skills (implementation-plan, control-matrix, policy-gap-review, exam-brief) consume this record by change_id.",
+  "type": "object",
+  "required": [
+    "diff_id",
+    "as_of_date",
+    "policy",
+    "version_a",
+    "version_b",
+    "trigger",
+    "source_posture",
+    "changes",
+    "confidence_label",
+    "human_review_required"
+  ],
+  "properties": {
+    "diff_id": {
+      "type": "string",
+      "description": "Stable identifier for this diff run."
+    },
+    "as_of_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "engagement_scope_ref": {
+      "type": "string",
+      "description": "Pointer to the engagement-scope record this diff was produced under, when one exists."
+    },
+    "policy": {
+      "type": "object",
+      "required": ["name", "owner_role"],
+      "properties": {
+        "name": {"type": "string"},
+        "owner_role": {
+          "type": "string",
+          "description": "Named role with accountability. Departments are not owners."
+        },
+        "policy_id": {"type": "string"},
+        "policy_domain": {
+          "type": "string",
+          "description": "TPRM, BSA/AML, model risk, cybersecurity, conduct, fair lending, AI governance, operational resilience, etc."
+        },
+        "policy_management_system": {
+          "type": "string",
+          "description": "Named system of record for the policy library when supplied."
+        }
+      }
+    },
+    "version_a": {"$ref": "#/$defs/policy_version"},
+    "version_b": {"$ref": "#/$defs/policy_version"},
+    "trigger": {
+      "type": "string",
+      "enum": [
+        "annual-review",
+        "scheduled-review",
+        "mra-remediation",
+        "mria-remediation",
+        "consent-order",
+        "regulatory-amendment",
+        "internal-incident",
+        "control-failure",
+        "board-direction",
+        "system-migration",
+        "scope-expansion",
+        "other"
+      ]
+    },
+    "trigger_detail": {
+      "type": "string",
+      "description": "Free-text rationale for the new version. Cite the supervisory letter, MRA, or board decision when applicable."
+    },
+    "target_effective_date": {"type": "string", "format": "date"},
+    "named_approver_role": {
+      "type": "string",
+      "description": "Role accountable for approving version B. Policy committee chair, head of function, board, etc."
+    },
+    "source_posture": {
+      "type": "string",
+      "enum": [
+        "public-only",
+        "public-plus-firm-policy",
+        "public-plus-firm-policy-plus-evidence",
+        "connector-aware"
+      ]
+    },
+    "changes": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/change"}
+    },
+    "cross_policy_ripples": {
+      "type": "array",
+      "description": "Other firm policies that reference renamed defined terms, moved sections, or deleted paragraphs and are stale until reconciled.",
+      "items": {
+        "type": "object",
+        "required": ["referenced_policy", "ripple_type"],
+        "properties": {
+          "referenced_policy": {"type": "string"},
+          "ripple_type": {
+            "type": "string",
+            "enum": [
+              "stale-cross-reference",
+              "renamed-defined-term",
+              "deleted-section-pointer",
+              "moved-section-pointer",
+              "supersession-chain"
+            ]
+          },
+          "affected_change_ids": {"type": "array", "items": {"type": "string"}},
+          "remediation_owner_role": {"type": "string"},
+          "notes": {"type": "string"}
+        }
+      }
+    },
+    "defined_term_inventory": {
+      "type": "array",
+      "description": "Defined terms whose name or scope changed between versions.",
+      "items": {
+        "type": "object",
+        "required": ["term", "change_type"],
+        "properties": {
+          "term": {"type": "string"},
+          "change_type": {
+            "type": "string",
+            "enum": ["renamed", "scope-broadened", "scope-narrowed", "added", "removed"]
+          },
+          "version_a_definition": {"type": "string"},
+          "version_b_definition": {"type": "string"},
+          "downstream_consumers": {
+            "type": "array",
+            "description": "Other firm policies, controls, or training that consume the term.",
+            "items": {"type": "string"}
+          }
+        }
+      }
+    },
+    "approver_routing_summary": {
+      "type": "array",
+      "description": "Material changes grouped by approver so the policy committee or board paper can be drafted directly.",
+      "items": {
+        "type": "object",
+        "required": ["approver_role", "change_ids"],
+        "properties": {
+          "approver_role": {"type": "string"},
+          "change_ids": {"type": "array", "items": {"type": "string"}},
+          "summary": {"type": "string"}
+        }
+      }
+    },
+    "communication_plan_summary": {
+      "type": "array",
+      "description": "Changes grouped by audience so line-manager packs and all-staff comms can be sequenced.",
+      "items": {
+        "type": "object",
+        "required": ["audience", "change_ids"],
+        "properties": {
+          "audience": {
+            "type": "string",
+            "enum": [
+              "all-staff",
+              "line-managers",
+              "specific-function",
+              "customer-facing",
+              "vendor-facing",
+              "board",
+              "external-counsel"
+            ]
+          },
+          "function": {"type": "string"},
+          "change_ids": {"type": "array", "items": {"type": "string"}},
+          "delivery_window": {"type": "string"}
+        }
+      }
+    },
+    "open_question_summary": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["question", "reviewer"],
+        "properties": {
+          "change_ids": {"type": "array", "items": {"type": "string"}},
+          "question": {"type": "string"},
+          "reviewer": {
+            "type": "string",
+            "enum": ["legal", "compliance", "function-head", "policy-owner", "external-counsel", "other"]
+          },
+          "target_resolution_date": {"type": "string", "format": "date"}
+        }
+      }
+    },
+    "confidence_label": {
+      "type": "string",
+      "enum": ["high", "medium", "low", "mixed"]
+    },
+    "human_review_required": {
+      "type": "boolean",
+      "description": "Always true. The skill stops at draft; the policy owner and named approver attest."
+    },
+    "reviewer": {
+      "type": "object",
+      "properties": {
+        "policy_owner_role": {"type": "string"},
+        "named_approver_role": {"type": "string"},
+        "independent_reviewer_role": {"type": "string"},
+        "review_status": {
+          "type": "string",
+          "enum": ["pending", "in-review", "attested", "returned-for-revision"]
+        },
+        "review_date": {"type": "string", "format": "date"}
+      }
+    },
+    "revisions": {
+      "type": "array",
+      "description": "Append-only revision log for the diff artifact itself.",
+      "items": {
+        "type": "object",
+        "required": ["date", "reason", "delta"],
+        "properties": {
+          "date": {"type": "string", "format": "date"},
+          "reason": {"type": "string"},
+          "delta": {"type": "string"},
+          "approved_by": {"type": "string"}
+        }
+      }
+    }
+  },
+  "$defs": {
+    "policy_version": {
+      "type": "object",
+      "required": ["version_label"],
+      "properties": {
+        "version_label": {"type": "string", "description": "Version number or identifier as the firm uses it."},
+        "approval_date": {"type": "string", "format": "date"},
+        "approver_role": {"type": "string"},
+        "document_hash": {"type": "string", "description": "Hash or document-management-system identifier where available."},
+        "effective_date": {"type": "string", "format": "date"},
+        "status": {
+          "type": "string",
+          "enum": ["live", "superseded", "draft", "withdrawn"]
+        },
+        "url_or_pointer": {"type": "string"}
+      }
+    },
+    "change": {
+      "type": "object",
+      "required": [
+        "change_id",
+        "section_path",
+        "diff_type",
+        "substantive_delta",
+        "materiality"
+      ],
+      "properties": {
+        "change_id": {"type": "string"},
+        "section_path": {
+          "type": "string",
+          "description": "Heading hierarchy plus paragraph or clause number for version B. Where the section number itself moved, both A and B numbers appear."
+        },
+        "section_path_version_a": {"type": "string"},
+        "diff_type": {
+          "type": "string",
+          "enum": [
+            "added",
+            "removed",
+            "reworded-substantive",
+            "reworded-cosmetic",
+            "restructured",
+            "defined-term-changed",
+            "cross-reference-changed",
+            "no-change"
+          ]
+        },
+        "version_a_excerpt": {"type": "string"},
+        "version_b_excerpt": {"type": "string"},
+        "substantive_delta": {
+          "type": "string",
+          "description": "One sentence on what changed in operational terms. Operative-verb shift, threshold movement, named-role change, timing change, scope-of-application change."
+        },
+        "materiality": {
+          "type": "string",
+          "enum": ["material", "incremental", "clarifying", "cosmetic", "open-question"]
+        },
+        "materiality_rationale": {"type": "string"},
+        "downstream_impact": {
+          "type": "object",
+          "description": "What the change touches outside the policy text. Each yes carries rationale.",
+          "properties": {
+            "training": {
+              "type": "object",
+              "properties": {
+                "required": {"type": "boolean"},
+                "type": {
+                  "type": "string",
+                  "enum": ["refresh-existing-module", "new-module", "communication-only", "none"]
+                },
+                "audience_roles": {"type": "array", "items": {"type": "string"}},
+                "delivery_window": {"type": "string"},
+                "rationale": {"type": "string"}
+              }
+            },
+            "control_revision": {
+              "type": "object",
+              "properties": {
+                "required": {"type": "boolean"},
+                "control_ids": {"type": "array", "items": {"type": "string"}},
+                "revision_type": {
+                  "type": "string",
+                  "enum": ["evidence-cadence-change", "control-design-change", "new-control", "control-retired", "owner-change", "none"]
+                },
+                "rationale": {"type": "string"}
+              }
+            },
+            "system_change": {
+              "type": "object",
+              "properties": {
+                "required": {"type": "boolean"},
+                "named_systems": {"type": "array", "items": {"type": "string"}},
+                "change_type": {
+                  "type": "string",
+                  "enum": ["configuration", "workflow", "data-field", "report", "access-rule", "none"]
+                },
+                "rationale": {"type": "string"}
+              }
+            },
+            "communication": {
+              "type": "object",
+              "properties": {
+                "required": {"type": "boolean"},
+                "audience": {
+                  "type": "string",
+                  "enum": [
+                    "all-staff",
+                    "line-managers",
+                    "specific-function",
+                    "customer-facing",
+                    "vendor-facing",
+                    "board",
+                    "external-counsel",
+                    "none"
+                  ]
+                },
+                "delivery_window": {"type": "string"},
+                "rationale": {"type": "string"}
+              }
+            },
+            "attestation": {
+              "type": "object",
+              "properties": {
+                "required": {"type": "boolean"},
+                "type": {
+                  "type": "string",
+                  "enum": ["re-attestation", "fresh-attestation", "none"]
+                },
+                "audience_roles": {"type": "array", "items": {"type": "string"}},
+                "rationale": {"type": "string"}
+              }
+            },
+            "follow_on": {
+              "type": "object",
+              "properties": {
+                "linked_open_question": {"type": "string"},
+                "planned_amendment": {"type": "string"}
+              }
+            }
+          }
+        },
+        "approver_role": {
+          "type": "string",
+          "description": "Who signs off this change row. Material rows route to the named approver the firm's policy lifecycle requires; cosmetic rows usually to the policy owner alone."
+        },
+        "effective_date": {"type": "string", "format": "date"},
+        "section_phase_in": {
+          "type": "string",
+          "description": "Where the section binds on a different date than the policy effective date."
+        },
+        "linked_obligation_ids": {
+          "type": "array",
+          "description": "Foreign keys into an obligation register, where one exists for the policy domain.",
+          "items": {"type": "string"}
+        },
+        "linked_control_ids": {
+          "type": "array",
+          "description": "Foreign keys into a control matrix, where one exists for the policy domain.",
+          "items": {"type": "string"}
+        },
+        "open_questions": {"type": "array", "items": {"type": "string"}},
+        "confidence": {"type": "string", "enum": ["high", "medium", "low"]},
+        "tags": {"type": "array", "items": {"type": "string"}},
+        "human_review_required": {"type": "boolean"}
+      }
+    }
+  }
+}

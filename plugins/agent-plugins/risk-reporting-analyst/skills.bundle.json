@@ -1,0 +1,25 @@
+{
+  "bundled_skills": [
+    {
+      "from": "../../capability-plugins/risk-compliance-core/skills/evidence-binder"
+    },
+    {
+      "from": "../../capability-plugins/risk-reporting/skills/risk-committee-pack"
+    },
+    {
+      "from": "../../capability-plugins/risk-reporting/skills/bcbs239-gap-assessment"
+    },
+    {
+      "from": "../../capability-plugins/risk-reporting/skills/kri-commentary"
+    },
+    {
+      "from": "../../capability-plugins/risk-reporting/skills/cyber-disclosure-readiness"
+    },
+    {
+      "from": "../../capability-plugins/risk-reporting/skills/attestation-pack"
+    },
+    {
+      "from": "../../capability-plugins/risk-reporting/skills/management-response"
+    }
+  ]
+}

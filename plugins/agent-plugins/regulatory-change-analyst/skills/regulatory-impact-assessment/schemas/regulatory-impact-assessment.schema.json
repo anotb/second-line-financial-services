@@ -1,0 +1,591 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://second-line-financial-services/plugins/capability-plugins/regulatory-change-management/skills/regulatory-impact-assessment/schemas/regulatory-impact-assessment.schema.json",
+  "title": "regulatory-impact-assessment",
+  "description": "Structured second-line impact assessment for a published rule, supervisory letter, FIL, circular, bulletin, industry letter, adopting release, advisory, supervisory speech, or enforcement theme. Carries both an implementation lens (in-scope determination, obligation domains, policy and control impact, reporting and disclosure impact, technology and data impact, third-party impact, customer impact, cost-to-comply, effective-date posture) and a regulatory-strategy lens (firm position, regulator-engagement posture, comment-period posture, peer-and-industry alignment, escalation triggers). Audience: regulatory affairs, head of compliance, head of legal, CRO chief of staff, head of business affected. Drafts only; attestation external.",
+  "type": "object",
+  "required": [
+    "assessment_id",
+    "as_of_date",
+    "source_citation",
+    "in_scope",
+    "confidence_label",
+    "human_review_required"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "description": "Semver of this schema. Default 1.0.0.",
+      "default": "1.0.0",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "assessment_id": {
+      "type": "string",
+      "description": "Stable ID for the impact assessment. Reused across all artifacts produced for the same regulatory item.",
+      "minLength": 1
+    },
+    "engagement_id": {
+      "type": "string",
+      "description": "Optional pointer to the engagement-scope record this assessment was produced under."
+    },
+    "as_of_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date the assessment was last revised."
+    },
+    "decision_required": {
+      "type": "string",
+      "description": "What the assessment is asking the named lead or decision body to decide. Examples: ingest the item into the regulatory-change inventory and kick off rule-to-obligation-extraction; sign a comment letter; escalate to the CRO; defer the strategy posture pending legal review."
+    },
+    "recommended_posture": {
+      "type": "string",
+      "description": "Brief recommended posture summary across the implementation and strategy lenses."
+    },
+    "source_citation": {
+      "type": "object",
+      "description": "Pinpoint regulatory source. The rest of the assessment cites against this block.",
+      "required": ["regulator", "instrument_type", "citation"],
+      "additionalProperties": false,
+      "properties": {
+        "regulator": {
+          "type": "string",
+          "description": "Issuing regulator. Examples: OCC, FRB, FDIC, NCUA, CFPB, SEC, FINRA, FinCEN, OFAC, NYDFS, state DOI, state banking department, NAIC, foreign supervisor, interagency."
+        },
+        "regulator_office": {
+          "type": "string",
+          "description": "Specific office or division (e.g., OCC Large Bank Supervision; SEC Division of Investment Management; CFPB Office of Innovation; NYDFS Cybersecurity Division)."
+        },
+        "instrument_type": {
+          "type": "string",
+          "enum": [
+            "final-rule",
+            "proposed-rule",
+            "supervisory-letter",
+            "fil",
+            "bulletin",
+            "circular",
+            "industry-letter",
+            "interagency-statement",
+            "adopting-release",
+            "advisory",
+            "supervisory-speech",
+            "enforcement-action",
+            "consent-order-pattern",
+            "guidance",
+            "faq",
+            "risk-alert",
+            "examination-priorities",
+            "other"
+          ],
+          "description": "What kind of instrument the assessment is reading. Drives the strategy lens."
+        },
+        "citation": {
+          "type": "string",
+          "description": "The pinpoint citation. CFR pin, SR or bulletin number, FIL number, circular number, Industry Letter date, release number, advisory number, speech URL and date, enforcement order ID."
+        },
+        "section": {
+          "type": "string",
+          "description": "Section reference if applicable. Use [verify section] when the section reference cannot be confirmed at the time of assessment."
+        },
+        "publication_date": {
+          "type": "string",
+          "format": "date"
+        },
+        "effective_date": {
+          "type": "string",
+          "format": "date",
+          "description": "Mandatory compliance date for a final rule, where applicable."
+        },
+        "comment_period_close_date": {
+          "type": "string",
+          "format": "date",
+          "description": "For a proposed rule, the comment period close date."
+        },
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "related_instruments": {
+          "type": "array",
+          "description": "Cross-references to related instruments (the proposed rule that preceded the final, the FAQ that updated the bulletin, the speech that signalled the priority).",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "in_scope": {
+      "type": "boolean",
+      "description": "Whether the firm is in scope for the rule. False with rationale required."
+    },
+    "in_scope_rationale": {
+      "type": "string",
+      "description": "Why the firm is or is not in scope, with source pin. Required when in_scope is false; recommended when in_scope is true."
+    },
+    "scope": {
+      "type": "object",
+      "description": "Detailed in-scope determination across institution, products, business units, geographies, and thresholds.",
+      "additionalProperties": false,
+      "properties": {
+        "institution_types": {
+          "type": "array",
+          "description": "Institution-type determination. Examples: national bank, state member bank, state non-member bank, BHC, IDI, NCUA-supervised credit union, SEC-registered investment adviser, registered fund, broker-dealer, transfer agent, MSB, state-licensed money transmitter, state-chartered insurer, fintech under sponsor-bank arrangement, FBO US operations.",
+          "items": { "type": "string" }
+        },
+        "affected_business_units": {
+          "type": "array",
+          "items": { "type": "string", "description": "First-line business owner role names." }
+        },
+        "affected_products": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "affected_geographies": {
+          "type": "array",
+          "items": { "type": "string", "description": "Federal, state-by-state, foreign, cross-border." }
+        },
+        "thresholds_named": {
+          "type": "array",
+          "description": "Where the rule names an asset-size, AUM, transaction-volume, or activity-volume threshold, the threshold and the firm's read against it.",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "threshold_text": { "type": "string", "description": "The threshold as the rule states it." },
+              "firm_read": { "type": "string", "description": "Whether the firm crosses the threshold and the basis." },
+              "source": { "type": "string", "description": "Source pin for the threshold." }
+            }
+          }
+        },
+        "partial_applicability_note": {
+          "type": "string",
+          "description": "Where the rule applies in part (e.g., 1071 partial applicability based on origination volume), the part the rule covers and the part it does not."
+        }
+      }
+    },
+    "effective_date_posture": {
+      "type": "object",
+      "description": "Effective-date and transition-relief detail.",
+      "additionalProperties": false,
+      "properties": {
+        "mandatory_compliance_date": { "type": "string", "format": "date" },
+        "phase_in_stages": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "stage_label": { "type": "string" },
+              "stage_date": { "type": "string", "format": "date" },
+              "stage_scope": { "type": "string" }
+            }
+          }
+        },
+        "transition_period": {
+          "type": "string",
+          "description": "Transition-relief description with citation."
+        },
+        "sunset_or_contingency": {
+          "type": "string",
+          "description": "Sunset clauses, Congressional Review Act dependency, judicial review status, agency-rulemaking-implementation contingency."
+        },
+        "early_adoption_posture": {
+          "type": "string",
+          "description": "Where the firm is considering early compliance, the posture and rationale."
+        }
+      }
+    },
+    "affected_obligation_domains": {
+      "type": "array",
+      "description": "High-level obligation domains the rule touches. Hooks for downstream rule-to-obligation-extraction.",
+      "items": {
+        "type": "string",
+        "enum": [
+          "BSA-AML",
+          "fair-lending",
+          "UDAAP",
+          "model-risk",
+          "cyber",
+          "third-party-risk",
+          "privacy",
+          "consumer-protection",
+          "prudential",
+          "market-conduct",
+          "market-structure",
+          "custody",
+          "marketing-rule",
+          "broker-dealer-conduct",
+          "investment-adviser-conduct",
+          "fund-regulation",
+          "insurance-market-conduct",
+          "climate-disclosure",
+          "AI-governance",
+          "operational-resilience",
+          "sanctions",
+          "consumer-disclosure",
+          "data-management",
+          "other"
+        ]
+      }
+    },
+    "existing_obligation_refs": {
+      "type": "array",
+      "description": "Obligation-inventory IDs the impact assessment overlays prior items on (chains to obligation-mapping).",
+      "items": { "type": "string" }
+    },
+    "policy_impact": {
+      "type": "array",
+      "description": "Policies and procedures likely needing amendment. The skill names the surface area; policy-diff and the firm's policy authoring process draft the language.",
+      "items": {
+        "type": "object",
+        "required": ["policy_area", "expected_change_type"],
+        "additionalProperties": false,
+        "properties": {
+          "policy_area": {
+            "type": "string",
+            "description": "Named policy area (e.g., third-party risk management policy; information security policy; model risk policy; AML CDD procedures; advertising and marketing review procedures)."
+          },
+          "expected_change_type": {
+            "type": "string",
+            "enum": [
+              "amendment",
+              "new-policy",
+              "withdrawal",
+              "cross-reference-update",
+              "procedure-refresh",
+              "training-content-refresh"
+            ]
+          },
+          "rationale": { "type": "string" }
+        }
+      }
+    },
+    "control_impact": {
+      "type": "array",
+      "description": "Control objectives potentially affected. Control objective, not control instance.",
+      "items": {
+        "type": "object",
+        "required": ["control_objective", "expected_change_type"],
+        "additionalProperties": false,
+        "properties": {
+          "control_objective": { "type": "string" },
+          "expected_change_type": {
+            "type": "string",
+            "enum": [
+              "new-control-objective",
+              "existing-control-objective-rescoped",
+              "evidence-frequency-change",
+              "evidence-depth-change",
+              "testing-methodology-change",
+              "monitoring-KRI-change"
+            ]
+          },
+          "anticipated_evidence_gap": {
+            "type": "string",
+            "description": "Areas where the rule's evidence expectation likely exceeds current state."
+          }
+        }
+      }
+    },
+    "reporting_impact": {
+      "type": "array",
+      "description": "Regulatory reports, public disclosures, and board reporting affected.",
+      "items": {
+        "type": "object",
+        "required": ["report_or_disclosure", "change_type"],
+        "additionalProperties": false,
+        "properties": {
+          "report_or_disclosure": {
+            "type": "string",
+            "description": "Report name or disclosure surface. Examples: Call Report Schedule RC-X; Form ADV Part 2A; Form 10-K Item 1.05; CFPB 1071 register; FinCEN SAR; NAIC annual statement; privacy notice; adverse-action notice; AI-use disclosure."
+          },
+          "change_type": {
+            "type": "string",
+            "enum": [
+              "new-report",
+              "existing-report-amended",
+              "new-public-disclosure",
+              "existing-public-disclosure-amended",
+              "new-board-reporting-item",
+              "frequency-change",
+              "first-cycle-date-set"
+            ]
+          },
+          "first_cycle_date": { "type": "string", "format": "date" }
+        }
+      }
+    },
+    "technology_data_impact": {
+      "type": "array",
+      "description": "Systems of record, data lineage, and model inventory implications.",
+      "items": {
+        "type": "object",
+        "required": ["system_or_data_area", "implication"],
+        "additionalProperties": false,
+        "properties": {
+          "system_or_data_area": {
+            "type": "string",
+            "description": "Examples: core banking, loan origination, deposit operations, claims management, policy administration, trading and execution, custody, transfer agent, model platform, vendor management system, complaints database."
+          },
+          "implication": { "type": "string" },
+          "new_data_field": { "type": "string", "description": "Where the rule introduces a new data field, the field name and its source." },
+          "model_inventory_implication": { "type": "string" }
+        }
+      }
+    },
+    "third_party_impact": {
+      "type": "array",
+      "description": "Vendor arrangements likely affected.",
+      "items": {
+        "type": "object",
+        "required": ["arrangement_type", "expected_change_type"],
+        "additionalProperties": false,
+        "properties": {
+          "arrangement_type": {
+            "type": "string",
+            "enum": [
+              "critical-activity",
+              "non-critical-activity",
+              "sub-contracted",
+              "sponsor-bank-arrangement",
+              "fintech-partnership",
+              "cloud-infrastructure",
+              "model-vendor",
+              "data-vendor",
+              "service-provider",
+              "fourth-party"
+            ]
+          },
+          "expected_change_type": {
+            "type": "string",
+            "enum": [
+              "contract-amendment",
+              "evidence-pack-refresh",
+              "right-to-audit-invocation",
+              "exit-plan-refresh",
+              "new-register-of-information-entry",
+              "de-scoping",
+              "substitution"
+            ]
+          },
+          "rationale": { "type": "string" }
+        }
+      }
+    },
+    "customer_impact": {
+      "type": "array",
+      "description": "Customer-facing changes. Plain language; the failure mode is technical jargon that obscures the customer touch.",
+      "items": {
+        "type": "object",
+        "required": ["change_area", "implication"],
+        "additionalProperties": false,
+        "properties": {
+          "change_area": {
+            "type": "string",
+            "enum": [
+              "communication",
+              "disclosure",
+              "fee",
+              "product",
+              "eligibility",
+              "complaint-handling",
+              "dispute-handling",
+              "adverse-action",
+              "account-opening",
+              "account-closing",
+              "new-customer-right",
+              "customer-evidence-burden"
+            ]
+          },
+          "implication": { "type": "string" }
+        }
+      }
+    },
+    "cost_to_comply": {
+      "type": "object",
+      "description": "Indicative cost-to-comply read. Calibrates against agency cost-and-benefit analyses prepared under OMB Circular A-4 but does not adopt them as ground truth without firm-side validation.",
+      "additionalProperties": false,
+      "properties": {
+        "implementation_one_time": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "indicative_range": { "type": "string", "description": "Indicative range with a basis note." },
+            "basis": { "type": "string", "description": "Peer benchmark, vendor estimate, similar prior project, agency RIA, firm-side estimate." },
+            "confidence": { "type": "string", "enum": ["high", "medium", "low", "unknown"] }
+          }
+        },
+        "ongoing_run_rate": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "indicative_range": { "type": "string" },
+            "basis": { "type": "string" },
+            "confidence": { "type": "string", "enum": ["high", "medium", "low", "unknown"] }
+          }
+        },
+        "cost_drivers": {
+          "type": "array",
+          "items": { "type": "string", "description": "Named cost drivers (policy refresh, control build-out, technology change, vendor remediation, training, communication, testing, monitoring, reporting, governance overhead)." }
+        },
+        "agency_estimate_reference": {
+          "type": "object",
+          "description": "Where the agency has published a cost-and-benefit analysis under OMB Circular A-4 or an agency-specific RIA, the reference and the firm's read against it.",
+          "additionalProperties": false,
+          "properties": {
+            "agency_estimate_summary": { "type": "string" },
+            "firm_divergence_note": { "type": "string" },
+            "source_pin": { "type": "string" }
+          }
+        }
+      }
+    },
+    "regulatory_strategy": {
+      "type": "object",
+      "description": "The strategy lens. Firm position, engagement posture, comment-period posture, public consultation posture, peer alignment, escalation triggers.",
+      "additionalProperties": false,
+      "properties": {
+        "firm_position": {
+          "type": "string",
+          "enum": [
+            "support",
+            "conditional-support",
+            "opposition",
+            "neutral-with-operational-concerns",
+            "no-public-position"
+          ]
+        },
+        "regulator_engagement_posture": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "industry-association-comment-letter",
+              "firm-direct-comment-letter",
+              "supervisor-meeting",
+              "formal-comment-letter-signature",
+              "no-engagement",
+              "ongoing-supervisory-dialogue"
+            ]
+          }
+        },
+        "comment_period_posture": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "owner_role": { "type": "string", "description": "Internal owner for the comment letter draft." },
+            "draft_pathway": { "type": "string", "description": "Coordination with industry associations, internal review path, board-or-committee approval gate." },
+            "approval_gate": { "type": "string" },
+            "submission_target_date": { "type": "string", "format": "date" }
+          }
+        },
+        "public_consultation_posture": {
+          "type": "string",
+          "description": "Testimony, press posture, public statement (rare and counsel-set)."
+        },
+        "peer_industry_alignment": {
+          "type": "string",
+          "description": "Where the firm reads the industry consensus, where it diverges, and what that divergence implies for engagement strategy."
+        },
+        "industry_associations_engaged": {
+          "type": "array",
+          "items": { "type": "string", "description": "Named association (BPI, ABA, ICBA, SIFMA, ICI, IAA, ACLI, NAFCU, MBA, others)." }
+        },
+        "escalation_triggers": {
+          "type": "array",
+          "description": "Thresholds at which the item moves from regulatory-change-committee to CRO, GC, executive committee, board risk committee, full board.",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "trigger": { "type": "string" },
+              "escalation_level": {
+                "type": "string",
+                "enum": ["regulatory-change-committee", "CRO", "general-counsel", "executive-committee", "board-risk-committee", "full-board"]
+              }
+            }
+          }
+        }
+      }
+    },
+    "open_questions": {
+      "type": "array",
+      "description": "Items requiring qualified review before the assessment closes. Each question is routed to an owner role and tied to what it blocks downstream.",
+      "items": {
+        "type": "object",
+        "required": ["question", "owner_role"],
+        "additionalProperties": false,
+        "properties": {
+          "question": { "type": "string" },
+          "owner_role": {
+            "type": "string",
+            "enum": ["legal", "compliance", "business-head", "sponsor", "model-risk", "TPRM", "CISO", "BSA-officer", "fair-lending-officer", "privacy-officer", "data-protection-officer"]
+          },
+          "blocker_for": {
+            "type": "string",
+            "enum": [
+              "rule-to-obligation-extraction-kickoff",
+              "policy-diff-scope",
+              "implementation-plan-sequencing",
+              "comment-letter-signature",
+              "strategy-posture-finalisation",
+              "exam-brief-handoff",
+              "none"
+            ]
+          },
+          "due_date": { "type": "string", "format": "date" }
+        }
+      }
+    },
+    "recommended_next_steps": {
+      "type": "array",
+      "description": "Skill-level and firm-side handoffs.",
+      "items": {
+        "type": "object",
+        "required": ["next_step", "owner_role"],
+        "additionalProperties": false,
+        "properties": {
+          "next_step": {
+            "type": "string",
+            "description": "Examples: kick off rule-to-obligation-extraction; run policy-diff against named policy areas; commission implementation-plan; engage external counsel on strategy lens; refine cost-to-comply with finance partner; consult head of business on operating-model implication."
+          },
+          "owner_role": { "type": "string" },
+          "target_date": { "type": "string", "format": "date" }
+        }
+      }
+    },
+    "review_gates": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["scope", "evidence", "authority", "impact", "decision"]
+      },
+      "description": "Named human-review gates this assessment must clear before downstream skills run."
+    },
+    "human_review_required": {
+      "type": "boolean",
+      "description": "Always true. The skill stops at draft; the named lead attests."
+    },
+    "confidence_label": {
+      "type": "string",
+      "enum": ["high", "medium", "low", "unknown"],
+      "description": "Overall confidence label. A single overall label hides variance; recommend per-section confidence in source_trace as well."
+    },
+    "source_trace": {
+      "type": "array",
+      "description": "Citations supporting material claims about the rule, the in-scope read, the impact area, the cost-to-comply, and the strategy posture.",
+      "items": {
+        "type": "object",
+        "required": ["claim", "source"],
+        "additionalProperties": false,
+        "properties": {
+          "claim": { "type": "string" },
+          "source": { "type": "string" },
+          "section": { "type": "string" },
+          "date": { "type": "string", "format": "date" },
+          "url": { "type": "string", "format": "uri" },
+          "section_confidence": { "type": "string", "enum": ["high", "medium", "low", "unknown"] }
+        }
+      }
+    }
+  }
+}

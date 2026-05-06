@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Control",
+  "type": "object",
+  "required": [
+    "control_id",
+    "control_objective",
+    "control_activity",
+    "frequency",
+    "owner",
+    "evidence",
+    "test_method"
+  ],
+  "properties": {
+    "control_id": {
+      "type": "string"
+    },
+    "risk_id": {
+      "type": "string"
+    },
+    "control_objective": {
+      "type": "string"
+    },
+    "control_activity": {
+      "type": "string"
+    },
+    "frequency": {
+      "type": "string"
+    },
+    "owner": {
+      "type": "string"
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "test_method": {
+      "enum": [
+        "inquiry",
+        "inspection",
+        "observation",
+        "reperformance",
+        "data-analysis",
+        "walkthrough",
+        "hybrid"
+      ]
+    },
+    "design_effectiveness": {
+      "enum": [
+        "effective",
+        "partially-effective",
+        "ineffective",
+        "not-tested"
+      ]
+    },
+    "operating_effectiveness": {
+      "enum": [
+        "effective",
+        "partially-effective",
+        "ineffective",
+        "not-tested"
+      ]
+    }
+  }
+}

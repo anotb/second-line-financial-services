@@ -1,0 +1,372 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://second-line-financial-services/schemas/agentic-controls-review.schema.json",
+  "title": "AgenticControlsReview",
+  "description": "Second-line review of controls for an agentic AI use case. Authority statement, architecture, tool inventory with blast radius, identity and authorisation, human oversight points with effective-oversight evidence, guardrails, threat assessment (prompt-injection-via-tool-output and tool-misuse), sandbox guarantees, kill switch and rollback with drill records, logging and audit, incident response with regulator-notification triggers, escalation triggers, residual risk, recommended owner actions, source trace. Consumed by genai-pre-prod-review, board-ai-risk-pack, ai-governance-reviewer, the firm cyber incident-response chain, and the model inventory of record.",
+  "type": "object",
+  "required": [
+    "review_metadata",
+    "agent_metadata",
+    "authority_statement",
+    "architecture",
+    "tool_inventory",
+    "identity_authz",
+    "human_oversight",
+    "guardrails",
+    "threat_assessment",
+    "sandbox_guarantees",
+    "kill_switch",
+    "logging",
+    "incident_response",
+    "escalation_triggers",
+    "residual_risk",
+    "recommended_actions",
+    "source_trace"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "review_metadata": {
+      "type": "object",
+      "required": ["reviewer_role", "review_date", "review_stage"],
+      "properties": {
+        "reviewer_role": { "type": "string", "description": "Function performing the review (e.g., AI Governance Lead, MRMO, second-line cyber)." },
+        "review_date": { "type": "string", "format": "date" },
+        "review_stage": {
+          "type": "string",
+          "enum": ["pre-prod-gate", "in-prod-periodic", "post-incident", "expansion-review", "exam-readiness"]
+        },
+        "engagement_scope_id": { "type": "string" },
+        "model_card_id": { "type": "string", "description": "Links to model-card-builder output." },
+        "validation_plan_id": { "type": "string", "description": "Links to validation-plan output." },
+        "prompt_injection_review_id": { "type": "string", "description": "Links to prompt-injection-risk output where it has run." }
+      }
+    },
+    "agent_metadata": {
+      "type": "object",
+      "required": ["agent_id", "use_case_id"],
+      "properties": {
+        "agent_id": { "type": "string", "description": "Canonical agent ID and version." },
+        "agent_version": { "type": "string" },
+        "use_case_id": { "type": "string", "description": "Links to ai-use-case-intake record." },
+        "tier": {
+          "type": "string",
+          "enum": ["tier-1", "tier-2", "tier-3", "tier-4", "tier-unassigned"]
+        },
+        "lifecycle_stage": {
+          "type": "string",
+          "enum": ["development", "pre-prod", "prod", "monitoring-only", "retirement"]
+        },
+        "sponsor_function": { "type": "string", "description": "Sponsoring business function (role, never an individual)." }
+      }
+    },
+    "authority_statement": {
+      "type": "object",
+      "required": ["in_scope_actions", "out_of_scope_actions"],
+      "description": "The agent's authority. Out-of-scope actions are non-optional and require at least three concrete entries.",
+      "properties": {
+        "in_scope_actions": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "type": "string", "description": "Concrete verb against concrete system (e.g., 'place temporary card-lock on a single card on representative-initiated trigger')." }
+        },
+        "out_of_scope_actions": {
+          "type": "array",
+          "minItems": 3,
+          "items": { "type": "string", "description": "Concrete out-of-scope action (e.g., 'no funds movement', 'no permanent card actions', 'no fee adjustments')." }
+        },
+        "geographic_scope": { "type": "string" },
+        "customer_scope": { "type": "string" },
+        "financial_impact_per_action": { "type": "string", "description": "Maximum financial-impact framing per action class." },
+        "reversibility_per_action": { "type": "string", "description": "Reversibility framing per action class (reversible / partially reversible / irreversible)." }
+      }
+    },
+    "architecture": {
+      "type": "object",
+      "required": ["autonomy_level"],
+      "properties": {
+        "planner_model": { "type": "string" },
+        "foundation_model": {
+          "type": "object",
+          "properties": {
+            "provider": { "type": "string" },
+            "name": { "type": "string" },
+            "version": { "type": "string" },
+            "version_pinning": {
+              "type": "string",
+              "enum": ["pinned", "floating", "rolling-with-notice", "unknown"]
+            }
+          }
+        },
+        "uses_rag": { "type": "boolean" },
+        "rag_corpora": { "type": "array", "items": { "type": "string" } },
+        "multi_agent": { "type": "boolean" },
+        "multi_agent_topology": { "type": "string", "description": "Planner-executor / specialist-agents / orchestrator pattern; populated when multi_agent is true." },
+        "memory": {
+          "type": "string",
+          "enum": ["none", "session", "persistent-per-user", "persistent-shared", "unknown"]
+        },
+        "modalities": { "type": "array", "items": { "type": "string", "enum": ["text", "image", "audio", "video", "code"] } },
+        "autonomy_level": {
+          "type": "string",
+          "enum": ["advisory", "advisory-with-suggested-action", "human-in-the-loop", "human-on-the-loop", "agentic-with-tool-use", "fully-autonomous"]
+        }
+      }
+    },
+    "tool_inventory": {
+      "type": "array",
+      "minItems": 1,
+      "description": "Per tool the agent can invoke. Blast-radius is required on every entry.",
+      "items": {
+        "type": "object",
+        "required": ["tool_name", "system_of_record", "action_type", "permission", "blast_radius", "owner"],
+        "properties": {
+          "tool_name": { "type": "string" },
+          "system_of_record": { "type": "string", "description": "The system the tool acts on (e.g., card-management platform, retrieval index, outbound-email gateway)." },
+          "action_type": {
+            "type": "string",
+            "enum": ["read", "write", "execute", "communicate", "compute"]
+          },
+          "permission": { "type": "string", "description": "Permission level granted to the agent (least-privilege scoping)." },
+          "blast_radius": { "type": "string", "description": "Concrete worst-case framing if the tool is misused (e.g., 'could cancel up to 50 policies in a single batch', 'could send up to 100 outbound emails per minute')." },
+          "rate_limit": { "type": "string", "description": "Rate limit at the tool layer in firm policy units." },
+          "owner": { "type": "string", "description": "Tool owner (function, never an individual)." },
+          "evidence_pointer": { "type": "string" }
+        }
+      }
+    },
+    "identity_authz": {
+      "type": "object",
+      "required": ["service_account", "scopes", "secret_management"],
+      "properties": {
+        "service_account": { "type": "string", "description": "Agent service-account identifier; separate from any human identity." },
+        "scopes": { "type": "array", "items": { "type": "string" }, "description": "Least-privilege scopes assigned to the service account." },
+        "secret_management": { "type": "string", "description": "Where credentials live, who can rotate them, who can read them." },
+        "rate_limit_at_identity": { "type": "string" },
+        "session_boundaries": { "type": "string", "description": "Per-session, per-customer, per-case scoping rules." }
+      }
+    },
+    "human_oversight": {
+      "type": "array",
+      "minItems": 1,
+      "description": "Human oversight points per consequential decision class. Effective-oversight evidence is required on every entry.",
+      "items": {
+        "type": "object",
+        "required": ["decision_class", "oversight_mode", "reviewer_role", "evidence_of_effectiveness"],
+        "properties": {
+          "decision_class": { "type": "string", "description": "Concrete class of consequential decision (e.g., 'card-lock-temp action', 'reasoned-denial draft', 'order-routing instruction')." },
+          "oversight_mode": {
+            "type": "string",
+            "enum": ["block-and-wait", "notify-and-revocable", "post-hoc-sample", "autonomous"]
+          },
+          "reviewer_role": { "type": "string", "description": "Function performing the oversight (role, never an individual)." },
+          "sla": { "type": "string", "description": "Time-to-review SLA in firm policy units." },
+          "sampling_expectation": { "type": "string", "description": "For post-hoc-sample mode, the sampling rate and audit cadence." },
+          "evidence_of_effectiveness": { "type": "string", "description": "Pointer to gate-decision log, sampling audit, drift signal, or other evidence the oversight catches what it is meant to catch. [evidence needed] routes to recommended actions." }
+        }
+      }
+    },
+    "guardrails": {
+      "type": "array",
+      "description": "Input filtering, output filtering, refusal behaviour, escalation triggers, structured-output enforcement, content provenance.",
+      "items": {
+        "type": "object",
+        "required": ["guardrail", "type", "evidence_pointer"],
+        "properties": {
+          "guardrail": { "type": "string" },
+          "type": {
+            "type": "string",
+            "enum": ["input_filter", "output_filter", "refusal_behavior", "escalation_trigger", "structured_output", "content_provenance"]
+          },
+          "owner": { "type": "string" },
+          "evidence_pointer": { "type": "string" },
+          "exercised_in_test": { "type": "boolean" }
+        }
+      }
+    },
+    "threat_assessment": {
+      "type": "array",
+      "minItems": 1,
+      "description": "Prompt-injection-via-tool-output and tool-misuse attack classes. Each entry names attack class, carrier, and source taxonomy.",
+      "items": {
+        "type": "object",
+        "required": ["attack_class", "carrier", "source_taxonomy", "result"],
+        "properties": {
+          "attack_class": {
+            "type": "string",
+            "description": "e.g., tool_hijack, cross_scope_tool_query, excessive_agency_chain, planner_executor_seam, multi_agent_message_injection, memory_poisoning, sandbox_escape, direct_prompt_injection, indirect_prompt_injection, jailbreak, exfiltration."
+          },
+          "carrier": {
+            "type": "string",
+            "enum": ["system_prompt", "user_prompt", "retrieved_content", "tool_output", "agent_memory", "multi_agent_message", "multimodal_input"]
+          },
+          "source_taxonomy": { "type": "string", "description": "MITRE ATLAS technique ID, OWASP LLM identifier (LLM01-LLM10), NIST AI 600-1 subcategory, or combination." },
+          "method": { "type": "string" },
+          "dataset_or_redteam_ref": { "type": "string" },
+          "tester": { "type": "string", "description": "Firm internal red team, vendor red team, third-party assessor, or [evidence needed]." },
+          "success_criterion": { "type": "string" },
+          "result": {
+            "type": "string",
+            "enum": ["pass", "partial", "fail", "not-tested"]
+          },
+          "tested_date": { "type": "string", "format": "date" },
+          "residual_risk_link": { "type": "string", "description": "Cross-reference to residual_risk[] entry where the failed or partial result is recorded." },
+          "evidence_pointer": { "type": "string" }
+        }
+      }
+    },
+    "sandbox_guarantees": {
+      "type": "object",
+      "description": "Sandbox and execution-environment guarantees. Policy without enforcement evidence routes to recommended actions; do not record as coverage.",
+      "properties": {
+        "has_code_execution": { "type": "boolean" },
+        "process_isolation": { "type": "string" },
+        "filesystem_scoping": { "type": "string" },
+        "network_egress_controls": { "type": "string" },
+        "secret_isolation": { "type": "string" },
+        "time_bounded_execution": { "type": "string" },
+        "resource_quotas": { "type": "string" },
+        "snapshot_and_rollback": { "type": "string" },
+        "enforcement_evidence": { "type": "string", "description": "Evidence that the guarantees are enforced, not policy assertion. [evidence needed] routes to recommended actions." },
+        "explicit_no_code_execution_note": { "type": "string", "description": "For tool-use-only systems without execution, name the boundary explicitly rather than omitting." }
+      }
+    },
+    "kill_switch": {
+      "type": "array",
+      "minItems": 1,
+      "description": "Kill switch and rollback per agent-affecting incident class. Drill record is the load-bearing field.",
+      "items": {
+        "type": "object",
+        "required": ["incident_class", "procedure", "owner_role", "rto", "last_drilled"],
+        "properties": {
+          "incident_class": { "type": "string" },
+          "procedure": { "type": "string", "description": "Pointer to named runbook." },
+          "owner_role": { "type": "string", "description": "Function with authority to execute." },
+          "rto": { "type": "string", "description": "Recovery time objective: how fast the agent goes offline once decision is made." },
+          "last_drilled": { "type": "string", "format": "date" },
+          "drill_cadence": { "type": "string", "description": "Required drill cadence per tier; older than cadence flags as gap." },
+          "rollback_path": { "type": "string", "description": "How state is reverted, where compensating actions live, who signs off on resumption." }
+        }
+      }
+    },
+    "logging": {
+      "type": "object",
+      "required": ["log_content", "retention", "access_controls"],
+      "properties": {
+        "log_content": { "type": "string", "description": "What is logged on every agent invocation, tool call, plan step, oversight event, kill-switch action." },
+        "retention": { "type": "string" },
+        "access_controls": { "type": "string" },
+        "immutability": { "type": "string", "description": "Append-only / hash-chained / off-system snapshot." },
+        "audit_trail_alignment": { "type": "string", "description": "NYDFS Part 500 §500.6, FFIEC IT Handbook, or equivalent named expectations for in-scope entities." },
+        "exercised_in_test": { "type": "boolean", "description": "Confirmed by reading a sample log line, not asserted from policy. False routes to recommended actions." }
+      }
+    },
+    "incident_response": {
+      "type": "array",
+      "minItems": 1,
+      "description": "Per incident class, the procedure, regulator-notification trigger, and off-switch criterion. Off-switch is non-optional on cyber-relevant and customer-impact-relevant classes.",
+      "items": {
+        "type": "object",
+        "required": ["incident_class", "procedure", "off_switch_criterion"],
+        "properties": {
+          "incident_class": { "type": "string", "description": "e.g., confirmed tool-misuse outside scope, confirmed cross-scope tool query, confirmed external-system unauthorised action, suspected agent compromise, foundation-model behaviour shift, sandbox-escape attempt." },
+          "procedure": { "type": "string" },
+          "regulator_notification_trigger": { "type": "string", "description": "NYDFS Part 500 §500.17(a) / SEC 8-K Item 1.05 / GLBA Safeguards / state breach laws / 12 CFR 53/225/304 36-hour rule / sector-specific notifications / not applicable." },
+          "off_switch_criterion": { "type": "string" }
+        }
+      }
+    },
+    "escalation_triggers": {
+      "type": "array",
+      "description": "Production-monitoring conditions that surface to senior reviewers without waiting for periodic review.",
+      "items": {
+        "type": "object",
+        "required": ["signal", "threshold", "frequency", "owner", "escalation_path"],
+        "properties": {
+          "signal": { "type": "string" },
+          "threshold": { "type": "string", "description": "In firm policy units, not 'high' or 'anomalous'." },
+          "frequency": { "type": "string" },
+          "owner": { "type": "string", "description": "Function, never an individual." },
+          "escalation_path": { "type": "string", "description": "Named committee, officer, or process." }
+        }
+      }
+    },
+    "residual_risk": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["risk", "likelihood", "impact", "basis"],
+        "properties": {
+          "risk": { "type": "string" },
+          "likelihood": { "type": "string", "enum": ["low", "medium", "high"] },
+          "impact": { "type": "string", "enum": ["low", "medium", "high"] },
+          "basis": { "type": "string", "description": "One-line basis for the rating; 'low' without basis is opinion." },
+          "accepted_owner_role": { "type": "string", "description": "Role accepting the residual risk; never a named individual." },
+          "accepted_date": { "type": "string", "format": "date" },
+          "review_cadence": { "type": "string" }
+        }
+      }
+    },
+    "recommended_actions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["gap", "owner_role", "severity"],
+        "properties": {
+          "gap": { "type": "string" },
+          "owner_role": { "type": "string" },
+          "deadline": { "type": "string", "format": "date" },
+          "severity": { "type": "string", "enum": ["low", "medium", "high", "critical"] },
+          "depends_on": { "type": "string" }
+        }
+      }
+    },
+    "source_trace": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["claim", "source", "confidence"],
+        "properties": {
+          "claim": { "type": "string" },
+          "source": { "type": "string" },
+          "evidence_reference": { "type": "string" },
+          "confidence": { "type": "string", "enum": ["high", "medium", "low", "evidence-needed"] }
+        }
+      }
+    },
+    "sector_overlay_notes": {
+      "type": "object",
+      "description": "Sector-specific fields raised by the loaded sector overlay reference doc. The insurance overlay carries the absorbed claims-AI control-bar content.",
+      "properties": {
+        "banking": { "type": "object", "additionalProperties": true },
+        "insurance": { "type": "object", "additionalProperties": true },
+        "capital_markets": { "type": "object", "additionalProperties": true },
+        "payments_fintech": { "type": "object", "additionalProperties": true }
+      }
+    },
+    "cross_cutting_overlay_notes": {
+      "type": "object",
+      "description": "Cross-cutting fields raised by the loaded cross-cutting overlay reference doc.",
+      "properties": {
+        "cyber": { "type": "object", "additionalProperties": true },
+        "privacy": { "type": "object", "additionalProperties": true },
+        "conduct": { "type": "object", "additionalProperties": true }
+      }
+    },
+    "reviewer_attestation": {
+      "type": "object",
+      "properties": {
+        "reviewer_role": { "type": "string" },
+        "co_acceptors": { "type": "array", "items": { "type": "string" }, "description": "CISO function for cyber-flagged reviews; privacy officer where PHI flows; claims operations leadership for insurance claims AI; sector co-reviewers per overlay." },
+        "decision": {
+          "type": "string",
+          "enum": ["accept", "accept-with-conditions", "reject-and-rework"]
+        },
+        "decision_date": { "type": "string", "format": "date" },
+        "conditions": { "type": "array", "items": { "type": "string" } },
+        "onward_routing": { "type": "string", "description": "AI risk committee, pre-prod gate, CISO incident-response chain, exam response file, board pack, model inventory of record." }
+      }
+    }
+  }
+}

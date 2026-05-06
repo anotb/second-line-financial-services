@@ -1,0 +1,8 @@
+{
+  "name": "financial-crime-governance",
+  "version": "0.2.0",
+  "description": "Financial crime governance skills for CDD, SAR decision QA, AML monitoring model governance, sanctions screening QA, EDD escalation, and negative-news triage.",
+  "author": {
+    "name": "Second Line Financial Services contributors"
+  }
+}

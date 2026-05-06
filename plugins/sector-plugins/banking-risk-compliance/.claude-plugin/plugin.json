@@ -1,0 +1,8 @@
+{
+  "name": "banking-risk-compliance",
+  "version": "0.2.0",
+  "description": "Banking-sector overlays for supervision readiness, credit risk governance, deposit operations controls, and bank-fintech partnership review.",
+  "author": {
+    "name": "Second Line Financial Services contributors"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "name": "third-party-operational-resilience",
+  "version": "0.2.0",
+  "description": "Third-party risk and operational resilience skills for vendor diligence, criticality assessment, DORA registers, contract gaps, exit plans, resilience testing, and concentration risk.",
+  "author": {
+    "name": "Second Line Financial Services contributors"
+  }
+}

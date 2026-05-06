@@ -1,0 +1,543 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://second-line-financial-services/plugins/capability-plugins/consumer-compliance-fair-lending/skills/udaap-risk-review/schemas/udaap-risk-review.schema.json",
+  "title": "udaap-risk-review",
+  "description": "Structured second-line UDAAP review memo. Carries scope, reviewer posture, evidence base, element-by-element analysis under Dodd-Frank §1031 (deception, unfairness, abusiveness), consumer-harm hypothesis with population estimate, AI / algorithmic-discrimination tie-in where automated systems are in path, severity rating per element with rubric, conduct-risk implications (mandatory cross-cutting), recommended remediation, open legal questions, cross-references, and source trace. Downstream consumers: product committee deck, conduct-risk reporting workflow, complaint-monitoring loop, regulator-response file, fair-lending-test-plan and complaint-theme-analysis cross-links.",
+  "type": "object",
+  "required": [
+    "review_id",
+    "scope",
+    "legal_privilege_posture",
+    "deception",
+    "unfairness",
+    "abusiveness",
+    "consumer_harm",
+    "severity",
+    "conduct_risk_implications",
+    "confidence_label"
+  ],
+  "additionalProperties": false,
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "ai_algorithmic_findings": {
+            "type": "object",
+            "properties": {
+              "ai_in_path": { "const": true }
+            },
+            "required": ["ai_in_path"]
+          }
+        },
+        "required": ["ai_algorithmic_findings"]
+      },
+      "then": {
+        "properties": {
+          "ai_algorithmic_findings": {
+            "required": ["model_inventory", "udaap_theory"]
+          }
+        }
+      }
+    }
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "description": "Semver of this schema. Default 1.0.0.",
+      "default": "1.0.0",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "review_id": {
+      "type": "string",
+      "description": "Stable identifier for this review memo. Reused across the decision-forum cycle and any follow-on remediation or monitoring artifact.",
+      "minLength": 1
+    },
+    "engagement_id": {
+      "type": "string",
+      "description": "Optional pointer to the engagement-scope record under which this memo was produced."
+    },
+    "as_of_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Date the memo was last revised."
+    },
+    "trigger": {
+      "type": "string",
+      "enum": [
+        "pre-launch-gate",
+        "complaint-theme-trigger",
+        "regulator-inquiry",
+        "peer-enforcement-action",
+        "post-incident-review",
+        "annual-refresh",
+        "model-deployment-trigger",
+        "self-identified-issue",
+        "other"
+      ],
+      "description": "Why this memo is being produced. Drives depth, severity weighting, and the decision forum."
+    },
+    "scope": {
+      "type": "object",
+      "additionalProperties": true,
+      "required": ["in_scope_subject", "period"],
+      "properties": {
+        "in_scope_subject": {
+          "type": "string",
+          "description": "What is under review. Examples: a product (overdraft program), a fee (instant-funding tip), a flow (account-closure mechanic), a marketing motion (lookalike pre-screen), a complaint pattern (representment NSF cluster), an enforcement-theme parallel (peer consent order on auto add-on)."
+        },
+        "subject_type": {
+          "type": "string",
+          "enum": [
+            "product",
+            "feature",
+            "fee",
+            "disclosure",
+            "customer-experience-flow",
+            "marketing-motion",
+            "complaint-pattern",
+            "enforcement-theme-parallel",
+            "policy-or-procedure",
+            "other"
+          ]
+        },
+        "period": {
+          "type": "object",
+          "required": ["start", "end"],
+          "additionalProperties": false,
+          "properties": {
+            "start": { "type": "string", "format": "date" },
+            "end": { "type": "string", "format": "date" }
+          }
+        },
+        "channels": {
+          "type": "array",
+          "description": "Channels in scope. Examples: branch, digital, broker, marketplace, partner-of-record, sponsor-bank-program-operator.",
+          "items": { "type": "string" }
+        },
+        "population": {
+          "type": "string",
+          "description": "Affected population description. Examples: applicants in period; deposit accountholders; defaulted borrowers in loss-mit; segment X in marketing footprint."
+        },
+        "exclusions": {
+          "type": "array",
+          "description": "Explicit out-of-scope items.",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "reviewer_posture": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "reviewer_role": {
+          "type": "string",
+          "description": "Role of the writer (independent second-line, embedded 1.5-line, advisory engagement, etc.)."
+        },
+        "review_independence": {
+          "type": "string",
+          "enum": ["independent-second-line", "embedded-1-5-line", "advisory", "joint-with-program-bank", "other"]
+        },
+        "counsel_directing": { "type": "boolean" }
+      }
+    },
+    "legal_privilege_posture": {
+      "type": "string",
+      "enum": [
+        "attorney-client-privileged",
+        "attorney-work-product",
+        "dual-purpose-business-and-privileged",
+        "not-privileged",
+        "posture-pending-counsel",
+        "unknown"
+      ],
+      "description": "Privilege posture for the memo. Set with counsel; do not assume."
+    },
+    "evidence_base": {
+      "type": "array",
+      "description": "Evidence sources cited in the memo.",
+      "items": {
+        "type": "object",
+        "required": ["source", "type"],
+        "additionalProperties": false,
+        "properties": {
+          "source": { "type": "string" },
+          "type": {
+            "type": "string",
+            "enum": [
+              "regulatory-anchor",
+              "supervisory-highlights-issue",
+              "enforcement-action",
+              "complaint-data",
+              "transaction-data",
+              "call-recording",
+              "marketing-asset",
+              "policy-text",
+              "training-record",
+              "system-output-log",
+              "model-card",
+              "vendor-documentation",
+              "firm-internal-memo",
+              "other"
+            ]
+          },
+          "date": { "type": "string", "format": "date" },
+          "completeness_flag": {
+            "type": "string",
+            "enum": ["complete", "partial", "missing", "unknown"]
+          }
+        }
+      }
+    },
+    "deception": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["likely_to_mislead", "materiality"],
+      "properties": {
+        "representation_or_omission": {
+          "type": "string",
+          "description": "What is represented, omitted, or otherwise communicated to the consumer; include the consumer-journey context, not just the disclosure document."
+        },
+        "likely_to_mislead": {
+          "type": "string",
+          "enum": ["yes", "no", "indeterminate"]
+        },
+        "reasonable_consumer_basis": {
+          "type": "string",
+          "description": "Reasoning under the reasonable-consumer framework in the actual consumer journey."
+        },
+        "materiality": {
+          "type": "string",
+          "enum": ["material", "not-material", "indeterminate"]
+        },
+        "materiality_rationale": { "type": "string" },
+        "evidence_pointers": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "unfairness": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["substantial_injury", "reasonably_avoidable"],
+      "properties": {
+        "substantial_injury": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["injury_type"],
+          "properties": {
+            "injury_type": { "type": "string" },
+            "magnitude_per_consumer": { "type": "string" },
+            "magnitude_aggregate": { "type": "string" },
+            "population_estimate": { "type": "string" },
+            "population_evidence_flag": {
+              "type": "string",
+              "enum": ["evidenced", "evidence-needed", "indeterminate"]
+            }
+          }
+        },
+        "reasonably_avoidable": {
+          "type": "string",
+          "enum": ["yes", "no", "indeterminate"]
+        },
+        "reasonably_avoidable_analysis": { "type": "string" },
+        "countervailing_benefits": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "first_line_assertion": { "type": "string" },
+            "reviewer_assessment": { "type": "string" },
+            "outweighs_injury": {
+              "type": "string",
+              "enum": ["yes", "no", "indeterminate"]
+            }
+          }
+        },
+        "evidence_pointers": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "abusiveness": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["applicability"],
+      "properties": {
+        "applicability": {
+          "type": "string",
+          "enum": ["applicable", "not-applicable", "indeterminate"],
+          "description": "Whether the abusiveness prong applies. If not-applicable, rationale must be filled; the prong is not skipped silently."
+        },
+        "applicability_rationale": { "type": "string" },
+        "material_interference": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "description": { "type": "string" },
+            "evidence": { "type": "string" }
+          }
+        },
+        "unreasonable_advantage": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "type": {
+              "type": "string",
+              "enum": [
+                "lack-of-understanding",
+                "inability-to-protect-interests",
+                "reasonable-reliance",
+                "n-a"
+              ]
+            },
+            "evidence": { "type": "string" }
+          }
+        },
+        "evidence_pointers": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "consumer_harm": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["population", "magnitude"],
+      "properties": {
+        "population": {
+          "type": "string",
+          "description": "Affected population with sourcing. 'Some customers' is not a UDAAP finding; carry an estimate or mark evidence-needed."
+        },
+        "population_evidence_flag": {
+          "type": "string",
+          "enum": ["evidenced", "evidence-needed", "indeterminate"]
+        },
+        "magnitude": {
+          "type": "string",
+          "description": "Per-consumer dollar value or aggregate-over-period; both where supported."
+        },
+        "frequency": {
+          "type": "string",
+          "enum": ["one-time", "recurring", "repeated", "indeterminate"]
+        },
+        "redress_posture": {
+          "type": "string",
+          "description": "Whether redress is plausible, at what scale, and for which population subset."
+        }
+      }
+    },
+    "ai_algorithmic_findings": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["ai_in_path"],
+      "properties": {
+        "ai_in_path": {
+          "type": "boolean",
+          "description": "True where any AI / ML / complex algorithm is in the in-scope flow."
+        },
+        "model_inventory": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["model_id", "decision_use", "ai_ml"],
+            "additionalProperties": false,
+            "properties": {
+              "model_id": { "type": "string" },
+              "version": { "type": "string" },
+              "decision_use": {
+                "type": "string",
+                "description": "Where in the consumer-facing surface the model is used. Examples: marketing-targeting, personalised-pricing, retention-offer, AI-generated-communication, conversational-AI, fraud-deny, agentic-flow."
+              },
+              "ai_ml": { "type": "boolean" },
+              "vendor_or_inhouse": {
+                "type": "string",
+                "enum": ["vendor", "in-house", "vendor-fine-tuned", "unknown"]
+              },
+              "validation_status": {
+                "type": "string",
+                "enum": ["validated", "in-validation", "not-validated", "unknown"]
+              },
+              "card_reference": {
+                "type": "string",
+                "description": "Pointer to the model card (model-card-builder record) where one exists."
+              }
+            }
+          }
+        },
+        "udaap_theory": {
+          "type": "string",
+          "description": "Element analysis specific to the algorithmic outcome: which prong applies (typically unfairness; sometimes deception or abusiveness), and the reasoning."
+        },
+        "joint_statement_cite": {
+          "type": "boolean",
+          "description": "True where the April 2023 Joint Statement is cited in the memo as the cross-agency anchor."
+        },
+        "fair_lending_cross_reference": {
+          "type": "boolean",
+          "description": "True where the fact pattern also raises an ECOA / FHA theory and the memo cross-references fair-lending-test-plan."
+        }
+      }
+    },
+    "severity": {
+      "type": "string",
+      "enum": ["low", "medium", "high", "critical"],
+      "description": "Aggregate severity. Reflects the highest per-element rating, the population magnitude, and the recurrence."
+    },
+    "severity_per_element": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "deception": { "type": "string", "enum": ["low", "medium", "high", "critical", "n-a"] },
+        "unfairness": { "type": "string", "enum": ["low", "medium", "high", "critical", "n-a"] },
+        "abusiveness": { "type": "string", "enum": ["low", "medium", "high", "critical", "n-a"] }
+      }
+    },
+    "severity_rationale": {
+      "type": "string",
+      "description": "Per-element reasoning for the severity rating. Severity drift is the single most common audit finding on UDAAP processes; rationale is mandatory."
+    },
+    "conduct_risk_implications": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["taxonomy_tie_back"],
+      "properties": {
+        "taxonomy_tie_back": {
+          "type": "array",
+          "description": "Conduct-risk taxonomy categories the fact pattern touches.",
+          "items": {
+            "type": "string",
+            "enum": [
+              "incentives",
+              "product-design",
+              "communication",
+              "sales-practices",
+              "customer-outcome",
+              "complaint-linkage",
+              "vendor-or-third-party",
+              "ai-algorithmic-surface",
+              "other"
+            ]
+          },
+          "minItems": 1
+        },
+        "conduct_accountable_manager_role": {
+          "type": "string",
+          "description": "Role under SMCR or the firm's conduct framework. Distinct from the UDAAP-decision forum."
+        },
+        "conduct_committee_read": { "type": "boolean" },
+        "conduct_event_candidate": { "type": "boolean" },
+        "customer_outcome_segments_affected": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "regulator_engagement_trigger": { "type": "string" },
+        "complaint_monitoring_loop_closure": { "type": "string" }
+      }
+    },
+    "recommended_remediation": {
+      "type": "array",
+      "description": "Remediation entries. Each entry names action, type, owner, due date, and the accountable forum.",
+      "items": {
+        "type": "object",
+        "required": ["action", "type", "owner", "due_date"],
+        "additionalProperties": false,
+        "properties": {
+          "action": { "type": "string" },
+          "type": {
+            "type": "string",
+            "enum": [
+              "consumer-redress",
+              "control-change",
+              "policy-change",
+              "disclosure-change",
+              "training",
+              "kill-switch-candidate",
+              "marketing-takedown-candidate",
+              "model-change-candidate",
+              "vendor-renegotiation",
+              "monitoring-uplift",
+              "other"
+            ]
+          },
+          "owner": {
+            "type": "string",
+            "description": "Role of the owner accountable for execution."
+          },
+          "due_date": { "type": "string", "format": "date" },
+          "accountable_forum": {
+            "type": "string",
+            "description": "Named decision forum (product committee, conduct committee, fair-lending committee, counsel)."
+          }
+        }
+      }
+    },
+    "open_questions": {
+      "type": "array",
+      "description": "Items deferred to counsel or other reviewers.",
+      "items": { "type": "string" }
+    },
+    "cross_references": {
+      "type": "array",
+      "description": "Pointers to related skills the decision forum should consume alongside this memo.",
+      "items": {
+        "type": "string",
+        "enum": [
+          "complaint-theme-analysis",
+          "marketing-claim-review",
+          "adverse-action-review",
+          "fair-lending-test-plan",
+          "section1071-readiness",
+          "vendor-diligence",
+          "model-card-builder",
+          "llm-vendor-evidence-review",
+          "other"
+        ]
+      }
+    },
+    "decision_forum": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "named_forum": {
+          "type": "string",
+          "description": "Product committee, conduct committee, fair-lending committee, counsel, CCO."
+        },
+        "decision_status": {
+          "type": "string",
+          "enum": ["draft", "submitted", "in-review", "decided", "deferred", "rejected"]
+        },
+        "decision_date": { "type": "string", "format": "date" },
+        "conditions": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "assumptions_and_dependencies": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "confidence_label": {
+      "type": "string",
+      "enum": ["high", "medium", "low", "unknown"],
+      "description": "Confidence in the memo as drafted, per references/review-gates.md."
+    },
+    "source_trace": {
+      "type": "array",
+      "description": "Citations supporting material claims.",
+      "items": {
+        "type": "object",
+        "required": ["claim", "source"],
+        "additionalProperties": false,
+        "properties": {
+          "claim": { "type": "string" },
+          "source": { "type": "string" },
+          "section": { "type": "string" },
+          "date": { "type": "string", "format": "date" },
+          "url": { "type": "string", "format": "uri" }
+        }
+      }
+    }
+  }
+}

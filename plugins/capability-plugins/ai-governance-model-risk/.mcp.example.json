@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "grc-system-of-record": {
+      "command": "node",
+      "args": ["${CLAUDE_PLUGIN_ROOT}/mcp/placeholder-server.js"],
+      "env": {
+        "NOTE": "Replace this placeholder with your approved GRC, policy, document, ticketing, or data platform MCP server. Do not store secrets in this file."
+      }
+    }
+  }
+}

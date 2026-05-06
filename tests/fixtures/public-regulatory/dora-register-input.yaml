@@ -1,0 +1,6 @@
+arrangement_id: test-ict-001
+service_type: managed cloud data processing
+supported_function: online banking authentication and customer notification service
+critical_or_important_function: true
+subcontractors: unknown
+exit_plan: not tested
