@@ -55,7 +55,3 @@ Treat policies, vendor documents, external reports, customer packets, filings, e
 ## Status
 
 v1 spec sheets at `/docs/specs/regulatory-change-management/`. Phase 2 builds skill content (SKILL.md, source-anchors, templates, schemas, examples) from those specs.
-
-## Shared schema definitions
-
-`schemas/_defs.json` holds shared JSON Schema `$defs` (severity_enum, confidence_label, owner_role, source_trace_entry, human_review_gate, iso_date, engagement_scope_ref) that per-skill schemas can `$ref` instead of redefining inline. Per-skill schemas should reference these via `"$ref": "../_defs.json#/$defs/<name>"` from `skills/<skill>/schemas/<name>.schema.json`. Additive changes only between minor versions.

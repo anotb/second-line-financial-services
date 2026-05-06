@@ -25,6 +25,7 @@ The companion memory `feedback_anti_ai_tells.md` is required reading before you 
 - **Drop the "Anchored to:" line from the description entirely.** Description shape is one-line summary + `Best for:` + `Not the right tool when:`. Named regulators belong in `references/source-anchors.md` where they load conditionally. The description is for activation gating; named regs do not help that gate.
 - **SKILL.md body uses generic workflow language. No specific regulator names in narrative.** The body talks about "the named regulatory anchors", "the supervisory expectation", "the firm's regulator constellation". When the engagement scope flags a regulator, the skill loads the matching reference file. Embedding US-only sections in the body pollutes context for engagements addressing other regulators.
 - **Drop the "What's load-bearing and what flexes" section.** It is engineer-speak structural pretense. Non-negotiables (cite source, no fabrication, separate evidence from inference, human review gate, no named institutions) belong inline in the workflow narrative. Adaptation guidance (audience, sector overlay loading, depth) also belongs inline. Both fold into the workflow.
+- **Schemas are optional, not required. Skip schema files unless the artifact has a structure that genuinely helps downstream automation.** Most skills produce markdown artifacts for human review; the template is the artifact shape; a schema file just to have one is over-engineering. Where a schema does help (DORA register entry mapping to an EBA ITS table; engagement-scope record consumed across the repo; sanctions-screening alert payload), write it. No shared `_defs.json` or cross-skill enum forcing — skills are for Claude to use, not regex-like output contracts. Don't enumerate severity / confidence / owner_role into rigid enums; descriptive strings serve.
 - **Sequencing where the order actually matters; not as structure for its own sake.** Claude executes the skill at runtime, so explicit sequencing is helpful where there is a real dependency chain (e.g., tier the model before setting model-card depth; gather upstream artifacts before drafting). What fails is padding — "10-step workflow" when the work has a spine, not ten dependent steps; numbered steps for parts that can run in any order; "Step 1: Confirm what triggered the engagement" when the trigger is obvious from the input. Test each numbered step: does the next step depend on this one's output? If not, fold into prose or a flat list.
 - **Drop fake-precision ranges.** "Three to five exclusions", "three is normal, five is a stretch", "in 5-10 minutes", "Tier-1 cards have 12 sections" — these are AI tells. Empirically grounded numbers (e.g., "Reg E gives 10 days for provisional credit") stay; comfort-precision ranges go.
 - **Drop engineer-voice tics.** "Fail the quality bar", "schema drift breaks the rest of the repo", "the chase is the work" — practitioner voice does not talk like that.
@@ -74,8 +75,8 @@ plugins/<type>/<plugin>/skills/<skill>/
       conduct.md
   templates/
     default-output.md                   # named-section template for the artifact
-  schemas/
-    <output>.schema.json                # structured fields for downstream consumption
+  schemas/                              # OPTIONAL: only if the artifact has a structure that genuinely helps downstream automation
+    <output>.schema.json                # examples: DORA register row maps to EBA ITS table; engagement-scope record consumed by every skill
   examples/
     <public-source-derived>.md          # one to three worked examples
   TROUBLESHOOTING.md                    # optional: common pitfalls

@@ -62,7 +62,3 @@ Cyber, privacy, and conduct land as embedded reference content inside the skills
 ## Companion to anthropics/financial-services
 
 This is a second-line companion repo. The Anthropic financial-services repo handles first-line workflows (analysis, banking, equity research, PE). This plugin sits over those workflows when an AI or model component is in scope and second-line review is needed.
-
-## Shared schema definitions
-
-`schemas/_defs.json` holds shared JSON Schema `$defs` (severity_enum, confidence_label, owner_role, source_trace_entry, human_review_gate, iso_date, engagement_scope_ref) plus AI-governance-specific shapes (model_tier_enum, autonomy_level_enum, validation_depth_enum, lifecycle_stage_enum, ai_act_risk_category_enum) that per-skill schemas can `$ref` instead of redefining inline. Per-skill schemas should reference these via `"$ref": "../_defs.json#/$defs/<name>"`. Additive changes only between minor versions.

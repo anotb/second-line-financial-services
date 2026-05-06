@@ -26,7 +26,3 @@ A second-line lead picks up this plugin when the work calls for one of these nam
 ## Operating posture
 
 This plugin drafts second-line work product for qualified review. It does not approve, file, rate, onboard, decline, notify, or close items. Public regulatory and standards sources are anchors, not legal interpretations.
-
-## Shared schema definitions
-
-`schemas/_defs.json` holds shared JSON Schema `$defs` (severity_enum, confidence_label, owner_role, source_trace_entry, human_review_gate, iso_date, engagement_scope_ref) that per-skill schemas can `$ref` instead of redefining inline. Per-skill schemas should reference these via `"$ref": "../_defs.json#/$defs/<name>"` from `<plugin>/skills/<skill>/schemas/<name>.schema.json`. Additive changes only between minor versions; breaking changes ship as a versioned migration.
