@@ -1,7 +1,7 @@
 ---
 name: <skill-slug>
 description: |
-  <!-- One paragraph: what the skill produces, who consumes it. Anchored to NAMED SOURCES, NOT SECTIONS. No `[verify section]` markers in this block. -->
+  <!-- One paragraph: what the artifact is, what it produces, who consumes it. No regulator names — they live in references/source-anchors.md and load conditionally. No `[verify section]` markers. -->
   <One paragraph naming the artifact, the audience, and the cross-skill contract it feeds.>
 
   Best for:
@@ -12,8 +12,6 @@ description: |
   Not the right tool when:
   - <Adjacent skill does it better; name the skill.>
   - <Out-of-scope situation; route elsewhere.>
-
-  Anchored to: <NAMED REGULATORY SOURCES AND STANDARDS, comma-separated. No section numbers here>. Citations and excerpts live in `references/source-anchors.md`.
 argument-hint: "[concise input shape: scope record, prior artifact ID, or free-text trigger]"
 ---
 
@@ -49,13 +47,14 @@ The <artifact> has the same spine across <variant set>. A senior reviewer fills 
 
 <Closing paragraph: how the artifact closes (recommendation, sign-off questions, revision log, etc.).>
 
-## What's load-bearing and what flexes
-
-<!-- Two paragraphs total. NOT a bulleted checklist. Rule-1 violation patterns ARE the load-bearing list (cite sources, distinguish evidence from inference, no fabricated section refs, stop at the recommendation). -->
-
-Load-bearing across every <artifact>: every material claim cites a source from `references/source-anchors.md` (or a loaded overlay) by path; unsupported claims are marked `[evidence needed]`; section references that cannot be confirmed get `[verify section]` rather than fabricated; <skill-specific evidence-vs-inference rule>; the skill stops at <the gate, e.g., recommendation, draft for human attestation>.
-
-Flexes to the engagement: depth and length scale to <tier or criticality>; audience drives shape (working group is plain, committee is structured, examiner response is formal, board is distilled); persona drives the review-gate machinery; sector and cross-cutting overlays load from engagement-scope. Where firm-specific policy or taxonomy applies, it lives in `references/firm-overlay.md` (consumed when present) and never in the artifact directly.
+<!--
+Non-negotiables and adaptation guidance go INLINE in the workflow narrative above, not in a separate "load-bearing and flexes" section. Examples to bake into the workflow paragraphs:
+- Cite a source for every material claim. Mark unsupported claims `[evidence needed]`.
+- The skill stops at draft / recommendation; sponsor or sign-off owner closes.
+- Sector and cross-cutting overlays load from the engagement scope; skill loads only what the engagement names.
+- Audience drives depth (working group plain, committee structured, examiner response formal, board distilled).
+Senior practitioners do not have a meta-section about what is mandatory; the must-do's are part of how they describe the work.
+-->
 
 ## Pointers
 
@@ -63,13 +62,15 @@ Flexes to the engagement: depth and length scale to <tier or criticality>; audie
 - `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md` — sector overlays loaded per engagement-scope.
 - `references/cross-cutting/{cyber,privacy,climate,conduct}.md` — cross-cutting overlays loaded per engagement-scope.
 - `references/firm-overlay.md` — firm-installed policy, taxonomy, review gates; consumed when present.
-- `templates/default-output.md` — artifact template.
-- `schemas/<skill-slug>.schema.json` — structured-output contract for downstream consumption.
+- `templates/default-output.md` — content spec for the artifact (named sections, fields).
 - `examples/` — anonymised public-source-derived scenarios.
 - `TROUBLESHOOTING.md` — recurring defects.
+- `schemas/<skill-slug>.schema.json` — OPTIONAL: include only when the artifact has a structure that genuinely helps downstream automation (e.g., DORA register row mapping to EBA ITS table; structured engagement-scope record). Most skills skip this.
 
 ## Output
 
-<!-- Name the artifact, the schema, and downstream consumers concretely. The schema is the cross-skill contract; additive changes only. Name downstream skills by slug, not by hand-wave. -->
+<!-- Name the artifact and the rendering format. Practitioners get Word memos, Excel matrices, PowerPoint decks. Markdown is the content spec, not the deliverable. -->
 
-The skill emits <artifact> in `templates/default-output.md` shape and a structured record conforming to `schemas/<skill-slug>.schema.json`. Downstream consumers: `<consumer-skill-1>` reads <named fields>; `<consumer-skill-2>` reads <named fields>; `<consumer-skill-3>` reads <named fields>. The schema is the cross-skill contract; additive changes only. Add fields, do not rename or repurpose them. A breaking change is a versioned migration with the downstream skills told in advance.
+The deliverable is a <Word memo / Excel matrix / PowerPoint deck>. The skill defines the artifact substance (named sections, fields, populated content per `templates/default-output.md`) and delegates rendering to Anthropic's `document-skills` plugin: `docx` for memos and write-ups, `xlsx` for matrices / registers / workpapers, `pptx` for committee and board decks.
+
+Downstream consumers: `<consumer-skill-1>` reads <what>; `<consumer-skill-2>` reads <what>. <If a structured record is emitted, name it and the schema; otherwise omit this sentence.>
