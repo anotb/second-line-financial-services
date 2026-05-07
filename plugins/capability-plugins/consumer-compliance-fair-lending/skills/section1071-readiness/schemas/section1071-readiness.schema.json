@@ -1,0 +1,394 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://second-line-financial-services/plugins/capability-plugins/consumer-compliance-fair-lending/skills/section1071-readiness/schemas/section1071-readiness.schema.json",
+  "title": "section1071-readiness",
+  "description": "Structured Section 1071 readiness output. Mirrors the readiness matrix and feeds downstream remediation tracking, GRC platforms, and audit-workpaper systems without re-keying. The data_points[] array carries one entry per 12 CFR 1002.107 data point; the structured record is the authoritative per-data-point readiness state, the markdown narrative is the executive read. The 12 CFR 1002.114 compliance dates have been moved by court order and bureau response (the CTA-style litigation history); cfi_determination.compliance_date carries the date as a sourced citation, marked [verify current effectiveness and tier dates] until pinned. Downstream consumers: fair-lending-test-plan (reads the data-point matrix to confirm the dataset is fit for fair-lending testing), the firm's regulatory-reporting pipeline (consumes reporting_readiness once go-live approaches), the firm's audit function (reads the matrix, gap list, and source trace).",
+  "type": "object",
+  "required": [
+    "assessment_id",
+    "as_of_date",
+    "entity_assessed",
+    "cfi_determination",
+    "data_points",
+    "confidence_label"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "description": "Semver of this schema. Default 1.0.0.",
+      "default": "1.0.0",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "assessment_id": {
+      "type": "string",
+      "description": "Stable identifier for the readiness assessment (firm-defined, e.g., '<entity-id>-1071-readiness-<YYYY-NN>').",
+      "minLength": 1
+    },
+    "engagement_id": {
+      "type": "string",
+      "description": "Optional pointer to the engagement-scope record under which the assessment was produced."
+    },
+    "as_of_date": {
+      "type": "string",
+      "format": "date",
+      "description": "The date the readiness state in this record reflects."
+    },
+    "entity_assessed": {
+      "type": "object",
+      "description": "Legal entity assessed.",
+      "required": ["legal_entity_name"],
+      "additionalProperties": false,
+      "properties": {
+        "legal_entity_name": { "type": "string" },
+        "legal_entity_identifier": { "type": "string", "description": "LEI or other identifier; mark identifier_type." },
+        "identifier_type": { "type": "string", "enum": ["LEI", "EIN", "RSSD", "FDIC-cert", "NCUA-charter", "other"] },
+        "entity_type": {
+          "type": "string",
+          "enum": [
+            "national-bank",
+            "state-member-bank",
+            "state-non-member-bank",
+            "savings-association",
+            "credit-union",
+            "fintech",
+            "sponsor-bank-program",
+            "other"
+          ]
+        },
+        "country": { "type": "string", "description": "ISO 3166-1 alpha-2." }
+      }
+    },
+    "source_posture": {
+      "type": "string",
+      "enum": [
+        "public-only",
+        "public-plus-firm-policy",
+        "public-plus-firm-policy-plus-evidence",
+        "connector-aware"
+      ],
+      "description": "Source posture under which the readiness state was set. Drives the honesty of the readiness enum."
+    },
+    "sector_overlay_loaded": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["banking", "payments-fintech", "capital-markets", "insurance"]
+      },
+      "description": "Sector overlays loaded for this assessment. capital-markets and insurance are out-of-scope flags."
+    },
+    "cross_cutting_overlay_loaded": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["privacy", "conduct"]
+      },
+      "description": "Cross-cutting overlays loaded for this assessment."
+    },
+    "cfi_determination": {
+      "type": "object",
+      "description": "Covered-financial-institution determination per 12 CFR 1002.105 and tier per 1002.114.",
+      "required": ["determination", "compliance_date"],
+      "additionalProperties": false,
+      "properties": {
+        "covered_originations_year_t_minus_1": { "type": "integer", "minimum": 0 },
+        "covered_originations_year_t_minus_2": { "type": "integer", "minimum": 0 },
+        "threshold_under_1002_105": {
+          "type": "object",
+          "additionalProperties": false,
+          "properties": {
+            "value": { "type": "integer", "minimum": 0 },
+            "rule_reference": { "type": "string", "default": "12 CFR 1002.105" },
+            "verify_marker": { "type": "string", "description": "[verify under current rule] where applicable." }
+          }
+        },
+        "methodology_used_to_count": { "type": "string" },
+        "determination": {
+          "type": "string",
+          "enum": ["covered-financial-institution", "not-covered-financial-institution", "boundary-sensitivity"]
+        },
+        "tier": {
+          "type": "string",
+          "enum": ["tier-1", "tier-2", "tier-3", "not-applicable"]
+        },
+        "compliance_date": {
+          "type": "object",
+          "description": "Currently effective compliance date for the firm's tier. Carried as a sourced citation, not a bare value, because the dates have been moved by court order and bureau response.",
+          "required": ["value", "source", "verify_marker"],
+          "additionalProperties": false,
+          "properties": {
+            "value": { "type": "string", "format": "date" },
+            "source": { "type": "string", "description": "URL or document reference for the date, with retrieval date." },
+            "retrieval_date": { "type": "string", "format": "date" },
+            "verify_marker": {
+              "type": "string",
+              "default": "[verify current effectiveness and tier dates]",
+              "description": "Mandatory verify marker for compliance-date references."
+            }
+          }
+        },
+        "affiliate_aggregation_question_status": {
+          "type": "string",
+          "enum": ["resolved", "open-question-for-legal", "not-applicable"]
+        }
+      }
+    },
+    "scope": {
+      "type": "array",
+      "description": "Per-product covered-credit-transaction mapping per 12 CFR 1002.106.",
+      "items": {
+        "type": "object",
+        "required": ["product", "classification", "rule_reference"],
+        "additionalProperties": false,
+        "properties": {
+          "product": { "type": "string" },
+          "classification": { "type": "string", "enum": ["in", "out", "edge"] },
+          "rule_reference": { "type": "string", "description": "E.g., '12 CFR 1002.106(a)' or '12 CFR 1002.106(b)(1)' (HMDA-reportable exclusion)." },
+          "rationale": { "type": "string" },
+          "open_question_for_legal": { "type": "string" }
+        }
+      }
+    },
+    "data_points": {
+      "type": "array",
+      "description": "One entry per 12 CFR 1002.107 data point. The list is the contract; partial arrays are not assessments.",
+      "items": {
+        "type": "object",
+        "required": ["data_point", "rule_ref", "readiness"],
+        "additionalProperties": false,
+        "properties": {
+          "data_point": { "type": "string", "description": "Named per 1002.107 (e.g., 'unique identifier', 'pricing — additional cost for MCA / sales-based financing')." },
+          "rule_ref": { "type": "string", "description": "E.g., '1002.107(a)(13)'. Mark '[verify subsection]' where uncertain." },
+          "system_of_record": { "type": "string" },
+          "feeder_systems": { "type": "array", "items": { "type": "string" }, "description": "Where multiple systems feed the canonical source." },
+          "capture_method": {
+            "type": "string",
+            "enum": [
+              "applicant_provided",
+              "firm_inferred",
+              "firm_observed",
+              "vendor_supplied",
+              "manual_entry",
+              "not_yet_captured"
+            ]
+          },
+          "readiness": {
+            "type": "string",
+            "enum": ["ready", "partial", "gap", "unverifiable"]
+          },
+          "gap_description": { "type": "string" },
+          "owner": { "type": "string", "description": "Accountable person (role)." },
+          "due_date": { "type": "string", "format": "date" },
+          "notes": { "type": "string" }
+        }
+      }
+    },
+    "demographic_collection_mechanics": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "collection_point": { "type": "string" },
+        "script_reference": { "type": "string" },
+        "required_disclosures_present": { "type": "string", "enum": ["yes", "no", "partial"] },
+        "refusal_handling_code": { "type": "string", "description": "The rule requires a specific refusal code value, not null." },
+        "principal_owner_identification_logic": { "type": "string" },
+        "firm_observed_capture_procedure": { "type": "string", "description": "Per the rule's narrow allowance for in-person applications where the principal owner has declined to self-identify." },
+        "data_flow_reference": { "type": "string" },
+        "findings": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "firewall": {
+      "type": "object",
+      "description": "Firewall design per 12 CFR 1002.108. The firewall is a control review, not a UI question.",
+      "additionalProperties": false,
+      "properties": {
+        "systems_hosting_demographic_data": { "type": "array", "items": { "type": "string" } },
+        "rbac_summary": { "type": "string" },
+        "permitted_exceptions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "exception_id": { "type": "string" },
+              "rationale": { "type": "string" },
+              "documentation_reference": { "type": "string" },
+              "notice_provided_per_rule": { "type": "boolean" }
+            }
+          }
+        },
+        "trained_personnel_design": { "type": "string" },
+        "audit_log_posture": { "type": "string" },
+        "customer_360_view_review": { "type": "string", "description": "The predictable depository firewall failure mode; explicit treatment." },
+        "findings": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "recordkeeping": {
+      "type": "object",
+      "description": "Per 12 CFR 1002.110 — three-year retention from date of submission.",
+      "additionalProperties": false,
+      "properties": {
+        "records_identified": { "type": "string" },
+        "retention_period_years": { "type": "integer", "default": 3 },
+        "disposition_policy_reference": { "type": "string" },
+        "recovery_posture": { "type": "string" },
+        "findings": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "reporting_readiness": {
+      "type": "object",
+      "description": "FIG conformance and submission planning.",
+      "additionalProperties": false,
+      "properties": {
+        "fig_edition": { "type": "string", "description": "Mark '[verify current edition]' until pinned." },
+        "file_format_readiness": { "type": "string", "enum": ["ready", "partial", "gap"] },
+        "validation_engine": { "type": "string", "enum": ["cfpb-provided", "vendor-built", "in-house"] },
+        "test_submission_plan": { "type": "string" },
+        "submission_channel": { "type": "string", "description": "Mark '[verify current channel and authentication mechanics]' until pinned." },
+        "named_owner_of_submission": { "type": "string" },
+        "findings": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "vendor_readiness": {
+      "type": "array",
+      "description": "One entry per material vendor. The firm remains the CFI; the vendor is the data-collection agent.",
+      "items": {
+        "type": "object",
+        "required": ["vendor", "role"],
+        "additionalProperties": false,
+        "properties": {
+          "vendor": { "type": "string" },
+          "role": {
+            "type": "string",
+            "enum": [
+              "LOS",
+              "demographic-collection-form-provider",
+              "pricing-data-computation",
+              "FIG-validation-utility",
+              "submission-utility",
+              "data-warehouse",
+              "KYB-KYC",
+              "other"
+            ]
+          },
+          "attestation_status": { "type": "string", "enum": ["signed", "requested", "not-yet-requested"] },
+          "change_control_id": { "type": "string" },
+          "contractual_responsibility_allocation": { "type": "string" },
+          "sla_on_data_flow": { "type": "string" },
+          "finding": { "type": "string" }
+        }
+      }
+    },
+    "fair_lending_handoff": {
+      "type": "object",
+      "description": "How the §1071 dataset feeds fair-lending testing once it exists. Cross-reference fair-lending-test-plan.",
+      "additionalProperties": false,
+      "properties": {
+        "completeness_for_fair_lending_testing": { "type": "string" },
+        "firewall_compatibility_with_fl_team_access": { "type": "string" },
+        "data_pipeline_to_fl_analytics_environment": { "type": "string" }
+      }
+    },
+    "bona_fide_error_approach": {
+      "type": "object",
+      "description": "Per 12 CFR 1002.112. Documented before go-live, not after.",
+      "additionalProperties": false,
+      "properties": {
+        "policy_status": { "type": "string", "enum": ["in-place", "drafted", "not-yet-drafted"] },
+        "amendment_procedure_reference": { "type": "string" },
+        "named_owner": { "type": "string" },
+        "broader_policy_link": { "type": "string" }
+      }
+    },
+    "privacy_posture": {
+      "type": "object",
+      "description": "Loaded when the privacy cross-cutting overlay applies.",
+      "additionalProperties": false,
+      "properties": {
+        "glba_safeguards_posture": { "type": "string" },
+        "state_privacy_applicability": { "type": "string", "description": "Mark '[verify state-specific scope]' for in-scope states." },
+        "modified_data_publication_reidentification_risk": { "type": "string", "description": "Flag for low-volume / identifiable-geography portfolios." },
+        "findings": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "conduct_posture": {
+      "type": "object",
+      "description": "Loaded when the conduct cross-cutting overlay applies.",
+      "additionalProperties": false,
+      "properties": {
+        "script_integrity_in_practice": { "type": "string" },
+        "firewall_integrity_in_practice": { "type": "string" },
+        "vendor_staff_conduct_in_applicant_interaction": { "type": "string" },
+        "conduct_themes_routing": { "type": "string", "enum": ["conduct-committee", "risk-committee", "both", "not-applicable"] },
+        "findings": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "gap_list": {
+      "type": "array",
+      "description": "Roll-up of all gaps from the data-point matrix, firewall, vendor, FIG, and other sections.",
+      "items": {
+        "type": "object",
+        "required": ["gap_id", "description", "severity"],
+        "additionalProperties": false,
+        "properties": {
+          "gap_id": { "type": "string" },
+          "description": { "type": "string" },
+          "severity": { "type": "string", "enum": ["blocking", "high", "medium", "low"] },
+          "source": { "type": "string", "description": "data-point / firewall / vendor / FIG / recordkeeping / privacy / conduct / other." },
+          "owner": { "type": "string" },
+          "due_date": { "type": "string", "format": "date" },
+          "status": { "type": "string", "enum": ["open", "in-progress", "closed"] },
+          "conduct_theme": { "type": "string", "description": "Where the gap has a conduct dimension routed to the conduct committee." }
+        }
+      }
+    },
+    "open_questions": {
+      "type": "array",
+      "description": "Open interpretation, scoping, and submission questions. Each item names the function the question goes to.",
+      "items": {
+        "type": "object",
+        "required": ["question", "function"],
+        "additionalProperties": false,
+        "properties": {
+          "question_id": { "type": "string" },
+          "question": { "type": "string" },
+          "function": { "type": "string", "enum": ["legal", "compliance", "regulatory-affairs", "privacy", "fair-lending", "audit", "other"] },
+          "status": { "type": "string", "enum": ["open", "resolved"] }
+        }
+      }
+    },
+    "source_trace": {
+      "type": "array",
+      "description": "Source trace. Every material claim cites references/source-anchors.md by path or a loaded overlay.",
+      "items": {
+        "type": "object",
+        "required": ["claim", "source"],
+        "additionalProperties": false,
+        "properties": {
+          "claim": { "type": "string" },
+          "source": { "type": "string", "description": "Path to references/source-anchors.md, an overlay file, the rule text, or a firm-evidence file." },
+          "section": { "type": "string" },
+          "date": { "type": "string", "format": "date" },
+          "url_or_file_ref": { "type": "string" },
+          "verify_marker": { "type": "string", "description": "[verify ...] marker carried with the claim where uncertainty applies." }
+        }
+      }
+    },
+    "confidence_label": {
+      "type": "string",
+      "enum": ["high", "medium", "low", "unknown"]
+    },
+    "review_gates": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "scope_gate": { "type": "boolean" },
+        "evidence_gate": { "type": "boolean" },
+        "authority_gate": { "type": "boolean" },
+        "impact_gate": { "type": "boolean" },
+        "decision_gate": { "type": "boolean" }
+      },
+      "description": "Boolean per gate per references/review-gates.md. The skill drafts; the named accountable executive signs off."
+    }
+  }
+}
