@@ -6,7 +6,7 @@ clears the v1 quality bar. Walks every plugins/*/skills/*/SKILL.md and applies
 four rules:
 
 1. placeholder-text ban (verbatim phrases reused across all v0.2 SKILL.md files)
-2. activation-tuned description (Best for / Not the right tool when / Anchored to)
+2. activation-tuned description (Best for / Not the right tool when)
 3. source-anchor depth (sibling references/source-anchors.md with section refs)
 4. duplicate SKILL.md content (>50% body overlap, pairwise)
 
@@ -55,10 +55,11 @@ PLACEHOLDER_PHRASES = [
 ]
 
 # Rule 2: required description shape markers (case-insensitive).
+# Sharpened v1: "Anchored to:" dropped from descriptions; named regulators live
+# in references/source-anchors.md and load conditionally.
 DESCRIPTION_MARKERS = [
     'best for:',
     'not the right tool when:',
-    'anchored to:',
 ]
 
 # Rule 3: source-anchor cite tokens. A bullet that contains a URL must also
