@@ -1,48 +1,92 @@
 ---
 name: fintech-partner-controls
-description: Draft control expectations for fintech partners supporting bank lending, deposit, payment, or data-access activities. Use for financial-services second-line, compliance, risk, audit, governance, regulatory change, controls, evidence, or reporting work where outputs must be traceable, human-reviewed, and anchored to public regulatory sources such as U.S. interagency third-party risk management guidance, OCC release, U.S. interagency third-party risk management guidance, FDIC release, CFPB small business lending rule under Regulation B, Section 1071.
-argument-hint: "[source files, policy text, rule text, data extract, or scenario]"
+description: |
+  Drafts the fintech-side controls evidence pack a sponsor bank's third-party risk function expects in its file: control inventory mapped to Reg E error-resolution timing, NACHA Operating Rules obligations the program operator owes upstream, FBO subledger reconciliation, sponsor-bank reporting cadence, customer-facing disclosure adherence (Reg E §1005.7-§1005.11, Reg DD), money-transmitter / MSB BSA posture where applicable, contract-clause adherence evidence under the program agreement, and a 12-month incident-history summary. Output is a Word memo plus an Excel control inventory, review-ready for the fintech's own second line and for production to the sponsor bank's TPRM team or to a state-MTL examiner.
+
+  Best for:
+  - A fintech, neobank, BaaS program, or wallet operator preparing or refreshing its self-evidence pack for a sponsor-bank annual review, sponsor-bank-led audit, or state-MTL exam.
+  - Compliance has been asked to self-evidence Reg E §1005.11 error-resolution timing (10 / 45 / 90-day clocks), NACHA return handling, or unauthorised-transfer liability allocation between fintech and bank.
+  - A new payment rail (FedNow, RTP) or new product (debit-card program, instant payouts, secured card) is being added under the sponsor-bank's existing oversight envelope and the program operator needs the delta-control pack.
+  - An incoming sponsor bank, processor, or program manager has issued a control questionnaire (SIG, CAIQ-style, or bespoke) and the fintech's second line is preparing a defensible response.
+
+  Not the right tool when:
+  - The user is the sponsor bank doing principal-side oversight (use `banking-risk-compliance/bank-fintech-partnership-review`, or `third-party-operational-resilience/vendor-diligence` with the payments-fintech overlay).
+  - The work is incident-specific (use `payment-operations-incident-review`).
+  - The work is a top-down rail-and-segment risk assessment, not a controls inventory (use `payments-risk-assessment`).
+  - The work is data-access permissioning under §1033 (use `open-banking-data-controls`).
+  - The work is a UDAAP themes review of fintech marketing or fee disclosure (use `consumer-compliance-fair-lending/udaap-risk-review` with the payments-fintech overlay).
+argument-hint: "[program operator type, sponsor banks, rails in scope, review trigger, source posture]"
 ---
 
-# Fintech Partner Controls
+# Fintech partner controls
 
-Use this skill to draft control expectations for fintech partners supporting bank lending, deposit, payment, or data-access activities. Produce review-ready second-line work product that a qualified risk, compliance, legal, audit, or control owner can inspect and approve.
+A fintech-side controls evidence pack is the artifact a sponsor bank's third-party risk function expects to see in its file at annual review, after a material change, or when an examiner asks for evidence of the bank's principal-side oversight. The work is to inventory the controls the program operator owes upstream, attach evidence per control, name the sponsor-bank reporting cadence, evidence the customer-facing duties (Reg E error resolution, Reg DD, FDIC representation), summarise the prior-12-month incident history, and read each program-agreement clause against current operating reality. The shape is a control inventory plus a memo, not a narrative. The skill stops at draft; the head of payments compliance, the BSA officer, the CCO, or the program-management lead owns sign-off, and the sponsor-bank TPRM team consumes the output separately.
 
-## Source anchors
+## Ask first
 
-- U.S. interagency third-party risk management guidance, OCC release: https://www.occ.gov/news-issuances/news-releases/2023/nr-ia-2023-53.html
-- U.S. interagency third-party risk management guidance, FDIC release: https://www.fdic.gov/news/press-releases/2023/pr23047.html
-- CFPB small business lending rule under Regulation B, Section 1071: https://www.consumerfinance.gov/rules-policy/final-rules/small-business-lending-under-the-equal-credit-opportunity-act-regulation-b/
+Plain answers up front. Default and flag where the practitioner cannot answer.
 
-Also consult `references/source-map.md`, `references/policy-control-library.md`, and `references/review-gates.md` when present in this plugin.
+- **Program-operator role and sponsor-bank construct.** Fintech program operator, BaaS platform, program manager, wallet operator, neobank, payments processor, money-transmitter-only, BNPL provider. Each sponsor bank named by role, not by brand, with charter type (national bank, state member, state non-member, state-chartered ILC), program-agreement effective date, and agreement type (BaaS, sponsor, processor). Multi-sponsor architecture is common; capture each.
+- **Rails, products, and customer base in scope.** ACH, Same Day ACH, wire, card debit / credit, FedNow, RTP, P2P, check, cross-border correspondent, virtual-currency on-ramp. Products: deposit-like checking, savings, credit, prepaid, BNPL, instant payouts, payroll-on-demand. Geography: US states (each carries its own MTL / NMLS posture), corridor countries.
+- **Review trigger and audience.** Annual sponsor-bank review, sponsor-bank-led audit, state-MTL exam through NMLS, sponsor-bank questionnaire (SIG, CAIQ, bespoke), processor-led control review, internal audit kickoff, post-incident sponsor-bank request, new-rail / new-product delta. The trigger sets depth; the audience sets tone.
+- **Source posture.** Public-only (engagement scoping); public-plus-firm-policy; public-plus-firm-policy-plus-system-of-record-evidence (the load-bearing posture for self-evidence work — ledger, processor portal, complaint system, dispute system, FBO reconciliation feed, sponsor-bank reporting feeds); connector-aware where the practitioner can pull live extracts. Aspirational posture is not a posture.
 
-## Required process
+When `engagement-scope` (per `risk-compliance-core/engagement-scoping`) is supplied, consume it (`institution.type`, `institution.primary_regulators`, `sector_overlay_set`, `cross_cutting_overlay_set`, `persona.role`, `source_posture`). Otherwise ask the questions and default to public posture if the practitioner declines. Note in the artifact that scope was not formalised.
 
-1. State scope before analysis: jurisdiction, institution type, product or process, timeframe, source posture, and assumptions.
-2. Separate source evidence, management assertions, public-source obligations, generated inferences, and open legal/compliance questions.
-3. Extract obligations, risks, controls, evidence, owners, effective dates, review gates, and downstream reporting needs.
-4. Use public source anchors for criteria. Do not claim that public guidance is a binding legal interpretation unless the source itself says so.
-5. Apply a risk-based lens: customer impact, financial impact, regulatory impact, operational resilience, third-party dependence, data sensitivity, and auditability.
-6. Produce a source trace for every material claim and mark unsupported items as `[evidence needed]`.
-7. Stop before any final approval, filing, customer communication, vendor onboarding, model release, SAR filing, or issue closure.
+## How the pack gets built
 
-## Output format
+The pack has the same spine across program-operator types. Walk it in the order the program is structured; the control inventory and the memo settle into shape together.
 
-Use this structure unless the user asks for a specific artifact:
+**Program summary** — a one-page page facing the rest of the pack. Sponsor bank(s) named by role with charter type and program-agreement effective date; processors front-end / back-end / gateway; BIN sponsors per network; ledger provider; KYC / CIP vendor; fraud-decision vendor; sanctions-screening vendor; complaint-management vendor; geographic footprint by US state and corridor; customer-base size by segment; current-cycle volume and value by rail. Detail goes into the inventory rows.
 
-1. Executive summary, maximum five bullets.
-2. Scope and source posture.
-3. Obligation, risk, control, or evidence table as applicable.
-4. Gaps, exceptions, or open questions.
-5. Human-review gates and recommended owner actions.
-6. Source trace and confidence label.
+**Regulatory perimeter and licensing posture.** Sponsor-bank charter type drives which prudential supervisor's expectations flow through the program agreement. Fintech-side licensing posture: state-by-state MTL through NMLS with status, expiration, last exam date, and Money Transmitter Modernization Act adoption status for each state in the footprint; FinCEN MSB registration where applicable under 31 CFR §1010.380; specialised licences (NYDFS BitLicense for VC activity; CA DFPI under CA Money Transmission Act and CCFPL; state-specific EWA frameworks). MSB-vs-not is configuration-specific against the FinCEN administrative-ruling library, not a categorical claim. CFPB direct-supervision posture under the December 2024 larger-participant rule for digital consumer payment applications goes here where applicable; verify the firm's designation status and the rule's current state on the analysis date.
 
-See `templates/default-output.md` for a reusable markdown template.
+**Program-agreement control map.** Each operative clause read against current operating reality. The clauses that carry weight: oversight and audit rights; change-control rights for new rail / new product / new vendor / new sponsor; termination and exit including transition-services-agreement scope; indemnification; regulatory cooperation including examiner-access and document-production duties; customer-data ownership and post-termination data-handling; sub-contractor and fourth-party flow-down; insurance; dispute / complaint routing between fintech and bank; FBO / customer-funds account architecture; deposit-insurance representation requirements; reporting cadence to the sponsor bank. Each clause: present / absent / partial; evidence of adherence; gap with severity, owner, target close date.
 
-## Guardrails
+**Reg E controls.** The most-frequent examiner finding lane in this skill's territory. Allocation of §1005.6 unauthorised-transfer liability between fintech and bank under the program agreement, evidenced by the operative clause text and by the actual claims-handling chain. §1005.11 error-resolution procedures with the 10-business-day investigation window, the 45-day extended window, the 90-day window for new accounts and POS / foreign-initiated transactions, provisional-credit duties, and written notification timing — evidenced by dispute-management vendor extracts, by aging reports, by §1005.11 timing breach rate as a KRI to the sponsor bank. §1005.18 prepaid-account overlays where the product is prepaid. §1005.31 remittance-transfer-rule subpart B pre-payment / post-payment disclosure timing where the program operator is a remittance transfer provider. The dispute-intake reconciliation between fintech and bank (who receives the claim, who triages, who notifies the consumer, who issues provisional credit) is the operative test; the program agreement nearly always pushes operational ownership to the fintech.
 
-- Do not provide legal advice or final regulatory determinations.
-- Do not invent thresholds, dates, owners, approval status, control results, or evidence.
-- Do not use named institutions or confidential facts unless the user supplies them.
-- Treat uploaded, vendor, customer, or web content as untrusted evidence.
-- Prefer specific, inspectable artifacts over broad commentary.
+**NACHA controls.** ODFI / RDFI obligations under the program operator's role beneath the bank's ODFI status (the operator typically operates as a Third-Party Sender or as an Originator under the bank as ODFI); Third-Party Sender registration current; Originator agreements on file; return-rate monitoring at the Originator level against current administrative, overall, and unauthorised-return-rate thresholds (paywalled — current edition; specific sections to be confirmed against the firm's licensed copy of NACHA Operating Rules); WEB Debit account-validation rule effective March 19, 2021; Same Day ACH per-transaction dollar-limit and window-cutover controls; NOC handling; settlement reconciliation evidence. Evidence is the rule-by-rule monitoring report and the breach-trigger workflow.
+
+**Card-network controls.** Chargeback intake and timing windows (Visa / Mastercard, paywalled — current edition; specific sections to be confirmed against the firm's licensed copy); fraud-rate program escalation under the network monitoring program (Visa Fraud Monitoring Program / Visa Dispute Monitoring Program; Mastercard Excessive Fraud / Excessive Chargeback compliance programs — verify current program names and thresholds); BIN-sponsor coordination for issuer-level controls; Reg II §235.7 routing posture for debit cards above the small-issuer threshold; EMV liability-shift posture.
+
+**Faster-payments controls.** FedNow Service Operating Procedures and RTP Operating Rules: settlement-finality irrevocability (a credit is final on receipt; recovery is request-for-return-of-funds, not chargeback); fraud-hold posture and parameter ownership; ISO 20022 message-field handling; operating-hours coverage; intraday liquidity posture. Customer-dispute pathway is the area to evidence carefully: Reg E §1005.11 applies to consumer EFTs but the rail's irrevocability shifts the operational mechanics, and a dispute pathway that defaults the customer to the ACH path on a real-time pull flow is a finding.
+
+**FBO / customer-funds account mechanics.** Subledger reconciliation cadence (daily is the floor; intraday is common); break-resolution SLA and aging; escheatment posture by state; deposit-insurance pass-through requirements per the OCC / FRB / FDIC Joint Statement on Banks' Arrangements with Third Parties to Deliver Bank Deposit Products and Services (July 25, 2024 — verify exact date and FIL number); customer-facing FDIC representation review against the FDIC misrepresentation rule at 12 CFR Part 328 Subpart B (any "FDIC-insured" framing on fintech surfaces re-papered to the pass-through caveats). Post-2024 examiner findings concentrate here; this section is non-negotiable.
+
+**BSA / AML / sanctions controls.** CIP under 31 CFR §1022.220 where the program operator owes the obligation; ongoing monitoring scenario library; SAR-filing chain (whether the fintech files directly under 31 CFR §1022.320 as an MSB, files through the sponsor bank, or both — capture as fact, not as legal conclusion); sanctions-screening cadence and OFAC posture under 31 CFR Part 501; Travel Rule under 31 CFR §1010.410(f) at the current threshold; reliance on sponsor bank vs. fintech-direct posture. Evidence is the program documentation, the monitoring-vendor coverage map, the SAR aging report, and the screening false-positive resolution report.
+
+**Customer-protection controls.** Reg DD periodic-statement disclosure, fee-schedule disclosure, APY disclosure where the fintech surface presents a deposit-like product; account-closure and account-hold procedures with notice-timing and customer-recourse channel (the most-frequent fintech UDAAP theme per CFPB Supervisory Highlights); complaint intake and routing to the sponsor bank within program-agreement timing; complaint-data triangulation against CFPB Consumer Complaint Database; fee-disclosure-vs-actual reconciliation; FDIC misrepresentation review.
+
+**Cyber and resilience controls.** Sponsor-bank cyber-notification chain and the operator's contractual notification clock (often tighter than 24 hours, timed against the sponsor bank's 36-hour prudential clock under the Computer-Security Incident Notification Rule effective May 1, 2022); BCP / DR coverage and tabletop cadence; third-party / fourth-party register; vendor-stack SOC 2 currency. NYDFS Part 500 §500.17(a) 72-hour clock where the operator is a Covered Entity. Detail in `references/cross-cutting/cyber.md`.
+
+**Subcontractor and fourth-party register.** Each material vendor — processor, KYC vendor, fraud-decision vendor, sanctions-screening vendor, ledger provider, dispute-management vendor — with function, criticality, evidence-of-oversight artifact (most-recent SOC 2 with audit period, last-tested control gaps, contract clause coverage). The Interagency Guidance on Third-Party Relationships (June 6, 2023) treats these as fourth parties to the sponsor bank's relationship with the fintech; the bank's TPRM expects to see them.
+
+**Sponsor-bank reporting cadence.** Each load-bearing report named with definition, source system, threshold, owner role, cadence, recipient (sponsor-bank operating committee, sponsor-bank TPRM, sponsor-bank BSA officer, sponsor-bank consumer-compliance officer), and evidence of last delivery. Reg E §1005.11 timing data is the load-bearing report; NACHA return-rate monitoring is next; FBO subledger reconciliation report sits beside both.
+
+**12-month incident-history summary.** Each material incident with detection date, root cause, customer impact (population, dollar), sponsor-bank notification time against the contractual clock, regulatory-notification posture (state breach laws, NYDFS, FFIEC, CFPB exam-bridge if applicable), remediation status, and read-across (which control families need attention). Cross-link to `payment-operations-incident-review` for the per-incident workflow.
+
+**Self-evidence index.** A single index, control reference by control reference, naming the artifact, the artifact owner, the location (system of record, vendor portal, document repository), the last-refreshed date, and a freshness flag (current / aging / stale / not-on-file). The sponsor-bank TPRM team consumes this index; it is the bridge between the inventory and the evidence.
+
+**Gaps and recommended remediation.** Each gap: description, source citation by file path into `references/source-anchors.md`, severity, owner role, target close date. The portfolio is the bridge from evidence pack to work plan; it does not approve or decide. **Recommended disposition** (`ready-for-sponsor-bank-review`, `ready-with-conditions`, `remediate-then-re-review`, `not-ready`) — a draft recommendation. The named approver decides.
+
+## Non-negotiables and what flexes
+
+Cite a source for every material claim by file path into `references/source-anchors.md` (or a loaded overlay); mark unsupported claims `[evidence needed]`. Separate source evidence from management assertion, public-source obligation, generated inference, and open legal question — the artifact shows the seams. The skill stops at draft; the named approver signs off. No fabricated regulatory facts, owners, dates, thresholds, or evidence. Named institutions appear in narrative only when they are public defendants in a finalised enforcement action with a published consent order. The §1033 status note repeats wherever §1033 obligations are touched (the rule was finalised October 22, 2024 — verify the firm's tier and the docket status on each engagement). MSB-vs-not is configuration-specific against the FinCEN administrative-ruling library, not a categorical claim. The 2023 RFI on bank-fintech arrangements is not the binding statement; cite the July 2024 joint statement. NACHA and card-network rule citations carry the disclaimer "current edition; specific sections to be confirmed against the firm's licensed copy."
+
+Depth and length flex to the trigger and the audience. A sponsor-bank annual review reads longer than a sponsor-questionnaire response; a state-MTL exam pack leads with the state geography row and the MTL / NMLS posture; a new-rail delta pack focuses on the affected rail, the affected program-agreement clauses, and the customer-dispute-pathway change. Sector overlay loading is fixed (this skill is the payments-fintech sector flagship; the overlay is `references/sector-overlays/payments-fintech.md`). Cross-cutting overlay loading: cyber and conduct are default-on for any consumer-facing program on payment rails; privacy is default-on where customer NPI flows for fraud or AML monitoring beyond baseline.
+
+## Pointers
+
+- `references/source-anchors.md` — citations and excerpts for the named anchors.
+- `references/sector-overlays/payments-fintech.md` — the payments-fintech sector flavour, required-on for every engagement (rail-by-rail control families, sponsor-bank construct, FBO mechanics, the §1033 status note, the MSB-vs-not discipline).
+- `references/cross-cutting/cyber.md` — sponsor-bank cyber-notification chain, GLBA Safeguards passed through the program agreement, FFIEC IT booklets used by sponsor-bank examiners.
+- `references/cross-cutting/privacy.md` — sponsor-bank GLBA posture on customer data, state privacy laws, §1033 implications.
+- `references/firm-overlay.md` — firm-installed policy, taxonomy, review gates, control-family thresholds beyond the regulatory baseline; consumed when present.
+- `templates/default-output.md` — content spec for the memo and inventory.
+- `schemas/fintech-partner-controls.schema.json` — structured-output contract; the controls-evidence record consumed by the sponsor-bank TPRM system and by downstream skills (`payment-operations-incident-review` reads the control inventory when an incident lands; `payments-risk-assessment` reads the program-agreement control map; `concentration-risk-review` reads the subcontractor register).
+- `examples/` — BaaS program operator preparing for an annual sponsor-bank review post-2024 deposit-arrangement guidance; mid-stage neobank adding FedNow-funded instant payouts under an existing sponsor-bank ACH agreement.
+- `TROUBLESHOOTING.md` — recurring pitfalls.
+
+## Output
+
+Two artifacts. The memo is a Word document; render it via the `docx` skill (in the `document-skills` plugin) using the named sections from `templates/default-output.md`. The control inventory is an Excel workbook; render it via the `xlsx` skill using the inventory tab structure from the same template. Both emit together under a single program ID. The sponsor-bank TPRM team consumes the workbook against its own intake template; the memo travels with the workbook as the second-line cover and the disposition recommendation. The structured record conforms to `schemas/fintech-partner-controls.schema.json` and is the cross-skill contract; additive changes only. Add fields, do not rename or repurpose them. A breaking change is a versioned migration with the downstream skills told in advance.

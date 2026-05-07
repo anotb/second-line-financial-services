@@ -1,48 +1,91 @@
 ---
 name: bank-fintech-partnership-review
-description: Assess bank-fintech partnership risks across due diligence, contracts, consumer compliance, data, resilience, and ongoing monitoring. Use for financial-services second-line, compliance, risk, audit, governance, regulatory change, controls, evidence, or reporting work where outputs must be traceable, human-reviewed, and anchored to public regulatory sources such as U.S. interagency third-party risk management guidance, OCC release, U.S. interagency third-party risk management guidance, FDIC release, CFPB small business lending rule under Regulation B, Section 1071.
-argument-hint: "[source files, policy text, rule text, data extract, or scenario]"
+description: |
+  Produces the bank-side principal-supervisory partnership pack on a US bank-fintech relationship. Carries six named sections (service description and risk classification; risk-based diligence summary; contract gaps; customer-facing controls under Reg O / Reg W / Reg E / Reg DD; termination and wind-down readiness; recommended owner actions) plus a Reg O / Reg W / Reg E / Reg DD applicability summary the bank attests to. Audience is the partnership owner, the chief risk officer, the chief compliance officer, the BSA officer, the head of vendor management, the head of deposit operations, the general counsel, and the OCC / FRB / FDIC supervisory team that examines the relationship as a bank service-provider arrangement.
+
+  Best for:
+  - A national bank, state-member bank, state non-member bank, or federal savings association is onboarding a fintech relationship (BaaS sponsor program, embedded-lending partner, deposit-program partner, fraud / KYC service partner, payments-processor) and second-line needs the partnership pack before commitment, contract execution, or production launch.
+  - A bank is refreshing an existing fintech partnership ahead of an OCC, FRB, or FDIC examination cycle and needs to surface contract, control, and customer-protection gaps.
+  - A bank is responding to an MRA, MRIA, supervisory letter, or consent-order article targeting fintech-partnership oversight (BSA / AML, Reg E division of responsibility, Reg DD advertising, third-party risk, BaaS-specific controls, FBO-account governance) and needs the artifact that demonstrates remediation.
+  - A covered bank under 12 CFR Part 30 Appendix D is integrating a fintech relationship into its risk-governance framework and needs the partnership pack the board independent risk committee will probe.
+
+  Not the right tool when:
+  - The reviewer is the fintech, not the bank. Use `payments-fintech-compliance/skills/fintech-partner-controls`; that skill produces the fintech-side artifact (bank-program controls, Reg E disclosures the fintech ships, complaint routing) that this pack consumes as an input.
+  - The work is generic vendor diligence on any third party. Use `third-party-operational-resilience/skills/vendor-diligence` with the banking sector overlay; that skill is regulator-agnostic at its core and does not invoke §1867(c), the Reg O insider screen on fintech principals, or the FBO-account governance lens.
+  - The work is exit-plan testing for a critical fintech relationship. Use `third-party-operational-resilience/skills/exit-plan` with the banking sector overlay.
+  - The work is the AML risk assessment for the sponsor-bank program at the program level. Use `financial-crime-governance/skills/aml-risk-assessment` (when present) or `edd-escalation-pack` for individual high-risk relationships.
+  - The work is the bank's full supervision-readiness preparation for an examination cycle. Use `banking-supervision-readiness`; this skill feeds the third-party-risk topical readiness slice in that pack.
+argument-hint: "[bank type, primary federal regulator, asset size band, fintech program type, engagement stage]"
 ---
 
-# Bank Fintech Partnership Review
+# Bank-fintech partnership review
 
-Use this skill to assess bank-fintech partnership risks across due diligence, contracts, consumer compliance, data, resilience, and ongoing monitoring. Produce review-ready second-line work product that a qualified risk, compliance, legal, audit, or control owner can inspect and approve.
+The partnership pack is the artifact the bank's chief risk officer, chief compliance officer, BSA officer, head of vendor management, head of deposit operations, and general counsel hand to the partnership owner before sponsor-bank go-live, to the board independent risk committee at the partnership-refresh cadence, and to the OCC, FRB, or FDIC supervisory team when the relationship sits inside the third-party-risk topical scope of a cycle. It is the bank's record of how it discharges principal-supervisory accountability for a fintech relationship, not the fintech's record of its own controls. A pack that reads as a fintech compliance program has the lens wrong; route to `fintech-partner-controls`.
 
-## Source anchors
+The spine is six named sections plus a Reg O / Reg W / Reg E / Reg DD applicability summary and the recommended owner actions. The criticality call drives diligence intensity, contracting depth, monitoring cadence, and the termination-readiness expectations under the June 2023 Interagency Guidance lifecycle. For BaaS sponsor-program and deposit-program relationships, the FBO-account governance lens that the 2024 Joint Agency Statement spotlighted runs through the service description, the contract gaps, and the wind-down sequence. The named lead attests; the pack is a draft until that step.
 
-- U.S. interagency third-party risk management guidance, OCC release: https://www.occ.gov/news-issuances/news-releases/2023/nr-ia-2023-53.html
-- U.S. interagency third-party risk management guidance, FDIC release: https://www.fdic.gov/news/press-releases/2023/pr23047.html
-- CFPB small business lending rule under Regulation B, Section 1071: https://www.consumerfinance.gov/rules-policy/final-rules/small-business-lending-under-the-equal-credit-opportunity-act-regulation-b/
+## Ask first
 
-Also consult `references/source-map.md`, `references/policy-control-library.md`, and `references/review-gates.md` when present in this plugin.
+Settle these before drafting. Most engagements answer them in the first conversation; default and flag where they do not.
 
-## Required process
+- **Who is the bank, who is the primary federal regulator, and what is the asset-size posture.** National bank (OCC), state-member bank (FRB and state), state non-member bank (FDIC and state), federal savings association (OCC), state savings association (FDIC and state). The regulator drives the supervisory framework, the request-list shape, and the response-window calculation. The asset-size band determines whether the bank is a covered bank under 12 CFR Part 30 Appendix D ($50B+ avg total consolidated assets) and whether the BHC is a public registrant subject to the SEC cyber-disclosure regime.
+- **What is the fintech program type, what is the engagement stage, and where does the fintech sit in the customer experience.** BaaS deposit, BaaS card, embedded lending, fraud / KYC service, payments processor, co-brand card, other. Engagement stage is pre-LOI / pre-contract / pre-launch / production / refresh / exam-driven / wind-down. Customer-of-record (bank, fintech, or joint) and brand presentation (bank-front, fintech-front, co-branded) drive the Reg E and Reg DD division-of-responsibility analysis.
+- **What is the money-flow architecture and is there a middleware platform.** FBO-account structure where applicable; ledgering location (bank, fintech, middleware platform); settlement and reconciliation cadence. The middleware platform, where present, is a fourth-party in the bank's program; the partnership pack covers it.
+- **What is the source posture and the access population for the pack.** Public-only, public-plus-firm-policy, public-plus-firm-policy-plus-evidence, or connector-aware. Confidential supervisory information about the partner bank (prior supervisory letters, prior examination reports, prior MRAs / MRIAs) stays in CSI scope under the named federal regulator's CSI regime; the access population for the pack constrains what it can carry forward and at what label.
 
-1. State scope before analysis: jurisdiction, institution type, product or process, timeframe, source posture, and assumptions.
-2. Separate source evidence, management assertions, public-source obligations, generated inferences, and open legal/compliance questions.
-3. Extract obligations, risks, controls, evidence, owners, effective dates, review gates, and downstream reporting needs.
-4. Use public source anchors for criteria. Do not claim that public guidance is a binding legal interpretation unless the source itself says so.
-5. Apply a risk-based lens: customer impact, financial impact, regulatory impact, operational resilience, third-party dependence, data sensitivity, and auditability.
-6. Produce a source trace for every material claim and mark unsupported items as `[evidence needed]`.
-7. Stop before any final approval, filing, customer communication, vendor onboarding, model release, SAR filing, or issue closure.
+When an engagement-scope record is supplied, the skill consumes it for institution profile, persona, source posture, sector overlay (always banking for this skill), and cross-cutting overlay set. When it is not supplied, ask the questions and default; flag the defaults in the pack.
 
-## Output format
+## How the pack gets built
 
-Use this structure unless the user asks for a specific artifact:
+The pack has six named body sections plus a tail. Walk them in the order the conversation surfaces evidence; the structured record sorts itself. Cite every material claim against `references/source-anchors.md`, `references/sector-overlays/banking.md`, or a loaded cross-cutting overlay by path; mark unsupported items `[evidence needed]` and unconfirmed section references `[verify section]`. Source evidence, bank management assertion, fintech management assertion, public-source obligation, generated inference, and open legal question stay distinguishable. Roles only, never named individuals. No named institutions in narrative beyond a public defendant in a finalised consent order, and only as structural pattern.
 
-1. Executive summary, maximum five bullets.
-2. Scope and source posture.
-3. Obligation, risk, control, or evidence table as applicable.
-4. Gaps, exceptions, or open questions.
-5. Human-review gates and recommended owner actions.
-6. Source trace and confidence label.
+**Section 1 — Service description and risk classification.** Plain-language description of what the fintech does for the bank and the bank's customers. Where the fintech sits in the customer experience (front-of-app, behind-the-scenes, jointly branded). Customer of record (bank vs fintech vs joint) and the deposit-insurance recordkeeping consequence under the FDIC pass-through framework. Money flow (FBO-account structure, ledgering location, settlement and reconciliation cadence, named-role owner for breaks). Middleware-platform sub-row where applicable. Criticality classification under the June 2023 Interagency Guidance — critical-activity, significant, or lower-risk — driven by customer-facing position, money-flow position, CIP / KYC reliance, and share of bank deposits, fee income, or strategic positioning. A community bank with a single concentrated sponsor-program relationship can carry critical-activity risk independent of asset size; the criticality call is product-and-flow-driven, not asset-driven. BSA / AML risk classification across CIP, CDD, beneficial-ownership, suspicious-activity monitoring, and OFAC. Heightened Standards applicability for covered partner banks.
 
-See `templates/default-output.md` for a reusable markdown template.
+**Section 2 — Risk-based diligence summary.** Status (complete, partial, missing, not-applicable) and evidence pointer (system-of-record path, dated artefact, named report) for each diligence category from the June 2023 Interagency Guidance: strategy and goals; legal and regulatory compliance; financial condition (recent audited financials with date); business experience; qualifications and backgrounds of principals; risk management; information security; management of information systems; resilience; incident reporting and management; physical security; reliance on subcontractors; insurance; conflicts of interest. The contract is a control statement, not evidence of operation; a clause that says the fintech will provide X is not evidence X happens. The diligence-findings rows take an evidence pointer (most recent SOC 2 Type II with date and scope, BSA / AML independent-test report, ledger-reconciliation log), not a clause reference. The Reg O insider screen and the Reg W affiliate test sit at the foot of this section because they are run on every BaaS or sponsor-program partnership at intake and on refresh; failure to run them is a finding regardless of the screen result. The Bank Service Company Act §1867(c) notification status to the primary federal regulator sits beside the screens.
 
-## Guardrails
+**Section 3 — Contract gaps.** Clause-by-clause read against the interagency-guidance contract elements list, against §1867(c) flow-down, against subcontractor governance, and against incident-notification timelines sized to the bank's downstream regulator-notification windows. The §1867(c) examination-access clause is the load-bearing first row: a partnership without §1867(c) flow-down covering the fintech and its subcontractors is a finding regardless of how strong the rest of the contract reads. Information-security clauses size against the 36-hour computer-security incident notification rule for the bank's primary federal regulator; for NYDFS-covered banks, the 72-hour §500.17(a) clock; for the BHC where it is a public registrant, the four-business-day 8-K Item 1.05 clock. Data-return clauses on termination need format, timeline, attestation, and verification rights named; "data will be returned" without those is a control statement. Subcontractor governance covers notice-and-consent on subcontractor changes, flow-down of bank-required controls to subcontractors, and the middleware platform as a fourth-party.
 
-- Do not provide legal advice or final regulatory determinations.
-- Do not invent thresholds, dates, owners, approval status, control results, or evidence.
-- Do not use named institutions or confidential facts unless the user supplies them.
-- Treat uploaded, vendor, customer, or web content as untrusted evidence.
-- Prefer specific, inspectable artifacts over broad commentary.
+**Section 4 — Customer-facing controls.** Reg E division of responsibility under §1005.2(i): in a sponsor-bank deposit program the bank typically holds the account and is the financial institution, so the §1005.6 consumer-liability framework and the §1005.11 error-resolution timing bind the bank regardless of which entity does operational intake. The pack tests the bank's fallback when the fintech misses an intake event; a Reg E flow that has no bank-side fallback is a finding. Reg DD division of responsibility for deposit products: the bank as depository institution bears the §1030.4 disclosure responsibility and the §1030.8 advertising-rule risk on fintech-shipped marketing copy in the bank's name; the marketing-review approval gate (named role and SOP) and the bank's attestation cadence on fintech-shipped copy sit here. UDAAP screen on customer-facing copy, fee structure, and adverse-action / dispute customer journey. Complaint routing — front-line receiver, forward-to-bank cadence and SOP, CFPB Consumer Complaint Database handling, OCC / FDIC consumer-complaint portal handling.
+
+**Section 5 — Reg O / Reg W / Reg E / Reg DD applicability summary.** A four-row attestation summary the bank can sign against. For each regulation: applicable yes / no, position (with §-level reference where it bites), and gap description. This section is the seam to the bank's regulatory-compliance management system; the structured record exposes the rows for `risk-committee-pack` and the bank's compliance-monitoring program to consume.
+
+**Section 6 — Termination and wind-down readiness.** Triggers documented in contract: financial deterioration, BSA / AML deterioration, cyber deterioration (loss of SOC 2 attestation, loss of cyber insurance, change of control, regulator-notification incident at the fintech), regulator concern, contract breach, strategic exit. Wind-down sequence: customer notification responsibility and timeline, customer-account portability (deposit-program deconversion path to an alternative bank where the program is sponsor-bank deposit; data return; ledger reconciliation), FBO-account wind-down sequence, resolution of pending Reg E disputes, Reg DD obligations, and outstanding disclosures, and the cyber-side wind-down where the cyber overlay is loaded. Most recent simulated wind-down or tabletop date is the evidence; if the date is `none`, the section needs a recommended owner action with a target date, not a narrative reassurance. Examiners read the test-record field first.
+
+**Tail — Recommended owner actions, coverage gaps, source trace, sign-off.** Owners are bank-side roles (head of vendor management, chief compliance officer, chief risk officer, BSA officer, head of deposit operations, general counsel, head of consumer compliance, CISO). Action language is concrete and dated; "monitor going forward" is not an action. Where the action depends on the fintech, the recommendation is bank-side (ask the fintech, terminate if not provided, escalate to the relationship owner). Coverage gaps name interagency-guidance categories with insufficient evidence and the reason for low confidence. The source-trace lines anchor every material claim; the sign-off block carries the named lead's attestation. The pack is a draft until that step. The skill stops short of speaking for the bank to the regulator.
+
+## Sector and cross-cutting overlays
+
+This skill is banking-sector-only; `references/sector-overlays/banking.md` is loaded automatically and carries the bank-side lens differentiators. Cross-cutting overlays load when the engagement scope flags them.
+
+- `references/cross-cutting/cyber.md` is the load-bearing companion for BaaS sponsor-program and embedded-lending relationships, for any fintech that holds customer NPI or sits in the authentication or fraud-decision path, and for any fintech whose serving environment is examined under FFIEC IT Handbook expectations. The CISO function co-reviews on cyber-flagged partnerships and co-decides on residual-risk acceptance.
+- `references/cross-cutting/privacy.md` loads when the fintech receives consumer financial information from the bank or shares it with the bank. Reg P and the GLBA Safeguards Rule flow down contractually; state privacy laws (CCPA / CPRA, Texas, Virginia, Colorado) reach the partnership where the fintech operates in those footprints.
+- `references/cross-cutting/conduct.md` loads when the fintech is customer-facing on a deposit, payments, or credit product. The CFPB UDAAP examination procedures, the FDIC Compliance Examination Manual deposit-program sections, and the OCC consumer-compliance handbook drive the customer-facing-controls section's depth.
+- `references/cross-cutting/climate.md` does not load at v1.
+
+Loading an overlay the engagement does not implicate adds noise without challenge value. Loading none when one applies is the more common failure mode.
+
+## Common pitfalls
+
+- Confusing the bank's lens with the fintech's lens. The pack is the bank's record; fintech controls are inputs.
+- Treating the contract as evidence of operation. A clause is a control statement; the diligence-findings rows take an evidence pointer.
+- Skipping the Reg O / Reg W screens because the fintech is not a bank. Reg O catches insider-of-the-partner-bank facts; Reg W catches affiliate facts. Both screens run at every BaaS or sponsor-program partnership intake and on refresh.
+- Treating Reg E division of responsibility as a contract drafting exercise. The bank as financial institution under §1005.2(i) bears the §1005.11 timing obligation; the bank cannot contract out of it. The pack tests the bank's fallback when the fintech misses an intake event.
+- Rating the partnership lower-risk because the bank is small. Criticality is risk-based and product-and-flow-driven; small banks with concentrated sponsor-program exposure carry critical-activity risk regardless of asset size.
+- Treating the wind-down section as theoretical. If the most recent simulated wind-down date is `none`, the section needs a recommended owner action with a target date.
+- Sizing incident-notification clauses without reference to the bank's downstream regulator-notification window. The clause length is a function of the 36-hour computer-security incident notification clock the bank has to meet.
+- Treating the middleware platform as out-of-scope because the fintech is the bank's contractual counterparty. The middleware platform is a fourth-party; the bank's program covers it.
+
+## Pointers
+
+- `references/source-anchors.md` — citations and excerpts for the named anchors (June 2023 Interagency Guidance lifecycle, 2024 Joint Agency Statement on Bank-Fintech Arrangements, §1867(c), Reg O, Reg W, Reg E, Reg DD, FBO / Part 330 recordkeeping, BSA / AML).
+- `references/sector-overlays/banking.md` — bank-side lens differentiators (loaded automatically).
+- `references/cross-cutting/cyber.md`, `privacy.md`, `conduct.md` — loaded conditionally on engagement-scope cross-cutting set.
+- `references/firm-overlay.md` — firm-installed taxonomy, partnership-tiering policy, named review-machinery roles, sponsor-program governance SOP; consumed when present.
+- `templates/default-output.md` — pack template carrying the cover, the six body sections, and the tail.
+- Examples and TROUBLESHOOTING.md may be added; see plugin-level `public-regulatory-scenarios.md` for the canonical scenario library.
+
+## Output
+
+The deliverable is a Word memo. The skill defines the artifact substance (named sections, fields, populated content per `templates/default-output.md`) and delegates rendering to the `docx` skill in Anthropic's `document-skills` plugin. The memo carries the cover, the six body sections, the Reg O / Reg W / Reg E / Reg DD applicability summary, the termination-readiness section, the recommended owner actions, the coverage-gaps note, the source trace, and the sign-off block.
+
+Downstream consumers: `banking-supervision-readiness` reads the partnership pack into the third-party-risk topical readiness slice when the cycle includes a third-party-risk topical scope. `risk-committee-pack` reads the criticality classification, the Reg O / Reg W / Reg E / Reg DD applicability summary, and the recommended owner actions for the standing third-party-risk section. `exit-plan` (with banking sector overlay) reads the termination-readiness section and the wind-down sequence as the partnership-specific input. `fintech-partner-controls` (the fintech-side mirror skill) is the upstream input — its output is one of the evidence pointers consumed in this pack's risk-based diligence summary.

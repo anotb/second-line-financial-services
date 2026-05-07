@@ -1,47 +1,83 @@
 ---
 name: adviser-exam-readiness
-description: Prepare investment adviser or asset-management exam readiness packs with policies, evidence, risk areas, and reviewer questions. Use for financial-services second-line, compliance, risk, audit, governance, regulatory change, controls, evidence, or reporting work where outputs must be traceable, human-reviewed, and anchored to public regulatory sources such as SEC cybersecurity risk management, strategy, governance, and incident disclosure guide, BCBS 239, principles for risk data aggregation and risk reporting.
-argument-hint: "[source files, policy text, rule text, data extract, or scenario]"
+description: |
+  Produces the substantive readiness pack an SEC-registered investment adviser, broker-dealer, dual registrant, fund adviser, or private-fund adviser carries through an SEC Division of Examinations or FINRA examination cycle. Walks the firm through Form ADV / Form CRS / Form BD cross-check, the Rule 206(4)-7 written compliance program, the Rule 204A-1 code of ethics lane, the Rule 206(4)-2 custody lane, the Rule 206(4)-1 Marketing Rule lane, Rule 204-2 books-and-records, Form PF (Rule 204(b)-1) where applicable, Reg BI and Form CRS for BDs and dual registrants, FINRA 3110 / 3120 / 3130 / 3310 supervision, and the cyber / Reg S-P slice that EXAMS now reaches for routinely. Audience is the chief compliance officer, the chief executive officer, general counsel, the designated FINRA supervisor for a BD or dual registrant, the BSA officer where AML is in scope, and the firm's external counsel.
+
+  Best for:
+  - An adviser, BD, or dual registrant has been notified of an SEC EXAMS routine, focused, for-cause, or sweep examination and needs a 2-6 week readiness sprint with a gap matrix, evidence index, mock-interview prep, and remediation list.
+  - A CCO is preparing the annual mock-exam exercise as part of the Rule 206(4)-7 / Rule 38a-1 / FINRA Rule 3110 / 3130 review cycle.
+  - A new CCO is doing a 90-day baseline assessment of the compliance program against current EXAMS priorities and Risk Alerts.
+  - A consulting team is performing a pre-exam diagnostic for an adviser or BD client and needs the SEC-specific readiness lattice (not the generic exam-engagement playbook).
+  - A private-fund adviser is reading the firm's posture against the post-PFA-Rule landscape (the PFA Rule was vacated June 5, 2024) and the operative Form PF amendments.
+  - A registered-fund adviser is feeding readiness evidence into the Rule 38a-1 CCO annual report cycle for the fund board.
+
+  Not the right tool when:
+  - The work is the engagement-side scaffolding (entry-meeting choreography, document-handling, privilege posture, request-list mapping, interview-prep) for any FS exam. Use `regulatory-change-management/skills/exam-brief`; this skill chains with that skill, it does not duplicate it.
+  - The work is mapping a specific new rule into firm policy (use `regulatory-change-management/regulatory-impact-assessment` or `rule-to-obligation-extraction`).
+  - The work is the substantive Marketing Rule evidence pack itself (use `marketing-rule-evidence` in this plugin; this skill consumes that pack as an evidence pin).
+  - The work is fund-board reporting or the §15(c) advisory-contract approval / renewal package (use `fund-board-reporting`).
+  - The institution is a US bank, a non-bank consumer-finance entity, an insurer, or a payments/fintech firm not also SEC- or FINRA-registered. Use the matching sector-plugin readiness skill.
+argument-hint: "[firm registration class, exam type, examining body, document-request scope and due date, prior-exam findings posture]"
 ---
 
-# Adviser Exam Readiness
+# Adviser exam-readiness pack
 
-Use this skill to prepare investment adviser or asset-management exam readiness packs with policies, evidence, risk areas, and reviewer questions. Produce review-ready second-line work product that a qualified risk, compliance, legal, audit, or control owner can inspect and approve.
+The readiness pack is the artifact the firm's CCO, CEO, GC, designated FINRA supervisor, and BSA officer carry through an SEC EXAMS or FINRA examination. It is not the engagement playbook (who-routes-what, document-handling, privilege posture); that lives in `exam-brief`. It is the substantive readiness sprint: which IA Act / ICA / Exchange Act / FINRA rule lanes the exam reaches, what evidence the firm has against each lane, where the gaps sit, and what the senior officers need to be able to say in the mock interview.
 
-## Source anchors
+The spine is the rule lattice for the firm's registration constellation — IA, BD, dual registrant, fund adviser, private-fund adviser. The pack is firm-confidential by convention; prior supervisory letters and prior deficiency letters constrain what can carry forward into a pack reading at a lower access population. The named lead attests; the pack is a draft until that step. The skill stops short of speaking for the firm to the regulator.
 
-- SEC cybersecurity risk management, strategy, governance, and incident disclosure guide: https://www.sec.gov/corpfin/secg-cybersecurity
-- BCBS 239, principles for risk data aggregation and risk reporting: https://www.bis.org/publ/bcbs239.htm
+## Ask first
 
-Also consult `references/source-map.md`, `references/policy-control-library.md`, and `references/review-gates.md` when present in this plugin.
+Settle these before drafting. Most exam cycles answer them in the first conversation; default and flag where they do not.
 
-## Required process
+- **What is the firm's registration constellation.** SEC-registered investment adviser, FINRA-registered broker-dealer, dual registrant, fund adviser (registered investment company adviser), private-fund adviser, or some combination. Registration drives which rule lanes the pack walks: an IA-only firm runs Form ADV / 206(4)-7 / 204A-1 / 206(4)-2 / 206(4)-1 / 204-2; a BD adds Reg BI / Form CRS / FINRA 3110-3310 / 17a-3-4; a dual registrant runs both with the bridging conflicts; a private-fund adviser adds Form PF and reads the post-PFA-Rule landscape; a registered-fund adviser feeds into the Rule 38a-1 CCO annual report cycle.
+- **What is the exam type, examining body, and document-request scope.** Routine, focused, for-cause, or sweep; SEC EXAMS, FINRA, or both; document-request item list and due date. Exam type calibrates the pack's depth: a focused exam reads as a thin spine on the topical lanes; a routine exam scopes broadly; a for-cause exam carries the for-cause-topic evidence first; a sweep exam tracks the EXAMS Risk Alert that triggered it.
+- **What does the firm inherit at the start of the cycle.** Prior exam findings (open, partially-remediated, closed-pending-confirmation, closed); recent self-identified issues; recent enforcement themes from EXAMS or FINRA touching the firm's business. EXAMS revisits prior findings; the readiness check on prior-finding remediation status is high-priority.
+- **What is the source posture and access population for the pack.** Public-only, public-plus-firm-policy, public-plus-firm-policy-plus-evidence, or connector-aware. Prior supervisory letters, prior deficiency letters, and Form ADV-NR responses constrain the pack's access population; do not carry CSI into a pack reading at a lower population.
 
-1. State scope before analysis: jurisdiction, institution type, product or process, timeframe, source posture, and assumptions.
-2. Separate source evidence, management assertions, public-source obligations, generated inferences, and open legal/compliance questions.
-3. Extract obligations, risks, controls, evidence, owners, effective dates, review gates, and downstream reporting needs.
-4. Use public source anchors for criteria. Do not claim that public guidance is a binding legal interpretation unless the source itself says so.
-5. Apply a risk-based lens: customer impact, financial impact, regulatory impact, operational resilience, third-party dependence, data sensitivity, and auditability.
-6. Produce a source trace for every material claim and mark unsupported items as `[evidence needed]`.
-7. Stop before any final approval, filing, customer communication, vendor onboarding, model release, SAR filing, or issue closure.
+When an `engagement-scope` record is supplied, consume it for firm registration constellation, persona, source posture, sector overlay (always capital-markets for this skill — see `references/sector-overlays/capital-markets.md`), and cross-cutting overlay set. When it is not supplied, ask the questions and default; flag the defaults in the pack.
 
-## Output format
+## How the pack gets built
 
-Use this structure unless the user asks for a specific artifact:
+The pack has a four-part body around a cover. Walk it in the order the conversation surfaces evidence; the structured record sorts itself.
 
-1. Executive summary, maximum five bullets.
-2. Scope and source posture.
-3. Obligation, risk, control, or evidence table as applicable.
-4. Gaps, exceptions, or open questions.
-5. Human-review gates and recommended owner actions.
-6. Source trace and confidence label.
+**Cover and engagement context.** Firm registration profile (legal name placeholder, SEC IA / FINRA BD registration numbers, retail-customer-serving status, AUM band, geographic footprint). Exam context (exam type, examining body, EXAMS region or FINRA district, notification date, document-request scope, due date, prior-exam findings status). Source posture and access population. Confidence label.
 
-See `templates/default-output.md` for a reusable markdown template.
+**Part A — Document-request response matrix.** Per requested item: request item, source location (system of record), evidence pin, reviewer role, status (`open` / `in-progress` / `ready-for-review` / `submitted`), due date, redaction-required flag. The matrix is the reviewer's working artifact; renderable as a tab-per-domain Excel workbook (Form ADV / 206(4)-7 / 204A-1 / 206(4)-2 / 206(4)-1 / 204-2 / Form PF / Reg BI-CRS / FINRA 3110-3310 / cyber-Reg S-P) so each domain reviewer works the slice they own.
 
-## Guardrails
+**Part B — Domain-by-domain readiness.** One subsection per applicable rule lane; lanes the firm does not run drop out. Same internal shape: lane summary, public-criteria pin (citation by path to `references/source-anchors.md`), evidence inventory (system of record and named-role owner, not screenshots), open issues with trend, reviewer questions, confidence label. The lane structure is in `references/sector-overlays/capital-markets.md`. The Marketing Rule lane chains to `marketing-rule-evidence`; the best-execution lane (where in scope) chains to `best-execution-surveillance`; the fund-board side (where in scope) chains to `fund-board-reporting`.
 
-- Do not provide legal advice or final regulatory determinations.
-- Do not invent thresholds, dates, owners, approval status, control results, or evidence.
-- Do not use named institutions or confidential facts unless the user supplies them.
-- Treat uploaded, vendor, customer, or web content as untrusted evidence.
-- Prefer specific, inspectable artifacts over broad commentary.
+**Part C — Mock-interview prep.** EXAMS reads for posture, not just paperwork; the mock interview is where firms underperform. For each interviewee role (CCO, CEO, CFO, head of trading, head of marketing, valuation designee chair, designated FINRA supervisor, BSA officer as applicable), the pack carries likely questions, prepared response anchors that pin to evidence (not scripted answers), and the rehearsal status. Conduct themes — IA Act §206 fiduciary duty, Reg BI care obligation, conflict disclosure, code-of-ethics escalation — sit across roles and load from `references/cross-cutting/conduct.md`.
+
+**Part D — Gap and remediation list.** Per gap: gap ID, domain, severity (`critical` / `high` / `medium` / `low`), description, owner role, due date, evidence required, status. Severity calibrates to exam-exposure risk: `critical` for items the document-request submission would expose without remediation; `high` for items the mock interview would expose; `medium` for items routinely flagged in EXAMS Risk Alerts that the firm has not yet hardened; `low` for hygiene.
+
+## Sector and cross-cutting overlays
+
+This skill is capital-markets-only. The registration-class branching (IA / BD / dual registrant / private-fund adviser / fund adviser) lives in `references/sector-overlays/capital-markets.md`. There is no banking, insurance, or payments-fintech overlay file. Cross-cutting overlays load when the cycle scope implicates them.
+
+- `cross-cutting/cyber.md` loads when the document-request scope includes Reg S-P, cybersecurity, or information-security topics; when EXAMS' notification cites the SEC cyber rule for advisers and funds; or when the firm is NY-licensed and NYDFS Part 500 is in scope.
+- `cross-cutting/conduct.md` loads by default for retail-customer-serving firms and on demand for institutional firms with material conflict-of-interest topics in scope. Anchors: IA Act §206 fiduciary duty (SEC Commission Interpretation, June 5, 2019); Reg BI; Form CRS; FINRA Rule 2111 suitability.
+- `cross-cutting/privacy.md` does not load in v1. Privacy-specific obligations under Reg S-P and GLBA load through the cyber overlay.
+- `cross-cutting/climate.md` loads only when ESG-labeled product disclosures or Names Rule 35d-1 amendments are specifically in exam scope; otherwise carry as a reviewer question and skip the overlay.
+
+## Non-negotiables
+
+- Every material claim cites a source from `references/source-anchors.md` or a loaded cross-cutting overlay by path. Mark unsupported items `[evidence needed]`. Mark unconfirmed section references or current-state items `[verify section]` or `[verify current state]`.
+- Source evidence, firm management assertion, public-source obligation, generated inference, and open legal or compliance question stay distinguishable. The pack shows the seams.
+- Roles only, never named individuals. No named institutions in narrative beyond a public defendant in a finalised SEC or FINRA enforcement action with a published order, and only for structural pattern.
+- The pack stops short of speaking for the firm to the regulator. The CCO and the named lead attest; external counsel signs the privilege-confirmation block where engaged.
+- The SEC rule pipeline 2023-2026 has been volatile. Confirm current state at write time on the PFA Rule (vacated June 5, 2024), the Form PF amendments (separate rulemaking from the PFA Rule), Reg S-P May 2024 compliance dates, the cyber rule for advisers and funds, the Predictive Data Analytics Rule, the Names Rule compliance schedule, and the Corporate Transparency Act BO reporting rule. Verification flags carry through `references/source-anchors.md`.
+
+## Pointers
+
+- `references/source-anchors.md` — citations and excerpts for the named anchors (IA Act / ICA / Exchange Act / FINRA / SEC EXAMS Priorities and Risk Alerts; Reg S-P 2024; SEC cyber rule [verify state]; PFA Rule vacatur context; Form PF amendments; Names Rule; Rule 605 / 606).
+- `references/sector-overlays/capital-markets.md` — registration-class branching (IA, BD, dual registrant, private-fund adviser, fund adviser), document-request lane structure, exam-type calibration.
+- `references/cross-cutting/cyber.md` — Reg S-P 2024 amendments, SEC cyber rule for advisers / funds [verify state], NYDFS Part 500, EXAMS cyber Risk Alerts, FINRA cyber guidance.
+- `references/cross-cutting/conduct.md` — IA Act §206 fiduciary duty, Reg BI four obligations, Form CRS, FINRA Rule 2111 suitability, conflict-register structure, mock-interview conduct themes.
+- `templates/default-output.md` — Word-memo named sections plus the Excel matrix tab structure.
+
+## Output
+
+Two artifacts. The Word memo carries the narrative pack per `templates/default-output.md`; render it via the `docx` skill (in the `document-skills` plugin). The Excel gap-and-evidence matrix carries the per-domain working tabs; render it via the `xlsx` skill. Both ship together. The CCO and the named lead attest; the pack is a draft until that step.
+
+Downstream consumers: `exam-brief` reads the engagement context and the document-request matrix to set the engagement-side scaffolding (request-list mapping, document-handling, interview-prep). `marketing-rule-evidence` reads the Marketing Rule lane gaps to refresh the substantive evidence pack. `best-execution-surveillance` reads the trading-and-execution evidence asks. `fund-board-reporting` reads the Rule 38a-1 lane for the fund-board cycle. `risk-committee-pack` reads the gap-and-remediation list and the open-finding posture for the standing committee section.
