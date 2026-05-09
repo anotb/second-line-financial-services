@@ -15,7 +15,7 @@
     "top_risks",
     "ras_status",
     "issues_summary",
-    "decision_items",
+    "decisions_requested",
     "data_confidence_label",
     "human_review_required"
   ],
@@ -207,7 +207,7 @@
         "linked_10k_disclosure_section": { "type": ["string", "null"] }
       }
     },
-    "decision_items": {
+    "decisions_requested": {
       "type": "array",
       "items": {
         "type": "object",

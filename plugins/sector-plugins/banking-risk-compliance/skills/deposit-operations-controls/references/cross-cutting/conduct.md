@@ -22,7 +22,7 @@ The overlay carries the theme list to read into the relevant process-area rows. 
 
 **Junk-fee themes.** Surprise fees, double fees, fees disclosed in fine print but applied broadly, fees not aligned with stated policy. Federal-regulator junk-fee enforcement has been a continuous theme through 2023-26; verify current cycle on the analysis date. Read into the NSF, overdraft, and fee-disclosure process-area rows and the periodic-statement aggregation row.
 
-**Reg E §1005.11 dispute-timing failures presented as UDAAP.** Where the 10 / 45 / 90 business-day windows are missed, expect both Reg E findings and UDAAP findings. The provisional-credit duty under §1005.11(c) is the most-frequent breach. Read into every consumer-EFT process-area row carrying disputes.
+**Reg E §1005.11 dispute-timing failures presented as UDAAP.** The §1005.11 windows are 10 **business** days for the investigation, 45 **calendar** days extension with provisional credit, 90 **calendar** days extension for new accounts, point-of-sale transactions, and foreign-initiated transfers, and 3 **business** days post-investigation to notify the consumer of the results. Where any of these windows are missed, expect both Reg E findings and UDAAP findings. The provisional-credit duty under §1005.11(c) is the most-frequent breach. Read into every consumer-EFT process-area row carrying disputes.
 
 **FDIC-insurance representation on fintech surfaces.** The Synapse-era enforcement and the **FDIC Part 328 final rule (December 2023) with effective-date extensions through 2024-2025** — verify current effective date for the engagement — require any "FDIC-insured" framing on fintech surfaces to be re-papered to the pass-through caveats. Marketing-claim review against 12 CFR Part 328 Subpart B sits in the advertising-review process area; the customer-facing-surface review sits in the FBO overlay; the periodic re-attestation sits in the exception-handling process area.
 
@@ -40,7 +40,7 @@ The overlay carries the theme list to read into the relevant process-area rows. 
 
 In the **NSF, overdraft, and fee-disclosure** process-area rows: the truth-in-savings disclosure mechanic is one lens; the UDAAP screen on the customer-impact side is the other. A row that reads only as a disclosure check misses the conduct lane. Pull the theme list above into the row's UDAAP-screen sub-column.
 
-In the **consumer-EFT** process-area rows: the dispute-timing rows carry the UDAAP cross-walk (failure to meet the 10 / 45 / 90 business-day windows is pursued both as Reg E and as UDAAP).
+In the **consumer-EFT** process-area rows: the dispute-timing rows carry the UDAAP cross-walk (failure to meet the §1005.11 windows — 10 business days for the investigation, 45 / 90 calendar days for the relevant extensions, 3 business days post-investigation notification — is pursued both as Reg E and as UDAAP).
 
 In the **funds-availability** process-area rows: the exception-hold notification row and the hold-release row carry the UDAAP cross-walk (delayed release without notice or recourse is pursued as UDAAP).
 
