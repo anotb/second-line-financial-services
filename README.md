@@ -63,14 +63,22 @@ Each skill is self-contained: `plugins/<type>/<plugin>/skills/<skill>/` ships it
 
 These instructions assume a recent Claude Code with plugin and marketplace support. Verify the exact CLI syntax against your local Claude Code build.
 
-Install the whole marketplace, then the plugins you want:
+Add the marketplace once, then install the plugins you want. **Install `risk-compliance-core` first** — it ships the `scoping` primitive that downstream skills read for institution, persona, source posture, and overlay context. The downstream skills work standalone (they fall back to asking the practitioner) but the chain is cleaner with `risk-compliance-core` installed.
 
 ```bash
 claude plugin marketplace add /path/to/second-line-financial-services
+
+# Foundation (recommended for any other install):
+claude plugin install risk-compliance-core@second-line-financial-services
+
+# Then any capability or sector plugin you need, for example:
 claude plugin install ai-governance-model-risk@second-line-financial-services
 claude plugin install third-party-operational-resilience@second-line-financial-services
+claude plugin install banking-risk-compliance@second-line-financial-services
 # ... or any other plugin from the catalog above
 ```
+
+A future release will declare manifest dependencies so installing a downstream plugin pulls `risk-compliance-core` automatically. See [ROADMAP.md](ROADMAP.md).
 
 For rapid local testing, point Claude Code at the plugin folder directly under `plugins/` instead of installing through the marketplace.
 
