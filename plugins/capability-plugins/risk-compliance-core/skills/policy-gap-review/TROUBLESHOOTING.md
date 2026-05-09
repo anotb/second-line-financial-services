@@ -6,7 +6,7 @@ Recurring failure modes when a policy gap matrix looks complete but is not. The 
 
 Symptom: the matrix is full of gap rows, but the benchmark sources block is empty or names only the firm's own policies and standards.
 
-Why it happens: the engagement scope did not pin down the external benchmark, or the practitioner anchored on the firm's own framework documents because they are easier to cite.
+Why it happens: the scope did not pin down the external benchmark, or the practitioner anchored on the firm's own framework documents because they are easier to cite.
 
 Fix: the matrix has at least one named, dated external benchmark with section references. Reviewing a policy against itself or against generic guidance fragments without anchored sources is internal-consistency editing, not a gap review. The schema enforces `benchmark_sources` with `minItems: 1` and `section_references` with `minItems: 1`. Pull the benchmark from `obligation-mapping` output, or name the rule and guidance directly with section refs from `references/source-anchors.md`.
 

@@ -1,6 +1,6 @@
 # Banking sector overlay — cdd-risk-review
 
-When the engagement scope flags banking, load this overlay alongside `references/source-anchors.md`. It carries the bank-specific CDD frame the generic capability skill does not own.
+When the scope flags banking, load this overlay alongside `references/source-anchors.md`. It carries the bank-specific CDD frame the generic capability skill does not own.
 
 ## Operative CIP / CDD rule set
 

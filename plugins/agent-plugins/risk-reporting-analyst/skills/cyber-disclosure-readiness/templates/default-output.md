@@ -15,7 +15,7 @@ The pack is a draft until the disclosure committee, securities counsel, the CISO
 - Registrant short name: [internal name; never the SEC accession number]
 - Filer category: [large accelerated filer / accelerated filer / smaller reporting company / non-accelerated filer / foreign private issuer]
 - Artifact in scope: [A — 8-K Item 1.05 / B — 10-K Item 106 / C — DCP readiness map / multiple — list]
-- Engagement-scope ID (if `engagement-scoping` was run): [ID]
+- Engagement-scope ID (if `scoping` was run): [ID]
 - Classification: [internal / disclosure-committee-confidential / regulator-shareable]
 - Pack version: [v1 / v1-revised]
 

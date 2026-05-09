@@ -104,4 +104,4 @@ Recurring defects in adverse-media triage memos and in the upstream hit sets, an
 
 **Why it happens**: the typology library is treated as optional rather than as the named-advisory anchor.
 
-**Fix**: the FinCEN Advisory on Elder Financial Exploitation provides the typology indicators and the named anchor; the conduct overlay carries the vulnerable-customer parallel routing. Both are loaded when the engagement scope and the hit set warrant; neither is optional.
+**Fix**: the FinCEN Advisory on Elder Financial Exploitation provides the typology indicators and the named anchor; the conduct overlay carries the vulnerable-customer parallel routing. Both are loaded when the scope and the hit set warrant; neither is optional.

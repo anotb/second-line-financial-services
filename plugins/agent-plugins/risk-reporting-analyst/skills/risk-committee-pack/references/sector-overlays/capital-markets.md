@@ -1,8 +1,8 @@
 # Capital markets sector overlay for risk-committee-pack
 
-When the engagement-scope record names sector `capital-markets`, this overlay adds adviser, broker-dealer, and asset-manager-specific structure and content expectations to the committee pack. Where there is conflict between the capability defaults and this overlay, the overlay governs the capital-markets-sector elements.
+When the scope record names sector `capital-markets`, this overlay adds adviser, broker-dealer, and asset-manager-specific structure and content expectations to the committee pack. Where there is conflict between the capability defaults and this overlay, the overlay governs the capital-markets-sector elements.
 
-Loaded by: `risk-committee-pack/SKILL.md` when `engagement_scope.sector_overlay_set` includes `capital-markets`, or when the institution type is an SEC-registered investment adviser, FINRA-member broker-dealer, dual-registrant, asset-management group, or registered fund complex.
+Loaded by: `risk-committee-pack/SKILL.md` when `scope.sector_overlay_set` includes `capital-markets`, or when the institution type is an SEC-registered investment adviser, FINRA-member broker-dealer, dual-registrant, asset-management group, or registered fund complex.
 
 ## Source basis
 

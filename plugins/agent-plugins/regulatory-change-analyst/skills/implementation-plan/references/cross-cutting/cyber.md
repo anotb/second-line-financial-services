@@ -1,6 +1,6 @@
 # Cross-cutting overlay — cyber
 
-Loaded when the engagement scope flags cyber. Implementation plans triggered by or touching cyber rules carry distinct timing, governance, and evidence patterns.
+Loaded when the scope flags cyber. Implementation plans triggered by or touching cyber rules carry distinct timing, governance, and evidence patterns.
 
 ## Incident-notification regimes the plan must reconcile
 

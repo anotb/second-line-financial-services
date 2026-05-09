@@ -1,8 +1,8 @@
 # Capital markets sector overlay for bcbs239-gap-assessment
 
-When the engagement-scope record names sector `capital-markets`, this overlay adds capital-markets-specific fields and review demands to the assessment. Where there is conflict between the capability defaults and this overlay, the overlay governs the capital-markets-sector elements.
+When the scope record names sector `capital-markets`, this overlay adds capital-markets-specific fields and review demands to the assessment. Where there is conflict between the capability defaults and this overlay, the overlay governs the capital-markets-sector elements.
 
-Loaded by: `bcbs239-gap-assessment/SKILL.md` when `engagement_scope.sector_overlay_set` includes `capital-markets`. This is a light overlay. BCBS 239 applies at the BHC level; broker-dealer subsidiaries inherit it. The overlay covers the broker-dealer subsidiary view and the SEC / FINRA reporting data-quality interactions.
+Loaded by: `bcbs239-gap-assessment/SKILL.md` when `scope.sector_overlay_set` includes `capital-markets`. This is a light overlay. BCBS 239 applies at the BHC level; broker-dealer subsidiaries inherit it. The overlay covers the broker-dealer subsidiary view and the SEC / FINRA reporting data-quality interactions.
 
 ## Source basis
 

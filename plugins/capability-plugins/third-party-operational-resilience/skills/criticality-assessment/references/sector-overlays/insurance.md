@@ -1,6 +1,6 @@
 # Insurance sector overlay — criticality-assessment
 
-When the engagement scope flags insurance, load this overlay alongside `references/source-anchors.md`. It carries the insurance-only criteria the generic capability skill does not own.
+When the scope flags insurance, load this overlay alongside `references/source-anchors.md`. It carries the insurance-only criteria the generic capability skill does not own.
 
 ## Operative supervisory frame
 

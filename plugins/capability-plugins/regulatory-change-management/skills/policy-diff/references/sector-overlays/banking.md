@@ -1,6 +1,6 @@
 # Sector overlay: banking
 
-Loaded when the engagement scope flags `banking` as the sector. The change-log spine is unchanged; what changes is the source citation set, the named approver expectations, and the typical downstream-impact patterns for bank policy diffs.
+Loaded when the scope flags `banking` as the sector. The change-log spine is unchanged; what changes is the source citation set, the named approver expectations, and the typical downstream-impact patterns for bank policy diffs.
 
 ## Approver routing expectations
 

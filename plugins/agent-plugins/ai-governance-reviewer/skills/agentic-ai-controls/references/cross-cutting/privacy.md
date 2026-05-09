@@ -1,8 +1,8 @@
 # Privacy cross-cutting overlay for agentic-ai-controls
 
-When the engagement-scope record flags `privacy` for an agentic-controls review, this overlay adds privacy-specific scoping rules, monitoring signals, regulator-notification triggers, and co-reviewer expectations. The privacy officer co-signs residual-risk acceptance for any agent reading or writing regulated personal data with potential for tool-misuse exfiltration.
+When the scope record flags `privacy` for an agentic-controls review, this overlay adds privacy-specific scoping rules, monitoring signals, regulator-notification triggers, and co-reviewer expectations. The privacy officer co-signs residual-risk acceptance for any agent reading or writing regulated personal data with potential for tool-misuse exfiltration.
 
-Loaded by: `agentic-ai-controls/SKILL.md` when `engagement_scope.cross_cutting_set` includes `privacy`. Cited and section-referenced anchors live in `references/source-anchors.md`.
+Loaded by: `agentic-ai-controls/SKILL.md` when `scope.cross_cutting_set` includes `privacy`. Cited and section-referenced anchors live in `references/source-anchors.md`.
 
 ## Source basis
 

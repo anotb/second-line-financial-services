@@ -1,8 +1,8 @@
 # Cyber cross-cutting overlay for validation-plan
 
-When the engagement-scope record flags `cyber` for the model use case, this overlay adds cyber-specific scope items to the validation plan. AI red-teaming and adversarial robustness overlap substantially with cyber red-teaming; this overlay is where that overlap is named so the validator and the CISO function are reading the same testing surface.
+When the scope record flags `cyber` for the model use case, this overlay adds cyber-specific scope items to the validation plan. AI red-teaming and adversarial robustness overlap substantially with cyber red-teaming; this overlay is where that overlap is named so the validator and the CISO function are reading the same testing surface.
 
-Loaded by: `validation-plan/SKILL.md` when `engagement_scope.cross_cutting_set` includes `cyber`. Cited and section-referenced anchors live in `references/source-anchors.md`.
+Loaded by: `validation-plan/SKILL.md` when `scope.cross_cutting_set` includes `cyber`. Cited and section-referenced anchors live in `references/source-anchors.md`.
 
 ## Source basis
 

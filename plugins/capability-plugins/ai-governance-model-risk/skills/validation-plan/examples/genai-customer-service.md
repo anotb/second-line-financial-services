@@ -6,7 +6,7 @@ Public-source-derived. No named institution. Patterns drawn from the joint inter
 
 A regional US bank holding company is preparing the validation plan for a vendor-hosted GenAI assistant that supports the consumer-banking call center. The assistant summarises customer history, suggests next-best-action steps for the agent, and drafts written follow-ups for the agent to review and send. No auto-decisioning, no auto-sending. Initial validation; pre-prod gate is the consuming review.
 
-Engagement scope provided by `engagement-scoping`:
+Engagement scope provided by `scoping`:
 - Institution type: bank holding company, mid-cap, primary regulators FRB and CFPB; OCC for the national-bank subsidiary.
 - Persona: AI Governance Lead (validator coordination role) jointly with head of model risk.
 - Sector overlay set: banking. Cross-cutting overlays: cyber (NYDFS Part 500 in NY footprint, NYDFS October 2024 letter), privacy (regulated NPI), conduct (UDAAP exposure on customer-facing communications).
@@ -18,7 +18,7 @@ Engagement scope provided by `engagement-scoping`:
 
 Plan sections produced (abbreviated):
 
-- **Plan metadata** — model ID `cs-assistant-v1.0`; tier-2; validator: head of model risk; validation type: initial; engagement-scope ID cited.
+- **Plan metadata** — model ID `cs-assistant-v1.0`; tier-2; validator: head of model risk; validation type: initial; scope ID cited.
 
 - **Validation depth** — set per pillar. Conceptual soundness: targeted (vendor model is opaque; focus is on selection rationale, RAG architecture, prompt design, tool-boundary review). Outcomes analysis: full (no prior cycle to lean on; the plan defines the test set and success criteria from scratch). Ongoing monitoring: full (pre-prod plan that anchors what production monitoring must produce). Tier justification documents the agent-mediated lower autonomy as a depth modifier.
 

@@ -1,6 +1,6 @@
 # Cross-cutting overlay: cyber — board AI risk pack
 
-Loaded when the engagement scope flags cyber. The overlay carries content that lands in the pack body, not background reading. The standing anchor for AI cyber posture in financial services is the NYDFS Industry Letter on Cybersecurity Risks Arising from AI (October 16, 2024) for NY-footprint firms, layered over existing cyber program expectations (23 NYCRR Part 500, FFIEC IT Booklet, FRB SR 20-15, sector-specific frameworks).
+Loaded when the scope flags cyber. The overlay carries content that lands in the pack body, not background reading. The standing anchor for AI cyber posture in financial services is the NYDFS Industry Letter on Cybersecurity Risks Arising from AI (October 16, 2024) for NY-footprint firms, layered over existing cyber program expectations (23 NYCRR Part 500, FFIEC IT Booklet, FRB SR 20-15, sector-specific frameworks).
 
 ## Where it lands in the pack
 

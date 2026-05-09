@@ -1,6 +1,6 @@
 # Capital-markets sector overlay — sar-decision-qa
 
-When the engagement scope flags capital markets (broker-dealers, investment advisers running affiliated BD activity, mutual funds, futures commission merchants), load this overlay alongside `references/source-anchors.md`.
+When the scope flags capital markets (broker-dealers, investment advisers running affiliated BD activity, mutual funds, futures commission merchants), load this overlay alongside `references/source-anchors.md`.
 
 ## Operative SAR rules in scope
 

@@ -1,6 +1,6 @@
 # Capital-markets sector overlay — cdd-risk-review
 
-When the engagement scope flags capital markets (broker-dealer, mutual fund, FCM/IB, covered investment adviser), load this overlay alongside `references/source-anchors.md`. It carries the capital-markets-specific CDD frame the generic capability skill does not own.
+When the scope flags capital markets (broker-dealer, mutual fund, FCM/IB, covered investment adviser), load this overlay alongside `references/source-anchors.md`. It carries the capital-markets-specific CDD frame the generic capability skill does not own.
 
 ## Operative CIP / CDD rule set
 

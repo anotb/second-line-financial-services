@@ -1,8 +1,8 @@
 # Insurance sector overlay for complaint-theme-analysis
 
-When the engagement-scope record names sector `insurance`, this overlay flags the scope boundary, names the analogous regime, and adapts the theme-analysis pattern for state-DOI complaint surfaces and MGA program complaints. Insurance complaint-handling sits outside the CFPB's jurisdiction; the theme-analysis method is reusable but the regulatory exposure mapping shifts entirely to state insurance departments and the NAIC framework.
+When the scope record names sector `insurance`, this overlay flags the scope boundary, names the analogous regime, and adapts the theme-analysis pattern for state-DOI complaint surfaces and MGA program complaints. Insurance complaint-handling sits outside the CFPB's jurisdiction; the theme-analysis method is reusable but the regulatory exposure mapping shifts entirely to state insurance departments and the NAIC framework.
 
-Loaded by: `complaint-theme-analysis/SKILL.md` when `engagement_scope.sector_overlay_set` includes `insurance`, or when the institution type implicates a property and casualty insurer, life insurer, health insurer (in the consumer-finance scope where applicable), MGA / MGU, or insurance-licensed bank affiliate.
+Loaded by: `complaint-theme-analysis/SKILL.md` when `scope.sector_overlay_set` includes `insurance`, or when the institution type implicates a property and casualty insurer, life insurer, health insurer (in the consumer-finance scope where applicable), MGA / MGU, or insurance-licensed bank affiliate.
 
 Cited and section-referenced anchors live in `references/source-anchors.md`.
 

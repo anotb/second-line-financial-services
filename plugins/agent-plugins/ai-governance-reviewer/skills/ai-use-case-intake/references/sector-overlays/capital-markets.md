@@ -1,8 +1,8 @@
 # Capital-markets sector overlay for ai-use-case-intake
 
-When the engagement-scope record names sector `capital-markets`, this overlay tells the intake what additional fields to capture, which named regulators belong on the regulatory-flags table, and which open questions tag to downstream adviser/BD/fund AI work. The reach is SEC, FINRA, and state-IA; capability-plugin defaults built around bank prudential supervision miss the registration-class lens this sector reads through.
+When the scope record names sector `capital-markets`, this overlay tells the intake what additional fields to capture, which named regulators belong on the regulatory-flags table, and which open questions tag to downstream adviser/BD/fund AI work. The reach is SEC, FINRA, and state-IA; capability-plugin defaults built around bank prudential supervision miss the registration-class lens this sector reads through.
 
-Loaded by: `ai-use-case-intake/SKILL.md` when `engagement_scope.sector_overlay_set` includes `capital-markets`, or when the institution type is an investment adviser, broker-dealer, dual-registrant, mutual fund / ETF, hedge fund, private equity adviser, or other SEC/FINRA registrant.
+Loaded by: `ai-use-case-intake/SKILL.md` when `scope.sector_overlay_set` includes `capital-markets`, or when the institution type is an investment adviser, broker-dealer, dual-registrant, mutual fund / ETF, hedge fund, private equity adviser, or other SEC/FINRA registrant.
 
 ## Source basis
 

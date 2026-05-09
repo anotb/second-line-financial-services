@@ -10,7 +10,7 @@ The six raw deviations from the workpaper:
 - Two sample items with no investigation notes in the case-management file but with system-logged status changes showing investigation activity.
 - One sample item where the fee-reversal amount in the case-management system disagreed with the fee-reversal amount in the core deposit ledger.
 
-The test plan's tolerable deviation rate was set at 5%. Source posture is public-plus-firm-policy-plus-evidence. The engagement scope flags banking sector and conduct cross-cutting overlays. The current cycle is the third consecutive Reg E test; the prior two cycles also surfaced timing deviations on online disputes.
+The test plan's tolerable deviation rate was set at 5%. Source posture is public-plus-firm-policy-plus-evidence. The scope flags banking sector and conduct cross-cutting overlays. The current cycle is the third consecutive Reg E test; the prior two cycles also surfaced timing deviations on online disputes.
 
 ## Why this scenario matters
 

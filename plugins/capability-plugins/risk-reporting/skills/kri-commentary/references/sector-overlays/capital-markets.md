@@ -1,8 +1,8 @@
 # Capital-markets sector overlay for kri-commentary
 
-When the engagement-scope record flags `capital-markets`, this overlay sets the KRI-commentary content for broker-dealers, registered investment advisers, fund complexes, and prime-brokerage / market-maker firms.
+When the scope record flags `capital-markets`, this overlay sets the KRI-commentary content for broker-dealers, registered investment advisers, fund complexes, and prime-brokerage / market-maker firms.
 
-Loaded by: `kri-commentary/SKILL.md` when `engagement_scope.sector_overlay_set` includes `capital-markets`. Cited and section-referenced anchors live in `references/source-anchors.md`.
+Loaded by: `kri-commentary/SKILL.md` when `scope.sector_overlay_set` includes `capital-markets`. Cited and section-referenced anchors live in `references/source-anchors.md`.
 
 ## Source basis
 

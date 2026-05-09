@@ -28,9 +28,9 @@
         "end": { "type": "string", "format": "date" }
       }
     },
-    "engagement_scope_id": {
+    "scope_id": {
       "type": "string",
-      "description": "Links to the engagement-scoping record if supplied."
+      "description": "Links to the scoping record if supplied."
     },
     "blocks": {
       "type": "array",

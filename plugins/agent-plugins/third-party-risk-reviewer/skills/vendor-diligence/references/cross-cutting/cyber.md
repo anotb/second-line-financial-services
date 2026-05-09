@@ -1,6 +1,6 @@
 # Cyber cross-cutting overlay — vendor-diligence
 
-When the engagement scope flags cyber, or whenever the vendor touches NPI, PHI, PCI, customer prompts, or any control on the firm's important-business-service path, load this overlay. Cyber is in scope by default for AI vendors.
+When the scope flags cyber, or whenever the vendor touches NPI, PHI, PCI, customer prompts, or any control on the firm's important-business-service path, load this overlay. Cyber is in scope by default for AI vendors.
 
 ## Operative anchors
 

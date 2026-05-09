@@ -1,6 +1,6 @@
 # Capital markets sector overlay for genai-pre-prod-review
 
-When the engagement-scope record names `capital-markets` as the sector, this overlay adds capital-markets-specific gate considerations: named co-reviewers, additional notification triggers, sector-specific monitoring expectations, and recommended-action items typical of capital-markets GenAI gate reviews (research assistants, surveillance assistants, analyst assistants, execution-related assistants). Loaded by `genai-pre-prod-review/SKILL.md` when `engagement_scope.sector_overlay_set` includes `capital-markets`. Cited and section-referenced anchors live in `references/source-anchors.md`.
+When the scope record names `capital-markets` as the sector, this overlay adds capital-markets-specific gate considerations: named co-reviewers, additional notification triggers, sector-specific monitoring expectations, and recommended-action items typical of capital-markets GenAI gate reviews (research assistants, surveillance assistants, analyst assistants, execution-related assistants). Loaded by `genai-pre-prod-review/SKILL.md` when `scope.sector_overlay_set` includes `capital-markets`. Cited and section-referenced anchors live in `references/source-anchors.md`.
 
 ## Source basis
 

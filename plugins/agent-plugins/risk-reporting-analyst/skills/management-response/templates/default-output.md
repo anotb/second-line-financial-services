@@ -17,7 +17,7 @@ The response is a draft until the responding role and the firm-level signatory r
 - Period the finding relates to: [start YYYY-MM-DD] to [end YYYY-MM-DD]
 - Classification: [internal / firm-restricted / privileged / regulator-confidential]
 - Response version: [v1 / v1-revised / refresh-of-v1]
-- Engagement-scope ID (if `engagement-scoping` was run): [ID]
+- Engagement-scope ID (if `scoping` was run): [ID]
 
 ---
 

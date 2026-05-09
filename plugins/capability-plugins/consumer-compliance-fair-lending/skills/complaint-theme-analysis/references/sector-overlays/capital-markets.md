@@ -1,8 +1,8 @@
 # Capital markets sector overlay for complaint-theme-analysis
 
-When the engagement-scope record names sector `capital-markets`, this overlay flags the scope boundary, names the analogous regimes, and adapts the theme-analysis pattern for retail brokerage and adjacent activities. Most capital-markets activity sits outside the CFPB's jurisdiction; the theme-analysis method is reusable but the regulatory exposure mapping shifts.
+When the scope record names sector `capital-markets`, this overlay flags the scope boundary, names the analogous regimes, and adapts the theme-analysis pattern for retail brokerage and adjacent activities. Most capital-markets activity sits outside the CFPB's jurisdiction; the theme-analysis method is reusable but the regulatory exposure mapping shifts.
 
-Loaded by: `complaint-theme-analysis/SKILL.md` when `engagement_scope.sector_overlay_set` includes `capital-markets`, or when the institution type implicates a registered broker-dealer, registered investment adviser, futures commission merchant, or capital-markets affiliate of a banking organization.
+Loaded by: `complaint-theme-analysis/SKILL.md` when `scope.sector_overlay_set` includes `capital-markets`, or when the institution type implicates a registered broker-dealer, registered investment adviser, futures commission merchant, or capital-markets affiliate of a banking organization.
 
 Cited and section-referenced anchors live in `references/source-anchors.md`.
 

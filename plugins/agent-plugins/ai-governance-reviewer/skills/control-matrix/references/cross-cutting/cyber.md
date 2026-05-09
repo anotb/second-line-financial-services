@@ -1,6 +1,6 @@
 # Cyber cross-cutting overlay — control-matrix
 
-Loads when the engagement-scope `cross_cutting_overlay_set` includes `cyber`. The overlay adds cyber-tagged rows to the matrix when the scoped process touches information systems, customer data, or third-party-provided technology services.
+Loads when the scope `cross_cutting_overlay_set` includes `cyber`. The overlay adds cyber-tagged rows to the matrix when the scoped process touches information systems, customer data, or third-party-provided technology services.
 
 ## Why cyber belongs in nearly every matrix
 

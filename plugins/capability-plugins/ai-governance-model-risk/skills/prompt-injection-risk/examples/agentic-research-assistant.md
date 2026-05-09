@@ -6,7 +6,7 @@ Public-source-derived. No named institution. Pattern aligns with the use case ca
 
 A US registered investment adviser is piloting an agentic research assistant for the equity research desk. The agent has tools enabled: web fetch (firm-curated allowlist), internal-document retrieval (research notes, past models), market-data API (read-only), and a draft-write tool that produces draft research notes for analyst review. Foundation model is vendor-hosted, version pinning policy is rolling-with-notice. RAG over internal research notes plus the firm-curated public web allowlist. Multi-agent orchestration: a planner agent dispatches a researcher agent, a modeller agent, and a draft-writer agent.
 
-Engagement scope provided by `engagement-scoping`:
+Engagement scope provided by `scoping`:
 - Institution type: US registered investment adviser, mid-cap AUM, primary regulator SEC; FINRA for affiliated broker-dealer.
 - Persona: AI Governance Lead jointly with head of model risk and the firm's CISO function.
 - Sector overlay: capital markets. Cross-cutting overlays: cyber (SEC Reg S-K Item 106 for the public parent, model-supply-chain and tool-boundary focus), conduct (Marketing Rule and books-and-records reach for any AI-generated client-facing content; SR/IA fiduciary lens).

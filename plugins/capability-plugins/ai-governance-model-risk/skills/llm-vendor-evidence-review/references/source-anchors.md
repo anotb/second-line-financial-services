@@ -132,7 +132,7 @@ A practitioner note before the list: foundation-model vendor evidence-pack revie
 - Citation: Regulation (EU) 2022/2554 (Digital Operational Resilience Act), Article 28 "General principles" governing ICT third-party-service-provider arrangements [verify article and recital references applicable to AI-vendor arrangements].
 - Excerpt-paraphrase: DORA sets requirements for EU financial entities engaging ICT third-party service providers, including AI vendors providing ICT-services. Article 28 covers risk-management requirements throughout the lifecycle of the arrangement; related articles cover contractual provisions, register of information, exit strategies, and oversight of critical ICT third-party service providers.
 - Link: https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32022R2554 — Article 28 [verify exact article and paragraph references]
-- Notes: Binding for EU-supervised financial entities. Entity-level wrapper for EU-scope deployments; sits alongside the US interagency third-party guidance in `vendor-diligence`. Loaded conditionally where engagement-scope flags EU-jurisdictional in-scope.
+- Notes: Binding for EU-supervised financial entities. Entity-level wrapper for EU-scope deployments; sits alongside the US interagency third-party guidance in `vendor-diligence`. Loaded conditionally where scope flags EU-jurisdictional in-scope.
 
 ## Verification flags
 

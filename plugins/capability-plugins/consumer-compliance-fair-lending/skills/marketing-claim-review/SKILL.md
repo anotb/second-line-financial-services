@@ -36,7 +36,7 @@ Before drafting, get plain answers to a few things. Defaults are fine when an an
 - What the source posture is. Public-only, public-plus-firm-policy, public-plus-firm-policy-plus-evidence, or connector-aware. Source posture sets what the memo can actually cite (substantiation files, MAP records, audience-definition exports, served-impression logs, screenshots by device class) and what carries `[evidence needed]`.
 - Who decides. Marketing-compliance committee at pre-launch and routine sweep; CCO and counsel where the finding is high-severity or where regulator engagement is in posture; conduct committee where the finding crosses UDAAP themes.
 
-When `engagement-scope` is supplied, the skill consumes it for institution, persona, source posture, sector overlay set, and cross-cutting overlay set. Otherwise it asks the practitioner the few facts it needs and defaults to public posture if the practitioner declines, noting in the memo that scope was not formalised.
+When `scope` is supplied, the skill consumes it for institution, persona, source posture, sector overlay set, and cross-cutting overlay set. Otherwise it asks the practitioner the few facts it needs and defaults to public posture if the practitioner declines, noting in the memo that scope was not formalised.
 
 ## How the memo gets built
 
@@ -83,7 +83,7 @@ When AI is in the production path or the personalisation path on any in-scope as
 
 ### Sector overlays
 
-When the engagement scope names a sector, load the matching `references/sector-overlays/<sector>.md`:
+When the scope names a sector, load the matching `references/sector-overlays/<sector>.md`:
 
 - *Banking* — deposit-advertising specifics under the truth-in-savings rule; FDIC insurance representation under the FDIC advertising rule; mortgage advertising under the TILA / RESPA / TRID interplay; CRA-related advertising; deposit-account fee mechanics on the asset.
 - *Payments-fintech* — sponsor-bank attribution of marketing claims; BNPL marketing observations; app-store ad rules; Reg E error-resolution claims in marketing; influencer and creator endorsements under the FTC Endorsement Guides for non-bank fintech surfaces.
@@ -97,7 +97,7 @@ Conduct overlap with UDAAP is in `references/cross-cutting/conduct.md` and loads
 ## Pointers
 
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
-- `references/sector-overlays/banking.md`, `payments-fintech.md`, `capital-markets.md`, `insurance.md` — sector-specific framing loaded per engagement-scope.
+- `references/sector-overlays/banking.md`, `payments-fintech.md`, `capital-markets.md`, `insurance.md` — sector-specific framing loaded per scope.
 - `references/cross-cutting/conduct.md` — UDAAP overlap with the asset-level finding; `references/cross-cutting/privacy.md` — privacy-claim substantiation, AdChoices, dark-pattern privacy, and state-privacy-law interaction.
 - `references/firm-overlay.md` — firm-installed marketing taxonomy, named MAP, marketing-compliance committee, AI-personalisation governance, system-of-record paths (consumed when present).
 - `templates/default-output.md` — memo template (named sections, asset-level fields).

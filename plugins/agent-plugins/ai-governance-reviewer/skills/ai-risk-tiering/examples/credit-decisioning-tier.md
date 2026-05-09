@@ -6,7 +6,7 @@ Public-source-derived. No named institution. Patterns drawn from CFPB Circular 2
 
 A US bank holding company has intaked a refresh of an existing gradient-boosted classifier for consumer auto-loan underwriting in the indirect dealer channel. The intake record names the use case as customer-binding (the model is the principal driver of the credit decision in the indirect channel), regulated NPI in inputs, US-only operating footprint, vendor-supplied bureau data feed but firm-built model. The sponsor (head of consumer lending) has proposed tier-2 to keep validation depth manageable.
 
-Engagement scope provided by `engagement-scoping`:
+Engagement scope provided by `scoping`:
 - Institution type: bank holding company, mid-cap, primary regulators OCC and CFPB.
 - Persona: head of model risk, second line.
 - Sector overlay set: banking. Cross-cutting overlays: privacy (regulated NPI under GLBA), conduct (consumer-credit decisioning, ECOA / Reg B reach).

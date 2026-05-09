@@ -1,6 +1,6 @@
 # Cyber cross-cutting overlay — qa-workpaper
 
-Loaded when `engagement-scope.cross_cutting_overlay_set` includes `cyber`, when the QA review covers a workpaper addressing IAM controls, data-protection controls, vulnerability-management controls, or NYDFS Part 500-mandated areas, or when the firm is a Covered Entity under 23 NYCRR Part 500. Supplements `references/source-anchors.md`.
+Loaded when `scope.cross_cutting_overlay_set` includes `cyber`, when the QA review covers a workpaper addressing IAM controls, data-protection controls, vulnerability-management controls, or NYDFS Part 500-mandated areas, or when the firm is a Covered Entity under 23 NYCRR Part 500. Supplements `references/source-anchors.md`.
 
 ## Why cyber QA carries distinct conventions
 

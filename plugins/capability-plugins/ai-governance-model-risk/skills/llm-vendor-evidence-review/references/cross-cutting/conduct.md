@@ -1,6 +1,6 @@
 # Cross-cutting overlay: conduct
 
-Loaded when `engagement-scope.cross_cutting_overlay_set` includes conduct. Carries the responsible-use, harmful-content, and customer-conduct frame for foundation-model vendor evidence-pack review. Scopes in for any deployment touching customer-facing communications, recommendation, or decisioning.
+Loaded when `scope.cross_cutting_overlay_set` includes conduct. Carries the responsible-use, harmful-content, and customer-conduct frame for foundation-model vendor evidence-pack review. Scopes in for any deployment touching customer-facing communications, recommendation, or decisioning.
 
 ## Supervisory frame
 

@@ -1,6 +1,6 @@
 # Payments-fintech sector overlay — sanctions-screening-qa
 
-When the engagement scope flags payments or fintech (sponsor-bank programs, BaaS platforms, money transmitters, MSBs, card-program operators, virtual-currency on-ramps), load this overlay alongside `references/source-anchors.md`. The overlay carries the payments-rail-specific and sponsor-bank-allocation reads the bank-flavoured frame does not.
+When the scope flags payments or fintech (sponsor-bank programs, BaaS platforms, money transmitters, MSBs, card-program operators, virtual-currency on-ramps), load this overlay alongside `references/source-anchors.md`. The overlay carries the payments-rail-specific and sponsor-bank-allocation reads the bank-flavoured frame does not.
 
 ## Screening-responsibility allocation
 

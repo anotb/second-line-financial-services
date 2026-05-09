@@ -31,7 +31,7 @@ The pack stops at draft. The CRO reviews before the committee secretary distribu
 - The adviser-level enterprise risk committee is distinct from the fund boards. Items material to the fund board may also be material to the adviser, but the audiences and the recommendations differ; the pack reflects the adviser-firm scope.
 - Risk taxonomy is adviser-shaped, not bank-shaped. Investment risk, fiduciary risk, and conduct risk are present. Credit, market, and liquidity in the bank sense are not in the heat map (market risk reads at the portfolio level, owned by investment risk; liquidity reads at the fund level, owned by fund boards).
 - BD net capital and customer protection (Exchange Act Rules 15c3-1 and 15c3-3) feed the adviser-group view but are reported separately for the BD entity. The capital-markets sector overlay tells the skill how to surface this.
-- Climate is not in scope this period, and the rationale is documented. The skill does not invent a climate cell; the cross-cutting overlay loader respects the engagement scope.
+- Climate is not in scope this period, and the rationale is documented. The skill does not invent a climate cell; the cross-cutting overlay loader respects the scope.
 - SEC cyber disclosure rule and Reg S-P amendments are forward-looking items, not in-period events. The forward-looking commentary names them with the verification posture intact.
 
 ## Anchors

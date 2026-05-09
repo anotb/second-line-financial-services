@@ -1,6 +1,6 @@
 # Capital-markets sector overlay — evidence-binder
 
-Loads when the engagement-scope `sector_overlay_set` includes `capital-markets`. Binds evidence-binder content to SEC, FINRA, and CFTC examination expectations for broker-dealers, investment advisers, registered funds, and futures-market participants.
+Loads when the scope `sector_overlay_set` includes `capital-markets`. Binds evidence-binder content to SEC, FINRA, and CFTC examination expectations for broker-dealers, investment advisers, registered funds, and futures-market participants.
 
 ## Supervisory frame
 

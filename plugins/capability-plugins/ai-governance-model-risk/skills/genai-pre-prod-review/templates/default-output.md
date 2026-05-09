@@ -13,7 +13,7 @@ The memo is a draft until the human reviewers attest. The decision is a recommen
 - Use case ID (links to `ai-use-case-intake`): [ID]
 - Tier (per `ai-risk-tiering`): [tier-1 / tier-2 / tier-3 / tier-4]
 - Lifecycle stage: [development / pre-prod / prod / monitoring-only]
-- Engagement-scope ID (if `engagement-scoping` was run): [ID]
+- Engagement-scope ID (if `scoping` was run): [ID]
 - Requested date: [YYYY-MM-DD]
 - Review date: [YYYY-MM-DD]
 - Recommended decision date: [YYYY-MM-DD]

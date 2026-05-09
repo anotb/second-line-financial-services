@@ -1,6 +1,6 @@
 # Insurance sector overlay — exit-plan
 
-When the engagement scope flags insurance, load this overlay alongside `references/source-anchors.md`. The bank-flavoured interagency-guidance termination frame is not the operative supervisory frame for state-regulated insurers.
+When the scope flags insurance, load this overlay alongside `references/source-anchors.md`. The bank-flavoured interagency-guidance termination frame is not the operative supervisory frame for state-regulated insurers.
 
 ## Operative supervisory frame
 

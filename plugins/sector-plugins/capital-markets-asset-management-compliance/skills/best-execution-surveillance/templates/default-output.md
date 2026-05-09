@@ -17,7 +17,7 @@ This file is the content spec for both renderings. The `xlsx` skill (Anthropic `
 | Review period | [start date — end date] |
 | Cadence | [quarterly / monthly+quarterly+annual / quarterly-into-fund-board / annual] |
 | Asset-class scope | [equities / options / fixed-income / etfs / mutual-funds / derivatives / fx / crypto / other] |
-| Engagement ID | [pointer to engagement-scope record, or "scope not formalised"] |
+| Engagement ID | [pointer to scope record, or "scope not formalised"] |
 | Audience | [best-ex committee / CCO / fund board / FINRA exam file / SEC IM exam file] |
 | Owner (role) | [head of trading / head of investments / CCO] |
 | Approver (role) | [best-ex committee chair / CCO / fund-board CCO for fund variant] |

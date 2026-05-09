@@ -1,6 +1,6 @@
 # Insurance sector overlay — qa-workpaper
 
-Loaded when `engagement-scope.sector_overlay_set` includes `insurance` or when the QA review covers a workpaper at an insurer or insurance holding company. Supplements `references/source-anchors.md`.
+Loaded when `scope.sector_overlay_set` includes `insurance` or when the QA review covers a workpaper at an insurer or insurance holding company. Supplements `references/source-anchors.md`.
 
 ## QA conventions for insurance testing workpapers
 

@@ -14,7 +14,7 @@ The pack is a draft until the attesting officer signs and the named legal or aud
 - Scope: [process / product / function / legal entity]
 - Assertion language version: [e.g., v4.2]
 - Source posture: [public-only / public-plus-firm-policy / public-plus-firm-policy-plus-evidence / connector-aware]
-- Engagement-scope ID (if `engagement-scoping` was run): [ID]
+- Engagement-scope ID (if `scoping` was run): [ID]
 
 ---
 

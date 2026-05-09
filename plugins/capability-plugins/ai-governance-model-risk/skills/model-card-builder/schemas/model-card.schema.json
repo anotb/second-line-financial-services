@@ -45,7 +45,7 @@
         },
         "classification": { "type": "string" },
         "use_case_id": { "type": "string", "description": "Links to ai-use-case-intake record." },
-        "engagement_scope_id": { "type": "string", "description": "Links to engagement-scoping record if supplied." }
+        "scope_id": { "type": "string", "description": "Links to scoping record if supplied." }
       }
     },
     "intended_use": {

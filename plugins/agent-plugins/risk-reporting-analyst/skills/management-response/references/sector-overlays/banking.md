@@ -1,8 +1,8 @@
 # Banking sector overlay for management-response
 
-When the engagement-scope record names `banking` for a management-response engagement, this overlay sets banking-supervisor-shaped conventions for the response artifact. Banking is the primary case for this skill; the formal-letter conventions and the supervisory-severity-ladder defaults are tightest here.
+When the scope record names `banking` for a management-response engagement, this overlay sets banking-supervisor-shaped conventions for the response artifact. Banking is the primary case for this skill; the formal-letter conventions and the supervisory-severity-ladder defaults are tightest here.
 
-Loaded by: `management-response/SKILL.md` when `engagement_scope.sector_overlay_set` includes `banking`. Cited and section-referenced anchors live in `references/source-anchors.md`.
+Loaded by: `management-response/SKILL.md` when `scope.sector_overlay_set` includes `banking`. Cited and section-referenced anchors live in `references/source-anchors.md`.
 
 ## Source basis
 

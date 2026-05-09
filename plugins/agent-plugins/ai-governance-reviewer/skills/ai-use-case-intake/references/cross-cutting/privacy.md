@@ -1,8 +1,8 @@
 # Privacy cross-cutting overlay for ai-use-case-intake
 
-When the engagement-scope record flags `privacy` for the use case, this overlay supplies the privacy-specific intake fields and the named flags that route into downstream tier, model-card, and validation work. Privacy in financial services has both a federal regime (GLBA Safeguards Rule, HIPAA where applicable) and a state regime (state privacy laws and state insurance privacy rules); the intake captures the fields each regime needs at intake.
+When the scope record flags `privacy` for the use case, this overlay supplies the privacy-specific intake fields and the named flags that route into downstream tier, model-card, and validation work. Privacy in financial services has both a federal regime (GLBA Safeguards Rule, HIPAA where applicable) and a state regime (state privacy laws and state insurance privacy rules); the intake captures the fields each regime needs at intake.
 
-Loaded by: `ai-use-case-intake/SKILL.md` when `engagement_scope.cross_cutting_set` includes `privacy`. Source-anchored in `references/source-anchors.md`.
+Loaded by: `ai-use-case-intake/SKILL.md` when `scope.cross_cutting_set` includes `privacy`. Source-anchored in `references/source-anchors.md`.
 
 ## Source basis
 

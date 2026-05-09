@@ -20,9 +20,9 @@
       "type": "string",
       "description": "Links to ai-use-case-intake record."
     },
-    "engagement_scope_id": {
+    "scope_id": {
       "type": "string",
-      "description": "Links to engagement-scoping record if supplied."
+      "description": "Links to scoping record if supplied."
     },
     "triage_metadata": {
       "type": "object",

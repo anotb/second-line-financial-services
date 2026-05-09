@@ -1,6 +1,6 @@
 # Payments-fintech sector overlay — cdd-risk-review
 
-When the engagement scope flags payments or fintech (sponsor-bank model, licensed MSB, payment processor, BaaS arrangement, neobank), load this overlay alongside `references/source-anchors.md`. It carries the fintech-and-payments CDD frame the generic capability skill does not own.
+When the scope flags payments or fintech (sponsor-bank model, licensed MSB, payment processor, BaaS arrangement, neobank), load this overlay alongside `references/source-anchors.md`. It carries the fintech-and-payments CDD frame the generic capability skill does not own.
 
 ## Operative CIP / CDD frame for fintech
 

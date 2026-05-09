@@ -13,7 +13,7 @@ This is the canonical mapping where obligations have to extract on both sides of
 ```yaml
 register_id: REG-2026-BSA-CDD-FT-01
 as_of_date: 2026-05-06
-engagement_scope_ref: ENG-2026-FT-BSA-01
+scope_ref: ENG-2026-FT-BSA-01
 
 scope:
   process: customer onboarding, customer due diligence, beneficial ownership identification, ongoing monitoring

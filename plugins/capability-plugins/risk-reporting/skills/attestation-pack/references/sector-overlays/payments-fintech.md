@@ -1,8 +1,8 @@
 # Payments-fintech sector overlay for attestation-pack
 
-When the engagement-scope record names sector `payments-fintech`, this overlay adds payments and fintech-specific structure and content expectations. Where there is conflict between capability defaults and this overlay, the overlay governs the payments-fintech-sector elements.
+When the scope record names sector `payments-fintech`, this overlay adds payments and fintech-specific structure and content expectations. Where there is conflict between capability defaults and this overlay, the overlay governs the payments-fintech-sector elements.
 
-Loaded by: `attestation-pack/SKILL.md` when `engagement_scope.sector_overlay_set` includes `payments-fintech`, or when the institution type is a money services business, payment processor, card network participant, or fintech in a sponsor-bank-partnership arrangement.
+Loaded by: `attestation-pack/SKILL.md` when `scope.sector_overlay_set` includes `payments-fintech`, or when the institution type is a money services business, payment processor, card network participant, or fintech in a sponsor-bank-partnership arrangement.
 
 ## Source basis
 

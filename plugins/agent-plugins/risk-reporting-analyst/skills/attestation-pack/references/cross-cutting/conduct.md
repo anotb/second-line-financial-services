@@ -1,8 +1,8 @@
 # Conduct cross-cutting overlay for attestation-pack
 
-When the engagement-scope record flags `conduct` for the attestation pack, this overlay sets the conduct-attestation content for named pack sections. Conduct attestations surface at firms with consumer-facing businesses (sales-practices attestations, fair-lending self-assessments, suitability and best-interest attestations).
+When the scope record flags `conduct` for the attestation pack, this overlay sets the conduct-attestation content for named pack sections. Conduct attestations surface at firms with consumer-facing businesses (sales-practices attestations, fair-lending self-assessments, suitability and best-interest attestations).
 
-Loaded by: `attestation-pack/SKILL.md` when `engagement_scope.cross_cutting_set` includes `conduct`. Cited and section-referenced anchors live in `references/source-anchors.md`.
+Loaded by: `attestation-pack/SKILL.md` when `scope.cross_cutting_set` includes `conduct`. Cited and section-referenced anchors live in `references/source-anchors.md`.
 
 ## Source basis
 

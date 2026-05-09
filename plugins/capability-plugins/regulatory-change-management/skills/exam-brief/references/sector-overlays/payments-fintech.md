@@ -1,6 +1,6 @@
 # Payments and fintech sector overlay — exam-brief
 
-When the engagement scope flags payments or fintech activity and the regulator is the CFPB exercising direct supervisory authority over a larger non-bank participant, FinCEN for an MSB examination, a state money-transmitter regulator (under NMLS / state-by-state framework, with growing alignment under the CSBS Money Transmission Modernization Act adopted by states beginning 2022), or a state UDAP/consumer-protection authority, load this overlay alongside `references/source-anchors.md`. The federal-banking sector skill does not apply to a non-bank fintech without a sponsor bank; the substantive readiness sprint runs against the firm's existing program with this overlay framing the engagement-side mechanics.
+When the scope flags payments or fintech activity and the regulator is the CFPB exercising direct supervisory authority over a larger non-bank participant, FinCEN for an MSB examination, a state money-transmitter regulator (under NMLS / state-by-state framework, with growing alignment under the CSBS Money Transmission Modernization Act adopted by states beginning 2022), or a state UDAP/consumer-protection authority, load this overlay alongside `references/source-anchors.md`. The federal-banking sector skill does not apply to a non-bank fintech without a sponsor bank; the substantive readiness sprint runs against the firm's existing program with this overlay framing the engagement-side mechanics.
 
 ## Two distinct supervisory tracks
 

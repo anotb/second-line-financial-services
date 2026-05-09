@@ -1,6 +1,6 @@
 # Insurance sector overlay — evidence-binder
 
-Loads when the engagement-scope `sector_overlay_set` includes `insurance`. Binds evidence-binder content to state-DOI and NAIC-framework expectations.
+Loads when the scope `sector_overlay_set` includes `insurance`. Binds evidence-binder content to state-DOI and NAIC-framework expectations.
 
 ## Supervisory frame
 

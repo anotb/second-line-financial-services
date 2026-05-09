@@ -33,7 +33,7 @@ Settle these before drafting. Most engagements answer them in the first conversa
 - **What is the money-flow architecture and is there a middleware platform.** FBO-account structure where applicable; ledgering location (bank, fintech, middleware platform); settlement and reconciliation cadence. The middleware platform, where present, is a fourth-party in the bank's program; the partnership pack covers it.
 - **What is the source posture and the access population for the pack.** Public-only, public-plus-firm-policy, public-plus-firm-policy-plus-evidence, or connector-aware. Confidential supervisory information about the partner bank (prior supervisory letters, prior examination reports, prior MRAs / MRIAs) stays in CSI scope under the named federal regulator's CSI regime; the access population for the pack constrains what it can carry forward and at what label.
 
-When an engagement-scope record is supplied, the skill consumes it for institution profile, persona, source posture, sector overlay (always banking for this skill), and cross-cutting overlay set. When it is not supplied, ask the questions and default; flag the defaults in the pack.
+When an scope record is supplied, the skill consumes it for institution profile, persona, source posture, sector overlay (always banking for this skill), and cross-cutting overlay set. When it is not supplied, ask the questions and default; flag the defaults in the pack.
 
 ## How the pack gets built
 
@@ -55,7 +55,7 @@ The pack has six named body sections plus a tail. Walk them in the order the con
 
 ## Sector and cross-cutting overlays
 
-This skill is banking-sector-only; `references/sector-overlays/banking.md` is loaded automatically and carries the bank-side lens differentiators. Cross-cutting overlays load when the engagement scope flags them.
+This skill is banking-sector-only; `references/sector-overlays/banking.md` is loaded automatically and carries the bank-side lens differentiators. Cross-cutting overlays load when the scope flags them.
 
 - `references/cross-cutting/cyber.md` is the load-bearing companion for BaaS sponsor-program and embedded-lending relationships, for any fintech that holds customer NPI or sits in the authentication or fraud-decision path, and for any fintech whose serving environment is examined under FFIEC IT Handbook expectations. The CISO function co-reviews on cyber-flagged partnerships and co-decides on residual-risk acceptance.
 - `references/cross-cutting/privacy.md` loads when the fintech receives consumer financial information from the bank or shares it with the bank. Reg P and the GLBA Safeguards Rule flow down contractually; state privacy laws (CCPA / CPRA, Texas, Virginia, Colorado) reach the partnership where the fintech operates in those footprints.
@@ -79,7 +79,7 @@ Loading an overlay the engagement does not implicate adds noise without challeng
 
 - `references/source-anchors.md` — citations and excerpts for the named anchors (June 2023 Interagency Guidance lifecycle, 2024 Joint Agency Statement on Bank-Fintech Arrangements, §1867(c), Reg O, Reg W, Reg E, Reg DD, FBO / Part 330 recordkeeping, BSA / AML).
 - `references/sector-overlays/banking.md` — bank-side lens differentiators (loaded automatically).
-- `references/cross-cutting/cyber.md`, `privacy.md`, `conduct.md` — loaded conditionally on engagement-scope cross-cutting set.
+- `references/cross-cutting/cyber.md`, `privacy.md`, `conduct.md` — loaded conditionally on scope cross-cutting set.
 - `references/firm-overlay.md` — firm-installed taxonomy, partnership-tiering policy, named review-machinery roles, sponsor-program governance SOP; consumed when present.
 - `templates/default-output.md` — pack template carrying the cover, the six body sections, and the tail.
 - Examples and TROUBLESHOOTING.md may be added; see plugin-level `public-regulatory-scenarios.md` for the canonical scenario library.

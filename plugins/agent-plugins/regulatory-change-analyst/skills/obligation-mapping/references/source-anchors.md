@@ -148,4 +148,4 @@ What this skill relies on: that capital-markets registers carry retention obliga
 
 ## Sector- and cross-cutting-specific anchors
 
-The sector-overlay files (`references/sector-overlays/<sector>.md`) enumerate sector-specific anchors that load when the engagement scope flags that sector. The cross-cutting overlays (`references/cross-cutting/<topic>.md`) enumerate cross-cutting anchors. This file is the foundational set; the overlays add what the engagement scope requires.
+The sector-overlay files (`references/sector-overlays/<sector>.md`) enumerate sector-specific anchors that load when the scope flags that sector. The cross-cutting overlays (`references/cross-cutting/<topic>.md`) enumerate cross-cutting anchors. This file is the foundational set; the overlays add what the scope requires.

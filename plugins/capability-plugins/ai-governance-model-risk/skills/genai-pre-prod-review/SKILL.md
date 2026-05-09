@@ -34,9 +34,9 @@ Most of what the gate review needs is on the table by the time someone reaches f
 - What gate is this. Initial release, material expansion, recurring revalidation, or regulatory response. The gate type drives which upstream artefacts must be current versus refreshed and which sections lean heavy. A material expansion that treats prior artefacts as still-current without re-running them against the expanded scope is the recurring failure mode.
 - Are the upstream artefacts current. Intake, tier, model card, validation-plan results, and the GenAI-specific reviews (prompt-injection, RAG evaluation, vendor evidence) where applicable. Stale or missing artefacts block `go` by policy; the gate review does not assert coverage that the upstream work does not support.
 - Who reads the memo. The AI risk committee secretary and the committee are the primary audience. For tier-1 use cases the board-ai-risk-pack downstream consumer pulls the residual-risk and recommended-decision summary; for examiner-relevant use cases the regulator response file pulls the full memo. The audience drives the depth and the formality.
-- Which sector and cross-cutting overlays load. The named regulatory anchors and the named overlay files are loaded from the engagement scope. Cyber should be considered the default cross-cutting overlay for v1 GenAI gate reviews; privacy loads where regulated personal data is handled; conduct loads where customer-facing communication or decision-affecting output is in scope.
+- Which sector and cross-cutting overlays load. The named regulatory anchors and the named overlay files are loaded from the scope. Cyber should be considered the default cross-cutting overlay for v1 GenAI gate reviews; privacy loads where regulated personal data is handled; conduct loads where customer-facing communication or decision-affecting output is in scope.
 
-When the engagement-scope record is supplied, the skill consumes it for institution, persona, source posture, sector and cross-cutting overlays, gate type, and architecture flags. Otherwise the skill asks the practitioner the few facts it needs and drafts against what is given. Source posture sets what the memo can assert at high confidence and what carries `[evidence needed]`.
+When the scope record is supplied, the skill consumes it for institution, persona, source posture, sector and cross-cutting overlays, gate type, and architecture flags. Otherwise the skill asks the practitioner the few facts it needs and drafts against what is given. Source posture sets what the memo can assert at high confidence and what carries `[evidence needed]`.
 
 ## How the memo gets built
 
@@ -62,13 +62,13 @@ Depth flexes with tier and gate type. A tier-3 recurring-revalidation gate revie
 
 ## Sector and cross-cutting overlays
 
-When the engagement scope names a sector (banking, insurance, capital markets, payments-fintech), load the matching `references/sector-overlays/<sector>.md`. Each overlay carries sector-specific co-reviewers, additional notification triggers, sector-specific monitoring expectations, and recommended-action items. The overlay's named additions land in the memo; treating the overlay as background reading is the failure mode.
+When the scope names a sector (banking, insurance, capital markets, payments-fintech), load the matching `references/sector-overlays/<sector>.md`. Each overlay carries sector-specific co-reviewers, additional notification triggers, sector-specific monitoring expectations, and recommended-action items. The overlay's named additions land in the memo; treating the overlay as background reading is the failure mode.
 
 Cyber should be considered the default cross-cutting overlay for v1 GenAI gate reviews. The CISO function is a co-signer on the gate decision, not a downstream consumer. Privacy loads where regulated personal data is handled (NPI, PHI, biometric data, state-comprehensive-privacy-law-relevant content). Conduct loads where customer-facing communication or decision-affecting output is in scope. Climate is not applicable to pre-prod gate reviews.
 
 Each loaded cross-cutting overlay names a co-reviewer or co-signer (CISO function for cyber, Privacy Officer for privacy, consumer compliance for conduct) and adds named regulator-notification triggers to the incident-response readiness section. Loading the overlay without surfacing the seam in the sign-off block, the open conditions, the residual risk, the monitoring readiness, or the incident-response triggers is the failure mode.
 
-Load only the overlays the engagement scope names. Gold-plating with overlays the engagement does not implicate adds noise without challenge value.
+Load only the overlays the scope names. Gold-plating with overlays the engagement does not implicate adds noise without challenge value.
 
 ## Quality bar
 
@@ -88,7 +88,7 @@ The memo is only credible when these hold:
 
 ## Adaptation
 
-Tier and gate type drive depth. Audience drives tone (working group is plain, committee is structured, examiner response is formal, board distillation pulls residual risk and recommended decision to the front). Sector and cross-cutting overlays load from the engagement scope. Source posture sets what the memo can assert at high confidence and what carries `[evidence needed]`. Where firm-specific policy or taxonomy applies (named committees, named decision owners, internal model-risk-policy thresholds, firm-specific decision-forum machinery), it lives in `references/firm-overlay.md` (consumed when present) and never in the memo directly.
+Tier and gate type drive depth. Audience drives tone (working group is plain, committee is structured, examiner response is formal, board distillation pulls residual risk and recommended decision to the front). Sector and cross-cutting overlays load from the scope. Source posture sets what the memo can assert at high confidence and what carries `[evidence needed]`. Where firm-specific policy or taxonomy applies (named committees, named decision owners, internal model-risk-policy thresholds, firm-specific decision-forum machinery), it lives in `references/firm-overlay.md` (consumed when present) and never in the memo directly.
 
 ## Output
 
@@ -99,8 +99,8 @@ Downstream consumers: `board-ai-risk-pack` pulls the residual-risk summary, the 
 ## Pointers
 
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
-- `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md` — sector overlays loaded from engagement scope.
-- `references/cross-cutting/{cyber,privacy,conduct}.md` — cross-cutting overlays loaded from engagement scope. Cyber is the default for v1 GenAI gate reviews.
+- `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md` — sector overlays loaded from scope.
+- `references/cross-cutting/{cyber,privacy,conduct}.md` — cross-cutting overlays loaded from scope. Cyber is the default for v1 GenAI gate reviews.
 - `references/firm-overlay.md` — firm policy, taxonomy, named committees, named owners, gate machinery (consumed when present).
 - `templates/default-output.md` — gate-review memo template.
 - `schemas/genai-pre-prod-review.schema.json` — structured-output contract.

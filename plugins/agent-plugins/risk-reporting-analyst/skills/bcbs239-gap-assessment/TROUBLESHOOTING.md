@@ -96,4 +96,4 @@ Symptom: the assessment is on an OCC-supervised covered bank but Principle 1 and
 
 Why it happens: the overlay file exists in references/ but the assessment-writer treated it as background reading.
 
-Fix: when the engagement scope names a sector, the matching `references/sector-overlays/<sector>.md` content lands as named items in the assessment. For banking, the OCC Heightened Standards §II reach lands in Principles 1, 2, and 11 where applicable. For insurance, the ORSA / ICP analogues land in the mapped principles. If the overlay is loaded but the assessment has no overlay-specific content, the loader did not run; rerun with the overlay reference in scope.
+Fix: when the scope names a sector, the matching `references/sector-overlays/<sector>.md` content lands as named items in the assessment. For banking, the OCC Heightened Standards §II reach lands in Principles 1, 2, and 11 where applicable. For insurance, the ORSA / ICP analogues land in the mapped principles. If the overlay is loaded but the assessment has no overlay-specific content, the loader did not run; rerun with the overlay reference in scope.

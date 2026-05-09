@@ -1,6 +1,6 @@
 # Capital-markets sector overlay — evidence-request-builder
 
-Loaded when `engagement-scope.sector_overlay_set` includes `capital-markets` or when the test addresses FINRA, SEC, NFA, MSRB, or exchange rules. Supplements `references/source-anchors.md`.
+Loaded when `scope.sector_overlay_set` includes `capital-markets` or when the test addresses FINRA, SEC, NFA, MSRB, or exchange rules. Supplements `references/source-anchors.md`.
 
 ## Request-list conventions capital-markets testing programs apply
 

@@ -117,7 +117,7 @@ Material claims in this review are sourced. `[evidence needed]` flags items that
 | Practitioner / review author | <role> | |
 | Severity reviewer (always required) | <role, independent of author for severity attestation> | |
 | Policy owner concurrence | <role accepting recommended-edit accountability> | |
-| Sponsor (if engagement scope names one) | <role> | |
+| Sponsor (if scope names one) | <role> | |
 
 > The matrix is a draft until the named reviewer attests. Severity assignment always carries human review; an unattested severity is not yet a severity. The skill stops here.
 

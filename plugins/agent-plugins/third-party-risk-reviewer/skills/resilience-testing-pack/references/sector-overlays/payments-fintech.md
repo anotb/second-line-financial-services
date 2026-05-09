@@ -1,6 +1,6 @@
 # Payments-fintech sector overlay — resilience-testing-pack
 
-When the engagement scope flags payments-fintech, load this overlay alongside `references/source-anchors.md`. It carries the payments-and-fintech-only frame the generic capability skill does not own.
+When the scope flags payments-fintech, load this overlay alongside `references/source-anchors.md`. It carries the payments-and-fintech-only frame the generic capability skill does not own.
 
 ## Operative supervisory frame
 

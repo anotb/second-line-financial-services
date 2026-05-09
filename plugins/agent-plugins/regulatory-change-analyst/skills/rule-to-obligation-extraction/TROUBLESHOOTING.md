@@ -61,7 +61,7 @@ The extraction skill produces the atomic obligation list a discrete piece of net
 **Resolution**:
 - The skill produces a firm-agnostic register. The actor is whoever the rule names (board; senior management; CISO; covered institution; ICT third-party service provider). The evidence shape is shape, not system (board minute; attestation; log; periodic report; not "captured in GRC platform"). The owner is the regulator-defined party, not a firm-side role.
 - If the firm-side mapping is needed, the skill is `risk-compliance-core/obligation-mapping`, not this one. The two chain.
-- Where the engagement scope record has firm context, this skill ignores it for register content; firm context is consumed by `obligation-mapping`.
+- Where the scope record has firm context, this skill ignores it for register content; firm context is consumed by `obligation-mapping`.
 - Run the portability test: would the register read the same for a different firm of the same type? If not, the register is over-specified.
 
 ## 6. Confidence label that hides the defects
@@ -128,11 +128,11 @@ The extraction skill produces the atomic obligation list a discrete piece of net
 
 **Symptom**: The extraction was drafted from yesterday's understanding of the engagement; today the regulator has issued an interim final rule that supersedes the source under extraction, or the firm has changed its sector posture in a way that changes the overlay set. The register no longer matches the engagement.
 
-**Why it happens**: The engagement-scope record was treated as a kickoff artifact rather than a living record. The extraction consumed an old version.
+**Why it happens**: The scope record was treated as a kickoff artifact rather than a living record. The extraction consumed an old version.
 
 **Resolution**:
 - Engagement-scope is a status, not a fixed truth. Re-emit the scope record after any material change; re-emit the extraction consuming the updated scope.
-- Where the extraction is run without an engagement-scope record at all, ask the four questions (regulator and instrument; publication / effective / compliance dates; source posture; firm boundary) and default to public-only posture if the practitioner declines. Note in the register that scope was not formalised.
+- Where the extraction is run without an scope record at all, ask the four questions (regulator and instrument; publication / effective / compliance dates; source posture; firm boundary) and default to public-only posture if the practitioner declines. Note in the register that scope was not formalised.
 
 ## 12. Boundary with `obligation-mapping` not respected
 

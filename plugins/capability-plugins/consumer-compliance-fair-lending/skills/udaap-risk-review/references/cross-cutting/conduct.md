@@ -1,6 +1,6 @@
 # Conduct cross-cutting overlay for udaap-risk-review
 
-This overlay is mandatory on this skill. UDAAP findings are the dominant conduct-risk signal in US consumer financial services; every UDAAP review memo carries a conduct-risk implications block. The overlay names what changes when the engagement-scope record flags `conduct` (which it does by default for this skill).
+This overlay is mandatory on this skill. UDAAP findings are the dominant conduct-risk signal in US consumer financial services; every UDAAP review memo carries a conduct-risk implications block. The overlay names what changes when the scope record flags `conduct` (which it does by default for this skill).
 
 Loaded by: `udaap-risk-review/SKILL.md` whenever invoked. Cited and section-referenced anchors live in `references/source-anchors.md`.
 

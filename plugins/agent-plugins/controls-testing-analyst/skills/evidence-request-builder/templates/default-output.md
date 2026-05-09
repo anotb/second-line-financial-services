@@ -10,7 +10,7 @@ The deliverable is an Excel workbook produced via the `xlsx` skill in `document-
 | Test ID | [foreign key into test-plan-builder output] |
 | Control ID | [firm control register ID] |
 | Obligation IDs | [firm obligation register IDs; one or more] |
-| Engagement ID | [pointer to engagement-scope record, or "none — scope not formalised separately from test plan"] |
+| Engagement ID | [pointer to scope record, or "none — scope not formalised separately from test plan"] |
 | Period under test | [start date — end date] |
 | Business unit | [name; role-level, not individual-level] |
 | Jurisdiction | [primary; list secondary if multi-jurisdiction] |

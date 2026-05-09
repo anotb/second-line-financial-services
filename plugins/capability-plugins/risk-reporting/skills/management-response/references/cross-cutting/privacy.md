@@ -1,8 +1,8 @@
 # Privacy cross-cutting overlay for management-response
 
-When the engagement-scope record flags `privacy` for a management-response engagement, this overlay sets privacy-specific evidence-of-effectiveness expectations and the linkage to customer-notification clocks for findings touching customer-information safeguarding, breach-notice procedures, and consumer-financial-data handling.
+When the scope record flags `privacy` for a management-response engagement, this overlay sets privacy-specific evidence-of-effectiveness expectations and the linkage to customer-notification clocks for findings touching customer-information safeguarding, breach-notice procedures, and consumer-financial-data handling.
 
-Loaded by: `management-response/SKILL.md` when `engagement_scope.cross_cutting_overlay_set` includes `privacy`. Cited and section-referenced anchors live in `references/source-anchors.md`.
+Loaded by: `management-response/SKILL.md` when `scope.cross_cutting_overlay_set` includes `privacy`. Cited and section-referenced anchors live in `references/source-anchors.md`.
 
 ## Source basis
 

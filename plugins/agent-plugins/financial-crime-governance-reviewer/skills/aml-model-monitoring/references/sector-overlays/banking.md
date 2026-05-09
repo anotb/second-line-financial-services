@@ -1,6 +1,6 @@
 # Banking sector overlay — aml-model-monitoring
 
-When the engagement scope flags banking, load this overlay alongside `references/source-anchors.md`. It carries the bank-specific monitoring nuance the generic skill does not own.
+When the scope flags banking, load this overlay alongside `references/source-anchors.md`. It carries the bank-specific monitoring nuance the generic skill does not own.
 
 ## Segmentation lines the QA expects
 

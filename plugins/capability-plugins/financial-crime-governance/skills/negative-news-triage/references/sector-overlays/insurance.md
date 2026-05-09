@@ -1,6 +1,6 @@
 # Insurance sector overlay — negative-news-triage
 
-When the engagement scope flags insurance, load this overlay alongside `references/source-anchors.md`. Scope is narrow: the BSA AML rule for insurers covers a defined set of investment-type products; adverse-media triage on insurers tracks that scope.
+When the scope flags insurance, load this overlay alongside `references/source-anchors.md`. Scope is narrow: the BSA AML rule for insurers covers a defined set of investment-type products; adverse-media triage on insurers tracks that scope.
 
 ## Scope reminder — covered products only
 
@@ -35,7 +35,7 @@ Adverse-media triage on insurance customers is in scope when the customer holds 
 - A tier-1 hit on a covered-product policyholder naming a financial-crime typology routes to `cdd-risk-review` for an event-driven refresh and to `edd-escalation-pack` if the customer carries a heightened-risk profile (PEP, foreign-correspondent, complex-structure entity).
 - A premium-financing or STOLI-pattern hit routes to `cdd-risk-review` and may pull a `sar-decision-qa` routing line where an in-flight alert exists.
 - A producer-conduct hit (sales-practice exposure, churning) without a financial-crime typology link routes through the conduct overlay (when loaded) to the consumer-compliance and producer-oversight functions, not through the AML triage lane.
-- An adverse-media hit on a P&C-only customer surface area is generally out of scope for this triage; the engagement scope and the institution's program may route it to a fraud-program lane separately.
+- An adverse-media hit on a P&C-only customer surface area is generally out of scope for this triage; the scope and the institution's program may route it to a fraud-program lane separately.
 
 ## Common pitfalls in insurance adverse-media triage
 

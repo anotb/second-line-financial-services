@@ -1,8 +1,8 @@
 # Privacy cross-cutting overlay for validation-plan
 
-When the engagement-scope record flags `privacy` for the model use case, this overlay adds privacy-specific scope items to the validation plan. The validation plan is not the firm's privacy-impact assessment; the PIA is its own artifact under the firm's privacy program. The plan scopes the privacy-relevant tests and evidence the validator needs, and points to the PIA in source trace.
+When the scope record flags `privacy` for the model use case, this overlay adds privacy-specific scope items to the validation plan. The validation plan is not the firm's privacy-impact assessment; the PIA is its own artifact under the firm's privacy program. The plan scopes the privacy-relevant tests and evidence the validator needs, and points to the PIA in source trace.
 
-Loaded by: `validation-plan/SKILL.md` when `engagement_scope.cross_cutting_set` includes `privacy`. Cited and section-referenced anchors live in `references/source-anchors.md`.
+Loaded by: `validation-plan/SKILL.md` when `scope.cross_cutting_set` includes `privacy`. Cited and section-referenced anchors live in `references/source-anchors.md`.
 
 ## Source basis
 

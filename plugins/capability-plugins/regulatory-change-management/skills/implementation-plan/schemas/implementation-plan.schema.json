@@ -26,7 +26,7 @@
     },
     "engagement_id": {
       "type": "string",
-      "description": "Optional pointer to the engagement-scope record under which this plan was produced."
+      "description": "Optional pointer to the scope record under which this plan was produced."
     },
     "as_of_date": {
       "type": "string",
@@ -99,7 +99,7 @@
     },
     "scope_and_source_posture": {
       "type": "object",
-      "description": "Scope confirmation in writing. The shape mirrors the engagement-scope record.",
+      "description": "Scope confirmation in writing. The shape mirrors the scope record.",
       "additionalProperties": false,
       "properties": {
         "jurisdiction": { "type": "string" },

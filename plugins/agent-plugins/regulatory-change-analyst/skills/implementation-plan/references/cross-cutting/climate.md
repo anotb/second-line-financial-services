@@ -1,6 +1,6 @@
 # Cross-cutting overlay — climate
 
-Loaded when the engagement scope flags climate. Implementation plans triggered by or touching climate-risk rules carry distinct data, governance, and disclosure patterns.
+Loaded when the scope flags climate. Implementation plans triggered by or touching climate-risk rules carry distinct data, governance, and disclosure patterns.
 
 ## Large-bank climate-risk principles (Interagency)
 

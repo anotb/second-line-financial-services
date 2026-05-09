@@ -3,7 +3,7 @@
 **Program**: [legal entity; brand name if different]
 **Program role**: [fintech-program-operator | baas-platform | program-manager | wallet-operator | neobank | payments-processor | money-transmitter-only | bnpl-provider | payroll-on-demand-provider | cross-border-remittance-provider | virtual-currency-on-ramp | other]
 **Program ID**: [stable ID; reused across fintech-partner-controls, payment-operations-incident-review, concentration-risk-review]
-**Engagement ID**: [pointer to engagement-scope record, or "none — scope not formalised"]
+**Engagement ID**: [pointer to scope record, or "none — scope not formalised"]
 **As of**: [date]
 **Review trigger**: [annual-cycle | semi-annual-cycle | sponsor-bank-annual-review | state-mtl-exam-prep | cfpb-direct-supervision | internal-audit-kickoff | new-rail | new-segment | new-corridor | processor-change | sponsor-bank-change | bin-sponsor-change | post-incident-reset | larger-participant-rule-applicability]
 **Audience**: [sponsor-bank operating committee | sponsor-bank TPRM | state-MTL examiner via NMLS | CFPB EXAMS | internal audit | board risk committee | ERC]

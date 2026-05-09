@@ -38,15 +38,15 @@ Most of what the review needs is on the table by the time someone reaches for th
 - Who is co-reviewing. CISO function for any agent with tool use, identity, or external-system actuation (which is most v1 agents). Sector and conduct co-reviewers per the loaded overlays. The reviewer-attestation block names them as functions, never individuals.
 - What sector and cross-cutting overlays load. Banking, insurance, capital markets, or payments-fintech as sector; cyber as the default cross-cutting overlay for tool-using agents; privacy where regulated personal data flows through the agent's prompt or tool path; conduct where the agent's actions touch customers (insurance claims AI is the canonical example here, and the insurance overlay carries the absorbed claims-AI control bar).
 
-When the engagement-scope record is supplied, the skill consumes it for institution, persona, source posture, sector and cross-cutting overlays, lifecycle stage, and architecture flags. Otherwise it asks the practitioner the few facts it needs, and source posture sets what the artefact can assert at high confidence and what carries `[evidence needed]`.
+When the scope record is supplied, the skill consumes it for institution, persona, source posture, sector and cross-cutting overlays, lifecycle stage, and architecture flags. Otherwise it asks the practitioner the few facts it needs, and source posture sets what the artefact can assert at high confidence and what carries `[evidence needed]`.
 
 ## How the controls review gets filled in
 
 The artifact has the same spine across architectures. The order below is the dependency chain a senior practitioner walks; sections without dependencies fill in as evidence arrives.
 
-Tier and authority drive depth, so consume the model card and the engagement-scope record before deciding how heavy any section sits. Authority statement and tool inventory must precede threat assessment and oversight design, because the attack surface and the oversight points are functions of what the agent is allowed to do and what tools sit underneath. Mitigation evidence must be in hand before residual-risk framing, because residual risk is the gap between the threat surface and the controls that hold it down.
+Tier and authority drive depth, so consume the model card and the scope record before deciding how heavy any section sits. Authority statement and tool inventory must precede threat assessment and oversight design, because the attack surface and the oversight points are functions of what the agent is allowed to do and what tools sit underneath. Mitigation evidence must be in hand before residual-risk framing, because residual risk is the gap between the threat surface and the controls that hold it down.
 
-**Review metadata** names the reviewer role, the review stage (pre-prod-gate, in-prod-periodic, post-incident, expansion-review, exam-readiness), the date, and the upstream artifact IDs (engagement-scope, model card, validation plan, prompt-injection review). Reviewer roles are functions, never named individuals.
+**Review metadata** names the reviewer role, the review stage (pre-prod-gate, in-prod-periodic, post-incident, expansion-review, exam-readiness), the date, and the upstream artifact IDs (scope, model card, validation plan, prompt-injection review). Reviewer roles are functions, never named individuals.
 
 **Agent metadata and use case reference** lands the canonical agent ID and version, the sponsor function, the tier from `ai-risk-tiering`, the lifecycle stage, and pointers to the upstream intake and use-case records. A pointer to the model card's system description is preferable to restating; the agentic-controls artifact is not the place to re-derive architecture.
 
@@ -84,15 +84,15 @@ Depth flexes with tier and audience. A pre-prod-gate review for a tier-3 interna
 
 ## Sector and cross-cutting overlays
 
-When the engagement scope names a sector (banking, insurance, capital markets, payments-fintech), load the matching `references/sector-overlays/<sector>.md`. Each overlay carries sector-specific authority-statement constraints, tool-inventory expectations, oversight-design bars, monitoring signals, regulator-notification triggers, and co-reviewer expectations. The overlay's named additions land in the artifact; treating the overlay as background reading is the failure mode.
+When the scope names a sector (banking, insurance, capital markets, payments-fintech), load the matching `references/sector-overlays/<sector>.md`. Each overlay carries sector-specific authority-statement constraints, tool-inventory expectations, oversight-design bars, monitoring signals, regulator-notification triggers, and co-reviewer expectations. The overlay's named additions land in the artifact; treating the overlay as background reading is the failure mode.
 
 The insurance overlay is written deeper than the others because this skill absorbs the deprecated `claims-ai-controls` skill. For any agentic system in claims handling, FNOL, agent / producer co-pilot, or policyholder-facing actuation, the insurance overlay carries: NAIC Unfair Trade Practices Act (Model #880) and state Unfair Claims Settlement Practices Acts as the fair-claims-settlement bar (which an agent cannot move); NAIC Model Bulletin on AI Systems (December 2023) AIS Program element-by-element coverage; state DOI AI bulletins (Colorado SB 21-169 implementing regulation, NY DFS Insurance Circular Letter on AI/ECDIS January 2024, California DOI bulletin); HIPAA Privacy and Security Rules where the agent reads or writes PHI; NAIC Insurance Data Security Model Law (Model #668) §4.F where a TPA or claims administrator runs the agent; UPL boundary check on consumer-facing claims chatbots; Marketing Rule analogues and state insurance advertising rules for any customer-facing communication; ORSA materiality check for enterprise-material agents. The insurance overlay also carries the claims-specific control families: prompt-acknowledgement, reasoned-denial drafting, complaint flow, supervisor-override path, audit trail, denial-letter human review.
 
 The cyber cross-cutting overlay should be considered the default for any agent with tool use, identity, or external-system actuation. The overlay carries the cyber-side mitigations expected (authentication, audit logging, network controls, secrets handling, supply-chain controls, IR runbook integration, sandbox enforcement evidence), the cyber-tagged monitoring signals (authentication anomalies, tool-invocation patterns, cross-scope query anomaly, output-anomaly detection), and the regulator-notification triggers most likely to apply.
 
-The privacy and conduct cross-cutting overlays load when the engagement scope flags them: privacy where the agent reads or writes regulated personal data with potential for tool-misuse exfiltration; conduct where the agent's actions touch customers (the insurance claims AI flow is the canonical example, but also agent-facing communications, customer-facing communications, and decision actuation that influences a customer outcome). Climate is not applicable to agentic-controls reviews.
+The privacy and conduct cross-cutting overlays load when the scope flags them: privacy where the agent reads or writes regulated personal data with potential for tool-misuse exfiltration; conduct where the agent's actions touch customers (the insurance claims AI flow is the canonical example, but also agent-facing communications, customer-facing communications, and decision actuation that influences a customer outcome). Climate is not applicable to agentic-controls reviews.
 
-Load only the overlays the engagement scope names. Gold-plating with overlays the engagement does not implicate adds noise without challenge value.
+Load only the overlays the scope names. Gold-plating with overlays the engagement does not implicate adds noise without challenge value.
 
 ## Quality bar
 
@@ -116,7 +116,7 @@ The controls review is only credible when these hold:
 
 ## Adaptation
 
-Tier drives depth. Lifecycle stage drives which sections lean heavy (pre-prod-gate emphasises tested attacks, sandbox guarantees, oversight design, and drill plans; in-prod-periodic emphasises monitoring evidence, drill records, scope-drift audit; post-incident emphasises the timeline, the IR runbook output, and the recommended actions; expansion-review emphasises the delta against the prior review). Audience drives tone (working group is plain, committee is structured, examiner response is formal, board distillation pulls residual risk and recommended actions to the front). Sector and cross-cutting overlays load from the engagement scope. Source posture sets what the artifact can assert at high confidence and what carries `[evidence needed]`. Where firm-specific policy or taxonomy applies, it lives in `references/firm-overlay.md` (consumed when present) and never in the artifact directly.
+Tier drives depth. Lifecycle stage drives which sections lean heavy (pre-prod-gate emphasises tested attacks, sandbox guarantees, oversight design, and drill plans; in-prod-periodic emphasises monitoring evidence, drill records, scope-drift audit; post-incident emphasises the timeline, the IR runbook output, and the recommended actions; expansion-review emphasises the delta against the prior review). Audience drives tone (working group is plain, committee is structured, examiner response is formal, board distillation pulls residual risk and recommended actions to the front). Sector and cross-cutting overlays load from the scope. Source posture sets what the artifact can assert at high confidence and what carries `[evidence needed]`. Where firm-specific policy or taxonomy applies, it lives in `references/firm-overlay.md` (consumed when present) and never in the artifact directly.
 
 ## Output
 
@@ -127,8 +127,8 @@ Downstream consumers: `genai-pre-prod-review` consumes the structured object for
 ## Pointers
 
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
-- `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md` — sector overlays loaded from engagement scope; the insurance overlay carries the absorbed claims-AI control bar.
-- `references/cross-cutting/{cyber,privacy,conduct}.md` — cross-cutting overlays loaded from engagement scope; cyber is the default for tool-using agents.
+- `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md` — sector overlays loaded from scope; the insurance overlay carries the absorbed claims-AI control bar.
+- `references/cross-cutting/{cyber,privacy,conduct}.md` — cross-cutting overlays loaded from scope; cyber is the default for tool-using agents.
 - `references/firm-overlay.md` — firm policy, taxonomy, named owners (consumed when present).
 - `templates/default-output.md` — controls-review template.
 - `schemas/agentic-controls-review.schema.json` — structured-output contract.

@@ -21,7 +21,7 @@ The exam-brief is the engagement playbook the regulatory affairs lead and head o
 **Why it happens**: Banking is the home territory for many financial-services practitioners; the overlay loads on autopilot.
 
 **Resolution**:
-- Sector overlay loads from the engagement-scope record's `sector_overlay_set`, not from practitioner habit.
+- Sector overlay loads from the scope record's `sector_overlay_set`, not from practitioner habit.
 - If `sector_overlay_set = [insurance]`, load `references/sector-overlays/insurance.md` and remove banking-specific framing (MRA / MRIA, 12 CFR Part 4 CSI regime) from the brief.
 - If `sector_overlay_set = [capital-markets]`, load `references/sector-overlays/capital-markets.md`; the response-window default is 30 days from deficiency letter for SEC EXAMS and varies for FINRA, not the banking convention.
 - If `sector_overlay_set = [payments-fintech]`, load `references/sector-overlays/payments-fintech.md`; CFPB non-bank uses Matters Requiring Attention by parallel convention but state money-transmitter exams use state-specific findings mechanisms.
@@ -117,12 +117,12 @@ The exam-brief is the engagement playbook the regulatory affairs lead and head o
 
 **Symptom**: The brief was drafted from yesterday's understanding; today the regulator has confirmed an expanded scope or a participant office has joined the team. The brief no longer matches the engagement.
 
-**Why it happens**: The engagement-scope record was treated as a kickoff artifact rather than a living record. The brief consumed an old version.
+**Why it happens**: The scope record was treated as a kickoff artifact rather than a living record. The brief consumed an old version.
 
 **Resolution**:
 - Engagement-scope is a status, not a fixed truth. Re-emit the scope record after any material change; re-emit the exam-brief consuming the updated scope.
 - Standing scope review in the engagement steering cadence (daily during fieldwork, weekly otherwise).
-- Where the brief is run without an engagement-scope record at all, ask the four questions (regulator, exam type, scope window, source posture) and default to public posture if the practitioner declines. Note in the brief that scope was not formalised.
+- Where the brief is run without an scope record at all, ask the four questions (regulator, exam type, scope window, source posture) and default to public posture if the practitioner declines. Note in the brief that scope was not formalised.
 
 ## 11. The brief is treated as the deliverable, not the working artifact
 
@@ -146,4 +146,4 @@ The exam-brief is the engagement playbook the regulatory affairs lead and head o
 - The sector readiness skill is the substantive readiness pack: obligation-by-obligation status, control-by-control evidence, gap analysis against the rule, remediation roadmap.
 - The two artifacts cross-reference; they do not duplicate.
 - Where a sector readiness skill has produced the substantive pack, the brief's request-list mapping points at the pack's evidence inventory rather than restating it.
-- Where exam-brief is run alongside `engagement-scoping`, `regulatory-impact-assessment`, `rule-to-obligation-map`, `implementation-plan`, or `policy-diff` in the same plugin, the brief consumes the upstream artifacts and does not restate them.
+- Where exam-brief is run alongside `scoping`, `regulatory-impact-assessment`, `rule-to-obligation-map`, `implementation-plan`, or `policy-diff` in the same plugin, the brief consumes the upstream artifacts and does not restate them.

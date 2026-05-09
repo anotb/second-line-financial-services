@@ -107,7 +107,7 @@ Material claims in this write-up are sourced. `[evidence needed]` flags items th
 | Practitioner / write-up author | <role> | |
 | Severity reviewer (always required) | <role, independent of author for severity attestation> | |
 | Owner concurrence (the named role accepting remediation accountability) | <role> | |
-| Sponsor (if engagement scope names one) | <role> | |
+| Sponsor (if scope names one) | <role> | |
 
 > The artifact is a draft until the named reviewer attests. The skill stops here. Severity assignment always carries human review; an unattested severity is not yet a severity.
 

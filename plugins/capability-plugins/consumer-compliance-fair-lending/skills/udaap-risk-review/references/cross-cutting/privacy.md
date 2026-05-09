@@ -2,7 +2,7 @@
 
 This overlay is secondary on this skill. It loads when the in-scope flow processes NPI in a way that itself raises a UDAAP angle: a deceptive privacy disclosure, a dark-pattern privacy-consent flow, a fee mechanic tied to privacy-permission state, a data-sharing arrangement that misleads the consumer, or an AI-driven personalisation that materially relies on consumer data the consumer believes is restricted.
 
-Loaded by: `udaap-risk-review/SKILL.md` when `engagement_scope.cross_cutting_set` includes `privacy` or when the in-scope fact pattern touches a privacy-meets-UDAAP angle. Cited and section-referenced anchors live in `references/source-anchors.md`.
+Loaded by: `udaap-risk-review/SKILL.md` when `scope.cross_cutting_set` includes `privacy` or when the in-scope fact pattern touches a privacy-meets-UDAAP angle. Cited and section-referenced anchors live in `references/source-anchors.md`.
 
 ## What changes for privacy-flagged UDAAP review memos
 

@@ -1,6 +1,6 @@
 # Sector overlay — banking
 
-Loaded when the engagement scope names banking (national bank, federal savings association, state-member bank, state non-member bank, holding company, federal branch). The overlay carries banking-specific implementation-plan conventions on top of the generic spine.
+Loaded when the scope names banking (national bank, federal savings association, state-member bank, state non-member bank, holding company, federal branch). The overlay carries banking-specific implementation-plan conventions on top of the generic spine.
 
 ## Heightened Standards posture
 

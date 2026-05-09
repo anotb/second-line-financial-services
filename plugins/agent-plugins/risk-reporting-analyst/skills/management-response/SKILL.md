@@ -16,7 +16,7 @@ description: |
   - The artifact is a public regulatory response forming part of a published enforcement action (these are securities-counsel-led; this skill is the second-line draft, not the final published response).
   - The artifact is the annual SOX 404 management's report on internal control over financial reporting (out of scope; securities-counsel-led).
   - The work is enforcement-action negotiation. Where the matter has escalated to a formal enforcement action, securities counsel and outside counsel lead; this skill drafts second-line responses to supervisory findings and audit findings, not consent orders.
-argument-hint: "[finding text or pointer; finding type (regulator / audit / external); linked issue ID; engagement-scope ID or institution context]"
+argument-hint: "[finding text or pointer; finding type (regulator / audit / external); linked issue ID; scope ID or institution context]"
 ---
 
 # Management response
@@ -37,7 +37,7 @@ Most of the spine is set by the finding itself and the engagement context. A few
 - Whether a prior response exists on the same finding ID. Slippage is a common pattern; a refreshed response must explicitly acknowledge the prior commitment, the slippage, and what changed. Silently revising the prior commitment fails the supervisor's expectation that the firm manages, not just counts, the open population.
 - What the source posture is for the supporting evidence. Materiality and impact statements are frequently challenged on evidence; the source posture sets what the response can claim and what carries `[evidence needed]`.
 
-When the engagement-scope record is supplied, the skill reads `institution.type`, `institution.primary_regulators`, `persona.role`, and `confidentiality_posture` from it. Otherwise the skill works with what the practitioner names and flags the rest.
+When the scope record is supplied, the skill reads `institution.type`, `institution.primary_regulators`, `persona.role`, and `confidentiality_posture` from it. Otherwise the skill works with what the practitioner names and flags the rest.
 
 ## How the response gets built
 
@@ -65,19 +65,19 @@ The sign-off block names the responding role and the firm-level signatory where 
 
 ### Cyber
 
-When the engagement scope flags cyber, the cyber cross-cutting overlay (`references/cross-cutting/cyber.md` when installed) drives evidence-of-effectiveness expectations and the linkage to the cyber-program reporting cadence. Cyber findings frequently turn on whether a control redesign has actually reduced the residual risk, not just whether the control was reissued; the overlay covers the named evidence methods that demonstrate residual-risk reduction and the cross-link to `cyber-disclosure-readiness` where the underlying event has public-disclosure implications.
+When the scope flags cyber, the cyber cross-cutting overlay (`references/cross-cutting/cyber.md` when installed) drives evidence-of-effectiveness expectations and the linkage to the cyber-program reporting cadence. Cyber findings frequently turn on whether a control redesign has actually reduced the residual risk, not just whether the control was reissued; the overlay covers the named evidence methods that demonstrate residual-risk reduction and the cross-link to `cyber-disclosure-readiness` where the underlying event has public-disclosure implications.
 
 ### Privacy
 
-When the engagement scope flags privacy, the privacy cross-cutting overlay sets evidence-of-effectiveness expectations for findings touching customer-information safeguarding, breach-notice procedures, and consumer-financial-data handling. Privacy findings often carry a parallel customer-notification clock that the response must reconcile with the action plan dates.
+When the scope flags privacy, the privacy cross-cutting overlay sets evidence-of-effectiveness expectations for findings touching customer-information safeguarding, breach-notice procedures, and consumer-financial-data handling. Privacy findings often carry a parallel customer-notification clock that the response must reconcile with the action plan dates.
 
 ### Conduct
 
-When the engagement scope flags conduct, the conduct cross-cutting overlay sets evidence-of-effectiveness expectations for findings touching customer-conduct controls, fair-lending controls, and retail-investor-protection controls. Conduct findings frequently turn on remediation that the firm owes affected customers in addition to control redesign; the response carries the customer-remediation strand alongside the control strand.
+When the scope flags conduct, the conduct cross-cutting overlay sets evidence-of-effectiveness expectations for findings touching customer-conduct controls, fair-lending controls, and retail-investor-protection controls. Conduct findings frequently turn on remediation that the firm owes affected customers in addition to control redesign; the response carries the customer-remediation strand alongside the control strand.
 
 ### Sector overlays
 
-Load only the overlay the engagement scope names. Banking responses are the prudential-supervisor-shaped case; the formal-letter conventions and the supervisory-severity-ladder defaults are tightest here. Insurance responses follow state insurance-department and peer-review conventions, which vary by state. Capital-markets responses cover markets-supervisor examination deficiency letters and self-regulatory-organisation examination findings; the formal-letter conventions and the response windows differ from the banking case. Payments-fintech responses cover consumer-protection supervisory findings, state money-transmitter examination findings, and bank-partnership examination findings flowing through the sponsor bank.
+Load only the overlay the scope names. Banking responses are the prudential-supervisor-shaped case; the formal-letter conventions and the supervisory-severity-ladder defaults are tightest here. Insurance responses follow state insurance-department and peer-review conventions, which vary by state. Capital-markets responses cover markets-supervisor examination deficiency letters and self-regulatory-organisation examination findings; the formal-letter conventions and the response windows differ from the banking case. Payments-fintech responses cover consumer-protection supervisory findings, state money-transmitter examination findings, and bank-partnership examination findings flowing through the sponsor bank.
 
 The sector overlay is content that lands in the response, not background reading. A banking overlay loaded but no severity-tier default applied, or an insurance overlay loaded but no state-DOI convention reflected in the addressee block, is the failure mode the troubleshooting file calls out.
 
@@ -106,8 +106,8 @@ Downstream consumers: the structured object feeds `risk-committee-pack` (the iss
 ## Pointers
 
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
-- `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md` — sector overlays loaded from engagement scope.
-- `references/cross-cutting/{cyber,privacy,conduct}.md` — cross-cutting overlays loaded from engagement scope.
+- `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md` — sector overlays loaded from scope.
+- `references/cross-cutting/{cyber,privacy,conduct}.md` — cross-cutting overlays loaded from scope.
 - `references/firm-overlay.md` — firm-installed signatory conventions, classification handling, response-file routing (consumed when present).
 - `templates/default-output.md` — response template with the named sections.
 - `schemas/management-response.schema.json` — structured-output contract; reuses `issue.schema.json` for finding linkage.

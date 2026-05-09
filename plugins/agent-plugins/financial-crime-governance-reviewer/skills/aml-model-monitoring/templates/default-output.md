@@ -22,7 +22,7 @@
 
 \<Paragraph one — the system, its scope, what it covers (products, channels, geographies), the review type and the operative review window.>
 
-\<Paragraph two — the model-risk frame. State that AML transaction monitoring is in scope as a model under the named model-risk supervisory guidance the engagement scope identifies, and that the review reads against model-risk discipline (development, implementation, use, validation, governance) as well as BSA/AML examination expectations. This frame is load-bearing; without it the review reads as a "rules check" and misses the discipline.>
+\<Paragraph two — the model-risk frame. State that AML transaction monitoring is in scope as a model under the named model-risk supervisory guidance the scope identifies, and that the review reads against model-risk discipline (development, implementation, use, validation, governance) as well as BSA/AML examination expectations. This frame is load-bearing; without it the review reads as a "rules check" and misses the discipline.>
 
 \<Paragraph three — the load-bearing question for this review. Annual reviews carry "is the system meeting its design intent against the institution's risk profile". Post-tuning reviews carry "does the change evidence chain hold up". Pre-validation reviews carry "what should the next validation cycle scope". Pre-exam reviews carry "is the documentation ready to read in an examination". State the question explicitly so the rest of the memo answers it.>
 

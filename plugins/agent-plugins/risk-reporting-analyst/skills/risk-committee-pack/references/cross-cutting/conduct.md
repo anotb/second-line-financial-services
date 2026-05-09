@@ -1,8 +1,8 @@
 # Conduct cross-cutting overlay for risk-committee-pack
 
-When the engagement-scope record flags `conduct` for the committee pack, this overlay sets the conduct-risk content for named pack sections. Conduct risk in second-line vocabulary is the customer-outcome and market-integrity lens, the named-manager accountability lens, and the regulatory-engagement lens; it is not the same as compliance risk and not the same as fairness as a model property. The committee pack carries the enterprise conduct-risk slice; deeper material on individual conduct events, fair-lending findings, suitability matters, and SMCR responsibility maps lives in the relevant capability or sector skills.
+When the scope record flags `conduct` for the committee pack, this overlay sets the conduct-risk content for named pack sections. Conduct risk in second-line vocabulary is the customer-outcome and market-integrity lens, the named-manager accountability lens, and the regulatory-engagement lens; it is not the same as compliance risk and not the same as fairness as a model property. The committee pack carries the enterprise conduct-risk slice; deeper material on individual conduct events, fair-lending findings, suitability matters, and SMCR responsibility maps lives in the relevant capability or sector skills.
 
-Loaded by: `risk-committee-pack/SKILL.md` when `engagement_scope.cross_cutting_set` includes `conduct`. Cited and section-referenced anchors live in `references/source-anchors.md`.
+Loaded by: `risk-committee-pack/SKILL.md` when `scope.cross_cutting_set` includes `conduct`. Cited and section-referenced anchors live in `references/source-anchors.md`.
 
 ## Source basis
 

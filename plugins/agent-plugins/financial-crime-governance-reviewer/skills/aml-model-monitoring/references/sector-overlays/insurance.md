@@ -1,6 +1,6 @@
 # Insurance sector overlay — aml-model-monitoring
 
-When the engagement scope flags insurance, load this overlay alongside `references/source-anchors.md`. AML monitoring scope at insurance carriers is narrower than at banks, broker-dealers, or payments-fintech, but the lines that exist are well-defined.
+When the scope flags insurance, load this overlay alongside `references/source-anchors.md`. AML monitoring scope at insurance carriers is narrower than at banks, broker-dealers, or payments-fintech, but the lines that exist are well-defined.
 
 ## Operative scope
 

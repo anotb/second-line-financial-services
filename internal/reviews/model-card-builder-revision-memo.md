@@ -3,13 +3,13 @@
 Date: 2026-05-06
 Reviewer: phase-2 reviewer subagent
 Subject: revised `plugins/capability-plugins/ai-governance-model-risk/skills/model-card-builder/SKILL.md`
-Compared against: spec sheet (`docs/specs/ai-governance-model-risk/model-card-builder.md`), the engagement-scoping revision-memo as pattern reference, build contract, anti-AI-tells memory (with the sequencing nuance update), spec sheets for downstream consumers (`validation-plan`, `board-ai-risk-pack`, `ai-governance-reviewer` agent).
+Compared against: spec sheet (`docs/specs/ai-governance-model-risk/model-card-builder.md`), the scoping revision-memo as pattern reference, build contract, anti-AI-tells memory (with the sequencing nuance update), spec sheets for downstream consumers (`validation-plan`, `board-ai-risk-pack`, `ai-governance-reviewer` agent).
 
 ## 1. Top-line judgment
 
-About right, leaning slightly under-cut in three specific spots. The revision is in much better shape than the engagement-scoping first cut. The reviser kept what mattered: the named-section spine survives in narrative form, the GenAI overlay trigger conditions are explicit and correct, the 1.5-line / 2-line lens is named, the tier-to-depth and upstream-artifacts ordering is explicitly load-bearing, the lifecycle stage lean (pre-prod / production / retirement) is in the "Ask first" and is picked up implicitly through the body. Downstream consumers are named with what each pulls — that is the right move and is more concrete than the engagement-scoping equivalent.
+About right, leaning slightly under-cut in three specific spots. The revision is in much better shape than the scoping first cut. The reviser kept what mattered: the named-section spine survives in narrative form, the GenAI overlay trigger conditions are explicit and correct, the 1.5-line / 2-line lens is named, the tier-to-depth and upstream-artifacts ordering is explicitly load-bearing, the lifecycle stage lean (pre-prod / production / retirement) is in the "Ask first" and is picked up implicitly through the body. Downstream consumers are named with what each pulls — that is the right move and is more concrete than the scoping equivalent.
 
-What did get under-cut: schema-stability discipline (one passing reference to `schemas/model-card.schema.json`, no additive-only / versioned-migration line — and this skill's schema is the input contract for `validation-plan`, `board-ai-risk-pack`, the `ai-governance-reviewer` agent, and the model inventory of record, so it carries more weight than the engagement-scoping schema does). The "Ask first" four questions are good (tier, lifecycle, audience, evidence) but miss the architecture-flag question that drives the GenAI overlay (the spec's pitfall #3 is "GenAI cards inherit a structure designed for traditional ML and miss foundation-model dependency, prompt injection, RAG corpus drift" — and the way to head that off is to ask the architecture question early, not to wait for it to surface during drafting). And the sector / cross-cutting overlay question is missing from "Ask first" entirely; the engagement-scope record may not be present, in which case the practitioner needs to be asked.
+What did get under-cut: schema-stability discipline (one passing reference to `schemas/model-card.schema.json`, no additive-only / versioned-migration line — and this skill's schema is the input contract for `validation-plan`, `board-ai-risk-pack`, the `ai-governance-reviewer` agent, and the model inventory of record, so it carries more weight than the scoping schema does). The "Ask first" four questions are good (tier, lifecycle, audience, evidence) but miss the architecture-flag question that drives the GenAI overlay (the spec's pitfall #3 is "GenAI cards inherit a structure designed for traditional ML and miss foundation-model dependency, prompt injection, RAG corpus drift" — and the way to head that off is to ask the architecture question early, not to wait for it to surface during drafting). And the sector / cross-cutting overlay question is missing from "Ask first" entirely; the scope record may not be present, in which case the practitioner needs to be asked.
 
 A handful of small AI tells survived ("the most common defect" appears twice, "the single most common defect on first-time GenAI cards" once). Those are fake-precision residue.
 
@@ -27,9 +27,9 @@ The spec's common pitfall #3:
 
 The revised "Ask first" has four questions (tier, lifecycle, audience, evidence). The architecture-flag question is not asked. The GenAI overlay block triggers downstream of architecture, but the practitioner has to surface architecture early or the card spine for a GenAI use case starts on the wrong shape and gets retrofitted. A senior practitioner asks "is this a foundation-model use case, RAG, agentic, or traditional ML" before they pick up the pen, not three sections in.
 
-Equivalent for the sector / cross-cutting question. The skill has banking, insurance, capital-markets, payments-fintech sector overlays plus cyber, privacy, conduct cross-cutting overlays. The body says "When the engagement-scope record is supplied, the skill consumes it for institution, persona, source posture, sector and cross-cutting overlays, and lifecycle stage. Otherwise it asks the practitioner the few facts it needs." That is the right model. But the "Ask first" list does not include the overlay question explicitly, and a practitioner reading the list would not know to ask it. Either fold it into the existing list or keep the deferral in the body and add a sentence that says "and which sector and cross-cutting overlays apply" — which is what gets picked up later but should be visible at the top.
+Equivalent for the sector / cross-cutting question. The skill has banking, insurance, capital-markets, payments-fintech sector overlays plus cyber, privacy, conduct cross-cutting overlays. The body says "When the scope record is supplied, the skill consumes it for institution, persona, source posture, sector and cross-cutting overlays, and lifecycle stage. Otherwise it asks the practitioner the few facts it needs." That is the right model. But the "Ask first" list does not include the overlay question explicitly, and a practitioner reading the list would not know to ask it. Either fold it into the existing list or keep the deferral in the body and add a sentence that says "and which sector and cross-cutting overlays apply" — which is what gets picked up later but should be visible at the top.
 
-The "Ask first" list does not need to be five bullets. Four well-chosen ones are fine. But the four currently chosen are not the right four. Tier, lifecycle, audience, evidence — these miss the load-bearing architecture question (which gates the entire GenAI overlay) and the overlay question (which the skill consumes from engagement scope or asks).
+The "Ask first" list does not need to be five bullets. Four well-chosen ones are fine. But the four currently chosen are not the right four. Tier, lifecycle, audience, evidence — these miss the load-bearing architecture question (which gates the entire GenAI overlay) and the overlay question (which the skill consumes from scope or asks).
 
 ### 2.2 Schema-stability discipline
 
@@ -39,13 +39,13 @@ The revision's "Output" section:
 >
 > Downstream consumers: `board-ai-risk-pack` pulls metadata, tier, intended use, performance and limitations summary, and material sign-off questions. `validation-plan` pulls architecture and data sections to scope validation work. The `ai-governance-reviewer` agent pulls the structured object for second-line challenge. The model inventory of record pulls the structured object for the central registry. The card itself is what an examiner is handed.
 
-The downstream-consumer paragraph is good — concrete, named, says what each pulls. Better than engagement-scoping's equivalent.
+The downstream-consumer paragraph is good — concrete, named, says what each pulls. Better than scoping's equivalent.
 
-What's missing is the schema-stability rule. Engagement-scoping has:
+What's missing is the schema-stability rule. Scoping has:
 
 > The schema is the cross-skill contract; additive changes only, never silent edits. Add fields, do not rename or repurpose them. A breaking change is a versioned migration with the downstream skills told in advance.
 
-(After the engagement-scoping memo's Edit 2 lands, that is.) Model-card has zero equivalent line. Given that the model-card schema feeds four named consumers including an entire agent, the discipline matters more here than in engagement-scoping. One sentence is enough; do not balloon it.
+(After the scoping memo's Edit 2 lands, that is.) Model-card has zero equivalent line. Given that the model-card schema feeds four named consumers including an entire agent, the discipline matters more here than in scoping. One sentence is enough; do not balloon it.
 
 ### 2.3 The four "Ask first" practitioner questions
 
@@ -65,7 +65,7 @@ The fix is not "add two more bullets" — that swells the list to six and starts
 - Audience (drives tone and depth).
 - Architecture and overlays (drives which spine — traditional or GenAI — and which sector / cross-cutting overlays load).
 
-Fold "evidence" into the engagement-scope paragraph that already exists below the list ("source posture sets what the card can assert at high confidence and what carries `[evidence needed]`"). Evidence is not a question the practitioner answers; it is a status the engagement carries. Lifecycle, audience, tier, architecture-and-overlays are decisions.
+Fold "evidence" into the scope paragraph that already exists below the list ("source posture sets what the card can assert at high confidence and what carries `[evidence needed]`"). Evidence is not a question the practitioner answers; it is a status the engagement carries. Lifecycle, audience, tier, architecture-and-overlays are decisions.
 
 This is a recomposition rather than an expansion. List stays at four.
 
@@ -73,11 +73,11 @@ This is a recomposition rather than an expansion. List stays at four.
 
 The revised SKILL.md says:
 
-> When the engagement scope names a sector (banking, insurance, capital markets, payments-fintech), load the matching `references/sector-overlays/<sector>.md`. The overlay's named fields and sign-off questions land in the card; treating the overlay as background reading is the failure mode. Same pattern for the cross-cutting overlays this skill carries: cyber, privacy, conduct. Climate is not applicable to model cards.
+> When the scope names a sector (banking, insurance, capital markets, payments-fintech), load the matching `references/sector-overlays/<sector>.md`. The overlay's named fields and sign-off questions land in the card; treating the overlay as background reading is the failure mode. Same pattern for the cross-cutting overlays this skill carries: cyber, privacy, conduct. Climate is not applicable to model cards.
 
 This is good. "Treating the overlay as background reading is the failure mode" is a real practitioner observation, not engineer-voice. Keep it.
 
-What's missing: "load only the overlays the engagement scope names" is in the next paragraph but the symmetry with engagement-scoping's "directive to downstream skills" framing is not surfaced. Engagement-scoping says the overlay sets are directives downstream skills consume; this skill is a downstream skill consuming them. One sentence acknowledging the contract from the consumer side would close the loop. Minor; skip if it bloats.
+What's missing: "load only the overlays the scope names" is in the next paragraph but the symmetry with scoping's "directive to downstream skills" framing is not surfaced. Scoping says the overlay sets are directives downstream skills consume; this skill is a downstream skill consuming them. One sentence acknowledging the contract from the consumer side would close the loop. Minor; skip if it bloats.
 
 ### 2.5 Surviving AI tells
 
@@ -106,7 +106,7 @@ Combined with:
 
 The Pointers section names:
 
-> `references/cross-cutting/{cyber,privacy,conduct}.md` — cross-cutting overlays loaded from engagement scope.
+> `references/cross-cutting/{cyber,privacy,conduct}.md` — cross-cutting overlays loaded from scope.
 
 The directory does not exist. The skill points at files it does not ship. This is outside the SKILL.md text proper (it is a separate gap in the skill build) but the SKILL.md is making a promise the skill cannot keep. Either ship the three files (small; the spec gives them clear scope) or remove the pointer.
 
@@ -118,11 +118,11 @@ To save the orchestrator a re-check:
 
 - Named-section spine (all 14): present in narrative form. Metadata, intended use, system description, data, performance, robustness, fairness/explainability, limitations, monitoring, controls, change management, sign-off, source trace. Out-of-scope is folded into the intended-use paragraph; that is correct. Spine survives.
 - GenAI overlay trigger conditions: explicit and correct. "When `architecture.foundation_model` is set, or `architecture.uses_rag` is true, or `architecture.uses_tools` is true, the GenAI overlay block fires." The four landed-section behaviors (system description, robustness, monitoring, change management) are each named.
-- 1.5-line vs 2-line lens: present and well-stated, with the seam (source-trace block, sign-off questions) called out. Better than the engagement-scoping equivalent.
+- 1.5-line vs 2-line lens: present and well-stated, with the seam (source-trace block, sign-off questions) called out. Better than the scoping equivalent.
 - Lifecycle stage lean: in "Ask first" as one bullet, picked up explicitly in the body as pre-prod / production / retirement. Good.
 - Tier-to-depth and upstream-artifacts sequencing: explicit, framed as "load-bearing", correctly identified as the two real dependency chains. The sequencing-nuance update to the anti-AI-tells memory is exactly what this revision did. Good.
 - Engagement-scope integration: present as a body sentence, not as a heavy procedural section. Good.
-- Downstream consumers named: `board-ai-risk-pack`, `validation-plan`, `ai-governance-reviewer`, model inventory of record. This is more concrete than what engagement-scoping does and should not be cut.
+- Downstream consumers named: `board-ai-risk-pack`, `validation-plan`, `ai-governance-reviewer`, model inventory of record. This is more concrete than what scoping does and should not be cut.
 
 ## 3. Proposed edits
 
@@ -146,9 +146,9 @@ Seven edits, all small. None reintroduce numbered ladders, fake-precision ranges
 
 Then update the paragraph below the list:
 
-> When the engagement-scope record is supplied, the skill consumes it for institution, persona, source posture, sector and cross-cutting overlays, lifecycle stage, and architecture flags. Otherwise it asks the practitioner the few facts it needs, and source posture sets what the card can assert at high confidence and what carries `[evidence needed]`.
+> When the scope record is supplied, the skill consumes it for institution, persona, source posture, sector and cross-cutting overlays, lifecycle stage, and architecture flags. Otherwise it asks the practitioner the few facts it needs, and source posture sets what the card can assert at high confidence and what carries `[evidence needed]`.
 
-**Why**: the architecture question gates the GenAI overlay block — which is the spec's pitfall #3 mitigation — and the overlay set is named load-bearing input downstream. The "evidence" question gets folded into the engagement-scope paragraph because evidence is not really a question the practitioner answers, it is a status the engagement carries. Tier, lifecycle, audience, architecture-and-overlays is what a senior practitioner actually asks.
+**Why**: the architecture question gates the GenAI overlay block — which is the spec's pitfall #3 mitigation — and the overlay set is named load-bearing input downstream. The "evidence" question gets folded into the scope paragraph because evidence is not really a question the practitioner answers, it is a status the engagement carries. Tier, lifecycle, audience, architecture-and-overlays is what a senior practitioner actually asks.
 
 ### Edit 2 — add the schema-stability sentence
 
@@ -158,7 +158,7 @@ Then update the paragraph below the list:
 
 > The schema is the input contract for those consumers; additive changes only, never silent renames. Breaking changes ship as a versioned migration with the consumers told in advance.
 
-**Why**: this skill's schema feeds four named downstream consumers including an agent. The discipline matters and currently has no mention. Pattern matches the engagement-scoping memo's Edit 2.
+**Why**: this skill's schema feeds four named downstream consumers including an agent. The discipline matters and currently has no mention. Pattern matches the scoping memo's Edit 2.
 
 ### Edit 3 — cut "the most common defect" framing
 
@@ -202,9 +202,9 @@ Then update the paragraph below the list:
 
 **Proposed addition** (one sentence):
 
-> The overlay sets are directives produced by the engagement-scope record; this skill is one of the consumers.
+> The overlay sets are directives produced by the scope record; this skill is one of the consumers.
 
-**Why**: closes the loop with engagement-scoping's framing. The overlay sets are described in `engagement-scoping` as directives downstream skills consume; from the consumer side the symmetry is worth one sentence. Skip if the section starts to feel structured-for-its-own-sake; the substance is reachable without it.
+**Why**: closes the loop with scoping's framing. The overlay sets are described in `scoping` as directives downstream skills consume; from the consumer side the symmetry is worth one sentence. Skip if the section starts to feel structured-for-its-own-sake; the substance is reachable without it.
 
 ### Edit 7 — ship the cross-cutting overlay files (structural, not SKILL.md text)
 
@@ -222,8 +222,8 @@ In case the orchestrator over-corrects after this memo:
 - **Tier-to-depth and upstream-artifacts ordering is explicitly load-bearing and called out as such.** Right. This is exactly what the sequencing-nuance update to the anti-AI-tells memory describes — explicit ordering where the order is a real dependency chain. Do not remove the "load-bearing" framing.
 - **The named-section spine walks as prose paragraphs, not a numbered 1-12 ladder.** Right. The spec sheet enumerates fourteen sections; the practitioner walks them in narrative shape. Do not re-enumerate.
 - **The GenAI overlay block is a single subsection with the trigger conditions named once and the four landed-section behaviors listed.** Right. No repetition across other sections. Keep this.
-- **"Both lenses" framing for 1.5-line owner / 2-line reviewer is specific and names the seam.** Right. Better than the engagement-scoping equivalent and the practitioner-lens memory specifically calls out that 1.5/2 both matter. Keep.
-- **Downstream consumers are named with what each pulls.** Right and concrete. Better than engagement-scoping. Keep verbatim.
+- **"Both lenses" framing for 1.5-line owner / 2-line reviewer is specific and names the seam.** Right. Better than the scoping equivalent and the practitioner-lens memory specifically calls out that 1.5/2 both matter. Keep.
+- **Downstream consumers are named with what each pulls.** Right and concrete. Better than scoping. Keep verbatim.
 - **No `[verify section]` markers in SKILL.md or the description's "Anchored to:" line.** Right. Those belong in `references/source-anchors.md`.
 - **No "fail the quality bar" residue, no "must / mandatory / required" stack, no marketing adjectives ("comprehensive", "robust", "ensure"), no hedge tics ("it is worth noting").** Right. Two minor "most common defect" tells slipped through (Edits 3 and 4); the rest is clean.
 - **One "What's load-bearing and what flexes" section, not parallel "non-negotiable rigidities / adaptation guidance" pair.** Right. Anti-AI-tells memory specifically bans the pair. Keep this as one section.

@@ -1,6 +1,6 @@
 # Insurance sector overlay — edd-escalation-pack
 
-When the engagement scope flags insurance, load this overlay alongside `references/source-anchors.md`. It carries the insurance-specific EDD frame the generic capability skill does not own. EDD escalations apply only to covered products under the operative rule; many insurance products are outside scope.
+When the scope flags insurance, load this overlay alongside `references/source-anchors.md`. It carries the insurance-specific EDD frame the generic capability skill does not own. EDD escalations apply only to covered products under the operative rule; many insurance products are outside scope.
 
 ## Operative rule set in covered insurance
 

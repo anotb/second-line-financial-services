@@ -72,7 +72,7 @@ Symptom: insurance overlay loaded but no NAIC Model Audit Rule mapping in the pa
 
 Why it happens: overlay treated as background reading rather than content that lands in the pack.
 
-Fix: when the engagement scope names an overlay, the matching content lands as named items in the pack (a section, an exception type, an evidence-row category, a sign-off question). Overlay-specific assertion language and sign-off questions go to the reviewer-question list.
+Fix: when the scope names an overlay, the matching content lands as named items in the pack (a section, an exception type, an evidence-row category, a sign-off question). Overlay-specific assertion language and sign-off questions go to the reviewer-question list.
 
 ## Pack stops too late
 

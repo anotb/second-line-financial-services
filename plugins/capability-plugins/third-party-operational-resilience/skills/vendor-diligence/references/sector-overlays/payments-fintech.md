@@ -1,6 +1,6 @@
 # Payments-fintech sector overlay — vendor-diligence
 
-When the engagement scope flags payments or fintech (sponsor-bank programs, BaaS platforms, money transmitters, MSBs, card-program operators), load this overlay alongside `references/source-anchors.md`.
+When the scope flags payments or fintech (sponsor-bank programs, BaaS platforms, money transmitters, MSBs, card-program operators), load this overlay alongside `references/source-anchors.md`.
 
 ## Operative supervisory frame
 

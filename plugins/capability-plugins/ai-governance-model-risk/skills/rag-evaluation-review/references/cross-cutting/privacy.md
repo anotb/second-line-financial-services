@@ -1,8 +1,8 @@
 # Privacy cross-cutting overlay for rag-evaluation-review
 
-When the engagement-scope record flags `privacy` for a RAG evaluation review, this overlay sits as the primary cross-cutting lens. Most regulated-FS RAG systems retrieve over corpora containing NPI, PHI, MNPI, or other regulated personal data; the privacy overlay is the default cross-cutting overlay for these cases, the way cyber is the default for prompt-injection reviews.
+When the scope record flags `privacy` for a RAG evaluation review, this overlay sits as the primary cross-cutting lens. Most regulated-FS RAG systems retrieve over corpora containing NPI, PHI, MNPI, or other regulated personal data; the privacy overlay is the default cross-cutting overlay for these cases, the way cyber is the default for prompt-injection reviews.
 
-Loaded by: `rag-evaluation-review/SKILL.md` when `engagement_scope.cross_cutting_set` includes `privacy`. Cited and section-referenced anchors live in `references/source-anchors.md`.
+Loaded by: `rag-evaluation-review/SKILL.md` when `scope.cross_cutting_set` includes `privacy`. Cited and section-referenced anchors live in `references/source-anchors.md`.
 
 ## Source basis
 

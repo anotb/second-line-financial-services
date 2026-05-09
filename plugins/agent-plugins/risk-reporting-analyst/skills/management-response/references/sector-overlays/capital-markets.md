@@ -1,8 +1,8 @@
 # Capital-markets sector overlay for management-response
 
-When the engagement-scope record names `capital-markets` for a management-response engagement, this overlay sets markets-supervisor and self-regulatory-organisation conventions for the response artifact.
+When the scope record names `capital-markets` for a management-response engagement, this overlay sets markets-supervisor and self-regulatory-organisation conventions for the response artifact.
 
-Loaded by: `management-response/SKILL.md` when `engagement_scope.sector_overlay_set` includes `capital-markets`. Cited and section-referenced anchors live in `references/source-anchors.md`.
+Loaded by: `management-response/SKILL.md` when `scope.sector_overlay_set` includes `capital-markets`. Cited and section-referenced anchors live in `references/source-anchors.md`.
 
 ## Source basis
 

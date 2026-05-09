@@ -14,7 +14,7 @@ Public-source-derived. No named institution. Vendor named "Vendor V" only. Frami
 
 The skill emits a markdown pack and a structured record. Headlines:
 
-- **Cover** — attestation period, scope (Vendor V; real-time card-transaction fraud screening; integration points named; legal-entity perimeter), attesting role = Head of Vendor Management, attestation type = vendor-management, assertion-language version 4.2, source posture, engagement-scope ID linked.
+- **Cover** — attestation period, scope (Vendor V; real-time card-transaction fraud screening; integration points named; legal-entity perimeter), attesting role = Head of Vendor Management, attestation type = vendor-management, assertion-language version 4.2, source posture, scope ID linked.
 - **Executive summary** — five bullets in attesting role's voice. Headline: vendor relationship operating effectively in all material respects subject to two named exceptions; one in active remediation, one pending architecture review next quarter.
 - **Scope statement** — names the vendor (anonymised as "Vendor V"), the service, the system integration points (real-time API at the card-transaction-authorisation layer, batch reconciliation feed to fraud-data warehouse), the legal-entity perimeter (top-tier bank and subsidiary), and the time period.
 - **Source criteria** — interagency third-party risk management guidance (June 2023); AICPA SSAE 18 AT-C 320 for the vendor SOC 2 reliance; firm third-party-risk policy v3.1; firm vendor-management framework v2.4.

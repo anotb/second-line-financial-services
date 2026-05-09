@@ -1,8 +1,8 @@
 # Banking sector overlay for risk-committee-pack
 
-When the engagement-scope record names sector `banking`, this overlay adds banking-specific structure and content expectations to the committee pack. Where there is conflict between the capability defaults and this overlay, the overlay governs the banking-sector elements.
+When the scope record names sector `banking`, this overlay adds banking-specific structure and content expectations to the committee pack. Where there is conflict between the capability defaults and this overlay, the overlay governs the banking-sector elements.
 
-Loaded by: `risk-committee-pack/SKILL.md` when `engagement_scope.sector_overlay_set` includes `banking`, or when the institution type implicates a federal banking regulator (national bank, state member bank, savings association, BHC, FBO with US operations).
+Loaded by: `risk-committee-pack/SKILL.md` when `scope.sector_overlay_set` includes `banking`, or when the institution type implicates a federal banking regulator (national bank, state member bank, savings association, BHC, FBO with US operations).
 
 ## Source basis
 

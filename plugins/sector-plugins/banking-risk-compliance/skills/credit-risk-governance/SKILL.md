@@ -35,7 +35,7 @@ Settle these before drafting. Most cycles answer them in the first conversation;
 - **What triggered this cycle.** Policy refresh, examination prep, MRA or MRIA response, transaction review, quarterly Reg O cycle, annual credit review, concentration watch (the portfolio is approaching or has crossed an internal or interagency concentration trigger). The trigger drives where the pack focuses depth.
 - **What is the source posture and the access population.** Public-only, public-plus-firm-policy, public-plus-firm-policy-plus-evidence, or connector-aware. CSI (prior supervisory letters, prior MRAs / MRIAs on credit) cannot leave the bank without the regulator's written authorisation; the access population for the pack constrains what it can carry.
 
-When an `engagement-scope` record is supplied, consume it for institution profile, persona, source posture, and the conduct cross-cutting overlay flag. When not supplied, ask the questions and default; flag the defaults in the pack.
+When an `scope` record is supplied, consume it for institution profile, persona, source posture, and the conduct cross-cutting overlay flag. When not supplied, ask the questions and default; flag the defaults in the pack.
 
 ## How the pack gets built
 

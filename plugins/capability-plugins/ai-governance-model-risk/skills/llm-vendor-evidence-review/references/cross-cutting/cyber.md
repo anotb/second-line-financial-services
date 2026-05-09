@@ -1,6 +1,6 @@
 # Cross-cutting overlay: cyber
 
-Loaded when `engagement-scope.cross_cutting_overlay_set` includes cyber. The cyber overlay should be considered the default for foundation-model evidence-pack reviews; the threat surface a foundation-model vendor exposes is, in regulator framing, a cybersecurity risk class. The CISO function is a co-reviewer for the security and privacy criteria.
+Loaded when `scope.cross_cutting_overlay_set` includes cyber. The cyber overlay should be considered the default for foundation-model evidence-pack reviews; the threat surface a foundation-model vendor exposes is, in regulator framing, a cybersecurity risk class. The CISO function is a co-reviewer for the security and privacy criteria.
 
 ## Supervisory frame
 

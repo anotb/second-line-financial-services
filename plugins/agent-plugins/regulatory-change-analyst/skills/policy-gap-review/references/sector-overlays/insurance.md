@@ -1,6 +1,6 @@
 # Insurance sector overlay — policy-gap-review
 
-Loads when the engagement-scope `sector_overlay_set` includes `insurance`. Binds policy gap reviews to insurance-supervisory expectations on the firm's policy framework.
+Loads when the scope `sector_overlay_set` includes `insurance`. Binds policy gap reviews to insurance-supervisory expectations on the firm's policy framework.
 
 ## Supervisory frame
 

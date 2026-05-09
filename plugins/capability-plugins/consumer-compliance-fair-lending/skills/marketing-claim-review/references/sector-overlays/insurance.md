@@ -1,8 +1,8 @@
 # Insurance sector overlay for marketing-claim-review
 
-When the engagement-scope record names sector `insurance`, this overlay sets the scope boundary first. Insurance advertising review sits with state insurance departments under the NAIC Unfair Trade Practices Act framework (Model #880) and the NAIC advertising-content model regulations (Model #570 for life and annuities; Model #40 for accident and sickness; comparable models for other lines). This skill is the consumer-financial UDAAP / Reg Z lane and does not extend into insurance advertising as such. The overlay is short on purpose.
+When the scope record names sector `insurance`, this overlay sets the scope boundary first. Insurance advertising review sits with state insurance departments under the NAIC Unfair Trade Practices Act framework (Model #880) and the NAIC advertising-content model regulations (Model #570 for life and annuities; Model #40 for accident and sickness; comparable models for other lines). This skill is the consumer-financial UDAAP / Reg Z lane and does not extend into insurance advertising as such. The overlay is short on purpose.
 
-Loaded by: `marketing-claim-review/SKILL.md` when `engagement_scope.sector_overlay_set` includes `insurance`, or when the institution type implicates a life, health, or property-and-casualty insurer.
+Loaded by: `marketing-claim-review/SKILL.md` when `scope.sector_overlay_set` includes `insurance`, or when the institution type implicates a life, health, or property-and-casualty insurer.
 
 Cited and section-referenced anchors live in `references/source-anchors.md`.
 

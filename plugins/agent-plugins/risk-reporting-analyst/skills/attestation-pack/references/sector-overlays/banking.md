@@ -1,8 +1,8 @@
 # Banking sector overlay for attestation-pack
 
-When the engagement-scope record names sector `banking`, this overlay adds banking-specific structure and content expectations to the attestation pack. Where there is conflict between capability defaults and this overlay, the overlay governs the banking-sector elements.
+When the scope record names sector `banking`, this overlay adds banking-specific structure and content expectations to the attestation pack. Where there is conflict between capability defaults and this overlay, the overlay governs the banking-sector elements.
 
-Loaded by: `attestation-pack/SKILL.md` when `engagement_scope.sector_overlay_set` includes `banking`, or when the institution type implicates a federal banking regulator (national bank, state member bank, savings association, BHC, FBO with US operations).
+Loaded by: `attestation-pack/SKILL.md` when `scope.sector_overlay_set` includes `banking`, or when the institution type implicates a federal banking regulator (national bank, state member bank, savings association, BHC, FBO with US operations).
 
 ## Source basis
 
@@ -39,7 +39,7 @@ The risk-data attestation use case (Head of Risk Reporting attesting to data qua
 - Reflects current Top-5 priority gaps as exceptions in the current period.
 - Feeds the regulatory-capital-reporting attestation chain where the firm files Y-14, Y-9, FFIEC 031/041, and similar regulatory reports.
 
-For SSM-supervised institutions or US-IHC subsidiaries of SSM groups, the ECB Guide on effective risk data aggregation and risk reporting (May 2024 final) raises the bar incrementally; the overlay carries that distinction when the engagement scope flags both jurisdictions.
+For SSM-supervised institutions or US-IHC subsidiaries of SSM groups, the ECB Guide on effective risk data aggregation and risk reporting (May 2024 final) raises the bar incrementally; the overlay carries that distinction when the scope flags both jurisdictions.
 
 ### 5. Y-14 / Y-9 attestation chain
 

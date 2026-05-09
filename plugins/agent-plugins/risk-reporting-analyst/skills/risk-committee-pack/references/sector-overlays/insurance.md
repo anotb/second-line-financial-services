@@ -1,8 +1,8 @@
 # Insurance sector overlay for risk-committee-pack
 
-When the engagement-scope record names sector `insurance`, this overlay adds insurance-specific structure and content expectations to the committee pack so the artifact a state DOI examiner reviews reads as ORSA-aligned. Where there is conflict between the capability defaults and this overlay, the overlay governs the insurance-sector elements.
+When the scope record names sector `insurance`, this overlay adds insurance-specific structure and content expectations to the committee pack so the artifact a state DOI examiner reviews reads as ORSA-aligned. Where there is conflict between the capability defaults and this overlay, the overlay governs the insurance-sector elements.
 
-Loaded by: `risk-committee-pack/SKILL.md` when `engagement_scope.sector_overlay_set` includes `insurance`, or when the institution type implicates a state DOI (life and health insurer, P&C insurer, fraternal benefit society, captive, surplus lines insurer, reinsurer with US operations).
+Loaded by: `risk-committee-pack/SKILL.md` when `scope.sector_overlay_set` includes `insurance`, or when the institution type implicates a state DOI (life and health insurer, P&C insurer, fraternal benefit society, captive, surplus lines insurer, reinsurer with US operations).
 
 ## Source basis
 

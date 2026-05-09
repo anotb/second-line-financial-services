@@ -1,8 +1,8 @@
 # Privacy cross-cutting overlay for adverse-action-review
 
-When the engagement-scope record flags `privacy` for the adverse-action review, this overlay adds privacy-regime content to the named review sections. Privacy overlap on this skill is structural rather than incidental: the review pulls applicant data, model features, BISG inputs, and per-decision feature contributions, and that data is non-public personal information (NPI) under GLBA and personal information under the state-privacy regimes.
+When the scope record flags `privacy` for the adverse-action review, this overlay adds privacy-regime content to the named review sections. Privacy overlap on this skill is structural rather than incidental: the review pulls applicant data, model features, BISG inputs, and per-decision feature contributions, and that data is non-public personal information (NPI) under GLBA and personal information under the state-privacy regimes.
 
-Loaded by: `adverse-action-review/SKILL.md` when `engagement_scope.cross_cutting_set` includes `privacy`. Cited and section-referenced anchors live in `references/source-anchors.md`.
+Loaded by: `adverse-action-review/SKILL.md` when `scope.cross_cutting_set` includes `privacy`. Cited and section-referenced anchors live in `references/source-anchors.md`.
 
 ## What changes for privacy-flagged adverse-action review
 

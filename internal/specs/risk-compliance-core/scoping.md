@@ -1,4 +1,4 @@
-# Spec: engagement-scoping
+# Spec: scoping
 
 Plugin: risk-compliance-core
 Status: phase 1 spec sheet, pending phase 2 build
@@ -7,16 +7,16 @@ Origin: added mid-phase-1 per practitioner feedback as the bootstrapping primiti
 
 ## Activation-tuned description
 
-Produces a structured engagement-scope record that downstream second-line skills consume to set institution context, persona context, source posture, risk lens, and overlay set. The output is a reusable engagement charter that survives across the engagement and is revised as scope shifts. Replaces the implicit assumptions every skill would otherwise make about regulator constellation, sector overlay, and review-gate set.
+Produces a structured scope record that downstream second-line skills consume to set institution context, persona context, source posture, risk lens, and overlay set. The output is a reusable engagement charter that survives across the engagement and is revised as scope shifts. Replaces the implicit assumptions every skill would otherwise make about regulator constellation, sector overlay, and review-gate set.
 
 Best for:
 - An advisory engagement is starting and the engagement lead needs a written scope before any review work begins.
 - An internal second-line review is being charted (annual model risk review, periodic third-party risk review, audit support engagement, exam-readiness sprint, regulatory-change implementation, board-pack preparation cycle).
 - A new practitioner is joining an engagement mid-flight and needs the engagement context in one document.
-- A skill is being invoked and the engagement scope is unclear or contested — running this skill first stops the downstream skill from defaulting to wrong assumptions.
+- A skill is being invoked and the scope is unclear or contested — running this skill first stops the downstream skill from defaulting to wrong assumptions.
 
 Not the right tool when:
-- The skill being invoked is already engagement-scope-aware and an engagement scope is already on file (skip and pass the existing scope).
+- The skill being invoked is already scope-aware and a scope is already on file (skip and pass the existing scope).
 - The work is a one-off question, not an engagement.
 - The institution and persona are already encoded as constants in a firm-overlay reference doc (consume the overlay, do not redo scoping).
 
@@ -42,7 +42,7 @@ Anchored to: COSO ERM 2017 (engagement scoping is part of risk identification an
 
 ## Cross-cutting overlays needed
 
-- `cyber` — when the engagement scope includes cyber risk, capture cyber risk taxonomy alignment, NYDFS Part 500 applicability, SEC cyber 8-K applicability (public company), Reg S-P applicability.
+- `cyber` — when the scope includes cyber risk, capture cyber risk taxonomy alignment, NYDFS Part 500 applicability, SEC cyber 8-K applicability (public company), Reg S-P applicability.
 - `privacy` — when in scope, capture GLBA Safeguards applicability, state privacy law applicability (CCPA/CPRA, VCDPA, CTDPA, etc.), HIPAA applicability for life/health insurance.
 - `climate` — when in scope, capture SEC climate disclosure status (current state), TCFD-aligned reporting, state insurance climate risk disclosure.
 - `conduct` — when the engagement is conduct-flavored, capture FCA SMCR applicability for UK-licensed entities, US enforcement themes.

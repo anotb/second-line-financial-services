@@ -1,6 +1,6 @@
 # Sector overlay: banking
 
-Loaded when `engagement-scope.sector_overlay_set` includes banking. Carries the bank-vendor-specific frame for foundation-model evidence-pack review: the supervisory perspective bank examiners take on third-party model evidence, the entity-level wrapper that the interagency third-party guidance imposes, and the specific evidence asks that bank-vendor reviews surface in addition to the cross-cutting baseline.
+Loaded when `scope.sector_overlay_set` includes banking. Carries the bank-vendor-specific frame for foundation-model evidence-pack review: the supervisory perspective bank examiners take on third-party model evidence, the entity-level wrapper that the interagency third-party guidance imposes, and the specific evidence asks that bank-vendor reviews surface in addition to the cross-cutting baseline.
 
 ## Supervisory frame
 

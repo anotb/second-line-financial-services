@@ -6,7 +6,7 @@ Public-source-derived. No named institution. Pattern aligns with a regional life
 
 A regional US life insurer is at the material-expansion pre-prod gate for a tier-2 GenAI claims summarisation assistant. The assistant has been in production in one regional office for six months and is being expanded nationwide. RAG over scanned correspondence (claimant letters, third-party adjuster notes), medical records, and the firm's claims-handling policy corpus. No tools enabled. Foundation model is vendor-hosted with version pinning.
 
-Engagement scope provided by `engagement-scoping`:
+Engagement scope provided by `scoping`:
 - Institution type: life insurance carrier, regional, primary regulators state insurance commissioners across operating states; NAIC AIS Program adoption status varies by state; HIPAA covered-entity status under group-health line.
 - Persona: AI Governance Lead (second line) consolidating; AI risk committee owns the gate motion.
 - Sector overlay: insurance. Cross-cutting overlays: cyber (state Insurance Data Security Model Law-adopting jurisdictions), privacy (PHI under HIPAA), conduct (claimant-facing communication exposure).

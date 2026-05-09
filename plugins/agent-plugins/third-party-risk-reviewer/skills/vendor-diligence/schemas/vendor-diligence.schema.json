@@ -40,7 +40,7 @@
     },
     "engagement_id": {
       "type": "string",
-      "description": "Optional pointer to the engagement-scope record under which this diligence was produced."
+      "description": "Optional pointer to the scope record under which this diligence was produced."
     },
     "as_of_date": {
       "type": "string",

@@ -32,7 +32,7 @@
     },
     "engagement_id": {
       "type": "string",
-      "description": "Optional pointer to the engagement-scope record under which this review was produced. Empty string if scope was not formalised."
+      "description": "Optional pointer to the scope record under which this review was produced. Empty string if scope was not formalised."
     },
     "firm_registration": {
       "type": "string",

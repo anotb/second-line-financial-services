@@ -1,6 +1,6 @@
 # Conduct cross-cutting overlay for complaint-theme-analysis
 
-This overlay is mandatory on this skill. Complaints are the canonical conduct-risk surveillance signal in US consumer financial services; theme analysis is what the conduct function does with that signal at population scale. Every theme analysis carries a conduct-risk implications block per theme. The overlay names what changes when the engagement-scope record flags `conduct` (which it does by default for this skill).
+This overlay is mandatory on this skill. Complaints are the canonical conduct-risk surveillance signal in US consumer financial services; theme analysis is what the conduct function does with that signal at population scale. Every theme analysis carries a conduct-risk implications block per theme. The overlay names what changes when the scope record flags `conduct` (which it does by default for this skill).
 
 Loaded by: `complaint-theme-analysis/SKILL.md` whenever invoked. Cited and section-referenced anchors live in `references/source-anchors.md`.
 

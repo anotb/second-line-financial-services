@@ -1,6 +1,6 @@
 # Capital markets sector overlay — regulatory-impact-assessment
 
-When the engagement scope flags capital markets and the rule touches SEC-registered investment advisers, registered funds, broker-dealers, transfer agents, exchanges, ATSs, or FINRA members, load this overlay alongside `references/source-anchors.md`. The overlay carries the SEC adopting-release mechanics, FINRA rule-filing alignment under SEC Rule 19b-4, the AUM-and-activity threshold mechanics, IAA Rule 206(4)-7 implications, and the strategy-lens posture for SEC and FINRA engagements.
+When the scope flags capital markets and the rule touches SEC-registered investment advisers, registered funds, broker-dealers, transfer agents, exchanges, ATSs, or FINRA members, load this overlay alongside `references/source-anchors.md`. The overlay carries the SEC adopting-release mechanics, FINRA rule-filing alignment under SEC Rule 19b-4, the AUM-and-activity threshold mechanics, IAA Rule 206(4)-7 implications, and the strategy-lens posture for SEC and FINRA engagements.
 
 ## Institution-type scoping conventions
 

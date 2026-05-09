@@ -32,7 +32,7 @@ Symptom: GenAI plan with adversarial-input testing only (the traditional ML robu
 
 Why it happens: the planner imports the traditional-ML robustness template into a GenAI plan without re-reading the architecture flags.
 
-Fix: attack-class catalogue is tied to architecture. For traditional ML: out-of-time backtest, stress scenario, segment robustness, adversarial input. For RAG: add direct prompt injection, indirect prompt injection on retrieved content, RAG poisoning. For agentic: add tool misuse, goal hijack. For vendor-hosted GenAI: add a vendor model-version swap drill. The cyber cross-cutting overlay catalogues the full set; load it when `engagement_scope.cross_cutting_set` includes `cyber`.
+Fix: attack-class catalogue is tied to architecture. For traditional ML: out-of-time backtest, stress scenario, segment robustness, adversarial input. For RAG: add direct prompt injection, indirect prompt injection on retrieved content, RAG poisoning. For agentic: add tool misuse, goal hijack. For vendor-hosted GenAI: add a vendor model-version swap drill. The cyber cross-cutting overlay catalogues the full set; load it when `scope.cross_cutting_set` includes `cyber`.
 
 ## Monitoring scope copy-pasted from the model card
 
@@ -48,7 +48,7 @@ Symptom: insurance pricing plan reads in fairness/bias vocabulary but never name
 
 Why it happens: the sector overlay file exists in references/ but the planner treated it as background reading.
 
-Fix: when the engagement scope names a sector, the matching `references/sector-overlays/<sector>.md` content lands as named scope items in the plan. Effective-challenge questions probe the sector items. If the overlay is loaded but the plan has no overlay-specific scope, the loader did not run; rerun with the overlay reference in scope.
+Fix: when the scope names a sector, the matching `references/sector-overlays/<sector>.md` content lands as named scope items in the plan. Effective-challenge questions probe the sector items. If the overlay is loaded but the plan has no overlay-specific scope, the loader did not run; rerun with the overlay reference in scope.
 
 ## Source trace omits vendor evidence
 
@@ -88,4 +88,4 @@ Symptom: tier-1 model with a light-touch plan; or tier-4 model with a full plan 
 
 Why it happens: a single template depth is being applied across the inventory, or the tier is stale and was not consumed at plan time.
 
-Fix: tier drives depth. Consume the `ai-risk-tiering` output as an upstream artifact; if it does not exist or is stale, route to `ai-risk-tiering` before continuing. The `tier_justification` paragraph in the plan documents how tier and validation type drove the per-pillar depth distribution; if the tier and the depth disagree, the engagement scope wins and the disagreement goes to the issue log.
+Fix: tier drives depth. Consume the `ai-risk-tiering` output as an upstream artifact; if it does not exist or is stale, route to `ai-risk-tiering` before continuing. The `tier_justification` paragraph in the plan documents how tier and validation type drove the per-pillar depth distribution; if the tier and the depth disagree, the scope wins and the disagreement goes to the issue log.

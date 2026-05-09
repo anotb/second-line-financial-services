@@ -1,6 +1,6 @@
 # Payments and fintech sector overlay for genai-pre-prod-review
 
-When the engagement-scope record names `payments-fintech` as the sector, this overlay adds payments-and-fintech-specific gate considerations: sponsor-bank co-acceptance where applicable, payments-specific notification triggers, sector-specific monitoring expectations, and recommended-action items typical of payments and fintech GenAI gate reviews (customer-service assistants, fraud-detection augmentation, transaction-monitoring augmentation, dispute-handling assistants). Loaded by `genai-pre-prod-review/SKILL.md` when `engagement_scope.sector_overlay_set` includes `payments-fintech`. Cited and section-referenced anchors live in `references/source-anchors.md`.
+When the scope record names `payments-fintech` as the sector, this overlay adds payments-and-fintech-specific gate considerations: sponsor-bank co-acceptance where applicable, payments-specific notification triggers, sector-specific monitoring expectations, and recommended-action items typical of payments and fintech GenAI gate reviews (customer-service assistants, fraud-detection augmentation, transaction-monitoring augmentation, dispute-handling assistants). Loaded by `genai-pre-prod-review/SKILL.md` when `scope.sector_overlay_set` includes `payments-fintech`. Cited and section-referenced anchors live in `references/source-anchors.md`.
 
 ## Source basis
 

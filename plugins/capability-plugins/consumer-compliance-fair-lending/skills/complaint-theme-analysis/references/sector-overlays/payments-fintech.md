@@ -1,8 +1,8 @@
 # Payments and fintech sector overlay for complaint-theme-analysis
 
-When the engagement-scope record names sector `payments-fintech`, this overlay adds payments-fintech-specific theme patterns, evidence sources, and attribution detail. Where there is conflict between the capability defaults and this overlay, the overlay governs the payments-fintech-sector elements.
+When the scope record names sector `payments-fintech`, this overlay adds payments-fintech-specific theme patterns, evidence sources, and attribution detail. Where there is conflict between the capability defaults and this overlay, the overlay governs the payments-fintech-sector elements.
 
-Loaded by: `complaint-theme-analysis/SKILL.md` when `engagement_scope.sector_overlay_set` includes `payments-fintech`, or when the institution type implicates a fintech program operator, money services business, P2P provider, BNPL provider, neobank, or sponsor-bank-aligned consumer-finance fintech.
+Loaded by: `complaint-theme-analysis/SKILL.md` when `scope.sector_overlay_set` includes `payments-fintech`, or when the institution type implicates a fintech program operator, money services business, P2P provider, BNPL provider, neobank, or sponsor-bank-aligned consumer-finance fintech.
 
 Cited and section-referenced anchors live in `references/source-anchors.md`.
 

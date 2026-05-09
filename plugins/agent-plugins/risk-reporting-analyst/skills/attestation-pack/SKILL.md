@@ -36,7 +36,7 @@ Most of the spine is set by the attestation type and the attesting role. A few t
 - **Whether a SOC report is in evidence**. Where the attestation relies on a vendor SOC 2 Type II report, the user firm reviews carve-outs, identifies complementary user entity controls (CUECs), and provides CUEC-level evidence at the user firm. A SOC report alone is not evidence of the user firm's controls.
 - **What the prior-period exceptions were and where they sit now**. Every prior-period exception carries a current-status row in the pack; items not remediated by the current attestation surface as current-period exceptions. The roll-forward is part of the workflow, not an afterthought.
 
-When the engagement-scope record is supplied, the skill reads `institution.type`, `institution.primary_regulators`, `persona.role`, `attestation_type` (where the engagement scope carries it), `sector_overlay_set`, `cross_cutting_overlay_set`, and `source_posture` from it. Otherwise the skill works with what the practitioner names and flags the rest.
+When the scope record is supplied, the skill reads `institution.type`, `institution.primary_regulators`, `persona.role`, `attestation_type` (where the scope carries it), `sector_overlay_set`, `cross_cutting_overlay_set`, and `source_posture` from it. Otherwise the skill works with what the practitioner names and flags the rest.
 
 ## How the pack gets built
 
@@ -64,7 +64,7 @@ The source trace is the appendix that maps every material claim to its evidence 
 
 ### Sector overlays
 
-Load only the overlay the engagement scope names. Banking attestations carry the SOX 404 framework with COSO 2013, the Heightened Standards risk-governance-framework attestation linkage, the vendor-management attestation under the interagency third-party guidance, the BCBS 239 risk-data attestation, the regulatory-capital-reporting attestation chain, and the BSA officer annual certification. Insurance attestations carry the NAIC Model Audit Rule (Model #205) ICFR attestation and the ORSA management assertion (Model #505). Capital-markets attestations carry the fund CCO annual report under Rule 38a-1, the adviser CCO annual review under Rule 206(4)-7, the broker-dealer Rule 17a-5 annual report, and the FINRA Rule 3130 CEO certification chain. Payments-fintech attestations carry the PCI DSS Attestation of Compliance, the sponsor-bank-partnership attestation linkage, and the state money-transmitter and MSB attestation expectations.
+Load only the overlay the scope names. Banking attestations carry the SOX 404 framework with COSO 2013, the Heightened Standards risk-governance-framework attestation linkage, the vendor-management attestation under the interagency third-party guidance, the BCBS 239 risk-data attestation, the regulatory-capital-reporting attestation chain, and the BSA officer annual certification. Insurance attestations carry the NAIC Model Audit Rule (Model #205) ICFR attestation and the ORSA management assertion (Model #505). Capital-markets attestations carry the fund CCO annual report under Rule 38a-1, the adviser CCO annual review under Rule 206(4)-7, the broker-dealer Rule 17a-5 annual report, and the FINRA Rule 3130 CEO certification chain. Payments-fintech attestations carry the PCI DSS Attestation of Compliance, the sponsor-bank-partnership attestation linkage, and the state money-transmitter and MSB attestation expectations.
 
 The sector overlay is content that lands in the pack, not background reading. An insurance overlay loaded but no Model #205 mapping in the pack is the failure mode the troubleshooting file calls out.
 
@@ -85,7 +85,7 @@ Cyber overlay loads when cyber-control attestation is in scope (annual CISO cert
 
 ## Adaptation
 
-Attestation type drives the assertion-language register, the sub-certification ladder, and the named reviewer set. Audience drives tone (process-owner sub-certification is technical; function-head sub-certification is wider; executive-facing material is challenge-shaped). Sector and cross-cutting overlays load from the engagement scope. Where firm-specific certification framework, sub-certification ladder, named officer roles, assertion-language register, or policy-evidence taxonomy applies, it lives in `references/firm-overlay.md` (consumed when present) and never in the pack directly.
+Attestation type drives the assertion-language register, the sub-certification ladder, and the named reviewer set. Audience drives tone (process-owner sub-certification is technical; function-head sub-certification is wider; executive-facing material is challenge-shaped). Sector and cross-cutting overlays load from the scope. Where firm-specific certification framework, sub-certification ladder, named officer roles, assertion-language register, or policy-evidence taxonomy applies, it lives in `references/firm-overlay.md` (consumed when present) and never in the pack directly.
 
 ## Output
 
@@ -96,8 +96,8 @@ Downstream consumers: the structured object feeds the firm's certification syste
 ## Pointers
 
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
-- `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md` — sector overlays loaded from engagement scope.
-- `references/cross-cutting/{cyber,privacy,conduct}.md` — cross-cutting overlays loaded from engagement scope.
+- `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md` — sector overlays loaded from scope.
+- `references/cross-cutting/{cyber,privacy,conduct}.md` — cross-cutting overlays loaded from scope.
 - `references/firm-overlay.md` — firm-installed certification framework, sub-certification ladder, named officer roles, assertion-language register, policy-evidence taxonomy (consumed when present).
 - `templates/default-output.md` — pack template with the named sections.
 - `schemas/attestation-pack.schema.json` — structured-output contract.

@@ -15,7 +15,7 @@ The plan is a draft until the validator and the model risk committee (or equival
 - Validation type: [initial / annual-revalidation / vendor-swap-revalidation / off-cycle-trigger / post-incident]
 - Scope date: [YYYY-MM-DD]
 - Use-case ID (links to `ai-use-case-intake`): [ID]
-- Engagement-scope ID (if `engagement-scoping` was run): [ID]
+- Engagement-scope ID (if `scoping` was run): [ID]
 
 ---
 
@@ -160,7 +160,7 @@ Vendor self-attestation carries low to medium confidence. Firm-independent evalu
 
 ## 13. Sector overlay notes (when applicable)
 
-When the engagement scope names a sector, the matching `references/sector-overlays/<sector>.md` adds named scope items here. Examples:
+When the scope names a sector, the matching `references/sector-overlays/<sector>.md` adds named scope items here. Examples:
 
 - Banking: ECOA / Reg B fair-lending integration; CCAR / DFAST overlap if model is stress-eligible; FFIEC BSA/AML manual scope for AML models; OCC Heightened Standards governance touchpoint.
 - Insurance: AIS Program element coverage per NAIC Bulletin Dec 2023; per-state DOI bulletin alignment (CO, NY DFS, CA); unfair-discrimination framing under Model #880; ORSA materiality.
@@ -173,7 +173,7 @@ If no sector overlay is loaded, this section is omitted.
 
 ## 14. Cross-cutting overlay notes (when applicable)
 
-When the engagement scope flags cyber, privacy, or conduct, the matching `references/cross-cutting/<topic>.md` adds named scope items here.
+When the scope flags cyber, privacy, or conduct, the matching `references/cross-cutting/<topic>.md` adds named scope items here.
 
 - Cyber: prompt-injection robustness scope, RAG poisoning, model extraction, NYDFS October 2024 letter alignment.
 - Privacy: PII memorisation tests, training-data leak tests, retrieval over inappropriate corpora.

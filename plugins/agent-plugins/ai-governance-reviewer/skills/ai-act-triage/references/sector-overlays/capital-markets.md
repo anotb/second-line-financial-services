@@ -1,8 +1,8 @@
 # Capital-markets sector overlay for ai-act-triage
 
-When the engagement-scope record names sector `capital-markets`, this overlay adds capital-markets-specific scoping, Article 2 exclusion analysis, and parallel-regime reconciliation to the EU AI Act triage. EU branches of US asset managers and broker-dealers, EU-authorised investment firms (MiFID II), UCITS management companies, AIFMs, and EU-authorised central counterparties and trading venues all use this overlay alongside the capability triage. Where there is conflict between the capability defaults and this overlay, the overlay governs the capital-markets-specific elements.
+When the scope record names sector `capital-markets`, this overlay adds capital-markets-specific scoping, Article 2 exclusion analysis, and parallel-regime reconciliation to the EU AI Act triage. EU branches of US asset managers and broker-dealers, EU-authorised investment firms (MiFID II), UCITS management companies, AIFMs, and EU-authorised central counterparties and trading venues all use this overlay alongside the capability triage. Where there is conflict between the capability defaults and this overlay, the overlay governs the capital-markets-specific elements.
 
-Loaded by: `ai-act-triage/SKILL.md` when `engagement_scope.sector_overlay_set` includes `capital-markets`, or when the institution type implicates an investment firm, asset manager, broker-dealer, UCITS ManCo, AIFM, trading venue, central counterparty, central securities depository, or related capital-markets entity. Cited and section-referenced anchors live in `references/source-anchors.md`.
+Loaded by: `ai-act-triage/SKILL.md` when `scope.sector_overlay_set` includes `capital-markets`, or when the institution type implicates an investment firm, asset manager, broker-dealer, UCITS ManCo, AIFM, trading venue, central counterparty, central securities depository, or related capital-markets entity. Cited and section-referenced anchors live in `references/source-anchors.md`.
 
 ## What changes for a capital-markets triage
 

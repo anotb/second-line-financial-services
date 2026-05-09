@@ -6,7 +6,7 @@ Public-source-derived. No named institution. Pattern aligns with a US national b
 
 A US national bank holding company is at the initial-release pre-prod gate for a tier-1 GenAI assistant supporting the KYC analyst desk. The assistant retrieves over the firm's KYC documentation corpus, customer-relationship-history datastore, third-party adverse-media feeds, and beneficial-ownership records, and drafts narrative summaries for analyst review and sign-off. RAG over four corpora; no tools enabled. Foundation model is vendor-hosted with version pinning and contractual change-of-version notice.
 
-Engagement scope provided by `engagement-scoping`:
+Engagement scope provided by `scoping`:
 - Institution type: bank holding company, large-cap, primary regulators OCC and FRB; CFPB for the consumer-banking subsidiary; NYDFS for the NY-chartered subsidiary; FinCEN for BSA/AML scope.
 - Persona: AI Governance Lead (second line) consolidating; AI risk committee secretary owns the gate motion.
 - Sector overlay: banking. Cross-cutting overlays: cyber (NYDFS Part 500 in NY footprint, October 2024 letter), privacy (regulated NPI), conduct loaded but light (KYC analyst is internal user, not customer-facing).

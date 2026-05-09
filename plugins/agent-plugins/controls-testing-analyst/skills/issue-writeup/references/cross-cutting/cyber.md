@@ -1,6 +1,6 @@
 # Cyber cross-cutting overlay — issue-writeup
 
-Loads when the engagement-scope `cross_cutting_overlay_set` includes `cyber`. The overlay shapes the criteria block, the severity calibration, and the closure-evidence framing for issues whose underlying condition touches information-security controls, customer-data exposure, or third-party-provided technology services.
+Loads when the scope `cross_cutting_overlay_set` includes `cyber`. The overlay shapes the criteria block, the severity calibration, and the closure-evidence framing for issues whose underlying condition touches information-security controls, customer-data exposure, or third-party-provided technology services.
 
 ## Why cyber belongs in most issue write-ups
 

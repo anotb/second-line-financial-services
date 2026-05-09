@@ -11,7 +11,7 @@ The artifact is a draft until the human reviewer attests.
 - Reviewer role: [function, e.g. AI Governance Lead, MRMO, second-line cyber]
 - Review stage: [pre-prod-gate / in-prod-periodic / post-incident / expansion-review / exam-readiness]
 - Review date: [YYYY-MM-DD]
-- Engagement-scope ID: [ID, when `engagement-scoping` was run]
+- Engagement-scope ID: [ID, when `scoping` was run]
 - Model card ID: [ID, links to `model-card-builder`]
 - Validation plan ID: [ID, links to `validation-plan`]
 - Prompt-injection review ID: [ID, links to `prompt-injection-risk` where it has run]
@@ -245,14 +245,14 @@ Vendor red-team results carry vendor-self-attestation confidence (typically low 
 
 ## 18. Sector and cross-cutting overlay notes (when applicable)
 
-When the engagement scope names a sector, the matching `references/sector-overlays/<sector>.md` adds named fields here. Examples:
+When the scope names a sector, the matching `references/sector-overlays/<sector>.md` adds named fields here. Examples:
 
 - Banking: 12 CFR Part 53 / Part 225 / Part 304 36-hour notification posture; FFIEC IT Examination Handbook touchpoint; sponsor-bank shared-responsibility allocation for fintech-backed banking-as-a-service flows; BSA officer involvement on AML-touching agent flows.
 - Insurance (carrying the absorbed claims-AI control bar): claims-AI carrier (NAIC #880 fair-claims-settlement coverage; state UCSPA per-state mapping; NAIC AIS Program element status; HIPAA touch where PHI flows; NAIC Model #668 §4.F where TPA runs the agent; UPL boundary on consumer-facing chatbots; ORSA materiality if enterprise-material).
 - Capital markets: Rule 15c3-5 market-access controls for order-routing agents; FINRA Rule 3110 supervision; surveillance-system overlap; SEC Marketing Rule reach for adviser-side AI-generated communications; books-and-records preservation under Rule 204-2.
 - Payments and fintech: BaaS bank-fintech responsibility allocation; CFPB UDAAP exposure on consumer-facing actuation; state money-transmitter licensing where applicable; sponsor-bank co-acceptance.
 
-When the engagement scope flags cross-cutting overlays, add the matching `references/cross-cutting/<topic>.md` fields:
+When the scope flags cross-cutting overlays, add the matching `references/cross-cutting/<topic>.md` fields:
 
 - Cyber: NYDFS October 2024 industry-letter alignment; NYDFS Part 500 incident-notice posture; SEC cyber 8-K and Reg S-K Item 106 for public registrants; NIST SP 800-53 control-family tagging on threat-surface, mitigations, monitoring, incident response.
 - Privacy: PII / NPI / PHI exfiltration as a privacy event class; GLBA, HIPAA, state privacy law touchpoints; consumer-recourse posture; per-customer scoping evidence.

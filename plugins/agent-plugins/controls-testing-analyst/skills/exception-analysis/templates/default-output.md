@@ -8,7 +8,7 @@
 **Period under test**: [start date — end date]
 **Business unit**: [name; role-level, not individual-level]
 **Jurisdiction**: [primary; list secondary if multi-jurisdiction]
-**Engagement ID**: [pointer to engagement-scope record, or "none — scope not formalised separately from test plan"]
+**Engagement ID**: [pointer to scope record, or "none — scope not formalised separately from test plan"]
 **Source posture**: [public-only | public-plus-firm-policy | public-plus-firm-policy-plus-evidence | connector-aware]
 **Preparer (role)**: [e.g., compliance-testing analyst]
 **Preparer date**: [ISO date]

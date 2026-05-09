@@ -3,7 +3,7 @@
 **Test ID**: [stable ID per firm naming convention]
 **Control ID**: [firm control register ID]
 **Obligation IDs**: [firm obligation register IDs; one or more]
-**Engagement ID**: [pointer to engagement-scope record, or "none — scope not formalised separately"]
+**Engagement ID**: [pointer to scope record, or "none — scope not formalised separately"]
 **Prior-cycle test ID**: [where applicable]
 **Trigger**: [annual-program-coverage | regulatory-change | examiner-request | prior-finding-followup | control-owner-request | incident-driven | other]
 **Period under test**: [start date — end date]

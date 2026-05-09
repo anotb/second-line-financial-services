@@ -25,9 +25,9 @@
       "description": "Stable ID for this extraction run, scoped to the rule under extraction. Reused by downstream consumers (obligation-mapping, policy-diff, implementation-plan).",
       "minLength": 1
     },
-    "engagement_scope_ref": {
+    "scope_ref": {
       "type": "string",
-      "description": "Optional pointer to the engagement-scope record this extraction was produced under, when one exists."
+      "description": "Optional pointer to the scope record this extraction was produced under, when one exists."
     },
     "as_of_date": {
       "type": "string",

@@ -18,11 +18,11 @@ The impact assessment is the second line's first read on a regulatory item; mist
 
 **Symptom**: The assessment loads all four sector overlays and all four cross-cutting overlays; the assessment reads as a generic compendium with no operative direction. The strategy lens is diluted across sectors that do not apply to the firm; the implementation lens carries cyber-and-conduct-and-climate-and-privacy threads when the rule is privacy-only.
 
-**Why it happens**: The instinct toward completeness overrides the discipline of loading what the engagement scope flags.
+**Why it happens**: The instinct toward completeness overrides the discipline of loading what the scope flags.
 
 **Resolution**:
-- Sector overlay loads from the engagement-scope record's `sector_overlay_set`, not from practitioner habit.
-- Cross-cutting overlay loads from the engagement-scope record's `cross_cutting_overlay_set`, not from "every cross-cutting topic the rule could plausibly touch."
+- Sector overlay loads from the scope record's `sector_overlay_set`, not from practitioner habit.
+- Cross-cutting overlay loads from the scope record's `cross_cutting_overlay_set`, not from "every cross-cutting topic the rule could plausibly touch."
 - A multi-sector firm (e.g., a bank holding company with a registered broker-dealer subsidiary and a state-chartered insurer) loads sector overlays for the legal entities the rule actually scopes. A rule scoping advisers loads capital-markets only; a rule scoping bank-holding-company-level requirements loads banking; a rule scoping insurer subsidiaries loads insurance.
 - Cross-cutting overlay sets are typically a single overlay or two overlays at most. A privacy-anchored rule loads privacy. A cyber-anchored rule loads cyber. A rule that is both AI-and-cyber loads cyber plus the AI-related sections of the conduct or other relevant overlay where the rule has a fair-lending or conduct intersection.
 
@@ -125,12 +125,12 @@ The impact assessment is the second line's first read on a regulatory item; mist
 
 **Symptom**: The assessment was drafted from yesterday's understanding; today the firm's footprint has expanded (an acquisition closes; a new state license issues; a registered fund launches), and the in-scope determination no longer matches the firm.
 
-**Why it happens**: The engagement-scope record was treated as a kickoff artifact rather than a living record. The assessment consumed an old version.
+**Why it happens**: The scope record was treated as a kickoff artifact rather than a living record. The assessment consumed an old version.
 
 **Resolution**:
 - Engagement-scope is a status, not a fixed truth. Re-emit the scope record after any material change; re-emit the assessment consuming the updated scope.
 - Standing scope review at the regulatory-change-committee cadence; for high-impact items, weekly or bi-weekly scope check.
-- Where the assessment is run without an engagement-scope record at all, ask the questions (institution, primary regulators, persona, source posture, time pressure) and default to public posture if the practitioner declines. Note in the assessment that scope was not formalised.
+- Where the assessment is run without an scope record at all, ask the questions (institution, primary regulators, persona, source posture, time pressure) and default to public posture if the practitioner declines. Note in the assessment that scope was not formalised.
 
 ## 12. Boundary with downstream skills not respected
 

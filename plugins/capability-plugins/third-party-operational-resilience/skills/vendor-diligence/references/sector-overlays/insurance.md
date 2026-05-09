@@ -1,6 +1,6 @@
 # Insurance sector overlay — vendor-diligence
 
-When the engagement scope flags insurance, load this overlay alongside `references/source-anchors.md`. The insurance overlay carries what the bank-flavoured capability skill does not.
+When the scope flags insurance, load this overlay alongside `references/source-anchors.md`. The insurance overlay carries what the bank-flavoured capability skill does not.
 
 ## Vendor types specific to insurance
 

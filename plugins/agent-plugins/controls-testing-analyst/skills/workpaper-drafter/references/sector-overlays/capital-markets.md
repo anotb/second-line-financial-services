@@ -1,6 +1,6 @@
 # Capital-markets sector overlay — workpaper-drafter
 
-Loaded when `engagement-scope.sector_overlay_set` includes `capital-markets` or when the test addresses SEC, FINRA, NFA, or fund-board rules. Supplements `references/source-anchors.md`.
+Loaded when `scope.sector_overlay_set` includes `capital-markets` or when the test addresses SEC, FINRA, NFA, or fund-board rules. Supplements `references/source-anchors.md`.
 
 ## Workpaper conventions SEC and FINRA examiners expect
 

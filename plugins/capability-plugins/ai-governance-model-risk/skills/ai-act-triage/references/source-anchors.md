@@ -195,7 +195,7 @@ The skill cites these by file path. SKILL.md does not restate excerpts.
 ### 27. Member-state implementing laws and secondary instruments
 
 - Citation: Member-state implementing measures supplementing the directly applicable Regulation, including administrative-procedure provisions, penalty regimes (within the Article 99 framework), and competent-authority procedural rules [verify per member state at write time].
-- Excerpt-paraphrase: Although the AI Act is a directly applicable Regulation, member states adopt implementing measures on procedural elements, penalty calibration within the Article 99 framework, and competent-authority operational rules. Implementation status varies; the triage cites the relevant member-state instrument when the engagement scope names a state of operation.
+- Excerpt-paraphrase: Although the AI Act is a directly applicable Regulation, member states adopt implementing measures on procedural elements, penalty calibration within the Article 99 framework, and competent-authority operational rules. Implementation status varies; the triage cites the relevant member-state instrument when the scope names a state of operation.
 - Link: Per member state. National official-journals and competent-authority publications.
 - Notes: The triage does not assert a member-state-specific obligation without confirming implementation status.
 

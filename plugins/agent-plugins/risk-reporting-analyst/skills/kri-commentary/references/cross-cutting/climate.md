@@ -1,8 +1,8 @@
 # Climate cross-cutting overlay for kri-commentary
 
-When the engagement-scope record flags `climate`, this overlay sets the climate-specific content for KRI-commentary blocks where the KRI is in the climate population.
+When the scope record flags `climate`, this overlay sets the climate-specific content for KRI-commentary blocks where the KRI is in the climate population.
 
-Loaded by: `kri-commentary/SKILL.md` when `engagement_scope.cross_cutting_overlay_set` includes `climate`. Cited and section-referenced anchors live in `references/source-anchors.md`.
+Loaded by: `kri-commentary/SKILL.md` when `scope.cross_cutting_overlay_set` includes `climate`. Cited and section-referenced anchors live in `references/source-anchors.md`.
 
 ## Source basis
 

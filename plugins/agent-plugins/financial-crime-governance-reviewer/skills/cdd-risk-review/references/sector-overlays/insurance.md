@@ -1,6 +1,6 @@
 # Insurance sector overlay — cdd-risk-review
 
-When the engagement scope flags insurance, load this overlay alongside `references/source-anchors.md`. It carries the insurance-specific CDD frame the generic capability skill does not own. The CDD review applies only to covered products under the operative rule; many insurance products are outside scope.
+When the scope flags insurance, load this overlay alongside `references/source-anchors.md`. It carries the insurance-specific CDD frame the generic capability skill does not own. The CDD review applies only to covered products under the operative rule; many insurance products are outside scope.
 
 ## Operative CIP / CDD rule set
 

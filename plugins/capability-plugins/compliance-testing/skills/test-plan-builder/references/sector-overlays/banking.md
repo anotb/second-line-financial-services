@@ -1,6 +1,6 @@
 # Banking sector overlay — test-plan-builder
 
-Loaded when `engagement-scope.sector_overlay_set` includes `banking` or when the test addresses a banking regulator's rule. Does not replace `references/source-anchors.md`; supplements it with bank-specific test-plan conventions.
+Loaded when `scope.sector_overlay_set` includes `banking` or when the test addresses a banking regulator's rule. Does not replace `references/source-anchors.md`; supplements it with bank-specific test-plan conventions.
 
 ## Test-plan conventions banking examiners expect
 

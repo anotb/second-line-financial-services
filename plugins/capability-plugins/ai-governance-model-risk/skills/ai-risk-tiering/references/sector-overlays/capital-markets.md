@@ -1,8 +1,8 @@
 # Capital markets sector overlay for ai-risk-tiering
 
-When the engagement-scope record names sector `capital-markets`, this overlay tells the tier rubric what is adviser-, broker-dealer-, and fund-specific. Tier names and cutoffs are firm policy; this overlay names which factors elevate, which gates trigger by default, and which re-tiering events to name.
+When the scope record names sector `capital-markets`, this overlay tells the tier rubric what is adviser-, broker-dealer-, and fund-specific. Tier names and cutoffs are firm policy; this overlay names which factors elevate, which gates trigger by default, and which re-tiering events to name.
 
-Loaded by: `ai-risk-tiering/SKILL.md` when `engagement_scope.sector_overlay_set` includes `capital-markets`. Source content derived from the capital-markets lead's overlay snippets, mapped here into the tiering context. Cited and section-referenced anchors live in `references/source-anchors.md`.
+Loaded by: `ai-risk-tiering/SKILL.md` when `scope.sector_overlay_set` includes `capital-markets`. Source content derived from the capital-markets lead's overlay snippets, mapped here into the tiering context. Cited and section-referenced anchors live in `references/source-anchors.md`.
 
 ## Source basis
 

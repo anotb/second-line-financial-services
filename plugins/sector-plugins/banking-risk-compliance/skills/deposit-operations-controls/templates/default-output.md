@@ -8,7 +8,7 @@ A draft until the deposit-operations director, the compliance officer, or the au
 |---|---|
 | Matrix ID | |
 | Matrix date | |
-| Engagement ID | pointer to engagement-scope record, or "none — scope not formalised" |
+| Engagement ID | pointer to scope record, or "none — scope not formalised" |
 | Source posture | public-only / public-plus-firm-policy / public-plus-firm-policy-plus-evidence / connector-aware |
 | Confidence label | high / medium / low |
 

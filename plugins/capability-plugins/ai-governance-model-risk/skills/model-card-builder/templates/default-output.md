@@ -17,7 +17,7 @@ The card is a draft until a human reviewer attests.
 - Lifecycle stage: [development / pre-prod / prod / monitoring-only / retirement]
 - Classification: [internal / restricted / confidential as per firm classification]
 - Use-case ID (links to `ai-use-case-intake`): [ID]
-- Engagement-scope ID (if `engagement-scoping` was run): [ID]
+- Engagement-scope ID (if `scoping` was run): [ID]
 
 ---
 
@@ -192,7 +192,7 @@ For every material claim in the card:
 
 ## 14. Sector overlay notes (when applicable)
 
-When the engagement scope names a sector, the matching `references/sector-overlays/<sector>.md` adds named fields here. Examples:
+When the scope names a sector, the matching `references/sector-overlays/<sector>.md` adds named fields here. Examples:
 
 - Banking: ECOA/Reg B adverse action surface (for credit decisioning); FFIEC manual exposure (for AML/fraud); OCC Heightened Standards 12 CFR Part 30 Appendix D risk-governance touchpoint.
 - Insurance: AIS Program element status against the NAIC Bulletin on the Use of AI Systems by Insurers; per-state DOI bulletin status; ECDIS provenance; ORSA materiality posture; HIPAA touch.

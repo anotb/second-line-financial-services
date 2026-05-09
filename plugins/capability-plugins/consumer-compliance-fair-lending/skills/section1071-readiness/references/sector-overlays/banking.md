@@ -1,6 +1,6 @@
 # Banking sector overlay — section1071-readiness
 
-When the engagement scope flags banking, load this overlay alongside `references/source-anchors.md`. This is the heaviest sector overlay for §1071 readiness because depository institutions are the predominant covered-financial-institution population.
+When the scope flags banking, load this overlay alongside `references/source-anchors.md`. This is the heaviest sector overlay for §1071 readiness because depository institutions are the predominant covered-financial-institution population.
 
 ## Covered-financial-institution determination for depository institutions
 

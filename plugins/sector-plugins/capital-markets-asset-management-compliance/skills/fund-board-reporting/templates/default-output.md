@@ -144,7 +144,7 @@ The annex carries the substantive detail the deck summarizes. The independent tr
 - Funds in scope (with fund type and fiscal year end for each)
 - Meeting type (regular / special) and date; prior-period meeting date
 - Scope of report (drives required sections per the report type)
-- Engagement-scope ID (if `engagement-scoping` was run): [ID]
+- Engagement-scope ID (if `scoping` was run): [ID]
 
 ### A2. Executive summary for trustees
 

@@ -10,7 +10,7 @@ The record is a draft until the named decider attests.
 
 - Use case ID: [canonical firm ID, links to `ai-use-case-intake`]
 - Use case version: [intake record version this tier is decided against]
-- Engagement scope ID (if `engagement-scoping` was run): [ID]
+- Engagement scope ID (if `scoping` was run): [ID]
 - Decision date: [YYYY-MM-DD]
 - Decided by: [role, function]
 

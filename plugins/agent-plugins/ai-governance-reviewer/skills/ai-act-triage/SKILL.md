@@ -14,7 +14,7 @@ description: |
   - The intake record is missing (route to ai-use-case-intake first; triage runs against a use-case record, not against a hallway description).
   - The artifact required is the Annex IV technical documentation itself (use model-card-builder for the firm-side card; this skill scopes the Annex IV deltas).
   - The work is generic third-party diligence on the vendor (use third-party-operational-resilience vendor diligence with the AI vendor mode).
-argument-hint: "[use-case ID, intake record, vendor system card, engagement-scope record, or scope statement]"
+argument-hint: "[use-case ID, intake record, vendor system card, scope record, or scope statement]"
 ---
 
 # AI Act triage
@@ -33,9 +33,9 @@ A handful of facts decide most of the work. If they are not on the table, draft 
 - Who built it, who runs it, who imports it. The provider-versus-deployer line is the biggest single source of misclassified obligations. A firm that fine-tunes a vendor model picks up provider obligations for the fine-tuned variant under Article 25; a firm that only consumes a vendor system stays in the deployer lane under Article 26. Naming every operator role for every entity is the audit trail.
 - What does the system actually do. Annex III reads against the listed use case, not against the marketing description. "AI assistant" is not a row. "Creditworthiness assessment of natural persons" is a row (Annex III(5)(b)). Force the use case into the Annex's vocabulary before deciding.
 - Where is the use case in lifecycle. Pre-build triage scopes obligations early. Pre-prod triage gates the deployment. Post-market triage updates the classification when the system, the data, or the law changes (foundation-model swap, Annex III amendment, Article 113 date landing).
-- What is the engagement-scope record saying. Sector and cross-cutting overlays load from the scope. The skill does not guess sector.
+- What is the scope record saying. Sector and cross-cutting overlays load from the scope. The skill does not guess sector.
 
-When the engagement-scope record is supplied, the skill consumes it for institution profile, persona, source posture, sector overlays (banking, insurance, capital-markets, payments-fintech), and cross-cutting overlays (cyber, privacy, conduct). Without a scope record the skill asks the practitioner the few facts it needs and proceeds against partial input.
+When the scope record is supplied, the skill consumes it for institution profile, persona, source posture, sector overlays (banking, insurance, capital-markets, payments-fintech), and cross-cutting overlays (cyber, privacy, conduct). Without a scope record the skill asks the practitioner the few facts it needs and proceeds against partial input.
 
 ## How the triage walks
 
@@ -67,11 +67,11 @@ The triage is only credible when these hold:
 
 ## Adaptation
 
-Source posture sets what can be asserted at high confidence and what carries `[evidence needed]`. Sector and cross-cutting overlays load from the engagement scope. Persona sets the review path: an in-house AI governance lead routes to the AI risk committee; an advisory engagement routes to partner approval and counsel sign-off.
+Source posture sets what can be asserted at high confidence and what carries `[evidence needed]`. Sector and cross-cutting overlays load from the scope. Persona sets the review path: an in-house AI governance lead routes to the AI risk committee; an advisory engagement routes to partner approval and counsel sign-off.
 
 ## Sector and cross-cutting overlays
 
-Loaded only when the engagement scope names them. Gold-plating with overlays the engagement does not implicate adds noise without challenge value.
+Loaded only when the scope names them. Gold-plating with overlays the engagement does not implicate adds noise without challenge value.
 
 - Banking: Annex III(5)(b) for credit scoring of natural persons; sole-trader inclusion is the typical boundary call. Interaction with CRR/CRD model governance (informational); ECB guide on internal models is cited where applicable. EU branches and subsidiaries of US banks pick up deployer obligations on EU-deployed systems.
 - Insurance: Annex III(5)(c) for life and health pricing and risk assessment of natural persons. Solvency II governance overlap noted; EIOPA AI principles are non-binding and cited as such. P&C, group, and reinsurance boundary calls per the insurance overlay.
@@ -92,8 +92,8 @@ Downstream consumers: `model-card-builder` pulls the Annex IV documentation delt
 ## Pointers
 
 - `references/source-anchors.md` — citations and section-referenced excerpts for every primary anchor.
-- `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md` — sector overlays loaded from engagement scope. The insurance overlay carries the substance of the deprecated `insurance-ai-act-triage` skill.
-- `references/cross-cutting/conduct.md` — conduct overlay (cyber and privacy cross-cutting overlays sit in the broader plugin reference set; load when the engagement scope names them).
+- `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md` — sector overlays loaded from scope. The insurance overlay carries the substance of the deprecated `insurance-ai-act-triage` skill.
+- `references/cross-cutting/conduct.md` — conduct overlay (cyber and privacy cross-cutting overlays sit in the broader plugin reference set; load when the scope names them).
 - `references/firm-overlay.md` — firm policy, taxonomy, named legal/compliance owners (consumed when present).
 - `templates/default-output.md` — triage record template.
 - `schemas/ai-act-triage.schema.json` — structured-output contract.

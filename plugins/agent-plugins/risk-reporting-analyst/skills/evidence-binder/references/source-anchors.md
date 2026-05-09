@@ -128,4 +128,4 @@ Specifically:
 - Climate: not anchored at v1.
 - Conduct: CFPB Examination Manual UDAAP module [verify edition reference]; fair-lending exam evidence patterns under ECOA / Reg B and HMDA / Reg C.
 
-These overlays load when the engagement scope's `cross_cutting_overlay_set` includes the corresponding entry.
+These overlays load when the scope's `cross_cutting_overlay_set` includes the corresponding entry.

@@ -1,6 +1,6 @@
 # Banking sector overlay — sar-decision-qa
 
-When the engagement scope flags banking, load this overlay alongside `references/source-anchors.md`. It carries the bank-specific SAR-decision frame the generic capability skill does not own.
+When the scope flags banking, load this overlay alongside `references/source-anchors.md`. It carries the bank-specific SAR-decision frame the generic capability skill does not own.
 
 ## Operative SAR rule
 

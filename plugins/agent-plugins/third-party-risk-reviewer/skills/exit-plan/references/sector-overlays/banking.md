@@ -1,6 +1,6 @@
 # Banking sector overlay — exit-plan
 
-When the engagement scope flags banking, load this overlay alongside `references/source-anchors.md`. It carries the banking-only frame the generic capability skill does not own.
+When the scope flags banking, load this overlay alongside `references/source-anchors.md`. It carries the banking-only frame the generic capability skill does not own.
 
 ## Operative supervisory frame
 

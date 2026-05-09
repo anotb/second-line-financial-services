@@ -6,7 +6,7 @@ Public-source-derived. No named institution. Patterns drawn from NIST AI 600-1 G
 
 A mid-size US regional bank (commercial banking focus, asset size in the $25-50B band, OCC-supervised national bank) is intaking a foundation-model-based assistant for relationship managers. The assistant ingests internal CRM notes and call summaries plus public earnings transcripts of the RM's coverage portfolio, and produces structured client-meeting prep notes (recent activity recap, talking points, follow-ups). The assistant runs vendor-API foundation model with version pinning, RAG over the firm's CRM corpus and a vendor-supplied earnings-transcript corpus, no tools, no agentic behaviour, advisory-only with the RM editing before any client-facing use. Sponsor (head of commercial-banking RM technology) proposes tier-2.
 
-Engagement scope provided by `engagement-scoping`:
+Engagement scope provided by `scoping`:
 - Institution type: national bank, OCC-supervised, asset size $25-50B band, US-only footprint.
 - Persona: AI Governance Lead, second line, reporting to the head of model risk.
 - Sector overlay: banking. Cross-cutting overlays: cyber (vendor-hosted foundation model is a supply-chain surface; NYDFS Part 500 reach for the NY footprint of part of the commercial portfolio), privacy (CRM contains GLBA-regulated NPI on commercial customers and on individual signatories).

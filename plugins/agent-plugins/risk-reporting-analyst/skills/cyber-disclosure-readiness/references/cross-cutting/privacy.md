@@ -2,7 +2,7 @@
 
 When customer financial information, health information, or other regulated personal information is implicated in a cyber incident, privacy-notification clocks run alongside the SEC Item 1.05 clock. The pack must surface every privacy clock applicable to the registrant; missing one is a frequent regulator finding.
 
-Loaded by: `cyber-disclosure-readiness/SKILL.md` when `engagement_scope.cross_cutting_set` includes `privacy`, when the engagement scope flags customer financial information / PHI / sensitive customer information in scope, or when Artifact A's incident facts implicate any covered information type. Cited and section-referenced anchors live in `references/source-anchors.md`.
+Loaded by: `cyber-disclosure-readiness/SKILL.md` when `scope.cross_cutting_set` includes `privacy`, when the scope flags customer financial information / PHI / sensitive customer information in scope, or when Artifact A's incident facts implicate any covered information type. Cited and section-referenced anchors live in `references/source-anchors.md`.
 
 ## Source basis
 
@@ -40,7 +40,7 @@ The Reg S-P customer-notification content requirements are distinct from the Ite
 
 ### 3. State breach-notification mosaic
 
-Multi-state firms map state-by-state. The pack does not enumerate all 50 states by default; the engagement scope identifies the states where customer information is implicated, and the parallel-clocks table carries one row per state with the trigger threshold and the clock.
+Multi-state firms map state-by-state. The pack does not enumerate all 50 states by default; the scope identifies the states where customer information is implicated, and the parallel-clocks table carries one row per state with the trigger threshold and the clock.
 
 CA, NY, TX, IL, and MA carry the most-cited specifics; CCPA / CPRA adds consumer-rights obligations on top of the breach-notification obligations. The Massachusetts standard for "personal information" is broader than many other states. The pack flags state-specific deviations.
 

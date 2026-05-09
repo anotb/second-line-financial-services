@@ -1,8 +1,8 @@
 # Climate cross-cutting overlay for cyber-disclosure-readiness
 
-The disclosure machinery for cyber and for climate overlaps materially: the same DCP under Rule 13a-15, the same disclosure committee, the same materiality lens, and the same 8-K mechanic handle both. This overlay sets what changes when the engagement scope flags climate alongside (or instead of) a cyber incident — that is, when a climate-related material event is the trigger, or when the 10-K's climate disclosure is up for refresh in the same cycle as the Item 106 cyber disclosure.
+The disclosure machinery for cyber and for climate overlaps materially: the same DCP under Rule 13a-15, the same disclosure committee, the same materiality lens, and the same 8-K mechanic handle both. This overlay sets what changes when the scope flags climate alongside (or instead of) a cyber incident — that is, when a climate-related material event is the trigger, or when the 10-K's climate disclosure is up for refresh in the same cycle as the Item 106 cyber disclosure.
 
-Loaded by: `cyber-disclosure-readiness/SKILL.md` when `engagement_scope.cross_cutting_set` includes `climate`. Climate is required as a cross-cutting overlay for this skill because the disclosure machinery overlaps; the depth lives here so SKILL.md does not re-anchor full climate sources.
+Loaded by: `cyber-disclosure-readiness/SKILL.md` when `scope.cross_cutting_set` includes `climate`. Climate is required as a cross-cutting overlay for this skill because the disclosure machinery overlaps; the depth lives here so SKILL.md does not re-anchor full climate sources.
 
 ## Source basis
 

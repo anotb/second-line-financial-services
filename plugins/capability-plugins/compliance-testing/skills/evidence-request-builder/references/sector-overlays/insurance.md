@@ -1,6 +1,6 @@
 # Insurance sector overlay — evidence-request-builder
 
-Loaded when `engagement-scope.sector_overlay_set` includes `insurance` or when the test addresses NAIC, state DOI, or federal insurance rules. Supplements `references/source-anchors.md`.
+Loaded when `scope.sector_overlay_set` includes `insurance` or when the test addresses NAIC, state DOI, or federal insurance rules. Supplements `references/source-anchors.md`.
 
 ## Request-list conventions insurance testing programs apply
 

@@ -3,7 +3,7 @@
 Date: 2026-05-06
 Reviewer: phase-2 reviewer subagent
 Subject: `plugins/capability-plugins/third-party-operational-resilience/skills/dora-register-builder/SKILL.md`
-Compared against: spec sheet (`docs/specs/third-party-operational-resilience/dora-register-builder.md`), revised reference patterns (`vendor-diligence/SKILL.md`, `engagement-scoping/SKILL.md`, `model-card-builder/SKILL.md`), build contract (`docs/plans/2026-05-06-phase2-build-contract.md`), anti-AI-tells memory (with sequencing nuance), references-first memory, practitioner-lens memory, and the rule-1/2/4 violations from `python3 scripts/check-skill-content.py --plugin third-party-operational-resilience`.
+Compared against: spec sheet (`docs/specs/third-party-operational-resilience/dora-register-builder.md`), revised reference patterns (`vendor-diligence/SKILL.md`, `scoping/SKILL.md`, `model-card-builder/SKILL.md`), build contract (`docs/plans/2026-05-06-phase2-build-contract.md`), anti-AI-tells memory (with sequencing nuance), references-first memory, practitioner-lens memory, and the rule-1/2/4 violations from `python3 scripts/check-skill-content.py --plugin third-party-operational-resilience`.
 
 ## 1. Top-line judgment
 
@@ -52,13 +52,13 @@ Cross-checking the spec, the supporting files, and the build contract, the named
 - Annual-refresh deltas: silent up-classification, vendor restructuring, year-on-year movement. The annual cycle has its own evidence ask.
 - Submission boundary: the skill drafts; the firm files. NCA-specific technical instructions on format, channel, and validation are downstream of this skill.
 - Cyber cross-cutting overlay (the completer added this; the SKILL.md should name when it is consulted — typically when ICT-service-type and sub-contractor records intersect cyber-control attestations from `vendor-diligence`).
-- Scope-record consumption: when an `engagement-scope` record is supplied, consume it for institution type, primary regulators (the relevant NCA), sector overlay, source posture; otherwise ask the few questions the build needs and default.
+- Scope-record consumption: when an `scope` record is supplied, consume it for institution type, primary regulators (the relevant NCA), sector overlay, source posture; otherwise ask the few questions the build needs and default.
 
 None of this is in the current SKILL.md. All of it is in the spec, template, schema, examples, TROUBLESHOOTING, or references.
 
 ### 2.5 Engagement-scope integration is missing
 
-Per the build contract, every non-`engagement-scoping` skill carries the two-path engagement-scope integration: consume the record when supplied; ask the few questions when not. The current SKILL.md has no engagement-scope integration at all.
+Per the build contract, every non-`scoping` skill carries the two-path scope integration: consume the record when supplied; ask the few questions when not. The current SKILL.md has no scope integration at all.
 
 ### 2.6 The cyber cross-cutting overlay file exists but is not surfaced
 
@@ -131,7 +131,7 @@ description: |
 > - **Which input registers and systems are available.** The firm's existing TPRM register (often the EBA outsourcing register where in place), the contract repository, the ICT-asset inventory, the criticality outputs per arrangement, the sub-processor lists from `vendor-diligence`. Source posture (public-only, public-plus-firm-policy, public-plus-evidence, connector-aware) sets what the build can assert at high confidence and what carries `[evidence needed]`.
 > - **Is there a current `criticality-assessment` output for each in-scope arrangement.** The critical-or-important-function flag drives sub-contractor-chain visibility, NCA scrutiny, and oversight-framework relevance. Setting the flag without dated criticality evidence is itself a finding; route to `criticality-assessment` first if the output is not on file.
 >
-> When the engagement-scope record is supplied, the skill consumes it for institution type, primary regulator (the relevant NCA), sector overlay set, source posture, and persona. Otherwise it asks the questions above and defaults to public posture.
+> When the scope record is supplied, the skill consumes it for institution type, primary regulator (the relevant NCA), sector overlay set, source posture, and persona. Otherwise it asks the questions above and defaults to public posture.
 
 **Why**: the four questions are the load-bearing decisions a senior practitioner makes before drafting. Mirrors the vendor-diligence and model-card-builder pattern (four bullets, prose-friendly, not numbered). The criticality question is not a tier question (this skill does not set criticality), it is an evidence question — does the flag have dated evidence behind it.
 
@@ -187,7 +187,7 @@ description: |
 
 > ### Sector overlays
 >
-> The DORA register applies across sectors (banking, insurance, capital markets, payments-fintech) but the NCA, the technical reporting channel, and the supervisory expectations differ. Load the overlay the engagement scope names: `references/sector-overlays/banking.md` for ECB SSM banks and EBA-coordinated less-significant institutions; `insurance.md` for EIOPA-coordinated insurers and the US-parent NAIC interplay; `capital-markets.md` for ESMA-coordinated investment firms, trading venues, CSDs, and CCPs; `payments-fintech.md` for payment institutions and e-money institutions. Multi-entity groups straddling sectors load multiple. The overlay's named NCA-specific instructions and submission-channel guidance land in the build pack; treating the overlay as background reading is the failure mode.
+> The DORA register applies across sectors (banking, insurance, capital markets, payments-fintech) but the NCA, the technical reporting channel, and the supervisory expectations differ. Load the overlay the scope names: `references/sector-overlays/banking.md` for ECB SSM banks and EBA-coordinated less-significant institutions; `insurance.md` for EIOPA-coordinated insurers and the US-parent NAIC interplay; `capital-markets.md` for ESMA-coordinated investment firms, trading venues, CSDs, and CCPs; `payments-fintech.md` for payment institutions and e-money institutions. Multi-entity groups straddling sectors load multiple. The overlay's named NCA-specific instructions and submission-channel guidance land in the build pack; treating the overlay as background reading is the failure mode.
 
 **Why**: the spec lists four sector overlays as needed; the build shipped them; the SKILL.md does not name when they load. Pattern follows the vendor-diligence and model-card-builder overlay-loading sections. The "treating the overlay as background reading is the failure mode" line is the same practitioner observation model-card-builder uses (and works there).
 
@@ -213,7 +213,7 @@ description: |
 >
 > Two artifacts: the build pack per `templates/default-output.md`, and the structured register record per `schemas/dora-register.schema.json`. The build pack is the practitioner-readable artifact (scope, source posture, ITS-table summaries, data-quality findings, reconciliations, year-on-year deltas where applicable, open questions for legal and compliance, reviewer questions, source trace, confidence label). The structured record is what downstream skills consume.
 >
-> Downstream consumers: `concentration-risk-review` reads the `b_03`, `b_05`, and `b_06` records to compute provider-, service-, and country-concentration views; the firm's regulatory-reporting pipeline consumes the structured record (or its NCA-specified export) for the actual filing. Upstream consumers: `criticality-assessment` outputs the function-level critical-or-important flag the register's `b_04` carries; `vendor-diligence` outputs the sub-processor and data-flow data the register's `b_05` and `b_06` carry; `engagement-scope` (when supplied) carries institution, NCA, sector overlay, and source posture.
+> Downstream consumers: `concentration-risk-review` reads the `b_03`, `b_05`, and `b_06` records to compute provider-, service-, and country-concentration views; the firm's regulatory-reporting pipeline consumes the structured record (or its NCA-specified export) for the actual filing. Upstream consumers: `criticality-assessment` outputs the function-level critical-or-important flag the register's `b_04` carries; `vendor-diligence` outputs the sub-processor and data-flow data the register's `b_05` and `b_06` carry; `scope` (when supplied) carries institution, NCA, sector overlay, and source posture.
 >
 > The schema is the cross-skill contract; additive changes only. Add fields, do not rename or repurpose them. A breaking change is a versioned migration with the downstream skills told in advance.
 >
@@ -231,7 +231,7 @@ description: |
 >
 > Load-bearing across every build: every material claim cites a source from `references/source-anchors.md` (or a loaded overlay) by path; unsupported claims are marked `[evidence needed]`; section references that cannot be confirmed get `[verify section]` in `source-anchors.md`, never in the build pack body or this SKILL; source evidence, firm assertion, public-source obligation, generated inference, and open legal or compliance question stay distinguishable in the build pack; identifiers are not invented; the critical-or-important-function flag carries a dated `criticality_evidence_record_id` or it is a finding; intra-group arrangements are flagged in `b_02`, not omitted; the data-quality-findings section is part of every build pack; no named institutions appear unless they are public defendants in a finalised enforcement action with a published consent order; the skill stops at the draft.
 >
-> Flexes to the engagement: build pack length scales to scope (single-arrangement annual delta is short; first-cycle multi-entity build is long). Sector overlay set follows engagement scope; multi-sector groups load multiple. Source posture sets the evidence ask. The audience drives the build pack's framing — a head-of-vendor-management pack reads operationally; an EU-subsidiary risk-officer pack reads with the parent-group consolidation lens; a regulator response pack is fully source-traced.
+> Flexes to the engagement: build pack length scales to scope (single-arrangement annual delta is short; first-cycle multi-entity build is long). Sector overlay set follows the scope; multi-sector groups load multiple. Source posture sets the evidence ask. The audience drives the build pack's framing — a head-of-vendor-management pack reads operationally; an EU-subsidiary risk-officer pack reads with the parent-group consolidation lens; a regulator response pack is fully source-traced.
 
 **Why**: the current "Guardrails" bullet list is shared boilerplate (rule-1 and rule-4). Replace with the load-bearing-and-flexes shape vendor-diligence and model-card-builder use. The load-bearing list is dora-specific (identifier discipline, criticality-evidence pointer, intra-group flag, data-quality-findings as mandatory, the named-institutions and stops-at-draft rules that are repo-wide). Flexes are dora-specific too (build length to scope, sector overlay set, audience).
 
@@ -244,7 +244,7 @@ description: |
 > ## Pointers
 >
 > - `references/source-anchors.md` — citations and excerpts for the named anchors.
-> - `references/sector-overlays/banking.md`, `insurance.md`, `capital-markets.md`, `payments-fintech.md` — sector-specific NCA frame loaded per engagement scope.
+> - `references/sector-overlays/banking.md`, `insurance.md`, `capital-markets.md`, `payments-fintech.md` — sector-specific NCA frame loaded per scope.
 > - `references/cross-cutting/cyber.md` — cyber overlay loaded where cyber-attestation gaps affect the register's data-quality view.
 > - `references/firm-overlay.md` — firm-installed policy, taxonomy, NCA-specific submission rules beyond the regulatory baseline; consumed when present.
 > - `templates/default-output.md` — build pack template.

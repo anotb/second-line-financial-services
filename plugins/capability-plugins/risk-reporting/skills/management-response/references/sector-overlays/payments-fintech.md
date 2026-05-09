@@ -1,8 +1,8 @@
 # Payments-fintech sector overlay for management-response
 
-When the engagement-scope record names `payments-fintech` for a management-response engagement, this overlay sets consumer-protection-supervisor, state-money-transmitter-licensor, and bank-partnership conventions for the response artifact.
+When the scope record names `payments-fintech` for a management-response engagement, this overlay sets consumer-protection-supervisor, state-money-transmitter-licensor, and bank-partnership conventions for the response artifact.
 
-Loaded by: `management-response/SKILL.md` when `engagement_scope.sector_overlay_set` includes `payments-fintech`. Cited and section-referenced anchors live in `references/source-anchors.md`.
+Loaded by: `management-response/SKILL.md` when `scope.sector_overlay_set` includes `payments-fintech`. Cited and section-referenced anchors live in `references/source-anchors.md`.
 
 ## Source basis
 

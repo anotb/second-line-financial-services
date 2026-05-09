@@ -48,7 +48,7 @@ Cross-link to `consumer-compliance-fair-lending/udaap-risk-review` (with the pay
 
 ## CFPB direct supervision and the larger-participant rule
 
-Where the CFPB final rule defining larger participants of digital consumer payment applications (December 2024 — verify Federal Register citation and current state) designates the firm, the regulator-facing posture for the data-rights programme is direct CFPB EXAMS rather than sponsor-bank-mediated. The artifact's regulator-facing posture carries a direct-CFPB row for designated firms; the engagement-scope record names the larger-participant designation status.
+Where the CFPB final rule defining larger participants of digital consumer payment applications (December 2024 — verify Federal Register citation and current state) designates the firm, the regulator-facing posture for the data-rights programme is direct CFPB EXAMS rather than sponsor-bank-mediated. The artifact's regulator-facing posture carries a direct-CFPB row for designated firms; the scope record names the larger-participant designation status.
 
 Cross-link to `regulatory-change-management/exam-brief` (with the payments-fintech overlay) for the three-track exam-prep posture (sponsor-bank-led, CFPB-direct, state-MTL).
 

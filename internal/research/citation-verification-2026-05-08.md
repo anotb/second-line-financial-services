@@ -229,7 +229,7 @@ Read-only verification of Codex action-plan claims against official sources. Ver
   - Executive Order 14192 (Unleashing Prosperity Through Deregulation), January 31, 2025
 - **Verified text snippet:** OMB Memo M-25-15 rescinds the November 2023 revision of OMB Circular A-4 and reinstates the September 17, 2003 version effective immediately. The 2003 version is therefore the operative federal regulatory benefit-cost analysis guidance.
 - **Recommended cite/text for skills:** "OMB Circular A-4, Regulatory Analysis (September 17, 2003 version, reinstated by OMB Memo M-25-15 in March 2025 following the rescission of the November 2023 revision pursuant to Executive Order 14192). Use the 2003 version's BCA framework; the 2023 revision is no longer in force. Note that any peer-review obligation for further A-4 changes remains."
-- **Affected skill files:** any policy / regulatory-impact / risk-quantification skill that referenced the 2023 A-4 — likely `risk-compliance-core` engagement-scoping or risk-reporting skills.
+- **Affected skill files:** any policy / regulatory-impact / risk-quantification skill that referenced the 2023 A-4 — likely `risk-compliance-core` scoping or risk-reporting skills.
 - **Notes/caveats:** The 2003 A-4 and 2023 A-4 differ on, among other things, distributional weighting and global-vs-domestic accounting. Skills that rely on a specific A-4 framing should call out which version they are running against.
 
 ---

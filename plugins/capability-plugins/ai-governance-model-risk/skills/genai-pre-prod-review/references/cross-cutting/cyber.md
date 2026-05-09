@@ -1,8 +1,8 @@
 # Cyber cross-cutting overlay for genai-pre-prod-review
 
-When the engagement-scope record flags `cyber` for a pre-prod gate review, this overlay sits as a primary lens. The CISO function is a co-reviewer and a co-signer on the gate decision, not a downstream consumer of the memo. For most v1 GenAI use cases inside regulated entities the cyber overlay should be considered the default cross-cutting overlay.
+When the scope record flags `cyber` for a pre-prod gate review, this overlay sits as a primary lens. The CISO function is a co-reviewer and a co-signer on the gate decision, not a downstream consumer of the memo. For most v1 GenAI use cases inside regulated entities the cyber overlay should be considered the default cross-cutting overlay.
 
-Loaded by: `genai-pre-prod-review/SKILL.md` when `engagement_scope.cross_cutting_set` includes `cyber`. Cited and section-referenced anchors live in `references/source-anchors.md`.
+Loaded by: `genai-pre-prod-review/SKILL.md` when `scope.cross_cutting_set` includes `cyber`. Cited and section-referenced anchors live in `references/source-anchors.md`.
 
 ## Source basis
 

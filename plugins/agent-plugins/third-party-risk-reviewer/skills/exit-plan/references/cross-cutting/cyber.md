@@ -1,6 +1,6 @@
 # Cyber cross-cutting overlay — exit-plan
 
-When the engagement scope flags cyber, or whenever the vendor holds NPI, PHI, PCI, customer prompts, or any control on the firm's important-business-service path at termination, load this overlay. Cyber is in scope by default for AI vendors and for any termination of a vendor that reaches inside firm systems.
+When the scope flags cyber, or whenever the vendor holds NPI, PHI, PCI, customer prompts, or any control on the firm's important-business-service path at termination, load this overlay. Cyber is in scope by default for AI vendors and for any termination of a vendor that reaches inside firm systems.
 
 ## Operative anchors
 

@@ -1,6 +1,6 @@
 # Insurance sector overlay — control-matrix
 
-Loads when the engagement-scope `sector_overlay_set` includes `insurance`. Binds matrix construction to state-DOI and NAIC-framework expectations.
+Loads when the scope `sector_overlay_set` includes `insurance`. Binds matrix construction to state-DOI and NAIC-framework expectations.
 
 ## Supervisory frame
 

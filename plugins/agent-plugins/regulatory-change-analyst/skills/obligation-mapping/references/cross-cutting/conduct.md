@@ -1,6 +1,6 @@
 # Cross-cutting overlay: conduct — obligation-mapping
 
-Loaded when the engagement scope includes `conduct` in `cross_cutting_overlay_set`, or when the source being mapped is conduct-anchored. Adds conduct-specific source labels and obligation patterns when the register scopes consumer-facing decisions, marketing, complaints, or fair-treatment processes. Does not change the row spine.
+Loaded when the scope includes `conduct` in `cross_cutting_overlay_set`, or when the source being mapped is conduct-anchored. Adds conduct-specific source labels and obligation patterns when the register scopes consumer-facing decisions, marketing, complaints, or fair-treatment processes. Does not change the row spine.
 
 Conduct sits where consumer compliance, fair-lending, market-conduct, and product-governance overlap. The register often loads conduct alongside privacy when the process touches consumer decisioning, alongside `payments-fintech` when the product is a consumer payment, and alongside `insurance` when the engagement covers insurance market-conduct.
 

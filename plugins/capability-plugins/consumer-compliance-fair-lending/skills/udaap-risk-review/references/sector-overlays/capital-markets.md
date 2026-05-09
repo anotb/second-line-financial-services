@@ -1,8 +1,8 @@
 # Capital markets sector overlay for udaap-risk-review
 
-When the engagement-scope record names sector `capital-markets`, this overlay sets the scope boundary first. Most capital-markets activity sits outside the CFPB UDAAP perimeter. Where it does touch, the touch points are predictable and narrow. The overlay is short on purpose.
+When the scope record names sector `capital-markets`, this overlay sets the scope boundary first. Most capital-markets activity sits outside the CFPB UDAAP perimeter. Where it does touch, the touch points are predictable and narrow. The overlay is short on purpose.
 
-Loaded by: `udaap-risk-review/SKILL.md` when `engagement_scope.sector_overlay_set` includes `capital-markets`, or when the institution type implicates a broker-dealer, investment adviser, private bank, or wealth-management entity that operates a retail consumer-facing credit, deposit-equivalent, or consumer-finance product surface.
+Loaded by: `udaap-risk-review/SKILL.md` when `scope.sector_overlay_set` includes `capital-markets`, or when the institution type implicates a broker-dealer, investment adviser, private bank, or wealth-management entity that operates a retail consumer-facing credit, deposit-equivalent, or consumer-finance product surface.
 
 Cited and section-referenced anchors live in `references/source-anchors.md`.
 

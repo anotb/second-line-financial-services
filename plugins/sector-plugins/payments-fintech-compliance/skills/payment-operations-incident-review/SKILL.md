@@ -36,7 +36,7 @@ Most of the spine is set by the incident itself and the source posture. A few th
 - **Who is the audience and what is the read-out cadence.** Program-operator second line, sponsor-bank operating committee, sponsor-bank TPRM, internal audit, board risk committee, regulator-facing file (sponsor-bank-mediated, CFPB direct under the larger-participant rule, state-MTL via NMLS). Audience drives length and tone, not content; the named sections stay.
 - **Is there a cyber leg.** A processor-side ransomware event, a credential-stuffing wave, a vendor-side data exposure, an operator-side breach can all sit underneath a payments-operational incident. If the firm or its sponsor bank is a public registrant, the cyber leg has public-disclosure reach. Flag it here; the disclosure-track artifact lives in `risk-reporting/cyber-disclosure-readiness`.
 
-When `engagement-scope` (per `risk-compliance-core/engagement-scoping`) is supplied, the skill consumes it (`institution.type`, `institution.primary_regulators`, `sector_overlay_set`, `cross_cutting_overlay_set`, `persona.role`, `source_posture`). When it is not, the skill asks the four questions above and defaults to public posture if the practitioner declines. Note in the artifact that scope was not formalised.
+When `scope` (per `risk-compliance-core/scoping`) is supplied, the skill consumes it (`institution.type`, `institution.primary_regulators`, `sector_overlay_set`, `cross_cutting_overlay_set`, `persona.role`, `source_posture`). When it is not, the skill asks the four questions above and defaults to public posture if the practitioner declines. Note in the artifact that scope was not formalised.
 
 ## How the pack gets built
 

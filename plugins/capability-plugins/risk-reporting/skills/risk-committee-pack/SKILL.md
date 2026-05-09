@@ -36,7 +36,7 @@ Most of the spine is set by the engagement and the prior-period pack. A few thin
 - What decisions does the committee owe this cycle. The decision items section is the load-bearing one; a pack with no decisions is a status update. Decisions usually include RAS recalibrations, MRA or MRIA extension requests, framework changes, and scenario-driven actions. Surface them up front.
 - What is the source posture and the data confidence label. BCBS 239 known limitations bind the label; if the most recent self-assessment lists three KRIs with lineage gaps, the label is medium at best. The label is the BCBS 239 voice in the pack, not a marketing decision.
 
-When the engagement-scope record is supplied, the skill reads `institution.type`, `institution.primary_regulators`, `persona.role`, `risk_lens`, `sector_overlay_set`, and `cross_cutting_overlay_set` from it, plus `source_posture` for the evidence asks. Otherwise the skill works with what the practitioner names and flags the rest.
+When the scope record is supplied, the skill reads `institution.type`, `institution.primary_regulators`, `persona.role`, `risk_lens`, `sector_overlay_set`, and `cross_cutting_overlay_set` from it, plus `source_posture` for the evidence asks. Otherwise the skill works with what the practitioner names and flags the rest.
 
 ## How the pack gets built
 
@@ -64,7 +64,7 @@ The appendices carry the data confidence and BCBS 239 posture (label, known limi
 
 ### Climate
 
-When the engagement scope flags climate, the climate cross-cutting overlay (`references/cross-cutting/climate.md` when installed) drives placement and depth. Climate is part of the enterprise heat map, not a separate appendix; either as a separately-rated cell or under strategic with rationale documented in the cell commentary. The Climate section in the body carries governance summary, physical and transition risk summary, scenarios used (NGFS Net Zero 2050, NGFS Delayed Transition, NGFS Current Policies, FRB pilot scenarios where applicable), and the link to the firm's external climate disclosure (10-K Item 1500 series, CSRD-aligned report, voluntary TCFD report). The SEC climate disclosure rule has been subject to legal challenges and stay actions; never assert current effectiveness without checking the SEC's posture as of the report date. Default posture is to lean on TCFD for substantive content and flag the SEC rule status in source trace.
+When the scope flags climate, the climate cross-cutting overlay (`references/cross-cutting/climate.md` when installed) drives placement and depth. Climate is part of the enterprise heat map, not a separate appendix; either as a separately-rated cell or under strategic with rationale documented in the cell commentary. The Climate section in the body carries governance summary, physical and transition risk summary, scenarios used (NGFS Net Zero 2050, NGFS Delayed Transition, NGFS Current Policies, FRB pilot scenarios where applicable), and the link to the firm's external climate disclosure (10-K Item 1500 series, CSRD-aligned report, voluntary TCFD report). The SEC climate disclosure rule has been subject to legal challenges and stay actions; never assert current effectiveness without checking the SEC's posture as of the report date. Default posture is to lean on TCFD for substantive content and flag the SEC rule status in source trace.
 
 ### Cyber
 
@@ -72,7 +72,7 @@ Cyber risk lands in the heat map and in the top risks where elevated. Depth live
 
 ### Sector overlays
 
-Load only the overlay the engagement scope names. For OCC-supervised covered banks, the heightened-standards expectations are explicit in the pack (RAS ladder, three-lines roles, risk-governance-framework alignment); citations live in the banking sector overlay. Insurance ERM committee packs map sections to ORSA Summary Report sections so the same content rolls up to the framework, exposure-assessment, and prospective-solvency expectations under Model #505. Capital-markets adviser packs are firm-level (investment risk at the firm, fiduciary risk at the firm, vendor and technology risk at the firm); fund-level items go to the fund boards via separate reporting and cross-link if material to both, do not collapse. Payments-fintech packs carry third-party concentration and BaaS roll-up where the firm has bank-partnership exposure.
+Load only the overlay the scope names. For OCC-supervised covered banks, the heightened-standards expectations are explicit in the pack (RAS ladder, three-lines roles, risk-governance-framework alignment); citations live in the banking sector overlay. Insurance ERM committee packs map sections to ORSA Summary Report sections so the same content rolls up to the framework, exposure-assessment, and prospective-solvency expectations under Model #505. Capital-markets adviser packs are firm-level (investment risk at the firm, fiduciary risk at the firm, vendor and technology risk at the firm); fund-level items go to the fund boards via separate reporting and cross-link if material to both, do not collapse. Payments-fintech packs carry third-party concentration and BaaS roll-up where the firm has bank-partnership exposure.
 
 The sector overlay is content that lands in the pack, not background reading. An insurance overlay loaded but no ORSA mapping in the pack is the failure mode the troubleshooting file calls out.
 
@@ -88,7 +88,7 @@ The sector overlay is content that lands in the pack, not background reading. An
 
 ## Adaptation
 
-Audience drives tone (board chair is challenge-shaped; ERM committee is wider on management metrics; regulator-attended meeting tightens the source trace). Depth flexes with firm tier (Heightened Standards covered bank deepest; mid-cap regional and adviser firm lighter). Sector and cross-cutting overlays load from the engagement scope. Where firm-specific taxonomy, RAS structure, or governance machinery applies, it lives in `references/firm-overlay.md` (consumed when present) and never in the pack directly.
+Audience drives tone (board chair is challenge-shaped; ERM committee is wider on management metrics; regulator-attended meeting tightens the source trace). Depth flexes with firm tier (Heightened Standards covered bank deepest; mid-cap regional and adviser firm lighter). Sector and cross-cutting overlays load from the scope. Where firm-specific taxonomy, RAS structure, or governance machinery applies, it lives in `references/firm-overlay.md` (consumed when present) and never in the pack directly.
 
 ## Output
 
@@ -99,7 +99,7 @@ Downstream consumers: the structured object feeds the firm's committee minutes s
 ## Pointers
 
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
-- `references/sector-overlays/{banking,insurance,capital-markets}.md` — sector overlays loaded from engagement scope.
+- `references/sector-overlays/{banking,insurance,capital-markets}.md` — sector overlays loaded from scope.
 - `references/cross-cutting/climate.md` — climate cross-cutting overlay (when installed).
 - `references/firm-overlay.md` — firm-installed taxonomy, RAS structure, governance machinery (consumed when present).
 - `templates/default-output.md` — pack template with the named sections.

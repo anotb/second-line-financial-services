@@ -1,6 +1,6 @@
 # Banking sector overlay — criticality-assessment
 
-When the engagement scope flags banking, load this overlay alongside `references/source-anchors.md`. It carries the banking-only criteria the generic capability skill does not own.
+When the scope flags banking, load this overlay alongside `references/source-anchors.md`. It carries the banking-only criteria the generic capability skill does not own.
 
 ## Operative supervisory frame
 

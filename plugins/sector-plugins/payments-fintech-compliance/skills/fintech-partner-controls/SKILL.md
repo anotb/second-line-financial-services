@@ -31,7 +31,7 @@ Plain answers up front. Default and flag where the practitioner cannot answer.
 - **Review trigger and audience.** Annual sponsor-bank review, sponsor-bank-led audit, state-MTL exam through NMLS, sponsor-bank questionnaire (SIG, CAIQ, bespoke), processor-led control review, internal audit kickoff, post-incident sponsor-bank request, new-rail / new-product delta. The trigger sets depth; the audience sets tone.
 - **Source posture.** Public-only (engagement scoping); public-plus-firm-policy; public-plus-firm-policy-plus-system-of-record-evidence (the load-bearing posture for self-evidence work — ledger, processor portal, complaint system, dispute system, FBO reconciliation feed, sponsor-bank reporting feeds); connector-aware where the practitioner can pull live extracts. Aspirational posture is not a posture.
 
-When `engagement-scope` (per `risk-compliance-core/engagement-scoping`) is supplied, consume it (`institution.type`, `institution.primary_regulators`, `sector_overlay_set`, `cross_cutting_overlay_set`, `persona.role`, `source_posture`). Otherwise ask the questions and default to public posture if the practitioner declines. Note in the artifact that scope was not formalised.
+When `scope` (per `risk-compliance-core/scoping`) is supplied, consume it (`institution.type`, `institution.primary_regulators`, `sector_overlay_set`, `cross_cutting_overlay_set`, `persona.role`, `source_posture`). Otherwise ask the questions and default to public posture if the practitioner declines. Note in the artifact that scope was not formalised.
 
 ## How the pack gets built
 

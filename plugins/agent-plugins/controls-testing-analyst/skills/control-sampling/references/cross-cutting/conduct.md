@@ -1,6 +1,6 @@
 # Conduct cross-cutting overlay — control-sampling
 
-Loaded when `engagement-scope.cross_cutting_overlay_set` includes `conduct`, when the test addresses consumer-facing controls (UDAAP, fair-lending, sales-practices, complaint-handling), or when stratification by customer segment matters separately from the technical control conclusion. Supplements `references/source-anchors.md`.
+Loaded when `scope.cross_cutting_overlay_set` includes `conduct`, when the test addresses consumer-facing controls (UDAAP, fair-lending, sales-practices, complaint-handling), or when stratification by customer segment matters separately from the technical control conclusion. Supplements `references/source-anchors.md`.
 
 ## Population definition conventions for conduct-relevant sampling
 

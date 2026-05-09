@@ -35,7 +35,7 @@ Before drafting, settle five things. The analysis is portfolio-wide and identifi
 - **Fourth-party visibility posture.** How deep the sub-contractor chain is documented in the source register. Concentration that lives at rank 2 or rank 3 of a sub-contractor chain is the concentration the firm does not see in a vendor-by-vendor read. A register that stops at rank 1 limits the analysis; the limitation is itself a finding and goes in the data-quality caveats.
 - **Sector overlay set and source posture.** Which of {banking, insurance, capital-markets, payments-fintech} apply. A dual-registrant or a fintech with a sponsor-bank arrangement may carry two. Source posture (public-only, public-plus-firm-policy, public-plus-firm-policy-plus-system-of-record-evidence, connector-aware) drives the evidence ask and the confidence label on the artifact.
 
-When the engagement-scope record is supplied, the skill consumes it for institution type, sector overlay set, cross-cutting overlay set, persona, and source posture. When it is not supplied, ask the questions above and default to public posture if the practitioner declines. Do not silently apply a sector overlay default.
+When the scope record is supplied, the skill consumes it for institution type, sector overlay set, cross-cutting overlay set, persona, and source posture. When it is not supplied, ask the questions above and default to public posture if the practitioner declines. Do not silently apply a sector overlay default.
 
 ## How the review gets done
 
@@ -75,9 +75,9 @@ Reviewer questions tie to the decision and cluster for the forum that decides: o
 
 ### Sector and cross-cutting overlay loading
 
-When the engagement scope names a sector, load the matching `references/sector-overlays/<sector>.md`: `banking.md` for the hyperscaler-on-bank, sponsor-bank-on-fintech, and large-bank-cloud-concentration framings; `insurance.md` for policy-administration-system, reinsurance, and claims-TPA concentration; `capital-markets.md` for market-data-vendor, exchange-feed, central-counterparty, and post-trade-processor concentration; `payments-fintech.md` for sponsor-bank, BIN-sponsor, BaaS, and rails-access concentration. A dual-registrant or BaaS arrangement may load two.
+When the scope names a sector, load the matching `references/sector-overlays/<sector>.md`: `banking.md` for the hyperscaler-on-bank, sponsor-bank-on-fintech, and large-bank-cloud-concentration framings; `insurance.md` for policy-administration-system, reinsurance, and claims-TPA concentration; `capital-markets.md` for market-data-vendor, exchange-feed, central-counterparty, and post-trade-processor concentration; `payments-fintech.md` for sponsor-bank, BIN-sponsor, BaaS, and rails-access concentration. A dual-registrant or BaaS arrangement may load two.
 
-The cyber cross-cutting overlay (`references/cross-cutting/cyber.md`) loads when the technology-stack and sub-contractor-chain dimensions surface cyber-risk material to the supervisory read (a single cyber-incident that removes multiple critical arrangements, a shared-utility incident that propagates across the firm and its peers). Privacy considerations are read through the geographic-and-jurisdictional dimension (cross-border data flows, data-residency posture); the deeper privacy treatment lives with `vendor-diligence` and the privacy-overlay file there. Load only the overlays the engagement scope names.
+The cyber cross-cutting overlay (`references/cross-cutting/cyber.md`) loads when the technology-stack and sub-contractor-chain dimensions surface cyber-risk material to the supervisory read (a single cyber-incident that removes multiple critical arrangements, a shared-utility incident that propagates across the firm and its peers). Privacy considerations are read through the geographic-and-jurisdictional dimension (cross-border data flows, data-residency posture); the deeper privacy treatment lives with `vendor-diligence` and the privacy-overlay file there. Load only the overlays the scope names.
 
 ## Quality bar
 
@@ -99,7 +99,7 @@ Flexes by engagement.
 
 - **Review depth scales to cycle type and audience.** Annual portfolio cycle runs broad with all dimensions. Pre-contract preliminary assessment runs narrow against the proposed arrangement and the portfolio it joins; the dimensions that the proposed arrangement materially moves are read in depth, the others are summarised. Supervisor-information-request runs to the question. Stress-event readiness leads with single-points-of-failure and the substitutability read under stressed conditions.
 - **Audience drives shape.** A pack for the operational-resilience committee reads operational. A pack for the CRO office leads with the residual concentration posture and the risk-appetite implications. A pack for board reads as a justification of the firm's own concentration tolerance. A pack supporting a supervisor dialogue reads as a justification of the firm's posture before the supervisor asks.
-- **Sector overlay loading follows engagement scope.** Dual-registrant or BaaS arrangements load two.
+- **Sector overlay loading follows the scope.** Dual-registrant or BaaS arrangements load two.
 - **Source posture drives the evidence ask** and the confidence label on the artifact.
 - **Render format follows the workflow.** Default to the markdown narrative; render as Word, Excel, or PowerPoint when the audience or workflow asks for it (an annual board pack often wants a deck; a portfolio cut often wants a workbook).
 - **Firm-specific concentration tolerances, named owners, internal-to-supervisory threshold mapping, and policy thresholds** sit in `references/firm-overlay.md`, consumed when present, never in the artifact directly.
@@ -115,7 +115,7 @@ The schema is additive only. Add fields, do not rename or repurpose them. A brea
 ## Pointers
 
 - `references/source-anchors.md` ... citations and verification posture for the named anchors.
-- `references/sector-overlays/banking.md`, `insurance.md`, `capital-markets.md`, `payments-fintech.md` ... sector-specific concentration framings loaded per engagement scope.
+- `references/sector-overlays/banking.md`, `insurance.md`, `capital-markets.md`, `payments-fintech.md` ... sector-specific concentration framings loaded per scope.
 - `references/cross-cutting/cyber.md` ... cyber cross-cutting frame loaded where the technology-stack and sub-contractor-chain dimensions surface cyber-risk material to the supervisory read.
 - `references/firm-overlay.md` ... firm policy, named owners, concentration tolerances, internal-to-supervisory threshold mapping (consumed when present).
 - `templates/default-output.md` ... committee narrative template.

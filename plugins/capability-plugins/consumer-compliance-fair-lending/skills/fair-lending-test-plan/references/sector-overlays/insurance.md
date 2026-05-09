@@ -1,8 +1,8 @@
 # Insurance sector overlay for fair-lending-test-plan
 
-When the engagement-scope record names sector `insurance`, this overlay sets the scope boundary first. Insurance underwriting and pricing discrimination is regulated under state-DOI unfair-discrimination statutes, not under ECOA or the FHA. The fair-lending test-plan skill is the wrong tool for most insurance review work.
+When the scope record names sector `insurance`, this overlay sets the scope boundary first. Insurance underwriting and pricing discrimination is regulated under state-DOI unfair-discrimination statutes, not under ECOA or the FHA. The fair-lending test-plan skill is the wrong tool for most insurance review work.
 
-Loaded by: `fair-lending-test-plan/SKILL.md` when `engagement_scope.sector_overlay_set` includes `insurance`, or when the institution type implicates a life, health, or property-and-casualty insurer.
+Loaded by: `fair-lending-test-plan/SKILL.md` when `scope.sector_overlay_set` includes `insurance`, or when the institution type implicates a life, health, or property-and-casualty insurer.
 
 Cited and section-referenced anchors live in `references/source-anchors.md`.
 

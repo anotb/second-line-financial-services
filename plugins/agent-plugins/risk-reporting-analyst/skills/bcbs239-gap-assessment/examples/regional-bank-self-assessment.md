@@ -12,7 +12,7 @@ It is the canonical large-bank exam-readiness use of the skill. The horizontal-r
 
 ```yaml
 assessment_id: BCBS239-2026-FRB-HRZ-04
-engagement_scope_id: ENG-2026-FRB-HRZ-04
+scope_id: ENG-2026-FRB-HRZ-04
 
 scope:
   legal_entity_perimeter: [Bancorp, lead bank, broker-dealer subsidiary]

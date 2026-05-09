@@ -1,6 +1,6 @@
 # Capital markets sector overlay for prompt-injection-risk
 
-When the engagement-scope record names `capital-markets` as the sector, this overlay adds capital-markets-specific carriers, mitigations, monitoring signals, and incident-notification triggers to the review. Loaded by `prompt-injection-risk/SKILL.md` when `engagement_scope.sector_overlay_set` includes `capital-markets`. Cited and section-referenced anchors live in `references/source-anchors.md`.
+When the scope record names `capital-markets` as the sector, this overlay adds capital-markets-specific carriers, mitigations, monitoring signals, and incident-notification triggers to the review. Loaded by `prompt-injection-risk/SKILL.md` when `scope.sector_overlay_set` includes `capital-markets`. Cited and section-referenced anchors live in `references/source-anchors.md`.
 
 ## Source basis
 

@@ -1,6 +1,6 @@
 # Privacy cross-cutting overlay — evidence-binder
 
-Loads when the engagement-scope `cross_cutting_overlay_set` includes `privacy`, or when the binder carries evidence touching NPI, PHI, PCI, or other regulated personal data. The overlay sets the privacy posture on individual rows and on the binder as a whole.
+Loads when the scope `cross_cutting_overlay_set` includes `privacy`, or when the binder carries evidence touching NPI, PHI, PCI, or other regulated personal data. The overlay sets the privacy posture on individual rows and on the binder as a whole.
 
 ## Why privacy belongs in the binder
 

@@ -1,7 +1,7 @@
 # Concentration risk review
 
 **Assessment ID**: [stable ID]
-**Engagement ID**: [pointer to engagement-scope record, or "none — scope not formalised"]
+**Engagement ID**: [pointer to scope record, or "none — scope not formalised"]
 **As of**: [date]
 **Cycle type**: [annual-portfolio | pre-contract-preliminary-assessment | supervisor-information-request | stress-event-readiness | post-incident-re-review | off-cycle-trigger]
 **Owner (role)**: [e.g., head of TPRM, ICT third-party programme lead]

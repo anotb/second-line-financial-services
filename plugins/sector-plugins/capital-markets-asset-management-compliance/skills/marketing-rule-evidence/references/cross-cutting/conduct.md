@@ -2,7 +2,7 @@
 
 This overlay loads where the substantiation gap, the testimonial framing, the third-party-rating presentation, or the performance-presentation choices cross the antifraud "fair and balanced" threshold. The Marketing Rule's general prohibitions in Rule 206(4)-1(b) are the antifraud backbone of the rule; the conduct overlay is where the technical-compliance read meets the antifraud read.
 
-Loaded by: `marketing-rule-evidence/SKILL.md` when `engagement_scope.cross_cutting_set` includes `conduct` or when the per-claim or per-statement-type analysis surfaces a finding that may be technically compliant on the disclosure mechanics but materially misleading in context.
+Loaded by: `marketing-rule-evidence/SKILL.md` when `scope.cross_cutting_set` includes `conduct` or when the per-claim or per-statement-type analysis surfaces a finding that may be technically compliant on the disclosure mechanics but materially misleading in context.
 
 Cited and section-referenced anchors live in `references/source-anchors.md`.
 

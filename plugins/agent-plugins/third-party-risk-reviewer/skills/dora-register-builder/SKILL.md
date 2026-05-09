@@ -34,7 +34,7 @@ Before drafting, settle six things. The build is identifier-driven and relationa
 - **Source-data posture.** Which firm systems are inputs: TPRM register, contract repository, ICT-asset inventory, prior-year register, EBA outsourcing register (EBA/GL/2019/02 §11), criticality-assessment outputs, vendor-diligence packs. Each carries a quality caveat. Name them.
 - **Criticality-assessment availability.** The register's `b_04_functions.criticality` field is sourced from `criticality-assessment` and backed by a `criticality_evidence_record_id`. If criticality has not been formally set for in-scope arrangements, route there first and consume the output here. Setting the flag in this skill without backing evidence is a defect, not a shortcut.
 
-When the engagement-scope record is supplied, the skill consumes it for institution type, sector overlay set, cross-cutting overlay set, persona, and source posture. When it is not supplied, ask the questions above and default to public posture if the practitioner declines. Do not silently apply a sector overlay default.
+When the scope record is supplied, the skill consumes it for institution type, sector overlay set, cross-cutting overlay set, persona, and source posture. When it is not supplied, ask the questions above and default to public posture if the practitioner declines. Do not silently apply a sector overlay default.
 
 ## How the build gets done
 
@@ -76,9 +76,9 @@ A refresh build is structurally different from a first-cycle build. The supervis
 
 ### Sector and cross-cutting overlay loading
 
-When the engagement scope names a sector, load the matching `references/sector-overlays/<sector>.md`: `banking.md` for ECB SSM and EBA-coordinated banking matters; `insurance.md` for EIOPA-coordinated insurer matters and the US-parent dimension where Form B and Form F interplay; `capital-markets.md` for ESMA-coordinated investment firm, fund manager, trading venue, CSD, and CCP matters; `payments-fintech.md` for payment institution and e-money institution matters. A dual-registrant or a fintech with a sponsor-bank arrangement may load two.
+When the scope names a sector, load the matching `references/sector-overlays/<sector>.md`: `banking.md` for ECB SSM and EBA-coordinated banking matters; `insurance.md` for EIOPA-coordinated insurer matters and the US-parent dimension where Form B and Form F interplay; `capital-markets.md` for ESMA-coordinated investment firm, fund manager, trading venue, CSD, and CCP matters; `payments-fintech.md` for payment institution and e-money institution matters. A dual-registrant or a fintech with a sponsor-bank arrangement may load two.
 
-The cyber cross-cutting overlay (`references/cross-cutting/cyber.md`) loads when ICT services in scope materially expose the firm to cyber risk that the register's data-residency, sub-contractor-chain, or service-type fields surface for supervisory attention. Privacy and concentration considerations show up via fields the schema already includes (data location, sub-outsourcing chain, function-supported); the deeper treatment lives with `vendor-diligence`, `exit-plan`, and `concentration-risk-review`. Load only the overlays the engagement scope names. Gold-plating a build with overlays the engagement does not implicate adds noise without supervisory value.
+The cyber cross-cutting overlay (`references/cross-cutting/cyber.md`) loads when ICT services in scope materially expose the firm to cyber risk that the register's data-residency, sub-contractor-chain, or service-type fields surface for supervisory attention. Privacy and concentration considerations show up via fields the schema already includes (data location, sub-outsourcing chain, function-supported); the deeper treatment lives with `vendor-diligence`, `exit-plan`, and `concentration-risk-review`. Load only the overlays the scope names. Gold-plating a build with overlays the engagement does not implicate adds noise without supervisory value.
 
 ## Quality bar
 
@@ -99,7 +99,7 @@ Flexes by engagement.
 
 - **Build depth scales to scope and review type.** First-cycle builds run long. Annual refreshes lead with the year-on-year delta. Quality-review-only runs skip the table records and concentrate on findings and reconciliations. Off-cycle updates concentrate on the changed records and the relational impact.
 - **Audience drives shape.** A pack for the DORA programme lead reads operational. A pack for the accountable executive leads with the residual data-quality posture and the sign-off question. A pack for the host-state NCA dialogue reads as a justification of the firm's own quality posture before the supervisor asks.
-- **Sector overlay loading follows engagement scope.** Dual-registrant or BaaS arrangements load two.
+- **Sector overlay loading follows the scope.** Dual-registrant or BaaS arrangements load two.
 - **Source posture (public-only, public-plus-firm-policy, public-plus-firm-policy-plus-system-of-record-evidence, connector-aware) drives the evidence ask** and the confidence label on the build.
 - **Firm-specific policy, taxonomy, named owners, internal-to-ITS service-type mapping table** sit in `references/firm-overlay.md`, consumed when present, never in the build directly.
 
@@ -114,7 +114,7 @@ The schema is additive only. Add fields, do not rename or repurpose them. A brea
 ## Pointers
 
 - `references/source-anchors.md` ... citations, verification posture for ITS table and column codes, EU OJ references for the Commission Implementing Regulation, the joint ESA Final Report, and the RTS on sub-contracting under Article 30(5).
-- `references/sector-overlays/banking.md`, `insurance.md`, `capital-markets.md`, `payments-fintech.md` ... sector-specific submission-channel and supervisory-frame detail loaded per engagement scope.
+- `references/sector-overlays/banking.md`, `insurance.md`, `capital-markets.md`, `payments-fintech.md` ... sector-specific submission-channel and supervisory-frame detail loaded per scope.
 - `references/cross-cutting/cyber.md` ... cyber cross-cutting frame loaded where the register's data-residency, sub-contractor-chain, and service-type fields surface cyber-risk material to the supervisory read.
 - `references/firm-overlay.md` ... firm policy, named owners, ITS-to-firm taxonomy mapping table, NCA-specific channel and validation overlay (consumed when present).
 - `templates/default-output.md` ... build-pack template.

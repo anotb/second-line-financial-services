@@ -1,6 +1,6 @@
 # Capital markets sector overlay — aml-model-monitoring
 
-When the engagement scope flags capital markets, load this overlay alongside `references/source-anchors.md`. AML transaction-monitoring at broker-dealers, investment advisers, and registered funds reads differently from a deposit-bank context.
+When the scope flags capital markets, load this overlay alongside `references/source-anchors.md`. AML transaction-monitoring at broker-dealers, investment advisers, and registered funds reads differently from a deposit-bank context.
 
 ## Operative-program read
 

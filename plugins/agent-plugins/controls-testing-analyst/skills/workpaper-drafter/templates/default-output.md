@@ -7,7 +7,7 @@
 **Period under test**: [start date — end date]
 **Business unit**: [name; role-level, not individual-level]
 **Jurisdiction**: [primary; list secondary if test scope is multi-jurisdiction]
-**Engagement ID**: [pointer to engagement-scope record, or "none — scope not formalised separately from test plan"]
+**Engagement ID**: [pointer to scope record, or "none — scope not formalised separately from test plan"]
 **Preparer (role)**: [e.g., compliance-testing analyst]
 **Preparer date**: [ISO date]
 **Reviewer (role)**: [separate role from preparer; e.g., compliance-testing manager]

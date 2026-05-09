@@ -1,8 +1,8 @@
 # Cyber cross-cutting overlay for rag-evaluation-review
 
-When the engagement-scope record flags `cyber` for a RAG evaluation review, this overlay carries the corpus-access-control framing and the indirect-injection adjacency to `prompt-injection-risk`. The cyber overlay is not the primary lens for a RAG evaluation review (the primary lenses are corpus governance and grounding evaluation); it sits alongside the privacy overlay as a co-lens for the corpus access surface.
+When the scope record flags `cyber` for a RAG evaluation review, this overlay carries the corpus-access-control framing and the indirect-injection adjacency to `prompt-injection-risk`. The cyber overlay is not the primary lens for a RAG evaluation review (the primary lenses are corpus governance and grounding evaluation); it sits alongside the privacy overlay as a co-lens for the corpus access surface.
 
-Loaded by: `rag-evaluation-review/SKILL.md` when `engagement_scope.cross_cutting_set` includes `cyber`. Cited and section-referenced anchors live in `references/source-anchors.md`.
+Loaded by: `rag-evaluation-review/SKILL.md` when `scope.cross_cutting_set` includes `cyber`. Cited and section-referenced anchors live in `references/source-anchors.md`.
 
 ## Source basis
 

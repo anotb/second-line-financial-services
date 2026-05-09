@@ -49,7 +49,7 @@ The pack stops at draft. The fund CCO and the board secretariat review before th
 - The §15(c) renewal pack carries methodology pins for profitability and peer-group selection. Trustee questions are substantive and period-specific (AUM growth and economy-of-scale analysis; performance versus benchmark for the period; profitability movement; fall-out benefit changes); recycled prior-year questions are absent.
 - The cyber overlay drives the Reg S-P customer-notice analysis for the two service-provider events. The fund retains the customer-notice obligation when fund-shareholder customer information was affected; the pack documents the obligation analysis.
 - The conduct overlay drives the §17(e) / Rule 17e-1 procedure-adequacy treatment, the Rule 17a-7 pricing methodology evidence, and the soft-dollar disclosure. Counts without context are insufficient; the pack carries the conflict shape and the procedure adequacy.
-- Climate is not in scope this period (no ESG-labeled funds; Rule 35d-1 ESG-name considerations not relevant). The cross-cutting overlay loader respects the engagement scope; the pack does not invent a climate section.
+- Climate is not in scope this period (no ESG-labeled funds; Rule 35d-1 ESG-name considerations not relevant). The cross-cutting overlay loader respects the scope; the pack does not invent a climate section.
 
 ## Anchors
 

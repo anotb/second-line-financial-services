@@ -32,9 +32,9 @@
       "type": "string",
       "description": "Intake-record version this tier was decided against."
     },
-    "engagement_scope_id": {
+    "scope_id": {
       "type": "string",
-      "description": "Links to engagement-scoping record if supplied."
+      "description": "Links to scoping record if supplied."
     },
     "decision_date": {
       "type": "string",

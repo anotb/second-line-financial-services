@@ -1,6 +1,6 @@
 # Payments and fintech sector overlay — evidence-binder
 
-Loads when the engagement-scope `sector_overlay_set` includes `payments-fintech`. Binds evidence-binder content to bank-partnership, money-transmitter, and payment-network supervisory expectations.
+Loads when the scope `sector_overlay_set` includes `payments-fintech`. Binds evidence-binder content to bank-partnership, money-transmitter, and payment-network supervisory expectations.
 
 ## Supervisory frame
 
@@ -25,7 +25,7 @@ Fintech-side RFIs (state DFS, CFPB exams, network audits) typically cover: licen
 
 Sponsor-bank binders for fintech-partnership exams are signed by the sponsor-bank's BSA officer or chief compliance officer. Fintech-side binders are signed by the fintech's BSA officer (where MSB-registered) or chief compliance officer.
 
-For BaaS arrangements, the binder may need to evidence both sides; the engagement-scope record names which side this binder represents.
+For BaaS arrangements, the binder may need to evidence both sides; the scope record names which side this binder represents.
 
 ## Anchors used by this overlay
 

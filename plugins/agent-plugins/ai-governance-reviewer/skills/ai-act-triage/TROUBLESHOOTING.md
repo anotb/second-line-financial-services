@@ -64,7 +64,7 @@ Symptom: the triage cites the Regulation only and does not consider member-state
 
 Why it happens: the Regulation is the headline source; the implementing landscape is patchy and changes by state.
 
-Fix: when the engagement scope names a member state of operation, cross-walk to the implementing measure (where designated and where in force at write time). The triage records the state and the implementation status; where the implementation is in transposition or under consultation, the triage records that posture and routes to legal. Do not assert a member-state-specific obligation without confirming the implementation status.
+Fix: when the scope names a member state of operation, cross-walk to the implementing measure (where designated and where in force at write time). The triage records the state and the implementation status; where the implementation is in transposition or under consultation, the triage records that posture and routes to legal. Do not assert a member-state-specific obligation without confirming the implementation status.
 
 ## Sector overlay loaded but ignored
 
@@ -72,7 +72,7 @@ Symptom: insurance pricing triage reads in generic Annex III(5)(c) reasoning but
 
 Why it happens: the sector overlay file exists in references/ but the triage author treated it as background.
 
-Fix: when the engagement scope names a sector, the matching `references/sector-overlays/<sector>.md` content lands as named items in the triage artifact. The reviewer challenges any sector-flagged engagement that produces an artifact with no sector content.
+Fix: when the scope names a sector, the matching `references/sector-overlays/<sector>.md` content lands as named items in the triage artifact. The reviewer challenges any sector-flagged engagement that produces an artifact with no sector content.
 
 ## The triage drifts into legal advice
 

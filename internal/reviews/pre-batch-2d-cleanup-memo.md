@@ -11,7 +11,7 @@ The build is in good shape. 46 skills clean, validation green, plugin-level shar
 
 ### Voice and length
 
-The bench-build trio is still the cleanest. `engagement-scoping/SKILL.md` (82 lines), `vendor-diligence/SKILL.md` (76 lines), `model-card-builder/SKILL.md` (118 lines) hit the right register: senior, terse, prose-where-prose-belongs, sequencing-where-it-matters. The 2A and 2B builds mostly hold the line. 2C drifts longer in two specific directions and the orchestrator should call this out:
+The bench-build trio is still the cleanest. `scoping/SKILL.md` (82 lines), `vendor-diligence/SKILL.md` (76 lines), `model-card-builder/SKILL.md` (118 lines) hit the right register: senior, terse, prose-where-prose-belongs, sequencing-where-it-matters. The 2A and 2B builds mostly hold the line. 2C drifts longer in two specific directions and the orchestrator should call this out:
 
 - `agentic-ai-controls/SKILL.md` (135 lines) is the longest body in the corpus. The body has the right substance but sprawls because every named section gets a paragraph and the `## What's load-bearing and what flexes` section turns into a 16-bullet checklist. By comparison `vendor-diligence` (also a complex artifact) holds two paragraphs for load-bearing-vs-flexes and trusts the reader.
 - `concentration-risk-review` (125 lines), `bcbs239-gap-assessment` (126 lines), `udaap-risk-review` (122 lines), `fair-lending-test-plan` (121 lines) all run long for similar reasons (every output section gets two paragraphs).
@@ -96,7 +96,7 @@ Pre-reads (MUST read before drafting):
 - Build contract: internal/plans/2026-05-06-phase2-build-contract.md
 - Spec sheet: internal/specs/<plugin>/<skill-name>.md
 - Reference patterns to mirror (pick by skill character):
-  - Judgement-heavy: plugins/capability-plugins/risk-compliance-core/skills/engagement-scoping/SKILL.md
+  - Judgement-heavy: plugins/capability-plugins/risk-compliance-core/skills/scoping/SKILL.md
   - Structured artifact: plugins/capability-plugins/ai-governance-model-risk/skills/model-card-builder/SKILL.md
   - Diligence pack: plugins/capability-plugins/third-party-operational-resilience/skills/vendor-diligence/SKILL.md
 - Skeleton: internal/templates/skill-skeleton.md (pre-fill it; do not re-derive shape)

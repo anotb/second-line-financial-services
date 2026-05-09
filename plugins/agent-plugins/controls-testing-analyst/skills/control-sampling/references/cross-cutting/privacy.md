@@ -1,6 +1,6 @@
 # Privacy cross-cutting overlay — control-sampling
 
-Loaded when `engagement-scope.cross_cutting_overlay_set` includes `privacy`, when the test addresses GLBA Safeguards Rule controls, HIPAA Security Rule controls (where applicable to the entity), or other consumer-financial-information safeguards. Supplements `references/source-anchors.md`.
+Loaded when `scope.cross_cutting_overlay_set` includes `privacy`, when the test addresses GLBA Safeguards Rule controls, HIPAA Security Rule controls (where applicable to the entity), or other consumer-financial-information safeguards. Supplements `references/source-anchors.md`.
 
 ## Population definition conventions for privacy-relevant sampling
 

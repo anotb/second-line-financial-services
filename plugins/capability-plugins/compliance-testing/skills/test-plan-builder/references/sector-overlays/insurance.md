@@ -1,6 +1,6 @@
 # Insurance sector overlay — test-plan-builder
 
-Loaded when `engagement-scope.sector_overlay_set` includes `insurance` or when the test addresses NAIC, state DOI, or insurance-specific federal rules. Supplements `references/source-anchors.md`.
+Loaded when `scope.sector_overlay_set` includes `insurance` or when the test addresses NAIC, state DOI, or insurance-specific federal rules. Supplements `references/source-anchors.md`.
 
 ## Test-plan conventions insurance examiners expect
 

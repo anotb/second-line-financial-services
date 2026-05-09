@@ -1,8 +1,8 @@
 # Cyber cross-cutting overlay for agentic-ai-controls
 
-When the engagement-scope record flags `cyber` for an agentic-controls review, this overlay sits as the primary lens, not a secondary one. Tool use, identity, and external-system actuation widen the cyber surface materially. The AI governance team often owns the artifact, but the CISO function is a co-reviewer and a co-decision-maker on residual-risk acceptance, not a downstream consumer.
+When the scope record flags `cyber` for an agentic-controls review, this overlay sits as the primary lens, not a secondary one. Tool use, identity, and external-system actuation widen the cyber surface materially. The AI governance team often owns the artifact, but the CISO function is a co-reviewer and a co-decision-maker on residual-risk acceptance, not a downstream consumer.
 
-Loaded by: `agentic-ai-controls/SKILL.md` when `engagement_scope.cross_cutting_set` includes `cyber`. For most v1 agentic deployments inside regulated entities (any agent with tool use, identity, or external-system actuation), this overlay should be considered the default. Cited and section-referenced anchors live in `references/source-anchors.md`.
+Loaded by: `agentic-ai-controls/SKILL.md` when `scope.cross_cutting_set` includes `cyber`. For most v1 agentic deployments inside regulated entities (any agent with tool use, identity, or external-system actuation), this overlay should be considered the default. Cited and section-referenced anchors live in `references/source-anchors.md`.
 
 ## Source basis
 

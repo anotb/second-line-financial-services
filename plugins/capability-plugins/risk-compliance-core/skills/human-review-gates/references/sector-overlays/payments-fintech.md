@@ -1,6 +1,6 @@
 # Payments and fintech sector overlay — human-review-gates
 
-Loads when the engagement-scope `sector_overlay_set` includes `payments-fintech`. The overlay shapes the decision-authority block and the gate framing for sponsor-bank arrangements, money-services-business state-licensing, and consumer-payment-product oversight at fintechs and the banks that sponsor them.
+Loads when the scope `sector_overlay_set` includes `payments-fintech`. The overlay shapes the decision-authority block and the gate framing for sponsor-bank arrangements, money-services-business state-licensing, and consumer-payment-product oversight at fintechs and the banks that sponsor them.
 
 ## Why the payments-fintech overlay matters
 

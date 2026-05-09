@@ -1,8 +1,8 @@
 # Payments-fintech sector overlay for ai-use-case-intake
 
-When the engagement-scope record names sector `payments-fintech`, this overlay tells the intake what additional fields to capture, which named regulators belong on the regulatory-flags table, and which sponsor-bank and money-transmitter facts are load-bearing. Payments-fintech intakes break differently from bank intakes: the program operator may not be the supervised entity, but the AI runs in the program operator's stack, and both the operator and the sponsor bank carry the consequences.
+When the scope record names sector `payments-fintech`, this overlay tells the intake what additional fields to capture, which named regulators belong on the regulatory-flags table, and which sponsor-bank and money-transmitter facts are load-bearing. Payments-fintech intakes break differently from bank intakes: the program operator may not be the supervised entity, but the AI runs in the program operator's stack, and both the operator and the sponsor bank carry the consequences.
 
-Loaded by: `ai-use-case-intake/SKILL.md` when `engagement_scope.sector_overlay_set` includes `payments-fintech`, or when the institution type is a fintech program operator, BaaS platform, money transmitter, MSB, processor, BIN sponsor, or sponsor bank reviewing a fintech-supplied AI use case.
+Loaded by: `ai-use-case-intake/SKILL.md` when `scope.sector_overlay_set` includes `payments-fintech`, or when the institution type is a fintech program operator, BaaS platform, money transmitter, MSB, processor, BIN sponsor, or sponsor bank reviewing a fintech-supplied AI use case.
 
 ## Source basis
 

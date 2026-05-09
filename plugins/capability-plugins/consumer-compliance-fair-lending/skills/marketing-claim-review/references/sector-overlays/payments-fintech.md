@@ -1,8 +1,8 @@
 # Payments and fintech sector overlay for marketing-claim-review
 
-When the engagement-scope record names sector `payments-fintech`, this overlay adds payments- and fintech-specific marketing fact patterns, sponsor-bank attribution mechanics, and influencer / creator-economy review framing to the asset-level marketing review. Where there is conflict between the capability defaults and this overlay, the overlay governs the sector elements.
+When the scope record names sector `payments-fintech`, this overlay adds payments- and fintech-specific marketing fact patterns, sponsor-bank attribution mechanics, and influencer / creator-economy review framing to the asset-level marketing review. Where there is conflict between the capability defaults and this overlay, the overlay governs the sector elements.
 
-Loaded by: `marketing-claim-review/SKILL.md` when `engagement_scope.sector_overlay_set` includes `payments-fintech`, or when the institution type implicates a fintech consumer-credit platform, sponsor-bank-program operator, BNPL provider, prepaid issuer, P2P or instant-payment platform, neobank, or non-bank consumer-finance entity.
+Loaded by: `marketing-claim-review/SKILL.md` when `scope.sector_overlay_set` includes `payments-fintech`, or when the institution type implicates a fintech consumer-credit platform, sponsor-bank-program operator, BNPL provider, prepaid issuer, P2P or instant-payment platform, neobank, or non-bank consumer-finance entity.
 
 Cited and section-referenced anchors live in `references/source-anchors.md`.
 

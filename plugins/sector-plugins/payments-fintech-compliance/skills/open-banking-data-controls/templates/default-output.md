@@ -2,7 +2,7 @@
 
 **Programme ID**: [stable ID; reused across the four sector-skill artifacts]
 **Programme**: [legal entity; brand name if different]
-**Engagement ID**: [pointer to engagement-scope record, or "none — scope not formalised"]
+**Engagement ID**: [pointer to scope record, or "none — scope not formalised"]
 **Firm role**: [data_provider | data_recipient | both]
 **Sponsor bank** (where applicable): [bank name and programme name]
 **Drafted (UTC)**: [ISO datetime]
@@ -13,7 +13,7 @@
 
 ## Programme summary
 
-[One paragraph. Firm role under the data-rights frame, products in scope, consumer base, partner aggregators or developer-interface vendors integrated, sponsor-bank programme name where applicable. Names the engagement-scope record or notes "scope not formalised".]
+[One paragraph. Firm role under the data-rights frame, products in scope, consumer base, partner aggregators or developer-interface vendors integrated, sponsor-bank programme name where applicable. Names the scope record or notes "scope not formalised".]
 
 ## Current-state regulatory frame
 

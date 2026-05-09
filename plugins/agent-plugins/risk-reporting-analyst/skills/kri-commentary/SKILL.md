@@ -26,7 +26,7 @@ This is a second-line artifact. The voice is challenge, not first-line restateme
 
 ## Ask first
 
-Most of the spine is set by the upstream feed and the engagement scope. A few things settle before drafting:
+Most of the spine is set by the upstream feed and the scope. A few things settle before drafting:
 
 - Who consumes the block. The standard consumer is the risk committee pack, but the same block may flow into a regulator response, a board memo, or a CISO report. The audience drives tone and depth.
 - What the breach age is. A first-period AMBER and a fourth-period RED ask for different commentary. Multi-period breaches need a named root cause; "investigation ongoing" is not credible after period one.
@@ -34,7 +34,7 @@ Most of the spine is set by the upstream feed and the engagement scope. A few th
 - Whether the first-line draft is on file. Where it is, the second-line view is rewriting and challenging, not drafting from scratch; the explicit `second_line_challenge_note` carries the divergence.
 - What the source posture is. A block written under public-only posture (no firm system access) is bounded by what the engagement can evidence; defaulting to public posture and flagging the gap is preferable to fabricating internal evidence.
 
-When the engagement-scope record is supplied, the skill reads `institution.type`, `institution.primary_regulators`, `persona.role`, `risk_lens`, `sector_overlay_set`, `cross_cutting_overlay_set`, and `source_posture`. Otherwise the skill works with what the practitioner names and flags the rest.
+When the scope record is supplied, the skill reads `institution.type`, `institution.primary_regulators`, `persona.role`, `risk_lens`, `sector_overlay_set`, `cross_cutting_overlay_set`, and `source_posture`. Otherwise the skill works with what the practitioner names and flags the rest.
 
 ## How the block gets built
 
@@ -68,7 +68,7 @@ Aggregate work. Across all blocks for the period, the wrapper carries aggregate 
 
 ## Engagement scope integration
 
-When the `engagement-scope` record is supplied:
+When the `scope` record is supplied:
 
 - `institution.type` and `institution.primary_regulators` set tone, citation focus, and which sector overlay loads.
 - `persona.role` sets the artifact audience and the named sign-off owner.
@@ -91,7 +91,7 @@ When the record is not supplied, the skill asks: what is the firm type, who is t
 
 ## Adaptation
 
-Audience drives tone. Depth flexes with the audience and the risk type (a RED operational-loss block carries deeper material than an AMBER cyber-awareness block). Sector and cross-cutting overlays load from the engagement scope. Where firm-specific RAS structure, taxonomy, or escalation machinery applies, it lives in `references/firm-overlay.md` (consumed when present) and never in the block directly.
+Audience drives tone. Depth flexes with the audience and the risk type (a RED operational-loss block carries deeper material than an AMBER cyber-awareness block). Sector and cross-cutting overlays load from the scope. Where firm-specific RAS structure, taxonomy, or escalation machinery applies, it lives in `references/firm-overlay.md` (consumed when present) and never in the block directly.
 
 ## Output
 
@@ -102,8 +102,8 @@ Downstream consumers: the structured wrapper feeds `risk-committee-pack` (the KR
 ## Pointers
 
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
-- `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md` — sector overlays loaded from engagement scope.
-- `references/cross-cutting/{cyber,climate}.md` — cross-cutting overlays loaded from engagement scope.
+- `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md` — sector overlays loaded from scope.
+- `references/cross-cutting/{cyber,climate}.md` — cross-cutting overlays loaded from scope.
 - `references/firm-overlay.md` — firm-installed RAS structure, taxonomy, named owners, escalation machinery (consumed when present).
 - `templates/default-output.md` — per-KRI block template with the named sections and the wrapper.
 - `schemas/kri-commentary.schema.json` — structured-output contract.

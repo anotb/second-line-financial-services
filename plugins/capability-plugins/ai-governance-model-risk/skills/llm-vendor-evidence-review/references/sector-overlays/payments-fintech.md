@@ -1,6 +1,6 @@
 # Sector overlay: payments and fintech
 
-Loaded when `engagement-scope.sector_overlay_set` includes payments-fintech. Carries the payments-and-fintech-specific frame for foundation-model evidence-pack review: sponsor-bank visibility, BSA programme coverage of vendor-driven decisions, money-transmitter licensing constellation, and the bank-fintech-shared-responsibility seams that surface in vendor-AI deployments.
+Loaded when `scope.sector_overlay_set` includes payments-fintech. Carries the payments-and-fintech-specific frame for foundation-model evidence-pack review: sponsor-bank visibility, BSA programme coverage of vendor-driven decisions, money-transmitter licensing constellation, and the bank-fintech-shared-responsibility seams that surface in vendor-AI deployments.
 
 ## Supervisory frame
 

@@ -1,6 +1,6 @@
 # Privacy cross-cutting overlay — resilience-testing-pack
 
-When the engagement scope flags privacy, or whenever the testing pack involves scenarios that may surface personal data exposure, load this overlay. Privacy is in scope by default for AI vendors and for any vendor or IBS holding NPI, PHI, PCI, or other regulated data.
+When the scope flags privacy, or whenever the testing pack involves scenarios that may surface personal data exposure, load this overlay. Privacy is in scope by default for AI vendors and for any vendor or IBS holding NPI, PHI, PCI, or other regulated data.
 
 ## Operative anchors
 

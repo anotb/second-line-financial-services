@@ -1,6 +1,6 @@
 # Banking sector overlay — regulatory-impact-assessment
 
-When the engagement scope flags banking and the rule under assessment touches OCC, FRB, FDIC, or NCUA-supervised entities (or state-chartered banks under shared examination authority), load this overlay alongside `references/source-anchors.md`. The overlay carries the regulator-specific scoping conventions, threshold tier semantics, named-policy and named-control patterns, and the strategy-lens posture for the federal banking agencies.
+When the scope flags banking and the rule under assessment touches OCC, FRB, FDIC, or NCUA-supervised entities (or state-chartered banks under shared examination authority), load this overlay alongside `references/source-anchors.md`. The overlay carries the regulator-specific scoping conventions, threshold tier semantics, named-policy and named-control patterns, and the strategy-lens posture for the federal banking agencies.
 
 ## Institution-type scoping conventions
 

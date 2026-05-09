@@ -1,7 +1,7 @@
 # Evidence binder
 
 **Binder ID**: [stable identifier; reused by downstream workpapers, audit support packs, response files]
-**Engagement ID**: [pointer to engagement-scope record, or "none — scope not formalised"]
+**Engagement ID**: [pointer to scope record, or "none — scope not formalised"]
 **Binder purpose**: [regulator-exam | internal-audit | model-validation | vendor-review | committee-pack | issue-remediation | other]
 **As of**: [date]
 **Source posture**: [public-only | public-plus-firm-policy | public-plus-firm-policy-plus-evidence | connector-aware]

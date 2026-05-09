@@ -1,8 +1,8 @@
 # Insurance sector overlay for agentic-ai-controls
 
-This overlay carries the absorbed `claims-ai-controls` skill content. When the engagement-scope record names `insurance` as the sector, this overlay sits as the primary lens, not a secondary one. Claims-AI is the dominant insurance-sector use case for agentic systems and the overlay is opinionated about the controls that have to be in place.
+This overlay carries the absorbed `claims-ai-controls` skill content. When the scope record names `insurance` as the sector, this overlay sits as the primary lens, not a secondary one. Claims-AI is the dominant insurance-sector use case for agentic systems and the overlay is opinionated about the controls that have to be in place.
 
-Loaded by: `agentic-ai-controls/SKILL.md` when `engagement_scope.sector_overlay_set` includes `insurance`. Cited and section-referenced anchors live in `references/source-anchors.md`.
+Loaded by: `agentic-ai-controls/SKILL.md` when `scope.sector_overlay_set` includes `insurance`. Cited and section-referenced anchors live in `references/source-anchors.md`.
 
 ## Source basis
 

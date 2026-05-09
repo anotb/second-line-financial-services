@@ -1,10 +1,10 @@
 # Sector overlay: capital markets
 
-Loaded when `engagement-scope.sector_overlay_set` includes capital-markets. Carries the broker-dealer and investment-adviser-specific frame for foundation-model evidence-pack review: SEC and FINRA visibility, surveillance and execution adjacency, books-and-records and Marketing Rule reach into AI-generated content.
+Loaded when `scope.sector_overlay_set` includes capital-markets. Carries the broker-dealer and investment-adviser-specific frame for foundation-model evidence-pack review: SEC and FINRA visibility, surveillance and execution adjacency, books-and-records and Marketing Rule reach into AI-generated content.
 
 ## Supervisory frame
 
-Capital-markets entities are dual-supervised in different combinations: broker-dealers by FINRA and SEC, registered investment advisers by SEC (or state for sub-threshold), exchanges and ATSs by SEC, swap dealers by CFTC, FCMs and IBs by NFA and CFTC. The evidence-pack review is read against the supervisory constellation the engagement scope identifies.
+Capital-markets entities are dual-supervised in different combinations: broker-dealers by FINRA and SEC, registered investment advisers by SEC (or state for sub-threshold), exchanges and ATSs by SEC, swap dealers by CFTC, FCMs and IBs by NFA and CFTC. The evidence-pack review is read against the supervisory constellation the scope identifies.
 
 The SEC's published staff statements and risk alerts on AI use by registrants set the practical supervisory expectation in this scope: AI used in advisory, broker-dealer, surveillance, or fund-management functions falls within existing supervisory frameworks (Investment Advisers Act, Securities Exchange Act, Investment Company Act) and the related rules. There is, as of this skill's authoring, no SEC AI-specific final rule; published proposals and staff guidance are watched and tracked in `references/source-anchors.md`.
 

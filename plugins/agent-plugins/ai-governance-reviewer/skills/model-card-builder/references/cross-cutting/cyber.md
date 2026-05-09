@@ -1,8 +1,8 @@
 # Cyber cross-cutting overlay for model-card-builder
 
-When the engagement-scope record flags `cyber` for the model use case, this overlay adds cyber-specific content to named card sections. It does not replace the firm's information-security risk assessment; it is the model-card-side surfacing of cyber considerations that a second-line reviewer (and an examiner) will look for when the model is itself an attack surface or attack target.
+When the scope record flags `cyber` for the model use case, this overlay adds cyber-specific content to named card sections. It does not replace the firm's information-security risk assessment; it is the model-card-side surfacing of cyber considerations that a second-line reviewer (and an examiner) will look for when the model is itself an attack surface or attack target.
 
-Loaded by: `model-card-builder/SKILL.md` when `engagement_scope.cross_cutting_set` includes `cyber`. Cited and section-referenced anchors live in `references/source-anchors.md`.
+Loaded by: `model-card-builder/SKILL.md` when `scope.cross_cutting_set` includes `cyber`. Cited and section-referenced anchors live in `references/source-anchors.md`.
 
 ## Source basis
 

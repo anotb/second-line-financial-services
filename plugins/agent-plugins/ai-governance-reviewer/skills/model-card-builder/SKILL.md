@@ -33,7 +33,7 @@ Most of what the card needs is already on the table by the time someone reaches 
 - Who reads it. A working-group draft is plain. A pre-prod committee card is challenge-shaped. A regulator response is formal and full source-traced. A board distillation pulls sign-off questions to the front.
 - What architecture, and which overlays. Traditional ML, foundation-model, RAG, or agentic ... the answer triggers the GenAI overlay block (foundation-model dependence, RAG corpus, tool inventory, prompt-injection robustness, vendor change-of-version trigger) and decides which sector and cross-cutting overlays load.
 
-When the engagement-scope record is supplied, the skill consumes it for institution, persona, source posture, sector and cross-cutting overlays, lifecycle stage, and architecture flags. Otherwise it asks the practitioner the few facts it needs, and source posture sets what the card can assert at high confidence and what carries `[evidence needed]`.
+When the scope record is supplied, the skill consumes it for institution, persona, source posture, sector and cross-cutting overlays, lifecycle stage, and architecture flags. Otherwise it asks the practitioner the few facts it needs, and source posture sets what the card can assert at high confidence and what carries `[evidence needed]`.
 
 ## How the card gets filled in
 
@@ -41,7 +41,7 @@ The card has the same spine across model types. The order below is roughly how a
 
 Tier drives depth, so consume the tier output before deciding how much weight any section carries. That order is load-bearing. Likewise, do not draft validation-related sections (performance, robustness, fairness) before the upstream `ai-use-case-intake` and `ai-risk-tiering` artifacts are in hand, and `validation-plan` outputs where they exist. Routing to those skills first is faster than re-doing the work.
 
-**Metadata** names the model and version, owner, validator, second-line reviewer, date, tier, lifecycle stage, classification, and the upstream use-case and engagement-scope IDs. Owners are roles or functions, never named individuals.
+**Metadata** names the model and version, owner, validator, second-line reviewer, date, tier, lifecycle stage, classification, and the upstream use-case and scope IDs. Owners are roles or functions, never named individuals.
 
 **Intended use** sets purpose, intended users, the in-scope decisions, and the out-of-scope decisions. The out-of-scope list is what reviewers probe hardest; it is the firewall against scope drift after the model is in production.
 
@@ -82,9 +82,9 @@ The overlay is mandatory once triggered. Missing the GenAI sections on a GenAI c
 
 ### Sector and cross-cutting overlays
 
-When the engagement scope names a sector (banking, insurance, capital markets, payments-fintech), load the matching `references/sector-overlays/<sector>.md`. The overlay's named fields and sign-off questions land in the card; treating the overlay as background reading is the failure mode. Same pattern for the cross-cutting overlays this skill carries: cyber, privacy, conduct. Climate is not applicable to model cards.
+When the scope names a sector (banking, insurance, capital markets, payments-fintech), load the matching `references/sector-overlays/<sector>.md`. The overlay's named fields and sign-off questions land in the card; treating the overlay as background reading is the failure mode. Same pattern for the cross-cutting overlays this skill carries: cyber, privacy, conduct. Climate is not applicable to model cards.
 
-Load only the overlays the engagement scope names. Gold-plating a card with overlays the engagement does not implicate adds noise without challenge value.
+Load only the overlays the scope names. Gold-plating a card with overlays the engagement does not implicate adds noise without challenge value.
 
 ## Quality bar
 
@@ -99,7 +99,7 @@ The card is only credible when these hold:
 
 ## Adaptation
 
-Tier drives depth. Lifecycle stage drives which sections lean heavy. Audience drives tone (working group is plain, committee is structured, examiner response is formal, board is distilled). Persona sets the review path and the named decision owners. Sector and cross-cutting overlays load from the engagement scope. Source posture sets what the card can assert at high confidence and what carries `[evidence needed]`. Where firm-specific policy or taxonomy applies, it lives in `references/firm-overlay.md` (consumed when present) and never in the card directly.
+Tier drives depth. Lifecycle stage drives which sections lean heavy. Audience drives tone (working group is plain, committee is structured, examiner response is formal, board is distilled). Persona sets the review path and the named decision owners. Sector and cross-cutting overlays load from the scope. Source posture sets what the card can assert at high confidence and what carries `[evidence needed]`. Where firm-specific policy or taxonomy applies, it lives in `references/firm-overlay.md` (consumed when present) and never in the card directly.
 
 ## Output
 
@@ -110,8 +110,8 @@ Downstream consumers: `board-ai-risk-pack` pulls metadata, tier, intended use, p
 ## Pointers
 
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
-- `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md` — sector overlays loaded from engagement scope.
-- `references/cross-cutting/{cyber,privacy,conduct}.md` — cross-cutting overlays loaded from engagement scope.
+- `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md` — sector overlays loaded from scope.
+- `references/cross-cutting/{cyber,privacy,conduct}.md` — cross-cutting overlays loaded from scope.
 - `references/firm-overlay.md` — firm policy, taxonomy, named owners (consumed when present).
 - `templates/default-output.md` — card template.
 - `schemas/model-card.schema.json` — structured-output contract.

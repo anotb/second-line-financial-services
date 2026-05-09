@@ -1,9 +1,9 @@
-# Engagement-scoping revision review memo
+# Scoping revision review memo
 
 Date: 2026-05-06
 Reviewer: phase-2 reviewer subagent
-Subject: revised `plugins/capability-plugins/risk-compliance-core/skills/engagement-scoping/SKILL.md`
-Compared against: spec sheet (`docs/specs/risk-compliance-core/engagement-scoping.md`), supporting artifacts (template, troubleshooting), build contract, anti-AI-tells memory.
+Subject: revised `plugins/capability-plugins/risk-compliance-core/skills/scoping/SKILL.md`
+Compared against: spec sheet (`docs/specs/risk-compliance-core/scoping.md`), supporting artifacts (template, troubleshooting), build contract, anti-AI-tells memory.
 
 ## 1. Top-line judgment
 
@@ -23,7 +23,7 @@ The original bench-build (per the build contract) had this as a named workflow p
 
 > When this skill is called from another skill that has hit contested scope (source posture too low to proceed, persona review gates missing, sector overlay unclear), focus on the contested section first and produce a revised record; the calling skill resumes from there.
 
-This is fine prose. It is also buried. The mid-flight invocation is one of two valid entry paths and a senior practitioner would treat it as such. Right now the revision reads as if engagement-scoping is mainly a kickoff skill that occasionally gets pulled in mid-flight; the reality is the mid-flight invocation will be common because every other skill in the repo can fall into it.
+This is fine prose. It is also buried. The mid-flight invocation is one of two valid entry paths and a senior practitioner would treat it as such. Right now the revision reads as if scoping is mainly a kickoff skill that occasionally gets pulled in mid-flight; the reality is the mid-flight invocation will be common because every other skill in the repo can fall into it.
 
 ### 2.2 Schema-stability emphasis
 
@@ -91,7 +91,7 @@ Six edits, all small. None reintroduce numbered-step rigidity or AI-tell prose.
 
 **Proposed text** (paragraph, no heading):
 
-> Engagement-scoping runs in two situations. At kickoff, the engagement lead calls it to set the charter before any review work begins. Mid-flight, another skill calls it because it has hit contested or unclear scope — the source posture is too low for the evidence ask, the persona review gates are unnamed, the sector overlay is ambiguous. Both entries produce the same artifact; the mid-flight version focuses the revision on the contested section and hands back to the calling skill.
+> Scoping runs in two situations. At kickoff, the engagement lead calls it to set the charter before any review work begins. Mid-flight, another skill calls it because it has hit contested or unclear scope — the source posture is too low for the evidence ask, the persona review gates are unnamed, the sector overlay is ambiguous. Both entries produce the same artifact; the mid-flight version focuses the revision on the contested section and hands back to the calling skill.
 
 **Why**: load-bearing because every other skill in the repo can land in the mid-flight path. Senior practitioners treat both entries as first-class. Burying the second entry under "Working with what you have" misreads the operational reality.
 

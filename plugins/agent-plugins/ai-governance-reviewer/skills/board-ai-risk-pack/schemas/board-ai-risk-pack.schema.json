@@ -42,9 +42,9 @@
       "type": "string",
       "enum": ["internal", "board-confidential", "regulator-shareable"]
     },
-    "engagement_scope_id": {
+    "scope_id": {
       "type": "string",
-      "description": "Links to engagement-scoping record if supplied."
+      "description": "Links to scoping record if supplied."
     },
     "executive_summary": {
       "type": "array",

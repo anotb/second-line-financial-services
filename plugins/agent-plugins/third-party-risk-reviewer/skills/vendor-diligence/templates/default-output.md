@@ -3,7 +3,7 @@
 **Vendor**: [legal entity; brand name if different]
 **Service type**: [concise, e.g., cloud IaaS, foundation-model API, claims TPA]
 **Arrangement ID**: [stable ID; reused across criticality-assessment, contract-gap-review, exit-plan]
-**Engagement ID**: [pointer to engagement-scope record, or "none — scope not formalised"]
+**Engagement ID**: [pointer to scope record, or "none — scope not formalised"]
 **As of**: [date]
 **Review type**: [pre-onboarding | annual-recertification | off-cycle-trigger | exit-triggered-re-review | post-incident-re-review | scope-change-re-review]
 **Owner (role)**: [e.g., third-party risk manager]

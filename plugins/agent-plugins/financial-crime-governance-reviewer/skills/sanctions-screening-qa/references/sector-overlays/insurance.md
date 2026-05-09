@@ -1,6 +1,6 @@
 # Insurance sector overlay — sanctions-screening-qa
 
-When the engagement scope flags insurance, load this overlay alongside `references/source-anchors.md`. The insurance overlay carries what the bank- and payments-flavoured frames do not.
+When the scope flags insurance, load this overlay alongside `references/source-anchors.md`. The insurance overlay carries what the bank- and payments-flavoured frames do not.
 
 ## Operative anchors
 

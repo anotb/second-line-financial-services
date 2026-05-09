@@ -35,7 +35,7 @@ Before drafting, get plain answers. Defaults are fine when an answer is missing;
 - Source posture. Public-only, public-plus-firm-policy, public-plus-firm-policy-plus-evidence, or connector-aware. Source posture sets what the pack can actually cite (calculation worksheets, written promoter agreements, ineligible-person screening attestations, distribution logs, audience-appropriateness policy text) and what carries `[evidence needed]`.
 - Who decides. CCO or designated reviewer for routine pre-dissemination; CCO and counsel for high-severity findings or where the adviser is in active EXAMS or enforcement posture; the deputy responsible for the Rule 206(4)-7 written compliance program where the finding rolls up to the annual review.
 
-When `engagement-scope` is supplied, the skill consumes it for institution, persona, source posture, sector overlay set, and cross-cutting overlay set. Otherwise it asks the practitioner the few facts it needs and defaults to public posture if the practitioner declines, noting in the pack that scope was not formalized.
+When `scope` is supplied, the skill consumes it for institution, persona, source posture, sector overlay set, and cross-cutting overlay set. Otherwise it asks the practitioner the few facts it needs and defaults to public posture if the practitioner declines, noting in the pack that scope was not formalized.
 
 ## How the pack gets built
 

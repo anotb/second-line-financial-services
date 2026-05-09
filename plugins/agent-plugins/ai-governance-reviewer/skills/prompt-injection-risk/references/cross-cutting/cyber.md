@@ -1,8 +1,8 @@
 # Cyber cross-cutting overlay for prompt-injection-risk
 
-When the engagement-scope record flags `cyber` for a prompt-injection review, this overlay sits as the primary lens, not a secondary one. Prompt injection is, in regulator framing, a cybersecurity risk class. The AI governance team often owns the review, but the CISO function is a co-reviewer and a co-decision-maker, not a downstream consumer.
+When the scope record flags `cyber` for a prompt-injection review, this overlay sits as the primary lens, not a secondary one. Prompt injection is, in regulator framing, a cybersecurity risk class. The AI governance team often owns the review, but the CISO function is a co-reviewer and a co-decision-maker, not a downstream consumer.
 
-Loaded by: `prompt-injection-risk/SKILL.md` when `engagement_scope.cross_cutting_set` includes `cyber`. For most v1 GenAI use cases inside regulated entities, this overlay should be considered the default. Cited and section-referenced anchors live in `references/source-anchors.md`.
+Loaded by: `prompt-injection-risk/SKILL.md` when `scope.cross_cutting_set` includes `cyber`. For most v1 GenAI use cases inside regulated entities, this overlay should be considered the default. Cited and section-referenced anchors live in `references/source-anchors.md`.
 
 ## Source basis
 

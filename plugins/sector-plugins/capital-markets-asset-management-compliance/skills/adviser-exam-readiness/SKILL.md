@@ -35,7 +35,7 @@ Settle these before drafting. Most exam cycles answer them in the first conversa
 - **What does the firm inherit at the start of the cycle.** Prior exam findings (open, partially-remediated, closed-pending-confirmation, closed); recent self-identified issues; recent enforcement themes from EXAMS or FINRA touching the firm's business. EXAMS revisits prior findings; the readiness check on prior-finding remediation status is high-priority.
 - **What is the source posture and access population for the pack.** Public-only, public-plus-firm-policy, public-plus-firm-policy-plus-evidence, or connector-aware. Prior supervisory letters, prior deficiency letters, and Form ADV-NR responses constrain the pack's access population; do not carry CSI into a pack reading at a lower population.
 
-When an `engagement-scope` record is supplied, consume it for firm registration constellation, persona, source posture, sector overlay (always capital-markets for this skill — see `references/sector-overlays/capital-markets.md`), and cross-cutting overlay set. When it is not supplied, ask the questions and default; flag the defaults in the pack.
+When an `scope` record is supplied, consume it for firm registration constellation, persona, source posture, sector overlay (always capital-markets for this skill — see `references/sector-overlays/capital-markets.md`), and cross-cutting overlay set. When it is not supplied, ask the questions and default; flag the defaults in the pack.
 
 ## How the pack gets built
 

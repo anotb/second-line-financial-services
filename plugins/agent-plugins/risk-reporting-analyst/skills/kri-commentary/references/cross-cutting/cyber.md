@@ -1,8 +1,8 @@
 # Cyber cross-cutting overlay for kri-commentary
 
-When the engagement-scope record flags `cyber`, this overlay sets the cyber-specific content for KRI-commentary blocks where the KRI is in the cyber population.
+When the scope record flags `cyber`, this overlay sets the cyber-specific content for KRI-commentary blocks where the KRI is in the cyber population.
 
-Loaded by: `kri-commentary/SKILL.md` when `engagement_scope.cross_cutting_overlay_set` includes `cyber`. Cited and section-referenced anchors live in `references/source-anchors.md`.
+Loaded by: `kri-commentary/SKILL.md` when `scope.cross_cutting_overlay_set` includes `cyber`. Cited and section-referenced anchors live in `references/source-anchors.md`.
 
 ## Source basis
 
@@ -42,7 +42,7 @@ For firms with material GenAI deployments, AI-cyber KRIs (prompt-injection attem
 
 ### 6. Vendor / third-party cyber KRIs
 
-Vendor cyber posture KRIs (top-N vendor attestation status, vendor-incident rate, vendor SLA compliance for incident notification) belong here when the engagement scope flags both `cyber` and `third-party-operational-resilience`. The block carries the vendor-side root cause where the metric movement is vendor-driven; `contributing_factors` picks up `vendor`.
+Vendor cyber posture KRIs (top-N vendor attestation status, vendor-incident rate, vendor SLA compliance for incident notification) belong here when the scope flags both `cyber` and `third-party-operational-resilience`. The block carries the vendor-side root cause where the metric movement is vendor-driven; `contributing_factors` picks up `vendor`.
 
 ## Cyber-specific output additions
 

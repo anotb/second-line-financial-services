@@ -6,7 +6,7 @@ Public-source-derived. No named institution. Pattern aligns with the same scenar
 
 A regional US bank holding company is approaching the pre-prod gate for a vendor-hosted GenAI assistant inside the consumer-banking call center. The assistant summarises customer history, suggests next-best-action steps, and drafts written follow-ups for the agent to review and send. RAG over the bank's customer-history datastore and policy/procedure corpus. No tools enabled. Foundation model is vendor-hosted with version pinning and contractual change-of-version notice.
 
-Engagement scope provided by `engagement-scoping`:
+Engagement scope provided by `scoping`:
 - Institution type: bank holding company, mid-cap, primary regulators FRB and CFPB; OCC for the national-bank subsidiary; NYDFS for the NY footprint.
 - Persona: AI Governance Lead (second line), with CISO function as cyber co-reviewer.
 - Sector overlay: banking. Cross-cutting overlays: cyber (NYDFS Part 500 in NY footprint, NYDFS October 2024 letter), privacy (regulated NPI), conduct (UDAAP exposure on customer-facing communications).

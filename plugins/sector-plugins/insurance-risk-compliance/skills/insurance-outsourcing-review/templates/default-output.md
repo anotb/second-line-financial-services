@@ -3,7 +3,7 @@
 **Counterparty**: [legal entity; brand name if different]
 **Counterparty type**: [MGA | MGU | TPA | claims-administrator | underwriting-bureau | IT-outsourcer | actuarial-outsourcer | other]
 **Arrangement ID**: [stable ID; reused across renewals and exam responses]
-**Engagement ID**: [pointer to engagement-scope record, or "none — scope not formalised"]
+**Engagement ID**: [pointer to scope record, or "none — scope not formalised"]
 **As of**: [date]
 **Review type**: [pre-onboarding | renewal | mid-term | remediation | exam-response]
 **Owner (role)**: [e.g., outsourcing risk lead, second-line]

@@ -1,8 +1,8 @@
 # Payments and fintech sector overlay for validation-plan
 
-When the engagement-scope record names sector `payments-fintech`, this overlay adds payments- and fintech-specific scope items to the validation plan. Where there is conflict between the capability defaults and this overlay, the overlay governs the sector elements.
+When the scope record names sector `payments-fintech`, this overlay adds payments- and fintech-specific scope items to the validation plan. Where there is conflict between the capability defaults and this overlay, the overlay governs the sector elements.
 
-Loaded by: `validation-plan/SKILL.md` when `engagement_scope.sector_overlay_set` includes `payments-fintech`, or when the institution type implicates a money transmitter, payments processor, fintech program, sponsor-bank arrangement, prepaid issuer, BIN sponsor, or non-bank consumer-finance entity.
+Loaded by: `validation-plan/SKILL.md` when `scope.sector_overlay_set` includes `payments-fintech`, or when the institution type implicates a money transmitter, payments processor, fintech program, sponsor-bank arrangement, prepaid issuer, BIN sponsor, or non-bank consumer-finance entity.
 
 Cited and section-referenced anchors live in `references/source-anchors.md`.
 

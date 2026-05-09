@@ -33,7 +33,7 @@
     },
     "engagement_id": {
       "type": "string",
-      "description": "Foreign key into engagement-scope.schema.json when the matrix was built under a formal engagement scope."
+      "description": "Foreign key into scope.schema.json when the matrix was built under a formal scope."
     },
     "workflow_in_scope": {
       "type": "string",

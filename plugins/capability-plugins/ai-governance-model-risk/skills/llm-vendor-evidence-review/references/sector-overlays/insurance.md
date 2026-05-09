@@ -1,6 +1,6 @@
 # Sector overlay: insurance
 
-Loaded when `engagement-scope.sector_overlay_set` includes insurance. Carries the insurance-vendor-specific frame for foundation-model evidence-pack review: state-DOI supervisory visibility, NAIC Model Bulletin alignment, and the fairness-evidence and consumer-protection seams that insurance-vendor reviews surface in addition to the cross-cutting baseline.
+Loaded when `scope.sector_overlay_set` includes insurance. Carries the insurance-vendor-specific frame for foundation-model evidence-pack review: state-DOI supervisory visibility, NAIC Model Bulletin alignment, and the fairness-evidence and consumer-protection seams that insurance-vendor reviews surface in addition to the cross-cutting baseline.
 
 ## Supervisory frame
 

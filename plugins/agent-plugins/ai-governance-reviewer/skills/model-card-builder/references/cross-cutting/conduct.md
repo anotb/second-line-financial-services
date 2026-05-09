@@ -1,8 +1,8 @@
 # Conduct cross-cutting overlay for model-card-builder
 
-When the engagement-scope record flags `conduct` for the model use case, this overlay adds conduct-risk content to named card sections. Conduct risk in second-line vocabulary is not the same as fairness as a model property; it is the customer-outcome and market-integrity lens, the named-manager accountability lens, and the regulatory-engagement lens. The card's conduct content sits alongside the fairness-and-explainability section, not inside it.
+When the scope record flags `conduct` for the model use case, this overlay adds conduct-risk content to named card sections. Conduct risk in second-line vocabulary is not the same as fairness as a model property; it is the customer-outcome and market-integrity lens, the named-manager accountability lens, and the regulatory-engagement lens. The card's conduct content sits alongside the fairness-and-explainability section, not inside it.
 
-Loaded by: `model-card-builder/SKILL.md` when `engagement_scope.cross_cutting_set` includes `conduct`. Cited and section-referenced anchors live in `references/source-anchors.md`.
+Loaded by: `model-card-builder/SKILL.md` when `scope.cross_cutting_set` includes `conduct`. Cited and section-referenced anchors live in `references/source-anchors.md`.
 
 ## Source basis
 

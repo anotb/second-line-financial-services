@@ -1,8 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://second-line-financial-services/plugins/capability-plugins/risk-compliance-core/skills/engagement-scoping/schemas/engagement-scope.schema.json",
-  "title": "engagement-scope",
-  "description": "Structured engagement context produced by the engagement-scoping skill. Other second-line skills consume this record to set institution context, persona, source posture, risk lens, and overlay set. Stable contract — additive changes only between minor versions.",
+  "$id": "https://second-line-financial-services/plugins/capability-plugins/risk-compliance-core/skills/scoping/schemas/scope.schema.json",
+  "title": "scope",
+  "description": "Structured engagement context produced by the scoping skill. Other second-line skills consume this record to set institution context, persona, source posture, risk lens, and overlay set. Stable contract — additive changes only between minor versions.",
   "type": "object",
   "required": [
     "engagement_id",

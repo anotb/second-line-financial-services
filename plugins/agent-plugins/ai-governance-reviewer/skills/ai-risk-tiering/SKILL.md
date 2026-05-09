@@ -12,7 +12,7 @@ description: |
   - The use case has not been intaked yet. Route to `ai-use-case-intake` first; the tier decision is decided against an intake record version.
   - The question is whether the use case is high-risk under the EU AI Act specifically. Route to `ai-act-triage`; the AI Act has a regulation-driven classification, not a firm-defined rubric. This skill flags Annex III overlap as a routing trigger, not a determination.
   - The question is the validation plan itself. Route to `validation-plan`; this skill sets the depth, the next skill scopes the work.
-argument-hint: "[use-case ID, intake record, engagement-scope record, or scenario]"
+argument-hint: "[use-case ID, intake record, scope record, or scenario]"
 ---
 
 # AI risk tiering
@@ -29,7 +29,7 @@ Most of what the tier needs is on the table by the time someone reaches for this
 
 - Has the use case been intaked. If not, route to `ai-use-case-intake` first. The tier is decided against an intake record version, not a verbal scope.
 - What does the sponsor propose. Sponsor pressure runs in both directions: pushing the tier down to skip validation depth, or pushing it up to claim governance maturity. Surface the proposal so the dissent line records the disagreement when it stands.
-- What is the engagement-scope set. When `engagement-scoping` has run, the institution profile, persona, source posture, and sector and cross-cutting overlay sets come from there. Otherwise the skill asks the practitioner the few facts it needs and flags defaults.
+- What is the scope set. When `scoping` has run, the institution profile, persona, source posture, and sector and cross-cutting overlay sets come from there. Otherwise the skill asks the practitioner the few facts it needs and flags defaults.
 - What architecture, and which overlays. Traditional ML, foundation-model, RAG, or agentic. The answer fires the GenAI factor block (foundation-model dependence, RAG corpus, tool inventory, prompt-injection exposure) and decides which sector and cross-cutting overlays load.
 - What lifecycle stage. Pre-prod tiering reads from intent and design; production re-tiering reads from monitoring evidence and supervisory posture; retirement reads from residual obligations. Same rubric, different evidence weights.
 
@@ -82,9 +82,9 @@ Re-tiering triggers are named events with monitoring owners. Dates do not earn a
 
 ### Sector and cross-cutting overlays
 
-When the engagement scope names a sector, load the matching `references/sector-overlays/<sector>.md`. The overlay's tier-elevation criteria land in the per-factor justifications. Same pattern for the cross-cutting overlays this skill carries: cyber and privacy. Conduct lives inside the rubric directly because conduct exposure is a named factor; the cross-cutting `references/cross-cutting/conduct.md` is consulted where the conduct lens needs more depth than the factor row carries. Climate is not applicable to AI tiering.
+When the scope names a sector, load the matching `references/sector-overlays/<sector>.md`. The overlay's tier-elevation criteria land in the per-factor justifications. Same pattern for the cross-cutting overlays this skill carries: cyber and privacy. Conduct lives inside the rubric directly because conduct exposure is a named factor; the cross-cutting `references/cross-cutting/conduct.md` is consulted where the conduct lens needs more depth than the factor row carries. Climate is not applicable to AI tiering.
 
-Load only the overlays the engagement scope names. Gold-plating a tier with overlays the engagement does not implicate adds noise without challenge value.
+Load only the overlays the scope names. Gold-plating a tier with overlays the engagement does not implicate adds noise without challenge value.
 
 ## Quality bar
 
@@ -112,8 +112,8 @@ Downstream consumers: `model-card-builder` pulls the tier and overlay flags to s
 ## Pointers
 
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
-- `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md` — sector overlays loaded from engagement scope.
-- `references/cross-cutting/{cyber,privacy}.md` — cross-cutting overlays loaded from engagement scope; conduct lives in the factor row.
+- `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md` — sector overlays loaded from scope.
+- `references/cross-cutting/{cyber,privacy}.md` — cross-cutting overlays loaded from scope; conduct lives in the factor row.
 - `references/firm-overlay.md` — firm tier names, cutoffs, named committees, validation-depth mapping (consumed when present).
 - `templates/default-output.md` — tier-record template.
 - `schemas/risk-tier.schema.json` — structured-output contract.

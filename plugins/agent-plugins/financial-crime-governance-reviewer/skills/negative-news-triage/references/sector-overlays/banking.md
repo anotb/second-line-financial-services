@@ -1,6 +1,6 @@
 # Banking sector overlay — negative-news-triage
 
-When the engagement scope flags banking, load this overlay alongside `references/source-anchors.md`. It carries the bank-specific adverse-media frame the generic capability skill does not own.
+When the scope flags banking, load this overlay alongside `references/source-anchors.md`. It carries the bank-specific adverse-media frame the generic capability skill does not own.
 
 ## What banking adverse-media looks like in practice
 

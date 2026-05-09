@@ -35,7 +35,7 @@
           "enum": ["initial", "annual-revalidation", "vendor-swap-revalidation", "off-cycle-trigger", "post-incident"]
         },
         "use_case_id": { "type": "string", "description": "Links to ai-use-case-intake record." },
-        "engagement_scope_id": { "type": "string" }
+        "scope_id": { "type": "string" }
       }
     },
     "validation_depth": {

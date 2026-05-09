@@ -1,6 +1,6 @@
 # Payments and fintech sector overlay: obligation-mapping
 
-Loaded when the engagement scope includes `payments-fintech` in `sector_overlay_set`. Adds payments- and fintech-specific source labels and obligation patterns the practitioner expects to find when the register scopes a consumer-payments product, a money-transmission process, a bank-fintech sponsor arrangement, or a BaaS program. Does not change the row spine.
+Loaded when the scope includes `payments-fintech` in `sector_overlay_set`. Adds payments- and fintech-specific source labels and obligation patterns the practitioner expects to find when the register scopes a consumer-payments product, a money-transmission process, a bank-fintech sponsor arrangement, or a BaaS program. Does not change the row spine.
 
 The register here often runs across two parties: a sponsor bank with the regulatory obligation and a fintech with the operational obligation under contract. The register treats those as separate rows, anchored on the rule for the bank side and on the sponsor agreement for the fintech side.
 

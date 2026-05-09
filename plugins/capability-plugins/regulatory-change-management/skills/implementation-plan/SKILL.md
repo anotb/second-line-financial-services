@@ -1,7 +1,7 @@
 ---
 name: implementation-plan
 description: |
-  Sequences a regulatory remediation into the workplan a regulatory-change PMO, head of compliance, transformation lead, or business sponsor runs to a mandatory compliance date. Takes an obligation list (from rule-to-obligation-extraction), a policy diff (from policy-diff), and any control-gap output, and produces workstreams, milestones with dependencies, owners by role, evidence-based acceptance criteria, governance cadence (working group, steering, executive, board), implementation risks, resource asks, regulator-readiness checkpoints, and the BAU handoff. Sized for a regulatory-change committee or PMO and structured for tracking against a mandatory compliance date or supervisory-letter deadline. Generic across regulator type and trigger; sector and cross-cutting overlays load from the engagement scope.
+  Sequences a regulatory remediation into the workplan a regulatory-change PMO, head of compliance, transformation lead, or business sponsor runs to a mandatory compliance date. Takes an obligation list (from rule-to-obligation-extraction), a policy diff (from policy-diff), and any control-gap output, and produces workstreams, milestones with dependencies, owners by role, evidence-based acceptance criteria, governance cadence (working group, steering, executive, board), implementation risks, resource asks, regulator-readiness checkpoints, and the BAU handoff. Sized for a regulatory-change committee or PMO and structured for tracking against a mandatory compliance date or supervisory-letter deadline. Generic across regulator type and trigger; sector and cross-cutting overlays load from the scope.
 
   Best for:
   - A new final rule has effective dates approaching and the firm needs a sequenced, owner-assigned plan with governance cadence and evidence criteria.
@@ -35,7 +35,7 @@ A handful of facts settle before drafting. Most of them come from the trigger ar
 - **What is the source posture.** Public-only, public-plus-firm-policy, public-plus-firm-policy-plus-evidence, or connector-aware. The plan can assert at higher confidence as the source posture deepens; what cannot be asserted carries `[evidence needed]`.
 - **What sector and cross-cutting overlays apply.** Banking, insurance, capital markets, payments-fintech for sector. Cyber, privacy, climate, conduct for cross-cutting. The plan loads only the overlays the trigger and scope implicate; loading all four cross-cutting overlays for a plan that touches none of them is noise.
 
-When an `engagement-scope` record is supplied, the skill consumes it for institution, persona, source posture, sector overlay set, and cross-cutting overlay set. When it is not supplied, ask the few questions and default. Note unresolved defaults in the plan summary.
+When an `scope` record is supplied, the skill consumes it for institution, persona, source posture, sector overlay set, and cross-cutting overlay set. When it is not supplied, ask the few questions and default. Note unresolved defaults in the plan summary.
 
 ## How the plan gets built
 
@@ -77,7 +77,7 @@ The workstream cut should match the natural decomposition of the change. For a d
 
 ## Sector and cross-cutting overlays
 
-When the engagement scope names a sector, load `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md`. The overlay carries the sector-specific governance, MRA / MRIA / consent-order convention, and BAU-handoff pattern. Same pattern for cross-cutting overlays where the engagement flags cyber, privacy, climate, or conduct.
+When the scope names a sector, load `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md`. The overlay carries the sector-specific governance, MRA / MRIA / consent-order convention, and BAU-handoff pattern. Same pattern for cross-cutting overlays where the engagement flags cyber, privacy, climate, or conduct.
 
 Loading an overlay the trigger does not implicate adds noise without challenge value. Loading none when one applies is the more common failure mode.
 
@@ -87,13 +87,13 @@ Holds across every plan. Every material claim cites a source from `references/so
 
 ## Adaptation
 
-Plan depth scales to criticality and audience: a high-criticality MRIA-driven plan reads long with monitor integration and monthly board reporting; a low-criticality rule-implementation reads tight with biweekly steering and quarterly board reporting; a board pre-read distills to plan summary plus top three risks plus mandatory-date posture. Source posture (public-only through connector-aware) drives what the plan can assert at high confidence and what carries `[evidence needed]`. Sector and cross-cutting overlays load from the engagement scope. Where firm-specific PMO conventions, named monitor relationships, board-charter-driven cadence, or approved governance templates apply, they live in `references/firm-overlay.md` and are consumed when present; the plan itself stays generic.
+Plan depth scales to criticality and audience: a high-criticality MRIA-driven plan reads long with monitor integration and monthly board reporting; a low-criticality rule-implementation reads tight with biweekly steering and quarterly board reporting; a board pre-read distills to plan summary plus top three risks plus mandatory-date posture. Source posture (public-only through connector-aware) drives what the plan can assert at high confidence and what carries `[evidence needed]`. Sector and cross-cutting overlays load from the scope. Where firm-specific PMO conventions, named monitor relationships, board-charter-driven cadence, or approved governance templates apply, they live in `references/firm-overlay.md` and are consumed when present; the plan itself stays generic.
 
 ## Pointers
 
 - `references/source-anchors.md` — citations and excerpts for the named anchors (federal banking governance and remediation, CFPB supervision, SEC and FINRA, insurance, cyber and privacy, climate, EU DORA, MRA / MRIA / consent-order convention).
-- `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md` — sector overlays loaded from engagement scope.
-- `references/cross-cutting/{cyber,privacy,climate,conduct}.md` — cross-cutting overlays loaded when the engagement scope flags the topic.
+- `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md` — sector overlays loaded from scope.
+- `references/cross-cutting/{cyber,privacy,climate,conduct}.md` — cross-cutting overlays loaded when the scope flags the topic.
 - `references/firm-overlay.md` — firm-installed PMO conventions, named monitor relationships, board-charter cadence, governance templates; consumed when present.
 - `templates/default-output.md` — plan template.
 - `schemas/implementation-plan.schema.json` — structured-output contract for downstream consumption.

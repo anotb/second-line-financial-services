@@ -1,6 +1,6 @@
 # Cross-cutting overlay: privacy — obligation-mapping
 
-Loaded when the engagement scope includes `privacy` in `cross_cutting_overlay_set`, or when the source being mapped is privacy-anchored. Adds privacy-specific source labels and obligation patterns when the register scopes processes that touch nonpublic personal information, consumer financial information, or other regulated personal data. Does not change the row spine.
+Loaded when the scope includes `privacy` in `cross_cutting_overlay_set`, or when the source being mapped is privacy-anchored. Adds privacy-specific source labels and obligation patterns when the register scopes processes that touch nonpublic personal information, consumer financial information, or other regulated personal data. Does not change the row spine.
 
 The privacy overlap with cyber is real but distinct: cyber covers information-security obligations on the system, privacy covers obligations on the data and the consumer relationship. Both overlays often load together; each carries its own rows.
 

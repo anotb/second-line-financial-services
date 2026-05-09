@@ -6,7 +6,7 @@ Public-source-derived. No named institution. Pattern aligns with the spec sheet'
 
 A US bank holding company is approaching the pre-prod gate for a RAG-based assistant for compliance analysts. The assistant retrieves over the firm's internal compliance policy library and a vendor-supplied regulatory-text database, then drafts answers with citations for the analyst to review. No tools enabled. Foundation model is vendor-hosted with version pinning and contractual change-of-version notice.
 
-Engagement scope provided by `engagement-scoping`:
+Engagement scope provided by `scoping`:
 - Institution type: bank holding company, mid-cap, primary regulators FRB and CFPB; OCC for the national-bank subsidiary.
 - Persona: AI Governance Lead (second line), with MRMO as model-risk co-reviewer.
 - Sector overlay: banking. Cross-cutting overlays: privacy (some policy documents reference NPI handling procedures), cyber (corpus access controls), conduct (analyst answers may inform customer-facing communications downstream).

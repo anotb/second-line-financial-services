@@ -1,6 +1,6 @@
 # Payments-fintech sector overlay — contract-gap-review
 
-When the engagement scope flags payments or fintech (sponsor-bank programs, BaaS platforms, money transmitters, MSBs, card-program operators, processors), load this overlay alongside `references/source-anchors.md`.
+When the scope flags payments or fintech (sponsor-bank programs, BaaS platforms, money transmitters, MSBs, card-program operators, processors), load this overlay alongside `references/source-anchors.md`.
 
 ## Operative supervisory frame
 

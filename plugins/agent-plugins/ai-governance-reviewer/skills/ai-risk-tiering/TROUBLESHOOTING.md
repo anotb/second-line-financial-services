@@ -56,7 +56,7 @@ Symptom: insurance pricing model tiered without NAIC #880 unfair-discrimination 
 
 Why it happens: the sector overlay file exists in `references/sector-overlays/` but the decider treated it as background reading.
 
-Fix: when the engagement scope names a sector, the matching overlay's elevation factors and triggered gates land in the tier decision. Sign-off questions probe the sector items. If the overlay is loaded but the tier decision has no overlay-specific content, the loader did not run; rerun with the overlay reference in scope.
+Fix: when the scope names a sector, the matching overlay's elevation factors and triggered gates land in the tier decision. Sign-off questions probe the sector items. If the overlay is loaded but the tier decision has no overlay-specific content, the loader did not run; rerun with the overlay reference in scope.
 
 ## Cross-cutting overlay (cyber, privacy, conduct) is collapsed into the capability rubric
 

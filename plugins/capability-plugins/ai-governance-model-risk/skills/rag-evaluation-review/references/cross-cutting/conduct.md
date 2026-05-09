@@ -1,8 +1,8 @@
 # Conduct cross-cutting overlay for rag-evaluation-review
 
-When the engagement-scope record flags `conduct` for a RAG evaluation review, this overlay adds the fairness-of-retrieval framing and the customer-facing accuracy framing. The conduct overlay loads where the use case has a population dimension (customer segment, geography, line of business) or where outputs flow into customer-facing communications.
+When the scope record flags `conduct` for a RAG evaluation review, this overlay adds the fairness-of-retrieval framing and the customer-facing accuracy framing. The conduct overlay loads where the use case has a population dimension (customer segment, geography, line of business) or where outputs flow into customer-facing communications.
 
-Loaded by: `rag-evaluation-review/SKILL.md` when `engagement_scope.cross_cutting_set` includes `conduct`. Cited and section-referenced anchors live in `references/source-anchors.md`.
+Loaded by: `rag-evaluation-review/SKILL.md` when `scope.cross_cutting_set` includes `conduct`. Cited and section-referenced anchors live in `references/source-anchors.md`.
 
 ## Source basis
 

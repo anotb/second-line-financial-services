@@ -6,7 +6,7 @@ Public-source-derived. No named institution. Triage pattern drawn from EU AI Act
 
 A US asset-management group with an Irish UCITS management-company subsidiary deploys a vendor-hosted GenAI assistant inside the institutional-client servicing function. The assistant ingests scheme documents (trust deeds, statements of investment principles, annual reports), summarises them on request, and drafts written responses to scheme-trustee queries that the client servicing team reviews before sending. No automated trade execution, no investment recommendation generation, no client-facing chatbot. Human-in-the-loop on every output. Second-line AI governance has been asked for the EU AI Act triage so the deployment can clear the AI risk committee gate before go-live in the Irish entity.
 
-Engagement scope provided by `engagement-scoping`:
+Engagement scope provided by `scoping`:
 
 - Institution type: UCITS management company (Irish ManCo); US group asset manager; in-scope engagement covers the EU deployment only.
 - Primary regulators: Central Bank of Ireland (UCITS-supervisor capacity); Marketing Rule reach considered for the US parent if any output is reused into US-client materials (out of scope of this engagement).

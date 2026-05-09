@@ -1,6 +1,6 @@
 # Payments-fintech sector overlay — test-plan-builder
 
-Loaded when `engagement-scope.sector_overlay_set` includes `payments-fintech` or when the test addresses NACHA, sponsor-bank, money-transmitter, prepaid, or larger-participant rules. Supplements `references/source-anchors.md`.
+Loaded when `scope.sector_overlay_set` includes `payments-fintech` or when the test addresses NACHA, sponsor-bank, money-transmitter, prepaid, or larger-participant rules. Supplements `references/source-anchors.md`.
 
 ## Test-plan conventions for payments and fintech testing
 

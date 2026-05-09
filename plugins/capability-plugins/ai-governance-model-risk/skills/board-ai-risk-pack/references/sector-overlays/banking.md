@@ -1,6 +1,6 @@
 # Sector overlay: banking — board AI risk pack
 
-Loaded when the engagement scope names banking. The overlay carries content that lands in the pack, not background reading. An overlay loaded but not reflected in the pack body is the standing failure mode.
+Loaded when the scope names banking. The overlay carries content that lands in the pack, not background reading. An overlay loaded but not reflected in the pack body is the standing failure mode.
 
 ## Framing
 

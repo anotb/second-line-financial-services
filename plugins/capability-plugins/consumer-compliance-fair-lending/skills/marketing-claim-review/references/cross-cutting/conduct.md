@@ -2,7 +2,7 @@
 
 This overlay loads where the asset-level finding chains up to a product-level UDAAP read or where the marketing-asset pattern is itself a conduct-risk signal. The asset-level review surfaces the finding; the product-level UDAAP read lives in `udaap-risk-review`; the conduct-risk implications are recorded here so the marketing-compliance committee and the conduct committee both get the read they need.
 
-Loaded by: `marketing-claim-review/SKILL.md` when `engagement_scope.cross_cutting_set` includes `conduct` or when the asset-level finding crosses UDAAP themes (deception material to a reasonable consumer; unfairness on the asset's representation of cost; abusiveness on dark-pattern asset design).
+Loaded by: `marketing-claim-review/SKILL.md` when `scope.cross_cutting_set` includes `conduct` or when the asset-level finding crosses UDAAP themes (deception material to a reasonable consumer; unfairness on the asset's representation of cost; abusiveness on dark-pattern asset design).
 
 Cited and section-referenced anchors live in `references/source-anchors.md`.
 

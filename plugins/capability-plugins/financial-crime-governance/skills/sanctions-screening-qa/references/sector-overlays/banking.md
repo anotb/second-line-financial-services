@@ -1,6 +1,6 @@
 # Banking sector overlay — sanctions-screening-qa
 
-When the engagement scope flags banking, load this overlay alongside `references/source-anchors.md`. Carries the bank-specific sanctions-screening frame the generic capability skill does not own.
+When the scope flags banking, load this overlay alongside `references/source-anchors.md`. Carries the bank-specific sanctions-screening frame the generic capability skill does not own.
 
 ## Operative anchors
 

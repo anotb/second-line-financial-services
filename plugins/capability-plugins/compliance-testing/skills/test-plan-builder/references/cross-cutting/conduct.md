@@ -1,6 +1,6 @@
 # Conduct cross-cutting overlay — test-plan-builder
 
-Loaded when `engagement-scope.cross_cutting_overlay_set` includes `conduct`, when the test addresses consumer-facing controls (UDAAP, fair-lending, sales-practices, complaint-handling), or when customer-harm framing matters separately from the technical control conclusion. Supplements `references/source-anchors.md`.
+Loaded when `scope.cross_cutting_overlay_set` includes `conduct`, when the test addresses consumer-facing controls (UDAAP, fair-lending, sales-practices, complaint-handling), or when customer-harm framing matters separately from the technical control conclusion. Supplements `references/source-anchors.md`.
 
 ## Test-plan conventions for conduct-relevant testing
 

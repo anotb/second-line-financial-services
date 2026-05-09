@@ -2,7 +2,7 @@
 
 ## Input
 
-A regional US life insurer (state-chartered, primary regulator state DOI; NAIC Model Bulletin adopted in domicile state) is piloting a smaller open-weights model from a foundation-model vendor for claims-narrative summarisation. The model is downloaded under the vendor's open-weights licence and run on the firm's own infrastructure (private cloud, no vendor-side traffic). The pilot is tier-2; the use case has cleared `ai-use-case-intake` and `ai-risk-tiering`. The engagement-scope record is supplied: institution-type insurer, primary-regulator state-DOI, sector-overlay insurance, cross-cutting-overlay set [privacy, conduct], persona AI Governance Lead with MRMO co-reviewer, source-posture public-plus-firm-policy.
+A regional US life insurer (state-chartered, primary regulator state DOI; NAIC Model Bulletin adopted in domicile state) is piloting a smaller open-weights model from a foundation-model vendor for claims-narrative summarisation. The model is downloaded under the vendor's open-weights licence and run on the firm's own infrastructure (private cloud, no vendor-side traffic). The pilot is tier-2; the use case has cleared `ai-use-case-intake` and `ai-risk-tiering`. The scope record is supplied: institution-type insurer, primary-regulator state-DOI, sector-overlay insurance, cross-cutting-overlay set [privacy, conduct], persona AI Governance Lead with MRMO co-reviewer, source-posture public-plus-firm-policy.
 
 The evidence pack on the table is thinner by design (open-weights, vendor-hosted-nothing):
 

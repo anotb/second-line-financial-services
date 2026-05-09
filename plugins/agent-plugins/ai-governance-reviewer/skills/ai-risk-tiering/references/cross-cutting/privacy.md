@@ -1,8 +1,8 @@
 # Privacy cross-cutting overlay for ai-risk-tiering
 
-When the engagement-scope record flags `privacy` for the use case, this overlay supplies the privacy-specific factors that weight up the tier and the named triggers that force a re-tier when the privacy posture changes. The full privacy-impact assessment is its own artifact under the firm's privacy program; the tiering record names the privacy reach that drives the tier and routes downstream artifacts to address it.
+When the scope record flags `privacy` for the use case, this overlay supplies the privacy-specific factors that weight up the tier and the named triggers that force a re-tier when the privacy posture changes. The full privacy-impact assessment is its own artifact under the firm's privacy program; the tiering record names the privacy reach that drives the tier and routes downstream artifacts to address it.
 
-Loaded by: `ai-risk-tiering/SKILL.md` when `engagement_scope.cross_cutting_set` includes `privacy`. Cited and section-referenced anchors live in `references/source-anchors.md`.
+Loaded by: `ai-risk-tiering/SKILL.md` when `scope.cross_cutting_set` includes `privacy`. Cited and section-referenced anchors live in `references/source-anchors.md`.
 
 ## Source basis
 

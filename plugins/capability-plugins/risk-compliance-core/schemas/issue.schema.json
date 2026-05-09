@@ -37,7 +37,7 @@
     },
     "engagement_id": {
       "type": "string",
-      "description": "Foreign key into engagement-scope.schema.json when the write-up was built under a formal engagement scope."
+      "description": "Foreign key into scope.schema.json when the write-up was built under a formal scope."
     },
     "as_of_date": {
       "type": "string",

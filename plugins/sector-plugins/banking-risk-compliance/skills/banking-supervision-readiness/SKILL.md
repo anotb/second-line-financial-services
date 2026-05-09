@@ -38,7 +38,7 @@ Settle these before drafting. Most cycles answer them in the first conversation;
 - **What does the bank inherit at the start of the cycle.** Open MRAs and MRIAs by regulator and date issued, open consent-order articles with milestone status, open written-agreement provisions, in-flight supervisory-letter responses, self-identified issues the bank intends to surface proactively, recent enforcement themes from the responsible regulator, and the prior-cycle composite and component ratings (held in CSI; the access population for the pack constrains what can be carried forward).
 - **What is the source posture and the access population for the pack.** Public-only, public-plus-firm-policy, public-plus-firm-policy-plus-evidence, or connector-aware. CSI references (prior supervisory letters, prior examination reports, prior MRAs / MRIAs) cannot leave the bank without the regulator's written authorisation under 12 CFR Part 4 Subpart C (OCC), Part 261 (FRB), or Part 309 (FDIC); the access population for the pack itself constrains what it can include and at what label.
 
-When an `engagement-scope` record is supplied, consume it for institution profile, persona, source posture, sector overlay (always banking for this skill), and cross-cutting overlay set. When it is not supplied, ask the questions and default; flag the defaults in the pack.
+When an `scope` record is supplied, consume it for institution profile, persona, source posture, sector overlay (always banking for this skill), and cross-cutting overlay set. When it is not supplied, ask the questions and default; flag the defaults in the pack.
 
 ## How the pack gets built
 

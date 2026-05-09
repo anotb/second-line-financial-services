@@ -1,8 +1,8 @@
 # Payments and fintech sector overlay for agentic-ai-controls
 
-When the engagement-scope record names `payments-fintech` as the sector, this overlay adds payments-and-fintech-specific authority-statement constraints, tool-inventory expectations, monitoring signals, regulator-notification triggers, and co-reviewer expectations. The most distinctive issue in this sector is the bank-fintech shared-responsibility allocation in BaaS arrangements.
+When the scope record names `payments-fintech` as the sector, this overlay adds payments-and-fintech-specific authority-statement constraints, tool-inventory expectations, monitoring signals, regulator-notification triggers, and co-reviewer expectations. The most distinctive issue in this sector is the bank-fintech shared-responsibility allocation in BaaS arrangements.
 
-Loaded by: `agentic-ai-controls/SKILL.md` when `engagement_scope.sector_overlay_set` includes `payments-fintech`. Cited and section-referenced anchors live in `references/source-anchors.md`.
+Loaded by: `agentic-ai-controls/SKILL.md` when `scope.sector_overlay_set` includes `payments-fintech`. Cited and section-referenced anchors live in `references/source-anchors.md`.
 
 ## Source basis
 

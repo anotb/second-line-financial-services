@@ -36,7 +36,7 @@
     },
     "engagement_id": {
       "type": "string",
-      "description": "Foreign key into engagement-scope.schema.json when the review was built under a formal engagement scope."
+      "description": "Foreign key into scope.schema.json when the review was built under a formal scope."
     },
     "policy_under_review": {
       "type": "object",

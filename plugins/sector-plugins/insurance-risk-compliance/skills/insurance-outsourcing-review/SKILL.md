@@ -31,7 +31,7 @@ Before drafting, get plain answers to a few things. Defaults are fine when an an
 - **Has the counterparty deployed AI on the carrier's policies.** The vendor-AI line in the pack is explicit. The negative answer is also a finding.
 - **What is the carrier's ORSA materiality threshold.** The ORSA-fit answer reads against the carrier's threshold, not against feel.
 
-When `engagement-scope` is supplied, the skill consumes it (institution type, sector overlay set, cross-cutting overlay set, persona, source posture). When it is not supplied, ask the questions above, default to public posture if the practitioner declines, and note in the pack that scope was not formalised.
+When `scope` is supplied, the skill consumes it (institution type, sector overlay set, cross-cutting overlay set, persona, source posture). When it is not supplied, ask the questions above, default to public posture if the practitioner declines, and note in the pack that scope was not formalised.
 
 ## How the pack gets built
 

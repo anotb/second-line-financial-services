@@ -38,7 +38,7 @@ Before drafting, settle a few things. Most are on the table by the time someone 
 - Who reads the matrix and what decision it supports. A 1.5-line policy-owner pre-read reads operational. A 2-line compliance-committee pre-read clusters severity and recommended edits to the front. Internal audit reads it as input to fieldwork scoping. A regulator-exam pre-read leans on coverage summary and out-of-scope rationale.
 - What source posture the engagement runs at. Public-only sets the ceiling at obligation, control objective, and observable text comparison. Firm-policy-overlay or mixed lets named owners, named systems of record, and operational evidence references land in the body.
 
-When `engagement-scope` is supplied, the skill consumes it for institution, persona, source posture, sector overlay, and cross-cutting overlay. Otherwise it asks the questions above and defaults to public posture if the practitioner declines. The matrix notes scope was not formalised; it does not silently assume.
+When `scope` is supplied, the skill consumes it for institution, persona, source posture, sector overlay, and cross-cutting overlay. Otherwise it asks the questions above and defaults to public posture if the practitioner declines. The matrix notes scope was not formalised; it does not silently assume.
 
 ## How the gap matrix gets built
 
@@ -71,11 +71,11 @@ The tail of the matrix earns its keep by what it surfaces:
 - **Cross-policy interactions.** Most material gaps interact with at least one other firm policy. Vendor policy and information-security policy on subcontractor due-diligence depth. MRM policy and AI governance committee charter. BSA/AML policy and consumer-compliance policy on customer-onboarding flows. The interaction is named (`dependency`, `conflict`, `overlap`) and described, so the reader can route the cross-policy fix to the right co-owner.
 - **Recommended next steps.** Operational, not commentary. Draft revisions ready for legal review. Route to compliance committee for tabling on a date. Schedule policy-owner working session with named other-policy owners. Schedule training refresh on changed sections.
 - **Source trace and confidence.** Material claims cite `references/source-anchors.md` or a loaded overlay by path. `[evidence needed]` flags route to the engagement issue log rather than living silent in the matrix. Confidence is assigned at the matrix level, with per-row confidence available where the practitioner is reading between the lines.
-- **Sign-off.** Named practitioner, severity reviewer (independent of author for severity attestation), policy-owner concurrence, sponsor where engagement scope names one.
+- **Sign-off.** Named practitioner, severity reviewer (independent of author for severity attestation), policy-owner concurrence, sponsor where scope names one.
 
 ### Sector and cross-cutting overlays
 
-The same row spine carries different benchmark sources and different severity calibrations across sectors and across cross-cutting topics. Load only the overlays the engagement scope flags. The overlays do not change the row structure; they change which sources the matrix benchmarks against and which gap patterns the practitioner expects to find.
+The same row spine carries different benchmark sources and different severity calibrations across sectors and across cross-cutting topics. Load only the overlays the scope flags. The overlays do not change the row structure; they change which sources the matrix benchmarks against and which gap patterns the practitioner expects to find.
 
 - `references/sector-overlays/banking.md` carries large-bank heightened-standards policy expectations, FRB SR letters and FDIC FILs as policy guidance, and the BSA/AML manual policy-pillar expectations.
 - `references/sector-overlays/insurance.md` carries NAIC Model Audit Rule, ORSA, and state DOI conduct-of-business policy expectations.
@@ -109,7 +109,7 @@ Material claims cite a source. `[evidence needed]` flags route to the engagement
 
 ## Adaptation
 
-Audience drives compression: a policy-owner pre-read reads operational; a compliance-committee read pulls severity and recommended edits to the front; an internal-audit read leans on coverage summary and out-of-scope rationale. Source posture drives what the body can carry. Sector and cross-cutting overlays load from the engagement scope. The order of gap rows in the surface artifact can sequence by severity, by policy section, or by benchmark source depending on audience; the structured record preserves the columns distinctly.
+Audience drives compression: a policy-owner pre-read reads operational; a compliance-committee read pulls severity and recommended edits to the front; an internal-audit read leans on coverage summary and out-of-scope rationale. Source posture drives what the body can carry. Sector and cross-cutting overlays load from the scope. The order of gap rows in the surface artifact can sequence by severity, by policy section, or by benchmark source depending on audience; the structured record preserves the columns distinctly.
 
 ## Output
 
@@ -120,8 +120,8 @@ Downstream consumers: `issue-writeup` consumes `gaps[]` rows whose severity warr
 ## Pointers
 
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
-- `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md` — sector overlays loaded from engagement scope.
-- `references/cross-cutting/{cyber,privacy,conduct}.md` — cross-cutting overlays loaded from engagement scope.
+- `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md` — sector overlays loaded from scope.
+- `references/cross-cutting/{cyber,privacy,conduct}.md` — cross-cutting overlays loaded from scope.
 - `references/firm-overlay.md` — firm-installed taxonomy, named role labels, severity-rating ladder, named committee sign-offs, firm-specific section labels; consumed when present.
 - `templates/default-output.md` — gap-matrix template.
 - `schemas/policy-gap-matrix.schema.json` — structured-output contract.

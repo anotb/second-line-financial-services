@@ -6,7 +6,7 @@ Public-source-derived. No named institution. Patterns drawn from NAIC Model Bull
 
 A regional life insurer (term and whole-life lines, multi-state, sells in CO, NY, CA, and 18 other states) is intaking an in-house ML accelerated-underwriting model for term-life applications under $500K face amount. The model uses the carrier's own historical underwriting data plus third-party clinical and prescription history (ECDIS) to produce a risk score; applicants below a tuned threshold receive an auto-accept (no fluid testing required), applicants in a middle band route to a human underwriter with the score as one input, applicants above the threshold route to a human underwriter without auto-decline. Model is in-house developed; no foundation model; no agentic behaviour. Sponsor (head of life-underwriting) proposes tier-1.
 
-Engagement scope provided by `engagement-scoping`:
+Engagement scope provided by `scoping`:
 - Institution type: state-licensed life insurer; multi-state, including CO, NY, CA.
 - Persona: AI Governance Lead (hybrid AI governance / model risk function), reporting to chief actuary with dotted line to chief compliance officer.
 - Sector overlay: insurance. Cross-cutting overlays: privacy (PHI from prescription and clinical data; NPI from financial sections of the application), conduct (customer-binding underwriting decision with adverse-action implications under state insurance fairness rules and NAIC Model #880).

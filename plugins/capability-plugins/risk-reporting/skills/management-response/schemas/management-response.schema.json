@@ -42,9 +42,9 @@
       "type": "string",
       "description": "Legal entity name of the responding institution; legal-entity hierarchy where relevant."
     },
-    "engagement_scope_id": {
+    "scope_id": {
       "type": "string",
-      "description": "Links to engagement-scoping record if supplied."
+      "description": "Links to scoping record if supplied."
     },
     "classification": {
       "type": "string",

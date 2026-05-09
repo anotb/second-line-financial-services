@@ -86,9 +86,9 @@ Fix: the DCP trace is the evidence that DCP under Rule 13a-15 functioned for cyb
 
 Symptom: an FPI registrant's pack uses the 8-K Item 1.05 spine; references to Form 6-K and Form 20-F Item 16K are missing.
 
-Why it happens: the engagement scope did not flag FPI status, or the practitioner is operating off a domestic-issuer template.
+Why it happens: the scope did not flag FPI status, or the practitioner is operating off a domestic-issuer template.
 
-Fix: FPIs are not subject to Form 8-K and therefore not subject to Item 1.05 directly. FPIs furnish on Form 6-K. Form 20-F Item 16K parallels Item 106 for FPI annual disclosure. The pack adapts to FPI mode when the filer category is named in the engagement scope or in the cover.
+Fix: FPIs are not subject to Form 8-K and therefore not subject to Item 1.05 directly. FPIs furnish on Form 6-K. Form 20-F Item 16K parallels Item 106 for FPI annual disclosure. The pack adapts to FPI mode when the filer category is named in the scope or in the cover.
 
 ## Voluntary Item 1.05 filing for non-material incident
 

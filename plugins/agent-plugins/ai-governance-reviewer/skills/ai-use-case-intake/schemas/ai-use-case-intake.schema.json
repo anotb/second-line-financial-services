@@ -39,9 +39,9 @@
       "type": "string",
       "description": "Short human-readable name. Plain English; no marketing language."
     },
-    "engagement_scope_id": {
+    "scope_id": {
       "type": "string",
-      "description": "Links to engagement-scoping record if supplied."
+      "description": "Links to scoping record if supplied."
     },
     "intake_date": {
       "type": "string",

@@ -1,6 +1,6 @@
 # Cyber cross-cutting overlay — dora-register-builder
 
-When the engagement scope flags cyber, or whenever the register includes ICT services that touch network, security, identity, logging, or any control on a critical-or-important-function path, load this overlay alongside `references/source-anchors.md`. Cyber sits inside the DORA register by design; the schema has fields for it, and supervisors read those fields through an ICT-security lens.
+When the scope flags cyber, or whenever the register includes ICT services that touch network, security, identity, logging, or any control on a critical-or-important-function path, load this overlay alongside `references/source-anchors.md`. Cyber sits inside the DORA register by design; the schema has fields for it, and supervisors read those fields through an ICT-security lens.
 
 ## Why cyber is in scope for the register, not just for vendor diligence
 

@@ -1,6 +1,6 @@
 # Sector overlay — insurance
 
-Loaded when the engagement scope names insurance (life insurer, P&C insurer, health insurer, reinsurer, captive, MGA). The overlay carries insurance-specific implementation-plan conventions on top of the generic spine.
+Loaded when the scope names insurance (life insurer, P&C insurer, health insurer, reinsurer, captive, MGA). The overlay carries insurance-specific implementation-plan conventions on top of the generic spine.
 
 ## State-DOI driven remediation
 

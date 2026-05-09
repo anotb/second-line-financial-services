@@ -45,19 +45,19 @@ These decisions were made over the course of the build and tightened multiple ti
 2. **US-deep v1, EU as overlays, UK as see-also.** Source map is US-anchored; EU and UK live in references where they apply.
 3. **Capability plugins (8) + sector overlays (4) + standalone agent plugins (6).** Strict overlay rule: sector plugins ship sector-unique skills only; sector flavor on capability skills lives as a `references/sector-overlays/<sector>.md` reference inside the capability skill.
 4. **Each agent plugin has primary `agent.md` + reader / critic / writer subagents.** Innovation over Anthropic's flat agent-plugin pattern. Cookbook-style YAML callable-agents (Anthropic's `managed-agent-cookbooks/`) are not in this repo; v1.1 may add 1-2 cookbook entries for upstream PR candidates (`ai-governance-reviewer`, `regulatory-change-analyst`).
-5. **Engagement-scoping is the bootstrapping primitive.** New skill in `risk-compliance-core`. Produces a structured engagement-scope record every other skill consumes for institution profile, persona, source posture, sector and cross-cutting overlay sets. The schema is the canonical case for "schema where downstream automation genuinely helps".
-6. **References-first design.** SKILL.md body uses generic regulator language. Specific regulator names and section refs live only in `references/source-anchors.md`. Sector-specific and cross-cutting nuance load conditionally based on the engagement scope.
+5. **Scoping is the bootstrapping primitive.** New skill in `risk-compliance-core`. Produces a structured scope record every other skill consumes for institution profile, persona, source posture, sector and cross-cutting overlay sets. The schema is the canonical case for "schema where downstream automation genuinely helps".
+6. **References-first design.** SKILL.md body uses generic regulator language. Specific regulator names and section refs live only in `references/source-anchors.md`. Sector-specific and cross-cutting nuance load conditionally based on the scope.
 7. **No "Anchored to:" line in description.** Description shape is summary + `Best for:` + `Not the right tool when:`. Named regulators ride along with every activation if put in the description, polluting context for engagements that don't address those regulators. They belong in references, where they load conditionally.
 8. **No "What's load-bearing and what flexes" section.** Engineer-speak meta-section. Non-negotiables (cite source, no fabrication, separate evidence from inference, human review gate, no named institutions) and adaptation guidance (audience, sector overlay loading, depth) bake inline in the workflow narrative.
-9. **Schemas are optional.** Skip schema files unless the artifact has a structure that genuinely helps downstream automation (DORA register row mapping to EBA ITS table, engagement-scope record consumed across the repo, sanctions-screening alert payload). No shared `_defs.json` or cross-skill enum forcing — skills are for Claude to use, not regex-like output contracts.
+9. **Schemas are optional.** Skip schema files unless the artifact has a structure that genuinely helps downstream automation (DORA register row mapping to EBA ITS table, scope record consumed across the repo, sanctions-screening alert payload). No shared `_defs.json` or cross-skill enum forcing — skills are for Claude to use, not regex-like output contracts.
 10. **Deliverables are practitioner-natural formats: Word (docx), Excel (xlsx), PowerPoint (pptx).** Markdown is the content spec inside `templates/default-output.md`, not the deliverable. Skills define artifact substance and DELEGATE rendering to Anthropic's `document-skills` plugin. Same pattern Anthropic's `pitch-agent` uses.
-11. **Voice picked per skill.** Anthropic's `comps-analysis` is judgement-shaped (conversational, "ask yourself first"); `dcf-model` is structured-artifact-shaped (numbered NON-NEGOTIABLE callouts, named fields). Match the voice to the work; engagement-scoping is judgement-shaped because scoping is judgement work, but a register builder or matrix is structured-artifact-shaped.
+11. **Voice picked per skill.** Anthropic's `comps-analysis` is judgement-shaped (conversational, "ask yourself first"); `dcf-model` is structured-artifact-shaped (numbered NON-NEGOTIABLE callouts, named fields). Match the voice to the work; scoping is judgement-shaped because scoping is judgement work, but a register builder or matrix is structured-artifact-shaped.
 
 The full design plan is at `internal/plans/2026-05-06-rationalized-plugin-map.md`. The build contract is at `internal/plans/2026-05-06-phase2-build-contract.md`. The skeleton is at `internal/templates/skill-skeleton.md`. The four memories are at `~/.claude/projects/-Users-anot-Sync-code-second-line-financial-services/memory/feedback_*.md` — voice, practitioner lens, references-first, anti-AI-tells.
 
 ## The gold-standard skill
 
-`plugins/capability-plugins/risk-compliance-core/skills/engagement-scoping/SKILL.md` is the canonical reference for the v1 sharpened rules. 72 lines. Everything that follows the sharpened rules models on it.
+`plugins/capability-plugins/risk-compliance-core/skills/scoping/SKILL.md` is the canonical reference for the v1 sharpened rules. 72 lines. Everything that follows the sharpened rules models on it.
 
 Do NOT model new skills on the older built skills. Many of them still carry `Anchored to:` lines, "What's load-bearing and what flexes" sections, or other pre-sharpening tells. They will get cleaned up in a retroactive pass.
 
@@ -82,7 +82,7 @@ These items were noted during the build but explicitly not done so the build que
 ### Forward work (after retroactive cleanup)
 
 - **v1.1 cookbook layer** for upstream PR candidates. Add `managed-agent-cookbooks/<agent>/` for `ai-governance-reviewer` and `regulatory-change-analyst` in Anthropic's exact format (`agent.yaml`, `subagents/<role>.yaml`, `steering-examples.json`, `README.md`).
-- **Per-skill quality lift.** A second-line review pass on each skill (independent reviewer subagent compares against spec sheet, finds drift, drafts edits). The pattern for this is in `internal/reviews/engagement-scoping-revision-memo.md`, `model-card-builder-revision-memo.md`, `vendor-diligence-revision-memo.md`.
+- **Per-skill quality lift.** A second-line review pass on each skill (independent reviewer subagent compares against spec sheet, finds drift, drafts edits). The pattern for this is in `internal/reviews/scoping-revision-memo.md`, `model-card-builder-revision-memo.md`, `vendor-diligence-revision-memo.md`.
 - **EU overlays expansion.** The current US-deep posture leaves EU coverage thin in many sector overlays. v1.1 broadens.
 - **Eventually: GitHub publish.** Public-facing root is now clean (Anthropic-shaped). README needs a final polish pass before publish.
 
@@ -124,7 +124,7 @@ These fixes are committed; the scripts are clean.
 - `internal/reviews/pre-batch-2d-cleanup-memo.md` — pre-2D cleanup analysis.
 - `internal/reviews/gold-standard-review-vs-anthropic.md` — independent review of the gold-standard against Anthropic's pattern.
 - The four feedback memories at `~/.claude/projects/-Users-anot-Sync-code-second-line-financial-services/memory/feedback_*.md`.
-- The gold-standard skill at `plugins/capability-plugins/risk-compliance-core/skills/engagement-scoping/SKILL.md`.
+- The gold-standard skill at `plugins/capability-plugins/risk-compliance-core/skills/scoping/SKILL.md`.
 
 ## What this build actually is
 

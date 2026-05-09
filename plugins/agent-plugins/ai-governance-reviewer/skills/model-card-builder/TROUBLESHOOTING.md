@@ -64,7 +64,7 @@ Symptom: tier-4 model with a 12-page card detailing every nuance; or tier-1 mode
 
 Why it happens: a single template depth is being applied across the inventory.
 
-Fix: tier drives depth. Tier-4 cards are short, focused on intended use, data, owner, monitoring. Tier-1 cards are deep, with full robustness, fairness, and sign-off coverage. The template is a maximum; the engagement scope sets how much of it to fill. When tier and depth disagree, the engagement-scope record wins.
+Fix: tier drives depth. Tier-4 cards are short, focused on intended use, data, owner, monitoring. Tier-1 cards are deep, with full robustness, fairness, and sign-off coverage. The template is a maximum; the scope sets how much of it to fill. When tier and depth disagree, the scope record wins.
 
 ## Sector overlay loaded but ignored
 
@@ -72,7 +72,7 @@ Symptom: insurance pricing model card reads in fairness/bias vocabulary but neve
 
 Why it happens: the sector overlay file exists in references/ but the card-writer treated it as background reading.
 
-Fix: when the engagement scope names a sector, the matching `references/sector-overlays/<sector>.md` content lands as named items in the card. Sign-off questions probe the sector items. If the overlay is loaded but the card has no overlay-specific content, the loader did not run; rerun with the overlay reference in scope.
+Fix: when the scope names a sector, the matching `references/sector-overlays/<sector>.md` content lands as named items in the card. Sign-off questions probe the sector items. If the overlay is loaded but the card has no overlay-specific content, the loader did not run; rerun with the overlay reference in scope.
 
 ## Source trace omits the foundation-model dependency
 
@@ -88,4 +88,4 @@ Symptom: card reads like vendor marketing; or like an academic paper; or like a 
 
 Why it happens: the card-writer borrowed phrasing from the vendor system card or an academic paper, or imported the development README into the card.
 
-Fix: voice is senior model risk practitioner. The audience is the model risk committee, the validator, the examiner. Depth and formality flex with the engagement-scope `persona.role` and the lifecycle stage. A pre-prod committee card is more formal than a development working note; an exam-response card is more formal still.
+Fix: voice is senior model risk practitioner. The audience is the model risk committee, the validator, the examiner. Depth and formality flex with the scope `persona.role` and the lifecycle stage. A pre-prod committee card is more formal than a development working note; an exam-response card is more formal still.

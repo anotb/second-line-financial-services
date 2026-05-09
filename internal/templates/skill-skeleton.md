@@ -31,7 +31,7 @@ Before drafting, get plain answers to a few things. Defaults are fine when an an
 - <Question 3. Why it matters in one line.>
 - <Question 4. Why it matters in one line.>
 
-When `engagement-scope` is supplied, the skill consumes it for institution, persona, source posture, sector and cross-cutting overlay sets. When it is not, ask the questions above and default source posture to public-only; flag the absence in the artifact.
+When `scope` is supplied, the skill consumes it for institution, persona, source posture, sector and cross-cutting overlay sets. When it is not, ask the questions above and default source posture to public-only; flag the absence in the artifact.
 
 ## How the <artifact> gets built
 
@@ -51,7 +51,7 @@ The <artifact> has the same spine across <variant set>. A senior reviewer fills 
 Non-negotiables and adaptation guidance go INLINE in the workflow narrative above, not in a separate "load-bearing and flexes" section. Examples to bake into the workflow paragraphs:
 - Cite a source for every material claim. Mark unsupported claims `[evidence needed]`.
 - The skill stops at draft / recommendation; sponsor or sign-off owner closes.
-- Sector and cross-cutting overlays load from the engagement scope; skill loads only what the engagement names.
+- Sector and cross-cutting overlays load from the scope; skill loads only what the engagement names.
 - Audience drives depth (working group plain, committee structured, examiner response formal, board distilled).
 Senior practitioners do not have a meta-section about what is mandatory; the must-do's are part of how they describe the work.
 -->
@@ -59,13 +59,13 @@ Senior practitioners do not have a meta-section about what is mandatory; the mus
 ## Pointers
 
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
-- `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md` — sector overlays loaded per engagement-scope.
-- `references/cross-cutting/{cyber,privacy,climate,conduct}.md` — cross-cutting overlays loaded per engagement-scope.
+- `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md` — sector overlays loaded per scope.
+- `references/cross-cutting/{cyber,privacy,climate,conduct}.md` — cross-cutting overlays loaded per scope.
 - `references/firm-overlay.md` — firm-installed policy, taxonomy, review gates; consumed when present.
 - `templates/default-output.md` — content spec for the artifact (named sections, fields).
 - `examples/` — anonymised public-source-derived scenarios.
 - `TROUBLESHOOTING.md` — recurring defects.
-- `schemas/<skill-slug>.schema.json` — OPTIONAL: include only when the artifact has a structure that genuinely helps downstream automation (e.g., DORA register row mapping to EBA ITS table; structured engagement-scope record). Most skills skip this.
+- `schemas/<skill-slug>.schema.json` — OPTIONAL: include only when the artifact has a structure that genuinely helps downstream automation (e.g., DORA register row mapping to EBA ITS table; structured scope record). Most skills skip this.
 
 ## Output
 

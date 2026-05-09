@@ -37,7 +37,7 @@ Most of the spine is set by the engagement, the prior-period pack, and the AI in
 - What decisions does the committee owe this cycle. Decisions usually include AI policy refresh approval, GenAI pre-prod gate exceptions, foundation-model swap approvals, agentic deployment go/no-go, AI incident response posture, and resourcing requests. A pack with no decisions is a status update; surface that absence as a sign-off question rather than ship the status pack as a committee instrument.
 - What is the GenAI program status. GenAI is the highest-velocity bucket and the section the committee will spend the most time on. Foundation-model vendor concentration, RAG corpus governance, agentic autonomy levels in production, prompt-injection signal trend, and the GenAI pre-prod gate throughput are the standing items.
 
-When the engagement-scope record is supplied, the skill reads `institution.type`, `institution.primary_regulators`, `persona.role`, `sector_overlay_set`, and `cross_cutting_overlay_set` from it, plus `source_posture` for the evidence asks. Otherwise the skill works with what the practitioner names and flags the rest.
+When the scope record is supplied, the skill reads `institution.type`, `institution.primary_regulators`, `persona.role`, `sector_overlay_set`, and `cross_cutting_overlay_set` from it, plus `source_posture` for the evidence asks. Otherwise the skill works with what the practitioner names and flags the rest.
 
 ## How the pack gets built
 
@@ -73,7 +73,7 @@ The appendices carry the data confidence label (with the BCBS 239 posture for fi
 
 ### Sector and cross-cutting overlays
 
-When the engagement scope names a sector, load the matching `references/sector-overlays/<sector>.md`. The overlay's named fields and committee-specific framing land in the pack; treating the overlay as background reading is the failure mode the troubleshooting file calls out.
+When the scope names a sector, load the matching `references/sector-overlays/<sector>.md`. The overlay's named fields and committee-specific framing land in the pack; treating the overlay as background reading is the failure mode the troubleshooting file calls out.
 
 - Banking covered-bank packs carry the OCC Heightened Standards framing on board AI oversight, the joint interagency model-risk guidance for traditional models (with the explicit GenAI/agentic scope exclusion noted), BCBS 239 data-confidence framing on the AI-inventory aggregation, and the CCAR governance-reporting cadence linkage.
 - Insurance packs carry the NAIC Model Bulletin AIS Program elements as the spine of the governance maturity section, ORSA cadence linkage, NYDFS January 2024 Insurance Circular Letter framing for NY life-insurance writers, Colorado SB 21-169 framing for CO writers, and the state-DOI inquiry inventory.
@@ -82,7 +82,7 @@ When the engagement scope names a sector, load the matching `references/sector-o
 
 Cross-cutting overlays load on the same pattern. Cyber covers the NYDFS October 2024 Industry Letter framing on AI-related cyber risk, AI-enabled threats (deepfake, social engineering), and prompt-injection exposure as a 23 NYCRR Part 500 covered-entity matter. Conduct covers customer-facing AI exposure, complaint trend by AI-touched product, fairness call-outs on consumer-credit and life-insurance underwriting decisioning, and CFPB Circular 2022-03 / 2023-03 adverse action posture for credit. Privacy lands in the cyber overlay where it touches; climate is not applicable to this pack.
 
-Load only the overlays the engagement scope names. Gold-plating with overlays the engagement does not implicate adds noise without challenge value.
+Load only the overlays the scope names. Gold-plating with overlays the engagement does not implicate adds noise without challenge value.
 
 ## Quality bar
 
@@ -100,7 +100,7 @@ The pack is only credible when these hold:
 
 ## Adaptation
 
-Audience drives tone (committee chair is challenge-shaped; board-level AI section is condensed and decision-loaded; regulator-attended meeting tightens the source trace; annual program review goes deepest on maturity). Depth flexes with firm posture (Heightened Standards bank deeper on governance section; insurer deeper on AIS Program elements; adviser deeper on Rule 206(4)-7 linkage). Sector and cross-cutting overlays load from the engagement scope. Where firm-specific policy, taxonomy, named owners, or threshold values apply, they live in `references/firm-overlay.md` (consumed when present) and never in the pack directly.
+Audience drives tone (committee chair is challenge-shaped; board-level AI section is condensed and decision-loaded; regulator-attended meeting tightens the source trace; annual program review goes deepest on maturity). Depth flexes with firm posture (Heightened Standards bank deeper on governance section; insurer deeper on AIS Program elements; adviser deeper on Rule 206(4)-7 linkage). Sector and cross-cutting overlays load from the scope. Where firm-specific policy, taxonomy, named owners, or threshold values apply, they live in `references/firm-overlay.md` (consumed when present) and never in the pack directly.
 
 ## Output
 
@@ -111,8 +111,8 @@ Downstream consumers: the structured object feeds the firm's committee minutes s
 ## Pointers
 
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
-- `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md` — sector overlays loaded from engagement scope.
-- `references/cross-cutting/{cyber,conduct}.md` — cross-cutting overlays loaded from engagement scope.
+- `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md` — sector overlays loaded from scope.
+- `references/cross-cutting/{cyber,conduct}.md` — cross-cutting overlays loaded from scope.
 - `references/firm-overlay.md` — firm-installed AI policy, taxonomy, named owners, threshold values (consumed when present).
 - `templates/default-output.md` — pack template with the named sections.
 - `schemas/board-ai-risk-pack.schema.json` — structured-output contract.

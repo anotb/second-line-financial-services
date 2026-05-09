@@ -1,8 +1,8 @@
 # Payments and fintech sector overlay for bcbs239-gap-assessment
 
-When the engagement-scope record names sector `payments-fintech`, this overlay adds payments- and fintech-specific fields and review demands to the assessment. Where there is conflict between the capability defaults and this overlay, the overlay governs the sector elements.
+When the scope record names sector `payments-fintech`, this overlay adds payments- and fintech-specific fields and review demands to the assessment. Where there is conflict between the capability defaults and this overlay, the overlay governs the sector elements.
 
-Loaded by: `bcbs239-gap-assessment/SKILL.md` when `engagement_scope.sector_overlay_set` includes `payments-fintech`. This is a stub overlay. BCBS 239 does not directly apply to non-bank payments and fintech firms. The overlay covers the case where a large nonbank payments firm voluntarily adopts BCBS 239 as a risk-data maturity benchmark, and the case where a sponsor-bank arrangement carries BCBS 239 reach into the fintech program through the sponsor bank.
+Loaded by: `bcbs239-gap-assessment/SKILL.md` when `scope.sector_overlay_set` includes `payments-fintech`. This is a stub overlay. BCBS 239 does not directly apply to non-bank payments and fintech firms. The overlay covers the case where a large nonbank payments firm voluntarily adopts BCBS 239 as a risk-data maturity benchmark, and the case where a sponsor-bank arrangement carries BCBS 239 reach into the fintech program through the sponsor bank.
 
 ## Source basis
 

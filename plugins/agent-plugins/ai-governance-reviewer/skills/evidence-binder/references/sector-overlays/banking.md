@@ -1,6 +1,6 @@
 # Banking sector overlay — evidence-binder
 
-Loads when the engagement-scope `sector_overlay_set` includes `banking`. Binds evidence-binder content to bank-supervisory expectations.
+Loads when the scope `sector_overlay_set` includes `banking`. Binds evidence-binder content to bank-supervisory expectations.
 
 ## Supervisory frame
 

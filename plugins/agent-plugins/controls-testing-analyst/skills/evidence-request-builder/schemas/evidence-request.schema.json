@@ -46,7 +46,7 @@
     },
     "engagement_id": {
       "type": "string",
-      "description": "Optional pointer to the engagement-scope record under which this request list was produced."
+      "description": "Optional pointer to the scope record under which this request list was produced."
     },
     "period_start": {
       "type": "string",

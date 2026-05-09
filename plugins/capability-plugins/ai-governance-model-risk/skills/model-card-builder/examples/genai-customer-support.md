@@ -6,7 +6,7 @@ Public-source-derived. No named institution. Pattern drawn from NIST AI 600-1 Ge
 
 A regional US bank holding company is launching a vendor-hosted GenAI assistant inside the consumer-banking customer-support call center. The assistant summarises customer history, suggests next-best-action steps for the agent, and drafts written follow-ups for the agent to review and send. No auto-decisioning, no auto-sending. First model card; pre-prod gate is the consuming review.
 
-Engagement scope provided by `engagement-scoping`:
+Engagement scope provided by `scoping`:
 - Institution type: bank holding company, asset size mid-cap, primary regulators FRB and CFPB; OCC for the national-bank subsidiary.
 - Persona: AI Governance Lead, second line, reporting jointly to CRO and CCO.
 - Sector overlay set: banking. Cross-cutting overlays: cyber (NYDFS Part 500 in NY footprint, NYDFS October 2024 letter), privacy (regulated NPI), conduct (UDAAP exposure on customer-facing communications).
@@ -17,7 +17,7 @@ Engagement scope provided by `engagement-scoping`:
 
 Card sections produced (abbreviated):
 
-- **Card metadata** — model ID `cs-assistant-v1.0`; tier-2; lifecycle stage pre-prod; engagement-scope ID cited.
+- **Card metadata** — model ID `cs-assistant-v1.0`; tier-2; lifecycle stage pre-prod; scope ID cited.
 - **Intended use** — customer-support agent productivity. Intended users: licensed bank customer-support agents. In-scope decisions: summarise customer history; suggest next-best-action; draft written follow-ups for agent review. Out-of-scope decisions: any direct customer communication without agent review; any account action; any product recommendation; any fee waiver; any complaint resolution.
 - **System description** — vendor-hosted GenAI assistant. Foundation model from named vendor, version pinned (vendor change-of-version notice required by contract). RAG over the bank's customer-history datastore and policy/procedure corpus. No tools. Autonomy level: human-in-the-loop (agent must review and send). Dependencies: vendor API, internal policy corpus refresh pipeline.
 - **Training and reference data** — foundation model trained by vendor (firm has no visibility beyond vendor system card; recorded in source trace at confidence: low). RAG corpus: customer history (regulated NPI under GLBA; retention 7 years per firm policy; lineage to system of record), policy and procedure documents (confidential business data; retention indefinite; lineage to policy management system). Excluded from RAG: any data outside the agent's customer; any data older than the customer's relationship start date.

@@ -1,6 +1,6 @@
 # Payments and fintech sector overlay — issue-writeup
 
-Loads when the engagement-scope `sector_overlay_set` includes `payments-fintech`. The overlay shapes the criteria block, the severity calibration, and the closure-evidence framing for issues at money transmitters, payments processors, sponsor-bank programs, fintech bank partners, and non-bank consumer-finance providers.
+Loads when the scope `sector_overlay_set` includes `payments-fintech`. The overlay shapes the criteria block, the severity calibration, and the closure-evidence framing for issues at money transmitters, payments processors, sponsor-bank programs, fintech bank partners, and non-bank consumer-finance providers.
 
 ## Why the payments-fintech overlay matters
 

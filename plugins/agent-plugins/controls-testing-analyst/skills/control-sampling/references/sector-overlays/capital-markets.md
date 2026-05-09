@@ -1,6 +1,6 @@
 # Capital-markets sector overlay — control-sampling
 
-Loaded when `engagement-scope.sector_overlay_set` includes `capital-markets` or when the test addresses FINRA, SEC, MSRB, or CFTC rules for broker-dealers, investment advisers, registered funds, or futures commission merchants. Supplements `references/source-anchors.md` with capital-markets-specific population, stratification, and tolerable-rate conventions.
+Loaded when `scope.sector_overlay_set` includes `capital-markets` or when the test addresses FINRA, SEC, MSRB, or CFTC rules for broker-dealers, investment advisers, registered funds, or futures commission merchants. Supplements `references/source-anchors.md` with capital-markets-specific population, stratification, and tolerable-rate conventions.
 
 ## Population definition conventions capital-markets examiners expect
 

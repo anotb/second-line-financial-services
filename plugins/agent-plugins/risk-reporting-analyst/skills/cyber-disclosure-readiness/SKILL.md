@@ -14,7 +14,7 @@ description: |
   - The artifact is an internal incident response runbook or a forensic timeline (out of scope; this skill is the disclosure decision, not incident handling).
   - The artifact is a vendor cyber due-diligence pack (use `third-party-operational-resilience/skills/vendor-diligence`).
   - The trigger is a non-public regulator-only notification (NYDFS Part 500 §500.17, federal banking agencies' 36-hour rule, state breach-notification). Those clocks surface in the parallel-clocks table here, but the regulator-specific notification artifact lives elsewhere.
-argument-hint: "[incident reference, prior-year 10-K Item 106, DCP map, engagement scope, or scope statement]"
+argument-hint: "[incident reference, prior-year 10-K Item 106, DCP map, scope, or scope statement]"
 ---
 
 # Cyber disclosure readiness
@@ -30,12 +30,12 @@ The pack is a draft until the disclosure committee, securities counsel, and the 
 Most of the spine is set by the trigger and the source posture. A few things settle before drafting:
 
 - **Which artifact is the work**. An 8-K Item 1.05 incident pack runs on a clock and is materiality-loaded. A 10-K Item 106 refresh runs on the annual cycle and is governance-loaded. A DCP readiness map is framework-level and is process-loaded. The same skill produces all three but they ship independently; the first ask sets which one (or which combination) the engagement needs and which sit out.
-- **Where the firm sits on filer category**. Domestic large accelerated filer, accelerated filer, smaller reporting company, foreign private issuer (Form 6-K, not 8-K). The Item 1.05 phase-in differed for SRCs (June 15, 2024 effective rather than December 18, 2023) and FPI treatment is structurally different. The pack adapts to the category named in the engagement scope.
+- **Where the firm sits on filer category**. Domestic large accelerated filer, accelerated filer, smaller reporting company, foreign private issuer (Form 6-K, not 8-K). The Item 1.05 phase-in differed for SRCs (June 15, 2024 effective rather than December 18, 2023) and FPI treatment is structurally different. The pack adapts to the category named in the scope.
 - **For an Item 1.05 pack: where the firm is on the materiality call**. Pre-determination, pending, just-determined, determined-and-clocked. The pack content shifts; pre-determination work is workpaper-heavy and disclosure-light, post-determination work is the inverse. The 4-business-day clock starts at the materiality determination, not at detection; the skill rejects any draft that conflates these.
 - **What parallel clocks apply to the registrant**. Federal banking agencies' 36-hour rule (covered banking organizations under 12 CFR 53/225/304); NYDFS 72-hour notice under 23 NYCRR Part 500 §500.17 if NYDFS-licensed; state breach-notification clocks where customer information is implicated; SEC Reg S-P 30-day customer notice for in-scope BDs, IAs, transfer agents, and registered funds; HIPAA Breach Notification Rule for in-scope entities; counterparty contractual notification. Surface every clock applicable to the registrant; missing one is a frequent regulator finding.
 - **What the disclosure committee owns versus what counsel owns**. Materiality is a disclosure determination made by the disclosure committee with securities counsel input under the firm's DCP. The cyber team contributes facts and quantitative inputs; they do not own the determination. The pack carries the determination as a workpaper output, not as a CISO call.
 
-When the engagement-scope record is supplied, the skill reads `institution.type`, `institution.primary_regulators`, `persona.role`, `sector_overlay_set`, `cross_cutting_overlay_set`, and `source_posture` from it and consumes them. Otherwise the skill works with what the practitioner names and notes the rest.
+When the scope record is supplied, the skill reads `institution.type`, `institution.primary_regulators`, `persona.role`, `sector_overlay_set`, `cross_cutting_overlay_set`, and `source_posture` from it and consumes them. Otherwise the skill works with what the practitioner names and notes the rest.
 
 ## How the pack gets built
 
@@ -83,7 +83,7 @@ Required documentation per stage is the row that audit and counsel review for co
 
 ### Climate
 
-When the engagement scope flags climate, the climate cross-cutting overlay (`references/cross-cutting/climate.md`) drives the additional content. The disclosure machinery is shared: the same DCP, the same disclosure committee, the same 8-K mechanic, and the same materiality lens handle climate-related material events and the 10-K climate disclosure. The overlay covers what the SEC Climate Disclosure Rule adds (Item 1500-series of Regulation S-K, financial-statement effects under Article 14 of Regulation S-X) without re-anchoring full climate sources.
+When the scope flags climate, the climate cross-cutting overlay (`references/cross-cutting/climate.md`) drives the additional content. The disclosure machinery is shared: the same DCP, the same disclosure committee, the same 8-K mechanic, and the same materiality lens handle climate-related material events and the 10-K climate disclosure. The overlay covers what the SEC Climate Disclosure Rule adds (Item 1500-series of Regulation S-K, financial-statement effects under Article 14 of Regulation S-X) without re-anchoring full climate sources.
 
 Default posture on the SEC climate rule: never assert current effectiveness without checking the SEC's posture as of the report date. The rule was finalized March 2024, voluntarily stayed by the SEC pending Eighth Circuit consolidated litigation, and current status remains unsettled. Cite the rule with `[verify current effectiveness]` and lean on TCFD for substantive content where the climate overlay applies.
 
@@ -93,7 +93,7 @@ When customer financial information is implicated, the privacy cross-cutting ove
 
 ### Sector overlays
 
-Load only the overlay the engagement scope names. Banking covered-bank packs carry the federal banking agencies' Computer-Security Incident Notification Rule (12 CFR 53/225/304) 36-hour clock alongside the SEC clock; the two clocks run on different bases (notification incident determination versus materiality determination) and resolving them in parallel is the senior reviewer's job. Insurance packs carry NAIC Insurance Data Security Model Law (#668) state-by-state adoption variation. Capital-markets packs carry SEC Reg S-P amendments (May 2024) and FINRA Rule 4530 reporting where applicable. Payments-fintech packs carry PCI DSS contractual notification and Reg E error-resolution clocks where customer transactions are affected.
+Load only the overlay the scope names. Banking covered-bank packs carry the federal banking agencies' Computer-Security Incident Notification Rule (12 CFR 53/225/304) 36-hour clock alongside the SEC clock; the two clocks run on different bases (notification incident determination versus materiality determination) and resolving them in parallel is the senior reviewer's job. Insurance packs carry NAIC Insurance Data Security Model Law (#668) state-by-state adoption variation. Capital-markets packs carry SEC Reg S-P amendments (May 2024) and FINRA Rule 4530 reporting where applicable. Payments-fintech packs carry PCI DSS contractual notification and Reg E error-resolution clocks where customer transactions are affected.
 
 The sector overlay is content that lands in the pack, not background reading. A banking overlay loaded but no 36-hour-rule row in the parallel-clocks table is the failure mode.
 
@@ -112,7 +112,7 @@ The sector overlay is content that lands in the pack, not background reading. A 
 
 ## Adaptation
 
-Filer category drives the 8-K-versus-6-K spine and the SRC versus non-SRC phase-in. Audience drives tone (working-group draft is plain, disclosure-committee material is challenge-shaped, examiner response is formal). Sector and cross-cutting overlays load from the engagement scope. Where firm-specific DCP, board-committee structure, or disclosure-policy machinery applies, it lives in `references/firm-overlay.md` (consumed when present) and never in the pack directly.
+Filer category drives the 8-K-versus-6-K spine and the SRC versus non-SRC phase-in. Audience drives tone (working-group draft is plain, disclosure-committee material is challenge-shaped, examiner response is formal). Sector and cross-cutting overlays load from the scope. Where firm-specific DCP, board-committee structure, or disclosure-policy machinery applies, it lives in `references/firm-overlay.md` (consumed when present) and never in the pack directly.
 
 ## Output
 
@@ -129,7 +129,7 @@ Downstream consumers: the structured objects feed the firm's disclosure-committe
 ## Pointers
 
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
-- `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md` — sector overlays loaded from engagement scope.
+- `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md` — sector overlays loaded from scope.
 - `references/cross-cutting/{cyber,climate,privacy}.md` — cross-cutting overlays. `cyber.md` is the core anchor set for this skill kept in references so SKILL.md remains a workflow rather than a regulatory primer; `climate.md` is required because the disclosure machinery overlaps; `privacy.md` loads when customer financial information is implicated.
 - `references/firm-overlay.md` — firm-installed DCP, board-committee structure, disclosure policy, named officers (consumed when present).
 - `templates/default-output.md` — pack template with the named sections for all three artifacts.

@@ -1,6 +1,6 @@
 # Sector overlay — capital markets and asset management
 
-Loaded when the engagement scope names capital markets or asset management (registered investment adviser, registered investment company, broker-dealer, exchange, alternative trading system, transfer agent, securities-based swap dealer, custodian, fund administrator). The overlay carries SEC and FINRA implementation-plan conventions on top of the generic spine.
+Loaded when the scope names capital markets or asset management (registered investment adviser, registered investment company, broker-dealer, exchange, alternative trading system, transfer agent, securities-based swap dealer, custodian, fund administrator). The overlay carries SEC and FINRA implementation-plan conventions on top of the generic spine.
 
 ## SEC deficiency-letter remediation
 

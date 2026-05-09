@@ -88,7 +88,7 @@ Symptom: insurance sector overlay loaded but the pack has no ORSA mapping; banki
 
 Why it happens: the overlay is treated as background reading, not as content that lands in the pack.
 
-Fix: when the engagement scope names a sector, the matching `references/sector-overlays/<sector>.md` content lands as named items in the pack. Sector-specific sign-off questions go to the reviewer-question list.
+Fix: when the scope names a sector, the matching `references/sector-overlays/<sector>.md` content lands as named items in the pack. Sector-specific sign-off questions go to the reviewer-question list.
 
 ## Pack stops too late
 

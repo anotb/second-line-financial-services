@@ -1,8 +1,8 @@
 # Cyber cross-cutting overlay — bank-fintech-partnership-review
 
-When the engagement scope flags `cyber` for a bank-fintech partnership review, this overlay sits as the load-bearing companion to the bank-sector lens. Bank-fintech relationships concentrate ICT and cyber risk: the fintech (and any middleware platform it relies on) is a bank service provider whose security posture maps onto the bank's regulator-notification windows, the bank's third-party-risk program, and the BHC's public-disclosure surface where the BHC is a public registrant.
+When the scope flags `cyber` for a bank-fintech partnership review, this overlay sits as the load-bearing companion to the bank-sector lens. Bank-fintech relationships concentrate ICT and cyber risk: the fintech (and any middleware platform it relies on) is a bank service provider whose security posture maps onto the bank's regulator-notification windows, the bank's third-party-risk program, and the BHC's public-disclosure surface where the BHC is a public registrant.
 
-Loaded by: `bank-fintech-partnership-review/SKILL.md` when the engagement scope's `cross_cutting_overlay_set` includes `cyber`. For BaaS sponsor programs, embedded-lending relationships, KYC / fraud service partners, and any fintech that handles customer NPI or sits in the money-flow path, this overlay should be considered the default. Cited and section-referenced anchors live in `references/source-anchors.md`.
+Loaded by: `bank-fintech-partnership-review/SKILL.md` when the scope's `cross_cutting_overlay_set` includes `cyber`. For BaaS sponsor programs, embedded-lending relationships, KYC / fraud service partners, and any fintech that handles customer NPI or sits in the money-flow path, this overlay should be considered the default. Cited and section-referenced anchors live in `references/source-anchors.md`.
 
 ## Source basis
 

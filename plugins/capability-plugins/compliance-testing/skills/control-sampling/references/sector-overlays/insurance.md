@@ -1,6 +1,6 @@
 # Insurance sector overlay — control-sampling
 
-Loaded when `engagement-scope.sector_overlay_set` includes `insurance` or when the test addresses NAIC or state-DOI rules. Supplements `references/source-anchors.md` with insurance-specific population, stratification, and tolerable-rate conventions.
+Loaded when `scope.sector_overlay_set` includes `insurance` or when the test addresses NAIC or state-DOI rules. Supplements `references/source-anchors.md` with insurance-specific population, stratification, and tolerable-rate conventions.
 
 ## Population definition conventions insurance examiners expect
 

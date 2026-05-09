@@ -6,7 +6,7 @@ Recurring defects in credit-risk-governance packs. Read the corresponding sectio
 
 Symptom: section 1 (credit policy alignment) cross-walks against ECOA / Reg B; section 2 (underwriting framework) reads as a disparate-impact analysis; section 7 (second-line challenge) discusses fair-lending matched-pair file review.
 
-Cause: the engagement scope or the cycle trigger blurred the safety-and-soundness lens with the fair-lending lens.
+Cause: the scope or the cycle trigger blurred the safety-and-soundness lens with the fair-lending lens.
 
 Fix: hard-stop and route. The credit-risk-governance pack covers the safety-and-soundness lens only. Route the fair-lending lens to the consumer-compliance fair-lending skills (per `references/cross-cutting/conduct.md`). Run the credit-governance pack against the safety-and-soundness anchors only; cross-reference the fair-lending pack as a recommended owner action where the safety-and-soundness review surfaces a finding with a plausible fair-lending dimension.
 

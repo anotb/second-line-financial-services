@@ -1,6 +1,6 @@
 # Capital markets sector overlay — human-review-gates
 
-Loads when the engagement-scope `sector_overlay_set` includes `capital-markets`. The overlay shapes the decision-authority block, the supervision and compliance-program gate framing, and the documentation conventions for gate matrices at SEC- and FINRA-regulated firms (broker-dealers, investment advisers, fund complexes, CFTC-registered swap dealers and FCMs, and exchange-traded-product issuers).
+Loads when the scope `sector_overlay_set` includes `capital-markets`. The overlay shapes the decision-authority block, the supervision and compliance-program gate framing, and the documentation conventions for gate matrices at SEC- and FINRA-regulated firms (broker-dealers, investment advisers, fund complexes, CFTC-registered swap dealers and FCMs, and exchange-traded-product issuers).
 
 ## Why the capital-markets overlay matters
 

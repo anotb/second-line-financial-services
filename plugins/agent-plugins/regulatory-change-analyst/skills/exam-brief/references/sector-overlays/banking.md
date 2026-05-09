@@ -1,6 +1,6 @@
 # Banking sector overlay — exam-brief
 
-When the engagement scope flags banking and the regulator is one of OCC, FRB, FDIC, NCUA, or a state banking department running a non-full-scope engagement (e.g., a CFPB-coordinated exam at a bank, an NYDFS cyber exam at a state-chartered bank, a coordinated trust exam, an IT-focused exam), load this overlay alongside `references/source-anchors.md`. For a full-scope federal banking exam at a bank carrying the Heightened Standards, route to `sector-plugins/banking-risk-compliance/banking-supervision-readiness` instead; the readiness sprint there carries the substantive scaffolding. This overlay carries the engagement playbook for the slice that the generic skill owns.
+When the scope flags banking and the regulator is one of OCC, FRB, FDIC, NCUA, or a state banking department running a non-full-scope engagement (e.g., a CFPB-coordinated exam at a bank, an NYDFS cyber exam at a state-chartered bank, a coordinated trust exam, an IT-focused exam), load this overlay alongside `references/source-anchors.md`. For a full-scope federal banking exam at a bank carrying the Heightened Standards, route to `sector-plugins/banking-risk-compliance/banking-supervision-readiness` instead; the readiness sprint there carries the substantive scaffolding. This overlay carries the engagement playbook for the slice that the generic skill owns.
 
 ## Examiner-in-charge convention
 

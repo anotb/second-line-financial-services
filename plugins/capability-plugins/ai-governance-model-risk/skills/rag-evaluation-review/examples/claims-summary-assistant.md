@@ -6,7 +6,7 @@ Public-source-derived. No named institution. Pattern aligns with the spec sheet'
 
 A regional US life insurer is approaching the in-prod-periodic review for a RAG-based claims-summary assistant. The assistant retrieves over claim-file documents only (PHI), produces a structured summary the adjuster reviews and edits, and never communicates with the policyholder directly. No external corpora. No tools enabled. Foundation model is vendor-hosted with version pinning. The system has been in production for nine months; this is the second post-go-live review.
 
-Engagement scope provided by `engagement-scoping`:
+Engagement scope provided by `scoping`:
 - Institution type: state-domiciled life insurer; primary regulator the state DOI; NAIC AI Bulletin adopted in the domiciliary state.
 - Persona: AI Governance Lead (second line), with the chief actuary and the privacy officer as named co-reviewers.
 - Sector overlay: insurance. Cross-cutting overlays: privacy (PHI corpus, HIPAA scope), conduct (claims-handling fairness expectations under the unfair claims-settlement-practices framework), cyber (per-claim retrieval scoping is a security-relevant control).

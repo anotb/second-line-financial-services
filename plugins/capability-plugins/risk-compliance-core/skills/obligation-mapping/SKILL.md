@@ -34,7 +34,7 @@ Before drafting, settle a few things. The conversation usually surfaces them in 
 - Who reads the register, and what decision it supports. A 1.5-line BU controls tester reads it operationally. A 2-line head of compliance reads it for review-gate routing. An external auditor reads it as the universe to test against. A regulator reads it line by line.
 - Whether the register is a fresh build, a refresh against an updated source, or a re-mapping after a process change. Fresh builds set every row's status at draft. Refreshes inherit prior status and surface deltas. Re-mappings re-test applicability.
 
-When `engagement-scope` is supplied, the skill consumes it for institution, persona, source posture, sector overlay, and cross-cutting overlay. Otherwise it asks the four questions and defaults to public posture if the practitioner declines. The register notes scope was not formalised; it does not silently assume.
+When `scope` is supplied, the skill consumes it for institution, persona, source posture, sector overlay, and cross-cutting overlay. Otherwise it asks the four questions and defaults to public posture if the practitioner declines. The register notes scope was not formalised; it does not silently assume.
 
 ## How the register gets built
 
@@ -61,7 +61,7 @@ The tail of the register surfaces what the body cannot. The open-question summar
 
 ### Sector and cross-cutting overlays
 
-The same row spine carries different source labels and different rigor expectations across sectors and across cross-cutting topics. Load only the overlays the engagement scope flags. The overlays do not change the row structure; they change which sources the register is permitted to cite and which obligation patterns the practitioner expects to find.
+The same row spine carries different source labels and different rigor expectations across sectors and across cross-cutting topics. Load only the overlays the scope flags. The overlays do not change the row structure; they change which sources the register is permitted to cite and which obligation patterns the practitioner expects to find.
 
 - `references/sector-overlays/banking.md` carries insider-lending and affiliate-transactions rules, large-bank heightened standards, FRB SR letters as obligation sources, and the BSA/AML manual structure for banking processes.
 - `references/sector-overlays/insurance.md` carries state-by-state insurance-code obligations (NAIC model laws as starting point), ORSA obligations, market-conduct exam manuals, and the federal-state interplay specific to insurance.
@@ -91,7 +91,7 @@ Material claims cite a source from the source list. `[evidence needed]` flags it
 
 ## Adaptation
 
-Audience drives shape: a 1.5-line refresh reads operational, a 2-line register for committee challenge clusters open questions to the front, an audit support file pulls applicability rationale forward, an examiner-readiness pack sequences rows by source. Source posture drives what the row body can carry; public-only registers stop at obligation, control objective, and evidence type, while mixed and firm-policy-overlay let named owners and named systems land. Sector and cross-cutting overlays load from the engagement scope. Confidence labels track by section, not as a single overall label, because most registers have high-confidence rows and low-confidence rows side by side.
+Audience drives shape: a 1.5-line refresh reads operational, a 2-line register for committee challenge clusters open questions to the front, an audit support file pulls applicability rationale forward, an examiner-readiness pack sequences rows by source. Source posture drives what the row body can carry; public-only registers stop at obligation, control objective, and evidence type, while mixed and firm-policy-overlay let named owners and named systems land. Sector and cross-cutting overlays load from the scope. Confidence labels track by section, not as a single overall label, because most registers have high-confidence rows and low-confidence rows side by side.
 
 ## Output
 
@@ -100,8 +100,8 @@ The register in `templates/default-output.md` shape and the structured record pe
 ## Pointers
 
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
-- `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md` — sector overlays loaded from engagement scope.
-- `references/cross-cutting/{cyber,privacy,conduct}.md` — cross-cutting overlays loaded from engagement scope.
+- `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md` — sector overlays loaded from scope.
+- `references/cross-cutting/{cyber,privacy,conduct}.md` — cross-cutting overlays loaded from scope.
 - `references/firm-overlay.md` — firm-installed taxonomy, named role labels, system-of-record names, internal policy pointers, decision forums and sign-off conditions beyond the regulatory baseline; consumed when present.
 - `templates/default-output.md` — register template.
 - `schemas/obligation-register.schema.json` — structured-output contract.

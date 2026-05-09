@@ -1,6 +1,6 @@
 # Banking sector overlay — issue-writeup
 
-Loads when the engagement-scope `sector_overlay_set` includes `banking`. The overlay shapes the criteria block, the severity calibration, the MRA / MRIA / MRBA classification field, and the closure-evidence framing for issues at federally regulated US banks (national, state-member, state-non-member, savings, holding companies, and US IHCs of foreign banking organizations).
+Loads when the scope `sector_overlay_set` includes `banking`. The overlay shapes the criteria block, the severity calibration, the MRA / MRIA / MRBA classification field, and the closure-evidence framing for issues at federally regulated US banks (national, state-member, state-non-member, savings, holding companies, and US IHCs of foreign banking organizations).
 
 ## Why the banking overlay matters
 

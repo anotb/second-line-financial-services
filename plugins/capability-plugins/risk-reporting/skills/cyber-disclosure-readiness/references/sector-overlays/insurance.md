@@ -1,8 +1,8 @@
 # Insurance sector overlay for cyber-disclosure-readiness
 
-When the engagement scope names insurance, the NAIC Insurance Data Security Model Law (Model #668) §6 carries a 72-hour cyber-event-notification clock to the state insurance commissioner in adopting states; state DOI-specific cyber-event timelines apply on top of state breach-notification mosaic; and NAIC Bulletin December 2023 (third-party AI accountability) interacts where AI is in the cyber surface.
+When the scope names insurance, the NAIC Insurance Data Security Model Law (Model #668) §6 carries a 72-hour cyber-event-notification clock to the state insurance commissioner in adopting states; state DOI-specific cyber-event timelines apply on top of state breach-notification mosaic; and NAIC Bulletin December 2023 (third-party AI accountability) interacts where AI is in the cyber surface.
 
-Loaded by: `cyber-disclosure-readiness/SKILL.md` when `engagement_scope.sector_overlay_set` includes `insurance`. Cited and section-referenced anchors live in `references/source-anchors.md`.
+Loaded by: `cyber-disclosure-readiness/SKILL.md` when `scope.sector_overlay_set` includes `insurance`. Cited and section-referenced anchors live in `references/source-anchors.md`.
 
 ## Source basis
 

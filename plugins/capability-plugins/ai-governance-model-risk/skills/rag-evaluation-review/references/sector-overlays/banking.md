@@ -1,6 +1,6 @@
 # Banking sector overlay for rag-evaluation-review
 
-When the engagement-scope record names `banking` as the sector, this overlay adds banking-specific corpora considerations, mitigations, monitoring signals, and review-coordination expectations to the RAG evaluation review. Loaded by `rag-evaluation-review/SKILL.md` when `engagement_scope.sector_overlay_set` includes `banking`. Cited and section-referenced anchors live in `references/source-anchors.md`.
+When the scope record names `banking` as the sector, this overlay adds banking-specific corpora considerations, mitigations, monitoring signals, and review-coordination expectations to the RAG evaluation review. Loaded by `rag-evaluation-review/SKILL.md` when `scope.sector_overlay_set` includes `banking`. Cited and section-referenced anchors live in `references/source-anchors.md`.
 
 ## Source basis
 

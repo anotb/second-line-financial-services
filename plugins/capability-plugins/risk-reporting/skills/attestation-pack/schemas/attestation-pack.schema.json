@@ -74,9 +74,9 @@
       "type": "string",
       "enum": ["public-only", "public-plus-firm-policy", "public-plus-firm-policy-plus-evidence", "connector-aware"]
     },
-    "engagement_scope_id": {
+    "scope_id": {
       "type": "string",
-      "description": "Links to engagement-scoping record if supplied."
+      "description": "Links to scoping record if supplied."
     },
     "source_criteria": {
       "type": "array",

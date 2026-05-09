@@ -1,6 +1,6 @@
 # Cross-cutting overlay: cyber — obligation-mapping
 
-Loaded when the engagement scope includes `cyber` in `cross_cutting_overlay_set`, or when the source being mapped is cyber-anchored. Adds cyber-specific source labels and obligation patterns the practitioner expects to find when the register scopes information-security or cybersecurity processes. Does not change the row spine.
+Loaded when the scope includes `cyber` in `cross_cutting_overlay_set`, or when the source being mapped is cyber-anchored. Adds cyber-specific source labels and obligation patterns the practitioner expects to find when the register scopes information-security or cybersecurity processes. Does not change the row spine.
 
 The cyber overlay is the most-loaded cross-cutting overlay in this skill: most material processes touch information systems, and most multi-source registers carry at least one cyber-anchored row.
 

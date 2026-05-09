@@ -34,7 +34,7 @@ Corrective: decisions requested entries have options and a recommended motion. "
 
 ## Sector overlay loaded but not reflected in the pack body
 
-The engagement scope flags insurance, the insurance overlay loads, and the pack body is generic. The NAIC AIS Program elements are not addressed. The state DOI inquiry inventory is missing. The reviewer flags the gap on first read.
+The scope flags insurance, the insurance overlay loads, and the pack body is generic. The NAIC AIS Program elements are not addressed. The state DOI inquiry inventory is missing. The reviewer flags the gap on first read.
 
 Corrective: overlays are content that lands in the pack body, not background reading. Insurance overlay implies AIS Program element narrative in the maturity section, state DOI inquiry inventory in the regulator interactions section, NAIC #880 / NYDFS Circular Letter / CO SB 21-169 framing in the top risks section as applicable. Same pattern for banking, capital-markets, payments-fintech.
 

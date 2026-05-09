@@ -1,8 +1,8 @@
 # Banking sector overlay for fair-lending-test-plan
 
-When the engagement-scope record names sector `banking`, this overlay adds banking-specific scope, methodology, and review-gate detail to the fair-lending test plan. Where there is conflict between the capability defaults and this overlay, the overlay governs the banking-sector elements.
+When the scope record names sector `banking`, this overlay adds banking-specific scope, methodology, and review-gate detail to the fair-lending test plan. Where there is conflict between the capability defaults and this overlay, the overlay governs the banking-sector elements.
 
-Loaded by: `fair-lending-test-plan/SKILL.md` when `engagement_scope.sector_overlay_set` includes `banking`, or when the institution type implicates a federal banking regulator (national bank, state member bank, savings association, bank holding company, foreign banking organization with US operations).
+Loaded by: `fair-lending-test-plan/SKILL.md` when `scope.sector_overlay_set` includes `banking`, or when the institution type implicates a federal banking regulator (national bank, state member bank, savings association, bank holding company, foreign banking organization with US operations).
 
 Cited and section-referenced anchors live in `references/source-anchors.md`.
 

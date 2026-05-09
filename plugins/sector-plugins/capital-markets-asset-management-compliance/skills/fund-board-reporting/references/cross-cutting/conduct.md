@@ -1,8 +1,8 @@
 # Conduct cross-cutting overlay for fund-board-reporting
 
-When the engagement-scope record flags `conduct` for the fund-board pack, this overlay sets the conduct-content for the named pack sections. Conduct in the fund-board context is the fiduciary lens — the adviser's fiduciary duty under §206 of the Investment Advisers Act, the affiliated-transaction conflict surface under §17 of the Investment Company Act, the §15(c) factor analysis itself (which is a fiduciary-bargain test), and the soft-dollar, brokerage, and revenue-sharing surfaces that drive fall-out benefits to the adviser and affiliates.
+When the scope record flags `conduct` for the fund-board pack, this overlay sets the conduct-content for the named pack sections. Conduct in the fund-board context is the fiduciary lens — the adviser's fiduciary duty under §206 of the Investment Advisers Act, the affiliated-transaction conflict surface under §17 of the Investment Company Act, the §15(c) factor analysis itself (which is a fiduciary-bargain test), and the soft-dollar, brokerage, and revenue-sharing surfaces that drive fall-out benefits to the adviser and affiliates.
 
-Loaded by: `fund-board-reporting/SKILL.md` when the engagement scope flags conduct, when the pack covers a §15(c) renewal cycle (which always invokes the fiduciary lens), or when affiliated-transaction or soft-dollar items in the period rise to a level that warrants substantive board treatment beyond the standing affiliated-transactions table.
+Loaded by: `fund-board-reporting/SKILL.md` when the scope flags conduct, when the pack covers a §15(c) renewal cycle (which always invokes the fiduciary lens), or when affiliated-transaction or soft-dollar items in the period rise to a level that warrants substantive board treatment beyond the standing affiliated-transactions table.
 
 ## Source basis
 

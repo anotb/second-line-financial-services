@@ -1,6 +1,6 @@
 # Banking sector overlay — control-sampling
 
-Loaded when `engagement-scope.sector_overlay_set` includes `banking` or when the test addresses a banking-regulator rule. Does not replace `references/source-anchors.md`; supplements it with bank-specific population, stratification, and tolerable-rate conventions.
+Loaded when `scope.sector_overlay_set` includes `banking` or when the test addresses a banking-regulator rule. Does not replace `references/source-anchors.md`; supplements it with bank-specific population, stratification, and tolerable-rate conventions.
 
 ## Population definition conventions banking examiners expect
 

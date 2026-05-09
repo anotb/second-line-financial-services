@@ -1,6 +1,6 @@
 # Cyber cross-cutting overlay — human-review-gates
 
-Loads when the engagement-scope `cross_cutting_overlay_set` includes `cyber`. The overlay shapes the gate matrix when gates cover incident-response decisions, materiality determinations for cyber events, cyber-disclosure decisions, and cyber-third-party arrangements.
+Loads when the scope `cross_cutting_overlay_set` includes `cyber`. The overlay shapes the gate matrix when gates cover incident-response decisions, materiality determinations for cyber events, cyber-disclosure decisions, and cyber-third-party arrangements.
 
 ## Why cyber belongs in many gate matrices
 

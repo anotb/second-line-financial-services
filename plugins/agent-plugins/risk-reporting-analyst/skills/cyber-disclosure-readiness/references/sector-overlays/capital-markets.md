@@ -1,8 +1,8 @@
 # Capital-markets sector overlay for cyber-disclosure-readiness
 
-When the engagement scope names capital markets (broker-dealer, investment adviser, registered investment company, transfer agent), SEC Regulation S-P amendments (May 2024) add a 30-day customer-notification clock; FINRA Rule 4530 reporting may apply for FINRA-member broker-dealers; and registered-fund disclosure carries Form N-CSR / N-1A / N-2 considerations alongside the 10-K stream where applicable.
+When the scope names capital markets (broker-dealer, investment adviser, registered investment company, transfer agent), SEC Regulation S-P amendments (May 2024) add a 30-day customer-notification clock; FINRA Rule 4530 reporting may apply for FINRA-member broker-dealers; and registered-fund disclosure carries Form N-CSR / N-1A / N-2 considerations alongside the 10-K stream where applicable.
 
-Loaded by: `cyber-disclosure-readiness/SKILL.md` when `engagement_scope.sector_overlay_set` includes `capital-markets`. Cited and section-referenced anchors live in `references/source-anchors.md`.
+Loaded by: `cyber-disclosure-readiness/SKILL.md` when `scope.sector_overlay_set` includes `capital-markets`. Cited and section-referenced anchors live in `references/source-anchors.md`.
 
 ## Source basis
 

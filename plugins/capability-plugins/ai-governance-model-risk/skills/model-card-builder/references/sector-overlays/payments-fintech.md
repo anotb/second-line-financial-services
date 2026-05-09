@@ -1,8 +1,8 @@
 # Payments and fintech sector overlay for model-card-builder
 
-When the engagement-scope record names sector `payments-fintech`, this overlay adds payments- and fintech-specific fields and review demands to the card. Where there is conflict between the capability defaults and this overlay, the overlay governs the sector elements.
+When the scope record names sector `payments-fintech`, this overlay adds payments- and fintech-specific fields and review demands to the card. Where there is conflict between the capability defaults and this overlay, the overlay governs the sector elements.
 
-Loaded by: `model-card-builder/SKILL.md` when `engagement_scope.sector_overlay_set` includes `payments-fintech`, or when the institution type implicates a money transmitter, payments processor, fintech program, sponsor-bank arrangement, prepaid issuer, BIN sponsor, or non-bank consumer-finance entity.
+Loaded by: `model-card-builder/SKILL.md` when `scope.sector_overlay_set` includes `payments-fintech`, or when the institution type implicates a money transmitter, payments processor, fintech program, sponsor-bank arrangement, prepaid issuer, BIN sponsor, or non-bank consumer-finance entity.
 
 Cited and section-referenced anchors in `references/source-anchors.md`.
 

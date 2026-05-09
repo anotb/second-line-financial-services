@@ -74,7 +74,7 @@ A short narrative summarising the gate flow for the committee that adopts the ma
 
 Suggested wording the committee charter or policy section can adopt directly. Reads as charter prose, not as matrix commentary.
 
-> [Charter prose — typically a three-paragraph block. Paragraph 1: committee purpose and decision authority. Paragraph 2: gate sequence and stop-condition discipline. Paragraph 3: escalation, dissent, documentation, and review cadence. Optional in v1; populated when the engagement scope flags charter-refresh as in scope.]
+> [Charter prose — typically a three-paragraph block. Paragraph 1: committee purpose and decision authority. Paragraph 2: gate sequence and stop-condition discipline. Paragraph 3: escalation, dissent, documentation, and review cadence. Optional in v1; populated when the scope flags charter-refresh as in scope.]
 
 ## Source trace
 
@@ -90,7 +90,7 @@ Material claims in this matrix are sourced. `[evidence needed]` flags items that
 | Practitioner / matrix author | <role> | |
 | Independent reviewer (independent of matrix author; named for the dissent-path discipline) | <role> | |
 | Primary-committee chair (the committee adopting the matrix) | <role> | |
-| Sponsor (if engagement scope names one) | <role> | |
+| Sponsor (if scope names one) | <role> | |
 
 > The matrix is a draft until the named reviewer attests. Gate architecture is committee-adopted; the skill stops here.
 

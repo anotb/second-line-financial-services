@@ -7,7 +7,7 @@ Loads when the credit program touches consumer or small-business borrowers and t
 Load this overlay when any of the following is true:
 
 - The bank's credit portfolio includes consumer credit (credit cards, residential mortgage, auto, personal lines, deposit-account-related credit such as overdraft lines).
-- The bank's credit portfolio includes small-business credit and the engagement scope flags Section 1071 small-business lending data collection as in scope.
+- The bank's credit portfolio includes small-business credit and the scope flags Section 1071 small-business lending data collection as in scope.
 - The trigger is an MRA on lending practices that touches consumer treatment (collections, default servicing, modification, charge-off, repossession).
 - The trigger is a CFPB examination running alongside the credit-administration cycle.
 - The trigger is a published consent order on UDAAP in lending at a peer institution and the credit risk committee has commissioned a posture check.

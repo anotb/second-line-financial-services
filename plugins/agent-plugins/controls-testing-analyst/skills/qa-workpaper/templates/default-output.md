@@ -29,7 +29,7 @@ Single-row header pinning the QA review to the workpaper.
 | QA reviewer (role) | [separate from preparer and workpaper reviewer] |
 | QA scope | full-review / targeted-re-review / post-issue-re-qa / examiner-prep-sweep |
 | QA date | [ISO date] |
-| Engagement ID | [pointer to engagement-scope record, or "none — scope not formalised separately from test plan"] |
+| Engagement ID | [pointer to scope record, or "none — scope not formalised separately from test plan"] |
 | Decision | accept / return-for-rework / conditional-accept (filled at sign-off) |
 | Confidence label | high / medium / low / unknown |
 

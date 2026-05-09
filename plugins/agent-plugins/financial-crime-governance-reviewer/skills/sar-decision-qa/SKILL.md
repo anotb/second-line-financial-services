@@ -34,7 +34,7 @@ Before drafting, get plain answers to a few things. Most reviews answer them qui
 - **Who reads the memo.** A BSA officer reads for material defensibility issues and program-level patterns. A QA team reads for criterion-by-criterion calibration. An AML director reads for governance signal and committee escalation. An examiner-response file reads formal and full source-traced. Audience drives tone and depth.
 - **What is in the file the QA reads.** The alert record (system or referral), the case investigation file, the disposition record, the SAR if filed, the continuing-activity log if applicable, and the evidence pointers. If the file is incomplete, that is itself a finding. Draft against what is there and flag the missing parts in `material_gaps`; do not block.
 
-When the engagement-scope record is supplied, the skill consumes it for institution type, primary regulator, sector overlay, persona, and source posture. Otherwise it asks the practitioner the few facts it needs, and source posture sets what the memo can assert at high confidence and what carries `[evidence needed]`.
+When the scope record is supplied, the skill consumes it for institution type, primary regulator, sector overlay, persona, and source posture. Otherwise it asks the practitioner the few facts it needs, and source posture sets what the memo can assert at high confidence and what carries `[evidence needed]`.
 
 ## How the QA memo gets built
 
@@ -73,7 +73,7 @@ Depth flexes with review type and audience. A pre-exam readiness pass reads long
 
 ## Sector and cross-cutting overlays
 
-The sector overlay set is loaded from the engagement scope or the institution type and drives the SAR-rule read. Banking, payments-fintech (with the sponsor-bank delineation), capital markets (broker-dealer, mutual fund, FCM/IB), and insurance (covered products) each carry the relevant CFR section and the typology emphases that examiners weigh in that sector. Load only the overlays the engagement implicates; gold-plating across sectors adds noise.
+The sector overlay set is loaded from the scope or the institution type and drives the SAR-rule read. Banking, payments-fintech (with the sponsor-bank delineation), capital markets (broker-dealer, mutual fund, FCM/IB), and insurance (covered products) each carry the relevant CFR section and the typology emphases that examiners weigh in that sector. Load only the overlays the engagement implicates; gold-plating across sectors adds noise.
 
 The cyber cross-cutting overlay loads when the alert is cyber-event-related (account-takeover, business-email compromise, ransomware-adjacent, convertible-virtual-currency typology with cyber indicators). It carries the FinCEN cyber and ransomware advisory references and the structured-field expectations on the SAR for cyber-event indicators. Load it explicitly when the alert is cyber-related; do not pull it in by default.
 
@@ -101,7 +101,7 @@ Downstream consumers: a sample-level QA roll-up reads the structured record acro
 ## Pointers
 
 - `references/source-anchors.md` — citations and excerpts for the named anchors (FFIEC SAR section, 31 CFR SAR rules, 31 USC 5318(g), FinCEN form and instructions, applicable advisories, joint statements).
-- `references/sector-overlays/banking.md`, `payments-fintech.md`, `capital-markets.md`, `insurance.md` — sector-specific SAR rule reads loaded per engagement scope.
+- `references/sector-overlays/banking.md`, `payments-fintech.md`, `capital-markets.md`, `insurance.md` — sector-specific SAR rule reads loaded per scope.
 - `references/cross-cutting/cyber.md` — cyber-event SAR considerations loaded when the alert is cyber-related.
 - `references/firm-overlay.md` — firm policy, typology library, named systems, owners, and review machinery (consumed when present).
 - `templates/default-output.md` — memo template.

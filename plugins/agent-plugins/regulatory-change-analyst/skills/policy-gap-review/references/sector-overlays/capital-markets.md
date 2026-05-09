@@ -1,6 +1,6 @@
 # Capital markets sector overlay — policy-gap-review
 
-Loads when the engagement-scope `sector_overlay_set` includes `capital-markets`. Binds policy gap reviews to capital-markets-supervisory expectations on the firm's compliance and supervisory policy framework.
+Loads when the scope `sector_overlay_set` includes `capital-markets`. Binds policy gap reviews to capital-markets-supervisory expectations on the firm's compliance and supervisory policy framework.
 
 ## Supervisory frame
 

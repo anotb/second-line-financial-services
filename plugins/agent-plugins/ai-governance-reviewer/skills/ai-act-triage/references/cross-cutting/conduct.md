@@ -1,8 +1,8 @@
 # Conduct cross-cutting overlay for ai-act-triage
 
-When the engagement-scope record flags `conduct` for the use case, this overlay adds conduct-risk content to the AI Act triage artifact. High-risk classification under Article 6 / Annex III frequently triggers conduct-risk considerations because the systems named in Annex III (creditworthiness, life and health insurance pricing, employment, essential public and private services) are precisely the systems that produce material customer outcomes. The triage records the conduct lens alongside the classification so the downstream conduct function inherits the work rather than duplicating it.
+When the scope record flags `conduct` for the use case, this overlay adds conduct-risk content to the AI Act triage artifact. High-risk classification under Article 6 / Annex III frequently triggers conduct-risk considerations because the systems named in Annex III (creditworthiness, life and health insurance pricing, employment, essential public and private services) are precisely the systems that produce material customer outcomes. The triage records the conduct lens alongside the classification so the downstream conduct function inherits the work rather than duplicating it.
 
-Loaded by: `ai-act-triage/SKILL.md` when `engagement_scope.cross_cutting_set` includes `conduct`. Cited and section-referenced anchors live in `references/source-anchors.md`.
+Loaded by: `ai-act-triage/SKILL.md` when `scope.cross_cutting_set` includes `conduct`. Cited and section-referenced anchors live in `references/source-anchors.md`.
 
 ## Source basis
 
@@ -11,7 +11,7 @@ Loaded by: `ai-act-triage/SKILL.md` when `engagement_scope.cross_cutting_set` in
 - EU AI Act Article 27 fundamental rights impact assessment. The FRIA includes elements (impact on affected persons, mitigation, governance, complaints handling) that align with conduct-risk taxonomy.
 - FCA Senior Managers and Certification Regime (SMCR) for UK-licensed entities operating in or into the EU; the named-manager accountability extends to AI use cases inside in-scope firms.
 - FCA Consumer Duty (PRIN 2A) for UK-authorised firms with EU customer overlap; the cross-border perimeter of Consumer Duty is itself a triage point.
-- Member-state conduct frameworks (BaFin MaRisk AT 9 outsourcing and conduct expectations; ACPR conduct-supervision practice; Central Bank of Ireland Consumer Protection Code 2025) where the engagement scope names a member state of operation.
+- Member-state conduct frameworks (BaFin MaRisk AT 9 outsourcing and conduct expectations; ACPR conduct-supervision practice; Central Bank of Ireland Consumer Protection Code 2025) where the scope names a member state of operation.
 - Firm-specific conduct framework lives in `references/firm-overlay.md` when present.
 
 ## What changes for conduct-flagged AI Act triages
@@ -50,7 +50,7 @@ For Article 50 sub-obligations that reach consumers (50(1) AI-interaction disclo
 
 ### 4. Article 27 FRIA aligns to conduct-risk assessment vocabulary
 
-When Article 27 applies, the FRIA elements (impact on affected persons' rights, mitigation measures, governance arrangement, complaints-handling arrangement) align to conduct-risk-assessment vocabulary the firm already uses. The triage records the alignment so the FRIA author does not duplicate the conduct-risk assessment but consumes it. Conduct function as a named owner or reviewer on the FRIA when the engagement scope flags conduct.
+When Article 27 applies, the FRIA elements (impact on affected persons' rights, mitigation measures, governance arrangement, complaints-handling arrangement) align to conduct-risk-assessment vocabulary the firm already uses. The triage records the alignment so the FRIA author does not duplicate the conduct-risk assessment but consumes it. Conduct function as a named owner or reviewer on the FRIA when the scope flags conduct.
 
 ### 5. Sign-off names the conduct-accountable manager
 

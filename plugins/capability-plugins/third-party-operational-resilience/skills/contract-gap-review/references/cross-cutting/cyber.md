@@ -1,6 +1,6 @@
 # Cyber cross-cutting overlay — contract-gap-review
 
-When the engagement scope flags cyber, or whenever the contract touches NPI, PHI, PCI, customer prompts, or any control on the firm's important-business-service path, load this overlay. Cyber is in scope by default for AI vendors and for any contract supporting an IBS chain.
+When the scope flags cyber, or whenever the contract touches NPI, PHI, PCI, customer prompts, or any control on the firm's important-business-service path, load this overlay. Cyber is in scope by default for AI vendors and for any contract supporting an IBS chain.
 
 ## Operative anchors
 

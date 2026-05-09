@@ -1,8 +1,8 @@
 # Conduct cross-cutting overlay for genai-pre-prod-review
 
-When the engagement-scope record flags `conduct` for a pre-prod gate review, this overlay adds conduct-specific gate considerations: consumer-compliance co-review, fairness and harmful-content posture, complaint-readiness, and recommended-action items typical of conduct-flagged GenAI gate reviews. Loaded for any use case generating or assisting customer-facing communications, or making or supporting decisions that affect consumer outcomes.
+When the scope record flags `conduct` for a pre-prod gate review, this overlay adds conduct-specific gate considerations: consumer-compliance co-review, fairness and harmful-content posture, complaint-readiness, and recommended-action items typical of conduct-flagged GenAI gate reviews. Loaded for any use case generating or assisting customer-facing communications, or making or supporting decisions that affect consumer outcomes.
 
-Loaded by: `genai-pre-prod-review/SKILL.md` when `engagement_scope.cross_cutting_set` includes `conduct`. Cited and section-referenced anchors live in `references/source-anchors.md`.
+Loaded by: `genai-pre-prod-review/SKILL.md` when `scope.cross_cutting_set` includes `conduct`. Cited and section-referenced anchors live in `references/source-anchors.md`.
 
 ## Source basis
 

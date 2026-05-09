@@ -14,7 +14,7 @@ The deliverable is two files. This template carries the Word-memo content spec; 
 **Product type**: [life | health-individual | health-small-group | health-large-group | annuity | disability | LTC | other]
 **States in scope**: [list]
 **Change type**: [new-filing | refile | rate-change | factor-change | model-change | accelerated-underwriting-launch | accelerated-underwriting-change]
-**Engagement ID**: [pointer to engagement-scope record, or "none — scope not formalised"]
+**Engagement ID**: [pointer to scope record, or "none — scope not formalised"]
 **As of**: [date]
 **Audience**: [state DOI rate analyst | sponsor / chief pricing actuary | rate-filing committee | board risk committee | ORSA reviewer | internal audit]
 **Owner (role)**: [chief pricing actuary | head of compliance | head of model risk | other]

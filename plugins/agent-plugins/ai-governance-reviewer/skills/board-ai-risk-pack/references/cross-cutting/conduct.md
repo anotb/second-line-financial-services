@@ -1,6 +1,6 @@
 # Cross-cutting overlay: conduct — board AI risk pack
 
-Loaded when the engagement scope flags conduct (consumer compliance, fair-lending, fair-pricing, claims-handling fairness, consumer-facing AI generally). The overlay carries content that lands in the pack body, not background reading.
+Loaded when the scope flags conduct (consumer compliance, fair-lending, fair-pricing, claims-handling fairness, consumer-facing AI generally). The overlay carries content that lands in the pack body, not background reading.
 
 ## Where it lands in the pack
 

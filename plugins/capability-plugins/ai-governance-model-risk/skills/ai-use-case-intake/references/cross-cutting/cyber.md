@@ -1,8 +1,8 @@
 # Cyber cross-cutting overlay for ai-use-case-intake
 
-When the engagement-scope record flags `cyber` for the use case, this overlay supplies the cyber-specific intake fields and the named flags that route into downstream tier and pre-prod work. It does not replace the firm's information-security risk assessment; it is the intake-side surfacing of cyber considerations a second-line reviewer (and an examiner under NYDFS Part 500 or the FFIEC IT Handbook) will look for.
+When the scope record flags `cyber` for the use case, this overlay supplies the cyber-specific intake fields and the named flags that route into downstream tier and pre-prod work. It does not replace the firm's information-security risk assessment; it is the intake-side surfacing of cyber considerations a second-line reviewer (and an examiner under NYDFS Part 500 or the FFIEC IT Handbook) will look for.
 
-Loaded by: `ai-use-case-intake/SKILL.md` when `engagement_scope.cross_cutting_set` includes `cyber`. Source-anchored in `references/source-anchors.md`.
+Loaded by: `ai-use-case-intake/SKILL.md` when `scope.cross_cutting_set` includes `cyber`. Source-anchored in `references/source-anchors.md`.
 
 ## Source basis
 

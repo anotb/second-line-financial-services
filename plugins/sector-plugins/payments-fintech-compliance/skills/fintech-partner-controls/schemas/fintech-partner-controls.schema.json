@@ -32,7 +32,7 @@
     },
     "engagement_id": {
       "type": "string",
-      "description": "Optional pointer to the engagement-scope record. Empty if scope was not formalised."
+      "description": "Optional pointer to the scope record. Empty if scope was not formalised."
     },
     "as_of_date": {
       "type": "string",

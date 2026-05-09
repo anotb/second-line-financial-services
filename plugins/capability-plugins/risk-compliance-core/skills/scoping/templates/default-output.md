@@ -1,4 +1,4 @@
-# Engagement charter
+# Scoping charter
 
 Engagement ID: <ENG-YYYY-XXX-NN>
 As of: <YYYY-MM-DD>

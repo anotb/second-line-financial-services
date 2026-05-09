@@ -11,7 +11,7 @@ The memo is a draft until the human reviewer attests.
 - Reviewer role: [function, e.g. AI Governance Lead, MRMO, second-line model risk]
 - Review stage: [pre-prod-gate / in-prod-periodic / post-incident / post-foundation-model-swap / post-retrieval-stack-change / annual-revalidation / exam-readiness]
 - Review date: [YYYY-MM-DD]
-- Engagement-scope ID (if `engagement-scoping` was run): [ID]
+- Engagement-scope ID (if `scoping` was run): [ID]
 - Model card ID (links to `model-card-builder`): [ID]
 - Validation plan ID (links to `validation-plan`): [ID]
 
@@ -162,14 +162,14 @@ Vendor-supplied evaluation results carry vendor-self-attestation confidence (typ
 
 ## 12. Sector and cross-cutting overlay notes (when applicable)
 
-When the engagement scope names a sector, the matching `references/sector-overlays/<sector>.md` adds named fields here. Examples:
+When the scope names a sector, the matching `references/sector-overlays/<sector>.md` adds named fields here. Examples:
 
 - Banking: FFIEC IT Handbook touchpoint on data integrity for retrieval corpora; AML alert-narrative corpora and BSA officer involvement; sponsor-bank shared-responsibility allocation.
 - Insurance: PHI corpora and HIPAA minimum-necessary at the retrieval layer; NAIC AIS Program documentation; state insurance fairness expectations on retrieval-driven decision support.
 - Capital markets: research-note and transcript corpora; MAR / Reg AC adjacency on selective disclosure or biased retrieval; surveillance-system retrieval surface; Marketing Rule reach for AI-generated client-facing content.
 - Payments and fintech: terms-of-service corpora, dispute-evidence corpora, sponsor-bank policy corpora.
 
-When the engagement scope flags cross-cutting overlays, add the matching `references/cross-cutting/<topic>.md` fields:
+When the scope flags cross-cutting overlays, add the matching `references/cross-cutting/<topic>.md` fields:
 
 - Privacy: per-source sensitivity tagging, retrieval-side minimisation and purpose limitation, retention cadence; cross-scope leakage as a privacy event class.
 - Cyber: corpus access controls and retrieval-side authentication; indirect injection through corpus content as the prompt-injection-adjacent surface; pointer to `prompt-injection-risk` for the focused review.

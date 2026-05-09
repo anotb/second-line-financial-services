@@ -3,7 +3,7 @@
 **Incident ID**: [firm-internal identifier; reused across `payments-risk-assessment`, `fintech-partner-controls`, and any cross-link to `risk-reporting/cyber-disclosure-readiness`]
 **Program**: [legal entity; brand name if different]
 **Program ID**: [stable ID; reused across the four sector-skill artifacts]
-**Engagement ID**: [pointer to engagement-scope record, or "none — scope not formalised"]
+**Engagement ID**: [pointer to scope record, or "none — scope not formalised"]
 **Detected (UTC)**: [ISO datetime]
 **Contained (UTC)**: [ISO datetime, or "in progress"]
 **Customer-impact reconciled (UTC)**: [ISO datetime, or "in progress"]

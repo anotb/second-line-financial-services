@@ -1,8 +1,8 @@
 # Insurance sector overlay for ai-use-case-intake
 
-When the engagement-scope record names sector `insurance`, this overlay tells the intake what additional fields to capture, which named regulators belong on the regulatory-flags table, and which open questions tag to downstream insurance work. The carrier remains accountable for vendor and third-party AI used on its policies (NAIC Model Bulletin December 2023 third-party AI accountability); the intake captures the fields that accountability flows from.
+When the scope record names sector `insurance`, this overlay tells the intake what additional fields to capture, which named regulators belong on the regulatory-flags table, and which open questions tag to downstream insurance work. The carrier remains accountable for vendor and third-party AI used on its policies (NAIC Model Bulletin December 2023 third-party AI accountability); the intake captures the fields that accountability flows from.
 
-Loaded by: `ai-use-case-intake/SKILL.md` when `engagement_scope.sector_overlay_set` includes `insurance`, or when the institution type is an insurer (carrier, reinsurer, MGA, MGU, captive) or insurance group.
+Loaded by: `ai-use-case-intake/SKILL.md` when `scope.sector_overlay_set` includes `insurance`, or when the institution type is an insurer (carrier, reinsurer, MGA, MGU, captive) or insurance group.
 
 ## Source basis
 

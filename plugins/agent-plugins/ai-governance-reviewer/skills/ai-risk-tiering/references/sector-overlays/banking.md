@@ -1,8 +1,8 @@
 # Banking sector overlay for ai-risk-tiering
 
-When the engagement-scope record names sector `banking`, this overlay tells the tier rubric what is banking-specific and which named regulators and bulletins set the bar. The overlay does not invent tier names or cutoffs (those are firm policy); it tells the rubric which factors elevate, which gates trigger by default, and which re-tiering events to name.
+When the scope record names sector `banking`, this overlay tells the tier rubric what is banking-specific and which named regulators and bulletins set the bar. The overlay does not invent tier names or cutoffs (those are firm policy); it tells the rubric which factors elevate, which gates trigger by default, and which re-tiering events to name.
 
-Loaded by: `ai-risk-tiering/SKILL.md` when `engagement_scope.sector_overlay_set` includes `banking`, or when the institution type implicates a federal banking regulator (national bank, state member bank, savings association, BHC, FBO with US operations).
+Loaded by: `ai-risk-tiering/SKILL.md` when `scope.sector_overlay_set` includes `banking`, or when the institution type implicates a federal banking regulator (national bank, state member bank, savings association, BHC, FBO with US operations).
 
 ## Source basis
 

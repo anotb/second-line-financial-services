@@ -34,7 +34,7 @@ A few facts settle before drafting. Most of them are on the table by the time so
 - Who owns remediation, in role terms. The owner is the role accountable for closing the issue, not the team that found it. Where the role taxonomy is firm-specific, it lives in `references/firm-overlay.md`.
 - Whether the issue source is an examiner letter. If yes, the MRA / MRIA classification field is populated and the closure-evidence framing matches the regulator's expected response register.
 
-When `engagement-scope` is supplied, the skill consumes it for institution, persona, source posture, sector overlay, and cross-cutting overlay. Otherwise it asks the questions above and defaults to public posture if the practitioner declines. The artifact notes scope was not formalised; it does not silently assume.
+When `scope` is supplied, the skill consumes it for institution, persona, source posture, sector overlay, and cross-cutting overlay. Otherwise it asks the questions above and defaults to public posture if the practitioner declines. The artifact notes scope was not formalised; it does not silently assume.
 
 ## How the write-up gets built
 
@@ -60,7 +60,7 @@ The tail of the artifact carries the evidence-gap flag (yes / no with a one-line
 
 ### Sector and cross-cutting overlays
 
-The same CCCE spine carries different criteria sources, different severity calibrations, and different reviewer machinery across sectors and cross-cutting topics. Load only the overlays the engagement scope flags. The MRA / MRIA labelling is banking-specific; insurance, capital-markets, and payments-fintech each carry their own finding-format conventions, so do not reach for MRA / MRIA when the source is, say, an SEC EXAMS deficiency letter.
+The same CCCE spine carries different criteria sources, different severity calibrations, and different reviewer machinery across sectors and cross-cutting topics. Load only the overlays the scope flags. The MRA / MRIA labelling is banking-specific; insurance, capital-markets, and payments-fintech each carry their own finding-format conventions, so do not reach for MRA / MRIA when the source is, say, an SEC EXAMS deficiency letter.
 
 - `references/sector-overlays/banking.md` carries the OCC / FRB / FDIC supervisory-finding framework (MRA, MRIA, MRBA) and large-bank heightened-standards severity flavour for federally regulated banks.
 - `references/sector-overlays/insurance.md` carries the NAIC examination-findings format, state DOI MOU and consent-agreement language, and ORSA-driven enterprise-risk severity shading for insurer issues.
@@ -93,7 +93,7 @@ No named institutions in narrative unless they are public defendants in a finali
 
 ## Adaptation
 
-Audience drives compression: an audit-committee read pulls severity, recommendation, and target date to the front; a regulator-response read leads with criteria and condition; an internal remediation tracker pulls owner and closure evidence forward. Source posture drives what the body can carry. Sector and cross-cutting overlays load from the engagement scope. The CCCE order itself can rearrange in the surface artifact (a regulator response often opens with criteria; an internal pack often opens with severity and recommendation), but the structured record preserves the CCCE fields distinctly.
+Audience drives compression: an audit-committee read pulls severity, recommendation, and target date to the front; a regulator-response read leads with criteria and condition; an internal remediation tracker pulls owner and closure evidence forward. Source posture drives what the body can carry. Sector and cross-cutting overlays load from the scope. The CCCE order itself can rearrange in the surface artifact (a regulator response often opens with criteria; an internal pack often opens with severity and recommendation), but the structured record preserves the CCCE fields distinctly.
 
 ## Output
 
@@ -104,7 +104,7 @@ Downstream consumers: the exception-analysis chain reads `issue_id`, `severity`,
 ## Pointers
 
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
-- `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md` — sector overlays loaded from engagement scope.
+- `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md` — sector overlays loaded from scope.
 - `references/cross-cutting/{cyber,conduct}.md` — cross-cutting overlays loaded when the issue touches information-security controls or customer-facing harm.
 - `references/firm-overlay.md` — firm-installed taxonomy, named role labels, severity-rating ladder, GRC-platform status enums, named committee gates beyond the regulatory baseline; consumed when present.
 - `templates/default-output.md` — write-up template.

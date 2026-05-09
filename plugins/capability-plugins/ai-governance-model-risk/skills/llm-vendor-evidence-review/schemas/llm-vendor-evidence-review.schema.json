@@ -37,7 +37,7 @@
           "type": "string",
           "format": "date"
         },
-        "engagement_scope_id": {"type": "string"},
+        "scope_id": {"type": "string"},
         "linked_vendor_diligence_id": {
           "type": "string",
           "description": "ID of the upstream vendor-diligence record where this review was chained from eval_evidence_status = deferred-to-evidence-review."

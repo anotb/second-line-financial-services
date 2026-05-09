@@ -26,9 +26,9 @@
       "description": "Stable identifier for this assessment cycle.",
       "minLength": 1
     },
-    "engagement_scope_id": {
+    "scope_id": {
       "type": "string",
-      "description": "Foreign key into the engagement-scope record when one exists."
+      "description": "Foreign key into the scope record when one exists."
     },
     "scope": {
       "type": "object",

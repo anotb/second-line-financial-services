@@ -36,7 +36,7 @@ A few things settle before drafting. The conversation surfaces them in the first
 - **What is the source posture for this assessment.** Public-only, public-plus-firm-policy, public-plus-firm-policy-plus-evidence, or connector-aware. Public-only assessments stop at obligation domains, control-objective categories, and indicative cost ranges; firm-policy and firm-policy-plus-evidence assessments name policies, named controls, and named systems. The strategy lens runs across all postures but reads sharper with internal context.
 - **How time-pressured is the read.** A 48-hour read for a new circular feeds a same-week steering item; a 30-day read for a multi-hundred-page final rule feeds the formal regulatory-change-committee package. Depth, source posture, and the number of open questions all flex against the time budget.
 
-When `engagement-scope` is supplied, the skill consumes it for institution, persona, source posture, sector overlay set, and cross-cutting overlay set. When it is not supplied, ask the questions and default to public posture; flag the defaults in the assessment.
+When `scope` is supplied, the skill consumes it for institution, persona, source posture, sector overlay set, and cross-cutting overlay set. When it is not supplied, ask the questions and default to public posture; flag the defaults in the assessment.
 
 ## How the assessment gets built
 
@@ -74,11 +74,11 @@ The assessment has the same spine across regulators and source types. The order 
 
 ## Sector and cross-cutting overlays
 
-When the engagement scope names a sector, load the matching overlay in `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md`. The overlay carries the regulator-specific scoping convention, threshold tier semantics, named-policy and named-control patterns, sector-specific cost-to-comply patterns, and sector-specific strategy posture (industry-association alignment, agency-engagement convention, peer-firm patterns). Same pattern for cross-cutting overlays where present (`cyber.md`, `privacy.md`, `climate.md`, `conduct.md`).
+When the scope names a sector, load the matching overlay in `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md`. The overlay carries the regulator-specific scoping convention, threshold tier semantics, named-policy and named-control patterns, sector-specific cost-to-comply patterns, and sector-specific strategy posture (industry-association alignment, agency-engagement convention, peer-firm patterns). Same pattern for cross-cutting overlays where present (`cyber.md`, `privacy.md`, `climate.md`, `conduct.md`).
 
 The overlay enforces a boundary the generic skill cannot. A banking overlay carries OCC, FRB, FDIC supervisory framing, Heightened Standards thresholds, CRA scoping where relevant, and the federal banking response-letter convention; it does not carry SEC marketing-rule framing. An insurance overlay carries NAIC model-law adoption mechanics (state-by-state effective-date variance) and NYDFS overlays; it does not carry CFPB authority. A capital-markets overlay carries SEC adopting-release mechanics, FINRA rule-filing alignment, IAA Rule 206(4)-7 implications, and the AUM threshold mechanics; it does not carry banking heightened-standards framing. A payments-fintech overlay carries CFPB larger-participant authority, state money-transmitter overlays, and bank-fintech partnership framing.
 
-Load only the overlays the engagement scope flags. Loading none when one applies is the more common failure mode; loading all four for completeness adds noise and dilutes the strategy lens.
+Load only the overlays the scope flags. Loading none when one applies is the more common failure mode; loading all four for completeness adds noise and dilutes the strategy lens.
 
 ## Quality bar
 
@@ -86,13 +86,13 @@ Holds across every assessment. Every material claim about the rule, the in-scope
 
 ## Adaptation
 
-Depth scales to the source: a 48-hour read on an FIL is shorter than a 30-day read on a 600-page final rule. Audience drives shape: regulatory affairs runs the operational version; CRO chief of staff and general counsel pull the strategy lens forward; a board pre-read distils to executive summary, strategy posture, financial impact, and decision request. Source posture drives what the assessment can assert at high confidence and what carries `[evidence needed]`. Sector and cross-cutting overlays load from the engagement scope. The strategy lens flexes against the source type: a final rule's strategy lens is sparse on comment-period posture (the comment period is over) and rich on engagement posture; a proposed rule's strategy lens is rich on comment-period posture; a speech's strategy lens is rich on examiner-posture-shift signalling and sparse on comment posture. Where firm-specific policy or named review machinery applies, it lives in `references/firm-overlay.md` and is consumed when present; the assessment itself stays generic.
+Depth scales to the source: a 48-hour read on an FIL is shorter than a 30-day read on a 600-page final rule. Audience drives shape: regulatory affairs runs the operational version; CRO chief of staff and general counsel pull the strategy lens forward; a board pre-read distils to executive summary, strategy posture, financial impact, and decision request. Source posture drives what the assessment can assert at high confidence and what carries `[evidence needed]`. Sector and cross-cutting overlays load from the scope. The strategy lens flexes against the source type: a final rule's strategy lens is sparse on comment-period posture (the comment period is over) and rich on engagement posture; a proposed rule's strategy lens is rich on comment-period posture; a speech's strategy lens is rich on examiner-posture-shift signalling and sparse on comment posture. Where firm-specific policy or named review machinery applies, it lives in `references/firm-overlay.md` and is consumed when present; the assessment itself stays generic.
 
 ## Pointers
 
 - `references/source-anchors.md` — citations and excerpts for the named anchors (federal banking, CFPB, SEC and FINRA, NYDFS and state regulators, FinCEN, NCUA, NAIC, OMB Circular A-4, ISO/IEC 42001, NIST AI RMF, federal-register impact-analysis convention).
-- `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md` — sector overlays loaded from engagement scope.
-- `references/cross-cutting/{cyber,privacy,climate,conduct}.md` — cross-cutting overlays loaded from engagement scope where the rule touches the topic.
+- `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md` — sector overlays loaded from scope.
+- `references/cross-cutting/{cyber,privacy,climate,conduct}.md` — cross-cutting overlays loaded from scope where the rule touches the topic.
 - `references/firm-overlay.md` — firm-installed regulator-relationship history, named policy taxonomy, named control taxonomy, named cost-baseline references, internal escalation triggers, named industry-association memberships; consumed when present.
 - `templates/default-output.md` — assessment template.
 - `schemas/regulatory-impact-assessment.schema.json` — structured-output contract for downstream consumption.

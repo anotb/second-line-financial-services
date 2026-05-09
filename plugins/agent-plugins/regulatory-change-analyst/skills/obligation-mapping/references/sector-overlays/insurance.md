@@ -1,6 +1,6 @@
 # Insurance sector overlay: obligation-mapping
 
-Loaded when the engagement scope includes `insurance` in `sector_overlay_set`. Adds insurance-specific source labels and obligation patterns the practitioner expects to find when the register scopes an insurance process. Does not change the row spine.
+Loaded when the scope includes `insurance` in `sector_overlay_set`. Adds insurance-specific source labels and obligation patterns the practitioner expects to find when the register scopes an insurance process. Does not change the row spine.
 
 The federal-state interplay is the dominant feature: most insurance obligations live in state insurance code, with NAIC model laws as the starting point and state adoptions varying. The register must name the state of domicile and any host states with material business when applicability turns on state-specific rules.
 

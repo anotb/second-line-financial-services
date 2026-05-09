@@ -1,6 +1,6 @@
 # Insurance sector overlay — concentration-risk-review
 
-When the engagement scope flags insurance, load this overlay alongside `references/source-anchors.md`. It carries the insurance-specific concentration framings the generic skill does not own.
+When the scope flags insurance, load this overlay alongside `references/source-anchors.md`. It carries the insurance-specific concentration framings the generic skill does not own.
 
 ## Policy-administration system concentration
 

@@ -1,6 +1,6 @@
 # Capital-markets sector overlay — issue-writeup
 
-Loads when the engagement-scope `sector_overlay_set` includes `capital-markets`. The overlay shapes the criteria block, the severity calibration, and the closure-evidence framing for issues at SEC- and FINRA-regulated entities (broker-dealers, investment advisers, registered funds, transfer agents, exchanges, ATSs).
+Loads when the scope `sector_overlay_set` includes `capital-markets`. The overlay shapes the criteria block, the severity calibration, and the closure-evidence framing for issues at SEC- and FINRA-regulated entities (broker-dealers, investment advisers, registered funds, transfer agents, exchanges, ATSs).
 
 ## Why the capital-markets overlay matters
 

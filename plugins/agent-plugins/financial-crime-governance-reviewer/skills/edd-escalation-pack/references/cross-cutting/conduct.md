@@ -1,6 +1,6 @@
 # Conduct cross-cutting overlay — edd-escalation-pack
 
-When the engagement scope flags conduct, or when a PEP / wealth / private-banking / correspondent profile makes conduct exposure material, load this overlay alongside `references/source-anchors.md`. PEP and high-risk-customer profiles intersect with conduct risk in ways that produce material findings the EDD committee should see.
+When the scope flags conduct, or when a PEP / wealth / private-banking / correspondent profile makes conduct exposure material, load this overlay alongside `references/source-anchors.md`. PEP and high-risk-customer profiles intersect with conduct risk in ways that produce material findings the EDD committee should see.
 
 ## Why conduct sits inside an EDD pack
 

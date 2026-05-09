@@ -1,8 +1,8 @@
 # Payments and fintech sector overlay for ai-risk-tiering
 
-When the engagement-scope record names sector `payments-fintech`, this overlay tells the tier rubric what is rail-, sponsor-bank-, and money-transmitter-specific. Tier names and cutoffs are firm policy; this overlay names which factors elevate, which gates trigger by default, and which re-tiering events to name.
+When the scope record names sector `payments-fintech`, this overlay tells the tier rubric what is rail-, sponsor-bank-, and money-transmitter-specific. Tier names and cutoffs are firm policy; this overlay names which factors elevate, which gates trigger by default, and which re-tiering events to name.
 
-Loaded by: `ai-risk-tiering/SKILL.md` when `engagement_scope.sector_overlay_set` includes `payments-fintech`, or when the institution type implicates a money transmitter, payments processor, fintech program, sponsor-bank arrangement, BIN sponsor, prepaid issuer, or non-bank consumer-finance entity.
+Loaded by: `ai-risk-tiering/SKILL.md` when `scope.sector_overlay_set` includes `payments-fintech`, or when the institution type implicates a money transmitter, payments processor, fintech program, sponsor-bank arrangement, BIN sponsor, prepaid issuer, or non-bank consumer-finance entity.
 
 Source content derived from the payments-fintech lead's overlay snippets, mapped here into the tiering context. Cited and section-referenced anchors live in `references/source-anchors.md`.
 

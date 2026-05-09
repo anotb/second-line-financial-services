@@ -1,6 +1,6 @@
 # Capital-markets sector overlay — contract-gap-review
 
-When the engagement scope flags capital markets (advisers, broker-dealers, registered funds, asset managers, SCI entities), load this overlay alongside `references/source-anchors.md`. The bank-flavoured interagency-guidance frame is not the operative supervisory frame for non-bank registrants; the contract clause set is built differently.
+When the scope flags capital markets (advisers, broker-dealers, registered funds, asset managers, SCI entities), load this overlay alongside `references/source-anchors.md`. The bank-flavoured interagency-guidance frame is not the operative supervisory frame for non-bank registrants; the contract clause set is built differently.
 
 ## Operative supervisory frame
 

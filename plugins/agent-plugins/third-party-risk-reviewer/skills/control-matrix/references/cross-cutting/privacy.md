@@ -1,6 +1,6 @@
 # Privacy cross-cutting overlay — control-matrix
 
-Loads when the engagement-scope `cross_cutting_overlay_set` includes `privacy`, or when the scoped process touches consumer financial information, NPI, PHI, biometric data, or other regulated personal data. The overlay adds privacy-tagged rows to the substantive matrix.
+Loads when the scope `cross_cutting_overlay_set` includes `privacy`, or when the scoped process touches consumer financial information, NPI, PHI, biometric data, or other regulated personal data. The overlay adds privacy-tagged rows to the substantive matrix.
 
 ## Why privacy belongs in matrices that touch consumer data
 

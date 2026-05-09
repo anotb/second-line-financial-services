@@ -1,6 +1,6 @@
 # Insurance sector overlay — exam-brief
 
-When the engagement scope flags insurance and the regulator is a state department of insurance (state DOI), a coordinated multi-state team led under NAIC framework, the lead-state regulator on a financial exam, or NYDFS for an NY-domiciled or NY-licensed insurer, load this overlay alongside `references/source-anchors.md`. The federal-banking exam-readiness sprint pattern does not apply to insurance; there is no single insurance equivalent to the OCC, FRB, or FDIC examiner-in-charge convention because state DOIs run their own examination programs under their own statutes. The NAIC handbooks set inter-state convention for adoption by state DOIs, but the adopting statute is the operative authority, not the handbook itself.
+When the scope flags insurance and the regulator is a state department of insurance (state DOI), a coordinated multi-state team led under NAIC framework, the lead-state regulator on a financial exam, or NYDFS for an NY-domiciled or NY-licensed insurer, load this overlay alongside `references/source-anchors.md`. The federal-banking exam-readiness sprint pattern does not apply to insurance; there is no single insurance equivalent to the OCC, FRB, or FDIC examiner-in-charge convention because state DOIs run their own examination programs under their own statutes. The NAIC handbooks set inter-state convention for adoption by state DOIs, but the adopting statute is the operative authority, not the handbook itself.
 
 ## Two-track examination model
 

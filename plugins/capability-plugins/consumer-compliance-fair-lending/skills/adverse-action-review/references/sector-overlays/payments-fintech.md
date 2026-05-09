@@ -1,8 +1,8 @@
 # Payments / fintech sector overlay for adverse-action-review
 
-When the engagement-scope record names sector `payments-fintech`, this overlay adds payments / fintech-specific scope, methodology, and review-gate detail to the adverse-action notice review.
+When the scope record names sector `payments-fintech`, this overlay adds payments / fintech-specific scope, methodology, and review-gate detail to the adverse-action notice review.
 
-Loaded by: `adverse-action-review/SKILL.md` when `engagement_scope.sector_overlay_set` includes `payments-fintech`, or when the institution type is a non-bank lender, BNPL provider, marketplace lender, or fintech operating under a sponsor-bank arrangement.
+Loaded by: `adverse-action-review/SKILL.md` when `scope.sector_overlay_set` includes `payments-fintech`, or when the institution type is a non-bank lender, BNPL provider, marketplace lender, or fintech operating under a sponsor-bank arrangement.
 
 Cited and section-referenced anchors live in `references/source-anchors.md`.
 

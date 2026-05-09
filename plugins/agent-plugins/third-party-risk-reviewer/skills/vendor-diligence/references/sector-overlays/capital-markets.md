@@ -1,6 +1,6 @@
 # Capital-markets sector overlay — vendor-diligence
 
-When the engagement scope flags capital markets (advisers, broker-dealers, registered funds, asset managers), load this overlay alongside `references/source-anchors.md`. The bank-flavoured interagency-guidance frame is not the operative supervisory frame for non-bank registrants.
+When the scope flags capital markets (advisers, broker-dealers, registered funds, asset managers), load this overlay alongside `references/source-anchors.md`. The bank-flavoured interagency-guidance frame is not the operative supervisory frame for non-bank registrants.
 
 ## Operative supervisory frame
 

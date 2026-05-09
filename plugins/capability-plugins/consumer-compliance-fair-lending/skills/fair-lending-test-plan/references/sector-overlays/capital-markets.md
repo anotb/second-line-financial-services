@@ -1,8 +1,8 @@
 # Capital markets sector overlay for fair-lending-test-plan
 
-When the engagement-scope record names sector `capital-markets`, this overlay adds the narrow set of capital-markets fair-lending considerations to the test plan. The overlay is short on purpose: most capital-markets activity sits outside the ECOA and FHA perimeter. Where it does touch, the touch points are predictable.
+When the scope record names sector `capital-markets`, this overlay adds the narrow set of capital-markets fair-lending considerations to the test plan. The overlay is short on purpose: most capital-markets activity sits outside the ECOA and FHA perimeter. Where it does touch, the touch points are predictable.
 
-Loaded by: `fair-lending-test-plan/SKILL.md` when `engagement_scope.sector_overlay_set` includes `capital-markets`, or when the institution type implicates a broker-dealer, investment adviser, private bank, or wealth-management entity that extends credit to retail clients.
+Loaded by: `fair-lending-test-plan/SKILL.md` when `scope.sector_overlay_set` includes `capital-markets`, or when the institution type implicates a broker-dealer, investment adviser, private bank, or wealth-management entity that extends credit to retail clients.
 
 Cited and section-referenced anchors live in `references/source-anchors.md`.
 

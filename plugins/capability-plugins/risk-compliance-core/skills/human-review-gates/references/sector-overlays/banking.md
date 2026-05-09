@@ -1,6 +1,6 @@
 # Banking sector overlay — human-review-gates
 
-Loads when the engagement-scope `sector_overlay_set` includes `banking`. The overlay shapes the decision-authority block, the independence requirements, the documentation conventions, and the board-oversight expectations for gate matrices at federally regulated US banks (national, state-member, state-non-member, savings, holding companies, and US IHCs of foreign banking organizations).
+Loads when the scope `sector_overlay_set` includes `banking`. The overlay shapes the decision-authority block, the independence requirements, the documentation conventions, and the board-oversight expectations for gate matrices at federally regulated US banks (national, state-member, state-non-member, savings, holding companies, and US IHCs of foreign banking organizations).
 
 ## Why the banking overlay matters
 

@@ -35,7 +35,7 @@
           "type": "string",
           "enum": ["pre-prod-gate", "in-prod-periodic", "post-incident", "expansion-review", "exam-readiness"]
         },
-        "engagement_scope_id": { "type": "string" },
+        "scope_id": { "type": "string" },
         "model_card_id": { "type": "string", "description": "Links to model-card-builder output." },
         "validation_plan_id": { "type": "string", "description": "Links to validation-plan output." },
         "prompt_injection_review_id": { "type": "string", "description": "Links to prompt-injection-risk output where it has run." }

@@ -1,6 +1,6 @@
 # Conduct cross-cutting overlay — qa-workpaper
 
-Loaded when `engagement-scope.cross_cutting_overlay_set` includes `conduct`, when the QA review covers a workpaper that sampled a consumer-impact population, or when the underlying control test touches a UDAAP-relevant area. Supplements `references/source-anchors.md`.
+Loaded when `scope.cross_cutting_overlay_set` includes `conduct`, when the QA review covers a workpaper that sampled a consumer-impact population, or when the underlying control test touches a UDAAP-relevant area. Supplements `references/source-anchors.md`.
 
 ## Why conduct QA carries distinct conventions
 

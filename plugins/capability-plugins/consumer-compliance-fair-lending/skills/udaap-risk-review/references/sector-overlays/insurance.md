@@ -1,8 +1,8 @@
 # Insurance sector overlay for udaap-risk-review
 
-When the engagement-scope record names sector `insurance`, this overlay sets the scope boundary first. Insurance unfair-trade-practice review sits with state insurance departments under the NAIC Unfair Trade Practices Act framework and state-DOI statutes, not under Dodd-Frank UDAAP. The UDAAP review skill is the wrong tool for most insurance review work.
+When the scope record names sector `insurance`, this overlay sets the scope boundary first. Insurance unfair-trade-practice review sits with state insurance departments under the NAIC Unfair Trade Practices Act framework and state-DOI statutes, not under Dodd-Frank UDAAP. The UDAAP review skill is the wrong tool for most insurance review work.
 
-Loaded by: `udaap-risk-review/SKILL.md` when `engagement_scope.sector_overlay_set` includes `insurance`, or when the institution type implicates a life, health, or property-and-casualty insurer.
+Loaded by: `udaap-risk-review/SKILL.md` when `scope.sector_overlay_set` includes `insurance`, or when the institution type implicates a life, health, or property-and-casualty insurer.
 
 Cited and section-referenced anchors live in `references/source-anchors.md`.
 

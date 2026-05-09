@@ -36,7 +36,7 @@ Pre-fieldwork sign-off is a hard gate. Evidence pulls happen after sign-off, not
 
 ### Conflating the test plan with the engagement charter
 
-The engagement charter (from `engagement-scoping`) is the engagement-level scope. The test plan is the cycle-level scope for a single control. The plan consumes the charter; it does not duplicate it. Where the engagement scope is not formalised separately, the plan says so in the limitations section and the testing program's standing posture is referenced.
+The engagement charter (from `scoping`) is the engagement-level scope. The test plan is the cycle-level scope for a single control. The plan consumes the charter; it does not duplicate it. Where the scope is not formalised separately, the plan says so in the limitations section and the testing program's standing posture is referenced.
 
 ## Population and sampling discipline
 
@@ -76,7 +76,7 @@ If the procedures cannot produce evidence that supports the pass criterion, eith
 
 ### Loading the wrong sector overlay
 
-Institution type and the regulator the control was designed for drive the sector overlay. HMDA controls pull banking; an adviser compliance-program control pulls capital-markets; a sponsor-bank end-customer reconciliation control pulls payments-fintech and banking together (dual-overlay loading is normal for sponsor-bank arrangements). Do not collapse to one overlay when the engagement scope says two.
+Institution type and the regulator the control was designed for drive the sector overlay. HMDA controls pull banking; an adviser compliance-program control pulls capital-markets; a sponsor-bank end-customer reconciliation control pulls payments-fintech and banking together (dual-overlay loading is normal for sponsor-bank arrangements). Do not collapse to one overlay when the scope says two.
 
 ### Skipping cyber overlay on IAM or Part 500 populations
 

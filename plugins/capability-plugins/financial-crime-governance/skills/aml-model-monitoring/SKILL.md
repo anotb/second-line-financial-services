@@ -31,9 +31,9 @@ Before drafting, get plain answers to a few things. Defaults are fine when an an
 - **What review type is this.** Annual, quarterly, pre-validation, post-tuning, or pre-exam-readiness. The review type drives what the memo weighs hardest. Annual reads breadth; pre-validation reads what the next validation should scope; post-tuning reads the change evidence chain; pre-exam reads documentation readiness through an examiner's eyes.
 - **Who reads the memo.** AML governance committee reads for program-level decisions; the BSA officer reads for material defensibility issues and routing; head of model risk reads for model-risk discipline (validation, ongoing monitoring, effective challenge). Audience drives tone and depth.
 - **What evidence is on file.** Scenario inventory, segmentation methodology and refresh artifacts, BTL workpapers, threshold-change governance log, alert and productivity data, last validation report, model inventory entry and tier. Where the evidence is partial, the memo names the gap rather than blocking; under-evidenced claims carry `[evidence needed]`.
-- **What sector and cross-cutting overlays apply.** Banking, payments-fintech, capital-markets, or insurance — the typology surface and the segmentation expectations differ. Cyber overlay loads when the customer base or transaction history shows the typology surface (VASP-counterparty exposure, ATO loss history, BEC payouts) even if the engagement scope did not flag it explicitly.
+- **What sector and cross-cutting overlays apply.** Banking, payments-fintech, capital-markets, or insurance — the typology surface and the segmentation expectations differ. Cyber overlay loads when the customer base or transaction history shows the typology surface (VASP-counterparty exposure, ATO loss history, BEC payouts) even if the scope did not flag it explicitly.
 
-When the engagement-scope record is supplied, the skill consumes it for institution type, primary regulator, sector overlay, persona, and source posture. Otherwise it asks the practitioner the few facts it needs and defaults source posture to public-only with the absence flagged in the memo.
+When the scope record is supplied, the skill consumes it for institution type, primary regulator, sector overlay, persona, and source posture. Otherwise it asks the practitioner the few facts it needs and defaults source posture to public-only with the absence flagged in the memo.
 
 ## How the monitoring memo gets built
 
@@ -43,7 +43,7 @@ First, the model-scoping read sits ahead of everything else. The joint guidance 
 
 Second, the program review at section one is drafted before the evidence sections, not after. The model-risk frame established by the scoping read is what the rest of the memo reads against; without it the work lands as a rules-engine check and misses the discipline that the joint guidance carries on validation, ongoing monitoring, and effective challenge for the in-scope components. The program review states the scoping conclusion explicitly and names what the firm has elected to apply model-like discipline to even where the joint guidance does not bind it.
 
-Third, the sector overlay is loaded before reading the evidence. Reading a payments-fintech system through a deposit-bank lens, or a broker-dealer system through either, misses the typology surface that matters. The engagement scope names the sector overlay; if not, the practitioner is asked, and the assumption is recorded.
+Third, the sector overlay is loaded before reading the evidence. Reading a payments-fintech system through a deposit-bank lens, or a broker-dealer system through either, misses the typology surface that matters. The scope names the sector overlay; if not, the practitioner is asked, and the assumption is recorded.
 
 Beyond those two anchors the work is judgement-led. The reviewer walks the evidence in this shape.
 
@@ -51,7 +51,7 @@ The **model-scoping read** opens. One short section. What the system covers (pro
 
 The **program review** follows. Three to five paragraphs of prose. The model-risk frame for the in-scope components; the load-bearing question for this review (design intent against risk profile / change evidence / next validation scope / documentation readiness); the regulator constellation and overlays in scope; material context the audience needs (open MRAs touching the system, prior-period validation themes, recent enforcement themes adjacent to the firm's typology surface). Generic regulatory language; specifics live in `references/source-anchors.md`.
 
-The **scope, source posture, and engagement context** records the institution profile, primary regulators, overlays loaded, source posture, engagement-scope reference, and whether a firm overlay is consumed. A short table.
+The **scope, source posture, and engagement context** records the institution profile, primary regulators, overlays loaded, source posture, scope reference, and whether a firm overlay is consumed. A short table.
 
 The **model identifier and inventory linkage** carries the model inventory ID, tier, owner, last validation date, last full tuning cycle, last segmentation refresh, and cross-references to the model card, the validation report, the change-governance log, and the BSA/AML risk assessment. Without these links the memo is read in isolation; with them, it sits inside the firm's model-risk evidence chain.
 
@@ -76,8 +76,8 @@ The non-negotiables: every material claim cites a source from the file, the sect
 ## Pointers
 
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
-- `references/sector-overlays/{banking,payments-fintech,capital-markets,insurance}.md` — sector overlays loaded per engagement scope.
-- `references/cross-cutting/cyber.md` — cyber-typology lens for monitoring scenario coverage; loaded when the engagement scope flags cyber or when the typology evidence is on file.
+- `references/sector-overlays/{banking,payments-fintech,capital-markets,insurance}.md` — sector overlays loaded per scope.
+- `references/cross-cutting/cyber.md` — cyber-typology lens for monitoring scenario coverage; loaded when the scope flags cyber or when the typology evidence is on file.
 - `references/firm-overlay.md` — firm-installed taxonomy, change-governance procedure, refresh-cycle policy, named systems and owners; consumed when present.
 - `templates/default-output.md` — content spec for the memo (named sections, structured tables for the evidence side).
 - `examples/` — annual second-line monitoring memo at a mid-size US bank; post-tuning review of a structuring-scenario threshold change at a regional bank.

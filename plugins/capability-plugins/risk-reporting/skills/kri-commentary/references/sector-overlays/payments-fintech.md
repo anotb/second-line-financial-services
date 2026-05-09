@@ -1,8 +1,8 @@
 # Payments-fintech sector overlay for kri-commentary
 
-When the engagement-scope record flags `payments-fintech`, this overlay sets the KRI-commentary content for payments processors, money-services businesses, fintech-bank partnerships (BaaS), and non-bank payment service providers.
+When the scope record flags `payments-fintech`, this overlay sets the KRI-commentary content for payments processors, money-services businesses, fintech-bank partnerships (BaaS), and non-bank payment service providers.
 
-Loaded by: `kri-commentary/SKILL.md` when `engagement_scope.sector_overlay_set` includes `payments-fintech`. Cited and section-referenced anchors live in `references/source-anchors.md`.
+Loaded by: `kri-commentary/SKILL.md` when `scope.sector_overlay_set` includes `payments-fintech`. Cited and section-referenced anchors live in `references/source-anchors.md`.
 
 ## Source basis
 

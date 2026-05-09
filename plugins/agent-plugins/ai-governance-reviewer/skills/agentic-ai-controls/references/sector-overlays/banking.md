@@ -1,8 +1,8 @@
 # Banking sector overlay for agentic-ai-controls
 
-When the engagement-scope record names `banking` as the sector, this overlay adds banking-specific authority-statement constraints, tool-inventory expectations, monitoring signals, regulator-notification triggers, and co-reviewer expectations.
+When the scope record names `banking` as the sector, this overlay adds banking-specific authority-statement constraints, tool-inventory expectations, monitoring signals, regulator-notification triggers, and co-reviewer expectations.
 
-Loaded by: `agentic-ai-controls/SKILL.md` when `engagement_scope.sector_overlay_set` includes `banking`. Cited and section-referenced anchors live in `references/source-anchors.md`.
+Loaded by: `agentic-ai-controls/SKILL.md` when `scope.sector_overlay_set` includes `banking`. Cited and section-referenced anchors live in `references/source-anchors.md`.
 
 ## Source basis
 

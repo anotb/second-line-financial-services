@@ -1,8 +1,8 @@
 # Banking sector overlay for ai-act-triage
 
-When the engagement-scope record names sector `banking`, this overlay adds banking-specific scoping, named-source reach, and parallel-regime reconciliation to the EU AI Act triage. EU branches and subsidiaries of US banks, EU-headquartered credit institutions, and EU operations of non-EU banking groups all use this overlay alongside the capability triage. Where there is conflict between the capability defaults and this overlay, the overlay governs the banking-specific elements.
+When the scope record names sector `banking`, this overlay adds banking-specific scoping, named-source reach, and parallel-regime reconciliation to the EU AI Act triage. EU branches and subsidiaries of US banks, EU-headquartered credit institutions, and EU operations of non-EU banking groups all use this overlay alongside the capability triage. Where there is conflict between the capability defaults and this overlay, the overlay governs the banking-specific elements.
 
-Loaded by: `ai-act-triage/SKILL.md` when `engagement_scope.sector_overlay_set` includes `banking`, or when the institution type implicates a banking entity (national bank, state member bank, savings association, bank holding company, foreign banking organization with EU operations, EU credit institution, EU subsidiary or branch of a non-EU banking group). Cited and section-referenced anchors live in `references/source-anchors.md`.
+Loaded by: `ai-act-triage/SKILL.md` when `scope.sector_overlay_set` includes `banking`, or when the institution type implicates a banking entity (national bank, state member bank, savings association, bank holding company, foreign banking organization with EU operations, EU credit institution, EU subsidiary or branch of a non-EU banking group). Cited and section-referenced anchors live in `references/source-anchors.md`.
 
 ## What changes for a banking triage
 

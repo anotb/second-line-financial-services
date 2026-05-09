@@ -1,6 +1,6 @@
 # Capital-markets sector overlay — sanctions-screening-qa
 
-When the engagement scope flags capital markets (broker-dealers, mutual funds, futures commission merchants, covered investment advisers), load this overlay alongside `references/source-anchors.md`.
+When the scope flags capital markets (broker-dealers, mutual funds, futures commission merchants, covered investment advisers), load this overlay alongside `references/source-anchors.md`.
 
 ## Operative anchors
 

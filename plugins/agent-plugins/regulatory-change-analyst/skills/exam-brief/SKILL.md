@@ -36,7 +36,7 @@ Settle a handful of facts before drafting. Most engagements answer them in the f
 - **Who runs the engagement on the firm side, by topic.** A single point of contact for examination correspondence (usually head of regulatory affairs or chief compliance officer) plus topic-specific primary roles (CISO for cyber, BSA officer for AML, CRO or head of model risk for model, head of TPRM for third party, head of compliance for fair lending or marketing rule, general counsel for privilege calls). One bottleneck is the failure mode; mapping topics to roles avoids it.
 - **What is the source posture for this engagement.** Public-only, public-plus-firm-policy, public-plus-firm-policy-plus-evidence, or connector-aware. The brief itself is firm-confidential by convention; what it can assert at high confidence depends on the source posture.
 
-When an `engagement-scope` record is supplied, the skill consumes it for institution, persona, source posture, sector overlay set, and cross-cutting overlay set. When it is not supplied, ask the few questions and default; flag the defaults in the brief.
+When an `scope` record is supplied, the skill consumes it for institution, persona, source posture, sector overlay set, and cross-cutting overlay set. When it is not supplied, ask the few questions and default; flag the defaults in the brief.
 
 ## How the brief gets built
 
@@ -66,7 +66,7 @@ The brief has the same spine across regulators. The order below is the spine; in
 
 ## Sector and cross-cutting overlays
 
-When the engagement scope names a sector, load the matching overlay in `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md`. The overlay carries the regulator-specific engagement convention, examiner-in-charge model, document-handling posture, MRA/MRIA/consent-order convention, and response-window calculation for that sector. Same pattern for cross-cutting overlays where present (cyber, privacy, conduct).
+When the scope names a sector, load the matching overlay in `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md`. The overlay carries the regulator-specific engagement convention, examiner-in-charge model, document-handling posture, MRA/MRIA/consent-order convention, and response-window calculation for that sector. Same pattern for cross-cutting overlays where present (cyber, privacy, conduct).
 
 The boundary the overlay enforces: a banking sector overlay loaded inside this skill covers the engagement-side scaffolding for a non-full-scope engagement at a bank (a CFPB exam at a bank, an NYDFS cyber exam at a state-chartered bank, a coordinated trust exam, an IT-focused exam, a topic-targeted OCC review). For a full-scope federal banking exam at a bank carrying the Heightened Standards, the overlay routes to `banking-supervision-readiness` instead. Same pattern for capital-markets: the overlay covers a niche review (cyber-only at an adviser, an exchange-rule examination, a transfer-agent review) where `adviser-exam-readiness` is too broad.
 
@@ -78,12 +78,12 @@ Holds across every brief. Every material claim about regulator process cites a s
 
 ## Adaptation
 
-Brief depth scales to engagement type and stakes: a horizontal review brief reads short and operational; a consent-order-response brief reads longer with a milestone tracker and named monitor role; a for-cause brief reads tighter on the precipitating event with counsel-shaped sections. Audience drives shape: regulatory affairs and head of compliance run the operational version; CRO chief of staff and general counsel pull the response-posture and disagreement sections forward; a board pre-read distills to executive summary plus open MRA/MRIA status. Source posture (public-only through connector-aware) drives what the brief can assert at high confidence and what carries `[evidence needed]`. Sector and cross-cutting overlays load from the engagement scope. Where firm-specific policy or named review machinery applies, it lives in `references/firm-overlay.md` and is consumed when present; the brief itself stays generic.
+Brief depth scales to engagement type and stakes: a horizontal review brief reads short and operational; a consent-order-response brief reads longer with a milestone tracker and named monitor role; a for-cause brief reads tighter on the precipitating event with counsel-shaped sections. Audience drives shape: regulatory affairs and head of compliance run the operational version; CRO chief of staff and general counsel pull the response-posture and disagreement sections forward; a board pre-read distills to executive summary plus open MRA/MRIA status. Source posture (public-only through connector-aware) drives what the brief can assert at high confidence and what carries `[evidence needed]`. Sector and cross-cutting overlays load from the scope. Where firm-specific policy or named review machinery applies, it lives in `references/firm-overlay.md` and is consumed when present; the brief itself stays generic.
 
 ## Pointers
 
 - `references/source-anchors.md` — citations and excerpts for the named anchors (federal banking, CFPB, SEC and FINRA, NYDFS and state DOIs, privilege and CSI, MRA/MRIA/consent-order convention, AI-and-cyber-targeted anchors).
-- `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md` — sector overlays loaded from engagement scope.
+- `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md` — sector overlays loaded from scope.
 - `references/firm-overlay.md` — firm-installed regulator-relationship history, named privilege-review counsel, approved redaction tools, internal CSI-handling SOP, response-letter style guide; consumed when present.
 - `templates/default-output.md` — brief template.
 - `schemas/exam-brief.schema.json` — structured-output contract for downstream consumption.

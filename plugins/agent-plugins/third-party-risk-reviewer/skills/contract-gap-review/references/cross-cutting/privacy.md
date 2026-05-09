@@ -1,6 +1,6 @@
 # Privacy cross-cutting overlay — contract-gap-review
 
-When the engagement scope flags privacy, or whenever the contract touches nonpublic personal information, protected health information, biometric data, customer prompts, or any other regulated personal data, load this overlay. Privacy is in scope by default for AI vendors that process customer prompts.
+When the scope flags privacy, or whenever the contract touches nonpublic personal information, protected health information, biometric data, customer prompts, or any other regulated personal data, load this overlay. Privacy is in scope by default for AI vendors that process customer prompts.
 
 ## Operative anchors
 

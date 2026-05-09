@@ -1,8 +1,8 @@
 # Payments-fintech sector overlay for cyber-disclosure-readiness
 
-When the engagement scope names payments-fintech, PCI DSS contractual notification obligations apply on the card-handling side; CFPB supervisory expectations for large nonbanks frame the consumer-facing disclosure posture; and Reg E error-resolution clocks affect customer transactions where a cyber incident causes erroneous or unauthorized transfers.
+When the scope names payments-fintech, PCI DSS contractual notification obligations apply on the card-handling side; CFPB supervisory expectations for large nonbanks frame the consumer-facing disclosure posture; and Reg E error-resolution clocks affect customer transactions where a cyber incident causes erroneous or unauthorized transfers.
 
-Loaded by: `cyber-disclosure-readiness/SKILL.md` when `engagement_scope.sector_overlay_set` includes `payments-fintech`. Cited and section-referenced anchors live in `references/source-anchors.md`.
+Loaded by: `cyber-disclosure-readiness/SKILL.md` when `scope.sector_overlay_set` includes `payments-fintech`. Cited and section-referenced anchors live in `references/source-anchors.md`.
 
 ## Source basis
 

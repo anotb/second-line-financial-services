@@ -1,6 +1,6 @@
 # Insurance sector overlay — regulatory-impact-assessment
 
-When the engagement scope flags insurance and the rule (or NAIC model law, or state DOI bulletin, or NYDFS Industry Letter, or federal-level insurance-related rule such as a Federal Insurance Office report or HHS-CMS rule for health insurance) touches insurers or affiliated entities, load this overlay alongside `references/source-anchors.md`. The overlay carries the NAIC model-law adoption mechanics, state DOI variance, NYDFS overlays, and the strategy-lens posture for state-DOI-led examination cycles.
+When the scope flags insurance and the rule (or NAIC model law, or state DOI bulletin, or NYDFS Industry Letter, or federal-level insurance-related rule such as a Federal Insurance Office report or HHS-CMS rule for health insurance) touches insurers or affiliated entities, load this overlay alongside `references/source-anchors.md`. The overlay carries the NAIC model-law adoption mechanics, state DOI variance, NYDFS overlays, and the strategy-lens posture for state-DOI-led examination cycles.
 
 ## Institution-type and regulatory-frame scoping
 

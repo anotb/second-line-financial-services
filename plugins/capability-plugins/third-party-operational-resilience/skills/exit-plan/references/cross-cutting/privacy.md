@@ -1,6 +1,6 @@
 # Privacy cross-cutting overlay — exit-plan
 
-When the engagement scope flags privacy, or whenever the vendor processes nonpublic personal information, protected health information, biometric data, customer prompts, or any other regulated personal data at termination, load this overlay. Privacy is in scope by default for AI vendors processing customer prompts and for any vendor whose return-and-destruction obligations touch regulated data.
+When the scope flags privacy, or whenever the vendor processes nonpublic personal information, protected health information, biometric data, customer prompts, or any other regulated personal data at termination, load this overlay. Privacy is in scope by default for AI vendors processing customer prompts and for any vendor whose return-and-destruction obligations touch regulated data.
 
 ## Operative anchors
 

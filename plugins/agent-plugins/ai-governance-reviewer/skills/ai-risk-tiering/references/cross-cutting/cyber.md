@@ -1,8 +1,8 @@
 # Cyber cross-cutting overlay for ai-risk-tiering
 
-When the engagement-scope record flags `cyber` for the use case, this overlay supplies the cyber-specific factors that weight up the tier and the named triggers that force a re-tier when the cyber posture changes. It does not replace the firm's information-security risk assessment; it is the tiering-side surfacing of cyber considerations that a second-line reviewer (and an examiner under NYDFS Part 500 or the FFIEC IT Handbook) will look for.
+When the scope record flags `cyber` for the use case, this overlay supplies the cyber-specific factors that weight up the tier and the named triggers that force a re-tier when the cyber posture changes. It does not replace the firm's information-security risk assessment; it is the tiering-side surfacing of cyber considerations that a second-line reviewer (and an examiner under NYDFS Part 500 or the FFIEC IT Handbook) will look for.
 
-Loaded by: `ai-risk-tiering/SKILL.md` when `engagement_scope.cross_cutting_set` includes `cyber`. Cited and section-referenced anchors live in `references/source-anchors.md`.
+Loaded by: `ai-risk-tiering/SKILL.md` when `scope.cross_cutting_set` includes `cyber`. Cited and section-referenced anchors live in `references/source-anchors.md`.
 
 ## Source basis
 

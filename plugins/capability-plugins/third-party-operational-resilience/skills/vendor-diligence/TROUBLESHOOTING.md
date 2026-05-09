@@ -68,9 +68,9 @@ Shared responsibility is a split, not a transfer. Prompt-injection defence, retr
 
 ## Engagement-scope pitfalls
 
-### Running without engagement scope
+### Running without scope
 
-If the engagement-scope record is missing, ask the four questions (institution type, primary regulator(s), persona/audience, source posture) and default to public posture if the practitioner declines. Note in the artifact that scope was not formalised. Do not silently apply a default sector overlay.
+If the scope record is missing, ask the four questions (institution type, primary regulator(s), persona/audience, source posture) and default to public posture if the practitioner declines. Note in the artifact that scope was not formalised. Do not silently apply a default sector overlay.
 
 ### Loading the wrong sector overlay
 

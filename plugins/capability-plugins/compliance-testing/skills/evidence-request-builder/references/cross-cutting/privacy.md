@@ -1,6 +1,6 @@
 # Privacy cross-cutting overlay — evidence-request-builder
 
-Loaded when `engagement-scope.cross_cutting_overlay_set` includes `privacy`, or when the request list will pull artifacts containing NPI, PHI, PCI, or other regulated personal data. The overlay sets the privacy posture on individual rows and on the request list as a whole, and bears on what the request list may legitimately ask for and how the artifact moves once received.
+Loaded when `scope.cross_cutting_overlay_set` includes `privacy`, or when the request list will pull artifacts containing NPI, PHI, PCI, or other regulated personal data. The overlay sets the privacy posture on individual rows and on the request list as a whole, and bears on what the request list may legitimately ask for and how the artifact moves once received.
 
 ## Why privacy belongs in the request list
 

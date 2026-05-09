@@ -33,7 +33,7 @@ Settle these before drafting. Default and flag where the engagement does not yet
 - **What AI / ML components are in the pricing or underwriting chain and who supplies them.** Vendor-supplied AI pulls third-party-AI-accountability obligations under the NAIC Bulletin December 2023; vendor self-attestations are not evidence.
 - **What is the source posture.** Public-only, public-plus-firm-policy, public-plus-firm-policy-plus-evidence, connector-aware (rate-filing system, model inventory, vendor inventory, monitoring dashboards). Posture sets the evidence ask. Aspirational posture is not a posture.
 
-When `engagement-scope` is supplied, consume it (`institution.type`, `institution.primary_regulators`, `sector_overlay_set`, `cross_cutting_overlay_set`, `persona.role`, `source_posture`); the sector overlay is always insurance for this skill. When it is not supplied, ask the questions and default to public posture if the practitioner declines. Note the absence in the artifact.
+When `scope` is supplied, consume it (`institution.type`, `institution.primary_regulators`, `sector_overlay_set`, `cross_cutting_overlay_set`, `persona.role`, `source_posture`); the sector overlay is always insurance for this skill. When it is not supplied, ask the questions and default to public posture if the practitioner declines. Note the absence in the artifact.
 
 ## How the file gets built
 

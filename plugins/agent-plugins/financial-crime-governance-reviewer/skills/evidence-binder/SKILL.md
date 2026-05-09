@@ -36,7 +36,7 @@ Most binders answer these in the first conversation. If not, draft against what 
 - What is the period under review. Stale evidence is the most common rejection. Set `period_start` and `period_end` against the engagement window, not the date the artifact was first produced. Where a recordkeeping floor (BSA five years, broker-dealer books and records under 17a-4) extends past the engagement window, respect the floor at the row level.
 - Is there a request list. An examiner RFI, an audit fieldwork ask, a validator evidence list, a committee paper agenda. If yes, the binder is built outward from the request list. If no (a remediation file, a self-initiated review), the binder is built from the obligation-control-evidence map the engagement maintains, and the reconciliation surface is implicit rather than explicit.
 
-When the engagement-scope record from `risk-compliance-core/skills/engagement-scoping` is supplied, the skill consumes it for institution, persona, source posture, sector overlay, and cross-cutting overlay. Otherwise it asks the practitioner the few facts it needs and defaults to public posture if pressed.
+When the scope record from `risk-compliance-core/skills/scoping` is supplied, the skill consumes it for institution, persona, source posture, sector overlay, and cross-cutting overlay. Otherwise it asks the practitioner the few facts it needs and defaults to public posture if pressed.
 
 ## How the binder gets built
 
@@ -82,12 +82,12 @@ No fabricated regulatory facts. No named institutions in narrative unless they a
 
 ## Adaptation
 
-Depth and length scale to purpose and audience. A vendor-review binder for a non-critical SaaS may run to ten rows and fit on a page; a regulator-exam binder reconciled against a 60-item RFI runs long, with the sufficiency log and gap section in full. A committee binder leads with headline sufficiency and pushes row-level detail into an appendix; an audit fieldwork binder leads with row-level detail because the auditor will read every row. A model-validation binder groups rows by validation activity (conceptual soundness, ongoing monitoring, outcomes analysis, benchmarking, independent challenge); a vendor-review binder groups rows by the interagency TPRM lifecycle phases. The sector overlay set drives which `references/sector-overlays/<sector>.md` is loaded. The cross-cutting overlay set follows engagement scope, with the rule that `references/cross-cutting/privacy.md` loads whenever the binder may carry NPI, PHI, PCI, or other regulated personal data, regardless of how the engagement-scope reads.
+Depth and length scale to purpose and audience. A vendor-review binder for a non-critical SaaS may run to ten rows and fit on a page; a regulator-exam binder reconciled against a 60-item RFI runs long, with the sufficiency log and gap section in full. A committee binder leads with headline sufficiency and pushes row-level detail into an appendix; an audit fieldwork binder leads with row-level detail because the auditor will read every row. A model-validation binder groups rows by validation activity (conceptual soundness, ongoing monitoring, outcomes analysis, benchmarking, independent challenge); a vendor-review binder groups rows by the interagency TPRM lifecycle phases. The sector overlay set drives which `references/sector-overlays/<sector>.md` is loaded. The cross-cutting overlay set follows the scope, with the rule that `references/cross-cutting/privacy.md` loads whenever the binder may carry NPI, PHI, PCI, or other regulated personal data, regardless of how the scope reads.
 
 ## Pointers
 
 - `references/source-anchors.md` — citations and excerpts for the named anchors (BCBS 239, AU-C 500, AU-C 230, IIA Standards, FFIEC IT Audit booklet, SR 11-7, OCC 2026-13, the 2023 interagency third-party guidance, recordkeeping floors).
-- `references/sector-overlays/banking.md`, `insurance.md`, `capital-markets.md`, `payments-fintech.md` — sector-specific supervisory frame loaded per engagement-scope.
+- `references/sector-overlays/banking.md`, `insurance.md`, `capital-markets.md`, `payments-fintech.md` — sector-specific supervisory frame loaded per scope.
 - `references/cross-cutting/privacy.md` — loaded whenever the binder may carry regulated personal data; default-on for any binder touching NPI, PHI, PCI, or important-business-service controls.
 - `references/firm-overlay.md` — firm-installed policy, taxonomy, named owners, system-of-record naming map (consumed when present).
 - `templates/default-output.md` — binder template.

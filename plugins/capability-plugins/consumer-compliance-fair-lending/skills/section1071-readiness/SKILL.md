@@ -36,7 +36,7 @@ Before drafting, settle six things. The matrix is identifier-driven against the 
 - **Vendor / LOS posture**. Where the LOS is vendor-supplied, the vendor's readiness is not the firm's readiness. The firm is the covered financial institution. Capture each vendor's role, attestations, change-control identifier for any 1071-driven change, and the contractual responsibility allocation. Sponsor-bank arrangements (a fintech operating under a sponsor bank) require separate treatment: the sponsor bank is the covered financial institution; the fintech is the data-collection agent.
 - **Source posture**. Public-only (the rule text and FIG only), public-plus-firm-policy (firm policies, vendor attestations, control documentation), public-plus-firm-policy-plus-evidence (LOS extracts, data dictionaries, system reports), or connector-aware (live LOS access). Set posture to what the engagement actually has, not what it would prefer; the matrix's `readiness` enum reads honestly only when the source posture supports it.
 
-When the engagement-scope record is supplied, the skill consumes it for institution type, sector overlay (banking or payments-fintech), persona, source posture, and primary regulators. When it is not supplied, ask the questions above and default to public posture if the practitioner declines.
+When the scope record is supplied, the skill consumes it for institution type, sector overlay (banking or payments-fintech), persona, source posture, and primary regulators. When it is not supplied, ask the questions above and default to public posture if the practitioner declines.
 
 ## How the assessment gets done
 
@@ -90,7 +90,7 @@ Each gap rolls up to a separate gap-list row with severity (`blocking` / `high` 
 
 ### Sector and cross-cutting overlay loading
 
-When the engagement scope names a sector, load the matching `references/sector-overlays/<sector>.md`: `banking.md` for depository institutions (the heaviest overlay), `payments-fintech.md` for fintech small-business lenders and sponsor-bank arrangements. `capital-markets.md` and `insurance.md` carry out-of-scope flags so reviewers do not over-extend. Cross-cutting overlays: `privacy.md` for the GLBA Safeguards posture on customer demographic data and the CFPB modified-data publication and re-identification considerations; `conduct.md` for the lender-conduct dimension where 1071 readiness gaps surface conduct themes (data-collection misrepresentation to applicants, firewall failures, vendor mismanagement). Load only the overlays the engagement scope names.
+When the scope names a sector, load the matching `references/sector-overlays/<sector>.md`: `banking.md` for depository institutions (the heaviest overlay), `payments-fintech.md` for fintech small-business lenders and sponsor-bank arrangements. `capital-markets.md` and `insurance.md` carry out-of-scope flags so reviewers do not over-extend. Cross-cutting overlays: `privacy.md` for the GLBA Safeguards posture on customer demographic data and the CFPB modified-data publication and re-identification considerations; `conduct.md` for the lender-conduct dimension where 1071 readiness gaps surface conduct themes (data-collection misrepresentation to applicants, firewall failures, vendor mismanagement). Load only the overlays the scope names.
 
 ## Quality bar
 
@@ -109,7 +109,7 @@ Holds across every assessment:
 
 - **Assessment depth scales to source posture and review type**. A pre-compliance-date readiness check at public-plus-firm-policy posture reads narrative-heavy with `unverifiable` rows where evidence has not landed yet; an annual refresh at connector-aware posture reads matrix-heavy with the year-on-year delta as the headline.
 - **Audience drives shape**. A pack for the compliance programme lead reads operational. A pack for the named accountable executive leads with the residual gap posture and the sign-off question. A pack for the regulator dialogue reads as a justification of the firm's own readiness posture.
-- **Sector overlay loading follows engagement scope**. A fintech operating under a sponsor bank loads both `banking.md` (sponsor bank's view) and `payments-fintech.md` (fintech's view).
+- **Sector overlay loading follows the scope**. A fintech operating under a sponsor bank loads both `banking.md` (sponsor bank's view) and `payments-fintech.md` (fintech's view).
 - **Firm-specific policy, taxonomy, named owners, internal-product-to-1002.106 mapping table** sit in plugin-level `references/firm-overlay.md` if installed; consumed when present, never in the memo directly.
 
 ## Output

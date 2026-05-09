@@ -17,7 +17,7 @@ description: |
   - The job is the test execution itself (this skill drafts the pack and the read-out template; execution is run by the firm's resilience function).
   - The job is full vendor diligence on a single arrangement (use `vendor-diligence`).
   - The job is portfolio-level concentration analysis (use `concentration-risk-review`; that output may then feed concentration scenarios into this pack).
-argument-hint: "[subject: IBS name or arrangement (vendor + service) and criticality, plus engagement scope or pointer]"
+argument-hint: "[subject: IBS name or arrangement (vendor + service) and criticality, plus scope or pointer]"
 ---
 
 # Resilience-testing pack
@@ -36,7 +36,7 @@ Before drafting, get plain answers to a few things. Most engagements answer them
 - **Is an AI dependency on the chain under test.** Treat as a boolean. AI-on-the-chain surfaces AI-specific scenarios (model regression, eval drift, prompt-injection on the deployed agent, vendor model deprecation, training-data incident) and pulls the model-risk function into the room.
 - **What is the engagement type.** Annual programme cycle, quarterly cycle, off-cycle trigger, post-incident rehearsal, post-onboarding validation, regulator-driven, exit-rehearsal. Each carries a different decision-forum context, a different scenario count, and a different read-out cadence.
 
-When the engagement-scope record is supplied, the skill consumes it (institution type, sector overlay set, cross-cutting overlay set, persona, source posture). When it is not supplied, the skill asks the questions above and defaults to public posture if the practitioner declines. Note in the pack that scope was not formalised; do not silently apply a default sector overlay.
+When the scope record is supplied, the skill consumes it (institution type, sector overlay set, cross-cutting overlay set, persona, source posture). When it is not supplied, the skill asks the questions above and defaults to public posture if the practitioner declines. Note in the pack that scope was not formalised; do not silently apply a default sector overlay.
 
 ## How the pack gets built
 
@@ -66,12 +66,12 @@ Holds across every pack regardless of subject, audience, or render format. Every
 
 ## Adaptation
 
-Flexes by engagement. Pack depth and length scale to subject criticality, programme-in-scope status, and TLPT-scoping status. An arrangement-level non-DORA pack collapses several sections to a paragraph; an IBS-level pack at a DORA-in-scope firm with TLPT scoping runs full depth with reviewer questions clustered for the operational-resilience committee, the AI risk committee (where AI in scope), the audit committee, and the supervisor. The sector overlay set drives which `references/sector-overlays/<sector>.md` is loaded; a dual-registrant or BaaS arrangement may load two. Cross-cutting overlay loading follows engagement-scope plus the rule that cyber default-on for any chain reaching firm controls and customer data, and privacy default-on for any chain reaching personal data. Source posture (public-only, public-plus-firm-policy, public-plus-firm-policy-plus-system-of-record-evidence, connector-aware) drives the evidence ask. Method mix differs by subject (an IBS-level pack mixes more methods than an arrangement-level pack, which usually pivots on one or two methods per scenario). Render format (Word, Excel, PowerPoint, Markdown) follows the workflow.
+Flexes by engagement. Pack depth and length scale to subject criticality, programme-in-scope status, and TLPT-scoping status. An arrangement-level non-DORA pack collapses several sections to a paragraph; an IBS-level pack at a DORA-in-scope firm with TLPT scoping runs full depth with reviewer questions clustered for the operational-resilience committee, the AI risk committee (where AI in scope), the audit committee, and the supervisor. The sector overlay set drives which `references/sector-overlays/<sector>.md` is loaded; a dual-registrant or BaaS arrangement may load two. Cross-cutting overlay loading follows scope plus the rule that cyber default-on for any chain reaching firm controls and customer data, and privacy default-on for any chain reaching personal data. Source posture (public-only, public-plus-firm-policy, public-plus-firm-policy-plus-system-of-record-evidence, connector-aware) drives the evidence ask. Method mix differs by subject (an IBS-level pack mixes more methods than an arrangement-level pack, which usually pivots on one or two methods per scenario). Render format (Word, Excel, PowerPoint, Markdown) follows the workflow.
 
 ## Pointers
 
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
-- `references/sector-overlays/banking.md`, `insurance.md`, `capital-markets.md`, `payments-fintech.md` — sector-specific testing-programme nuance loaded per engagement-scope.
+- `references/sector-overlays/banking.md`, `insurance.md`, `capital-markets.md`, `payments-fintech.md` — sector-specific testing-programme nuance loaded per scope.
 - `references/cross-cutting/cyber.md`, `privacy.md` — cross-cutting flavour for testing; cyber default-on for any chain reaching firm controls; privacy default-on for any chain reaching personal data.
 - `references/firm-overlay.md` — firm-installed policy, taxonomy, decision forums, IBS map pointers, and programme-document pointers beyond the regulatory baseline; consumed when present.
 - `templates/default-output.md` — pack template.

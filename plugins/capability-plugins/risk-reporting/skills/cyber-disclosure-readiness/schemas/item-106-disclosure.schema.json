@@ -33,7 +33,7 @@
         "foreign-private-issuer"
       ]
     },
-    "engagement_scope_id": { "type": ["string", "null"] },
+    "scope_id": { "type": ["string", "null"] },
     "prior_year_filing_reference": { "type": ["string", "null"] },
     "risk_management_disclosure": {
       "type": "object",

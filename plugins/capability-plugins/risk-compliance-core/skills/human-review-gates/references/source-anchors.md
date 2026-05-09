@@ -37,7 +37,7 @@ Link: https://www.nist.gov/itl/ai-risk-management-framework
 
 Anchor: Govern subcategories specific to generative AI; the profile adds gate-relevant material on model-card requirements, content provenance, and use-case approval for foundation-model-based deployments. [verify subcategory numbering against the current Profile edition.]
 
-What this skill relies on: generative-AI-specific gate criteria where the engagement scope flags GenAI use cases; the Profile's framing on use-case approval as a gated decision rather than a check-box.
+What this skill relies on: generative-AI-specific gate criteria where the scope flags GenAI use cases; the Profile's framing on use-case approval as a gated decision rather than a check-box.
 
 Link: https://www.nist.gov/itl/ai-risk-management-framework
 
@@ -133,7 +133,7 @@ Link: https://www.consumerfinance.gov/compliance/supervision-examinations/
 
 ## Sector-specific and cross-cutting anchors
 
-The sector-overlay files (`references/sector-overlays/<sector>.md`) enumerate sector-specific gate anchors (NAIC ORSA and Corporate Governance Annual Disclosure Model Act, FINRA 3110 supervisory gates, SEC Rule 206(4)-7 advisers compliance gates, OCC fintech bank-partnership sponsor-bank gates). The cross-cutting overlays (`references/cross-cutting/<topic>.md`) enumerate cross-cutting anchors (NYDFS Part 500 §500.4 senior-governing-body responsibility for cyber gates, SEC 8-K Item 1.05 disclosure-committee gates for materiality determination, CFPB UDAAP exam manual and ECOA second-look conventions for conduct gates). This file is the foundational set; the overlays add what the engagement scope requires.
+The sector-overlay files (`references/sector-overlays/<sector>.md`) enumerate sector-specific gate anchors (NAIC ORSA and Corporate Governance Annual Disclosure Model Act, FINRA 3110 supervisory gates, SEC Rule 206(4)-7 advisers compliance gates, OCC fintech bank-partnership sponsor-bank gates). The cross-cutting overlays (`references/cross-cutting/<topic>.md`) enumerate cross-cutting anchors (NYDFS Part 500 §500.4 senior-governing-body responsibility for cyber gates, SEC 8-K Item 1.05 disclosure-committee gates for materiality determination, CFPB UDAAP exam manual and ECOA second-look conventions for conduct gates). This file is the foundational set; the overlays add what the scope requires.
 
 ## Cross-plugin overlays (referenced when in scope)
 

@@ -39,7 +39,7 @@ Most of what the memo needs is on the table by the time someone reaches for this
 - Whether AI or an algorithm is in path. The answer flips on the AI / algorithmic-discrimination block, pulls in CFPB Circulars 2022-03 and 2023-03 and the April 2023 Joint Statement, and adds the algorithmic-feature read to the unfairness analysis. The bureau has used existing UDAAP authority against algorithmic harms; novel technology is not a defence.
 - What the source posture is. Public-only, public-plus-firm-policy, public-plus-firm-policy-plus-evidence, or connector-aware. Source posture sets what evidence the memo can actually cite (complaints, transaction data, call recordings, marketing assets, policy text, training records, system-output logs, model-card pointer) and what carries `[evidence needed]`.
 
-When `engagement-scope` is supplied, the skill consumes it for institution, persona, source posture, sector overlay set, and cross-cutting overlay set. Otherwise it asks the practitioner the few facts it needs and defaults to public posture if the practitioner declines, noting in the memo that scope was not formalised.
+When `scope` is supplied, the skill consumes it for institution, persona, source posture, sector overlay set, and cross-cutting overlay set. Otherwise it asks the practitioner the few facts it needs and defaults to public posture if the practitioner declines, noting in the memo that scope was not formalised.
 
 ## How the memo gets built
 
@@ -89,7 +89,7 @@ The overlay is mandatory once triggered. Missing the AI block on a memo where AI
 
 ### Sector overlays
 
-When the engagement scope names a sector, load the matching `references/sector-overlays/<sector>.md`:
+When the scope names a sector, load the matching `references/sector-overlays/<sector>.md`:
 
 - *Banking* — depository-specific themes: overdraft and NSF practices including authorize-positive-settle-negative; deposit-account fee mechanics; surprise-representment fees; mortgage-servicing themes (loss-mitigation conduct, force-placed insurance, fee assessment); credit-card UDAAP themes (deferred-interest promotions, rewards-program changes, balance-transfer mechanics, retention-offer mechanics); auto-loan add-ons (GAP, VSC, debt-cancellation).
 - *Payments-fintech* — sponsor-bank attribution and joint accountability; BNPL UDAAP themes; P2P and Reg E error-resolution conduct; subscription and negative-option mechanics; tip and "instant funding" fee mechanics; junk-fee themes; algorithmic personalisation themes specific to digital-first fintech surfaces.
@@ -111,7 +111,7 @@ Memo depth and length scale to the trigger and the in-scope inventory. A pre-lau
 ## Pointers
 
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
-- `references/sector-overlays/banking.md`, `payments-fintech.md`, `capital-markets.md`, `insurance.md` — sector-specific framing loaded per engagement-scope.
+- `references/sector-overlays/banking.md`, `payments-fintech.md`, `capital-markets.md`, `insurance.md` — sector-specific framing loaded per scope.
 - `references/cross-cutting/conduct.md` — UDAAP-conduct intersection (mandatory on this skill); `references/cross-cutting/privacy.md` — secondary, loaded where the in-scope flow raises a privacy-meets-UDAAP angle.
 - `references/firm-overlay.md` — firm-installed taxonomy, named committees, conduct-event taxonomy, system-of-record paths (consumed when present).
 - `templates/default-output.md` — memo template.

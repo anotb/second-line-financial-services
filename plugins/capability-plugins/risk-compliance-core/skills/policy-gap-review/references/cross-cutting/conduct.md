@@ -1,6 +1,6 @@
 # Conduct cross-cutting overlay — policy-gap-review
 
-Loads when the engagement-scope `cross_cutting_overlay_set` includes `conduct`. Binds the matrix to conduct-and-customer-facing-policy expectations when the policy in scope is a customer-facing policy: product approval, marketing review, complaints handling, fair lending, sales practice, fee design, or any policy whose operationalisation directly affects customers.
+Loads when the scope `cross_cutting_overlay_set` includes `conduct`. Binds the matrix to conduct-and-customer-facing-policy expectations when the policy in scope is a customer-facing policy: product approval, marketing review, complaints handling, fair lending, sales practice, fee design, or any policy whose operationalisation directly affects customers.
 
 ## Why conduct loads
 

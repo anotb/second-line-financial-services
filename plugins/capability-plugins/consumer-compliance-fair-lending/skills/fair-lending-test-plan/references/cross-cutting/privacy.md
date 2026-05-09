@@ -1,8 +1,8 @@
 # Privacy cross-cutting overlay for fair-lending-test-plan
 
-When the engagement-scope record flags `privacy` for the fair-lending test plan, this overlay addresses how customer data used in fair-lending testing is handled. Fair-lending testing pulls applicant data, model features, and demographic-proxy inputs out of systems of record, moves the data to an analytics environment, and processes it for statistical analysis. That movement and processing sits inside the firm's privacy program; the overlay names the seams.
+When the scope record flags `privacy` for the fair-lending test plan, this overlay addresses how customer data used in fair-lending testing is handled. Fair-lending testing pulls applicant data, model features, and demographic-proxy inputs out of systems of record, moves the data to an analytics environment, and processes it for statistical analysis. That movement and processing sits inside the firm's privacy program; the overlay names the seams.
 
-Loaded by: `fair-lending-test-plan/SKILL.md` when `engagement_scope.cross_cutting_set` includes `privacy`. Cited and section-referenced anchors live in `references/source-anchors.md`.
+Loaded by: `fair-lending-test-plan/SKILL.md` when `scope.cross_cutting_set` includes `privacy`. Cited and section-referenced anchors live in `references/source-anchors.md`.
 
 ## Source basis
 

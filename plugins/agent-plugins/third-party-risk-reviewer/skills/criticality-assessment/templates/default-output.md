@@ -3,7 +3,7 @@
 **Vendor**: [legal entity; brand name if different]
 **Service in scope**: [concise, e.g., core banking SaaS, claims TPA, foundation-model API]
 **Arrangement ID**: [stable ID; reused across vendor-diligence, contract-gap-review, exit-plan, concentration-risk-review]
-**Engagement ID**: [pointer to engagement-scope record, or "none — scope not formalised"]
+**Engagement ID**: [pointer to scope record, or "none — scope not formalised"]
 **As of**: [date]
 **Review type**: [pre-onboarding | annual-recertification | off-cycle-trigger | material-change-re-review | post-incident-re-review | ibs-change-re-review | contract-renewal-re-review]
 **Owner (role)**: [head of TPRM, business owner SVP, IBS owner, or other per firm policy]

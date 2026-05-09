@@ -1,8 +1,8 @@
 # Cyber cross-cutting overlay for attestation-pack
 
-When the engagement-scope record flags `cyber` for the attestation pack, this overlay sets the cyber-control-attestation content for named pack sections. Cyber-control attestations are a frequent use case (annual CISO certifications, NYDFS Form B, AOC for card-handling, CSF-aligned program attestations); the overlay lands as content in the pack rather than as background reading.
+When the scope record flags `cyber` for the attestation pack, this overlay sets the cyber-control-attestation content for named pack sections. Cyber-control attestations are a frequent use case (annual CISO certifications, NYDFS Form B, AOC for card-handling, CSF-aligned program attestations); the overlay lands as content in the pack rather than as background reading.
 
-Loaded by: `attestation-pack/SKILL.md` when `engagement_scope.cross_cutting_set` includes `cyber`. Cited and section-referenced anchors live in `references/source-anchors.md`.
+Loaded by: `attestation-pack/SKILL.md` when `scope.cross_cutting_set` includes `cyber`. Cited and section-referenced anchors live in `references/source-anchors.md`.
 
 ## Source basis
 

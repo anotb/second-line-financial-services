@@ -1,6 +1,6 @@
 # Insurance sector overlay for validation-plan
 
-When the engagement-scope record names sector `insurance`, this overlay adds insurance-specific scope items to the validation plan. Where there is conflict between the capability defaults and this overlay, the overlay governs the insurance-sector elements.
+When the scope record names sector `insurance`, this overlay adds insurance-specific scope items to the validation plan. Where there is conflict between the capability defaults and this overlay, the overlay governs the insurance-sector elements.
 
 Source content derives from the insurance lead's overlay snippets and is mapped here into the validation-plan context. Cited and section-referenced anchors live in `references/source-anchors.md`.
 

@@ -35,17 +35,17 @@ Most of what the review needs is already on the table by the time someone reache
 - Where is the use case in lifecycle, and what triggered this review. Pre-prod-gate review consumes vendor-supplied evaluation results and projects the firm-internal coverage gap. In-prod-periodic review consumes production-monitoring evidence and re-calibrates residual risk. Post-foundation-model-swap or post-retrieval-stack-change review re-runs the grounding-evaluation block against the new configuration. Post-incident review reframes around the incident pattern. Annual revalidation rolls all of these together.
 - What is the use case's intended purpose, and what reliance does it support. The reliance assertion is what the residual-risk framing and the metric thresholds are calibrated against. A back-office analyst-support use case carries different thresholds than a customer-facing communication use case; the conduct overlay carries the framing for the latter.
 - Who is co-reviewing. The MRMO is a co-acceptor on residual risk for any in-scope use case. Where the corpus contains regulated personal data, the privacy officer is a co-reviewer; where the use case is customer-facing or decision-support, consumer compliance or the fair-lending function is in the room; where the use case touches AML alert work, the BSA officer is in the room.
-- What sector and cross-cutting overlays load. Banking, insurance, capital markets, or payments-fintech as sector; privacy as the default cross-cutting overlay (most regulated-FS RAG corpora contain regulated personal data); cyber and conduct as additional cross-cutting overlays where the engagement scope flags them.
+- What sector and cross-cutting overlays load. Banking, insurance, capital markets, or payments-fintech as sector; privacy as the default cross-cutting overlay (most regulated-FS RAG corpora contain regulated personal data); cyber and conduct as additional cross-cutting overlays where the scope flags them.
 
-When the engagement-scope record is supplied, the skill consumes it for institution, persona, source posture, sector and cross-cutting overlays, lifecycle stage, and architecture flags. Otherwise it asks the practitioner the few facts it needs, and source posture sets what the memo can assert at high confidence and what carries `[evidence needed]`.
+When the scope record is supplied, the skill consumes it for institution, persona, source posture, sector and cross-cutting overlays, lifecycle stage, and architecture flags. Otherwise it asks the practitioner the few facts it needs, and source posture sets what the memo can assert at high confidence and what carries `[evidence needed]`.
 
 ## How the memo gets filled in
 
 The memo has the same spine across architectures. The order below is the dependency chain a senior practitioner walks; sections without dependencies fill in as evidence arrives.
 
-Tier and architecture drive depth, so consume the model card and the engagement-scope record before deciding how heavy any section sits. Corpus enumeration must happen before retrieval-quality scoping (segmentation by corpus only works once the corpora are individually named). Retrieval quality must be in hand before grounding evaluation is interpreted (a grounding miss can be a retrieval miss in disguise). Mitigation evidence must be in hand before residual-risk framing (residual risk is the gap between the failure modes and the mitigations that hold them down).
+Tier and architecture drive depth, so consume the model card and the scope record before deciding how heavy any section sits. Corpus enumeration must happen before retrieval-quality scoping (segmentation by corpus only works once the corpora are individually named). Retrieval quality must be in hand before grounding evaluation is interpreted (a grounding miss can be a retrieval miss in disguise). Mitigation evidence must be in hand before residual-risk framing (residual risk is the gap between the failure modes and the mitigations that hold them down).
 
-**Review metadata** names the reviewer role, the review stage (pre-prod-gate, in-prod-periodic, post-incident, post-foundation-model-swap, post-retrieval-stack-change, annual-revalidation, exam-readiness), the date, and the upstream artefact IDs (engagement-scope, model card, validation plan). Reviewer roles are functions, never named individuals.
+**Review metadata** names the reviewer role, the review stage (pre-prod-gate, in-prod-periodic, post-incident, post-foundation-model-swap, post-retrieval-stack-change, annual-revalidation, exam-readiness), the date, and the upstream artefact IDs (scope, model card, validation plan). Reviewer roles are functions, never named individuals.
 
 **Use case reference and RAG architecture summary** lands the architecture facts: foundation-model provider and version pinning posture, retriever type, embedding model, reranker, corpus count, refresh-cadence summary, scoping rules. The intended purpose is named; the reliance assertion downstream is judged against it. A pointer to the model card's system description is preferable to restating; the RAG memo is not the place to re-derive architecture.
 
@@ -71,17 +71,17 @@ Depth flexes with tier and audience. A pre-prod-gate review for a tier-2 analyst
 
 ## Sector and cross-cutting overlays
 
-When the engagement scope names a sector (banking, insurance, capital markets, payments-fintech), load the matching `references/sector-overlays/<sector>.md`. Each overlay carries sector-specific corpora considerations, mitigations, monitoring signals, regulator-notification triggers, and co-reviewer expectations. The overlay's named additions land in the memo; treating the overlay as background reading is the failure mode.
+When the scope names a sector (banking, insurance, capital markets, payments-fintech), load the matching `references/sector-overlays/<sector>.md`. Each overlay carries sector-specific corpora considerations, mitigations, monitoring signals, regulator-notification triggers, and co-reviewer expectations. The overlay's named additions land in the memo; treating the overlay as background reading is the failure mode.
 
 The privacy cross-cutting overlay should be considered the default for most regulated-FS RAG reviews. Most corpora contain regulated personal data of one form or another (NPI, PHI, MNPI), and the corpus-governance and minimum-necessary framings are load-bearing. The overlay carries the data-category tagging convention, the retrieval-side minimisation framing, the cross-scope-leakage incident framing, and the regulator-notification triggers per applicable regime.
 
-The cyber cross-cutting overlay loads where the engagement scope flags it. For a RAG system the cyber framings are corpus access control, retrieval-side authentication and authorisation, and the indirect-injection adjacency to `prompt-injection-risk`. This skill catalogues the grounding-side failure mode (off-corpus answer, citation fabrication driven by injected content); the focused threat-surface review lives in `prompt-injection-risk`. The two skills work side by side for a RAG-using GenAI system.
+The cyber cross-cutting overlay loads where the scope flags it. For a RAG system the cyber framings are corpus access control, retrieval-side authentication and authorisation, and the indirect-injection adjacency to `prompt-injection-risk`. This skill catalogues the grounding-side failure mode (off-corpus answer, citation fabrication driven by injected content); the focused threat-surface review lives in `prompt-injection-risk`. The two skills work side by side for a RAG-using GenAI system.
 
 The conduct cross-cutting overlay loads where the use case has a population dimension or where outputs flow into customer-facing communications. The overlay extends the segmentation requirement on retrieval and grounding metrics to include fairness segmentation and surfaces UDAAP, Marketing Rule, and fair-lending framings as load-bearing seams.
 
 Climate is not applicable.
 
-Load only the overlays the engagement scope names. Gold-plating with overlays the engagement does not implicate adds noise without challenge value.
+Load only the overlays the scope names. Gold-plating with overlays the engagement does not implicate adds noise without challenge value.
 
 ## Quality bar
 
@@ -105,7 +105,7 @@ The memo is only credible when these hold:
 
 ## Adaptation
 
-Tier drives depth. Lifecycle stage drives which sections lean heavy. Audience drives tone (working group is plain, committee is structured, examiner response is formal, board distillation pulls residual risk and recommended actions to the front). Sector and cross-cutting overlays load from the engagement scope. Source posture sets what the memo can assert at high confidence and what carries `[evidence needed]`. Where firm-specific policy or taxonomy applies (named metric framework, named ground-truth pipeline, named owners), it lives in `references/firm-overlay.md` (consumed when present) and never in the memo directly.
+Tier drives depth. Lifecycle stage drives which sections lean heavy. Audience drives tone (working group is plain, committee is structured, examiner response is formal, board distillation pulls residual risk and recommended actions to the front). Sector and cross-cutting overlays load from the scope. Source posture sets what the memo can assert at high confidence and what carries `[evidence needed]`. Where firm-specific policy or taxonomy applies (named metric framework, named ground-truth pipeline, named owners), it lives in `references/firm-overlay.md` (consumed when present) and never in the memo directly.
 
 ## Output
 
@@ -116,9 +116,9 @@ Downstream consumers: `genai-pre-prod-review` consumes the structured object for
 ## Pointers
 
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
-- `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md` — sector overlays loaded from engagement scope.
+- `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md` — sector overlays loaded from scope.
 - `references/cross-cutting/privacy.md` — privacy overlay, the default cross-cutting overlay for regulated-FS RAG reviews.
-- `references/cross-cutting/cyber.md` — cyber overlay; loads alongside privacy where the engagement scope flags it; carries the indirect-injection adjacency to `prompt-injection-risk`.
+- `references/cross-cutting/cyber.md` — cyber overlay; loads alongside privacy where the scope flags it; carries the indirect-injection adjacency to `prompt-injection-risk`.
 - `references/cross-cutting/conduct.md` — conduct overlay; loads where the use case has a population dimension or feeds customer-facing communications.
 - `references/firm-overlay.md` — firm policy, taxonomy, named metric framework, named owners (consumed when present).
 - `templates/default-output.md` — memo template.

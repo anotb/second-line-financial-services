@@ -102,7 +102,7 @@ The request list is second-line work product. First-line input is welcome on art
 
 ### Loading the wrong sector overlay
 
-Institution type and the regulator the control was designed for drive the sector overlay. HMDA controls pull banking; an adviser compliance-program control pulls capital-markets; a sponsor-bank end-customer reconciliation control pulls payments-fintech and banking together (dual-overlay loading is normal for sponsor-bank arrangements). Do not collapse to one overlay when the engagement scope says two.
+Institution type and the regulator the control was designed for drive the sector overlay. HMDA controls pull banking; an adviser compliance-program control pulls capital-markets; a sponsor-bank end-customer reconciliation control pulls payments-fintech and banking together (dual-overlay loading is normal for sponsor-bank arrangements). Do not collapse to one overlay when the scope says two.
 
 ### Skipping cyber overlay on IAM or Part 500 populations
 
@@ -110,7 +110,7 @@ Cyber overlay is default-on for any control test touching IAM, data-protection, 
 
 ### Skipping privacy overlay on requests touching NPI/PHI/PCI
 
-Privacy overlay loads whenever the request list will pull artifacts containing NPI, PHI, PCI, or other regulated personal data, regardless of how the engagement-scope reads. The overlay drives sensitivity classification, redaction posture, and minimum-necessary discipline at request time.
+Privacy overlay loads whenever the request list will pull artifacts containing NPI, PHI, PCI, or other regulated personal data, regardless of how the scope reads. The overlay drives sensitivity classification, redaction posture, and minimum-necessary discipline at request time.
 
 ## Output discipline
 

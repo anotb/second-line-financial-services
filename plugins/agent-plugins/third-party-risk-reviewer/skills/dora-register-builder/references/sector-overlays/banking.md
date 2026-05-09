@@ -1,6 +1,6 @@
 # Banking sector overlay — dora-register-builder
 
-When the engagement scope flags banking, load this overlay alongside `references/source-anchors.md`. It carries the banking-specific competent-authority and prior-register considerations the generic skill does not own.
+When the scope flags banking, load this overlay alongside `references/source-anchors.md`. It carries the banking-specific competent-authority and prior-register considerations the generic skill does not own.
 
 ## Competent-authority routing
 

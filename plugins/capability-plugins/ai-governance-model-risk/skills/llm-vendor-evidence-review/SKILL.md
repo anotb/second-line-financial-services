@@ -39,7 +39,7 @@ Most of what the review needs is on the table by the time someone reaches for th
 
 - Who co-reviews and attests. The named co-attestors flow from the loaded sector overlay and cross-cutting overlays: MRMO for banking, chief privacy officer for any regulated-data-touching deployment, CISO function for any cyber-flagged review, CCO for any consumer-facing or decisioning-touching deployment.
 
-When the engagement-scope record is supplied, the skill consumes it for institution, persona, source posture, sector and cross-cutting overlays, and the use-case context. Otherwise it asks the practitioner the few facts it needs, and source posture sets what the review can assert at high confidence and what carries `[evidence needed]`.
+When the scope record is supplied, the skill consumes it for institution, persona, source posture, sector and cross-cutting overlays, and the use-case context. Otherwise it asks the practitioner the few facts it needs, and source posture sets what the review can assert at high confidence and what carries `[evidence needed]`.
 
 ## How the review gets filled in
 
@@ -67,11 +67,11 @@ Depth flexes with deployment form, tier, and sector. A hosted-API tier-1 review 
 
 ## Sector and cross-cutting overlays
 
-When the engagement scope names a sector (banking, insurance, capital-markets, payments-fintech), load the matching `references/sector-overlays/<sector>.md`. Each overlay carries sector-specific evidence asks, co-reviewer expectations, re-review triggers, and the named additions to the structured-output `sector_overlay_notes` block. Treating the overlay as background reading is the failure mode; the overlay's named additions land in the review.
+When the scope names a sector (banking, insurance, capital-markets, payments-fintech), load the matching `references/sector-overlays/<sector>.md`. Each overlay carries sector-specific evidence asks, co-reviewer expectations, re-review triggers, and the named additions to the structured-output `sector_overlay_notes` block. Treating the overlay as background reading is the failure mode; the overlay's named additions land in the review.
 
-The cyber cross-cutting overlay should be considered the default for v1 foundation-model evidence reviews. The threat surface a foundation-model vendor exposes is, in the named regulatory anchors' framing, a cybersecurity risk class; the CISO function co-reviews the security and privacy criteria. The privacy and conduct overlays load when the engagement scope flags them: privacy where regulated personal data may flow to vendor-side processing; conduct where the use case touches consumer-facing communications, recommendation, or decisioning. Climate is not applicable.
+The cyber cross-cutting overlay should be considered the default for v1 foundation-model evidence reviews. The threat surface a foundation-model vendor exposes is, in the named regulatory anchors' framing, a cybersecurity risk class; the CISO function co-reviews the security and privacy criteria. The privacy and conduct overlays load when the scope flags them: privacy where regulated personal data may flow to vendor-side processing; conduct where the use case touches consumer-facing communications, recommendation, or decisioning. Climate is not applicable.
 
-Load only the overlays the engagement scope names. Gold-plating with overlays the engagement does not implicate adds noise without challenge value.
+Load only the overlays the scope names. Gold-plating with overlays the engagement does not implicate adds noise without challenge value.
 
 ## Quality bar
 
@@ -91,7 +91,7 @@ The review is only credible when these hold:
 
 ## Adaptation
 
-Deployment form rewires the evidence-ask scoping. Tier drives depth. Review stage drives which sections lean heavy (onboarding emphasises the full sufficiency view; version-delta focuses on what changed against the prior review and the re-review triggers that fired; post-incident emphasises incident-disclosure history and the linked-incident analysis). Audience drives tone. Sector and cross-cutting overlays load from the engagement scope. Source posture sets what the review can assert at high confidence and what carries `[evidence needed]`. Where firm-specific policy or taxonomy applies, it lives in `references/firm-overlay.md` (consumed when present) and never in the review directly.
+Deployment form rewires the evidence-ask scoping. Tier drives depth. Review stage drives which sections lean heavy (onboarding emphasises the full sufficiency view; version-delta focuses on what changed against the prior review and the re-review triggers that fired; post-incident emphasises incident-disclosure history and the linked-incident analysis). Audience drives tone. Sector and cross-cutting overlays load from the scope. Source posture sets what the review can assert at high confidence and what carries `[evidence needed]`. Where firm-specific policy or taxonomy applies, it lives in `references/firm-overlay.md` (consumed when present) and never in the review directly.
 
 ## Output
 
@@ -102,7 +102,7 @@ Downstream consumers: `genai-pre-prod-review` consumes the structured object for
 ## Pointers
 
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
-- `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md` — sector overlays loaded from engagement scope.
+- `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md` — sector overlays loaded from scope.
 - `references/cross-cutting/{cyber,privacy,conduct}.md` — cross-cutting overlays; cyber is the default for v1 GenAI reviews.
 - `references/firm-overlay.md` — firm policy, taxonomy, named owners (consumed when present).
 - `templates/default-output.md` — review template.

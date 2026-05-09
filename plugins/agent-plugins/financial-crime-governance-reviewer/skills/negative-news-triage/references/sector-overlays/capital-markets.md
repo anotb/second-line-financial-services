@@ -1,6 +1,6 @@
 # Capital markets sector overlay — negative-news-triage
 
-When the engagement scope flags capital markets, load this overlay alongside `references/source-anchors.md`. It carries the broker-dealer, mutual-fund, and investment-adviser-specific adverse-media frame the generic capability skill does not own.
+When the scope flags capital markets, load this overlay alongside `references/source-anchors.md`. It carries the broker-dealer, mutual-fund, and investment-adviser-specific adverse-media frame the generic capability skill does not own.
 
 ## What capital-markets adverse-media looks like in practice
 

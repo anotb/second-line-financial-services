@@ -1,6 +1,6 @@
 # Cross-cutting overlay: privacy
 
-Loaded when `engagement-scope.cross_cutting_overlay_set` includes privacy. Carries the data-handling, training-data sourcing, prompt-confidentiality, and consumer-rights frame for foundation-model vendor evidence-pack review.
+Loaded when `scope.cross_cutting_overlay_set` includes privacy. Carries the data-handling, training-data sourcing, prompt-confidentiality, and consumer-rights frame for foundation-model vendor evidence-pack review.
 
 ## Supervisory frame
 

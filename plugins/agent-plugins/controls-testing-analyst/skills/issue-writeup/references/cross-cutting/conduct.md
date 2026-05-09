@@ -1,6 +1,6 @@
 # Conduct cross-cutting overlay — issue-writeup
 
-Loads when the engagement-scope `cross_cutting_overlay_set` includes `conduct`. The overlay shapes the criteria block, the severity calibration, and the closure-evidence framing for issues whose underlying condition involves customer-facing harm, sales-practice deficiencies, market-conduct exposure, or culture-and-conduct-risk patterns.
+Loads when the scope `cross_cutting_overlay_set` includes `conduct`. The overlay shapes the criteria block, the severity calibration, and the closure-evidence framing for issues whose underlying condition involves customer-facing harm, sales-practice deficiencies, market-conduct exposure, or culture-and-conduct-risk patterns.
 
 ## Why the conduct overlay matters
 

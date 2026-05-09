@@ -1,6 +1,6 @@
 # Capital-markets sector overlay — concentration-risk-review
 
-When the engagement scope flags capital markets, load this overlay alongside `references/source-anchors.md`. It carries the capital-markets-specific concentration framings the generic skill does not own.
+When the scope flags capital markets, load this overlay alongside `references/source-anchors.md`. It carries the capital-markets-specific concentration framings the generic skill does not own.
 
 ## Reg SCI concentration on critical SCI systems
 

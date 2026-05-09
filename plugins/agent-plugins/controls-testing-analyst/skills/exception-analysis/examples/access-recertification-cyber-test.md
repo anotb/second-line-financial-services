@@ -11,7 +11,7 @@ The eight raw deviations from the workpaper:
 - One privileged-access packet recorded an entitlement removal that was not actually revoked in the IAM system at the time of testing.
 - One packet was for a user no longer employed at the entity (HR offboarded, IAM still provisioned).
 
-The test plan's tolerable deviation rate was set at 5% on standard entitlements and 0% on privileged. Source posture is public-plus-firm-policy-plus-evidence. The engagement scope flags capital-markets sector (the entity is a registered investment adviser) and cyber cross-cutting overlay. The privileged-access exception falls under the firm policy floor that all privileged-access deviations open at critical severity.
+The test plan's tolerable deviation rate was set at 5% on standard entitlements and 0% on privileged. Source posture is public-plus-firm-policy-plus-evidence. The scope flags capital-markets sector (the entity is a registered investment adviser) and cyber cross-cutting overlay. The privileged-access exception falls under the firm policy floor that all privileged-access deviations open at critical severity.
 
 ## Why this scenario matters
 

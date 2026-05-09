@@ -1,6 +1,6 @@
 # Sector overlay: insurance — board AI risk pack
 
-Loaded when the engagement scope names insurance. The overlay carries content that lands in the pack, not background reading.
+Loaded when the scope names insurance. The overlay carries content that lands in the pack, not background reading.
 
 ## Framing
 

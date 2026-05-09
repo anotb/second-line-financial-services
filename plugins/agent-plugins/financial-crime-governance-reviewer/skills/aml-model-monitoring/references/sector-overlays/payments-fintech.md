@@ -1,6 +1,6 @@
 # Payments and fintech sector overlay — aml-model-monitoring
 
-When the engagement scope flags payments-fintech, load this overlay alongside `references/source-anchors.md`. Sponsor-bank programs, money-transmitter licensees, P2P operators, prepaid issuers, third-party payment processors, and BaaS programs all carry monitoring nuance the generic skill does not own.
+When the scope flags payments-fintech, load this overlay alongside `references/source-anchors.md`. Sponsor-bank programs, money-transmitter licensees, P2P operators, prepaid issuers, third-party payment processors, and BaaS programs all carry monitoring nuance the generic skill does not own.
 
 ## Operative-program read
 

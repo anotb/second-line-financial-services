@@ -27,7 +27,7 @@
     },
     "engagement_id": {
       "type": "string",
-      "description": "Optional pointer to the engagement-scope record under which this binder was assembled."
+      "description": "Optional pointer to the scope record under which this binder was assembled."
     },
     "binder_purpose": {
       "type": "string",
@@ -85,7 +85,7 @@
         "public-plus-firm-policy-plus-evidence",
         "connector-aware"
       ],
-      "description": "Evidence-access posture set at engagement-scope time. Drives what the binder can claim at high confidence vs. what carries [evidence needed]."
+      "description": "Evidence-access posture set at scope time. Drives what the binder can claim at high confidence vs. what carries [evidence needed]."
     },
     "request_list": {
       "type": "array",

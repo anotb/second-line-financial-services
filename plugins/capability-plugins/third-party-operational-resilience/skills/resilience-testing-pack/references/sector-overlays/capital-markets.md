@@ -1,6 +1,6 @@
 # Capital-markets sector overlay — resilience-testing-pack
 
-When the engagement scope flags capital markets, load this overlay alongside `references/source-anchors.md`. It carries the capital-markets-only frame the generic capability skill does not own.
+When the scope flags capital markets, load this overlay alongside `references/source-anchors.md`. It carries the capital-markets-only frame the generic capability skill does not own.
 
 ## Operative supervisory frame
 

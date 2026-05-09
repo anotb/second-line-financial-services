@@ -3,7 +3,7 @@
 **Subject ID**: [customer record ID; placeholder for sample]
 **Subject (role)**: [customer type only; no named natural persons or institutions in narrative]
 **Institution type**: [bank | broker-dealer | mutual fund | covered-product life insurer | FCM/IB | MSB | fintech (sponsor-bank) | covered investment adviser | other]
-**Engagement ID**: [pointer to engagement-scope record, or "none — scope not formalised"]
+**Engagement ID**: [pointer to scope record, or "none — scope not formalised"]
 **Triage scope**: [onboarding | periodic_refresh | event_driven | bulk_rescan]
 **Trigger** (event-driven only): [named alert; regulator press release; court filing; counterparty event; other]
 **Triage performed**: [date]

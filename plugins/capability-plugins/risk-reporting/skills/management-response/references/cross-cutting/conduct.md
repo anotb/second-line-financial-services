@@ -1,8 +1,8 @@
 # Conduct cross-cutting overlay for management-response
 
-When the engagement-scope record flags `conduct` for a management-response engagement, this overlay sets conduct-specific evidence-of-effectiveness expectations and the customer-remediation strand for findings touching customer-conduct controls, fair-lending controls, retail-investor-protection controls, and unfair-deceptive-acts-or-practices.
+When the scope record flags `conduct` for a management-response engagement, this overlay sets conduct-specific evidence-of-effectiveness expectations and the customer-remediation strand for findings touching customer-conduct controls, fair-lending controls, retail-investor-protection controls, and unfair-deceptive-acts-or-practices.
 
-Loaded by: `management-response/SKILL.md` when `engagement_scope.cross_cutting_overlay_set` includes `conduct`. Cited and section-referenced anchors live in `references/source-anchors.md`.
+Loaded by: `management-response/SKILL.md` when `scope.cross_cutting_overlay_set` includes `conduct`. Cited and section-referenced anchors live in `references/source-anchors.md`.
 
 ## Source basis
 

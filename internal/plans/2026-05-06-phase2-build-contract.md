@@ -8,7 +8,7 @@ This contract is the constraint set for building one skill. It is short on purpo
 
 ## Read first
 
-- The plan: `docs/plans/2026-05-06-rationalized-plugin-map.md`. The amendment sections "Design principle: references hold the regulator, SKILL.md holds the workflow" and "New primitive: engagement-scoping" are mid-phase-1 additions you must follow.
+- The plan: `docs/plans/2026-05-06-rationalized-plugin-map.md`. The amendment sections "Design principle: references hold the regulator, SKILL.md holds the workflow" and "New primitive: scoping" are mid-phase-1 additions you must follow.
 - The project memory under `~/.claude/projects/-Users-anot-Sync-code-second-line-financial-services/memory/` — voice and audience, 1.5/2-line lens, references-first design, locked v1 decisions.
 - The plugin's audit memo at `docs/specs/<your-plugin>/AUDIT.md`.
 - The spec sheet for your skill at `docs/specs/<your-plugin>/<your-skill>.md` — that is the contract for what your skill produces.
@@ -23,10 +23,10 @@ The companion memory `feedback_anti_ai_tells.md` is required reading before you 
 - **Default and flag, do not gate and stop.** Skills work with the inputs they have and note the defaults in `assumptions_and_dependencies` (or the equivalent). They do not block on missing inputs except where a load-bearing precondition genuinely fails.
 - **No `[verify section]` markers in SKILL.md.** Verification flags belong in `references/source-anchors.md`.
 - **Drop the "Anchored to:" line from the description entirely.** Description shape is one-line summary + `Best for:` + `Not the right tool when:`. Named regulators belong in `references/source-anchors.md` where they load conditionally. The description is for activation gating; named regs do not help that gate.
-- **SKILL.md body uses generic workflow language. No specific regulator names in narrative.** The body talks about "the named regulatory anchors", "the supervisory expectation", "the firm's regulator constellation". When the engagement scope flags a regulator, the skill loads the matching reference file. Embedding US-only sections in the body pollutes context for engagements addressing other regulators.
+- **SKILL.md body uses generic workflow language. No specific regulator names in narrative.** The body talks about "the named regulatory anchors", "the supervisory expectation", "the firm's regulator constellation". When the scope flags a regulator, the skill loads the matching reference file. Embedding US-only sections in the body pollutes context for engagements addressing other regulators.
 - **Drop the "What's load-bearing and what flexes" section.** It is engineer-speak structural pretense. Non-negotiables (cite source, no fabrication, separate evidence from inference, human review gate, no named institutions) belong inline in the workflow narrative. Adaptation guidance (audience, sector overlay loading, depth) also belongs inline. Both fold into the workflow.
-- **Schemas are optional, not required. Skip schema files unless the artifact has a structure that genuinely helps downstream automation.** Where a schema does help (DORA register row mapping to an EBA ITS table; engagement-scope record consumed across the repo; sanctions-screening alert payload), write it. No shared `_defs.json` or cross-skill enum forcing — skills are for Claude to use, not regex-like output contracts. Don't enumerate severity / confidence / owner_role into rigid enums; descriptive strings serve.
-- **Match the voice and depth to the artifact's character.** Anthropic's `comps-analysis` is judgement-shaped (conversational, "ask yourself first", adapt-to-context); `dcf-model` is structured-artifact-shaped (numbered steps, "NON-NEGOTIABLE" callouts, named fields). Use whichever fits the skill. `engagement-scoping` (the canonical reference) is judgement-shaped because scoping is judgement work. A register builder, a control matrix, or a tier-driven card is structured-artifact-shaped. Pick before drafting; don't apply one voice mechanically.
+- **Schemas are optional, not required. Skip schema files unless the artifact has a structure that genuinely helps downstream automation.** Where a schema does help (DORA register row mapping to an EBA ITS table; scope record consumed across the repo; sanctions-screening alert payload), write it. No shared `_defs.json` or cross-skill enum forcing — skills are for Claude to use, not regex-like output contracts. Don't enumerate severity / confidence / owner_role into rigid enums; descriptive strings serve.
+- **Match the voice and depth to the artifact's character.** Anthropic's `comps-analysis` is judgement-shaped (conversational, "ask yourself first", adapt-to-context); `dcf-model` is structured-artifact-shaped (numbered steps, "NON-NEGOTIABLE" callouts, named fields). Use whichever fits the skill. `scoping` (the canonical reference) is judgement-shaped because scoping is judgement work. A register builder, a control matrix, or a tier-driven card is structured-artifact-shaped. Pick before drafting; don't apply one voice mechanically.
 - **Deliverables are practitioner-natural formats: Word, Excel, PowerPoint. Markdown is the content spec, not the deliverable.** Practitioners file Word memos, present PowerPoint decks, work in Excel matrices. Skills define the artifact substance (named sections, fields, populated content) and DELEGATE rendering to Anthropic's `document-skills` plugin — `docx` for memos and write-ups, `xlsx` for matrices/registers/workpapers, `pptx` for committee and board decks. Same pattern Anthropic's `pitch-agent` uses. SKILL.md names the format and the rendering skill explicitly. `templates/default-output.md` carries the content structure (markdown is fine there — it's the renderer's input). The plugin README notes `document-skills` as a required companion plugin.
 - **Sequencing where the order actually matters; not as structure for its own sake.** Claude executes the skill at runtime, so explicit sequencing is helpful where there is a real dependency chain (e.g., tier the model before setting model-card depth; gather upstream artifacts before drafting). What fails is padding — "10-step workflow" when the work has a spine, not ten dependent steps; numbered steps for parts that can run in any order; "Step 1: Confirm what triggered the engagement" when the trigger is obvious from the input. Test each numbered step: does the next step depend on this one's output? If not, fold into prose or a flat list.
 - **Drop fake-precision ranges.** "Three to five exclusions", "three is normal, five is a stretch", "in 5-10 minutes", "Tier-1 cards have 12 sections" — these are AI tells. Empirically grounded numbers (e.g., "Reg E gives 10 days for provisional credit") stay; comfort-precision ranges go.
@@ -49,8 +49,8 @@ What this means in practice:
 
 **Flexible where flexibility matters** (state these as "ask yourself first" or "adapt to context"):
 - Artifact format depth — committee pack might be slides for the board, a memo for the working group, a one-pager for the CRO. Ask the audience.
-- Sector tailoring — the engagement scope drives which sector overlay reference doc the skill loads. Skill consults the engagement scope or asks if missing.
-- Cross-cutting overlays — same logic. Cyber, privacy, climate, conduct enter the skill's analysis when the engagement scope flags them.
+- Sector tailoring — the scope drives which sector overlay reference doc the skill loads. Skill consults the scope or asks if missing.
+- Cross-cutting overlays — same logic. Cyber, privacy, climate, conduct enter the skill's analysis when the scope flags them.
 - Tone and length — a partner-facing brief is not a board minute is not an examiner-response file. Adapt.
 - Firm overlays — if a `references/firm-overlay.md` exists, consume it. If not, default to public posture.
 
@@ -78,7 +78,7 @@ plugins/<type>/<plugin>/skills/<skill>/
   templates/
     default-output.md                   # named-section template for the artifact
   schemas/                              # OPTIONAL: only if the artifact has a structure that genuinely helps downstream automation
-    <output>.schema.json                # examples: DORA register row maps to EBA ITS table; engagement-scope record consumed by every skill
+    <output>.schema.json                # examples: DORA register row maps to EBA ITS table; scope record consumed by every skill
   examples/
     <public-source-derived>.md          # one to three worked examples
   TROUBLESHOOTING.md                    # optional: common pitfalls
@@ -97,11 +97,11 @@ What goes in:
 2. Body:
    - Overview — one paragraph on what the skill produces and who consumes it.
    - "Ask yourself first" prompts — three to five questions a senior practitioner asks before starting (audience, scope, source posture, decision being supported, time pressure). Pattern from `comps-analysis`.
-   - Engagement scope integration — if `engagement-scope` (per `risk-compliance-core/engagement-scoping`) is supplied, consume it; if not, ask the practitioner the relevant questions or default to public posture.
+   - Engagement scope integration — if `scope` (per `risk-compliance-core/scoping`) is supplied, consume it; if not, ask the practitioner the relevant questions or default to public posture.
    - Workflow — the actual steps the skill performs, with the decision points called out. This is the bulk of the file.
    - Non-negotiable rigidities — flagged sharply. Citation, separation, no fabrication, human review gate.
    - Adaptation guidance — what to flex on (audience, depth, format, sector, cross-cutting).
-   - Pointers to references — `references/source-anchors.md` for citations, `references/sector-overlays/<sector>.md` for sector flavor when the engagement scope flags that sector, `references/cross-cutting/<topic>.md` for cross-cutting overlays, `references/firm-overlay.md` if a firm has installed one.
+   - Pointers to references — `references/source-anchors.md` for citations, `references/sector-overlays/<sector>.md` for sector flavor when the scope flags that sector, `references/cross-cutting/<topic>.md` for cross-cutting overlays, `references/firm-overlay.md` if a firm has installed one.
    - Output handoff — what the skill emits, what schema it conforms to, what reviewer signs off.
 
 What stays out:
@@ -133,7 +133,7 @@ The artifact's actual named sections, in practitioner vocabulary. Not a generic 
 - For `dora-register-builder`: section headings aligned to the EBA ITS Register of Information tables.
 - For `risk-committee-pack`: `## Heat map by risk type`, `## Top risks`, `## Material risk events`, `## KRI movement and breaches`, `## Issues and remediation status`, `## Forward-looking commentary`, `## Decision items`.
 
-The template is a starting structure with placeholder content, not a forced shape. The artifact adapts to audience and engagement scope. Practitioners will edit the template down or up depending on context.
+The template is a starting structure with placeholder content, not a forced shape. The artifact adapts to audience and scope. Practitioners will edit the template down or up depending on context.
 
 ## schemas/<output>.schema.json contract
 
@@ -169,16 +169,16 @@ Subagent watchdog kills at 600 seconds without progress. Strategies that worked 
 - Save SKILL.md and source-anchors last so the rest exists if you stall.
 - Do not over-research. The spec sheet has the source list; the activation-tuned description has the anchored-to list. You are not rediscovering regulation.
 
-## engagement-scoping integration
+## scoping integration
 
-If your skill is `engagement-scoping` itself, you are setting the bootstrapping pattern.
+If your skill is `scoping` itself, you are setting the bootstrapping pattern.
 
 Otherwise: your SKILL.md should include an "Engagement scope" subsection with two paths:
 
-- **Engagement scope supplied** — consume the structured engagement-scope record. Use `institution.type` and `institution.primary_regulators` to set tone and citation focus. Use `sector_overlay_set` to load the matching `references/sector-overlays/<sector>.md`. Use `cross_cutting_overlay_set` to load matching `references/cross-cutting/<topic>.md`. Use `persona.role` to set the artifact audience and review gate. Use `source_posture` to set evidence asks.
+- **Engagement scope supplied** — consume the structured scope record. Use `institution.type` and `institution.primary_regulators` to set tone and citation focus. Use `sector_overlay_set` to load the matching `references/sector-overlays/<sector>.md`. Use `cross_cutting_overlay_set` to load matching `references/cross-cutting/<topic>.md`. Use `persona.role` to set the artifact audience and review gate. Use `source_posture` to set evidence asks.
 - **Engagement scope not supplied** — ask the practitioner four questions: institution type, primary regulator(s), persona/audience, source posture. Default to public posture if the practitioner declines. Note in the artifact that scope was not formalized.
 
-The engagement-scope is consultative input, not a hard precondition. The skill works without it.
+The scope is consultative input, not a hard precondition. The skill works without it.
 
 ## Customization posture
 

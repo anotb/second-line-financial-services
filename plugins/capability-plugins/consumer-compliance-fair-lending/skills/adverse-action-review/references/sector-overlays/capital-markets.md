@@ -1,8 +1,8 @@
 # Capital markets sector overlay for adverse-action-review
 
-When the engagement-scope record names sector `capital-markets`, this overlay adds capital-markets-specific scope to the adverse-action notice review. The overlay is narrow because most capital-markets credit extension is institutional and outside ECOA scope.
+When the scope record names sector `capital-markets`, this overlay adds capital-markets-specific scope to the adverse-action notice review. The overlay is narrow because most capital-markets credit extension is institutional and outside ECOA scope.
 
-Loaded by: `adverse-action-review/SKILL.md` when `engagement_scope.sector_overlay_set` includes `capital-markets`, or when the institution type is a broker-dealer, prime broker, or wealth-management entity extending credit to retail customers.
+Loaded by: `adverse-action-review/SKILL.md` when `scope.sector_overlay_set` includes `capital-markets`, or when the institution type is a broker-dealer, prime broker, or wealth-management entity extending credit to retail customers.
 
 Cited and section-referenced anchors live in `references/source-anchors.md`.
 

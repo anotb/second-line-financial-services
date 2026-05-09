@@ -36,7 +36,7 @@ Settle a few facts before drafting. Most extractions answer them in the first co
 - **What is the source posture for this extraction.** Public-only is the default for net-new rule text; the rule itself is public. The register can be portable across firms when the source posture is public-only. Firm-policy posture is not relevant to this skill; that posture lives downstream in obligation-mapping.
 - **What is the boundary against the firm.** This skill produces a firm-agnostic register. The firm's risk taxonomy, control library, named owners, system-of-record paths, and review machinery do not belong in any row. If those facts are needed, the work is in obligation-mapping, not here.
 
-When an `engagement-scope` record is supplied, the skill consumes it for the source posture and the sector and cross-cutting overlay set. Otherwise it asks the four questions and defaults to public-only posture if the practitioner declines. The register notes when scope was not formalised.
+When an `scope` record is supplied, the skill consumes it for the source posture and the sector and cross-cutting overlay set. Otherwise it asks the four questions and defaults to public-only posture if the practitioner declines. The register notes when scope was not formalised.
 
 ## How the register gets built
 
@@ -67,7 +67,7 @@ The tail of the register surfaces what the body cannot. **Cross-references and d
 
 ## Sector and cross-cutting overlays
 
-Same row spine across sectors and cross-cutting topics; different source labels and different rigor expectations. Load only the overlays the engagement scope flags. The overlays do not change the row structure; they change which sources the register is permitted to cite and which extraction patterns the practitioner expects to find.
+Same row spine across sectors and cross-cutting topics; different source labels and different rigor expectations. Load only the overlays the scope flags. The overlays do not change the row structure; they change which sources the register is permitted to cite and which extraction patterns the practitioner expects to find.
 
 - `references/sector-overlays/banking.md` — banking-rule citation conventions (12 CFR Part X §Y; Title 12 sub-chapter structure); recurrent extraction patterns for OCC bulletins, FRB SR letters, FDIC FILs, NCUA letters; FFIEC inter-agency-statement parsing; the 36-hour bank notification rule (12 CFR Part 53; 12 CFR Part 225; 12 CFR Part 304) as a worked pattern.
 - `references/sector-overlays/insurance.md` — NAIC Model Law adoption tracking (model number plus state-by-state status); how to decompose a model law versus a state-adopted version; ORSA (Model 505) and Cybersecurity Insurance Data Security Model Law (Model 668) as worked patterns; market-conduct extraction conventions.
@@ -101,7 +101,7 @@ Material claims cite a source from the source list. `[evidence needed]` flags it
 
 ## Adaptation
 
-Audience drives shape: a regulatory-change-committee pre-read clusters open questions to the front; a policy-owner working file pulls cross-references forward; a downstream-handoff package sequences rows by section to match the rule's reading order. Sector and cross-cutting overlays load from the engagement scope. Confidence labels track by row, not as a single overall label, because most extractions have high-confidence rows (codified-section anchors) and lower-confidence rows (preamble-only, contested interpretation) side by side.
+Audience drives shape: a regulatory-change-committee pre-read clusters open questions to the front; a policy-owner working file pulls cross-references forward; a downstream-handoff package sequences rows by section to match the rule's reading order. Sector and cross-cutting overlays load from the scope. Confidence labels track by row, not as a single overall label, because most extractions have high-confidence rows (codified-section anchors) and lower-confidence rows (preamble-only, contested interpretation) side by side.
 
 ## Output
 
@@ -112,8 +112,8 @@ Downstream consumers: `risk-compliance-core/obligation-mapping` reads `obligatio
 ## Pointers
 
 - `references/source-anchors.md` — citations and excerpts for the named anchors (Federal Register and CFR conventions; SEC and CFPB and OCC and FRB and FDIC and FinCEN and NCUA; EU regulation structure; FCA handbook; NAIC model laws; supervisory-letter formats).
-- `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md` — sector overlays loaded from engagement scope.
-- `references/cross-cutting/{cyber,privacy,climate,conduct}.md` — cross-cutting overlays loaded from engagement scope.
+- `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md` — sector overlays loaded from scope.
+- `references/cross-cutting/{cyber,privacy,climate,conduct}.md` — cross-cutting overlays loaded from scope.
 - `templates/default-output.md` — register template.
 - `schemas/rule-to-obligation-extraction.schema.json` — structured-output contract.
 - `examples/` — SEC cybersecurity disclosure final rule (Item 1.05; Reg S-K Item 106) decomposed into atomic obligations; CFPB Section 1071 small-business-lending data rule (12 CFR 1002.107) decomposed into atomic obligations.

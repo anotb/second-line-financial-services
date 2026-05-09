@@ -1,6 +1,6 @@
 # Payments-fintech sector overlay — section1071-readiness
 
-When the engagement scope flags payments-fintech, load this overlay alongside `references/source-anchors.md`. Fintech small-business lending sits in §1071 scope where the fintech is the covered financial institution, and sponsor-bank arrangements raise their own attribution question.
+When the scope flags payments-fintech, load this overlay alongside `references/source-anchors.md`. Fintech small-business lending sits in §1071 scope where the fintech is the covered financial institution, and sponsor-bank arrangements raise their own attribution question.
 
 ## Sponsor-bank attribution and CFI determination
 

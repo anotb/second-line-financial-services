@@ -1,6 +1,6 @@
 # Banking sector overlay — concentration-risk-review
 
-When the engagement scope flags banking, load this overlay alongside `references/source-anchors.md`. It carries the banking-specific concentration framings the generic skill does not own.
+When the scope flags banking, load this overlay alongside `references/source-anchors.md`. It carries the banking-specific concentration framings the generic skill does not own.
 
 ## Hyperscaler-on-bank concentration
 

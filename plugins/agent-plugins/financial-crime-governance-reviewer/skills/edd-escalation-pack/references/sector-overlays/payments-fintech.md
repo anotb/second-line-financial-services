@@ -1,6 +1,6 @@
 # Payments-fintech sector overlay — edd-escalation-pack
 
-When the engagement scope flags payments or fintech (sponsor-bank model, licensed MSB, payment processor, BaaS arrangement, neobank, virtual-asset on-ramp / off-ramp), load this overlay alongside `references/source-anchors.md`. It carries the fintech-and-payments EDD frame the generic capability skill does not own.
+When the scope flags payments or fintech (sponsor-bank model, licensed MSB, payment processor, BaaS arrangement, neobank, virtual-asset on-ramp / off-ramp), load this overlay alongside `references/source-anchors.md`. It carries the fintech-and-payments EDD frame the generic capability skill does not own.
 
 ## Regulatory perimeter — the EDD pack's first read
 

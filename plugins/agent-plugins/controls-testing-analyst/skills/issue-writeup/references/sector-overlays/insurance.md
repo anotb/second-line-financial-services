@@ -1,6 +1,6 @@
 # Insurance sector overlay — issue-writeup
 
-Loads when the engagement-scope `sector_overlay_set` includes `insurance`. The overlay shapes the criteria block, the severity calibration, and the closure-evidence framing for issues at US insurance companies (P&C, life, health, reinsurance) supervised by state DOIs and coordinated through the NAIC.
+Loads when the scope `sector_overlay_set` includes `insurance`. The overlay shapes the criteria block, the severity calibration, and the closure-evidence framing for issues at US insurance companies (P&C, life, health, reinsurance) supervised by state DOIs and coordinated through the NAIC.
 
 ## Why the insurance overlay matters
 

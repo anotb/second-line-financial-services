@@ -1,6 +1,6 @@
 # Cyber cross-cutting overlay — resilience-testing-pack
 
-When the engagement scope flags cyber, or whenever the testing pack covers a vendor or IBS where a cyber-event is in the scenario set, load this overlay. Cyber is in scope by default for AI vendors and for any IBS reaching NPI, PHI, PCI, customer prompts, or important-business-service controls.
+When the scope flags cyber, or whenever the testing pack covers a vendor or IBS where a cyber-event is in the scenario set, load this overlay. Cyber is in scope by default for AI vendors and for any IBS reaching NPI, PHI, PCI, customer prompts, or important-business-service controls.
 
 ## Operative anchors
 

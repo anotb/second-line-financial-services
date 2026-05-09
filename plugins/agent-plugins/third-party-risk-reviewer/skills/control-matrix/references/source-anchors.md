@@ -118,10 +118,10 @@ Link: https://www.ftc.gov/legal-library/browse/rules/safeguards-rule
 
 Anchor: AI RMF Core functions (Govern, Map, Measure, Manage); AI 600-1 risk subcategories specific to generative AI. [verify subcategory numbering against the current Profile edition.]
 
-What this skill relies on: that AI-system control matrices can map AI-RMF-aligned obligations to firm controls when the engagement scope flags AI as in scope; the AI overlay is consumed via the AI-governance plugin's references, not duplicated here.
+What this skill relies on: that AI-system control matrices can map AI-RMF-aligned obligations to firm controls when the scope flags AI as in scope; the AI overlay is consumed via the AI-governance plugin's references, not duplicated here.
 
 Link: https://www.nist.gov/itl/ai-risk-management-framework
 
 ## Sector-specific anchors
 
-The sector-overlay files (`references/sector-overlays/<sector>.md`) enumerate sector-specific anchors. The cross-cutting overlays (`references/cross-cutting/<topic>.md`) enumerate cross-cutting anchors. This file is the foundational set; the overlays add what the engagement scope requires.
+The sector-overlay files (`references/sector-overlays/<sector>.md`) enumerate sector-specific anchors. The cross-cutting overlays (`references/cross-cutting/<topic>.md`) enumerate cross-cutting anchors. This file is the foundational set; the overlays add what the scope requires.

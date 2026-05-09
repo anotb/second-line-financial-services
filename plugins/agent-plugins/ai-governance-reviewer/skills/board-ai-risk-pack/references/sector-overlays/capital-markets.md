@@ -1,6 +1,6 @@
 # Sector overlay: capital markets — board AI risk pack
 
-Loaded when the engagement scope names capital markets (broker-dealer, investment adviser, or both). The overlay carries content that lands in the pack, not background reading.
+Loaded when the scope names capital markets (broker-dealer, investment adviser, or both). The overlay carries content that lands in the pack, not background reading.
 
 ## Framing
 

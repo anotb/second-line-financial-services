@@ -1,8 +1,8 @@
 # Payments and fintech sector overlay for udaap-risk-review
 
-When the engagement-scope record names sector `payments-fintech`, this overlay adds payments- and fintech-specific fact patterns, evidence sources, and accountability framing to the UDAAP memo. Where there is conflict between the capability defaults and this overlay, the overlay governs the sector elements.
+When the scope record names sector `payments-fintech`, this overlay adds payments- and fintech-specific fact patterns, evidence sources, and accountability framing to the UDAAP memo. Where there is conflict between the capability defaults and this overlay, the overlay governs the sector elements.
 
-Loaded by: `udaap-risk-review/SKILL.md` when `engagement_scope.sector_overlay_set` includes `payments-fintech`, or when the institution type implicates a fintech consumer-credit platform, sponsor-bank-program operator, BNPL provider, prepaid issuer, P2P or instant-payment platform, neobank, or non-bank consumer-finance entity.
+Loaded by: `udaap-risk-review/SKILL.md` when `scope.sector_overlay_set` includes `payments-fintech`, or when the institution type implicates a fintech consumer-credit platform, sponsor-bank-program operator, BNPL provider, prepaid issuer, P2P or instant-payment platform, neobank, or non-bank consumer-finance entity.
 
 Cited and section-referenced anchors live in `references/source-anchors.md`.
 

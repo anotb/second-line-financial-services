@@ -10,7 +10,7 @@ The set is a draft until the second-line lead and the head of risk reporting rev
 
 - Reporting period: [YYYY-MM-DD] to [YYYY-MM-DD]
 - Risk taxonomy in force: [firm taxonomy name and version]
-- Engagement-scope ID (if `engagement-scoping` was run): [ID]
+- Engagement-scope ID (if `scoping` was run): [ID]
 - Aggregate counts: RED [n], AMBER [n], at trigger or breach [n]
 - Aggregate confidence label: [high / medium / low / unknown]
 

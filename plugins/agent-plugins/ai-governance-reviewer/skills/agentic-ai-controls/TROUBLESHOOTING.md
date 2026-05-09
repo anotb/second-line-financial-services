@@ -118,6 +118,6 @@ Fix: for any TPA-run agent, the controls review requests the TPA's §4.F evidenc
 
 ## Engagement scope not formalised
 
-When the engagement-scope record is not supplied and the practitioner declines to formalise scope, the review still proceeds against a default public posture but should record the omission.
+When the scope record is not supplied and the practitioner declines to formalise scope, the review still proceeds against a default public posture but should record the omission.
 
-Fix: the review-metadata section notes that engagement scope was not formalised; the recommended-actions section includes formalising engagement scope as a low-or-medium-severity item; the source-trace confidence labels reflect the lack of formalised scope on items that would have been resolved by it.
+Fix: the review-metadata section notes that scope was not formalised; the recommended-actions section includes formalising scope as a low-or-medium-severity item; the source-trace confidence labels reflect the lack of formalised scope on items that would have been resolved by it.

@@ -1,6 +1,6 @@
 # Payments-fintech sector overlay — criticality-assessment
 
-When the engagement scope flags payments or fintech, load this overlay alongside `references/source-anchors.md`. It carries the payments-fintech-only criteria the generic capability skill does not own.
+When the scope flags payments or fintech, load this overlay alongside `references/source-anchors.md`. It carries the payments-fintech-only criteria the generic capability skill does not own.
 
 ## Operative supervisory frame
 

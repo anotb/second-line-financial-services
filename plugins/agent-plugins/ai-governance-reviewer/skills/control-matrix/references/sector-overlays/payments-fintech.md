@@ -1,13 +1,13 @@
 # Payments and fintech sector overlay — control-matrix
 
-Loads when the engagement-scope `sector_overlay_set` includes `payments-fintech`. Binds matrix construction to bank-partnership, money-transmitter, and payment-network supervisory expectations.
+Loads when the scope `sector_overlay_set` includes `payments-fintech`. Binds matrix construction to bank-partnership, money-transmitter, and payment-network supervisory expectations.
 
 ## Supervisory frame
 
 The supervisory map for fintechs splits by structure:
 
 - **Direct-chartered fintech bank** — supervised under the bank overlay (use `banking.md` instead of or in addition to this file). The matrix is read by the bank's primary federal regulator and any state.
-- **Sponsor-bank-partnership fintech** — examined indirectly through the sponsor bank under the interagency third-party guidance (June 2023). The matrix may need to evidence the partner-bank-side controls and the fintech-side controls; the engagement scope names which side the matrix represents. The OCC's bank-partnership posture has tightened since 2023 and matrix rows for sponsor-bank oversight controls are increasingly examiner-probed.
+- **Sponsor-bank-partnership fintech** — examined indirectly through the sponsor bank under the interagency third-party guidance (June 2023). The matrix may need to evidence the partner-bank-side controls and the fintech-side controls; the scope names which side the matrix represents. The OCC's bank-partnership posture has tightened since 2023 and matrix rows for sponsor-bank oversight controls are increasingly examiner-probed.
 - **Non-bank fintech with state money-transmitter licenses** — examined state-by-state under the NMLS framework. The matrix is read by state DFS examiners; common-state coordination via the NMLS State Coordinating Committee for multistate exams.
 - **Card-network participant** — additional rule-set from network operating rules (Visa, Mastercard, Discover, Amex), PCI DSS, and (for MSBs) FinCEN.
 - **CFPB larger-participant** — larger-participant rules under Dodd-Frank §1024 extend CFPB direct examination to fintechs above the size threshold for the relevant market (general-purpose consumer reporting, consumer-debt collection, student-loan servicing, international money transfer, automobile financing, larger-participant general-use prepaid card).
@@ -68,7 +68,7 @@ For larger-participant fintechs and for fintechs the CFPB has elected to supervi
 
 Sponsor-bank matrices for fintech-partnership oversight are signed by the bank's BSA officer or chief compliance officer. Fintech-side matrices are signed by the fintech's BSA officer (where MSB-registered), CCO, or both depending on scope. Network-rule matrices are signed by the head of payments operations.
 
-For BaaS arrangements specifically, the matrix may need to evidence both sides; the engagement-scope record names which side this matrix represents.
+For BaaS arrangements specifically, the matrix may need to evidence both sides; the scope record names which side this matrix represents.
 
 ## Anchors used by this overlay
 

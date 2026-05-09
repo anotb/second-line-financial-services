@@ -1,6 +1,6 @@
 # Cyber cross-cutting overlay — sanctions-screening-qa
 
-When the engagement scope flags cyber, or when the sanctions program touches virtual-currency activity, ransomware-payment paths, or cyber-enabled identity exposure at any rail, load this overlay alongside `references/source-anchors.md`. The overlay scopes narrowly to **sanctions-evasion via cyber and tech**, not generic cyber controls. Generic cyber controls (NYDFS Part 500 program-level, SEC cyber 8-K disclosure) sit elsewhere in the repo and are not duplicated here.
+When the scope flags cyber, or when the sanctions program touches virtual-currency activity, ransomware-payment paths, or cyber-enabled identity exposure at any rail, load this overlay alongside `references/source-anchors.md`. The overlay scopes narrowly to **sanctions-evasion via cyber and tech**, not generic cyber controls. Generic cyber controls (NYDFS Part 500 program-level, SEC cyber 8-K disclosure) sit elsewhere in the repo and are not duplicated here.
 
 ## Operative public anchors
 

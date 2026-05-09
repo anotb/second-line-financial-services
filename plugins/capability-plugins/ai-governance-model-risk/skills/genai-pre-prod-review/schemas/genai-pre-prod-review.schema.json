@@ -32,7 +32,7 @@
         "requested_date": { "type": "string", "format": "date" },
         "review_date": { "type": "string", "format": "date" },
         "recommended_decision_date": { "type": "string", "format": "date" },
-        "engagement_scope_id": { "type": "string" },
+        "scope_id": { "type": "string" },
         "reviewer_role": { "type": "string", "description": "Function consolidating the review (typically AI Governance Lead or AI risk committee secretary)." }
       }
     },

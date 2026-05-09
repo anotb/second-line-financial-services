@@ -12,7 +12,7 @@ It exercises the cross-border supervisory lens. Principle 14 (home/host cooperat
 
 ```yaml
 assessment_id: BCBS239-2026-ECB-SREP-02
-engagement_scope_id: ENG-2026-ECB-SREP-02
+scope_id: ENG-2026-ECB-SREP-02
 
 scope:
   legal_entity_perimeter:

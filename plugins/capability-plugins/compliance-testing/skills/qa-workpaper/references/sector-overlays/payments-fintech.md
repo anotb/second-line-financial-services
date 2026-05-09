@@ -1,6 +1,6 @@
 # Payments-fintech sector overlay — qa-workpaper
 
-Loaded when `engagement-scope.sector_overlay_set` includes `payments-fintech` or when the QA review covers a workpaper at a payments firm, money-services business, sponsor-bank fintech program, or BIN-sponsorship arrangement. Supplements `references/source-anchors.md`. Pairs with `banking.md` when the test addresses a sponsor-bank arrangement.
+Loaded when `scope.sector_overlay_set` includes `payments-fintech` or when the QA review covers a workpaper at a payments firm, money-services business, sponsor-bank fintech program, or BIN-sponsorship arrangement. Supplements `references/source-anchors.md`. Pairs with `banking.md` when the test addresses a sponsor-bank arrangement.
 
 ## QA conventions for payments-fintech testing workpapers
 

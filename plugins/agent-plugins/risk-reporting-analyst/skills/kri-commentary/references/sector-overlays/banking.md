@@ -1,8 +1,8 @@
 # Banking sector overlay for kri-commentary
 
-When the engagement-scope record flags `banking`, this overlay sets the KRI-commentary content for banks. It does not replace the SKILL.md workflow; it loads on top of it.
+When the scope record flags `banking`, this overlay sets the KRI-commentary content for banks. It does not replace the SKILL.md workflow; it loads on top of it.
 
-Loaded by: `kri-commentary/SKILL.md` when `engagement_scope.sector_overlay_set` includes `banking`. Cited and section-referenced anchors live in `references/source-anchors.md`.
+Loaded by: `kri-commentary/SKILL.md` when `scope.sector_overlay_set` includes `banking`. Cited and section-referenced anchors live in `references/source-anchors.md`.
 
 ## Source basis
 
@@ -32,7 +32,7 @@ During a stress-test cycle, the KRI population the committee sees often includes
 
 ### 4. Cyber and AI KRIs
 
-For NYDFS-licensed bank subsidiaries, cyber KRIs commonly include security-awareness (phishing-test click-through rate), patching cadence, mean time to detect / respond, and CISO-program-maturity self-rating. The cyber overlay (`references/cross-cutting/cyber.md`) loads alongside the banking overlay when the engagement scope flags both.
+For NYDFS-licensed bank subsidiaries, cyber KRIs commonly include security-awareness (phishing-test click-through rate), patching cadence, mean time to detect / respond, and CISO-program-maturity self-rating. The cyber overlay (`references/cross-cutting/cyber.md`) loads alongside the banking overlay when the scope flags both.
 
 For AI-enabled processes, model-risk KRIs (model performance drift, fairness metrics, override rates, governance approvals overdue) are increasingly common. The deeper model-risk material lives in `ai-governance-model-risk`; the KRI commentary carries the metric-level commentary and references the upstream owner.
 

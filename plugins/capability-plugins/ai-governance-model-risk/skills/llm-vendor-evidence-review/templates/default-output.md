@@ -11,7 +11,7 @@ The review is a draft until the human reviewer (AI Governance Lead, plus co-atte
 - Reviewer role: [function, e.g. AI Governance Lead]
 - Review stage: [onboarding / version-delta / periodic-reattestation / post-incident / exam-readiness]
 - Review date: [YYYY-MM-DD]
-- Engagement-scope ID (if `engagement-scoping` was run): [ID]
+- Engagement-scope ID (if `scoping` was run): [ID]
 - Linked vendor-diligence ID (if chained from `vendor-diligence`): [ID]
 
 ---
@@ -137,7 +137,7 @@ Vendor-authored documents default to vendor-self-attestation confidence. Third-p
 
 ## 10. Sector and cross-cutting overlay notes (when applicable)
 
-When the engagement scope names a sector, the matching `references/sector-overlays/<sector>.md` adds named fields here. When cross-cutting overlays are loaded (cyber, privacy, conduct), the matching `references/cross-cutting/<topic>.md` adds named fields here.
+When the scope names a sector, the matching `references/sector-overlays/<sector>.md` adds named fields here. When cross-cutting overlays are loaded (cyber, privacy, conduct), the matching `references/cross-cutting/<topic>.md` adds named fields here.
 
 The overlay-specific structured-output blocks (`sector_overlay_notes`, `cross_cutting_overlay_notes.cyber`, `cross_cutting_overlay_notes.privacy`, `cross_cutting_overlay_notes.conduct`) populate from the loaded overlays.
 

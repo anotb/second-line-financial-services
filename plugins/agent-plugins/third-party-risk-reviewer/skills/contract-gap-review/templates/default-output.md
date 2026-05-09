@@ -3,7 +3,7 @@
 **Vendor**: [legal entity; brand name if different]
 **Contract identifier**: [MSA number, SOW number, order form reference, addenda]
 **Arrangement ID**: [stable ID; reused with criticality-assessment, vendor-diligence, exit-plan]
-**Engagement ID**: [pointer to engagement-scope record, or "none — scope not formalised"]
+**Engagement ID**: [pointer to scope record, or "none — scope not formalised"]
 **As of**: [date]
 **Review type**: [pre-signature | renewal | assignment-or-change-of-control | material-amendment | exit-triggered-re-review | post-incident-re-review | regulatory-change-driven-re-review]
 **Owner (role)**: [e.g., third-party risk manager, contract owner]

@@ -1,8 +1,8 @@
 # Capital markets sector overlay for marketing-claim-review
 
-When the engagement-scope record names sector `capital-markets`, this overlay sets the scope boundary first. Most capital-markets marketing review sits in a different doctrinal lane (the SEC investment adviser Marketing Rule, Rule 206(4)-1; the FINRA communications-with-the-public framework, Rule 2210). This skill is the consumer-financial UDAAP / Reg Z lane and does not extend into those regimes. The overlay is short on purpose.
+When the scope record names sector `capital-markets`, this overlay sets the scope boundary first. Most capital-markets marketing review sits in a different doctrinal lane (the SEC investment adviser Marketing Rule, Rule 206(4)-1; the FINRA communications-with-the-public framework, Rule 2210). This skill is the consumer-financial UDAAP / Reg Z lane and does not extend into those regimes. The overlay is short on purpose.
 
-Loaded by: `marketing-claim-review/SKILL.md` when `engagement_scope.sector_overlay_set` includes `capital-markets`, or when the institution type implicates a broker-dealer, investment adviser, private bank, or wealth-management entity that operates a retail consumer-facing credit, deposit-equivalent, or consumer-finance product surface.
+Loaded by: `marketing-claim-review/SKILL.md` when `scope.sector_overlay_set` includes `capital-markets`, or when the institution type implicates a broker-dealer, investment adviser, private bank, or wealth-management entity that operates a retail consumer-facing credit, deposit-equivalent, or consumer-finance product surface.
 
 Cited and section-referenced anchors live in `references/source-anchors.md`.
 
@@ -14,7 +14,7 @@ The doctrinal lanes:
 - *FINRA Rule 2210.* Communications-with-the-public requirements for FINRA-member broker-dealers (categorisation as institutional, retail, correspondence, etc.; pre-use approval and principal sign-off; recordkeeping; content standards). The substantive standards differ from CFPB UDAAP and Regulation Z. Reviewer: the firm's broker-dealer compliance function.
 - *SEC Regulation Best Interest (Reg BI).* Standard of conduct for broker-dealers when making recommendations to retail customers. Reaches sales-practice fairness and disclosure mechanics. Adjacent to UDAAP framing but the legal architecture differs.
 
-This skill does not extend into those regimes. Where the engagement scope implicates them, route to the firm's broker-dealer compliance, investment-adviser compliance, or wealth-management compliance function.
+This skill does not extend into those regimes. Where the scope implicates them, route to the firm's broker-dealer compliance, investment-adviser compliance, or wealth-management compliance function.
 
 ## Where this skill does apply on the capital-markets side
 

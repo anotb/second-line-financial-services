@@ -12,7 +12,7 @@ The pack is two files. The **memo** carries the program summary, the disposition
 |---|---|
 | Program (legal entity; brand if different) | |
 | Program ID (stable; reused across `payments-risk-assessment`, `payment-operations-incident-review`, `concentration-risk-review`) | |
-| Engagement ID (pointer to engagement-scope record, or "none — scope not formalised") | |
+| Engagement ID (pointer to scope record, or "none — scope not formalised") | |
 | As of | [date] |
 | Review trigger | annual-sponsor-bank-review / sponsor-bank-led-audit / state-mtl-exam / sponsor-bank-questionnaire / processor-led-review / internal-audit-kickoff / post-incident-sponsor-bank-request / new-rail-delta / new-product-delta |
 | Audience | sponsor-bank TPRM / sponsor-bank operating committee / state-MTL examiner via NMLS / CFPB EXAMS / internal audit / ERC |

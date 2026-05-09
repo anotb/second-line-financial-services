@@ -1,6 +1,6 @@
 # Banking sector overlay — evidence-request-builder
 
-Loaded when `engagement-scope.sector_overlay_set` includes `banking` or when the test addresses a banking regulator's rule. Does not replace `references/source-anchors.md`; supplements it with bank-specific evidence-request conventions.
+Loaded when `scope.sector_overlay_set` includes `banking` or when the test addresses a banking regulator's rule. Does not replace `references/source-anchors.md`; supplements it with bank-specific evidence-request conventions.
 
 ## Request-list conventions banking testing programs apply
 

@@ -1,8 +1,8 @@
 # Privacy cross-cutting overlay for model-card-builder
 
-When the engagement-scope record flags `privacy` for the model use case, this overlay adds privacy-specific content to named card sections. The model card is not the firm's privacy-impact assessment; the PIA is its own artifact under the firm's privacy program. The card surfaces the privacy considerations that a second-line reviewer (and a privacy-office reviewer) needs to see in the model-card frame, and points to the PIA in source trace.
+When the scope record flags `privacy` for the model use case, this overlay adds privacy-specific content to named card sections. The model card is not the firm's privacy-impact assessment; the PIA is its own artifact under the firm's privacy program. The card surfaces the privacy considerations that a second-line reviewer (and a privacy-office reviewer) needs to see in the model-card frame, and points to the PIA in source trace.
 
-Loaded by: `model-card-builder/SKILL.md` when `engagement_scope.cross_cutting_set` includes `privacy`. Cited and section-referenced anchors live in `references/source-anchors.md`.
+Loaded by: `model-card-builder/SKILL.md` when `scope.cross_cutting_set` includes `privacy`. Cited and section-referenced anchors live in `references/source-anchors.md`.
 
 ## Source basis
 

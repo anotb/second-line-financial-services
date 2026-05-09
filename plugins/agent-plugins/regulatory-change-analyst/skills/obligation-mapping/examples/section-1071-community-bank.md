@@ -13,7 +13,7 @@ Section 1071 is the canonical mid-complexity register a community bank stands up
 ```yaml
 register_id: REG-2026-1071-CB-01
 as_of_date: 2026-05-06
-engagement_scope_ref: ENG-2026-CB-1071-01
+scope_ref: ENG-2026-CB-1071-01
 
 scope:
   process: small-business credit application intake, underwriting, recordkeeping, and reporting

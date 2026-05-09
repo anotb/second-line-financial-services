@@ -1,6 +1,6 @@
 # Cyber cross-cutting overlay — concentration-risk-review
 
-When the engagement scope names cyber as a cross-cutting overlay, or when the technology-stack and sub-contractor-chain dimensions surface cyber-risk material to the supervisory read, load this overlay alongside `references/source-anchors.md`.
+When the scope names cyber as a cross-cutting overlay, or when the technology-stack and sub-contractor-chain dimensions surface cyber-risk material to the supervisory read, load this overlay alongside `references/source-anchors.md`.
 
 ## Why cyber sits next to concentration
 

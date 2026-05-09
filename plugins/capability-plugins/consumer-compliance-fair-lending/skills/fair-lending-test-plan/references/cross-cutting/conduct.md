@@ -1,8 +1,8 @@
 # Conduct cross-cutting overlay for fair-lending-test-plan
 
-When the engagement-scope record flags `conduct` for the fair-lending test plan, this overlay adds conduct-risk content to named test-plan sections. Conduct in second-line vocabulary is not the same as fairness as a model property; it is the customer-outcome lens, the named-manager accountability lens, and the regulatory-engagement lens. The overlap with fair lending is real but not total: every fair-lending defect is potentially a conduct defect, but not every conduct defect is a fair-lending defect.
+When the scope record flags `conduct` for the fair-lending test plan, this overlay adds conduct-risk content to named test-plan sections. Conduct in second-line vocabulary is not the same as fairness as a model property; it is the customer-outcome lens, the named-manager accountability lens, and the regulatory-engagement lens. The overlap with fair lending is real but not total: every fair-lending defect is potentially a conduct defect, but not every conduct defect is a fair-lending defect.
 
-Loaded by: `fair-lending-test-plan/SKILL.md` when `engagement_scope.cross_cutting_set` includes `conduct`. Cited and section-referenced anchors live in `references/source-anchors.md`.
+Loaded by: `fair-lending-test-plan/SKILL.md` when `scope.cross_cutting_set` includes `conduct`. Cited and section-referenced anchors live in `references/source-anchors.md`.
 
 ## What changes for conduct-flagged fair-lending test plans
 

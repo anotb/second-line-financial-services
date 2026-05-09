@@ -1,6 +1,6 @@
 # Conduct cross-cutting overlay — human-review-gates
 
-Loads when the engagement-scope `cross_cutting_overlay_set` includes `conduct`. The overlay shapes the gate matrix when gates cover customer-facing decisions: product approval, fee-change approval, marketing approval, restitution approval, fair-lending second-look on adverse action, sales-practice supervision, and complaint-handling escalation.
+Loads when the scope `cross_cutting_overlay_set` includes `conduct`. The overlay shapes the gate matrix when gates cover customer-facing decisions: product approval, fee-change approval, marketing approval, restitution approval, fair-lending second-look on adverse action, sales-practice supervision, and complaint-handling escalation.
 
 ## Why conduct belongs in customer-facing gate matrices
 

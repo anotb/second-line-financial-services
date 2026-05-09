@@ -2,7 +2,7 @@
 
 This overlay loads where the advertisement contains a testimonial that discloses (or could disclose) the identity of a client; where account-level details, holdings, or strategy specifics appear in the advertisement at a level that may identify a particular client; or where the advertisement makes claims about the firm's data practices, privacy posture, or use of client information.
 
-Loaded by: `marketing-rule-evidence/SKILL.md` when the advertisement contains a testimonial, an endorsement, a case study identifying a particular client by name or by recognisable description, or any privacy-related claim. The overlay also fires from `engagement_scope.cross_cutting_set` when the scope record names `privacy`.
+Loaded by: `marketing-rule-evidence/SKILL.md` when the advertisement contains a testimonial, an endorsement, a case study identifying a particular client by name or by recognisable description, or any privacy-related claim. The overlay also fires from `scope.cross_cutting_set` when the scope record names `privacy`.
 
 Cited and section-referenced anchors live in `references/source-anchors.md`.
 

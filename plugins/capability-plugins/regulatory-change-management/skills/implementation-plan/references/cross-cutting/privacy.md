@@ -1,6 +1,6 @@
 # Cross-cutting overlay — privacy
 
-Loaded when the engagement scope flags privacy. Implementation plans triggered by or touching privacy rules carry distinct data-mapping, consent, and consumer-rights patterns.
+Loaded when the scope flags privacy. Implementation plans triggered by or touching privacy rules carry distinct data-mapping, consent, and consumer-rights patterns.
 
 ## GLBA Safeguards Rule remediation
 

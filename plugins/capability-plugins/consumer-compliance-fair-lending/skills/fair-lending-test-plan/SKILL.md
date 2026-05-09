@@ -35,7 +35,7 @@ Most of what the plan needs is on the table by the time someone reaches for this
 - Whether any AI or ML model drives a credit decision in scope. The answer flips on the LDA-search block and adds a model-feature review for race- or ethnicity-correlated proxies. The LDA-search expectation rests on Reg B §1002.6(a) effects-test framing and disparate-impact case law, not on the withdrawn CFPB Circulars 2022-03 and 2023-03; the underlying second-line discipline survives the bureau's interpretive shift.
 - What the source posture is. Public-only, public-plus-firm-policy, public-plus-firm-policy-plus-evidence, or connector-aware. Source posture sets what the plan can ask for and what carries `[evidence needed]`.
 
-When `engagement-scope` is supplied, the skill consumes it for institution, persona, source posture, sector overlay set, and cross-cutting overlay set. Otherwise it asks the practitioner the few facts it needs and defaults to public posture if the practitioner declines, noting in the plan that scope was not formalized.
+When `scope` is supplied, the skill consumes it for institution, persona, source posture, sector overlay set, and cross-cutting overlay set. Otherwise it asks the practitioner the few facts it needs and defaults to public posture if the practitioner declines, noting in the plan that scope was not formalized.
 
 ## How the plan gets built
 
@@ -87,7 +87,7 @@ The overlay is mandatory once triggered. Missing the LDA-search block on a plan 
 
 ### Sector overlays
 
-When the engagement scope names a sector, load the matching `references/sector-overlays/<sector>.md`:
+When the scope names a sector, load the matching `references/sector-overlays/<sector>.md`:
 
 - *Banking* — depository specifics: HMDA-reportable mortgage and HELOC, indirect auto, credit card, deposit overdraft fairness, CRA assessment-area overlap.
 - *Capital markets* — securities-based lending fair-lending scope (limited but in-scope where retail); private-banking and wealth-credit boundary; not principally a fair-lending bucket but the perimeter is named.
@@ -109,7 +109,7 @@ Plan depth and length scale to the trigger and the in-scope inventory. An annual
 ## Pointers
 
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
-- `references/sector-overlays/banking.md`, `insurance.md`, `capital-markets.md`, `payments-fintech.md` — sector-specific framing loaded per engagement-scope.
+- `references/sector-overlays/banking.md`, `insurance.md`, `capital-markets.md`, `payments-fintech.md` — sector-specific framing loaded per scope.
 - `references/cross-cutting/conduct.md` — UDAAP overlap, loaded where marketing distribution, steering, or dark-pattern themes are in scope.
 - `references/firm-overlay.md` — firm-installed taxonomy, named committees, fair-lending statistician roster, system-of-record paths (consumed when present).
 - `templates/default-output.md` — plan template.

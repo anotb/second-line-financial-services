@@ -1,6 +1,6 @@
 # Sector overlay: payments-fintech — board AI risk pack
 
-Loaded when the engagement scope names payments-fintech. The overlay carries content that lands in the pack, not background reading.
+Loaded when the scope names payments-fintech. The overlay carries content that lands in the pack, not background reading.
 
 ## Framing
 

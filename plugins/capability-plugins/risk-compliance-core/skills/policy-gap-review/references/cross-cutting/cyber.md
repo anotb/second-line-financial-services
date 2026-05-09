@@ -1,6 +1,6 @@
 # Cyber cross-cutting overlay — policy-gap-review
 
-Loads when the engagement-scope `cross_cutting_overlay_set` includes `cyber`. The overlay binds the matrix to cybersecurity-policy expectations when the policy in scope is a cybersecurity policy, an information-security policy, or a substantive policy that includes a cybersecurity section (most material policies do).
+Loads when the scope `cross_cutting_overlay_set` includes `cyber`. The overlay binds the matrix to cybersecurity-policy expectations when the policy in scope is a cybersecurity policy, an information-security policy, or a substantive policy that includes a cybersecurity section (most material policies do).
 
 ## Why cyber loads on most policy gap reviews
 

@@ -1,6 +1,6 @@
 # Banking sector overlay — policy-gap-review
 
-Loads when the engagement-scope `sector_overlay_set` includes `banking`. Binds policy gap reviews to bank-supervisory expectations on the firm's policy framework.
+Loads when the scope `sector_overlay_set` includes `banking`. Binds policy gap reviews to bank-supervisory expectations on the firm's policy framework.
 
 ## Supervisory frame
 
@@ -18,7 +18,7 @@ For OCC large-bank populations covered by 12 CFR Part 30 Appendix D, the matrix 
 - Independent-risk-management coverage policies. Standard IV expects the second-line function to be independent, sufficiently resourced, and have authority that the firm-wide policy makes explicit.
 - Front-line-unit responsibilities policy. Standard IV.A expects the front-line unit to assess and address risks; gap rows fire on policies that delegate risk responsibility entirely to the second line.
 
-Heightened-standards rows do not appear in policy gap reviews for non-Heightened-Standards banks; the engagement scope's institution profile drives the inclusion.
+Heightened-standards rows do not appear in policy gap reviews for non-Heightened-Standards banks; the scope's institution profile drives the inclusion.
 
 ## OCC Bulletin 2014-39 framing
 

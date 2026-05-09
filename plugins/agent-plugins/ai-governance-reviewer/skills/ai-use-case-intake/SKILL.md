@@ -14,7 +14,7 @@ description: |
   - The use case has cleared intake and tiering and the next artifact is the model card (route to `model-card-builder`).
   - The work is procurement-stage diligence on an AI vendor before any internal use case exists (route to `vendor-diligence` in `third-party-operational-resilience` with the AI-vendor scenario mode).
   - The artifact required is the EU AI Act Annex IV technical documentation (that is the provider-side file owned by the model provider; route to `ai-act-triage` to scope Annex IV deltas the firm carries).
-argument-hint: "[use-case description, sponsor brief, vendor proposal, engagement-scope record, or scenario]"
+argument-hint: "[use-case description, sponsor brief, vendor proposal, scope record, or scenario]"
 ---
 
 # AI use case intake
@@ -34,7 +34,7 @@ Most of what the intake needs is already on the table by the time someone reache
 - What does the use case touch on the customer side. Internal-only with no customer surface, internal-only but processes customer data, customer-facing through staff intermediation, customer-facing directly. The answer drives the regulatory exposure flags and the preliminary tier suggestion.
 - Which regulators reach the firm and the use case. Federal banking, state insurance, SEC and FINRA, CFPB, NYDFS, EU AI Act footprint, state privacy laws ... the regulators decide which sector and cross-cutting overlays carry weight in the intake.
 
-When the engagement-scope record from `engagement-scoping` is supplied, the skill consumes it for institution, persona, source posture, sector and cross-cutting overlays, and primary regulators. Otherwise it asks the practitioner the few facts it needs and source posture sets what the intake can assert at high confidence and what carries `[evidence needed]`.
+When the scope record from `scoping` is supplied, the skill consumes it for institution, persona, source posture, sector and cross-cutting overlays, and primary regulators. Otherwise it asks the practitioner the few facts it needs and source posture sets what the intake can assert at high confidence and what carries `[evidence needed]`.
 
 ## How the intake gets filled in
 
@@ -81,9 +81,9 @@ The GenAI overlay is mandatory once triggered. Missing the foundation-model iden
 
 ### Sector and cross-cutting overlays
 
-When the engagement scope names a sector (banking, insurance, capital-markets, payments-fintech), load the matching `references/sector-overlays/<sector>.md`. The overlay's named fields and regulatory flags land in the intake; treating the overlay as background reading is the failure mode. Same pattern for the cross-cutting overlays this skill carries: cyber, privacy, conduct. Climate is not applicable.
+When the scope names a sector (banking, insurance, capital-markets, payments-fintech), load the matching `references/sector-overlays/<sector>.md`. The overlay's named fields and regulatory flags land in the intake; treating the overlay as background reading is the failure mode. Same pattern for the cross-cutting overlays this skill carries: cyber, privacy, conduct. Climate is not applicable.
 
-Load only the overlays the engagement scope names. Gold-plating an intake with overlays the engagement does not implicate adds noise without challenge value.
+Load only the overlays the scope names. Gold-plating an intake with overlays the engagement does not implicate adds noise without challenge value.
 
 ## Quality bar
 
@@ -110,8 +110,8 @@ Downstream consumers: `ai-risk-tiering` reads the structured object to score the
 ## Pointers
 
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
-- `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md` — sector overlays loaded from engagement scope.
-- `references/cross-cutting/{cyber,privacy,conduct}.md` — cross-cutting overlays loaded from engagement scope.
+- `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md` — sector overlays loaded from scope.
+- `references/cross-cutting/{cyber,privacy,conduct}.md` — cross-cutting overlays loaded from scope.
 - `references/firm-overlay.md` — firm policy, taxonomy, named owners, AI inventory schema extensions (consumed when present).
 - `templates/default-output.md` — intake-record template.
 - `schemas/ai-use-case-intake.schema.json` — structured-output contract.

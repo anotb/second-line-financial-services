@@ -13,7 +13,7 @@ Public-source-derived. No named institution. Framing patterns from BCBS 239 Prin
 
 The skill emits a markdown pack and a structured record. Headlines:
 
-- **Cover** — attestation period, scope (top-tier BHC plus IHC; named systems: credit-loss data warehouse, market-risk source systems, operational-risk loss database, regulatory-reporting layer; legal-entity perimeter), attesting role = Head of Risk Reporting, attestation type = bcbs239-risk-data, assertion-language version 2.1, source posture, engagement-scope ID linked.
+- **Cover** — attestation period, scope (top-tier BHC plus IHC; named systems: credit-loss data warehouse, market-risk source systems, operational-risk loss database, regulatory-reporting layer; legal-entity perimeter), attesting role = Head of Risk Reporting, attestation type = bcbs239-risk-data, assertion-language version 2.1, source posture, scope ID linked.
 - **Executive summary** — five bullets in attesting role's voice. Headline: risk-data aggregation and reporting infrastructure operating effectively subject to three named exceptions; one Principle 6 (adaptability) gap, one Principle 2 (architecture) gap, one Principle 3 (accuracy) gap.
 - **Scope statement** — names the legal-entity perimeter, the four in-scope source systems and the regulatory-reporting layer, the time period, and the exclusions (out-of-scope: pre-trade data quality at the broker-dealer subsidiary, addressed under a separate attestation chain).
 - **Source criteria** — BCBS 239 (January 2013), Principles 1 to 14; the firm's risk-data policy v4.0; the firm's data-quality framework v3.2; the most recent BCBS 239 self-assessment.

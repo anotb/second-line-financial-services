@@ -1,6 +1,6 @@
 # Insurance sector overlay — human-review-gates
 
-Loads when the engagement-scope `sector_overlay_set` includes `insurance`. The overlay shapes the decision-authority block, the independence requirements, the documentation conventions, and the board-oversight expectations for gate matrices at US insurance companies (life, P&C, health insurers, plus reinsurers and insurance holding companies regulated by state DOIs and coordinated through the NAIC).
+Loads when the scope `sector_overlay_set` includes `insurance`. The overlay shapes the decision-authority block, the independence requirements, the documentation conventions, and the board-oversight expectations for gate matrices at US insurance companies (life, P&C, health insurers, plus reinsurers and insurance holding companies regulated by state DOIs and coordinated through the NAIC).
 
 ## Why the insurance overlay matters
 

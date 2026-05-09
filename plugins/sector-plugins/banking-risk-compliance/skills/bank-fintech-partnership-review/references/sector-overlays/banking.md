@@ -2,7 +2,7 @@
 
 This skill is banking-sector-only by definition. The entire SKILL.md is the banking lens; this file exists as the sector hook other plugin's overlay-loading patterns expect, and to carry the bank-side lens differentiators that distinguish the partnership pack from a generic third-party diligence artifact.
 
-Loaded by: `bank-fintech-partnership-review/SKILL.md` automatically (the engagement scope's `sector_overlay_set` is always `banking` for this skill). Cited and section-referenced anchors live in `references/source-anchors.md`.
+Loaded by: `bank-fintech-partnership-review/SKILL.md` automatically (the scope's `sector_overlay_set` is always `banking` for this skill). Cited and section-referenced anchors live in `references/source-anchors.md`.
 
 ## What the bank-side lens is
 

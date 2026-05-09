@@ -6,7 +6,7 @@ Public-source-derived. No named institution. Patterns drawn from NIST AI 600-1 G
 
 A US broker-dealer has intaked a GenAI research-summarisation assistant for internal analyst use. The assistant ingests public earnings transcripts and the firm's own published research notes and produces structured summaries for the equity research desk. Output is internal only; no client-facing surface today. Vendor-hosted foundation model with version pinning, RAG over the firm's research note corpus and a vendor-supplied transcript corpus. No tools; no agentic behaviour; advisory-only. Sponsor (head of equity research) proposed tier-3.
 
-Engagement scope provided by `engagement-scoping`:
+Engagement scope provided by `scoping`:
 - Institution type: broker-dealer (also dual-registered investment adviser), primary regulators SEC and FINRA.
 - Persona: AI Governance Lead, second line, reporting to CCO.
 - Sector overlay set: capital-markets. Cross-cutting overlays: cyber (vendor-hosted foundation model is a supply-chain surface), conduct (research integrity and Reg AC adjacency).

@@ -1,8 +1,8 @@
 # Insurance sector overlay for kri-commentary
 
-When the engagement-scope record flags `insurance`, this overlay sets the KRI-commentary content for insurers and insurance groups.
+When the scope record flags `insurance`, this overlay sets the KRI-commentary content for insurers and insurance groups.
 
-Loaded by: `kri-commentary/SKILL.md` when `engagement_scope.sector_overlay_set` includes `insurance`. Cited and section-referenced anchors live in `references/source-anchors.md`.
+Loaded by: `kri-commentary/SKILL.md` when `scope.sector_overlay_set` includes `insurance`. Cited and section-referenced anchors live in `references/source-anchors.md`.
 
 ## Source basis
 
@@ -17,7 +17,7 @@ Loaded by: `kri-commentary/SKILL.md` when `engagement_scope.sector_overlay_set` 
 
 ### 1. ORSA roll-up
 
-The KRI commentary set is consumed by the ORSA Summary Report Section 2 (insurer's assessment of risk exposure). The block-writing voice is the same; the consumer is different. A separate field in the wrapper or in the engagement-scope record names the receiving artifact (committee pack, ORSA Summary Report, both). Where the same block reads into both, the source-trace and confidence-label discipline is the binding constraint.
+The KRI commentary set is consumed by the ORSA Summary Report Section 2 (insurer's assessment of risk exposure). The block-writing voice is the same; the consumer is different. A separate field in the wrapper or in the scope record names the receiving artifact (committee pack, ORSA Summary Report, both). Where the same block reads into both, the source-trace and confidence-label discipline is the binding constraint.
 
 ### 2. Risk taxonomy
 

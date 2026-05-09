@@ -1,6 +1,6 @@
 # Payments and fintech sector overlay — concentration-risk-review
 
-When the engagement scope flags payments-fintech, load this overlay alongside `references/source-anchors.md`. It carries the payments and fintech-specific concentration framings the generic skill does not own.
+When the scope flags payments-fintech, load this overlay alongside `references/source-anchors.md`. It carries the payments and fintech-specific concentration framings the generic skill does not own.
 
 ## Sponsor-bank concentration (the partner-fintech end of the BaaS dimension)
 

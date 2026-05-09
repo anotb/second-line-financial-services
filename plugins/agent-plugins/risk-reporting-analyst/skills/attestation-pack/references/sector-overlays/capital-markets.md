@@ -1,8 +1,8 @@
 # Capital-markets sector overlay for attestation-pack
 
-When the engagement-scope record names sector `capital-markets`, this overlay adds capital-markets-specific structure and content expectations. Where there is conflict between capability defaults and this overlay, the overlay governs the capital-markets-sector elements.
+When the scope record names sector `capital-markets`, this overlay adds capital-markets-specific structure and content expectations. Where there is conflict between capability defaults and this overlay, the overlay governs the capital-markets-sector elements.
 
-Loaded by: `attestation-pack/SKILL.md` when `engagement_scope.sector_overlay_set` includes `capital-markets`, or when the institution type is a registered investment adviser, broker-dealer, registered fund, transfer agent, or other capital-markets-registered entity.
+Loaded by: `attestation-pack/SKILL.md` when `scope.sector_overlay_set` includes `capital-markets`, or when the institution type is a registered investment adviser, broker-dealer, registered fund, transfer agent, or other capital-markets-registered entity.
 
 ## Source basis
 

@@ -66,7 +66,7 @@ The standard generic clause set undercovers BaaS. The payments-fintech overlay a
 
 ### Loading one sector overlay where the arrangement spans two
 
-A dual-registrant contract or a sponsor-bank-program contract may need two sector overlays. Flag the choice in the engagement-scope record; do not collapse to one.
+A dual-registrant contract or a sponsor-bank-program contract may need two sector overlays. Flag the choice in the scope record; do not collapse to one.
 
 ## AI-vendor mode
 
@@ -84,9 +84,9 @@ The enterprise default is rarely the consumer default; the contract addendum and
 
 ## Engagement-scope handling
 
-### Running without engagement scope
+### Running without scope
 
-If the engagement-scope record is missing, ask the four questions (criticality tier, AI-vendor flag, regulatory profile, review type) and default to public posture if the practitioner declines. Note in the matrix that scope was not formalised. Do not silently apply a default sector overlay.
+If the scope record is missing, ask the four questions (criticality tier, AI-vendor flag, regulatory profile, review type) and default to public posture if the practitioner declines. Note in the matrix that scope was not formalised. Do not silently apply a default sector overlay.
 
 ### Skipping cyber or privacy because "the contract is not a cyber or privacy contract"
 

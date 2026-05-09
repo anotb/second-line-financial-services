@@ -6,7 +6,7 @@ Public-source-derived. No named institution. The scenario is the v1 archetype fo
 
 A regional US bank holding company is approaching the pre-prod gate for a CSR co-pilot in the consumer-banking call center. RAG over the bank's customer-history datastore and policy/procedure corpus. Foundation model is vendor-hosted with version pinning and contractual change-of-version notice. The agent has four tools enabled.
 
-Engagement scope provided by `engagement-scoping`:
+Engagement scope provided by `scoping`:
 
 - Institution type: bank holding company, mid-cap, primary regulators FRB and CFPB; OCC for the national-bank subsidiary; NYDFS for the NY footprint.
 - Persona: AI Governance Lead (second line); CISO function as cyber co-reviewer; BSA officer not required (no AML-touching flow); privacy officer is a co-reviewer because the agent reads NPI; conduct-team co-reviewer for consumer-facing communication.

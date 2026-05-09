@@ -1,8 +1,8 @@
 # Conduct cross-cutting overlay for ai-use-case-intake
 
-When the engagement-scope record flags `conduct` for the use case, this overlay supplies the conduct-specific intake fields and the named flags that route into downstream tier, fairness-testing, and complaint-surveillance work. Conduct in financial services is broader than fair lending alone: customer-binding decisions, fairness exposure, complaint vector, and market-integrity reach all sit in the conduct lens.
+When the scope record flags `conduct` for the use case, this overlay supplies the conduct-specific intake fields and the named flags that route into downstream tier, fairness-testing, and complaint-surveillance work. Conduct in financial services is broader than fair lending alone: customer-binding decisions, fairness exposure, complaint vector, and market-integrity reach all sit in the conduct lens.
 
-Loaded by: `ai-use-case-intake/SKILL.md` when `engagement_scope.cross_cutting_set` includes `conduct`. Source-anchored in `references/source-anchors.md`.
+Loaded by: `ai-use-case-intake/SKILL.md` when `scope.cross_cutting_set` includes `conduct`. Source-anchored in `references/source-anchors.md`.
 
 ## Source basis
 

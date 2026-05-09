@@ -38,7 +38,7 @@ Most of what the analysis needs is on the table by the time someone reaches for 
 - Which products and channels in the firm's perimeter are in scope. The full perimeter, a single product line, a sponsor-bank-fintech program subset, or a specific geography. Multi-product packs split into per-product matrix sheets.
 - What the source posture is. Public-only, public-plus-firm-policy, public-plus-firm-policy-plus-evidence, or connector-aware. Source posture sets which channels can be pulled and which carry `[evidence needed]`. A public-only theme pack reads against the CFPB Complaint Database extract and the firm's public disclosures; a connector-aware pack pulls the firm's complaint-management system directly.
 
-When `engagement-scope` is supplied, the skill consumes it for institution, persona, source posture, sector overlay set, and cross-cutting overlay set. Otherwise it asks the practitioner the few facts it needs and defaults to public posture if the practitioner declines, noting in the memo that scope was not formalised.
+When `scope` is supplied, the skill consumes it for institution, persona, source posture, sector overlay set, and cross-cutting overlay set. Otherwise it asks the practitioner the few facts it needs and defaults to public posture if the practitioner declines, noting in the memo that scope was not formalised.
 
 ## How the analysis gets built
 
@@ -102,7 +102,7 @@ The overlay is mandatory once triggered. Missing the AI handling on themes where
 
 ### Sector overlays
 
-When the engagement scope names a sector, load the matching `references/sector-overlays/<sector>.md`:
+When the scope names a sector, load the matching `references/sector-overlays/<sector>.md`:
 
 - *Banking* — depository-specific theme catalogue (overdraft, NSF, deposit-fee, mortgage-servicing, credit-card, indirect auto, HELOC); CFPB Complaint Database scope and limits; bank-size-and-CFPB-authority framing; sponsor-bank attribution; mortgage-servicing rules intersection (Reg X / Reg Z); CRA and HMDA cross-walk for mortgage and small-business themes.
 - *Payments-fintech* — P2P / BNPL / neobank theme catalogue; app-store reviews as a non-CFPB complaint channel; sponsor-bank attribution per theme; Reg E §1005.11 error-resolution framework; junk-fee theme intersection; AI-agent and AI-generated-communication themes; payments-fintech evidence sources.
@@ -116,7 +116,7 @@ Conduct overlay is mandatory on this skill. Complaints are the canonical conduct
 ## Pointers
 
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
-- `references/sector-overlays/banking.md`, `payments-fintech.md`, `capital-markets.md`, `insurance.md` — sector-specific framing loaded per engagement-scope.
+- `references/sector-overlays/banking.md`, `payments-fintech.md`, `capital-markets.md`, `insurance.md` — sector-specific framing loaded per scope.
 - `references/cross-cutting/conduct.md` — conduct overlay (mandatory on this skill).
 - `references/firm-overlay.md` — firm-installed taxonomy (active themes, coding rules, taxonomy version), named committees, conduct-event taxonomy, complaint-system path, denominator data sources (consumed when present).
 - `templates/default-output.md` — content spec for the theme matrix (Excel) and the narrative memo (Word).

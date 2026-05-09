@@ -33,7 +33,7 @@ Before drafting, settle a few things. Most of the answers are on the table by th
 - Who reads it, and what decision it supports. A 1.5-line refresh for the BU controls tester reads differently from a 2-line matrix headed for an MRMO challenge session, an audit support file, an examiner-readiness pack, or a board-committee summary. Persona drives the sign-off forum; audience drives compression.
 - What source posture the engagement runs at. Public-only sets the ceiling at obligation, control objective, and control-activity description. Firm-policy-overlay or mixed lets named owners, named systems of record, and last-test results land in the body.
 
-When `engagement-scope` is supplied, the skill consumes it for institution, persona, source posture, sector overlay, and cross-cutting overlay. Otherwise it asks the four questions and defaults to public posture if the practitioner declines. The matrix notes scope was not formalised; it does not silently assume.
+When `scope` is supplied, the skill consumes it for institution, persona, source posture, sector overlay, and cross-cutting overlay. Otherwise it asks the four questions and defaults to public posture if the practitioner declines. The matrix notes scope was not formalised; it does not silently assume.
 
 ## How the matrix gets built
 
@@ -60,7 +60,7 @@ The source trace block and sign-off block close the artifact. Material claims ci
 
 ### Sector and cross-cutting overlays
 
-The same row spine carries different source labels and different rigor expectations across sectors and across cross-cutting topics. Load only the overlays the engagement scope flags. The overlays do not change the row structure; they change which sources the matrix cites and which rigor the practitioner expects.
+The same row spine carries different source labels and different rigor expectations across sectors and across cross-cutting topics. Load only the overlays the scope flags. The overlays do not change the row structure; they change which sources the matrix cites and which rigor the practitioner expects.
 
 - `references/sector-overlays/banking.md` carries large-bank heightened-standards and FFIEC IT framing for governance and tech-control matrices, plus CRA and fair-lending hooks for lending processes.
 - `references/sector-overlays/insurance.md` carries Model Audit Rule and ORSA control coverage, plus state DOI conduct-of-business flavour for claims and sales matrices.
@@ -90,7 +90,7 @@ No named institutions in the matrix or narrative unless they are public defendan
 
 ## Adaptation
 
-Audience drives shape. A 1.5-line refresh reads operational. A 2-line matrix for committee challenge reads with reviewer questions clustered. An audit support file pulls the testing column forward. A board distillation pulls coverage gaps and recommended actions to the front. Source posture drives what the body can carry: public-only matrices sit at obligation-and-objective level; mixed and firm-policy-overlay let owners, system-of-record names, and test results land. Sector and cross-cutting overlays load from the engagement scope. Frequency, test method, and effectiveness ratings track the firm's testing taxonomy where one exists.
+Audience drives shape. A 1.5-line refresh reads operational. A 2-line matrix for committee challenge reads with reviewer questions clustered. An audit support file pulls the testing column forward. A board distillation pulls coverage gaps and recommended actions to the front. Source posture drives what the body can carry: public-only matrices sit at obligation-and-objective level; mixed and firm-policy-overlay let owners, system-of-record names, and test results land. Sector and cross-cutting overlays load from the scope. Frequency, test method, and effectiveness ratings track the firm's testing taxonomy where one exists.
 
 ## Output
 
@@ -101,7 +101,7 @@ Downstream consumers: `compliance-testing` reads `controls[*].evidence` and `con
 ## Pointers
 
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
-- `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md` — sector overlays loaded from engagement scope.
+- `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md` — sector overlays loaded from scope.
 - `references/cross-cutting/cyber.md` — cyber overlay; loaded whenever the scoped process touches information-security controls.
 - `references/firm-overlay.md` — firm-installed taxonomy, named role labels, system-of-record names, internal policy pointers, decision forums and sign-off conditions beyond the regulatory baseline; consumed when present.
 - `templates/default-output.md` — matrix template.

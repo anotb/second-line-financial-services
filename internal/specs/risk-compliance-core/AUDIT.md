@@ -4,7 +4,7 @@ Date: 2026-05-06
 Phase: 1 (per-plugin scoping)
 Plan: `docs/plans/2026-05-06-rationalized-plugin-map.md`
 
-> **Mid-phase-1 amendment, 2026-05-06**: A seventh skill, `engagement-scoping`, has been added to this plugin per practitioner feedback. It is the bootstrapping primitive other skills consume to set institution, persona, source posture, risk lens, and overlay context. See `engagement-scoping.md` in this directory for the spec sheet. The plugin v1 list is now: `control-matrix`, `evidence-binder`, `engagement-scoping`, `human-review-gates`, `issue-writeup`, `obligation-mapping`, `policy-gap-review`.
+> **Mid-phase-1 amendment, 2026-05-06**: A seventh skill, `scoping`, has been added to this plugin per practitioner feedback. It is the bootstrapping primitive other skills consume to set institution, persona, source posture, risk lens, and overlay context. See `scoping.md` in this directory for the spec sheet. The plugin v1 list is now: `control-matrix`, `evidence-binder`, `scoping`, `human-review-gates`, `issue-writeup`, `obligation-mapping`, `policy-gap-review`.
 
 ## Plugin role
 

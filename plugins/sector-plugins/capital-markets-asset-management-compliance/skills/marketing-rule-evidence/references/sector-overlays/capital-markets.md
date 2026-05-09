@@ -2,7 +2,7 @@
 
 This skill is sector-unique to SEC-registered investment advisers and the asset-management entities that operate under that regime. The capital-markets overlay is the default and only sector overlay; it carries the adviser- and asset-manager-specific mechanics that the SKILL.md body refers to in generic workflow language.
 
-Loaded by: `marketing-rule-evidence/SKILL.md` by default for any engagement in this plugin's scope. The overlay also fires from `engagement_scope.sector_overlay_set` when the scope record names `capital-markets`.
+Loaded by: `marketing-rule-evidence/SKILL.md` by default for any engagement in this plugin's scope. The overlay also fires from `scope.sector_overlay_set` when the scope record names `capital-markets`.
 
 Cited and section-referenced anchors live in `references/source-anchors.md`.
 

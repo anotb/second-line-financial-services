@@ -53,7 +53,7 @@
     },
     "engagement_id": {
       "type": "string",
-      "description": "Pointer to the engagement-scope record (engagement-scoping output). Optional; absent when scope was not formalised separately from the test plan."
+      "description": "Pointer to the scope record (scoping output). Optional; absent when scope was not formalised separately from the test plan."
     },
     "period_start": {
       "type": "string",

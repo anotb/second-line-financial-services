@@ -1,8 +1,8 @@
 # Banking sector overlay for bcbs239-gap-assessment
 
-When the engagement-scope record names sector `banking`, this overlay adds banking-specific fields and review demands to the assessment. Where there is conflict between the capability defaults and this overlay, the overlay governs the banking-sector elements.
+When the scope record names sector `banking`, this overlay adds banking-specific fields and review demands to the assessment. Where there is conflict between the capability defaults and this overlay, the overlay governs the banking-sector elements.
 
-Loaded by: `bcbs239-gap-assessment/SKILL.md` when `engagement_scope.sector_overlay_set` includes `banking`, or when the institution type implicates a federal banking regulator (national bank, state member bank, savings association, bank holding company, foreign banking organization with US operations).
+Loaded by: `bcbs239-gap-assessment/SKILL.md` when `scope.sector_overlay_set` includes `banking`, or when the institution type implicates a federal banking regulator (national bank, state member bank, savings association, bank holding company, foreign banking organization with US operations).
 
 BCBS 239 is the banking-anchored regime. This overlay is the primary one for the skill; it does the substantive work and the other sector overlays are lighter.
 

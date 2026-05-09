@@ -1,6 +1,6 @@
 # Payments / fintech sector overlay — negative-news-triage
 
-When the engagement scope flags payments-fintech, load this overlay alongside `references/source-anchors.md`. It carries the fintech-specific adverse-media frame the generic capability skill does not own.
+When the scope flags payments-fintech, load this overlay alongside `references/source-anchors.md`. It carries the fintech-specific adverse-media frame the generic capability skill does not own.
 
 ## What payments-fintech adverse-media looks like in practice
 

@@ -1,6 +1,6 @@
 # Capital markets sector overlay for validation-plan
 
-When the engagement-scope record names sector `capital-markets`, this overlay adds capital-markets-specific scope items to the validation plan. Where there is conflict between the capability defaults and this overlay, the overlay governs the capital-markets-sector elements.
+When the scope record names sector `capital-markets`, this overlay adds capital-markets-specific scope items to the validation plan. Where there is conflict between the capability defaults and this overlay, the overlay governs the capital-markets-sector elements.
 
 Source content derives from the capital-markets lead's overlay snippets and is adapted to the validation-plan context. Cited and section-referenced anchors live in `references/source-anchors.md`.
 

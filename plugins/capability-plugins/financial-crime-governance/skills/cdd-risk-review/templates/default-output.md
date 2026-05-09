@@ -4,7 +4,7 @@
 **Customer (role)**: [customer type only; no named natural persons or institutions in narrative]
 **Institution type**: [bank | broker-dealer | mutual fund | covered-product life insurer | FCM/IB | MSB | fintech (sponsor-bank) | covered investment adviser | other]
 **Operative CIP/CDD rule**: [e.g., 31 CFR §1020.220 + CDD Final Rule + 31 CFR §1010.230]
-**Engagement ID**: [pointer to engagement-scope record, or "none — scope not formalised"]
+**Engagement ID**: [pointer to scope record, or "none — scope not formalised"]
 **As of**: [date]
 **Review type**: [new_account | periodic_refresh | event_driven_refresh]
 **Trigger** (event-driven only): [e.g., negative news; sanctions hit; transaction-monitoring alert; beneficial-ownership change; public change in customer circumstances]

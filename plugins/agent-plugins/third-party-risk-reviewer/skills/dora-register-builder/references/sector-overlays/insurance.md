@@ -1,6 +1,6 @@
 # Insurance sector overlay — dora-register-builder
 
-When the engagement scope flags insurance, load this overlay alongside `references/source-anchors.md`. It carries the insurance-specific competent-authority and prior-register considerations the generic skill does not own.
+When the scope flags insurance, load this overlay alongside `references/source-anchors.md`. It carries the insurance-specific competent-authority and prior-register considerations the generic skill does not own.
 
 ## Competent-authority routing
 

@@ -6,7 +6,7 @@ Public-source-derived. No named institution. Framing patterns drawn from the joi
 
 A US mid-size bank holding company runs a gradient-boosted classifier for indirect-channel auto-loan underwriting. Tier-2 model, 18 months in production, prior validation completed at pre-prod gate. Annual revalidation is the next required cycle. Engagement is staffed by the model risk function in the second line; the model owner sits in the consumer-lending business.
 
-Engagement scope provided by `engagement-scoping`:
+Engagement scope provided by `scoping`:
 - Institution type: bank holding company, mid-cap, primary regulators OCC and CFPB.
 - Persona: head of model risk (validator, second line). Model owner: head of consumer credit (1.5 line).
 - Sector overlay set: banking. Cross-cutting overlays: privacy (regulated NPI), conduct (consumer credit decisioning).
@@ -18,7 +18,7 @@ Engagement scope provided by `engagement-scoping`:
 
 Plan sections produced (abbreviated):
 
-- **Plan metadata** — model ID `auto-uw-gbm-v3.2`; tier-2; validator: head of model risk; validation type: annual-revalidation; scope date set; use-case ID and engagement-scope ID cited.
+- **Plan metadata** — model ID `auto-uw-gbm-v3.2`; tier-2; validator: head of model risk; validation type: annual-revalidation; scope date set; use-case ID and scope ID cited.
 
 - **Validation depth** — set per pillar, not as a single label. Conceptual soundness: targeted (no theory change, segmentation review only because the firm added two states to its operating footprint). Outcomes analysis: full (12 months of new deployed-environment evidence to read against prior validation). Ongoing monitoring: targeted (review the validator-trigger thresholds against the year's monitoring pack). Tier justification documents why the depths land where they do.
 
@@ -40,7 +40,7 @@ Plan sections produced (abbreviated):
 
 - **Timeline** — 8-week revalidation cycle with milestones (data assembly, conceptual soundness review, outcomes analysis, fairness testing, draft validation report). Deliverables: validation report (phase 3 skill), refreshed model card via `model-card-builder`, MRA / issue log entries where defects are found.
 
-- **Source trace and confidence** — every scope item cited to the source artifact (prior validation report, firm fair-lending test plan, monitoring pack 2025-09, override policy update memo 2025-Q2, engagement-scope record). Two `[evidence needed]` flags carried forward to the engagement issue log: 2025-Q2 override policy threshold change rationale (memo refers to a quantitative analysis the validator has not yet seen); two-added-states sample size for segment robustness testing (whether the sample is large enough to support a credible test).
+- **Source trace and confidence** — every scope item cited to the source artifact (prior validation report, firm fair-lending test plan, monitoring pack 2025-09, override policy update memo 2025-Q2, scope record). Two `[evidence needed]` flags carried forward to the engagement issue log: 2025-Q2 override policy threshold change rationale (memo refers to a quantitative analysis the validator has not yet seen); two-added-states sample size for segment robustness testing (whether the sample is large enough to support a credible test).
 
 ## Why this scenario matters
 

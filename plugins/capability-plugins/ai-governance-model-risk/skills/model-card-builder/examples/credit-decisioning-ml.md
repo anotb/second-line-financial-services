@@ -6,7 +6,7 @@ Public-source-derived. No named institution. Framing patterns drawn from CFPB Ci
 
 A US mid-size bank holding company runs a gradient-boosted classifier to score consumer auto-loan applications in the indirect channel. The model has been in production for 18 months. Annual model inventory exercise is in motion. Card was first written at pre-prod gate; today's task is the refresh ahead of the model risk committee review.
 
-Engagement scope provided by `engagement-scoping`:
+Engagement scope provided by `scoping`:
 - Institution type: bank holding company, asset size mid-cap, primary regulators OCC and CFPB.
 - Persona: model risk validator, second line, reporting to the head of model risk.
 - Sector overlay set: banking. Cross-cutting overlays: privacy (regulated NPI), conduct (consumer credit decisioning).
@@ -17,7 +17,7 @@ Engagement scope provided by `engagement-scoping`:
 
 Card sections produced (abbreviated):
 
-- **Card metadata** — model ID `auto-uw-gbm-v3.2`; tier-2; lifecycle stage prod; second-line reviewer named in the engagement-scope record.
+- **Card metadata** — model ID `auto-uw-gbm-v3.2`; tier-2; lifecycle stage prod; second-line reviewer named in the scope record.
 - **Intended use** — auto-loan underwriting decisioning, US-only, indirect dealer channel only. Out of scope: refinance, lease, direct-to-consumer, pre-approval marketing scoring.
 - **System description** — gradient-boosted decision tree on bureau attributes plus application data; no foundation model, no RAG, no tools. Production on internal model serving platform v4.
 - **Training and reference data** — bureau attributes from named bureau (regulated NPI, GLBA in scope), application form data (regulated NPI), no alternative data, no social media data. Training window 2022-01 to 2024-12. Excluded fields: ZIP proxies for protected class flagged in 2024 fair-lending review (lineage cited in source trace).

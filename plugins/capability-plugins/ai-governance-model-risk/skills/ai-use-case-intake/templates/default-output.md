@@ -11,7 +11,7 @@ The record is a draft until the AI Governance Lead (or named equivalent) attests
 - Use case ID: [canonical firm ID, stable across versions]
 - Use case version: [v1.0 / v1.1 / etc; intake is a living record]
 - Use case name: [short human-readable; plain English, no marketing language]
-- Engagement scope ID (if `engagement-scoping` was run): [ID]
+- Engagement scope ID (if `scoping` was run): [ID]
 - Intake date: [YYYY-MM-DD]
 - Next review due: [YYYY-MM-DD]
 - Sponsor business unit: [unit]

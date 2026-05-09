@@ -4,7 +4,7 @@
 **Subject type**: [ibs | arrangement | portfolio]
 **Subject ID**: [stable ID; reused across IBS map, vendor-diligence, exit-plan, dora register]
 **Pack ID**: [stable ID]
-**Engagement ID**: [pointer to engagement-scope record, or "none — scope not formalised"]
+**Engagement ID**: [pointer to scope record, or "none — scope not formalised"]
 **As of**: [date]
 **Review type**: [annual-programme-cycle | quarterly-cycle | off-cycle-trigger | post-incident-rehearsal | post-onboarding-validation | regulator-driven | exit-rehearsal]
 **DORA in scope**: [true | false]

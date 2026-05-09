@@ -1,6 +1,6 @@
 # Banking sector overlay — qa-workpaper
 
-Loaded when `engagement-scope.sector_overlay_set` includes `banking` or when the QA review covers a workpaper addressing a banking regulator's rule. Does not replace `references/source-anchors.md`; supplements it with bank-specific QA conventions. This is the heaviest overlay in the qa-workpaper file set: bank-supervisory expectations on independent QA over the testing program are explicit and recurring CMS findings.
+Loaded when `scope.sector_overlay_set` includes `banking` or when the QA review covers a workpaper addressing a banking regulator's rule. Does not replace `references/source-anchors.md`; supplements it with bank-specific QA conventions. This is the heaviest overlay in the qa-workpaper file set: bank-supervisory expectations on independent QA over the testing program are explicit and recurring CMS findings.
 
 ## QA conventions banking examiners expect
 

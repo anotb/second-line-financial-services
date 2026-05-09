@@ -1,6 +1,6 @@
 # Cross-cutting overlay — conduct
 
-Loaded when the engagement scope flags conduct. Implementation plans triggered by or touching unfair-deceptive-or-abusive-acts-or-practices (UDAAP), fair-lending, fair-treatment, or consumer-redress findings carry distinct customer-impact and remediation patterns.
+Loaded when the scope flags conduct. Implementation plans triggered by or touching unfair-deceptive-or-abusive-acts-or-practices (UDAAP), fair-lending, fair-treatment, or consumer-redress findings carry distinct customer-impact and remediation patterns.
 
 ## UDAAP remediation under CFPB and FTC
 

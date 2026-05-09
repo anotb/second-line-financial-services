@@ -13,7 +13,7 @@ The pack is a draft until the CRO and the head of risk reporting review and the 
 - Period covered: [start YYYY-MM-DD] to [end YYYY-MM-DD]
 - Classification: [internal / board-confidential / regulator-shareable]
 - Pack version: [v1 / v1-revised]
-- Engagement-scope ID (if `engagement-scoping` was run): [ID]
+- Engagement-scope ID (if `scoping` was run): [ID]
 
 ---
 
@@ -138,7 +138,7 @@ Named, dated, regulator-anchored items only. Generic "emerging risks include cyb
 
 ## Climate section (when in scope)
 
-When the engagement scope flags climate, this section carries the climate-risk-specific reporting. Heat-map placement is reported in the Heat map by risk type section; this section carries governance, scenarios, and the link to disclosure.
+When the scope flags climate, this section carries the climate-risk-specific reporting. Heat-map placement is reported in the Heat map by risk type section; this section carries governance, scenarios, and the link to disclosure.
 
 - **Governance summary**: [board oversight, management oversight, climate-risk officer or equivalent]
 - **Physical risk summary**: [acute and chronic, key exposures]

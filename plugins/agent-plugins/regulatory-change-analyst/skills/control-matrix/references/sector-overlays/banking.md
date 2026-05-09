@@ -1,6 +1,6 @@
 # Banking sector overlay — control-matrix
 
-Loads when the engagement-scope `sector_overlay_set` includes `banking`. Binds matrix construction to bank-supervisory expectations.
+Loads when the scope `sector_overlay_set` includes `banking`. Binds matrix construction to bank-supervisory expectations.
 
 ## Supervisory frame
 
@@ -18,7 +18,7 @@ For OCC large-bank populations covered by 12 CFR Part 30 Appendix D, the matrix 
 - The limits framework (front-line-unit, line-of-business, and aggregate limits, breach-and-escalation evidence).
 - The independent-risk-management coverage map (what the second line independently challenges, what is read-only oversight, what is co-developed).
 
-These rows do not appear in matrices for non-Heightened-Standards banks; the engagement scope's institution profile drives the inclusion.
+These rows do not appear in matrices for non-Heightened-Standards banks; the scope's institution profile drives the inclusion.
 
 ## FFIEC IT booklet integration
 

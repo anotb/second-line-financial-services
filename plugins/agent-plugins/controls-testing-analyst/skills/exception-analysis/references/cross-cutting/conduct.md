@@ -39,7 +39,7 @@ The criterion field cites the UDAAP-relevant rule (CFPB UDAAP statutory authorit
 
 ## Conduct exception patterns by product family
 
-Distinct product families carry distinct conduct exception patterns. Where the engagement scope flags the relevant product, the register reads against the product-family conventions:
+Distinct product families carry distinct conduct exception patterns. Where the scope flags the relevant product, the register reads against the product-family conventions:
 
 - Deposit accounts (Reg E, Reg DD): fee-disclosure deviations, NSF / overdraft-disclosure deviations, error-resolution deviations.
 - Lending (Reg Z, Reg B, fair-lending statutes): pricing-disclosure deviations, adverse-action notice deviations, redlining-pattern indicators in HMDA-adjacent populations.

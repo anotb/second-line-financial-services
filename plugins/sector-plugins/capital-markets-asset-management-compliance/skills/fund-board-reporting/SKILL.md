@@ -16,7 +16,7 @@ description: |
   - The deliverable is the adviser's Rule 206(4)-7 annual review of its own compliance program (use `risk-compliance-core/policy-gap-review` chained with `adviser-exam-readiness` in this plugin).
   - The deliverable is best-execution surveillance content for the best-ex committee or for the §206 / FINRA 5310 review (use `best-execution-surveillance` in this plugin); brokerage-quality content cross-links into this pack but the surveillance itself lives elsewhere.
   - The deliverable is Rule 206(4)-1 marketing-rule evidence and substantiation (use `marketing-rule-evidence` in this plugin); material marketing-rule findings affecting the fund land in this pack as part of the §38a-1 service-provider compliance program assessment for the adviser.
-argument-hint: "[trust / fund complex name; meeting date; report type (quarterly compliance / annual 38a-1 / 15(c) renewal / ad-hoc); funds in scope; engagement-scope record if available]"
+argument-hint: "[trust / fund complex name; meeting date; report type (quarterly compliance / annual 38a-1 / 15(c) renewal / ad-hoc); funds in scope; scope record if available]"
 ---
 
 # Fund board reporting
@@ -37,7 +37,7 @@ Most of the spine is set by the meeting cycle and the prior-period pack. A few t
 - What is the source posture and the data confidence label. Service-provider attestations supplemented by independent oversight evidence is the standard; attestation alone does not satisfy Rule 38a-1's "reasonably believes adequate" expectation.
 - What decisions and acknowledgements does the board owe this cycle. Rule 17e-1 quarterly procedure-adequacy determination is on the cycle every cycle; Rule 38a-1 annual program approval is on the annual cycle; §15(c) advisory contract renewal is on the renewal cycle; Rule 22e-4 program approval is the initial and any material change cycle. Surface these up front.
 
-When the engagement-scope record is supplied, the skill reads `institution.type`, `institution.primary_regulators`, `persona.role`, `risk_lens`, `sector_overlay_set`, and `cross_cutting_overlay_set` from it, plus `source_posture` for the evidence asks. Otherwise the skill works with what the practitioner names and flags the rest.
+When the scope record is supplied, the skill reads `institution.type`, `institution.primary_regulators`, `persona.role`, `risk_lens`, `sector_overlay_set`, and `cross_cutting_overlay_set` from it, plus `source_posture` for the evidence asks. Otherwise the skill works with what the practitioner names and flags the rest.
 
 ## How the pack gets built
 
@@ -55,13 +55,13 @@ Affiliated transactions and soft-dollar / §28(e) disclosure carry the conduct s
 
 Service-provider compliance summary is the standing per-service-provider table that supports the §38a-1 program-adequacy assessment. Each provider carries program adequacy, material exceptions, and oversight evidence. SOC 2 Type II reports for the major service-provider categories, third-party attestations supplemented by parent-CCO testing, and any in-period exam findings affecting the service provider populate this section.
 
-Cyber and operational resilience events appear when the engagement scope flags cyber, when a material cyber event affecting the fund or fund shareholders has occurred, or when a service-provider cyber event has reached the §38a-1 material-compliance-matter threshold. Reg S-P customer-notice posture for any in-period customer-information event is on the cycle; the public-parent disclosure-referral status appears where the fund's adviser is a subsidiary of a public-company issuer. Detail lives in the cyber cross-cutting overlay.
+Cyber and operational resilience events appear when the scope flags cyber, when a material cyber event affecting the fund or fund shareholders has occurred, or when a service-provider cyber event has reached the §38a-1 material-compliance-matter threshold. Reg S-P customer-notice posture for any in-period customer-information event is on the cycle; the public-parent disclosure-referral status appears where the fund's adviser is a subsidiary of a public-company issuer. Detail lives in the cyber cross-cutting overlay.
 
 Open issues and management actions carry the standing remediation tracker: each issue with severity, owner role, due date, status, and any escalation flag. Forward-looking commentary names regulatory horizon, SEC Division of Examinations focus areas relevant to the fund's product mix and rule reliance, and industry enforcement themes; generic forward-looking content fails the section. The source trace and confidence label close the pack — every material claim mapped to its source, with `[evidence needed]` for any unsupported item; pack confidence is medium at best where any material claim carries that flag.
 
 The pack is a draft until the fund CCO and the board secretariat review. The skill does not assert sign-off, file or distribute, certify the §38a-1 written report under the CCO's name, sign the §15(c) renewal recommendation, or close any issue. The independent trustees' deliberation and the board's recorded determinations close the loop.
 
-Across the pack, every material claim cites a source. Unsupported claims carry `[evidence needed]` and route to the fund-CCO issue log. Evidence is separated from inference; the source-trace appendix in the annex shows the seam. No named institutions appear in narrative or examples beyond public defendants in finalized enforcement actions with published consent orders. Sector and cross-cutting overlays load from the engagement scope; the skill loads only what the engagement names.
+Across the pack, every material claim cites a source. Unsupported claims carry `[evidence needed]` and route to the fund-CCO issue log. Evidence is separated from inference; the source-trace appendix in the annex shows the seam. No named institutions appear in narrative or examples beyond public defendants in finalized enforcement actions with published consent orders. Sector and cross-cutting overlays load from the scope; the skill loads only what the engagement names.
 
 ## Pointers
 

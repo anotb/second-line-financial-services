@@ -1,6 +1,6 @@
-# Troubleshooting: engagement-scoping
+# Troubleshooting: scoping
 
-The scope record is the bootstrapping primitive. When downstream skills produce wrong outputs (wrong regulator, wrong tone, evidence asks the engagement cannot satisfy, review gates that do not exist), the root cause is almost always a defect in the engagement scope. This file walks the recurring defects and how to resolve them.
+The scope record is the bootstrapping primitive. When downstream skills produce wrong outputs (wrong regulator, wrong tone, evidence asks the engagement cannot satisfy, review gates that do not exist), the root cause is almost always a defect in the scope. This file walks the recurring defects and how to resolve them.
 
 ## 1. The charter becomes a one-time deliverable
 
@@ -84,12 +84,12 @@ The scope record is the bootstrapping primitive. When downstream skills produce 
 
 ## 8. The skill is invoked when it should not be
 
-**Symptom**: Engagement-scoping is run on a one-off question or on a skill invocation that already has a scope on file. Output is wasted; the scope record drifts from the canonical one.
+**Symptom**: Scoping is run on a one-off question or on a skill invocation that already has a scope on file. Output is wasted; the scope record drifts from the canonical one.
 
-**Why it happens**: The downstream skill default-invoked engagement-scoping rather than checking for an existing scope.
+**Why it happens**: The downstream skill default-invoked scoping rather than checking for an existing scope.
 
 **Resolution**:
-- Downstream skills check for an existing engagement-scope record before invoking this skill.
+- Downstream skills check for an existing scope record before invoking this skill.
 - If a scope exists, consume it. If it is stale or contested, run a revision (not a fresh scope).
-- For one-off questions (a quick obligation lookup, a single citation check), engagement-scoping is overkill. Skip it; use the public posture default.
+- For one-off questions (a quick obligation lookup, a single citation check), scoping is overkill. Skip it; use the public posture default.
 - The "Not the right tool when" section of the activation description is the contract; the downstream skill respects it.

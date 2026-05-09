@@ -21,7 +21,7 @@
       "description": "Stable internal ID for the DCP version captured in this map."
     },
     "as_of_date": { "type": "string", "format": "date" },
-    "engagement_scope_id": { "type": ["string", "null"] },
+    "scope_id": { "type": ["string", "null"] },
     "trigger_points": {
       "type": "array",
       "minItems": 1,

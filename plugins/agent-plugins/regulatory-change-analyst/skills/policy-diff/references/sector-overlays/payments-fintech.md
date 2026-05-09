@@ -1,6 +1,6 @@
 # Sector overlay: payments-fintech
 
-Loaded when the engagement scope flags `payments-fintech` as the sector. The change-log spine is unchanged; what changes is the source-citation set, the approver expectations, and the typical patterns for payments-and-fintech policy diffs.
+Loaded when the scope flags `payments-fintech` as the sector. The change-log spine is unchanged; what changes is the source-citation set, the approver expectations, and the typical patterns for payments-and-fintech policy diffs.
 
 ## Approver routing expectations
 

@@ -2,7 +2,7 @@
 
 ## Input
 
-A regional US bank (commercial-bank charter, primary regulator OCC) is preparing to onboard a major foundation-model vendor's hosted-API model for a tier-1 KYC research and summarisation assistant. The use case has cleared `ai-use-case-intake` and `ai-risk-tiering`; `vendor-diligence` has run and set `eval_evidence_status = deferred-to-evidence-review` for the model-evidence layer. The engagement-scope record is supplied: institution-type commercial-bank, primary-regulator OCC, sector-overlay banking, cross-cutting-overlay set [cyber, privacy], persona AI Governance Lead, source-posture public-plus-firm-policy.
+A regional US bank (commercial-bank charter, primary regulator OCC) is preparing to onboard a major foundation-model vendor's hosted-API model for a tier-1 KYC research and summarisation assistant. The use case has cleared `ai-use-case-intake` and `ai-risk-tiering`; `vendor-diligence` has run and set `eval_evidence_status = deferred-to-evidence-review` for the model-evidence layer. The scope record is supplied: institution-type commercial-bank, primary-regulator OCC, sector-overlay banking, cross-cutting-overlay set [cyber, privacy], persona AI Governance Lead, source-posture public-plus-firm-policy.
 
 The evidence pack on the table:
 

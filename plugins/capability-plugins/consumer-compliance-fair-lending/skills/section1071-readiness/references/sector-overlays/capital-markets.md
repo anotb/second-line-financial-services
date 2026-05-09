@@ -19,7 +19,7 @@ In all of these, route the engagement to the appropriate sector overlay (`bankin
 ## What this overlay tells the reviewer
 
 - **Do not run a §1071 readiness assessment at a capital-markets entity that does not originate covered credit transactions.** It produces a memo full of "not applicable" rows and a misleading source trace.
-- **Surface the boundary in the engagement-scoping conversation.** Where the engagement scope flags capital-markets but the underlying question is about a lending affiliate, restate the scope at the lending affiliate and load the appropriate overlay.
+- **Surface the boundary in the scoping conversation.** Where the scope flags capital-markets but the underlying question is about a lending affiliate, restate the scope at the lending affiliate and load the appropriate overlay.
 - **Where the capital-markets entity has a treasury / liquidity function that extends short-term credit to a small-business counterparty,** the credit-extension question is itself the threshold question and a legal review is appropriate before assuming the §1071 scope.
 
 ## Common errors at capital-markets entities

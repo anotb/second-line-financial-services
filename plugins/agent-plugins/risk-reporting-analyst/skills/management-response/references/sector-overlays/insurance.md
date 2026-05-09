@@ -1,8 +1,8 @@
 # Insurance sector overlay for management-response
 
-When the engagement-scope record names `insurance` for a management-response engagement, this overlay sets state-DOI-shaped and NAIC-peer-review-shaped conventions for the response artifact.
+When the scope record names `insurance` for a management-response engagement, this overlay sets state-DOI-shaped and NAIC-peer-review-shaped conventions for the response artifact.
 
-Loaded by: `management-response/SKILL.md` when `engagement_scope.sector_overlay_set` includes `insurance`. Cited and section-referenced anchors live in `references/source-anchors.md`.
+Loaded by: `management-response/SKILL.md` when `scope.sector_overlay_set` includes `insurance`. Cited and section-referenced anchors live in `references/source-anchors.md`.
 
 ## Source basis
 

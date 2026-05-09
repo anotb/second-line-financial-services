@@ -1,6 +1,6 @@
 # Sector overlay: capital-markets
 
-Loaded when the engagement scope flags `capital-markets` (broker-dealer, investment adviser, registered fund) as the sector. The change-log spine is unchanged; what changes is the source-citation set, the approver expectations, and the typical patterns for capital-markets policy diffs.
+Loaded when the scope flags `capital-markets` (broker-dealer, investment adviser, registered fund) as the sector. The change-log spine is unchanged; what changes is the source-citation set, the approver expectations, and the typical patterns for capital-markets policy diffs.
 
 ## Approver routing expectations
 

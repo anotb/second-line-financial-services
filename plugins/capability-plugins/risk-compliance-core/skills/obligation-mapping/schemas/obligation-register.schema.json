@@ -22,9 +22,9 @@
       "format": "date",
       "description": "The date this version of the register was produced."
     },
-    "engagement_scope_ref": {
+    "scope_ref": {
       "type": "string",
-      "description": "Pointer to the engagement-scope record this register was produced under, when one exists."
+      "description": "Pointer to the scope record this register was produced under, when one exists."
     },
     "scope": {
       "type": "object",

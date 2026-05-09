@@ -1,6 +1,6 @@
 # Conduct cross-cutting overlay — section1071-readiness
 
-When the engagement scope flags conduct, load this overlay alongside `references/source-anchors.md`. Section 1071 readiness is a data-collection-and-reporting obligation, but the way it is implemented at the lender carries a lender-conduct dimension: how applicants experience the demographic-collection script, how the firewall is honoured in practice, how vendors and front-line staff are managed against the rule, and how readiness gaps are communicated up the firm. Each of these is a conduct surface, not just a compliance one.
+When the scope flags conduct, load this overlay alongside `references/source-anchors.md`. Section 1071 readiness is a data-collection-and-reporting obligation, but the way it is implemented at the lender carries a lender-conduct dimension: how applicants experience the demographic-collection script, how the firewall is honoured in practice, how vendors and front-line staff are managed against the rule, and how readiness gaps are communicated up the firm. Each of these is a conduct surface, not just a compliance one.
 
 ## The lender-conduct dimension of §1071 implementation
 

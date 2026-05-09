@@ -1,8 +1,8 @@
 # Privacy cross-cutting overlay for genai-pre-prod-review
 
-When the engagement-scope record flags `privacy` for a pre-prod gate review, this overlay adds privacy-specific gate considerations: Privacy Officer co-review, regulated-data-handling expectations, additional notification triggers, and recommended-action items typical of privacy-flagged GenAI gate reviews. Loaded for any use case handling NPI, PHI, biometric data, or other regulated personal data with potential for inappropriate disclosure or use.
+When the scope record flags `privacy` for a pre-prod gate review, this overlay adds privacy-specific gate considerations: Privacy Officer co-review, regulated-data-handling expectations, additional notification triggers, and recommended-action items typical of privacy-flagged GenAI gate reviews. Loaded for any use case handling NPI, PHI, biometric data, or other regulated personal data with potential for inappropriate disclosure or use.
 
-Loaded by: `genai-pre-prod-review/SKILL.md` when `engagement_scope.cross_cutting_set` includes `privacy`. Cited and section-referenced anchors live in `references/source-anchors.md`.
+Loaded by: `genai-pre-prod-review/SKILL.md` when `scope.cross_cutting_set` includes `privacy`. Cited and section-referenced anchors live in `references/source-anchors.md`.
 
 ## Source basis
 

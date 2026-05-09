@@ -14,7 +14,7 @@ description: |
   - The artifact is a single KRI commentary; use `kri-commentary`.
   - The artifact is a one-off data-quality issue write-up; use `risk-compliance-core/skills/issue-writeup`.
   - The work is enterprise data governance generally. BCBS 239 is risk-data anchored. SOX 404 financial-reporting data quality is a different regime.
-argument-hint: "[engagement scope, prior assessment, risk-data inventory, MRA/MRIA register, system-tracing evidence, reconciliation tests, or scenario]"
+argument-hint: "[scope, prior assessment, risk-data inventory, MRA/MRIA register, system-tracing evidence, reconciliation tests, or scenario]"
 ---
 
 # BCBS 239 gap assessment
@@ -33,7 +33,7 @@ Most of these are obvious from the engagement, but settle them before drafting:
 - What evidence is on the table today. Document review and interviews alone do not support a credible rating in groups B and C; you need at least one reconciliation test or system trace per principle in those groups, plus recent ad-hoc aggregation runs to defend any rating above materially-non-compliant on Principle 6.
 - Whether there are open MRAs or MRIAs on risk data. Principle 13 must reflect them, with linkage to the issue register. An assessment that omits known open findings is not credible.
 
-When the engagement-scope record (see `risk-compliance-core/skills/engagement-scoping`) is supplied, consume it for institution profile, supervisory context, sector and cross-cutting overlays, and persona; otherwise ask the practitioner the few facts above and default the rest, flagging the defaults in `assumptions_and_dependencies`. The skill works without a formal scope; it does not block.
+When the scope record (see `risk-compliance-core/skills/scoping`) is supplied, consume it for institution profile, supervisory context, sector and cross-cutting overlays, and persona; otherwise ask the practitioner the few facts above and default the rest, flagging the defaults in `assumptions_and_dependencies`. The skill works without a formal scope; it does not block.
 
 ## How the assessment gets filled in
 
@@ -96,7 +96,7 @@ The four group ratings roll up from the principle ratings within each group; the
 
 ### Sector and cross-cutting overlays
 
-Sector overlays (`references/sector-overlays/banking.md` is the primary; `insurance.md`, `capital-markets.md`, `payments-fintech.md` are light overlays for cases where a non-bank entity adopts BCBS 239 voluntarily or where a broker-dealer subsidiary inherits the parent's posture) load when the engagement scope names the sector. Cross-cutting overlays (`references/cross-cutting/cyber.md`, `climate.md`) load when the engagement scope flags the topic. The overlay's named criteria land inside the principle blocks they apply to (climate-data lineage inside Principle 3 and 6; cyber-control failures affecting risk-data infrastructure inside Principle 1 and 2). Loading overlays the engagement does not implicate adds noise without challenge value.
+Sector overlays (`references/sector-overlays/banking.md` is the primary; `insurance.md`, `capital-markets.md`, `payments-fintech.md` are light overlays for cases where a non-bank entity adopts BCBS 239 voluntarily or where a broker-dealer subsidiary inherits the parent's posture) load when the scope names the sector. Cross-cutting overlays (`references/cross-cutting/cyber.md`, `climate.md`) load when the scope flags the topic. The overlay's named criteria land inside the principle blocks they apply to (climate-data lineage inside Principle 3 and 6; cyber-control failures affecting risk-data infrastructure inside Principle 1 and 2). Loading overlays the engagement does not implicate adds noise without challenge value.
 
 ## Quality bar
 
@@ -115,8 +115,8 @@ The reviewer attestation is filled by the human reviewer, not the skill. The ass
 ## Pointers
 
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
-- `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md` — sector overlays loaded from engagement scope.
-- `references/cross-cutting/{cyber,climate}.md` — cross-cutting overlays loaded from engagement scope.
+- `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md` — sector overlays loaded from scope.
+- `references/cross-cutting/{cyber,climate}.md` — cross-cutting overlays loaded from scope.
 - `references/firm-overlay.md` — firm policy, taxonomy, named owners, named systems, internal data-quality KPI set (consumed when present; never committed in this repo).
 - `templates/default-output.md` — assessment template.
 - `schemas/bcbs239-gap-assessment.schema.json` — structured-output contract.

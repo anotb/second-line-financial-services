@@ -1,8 +1,8 @@
 # Insurance sector overlay for attestation-pack
 
-When the engagement-scope record names sector `insurance`, this overlay adds insurance-specific structure and content expectations. Where there is conflict between capability defaults and this overlay, the overlay governs the insurance-sector elements.
+When the scope record names sector `insurance`, this overlay adds insurance-specific structure and content expectations. Where there is conflict between capability defaults and this overlay, the overlay governs the insurance-sector elements.
 
-Loaded by: `attestation-pack/SKILL.md` when `engagement_scope.sector_overlay_set` includes `insurance`, or when the institution type is an insurer or insurance group.
+Loaded by: `attestation-pack/SKILL.md` when `scope.sector_overlay_set` includes `insurance`, or when the institution type is an insurer or insurance group.
 
 ## Source basis
 

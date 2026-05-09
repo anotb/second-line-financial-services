@@ -1,6 +1,6 @@
 # Capital markets and asset management sector overlay: obligation-mapping
 
-Loaded when the engagement scope includes `capital-markets` in `sector_overlay_set`. Adds capital-markets-specific source labels and obligation patterns the practitioner expects to find when the register scopes a broker-dealer, investment adviser, or registered fund process. Does not change the row spine.
+Loaded when the scope includes `capital-markets` in `sector_overlay_set`. Adds capital-markets-specific source labels and obligation patterns the practitioner expects to find when the register scopes a broker-dealer, investment adviser, or registered fund process. Does not change the row spine.
 
 The two regulators are SEC and FINRA (with the CFTC and NFA layered in for futures and swaps). Investment Advisers Act and Investment Company Act govern the buy-side; Securities Exchange Act and FINRA rules govern the sell-side; the Securities Act is mostly issuer-side. The register names the regulatory regime that imposes each row.
 

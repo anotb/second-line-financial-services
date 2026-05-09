@@ -6,7 +6,7 @@ Public-source-derived. No named institution. Triage pattern drawn from EU AI Act
 
 A US-headquartered life and health insurer operates a regulated subsidiary in Ireland that writes term-life and group-health business across several EU member states. The first-line product team has built an in-house gradient-boosted pricing model that assigns a risk-class differential at quote time, fed by traditional underwriting variables plus an external-consumer-data feed that summarises prescription-fill patterns. The Irish subsidiary deploys the model on EU-resident applicants. Second-line AI governance has been asked for the EU AI Act triage before pre-prod gate.
 
-Engagement scope provided by `engagement-scoping`:
+Engagement scope provided by `scoping`:
 
 - Institution type: life and health insurer; EU subsidiary in Ireland; US parent.
 - Primary regulators in scope of this engagement: Central Bank of Ireland (insurance-supervisor capacity), state DOI for the US parent's home state, NAIC adoption posture for the operating-state footprint.

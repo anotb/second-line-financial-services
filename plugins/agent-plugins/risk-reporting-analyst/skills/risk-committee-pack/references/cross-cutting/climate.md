@@ -1,8 +1,8 @@
 # Climate cross-cutting overlay for risk-committee-pack
 
-When the engagement-scope record flags `climate` for the committee pack, this overlay sets the climate-risk content for named pack sections. Climate is in scope for the committee pack when the firm reports under the SEC Climate Disclosure Rule (where current effectiveness applies), under EU CSRD as a non-US group company or US subsidiary of an EU-headquartered group, under voluntary TCFD-aligned disclosure, or where the firm's risk taxonomy includes climate as an enterprise risk type.
+When the scope record flags `climate` for the committee pack, this overlay sets the climate-risk content for named pack sections. Climate is in scope for the committee pack when the firm reports under the SEC Climate Disclosure Rule (where current effectiveness applies), under EU CSRD as a non-US group company or US subsidiary of an EU-headquartered group, under voluntary TCFD-aligned disclosure, or where the firm's risk taxonomy includes climate as an enterprise risk type.
 
-Loaded by: `risk-committee-pack/SKILL.md` when `engagement_scope.cross_cutting_set` includes `climate`. Cited and section-referenced anchors live in `references/source-anchors.md`.
+Loaded by: `risk-committee-pack/SKILL.md` when `scope.cross_cutting_set` includes `climate`. Cited and section-referenced anchors live in `references/source-anchors.md`.
 
 ## Source basis
 

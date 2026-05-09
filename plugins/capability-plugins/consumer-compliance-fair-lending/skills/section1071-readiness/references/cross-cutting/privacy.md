@@ -1,6 +1,6 @@
 # Privacy cross-cutting overlay — section1071-readiness
 
-When the engagement scope flags privacy, or whenever the readiness assessment touches the demographic-data fields under 12 CFR 1002.107, load this overlay alongside `references/source-anchors.md`. Applicant-demographic data is sensitive customer data; the firewall under 12 CFR 1002.108 is the operative §1071-internal control, and the GLBA Safeguards Rule layers underneath as the broader customer-data-security obligation.
+When the scope flags privacy, or whenever the readiness assessment touches the demographic-data fields under 12 CFR 1002.107, load this overlay alongside `references/source-anchors.md`. Applicant-demographic data is sensitive customer data; the firewall under 12 CFR 1002.108 is the operative §1071-internal control, and the GLBA Safeguards Rule layers underneath as the broader customer-data-security obligation.
 
 ## GLBA Safeguards Rule on §1071 demographic data
 

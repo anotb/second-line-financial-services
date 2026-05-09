@@ -58,9 +58,9 @@ Fix: re-read each loaded overlay against the review and confirm each named overl
 
 ## Engagement scope not formalised
 
-When the engagement-scope record is not supplied and the practitioner declines to formalise scope, the review still proceeds against a default public posture but should record the omission.
+When the scope record is not supplied and the practitioner declines to formalise scope, the review still proceeds against a default public posture but should record the omission.
 
-Fix: the gate-metadata section notes that engagement scope was not formalised; the open-conditions section includes formalising engagement scope as a low-or-medium-severity item; the source-trace confidence labels reflect the lack of formalised scope on items that would have been resolved by it.
+Fix: the gate-metadata section notes that scope was not formalised; the open-conditions section includes formalising scope as a low-or-medium-severity item; the source-trace confidence labels reflect the lack of formalised scope on items that would have been resolved by it.
 
 ## Material-expansion gate treated as a copy-paste of the initial-release gate
 

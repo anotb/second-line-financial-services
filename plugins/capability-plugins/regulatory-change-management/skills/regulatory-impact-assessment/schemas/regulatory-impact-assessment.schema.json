@@ -27,7 +27,7 @@
     },
     "engagement_id": {
       "type": "string",
-      "description": "Optional pointer to the engagement-scope record this assessment was produced under."
+      "description": "Optional pointer to the scope record this assessment was produced under."
     },
     "as_of_date": {
       "type": "string",

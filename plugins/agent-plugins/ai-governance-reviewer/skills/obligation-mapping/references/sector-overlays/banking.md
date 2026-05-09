@@ -1,6 +1,6 @@
 # Banking sector overlay: obligation-mapping
 
-Loaded when the engagement scope includes `banking` in `sector_overlay_set`. Adds banking-specific source labels and obligation patterns the practitioner expects to find when the register scopes a banking process. Does not change the row spine.
+Loaded when the scope includes `banking` in `sector_overlay_set`. Adds banking-specific source labels and obligation patterns the practitioner expects to find when the register scopes a banking process. Does not change the row spine.
 
 ## Sources the register may cite
 

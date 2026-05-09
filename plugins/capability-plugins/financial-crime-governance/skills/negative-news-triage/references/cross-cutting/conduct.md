@@ -1,6 +1,6 @@
 # Conduct cross-cutting overlay — negative-news-triage
 
-Loads when the engagement-scope `cross_cutting_overlay_set` includes `conduct`. The overlay shapes the materiality read and the routing for adverse-media hits whose substance is customer-facing harm, sales-practice exposure, market-conduct exposure, or vulnerable-customer-overlap rather than (or in parallel with) a financial-crime typology.
+Loads when the scope `cross_cutting_overlay_set` includes `conduct`. The overlay shapes the materiality read and the routing for adverse-media hits whose substance is customer-facing harm, sales-practice exposure, market-conduct exposure, or vulnerable-customer-overlap rather than (or in parallel with) a financial-crime typology.
 
 ## Why the conduct overlay matters here
 

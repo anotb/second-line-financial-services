@@ -1,6 +1,6 @@
 # Payments-fintech sector overlay — control-sampling
 
-Loaded when `engagement-scope.sector_overlay_set` includes `payments-fintech` or when the test addresses NACHA, sponsor-bank, money-transmitter, prepaid, or larger-participant rules. Supplements `references/source-anchors.md` with payments-fintech-specific population, stratification, and tolerable-rate conventions.
+Loaded when `scope.sector_overlay_set` includes `payments-fintech` or when the test addresses NACHA, sponsor-bank, money-transmitter, prepaid, or larger-participant rules. Supplements `references/source-anchors.md` with payments-fintech-specific population, stratification, and tolerable-rate conventions.
 
 ## Population definition conventions payments and fintech examiners expect
 

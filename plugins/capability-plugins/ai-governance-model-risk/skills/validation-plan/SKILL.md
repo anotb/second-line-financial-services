@@ -34,7 +34,7 @@ The work is recognisable enough by the time someone reaches for this skill that 
 - What architecture. Traditional ML, foundation-model dependent, RAG, or agentic. Architecture flags drive the GenAI overlay block (vendor evidence in scope, prompt-injection and RAG-poisoning tests, foundation-model version monitoring) and the attack-class catalogue.
 - Who reads the plan. The plan signs at the model risk committee or equivalent; for OCC large-bank tier-1 work the Heightened Standards independence expectation applies, so the audience is structured. Working drafts are plain; committee plans are challenge-shaped; regulator response files are formal and full source-traced.
 
-When the engagement-scope record is supplied, the skill consumes it for institution, persona, source posture, sector and cross-cutting overlays. Otherwise it asks the practitioner the few facts it needs and drafts against what is given. Source posture sets what the plan can assert at high confidence and what carries `[evidence needed]`.
+When the scope record is supplied, the skill consumes it for institution, persona, source posture, sector and cross-cutting overlays. Otherwise it asks the practitioner the few facts it needs and drafts against what is given. Source posture sets what the plan can assert at high confidence and what carries `[evidence needed]`.
 
 ## How the plan gets built
 
@@ -81,9 +81,9 @@ The overlay is mandatory once triggered. Skipping the indirect-prompt-injection 
 
 ### Sector and cross-cutting overlays
 
-When the engagement scope names a sector (banking, insurance, capital markets, payments-fintech), load the matching `references/sector-overlays/<sector>.md`. The overlay's named scope items land in the plan's sector-overlay-notes section; treating the overlay as background reading is the failure mode. Same pattern for the cross-cutting overlays this skill carries: cyber, privacy, conduct. Climate is not applicable to validation plans.
+When the scope names a sector (banking, insurance, capital markets, payments-fintech), load the matching `references/sector-overlays/<sector>.md`. The overlay's named scope items land in the plan's sector-overlay-notes section; treating the overlay as background reading is the failure mode. Same pattern for the cross-cutting overlays this skill carries: cyber, privacy, conduct. Climate is not applicable to validation plans.
 
-Load only the overlays the engagement scope names. Stuffing every overlay into a plan adds noise that the model risk committee then has to read past.
+Load only the overlays the scope names. Stuffing every overlay into a plan adds noise that the model risk committee then has to read past.
 
 ## Quality bar
 
@@ -99,7 +99,7 @@ The plan is only credible when these hold:
 
 ## Adaptation
 
-Tier and validation type drive depth per pillar. Architecture drives the attack-class catalogue and the GenAI overlay. Audience drives tone (working group is plain, committee is structured, regulator response is formal). Persona sets the review path; OCC large-bank tier-1 work picks up the Heightened Standards independence expectation. Sector and cross-cutting overlays load from the engagement scope. Source posture sets what the plan can assert at high confidence and what carries `[evidence needed]`. Where firm-specific policy or taxonomy applies (named system-of-record paths, named committees, internal model-risk-policy thresholds), it lives in `references/firm-overlay.md` (consumed when present) and never in the plan directly.
+Tier and validation type drive depth per pillar. Architecture drives the attack-class catalogue and the GenAI overlay. Audience drives tone (working group is plain, committee is structured, regulator response is formal). Persona sets the review path; OCC large-bank tier-1 work picks up the Heightened Standards independence expectation. Sector and cross-cutting overlays load from the scope. Source posture sets what the plan can assert at high confidence and what carries `[evidence needed]`. Where firm-specific policy or taxonomy applies (named system-of-record paths, named committees, internal model-risk-policy thresholds), it lives in `references/firm-overlay.md` (consumed when present) and never in the plan directly.
 
 ## Output
 
@@ -110,8 +110,8 @@ Downstream consumers: the validation report skill (phase 3, in `ai-validation-an
 ## Pointers
 
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
-- `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md` — sector overlays loaded from engagement scope.
-- `references/cross-cutting/{cyber,privacy}.md` — cross-cutting overlays loaded from engagement scope.
+- `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md` — sector overlays loaded from scope.
+- `references/cross-cutting/{cyber,privacy}.md` — cross-cutting overlays loaded from scope.
 - `references/firm-overlay.md` — firm policy, taxonomy, named owners and committees (consumed when present).
 - `templates/default-output.md` — plan template.
 - `schemas/validation-plan.schema.json` — structured-output contract.

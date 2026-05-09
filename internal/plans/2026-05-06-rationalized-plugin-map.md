@@ -108,11 +108,11 @@ Maintenance benefit: when SR 11-7 next gets revised, the change is one reference
 
 The phase 2 content quality check enforces this. New rule: SKILL.md flagged if it contains regulatory citations or text excerpts not present in `references/source-anchors.md` and not part of the activation-tuned description. The script can be relaxed if a phrase is doctrinally part of the workflow (e.g., "issue an MRA"), but verbatim regulatory excerpts in the playbook fail the check.
 
-## New primitive: engagement-scoping
+## New primitive: scoping
 
 Added 2026-05-06 mid-phase-1 per practitioner feedback. The repo gains one new primitive in `risk-compliance-core`, bumping that plugin from 6 to 7 skills:
 
-`engagement-scoping` — produces a structured engagement context that other skills consume. Output covers:
+`scoping` — produces a structured engagement context that other skills consume. Output covers:
 
 - **Institution profile** — type (bank holding company, national bank, state member bank, savings association, broker-dealer, investment adviser, registered fund, insurance company, money transmitter, fintech, sponsor-bank program, mutual, credit union, public company), asset size, charter, registrations, geographic footprint, primary regulator constellation.
 - **Engagement profile** — type (internal second-line review, advisory engagement, exam-readiness sprint, audit support, model validation engagement, regulatory change implementation, board-pack preparation, exception remediation, vendor onboarding review), timeframe, sponsor, audience, deliverable shape.
@@ -122,9 +122,9 @@ Added 2026-05-06 mid-phase-1 per practitioner feedback. The repo gains one new p
 - **Sector overlay set** — which of {banking, insurance, capital-markets, payments-fintech} apply.
 - **Cross-cutting overlay set** — which of {cyber, privacy, climate, conduct} apply.
 
-Downstream skills accept `engagement-scope` as optional input. When present, the skill tailors its sector and cross-cutting overlay loading, its evidence asks, its review-gate set, and its tone. When absent, the skill asks or defaults. Both 1.5-line and 2-line workflows benefit; advisory engagements use the scope rigidly, internal teams use it lighter, both produce traceable artifacts.
+Downstream skills accept `scope` as optional input. When present, the skill tailors its sector and cross-cutting overlay loading, its evidence asks, its review-gate set, and its tone. When absent, the skill asks or defaults. Both 1.5-line and 2-line workflows benefit; advisory engagements use the scope rigidly, internal teams use it lighter, both produce traceable artifacts.
 
-`engagement-scoping` is the natural first skill called in any non-trivial second-line engagement. The output is a reusable engagement charter that the engagement keeps and revises as scope shifts.
+`scoping` is the natural first skill called in any non-trivial second-line engagement. The output is a reusable engagement charter that the engagement keeps and revises as scope shifts.
 
 ## Per-skill anatomy
 

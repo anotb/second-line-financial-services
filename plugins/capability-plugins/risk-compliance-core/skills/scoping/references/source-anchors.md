@@ -1,6 +1,6 @@
-# Source anchors: engagement-scoping
+# Source anchors: scoping
 
-This file holds the named, dated regulatory and professional-standard sources the engagement-scoping skill anchors to. SKILL.md cites this file by path; the named anchors are not restated inline. Firm-specific anchors belong in `references/firm-overlay.md`.
+This file holds the named, dated regulatory and professional-standard sources the scoping skill anchors to. SKILL.md cites this file by path; the named anchors are not restated inline. Firm-specific anchors belong in `references/firm-overlay.md`.
 
 `[verify section]` placeholders mark anchors where the precise section reference still needs verification against the current edition of the source. They are deliberate, not omissions.
 
@@ -18,7 +18,7 @@ Link: https://www.theiia.org/en/standards/
 
 Anchor: AU-C 300 establishes that audit engagements are planned with an overall strategy and a written audit plan. [verify exact paragraph references — .07 through .12 in the current edition.]
 
-What this skill relies on: the discipline that engagement scope is documented before substantive work, and that scope is revisited as facts change. Engagement-scoping is the second-line analogue of an AU-C 300 plan, not an audit plan itself.
+What this skill relies on: the discipline that scope is documented before substantive work, and that scope is revisited as facts change. Scoping is the second-line analogue of an AU-C 300 plan, not an audit plan itself.
 
 Link: https://us.aicpa.org/research/standards/auditattest/clarifiedsas
 
@@ -38,7 +38,7 @@ Link: https://www.coso.org/erm-framework
 
 Anchor: Section I-II framing on the scope of model risk management — "what counts as a model" and which functions sit in second-line model risk. [verify section labels; OCC Bulletin 2026-13 has revised the interagency model risk guidance.]
 
-What this skill relies on: that model-validation and model-risk-review engagements have explicit scope as to which models, business units, and risk types are covered. Engagement-scoping captures that scope formally.
+What this skill relies on: that model-validation and model-risk-review engagements have explicit scope as to which models, business units, and risk types are covered. Scoping captures that scope formally.
 
 Link: https://www.federalreserve.gov/supervisionreg/srletters/sr1107.htm
 
@@ -64,7 +64,7 @@ Link: https://www.ecfr.gov/current/title-12/chapter-I/part-30/appendix-Appendix%
 
 Anchor: Section II.A on risk-based scope of third-party risk management activity. [verify section labels under the published guidance.]
 
-What this skill relies on: that TPRM engagements explicitly scope which third-party tiers and which lifecycle phases are covered. Engagement-scoping consumes the institution profile to set the regulator constellation that drives TPRM expectations.
+What this skill relies on: that TPRM engagements explicitly scope which third-party tiers and which lifecycle phases are covered. Scoping consumes the institution profile to set the regulator constellation that drives TPRM expectations.
 
 Link: https://www.federalreserve.gov/supervisionreg/srletters/SR2304.htm
 
@@ -137,4 +137,4 @@ When the engagement carries cyber, privacy, climate, or conduct risk lens, the c
 - Climate: SEC climate-related disclosure rule [verify current rulemaking status]; TCFD-aligned disclosure conventions.
 - Conduct: FCA SMCR for UK-licensed entities [verify section labels]; US enforcement themes via CFPB Circulars and OCC enforcement actions.
 
-These overlays load when the engagement scope's `cross_cutting_overlay_set` includes the corresponding entry.
+These overlays load when the scope's `cross_cutting_overlay_set` includes the corresponding entry.

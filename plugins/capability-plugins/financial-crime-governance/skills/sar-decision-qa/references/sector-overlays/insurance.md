@@ -1,6 +1,6 @@
 # Insurance sector overlay — sar-decision-qa
 
-When the engagement scope flags insurance, load this overlay alongside `references/source-anchors.md`. The insurance overlay carries what the bank-flavoured capability skill does not.
+When the scope flags insurance, load this overlay alongside `references/source-anchors.md`. The insurance overlay carries what the bank-flavoured capability skill does not.
 
 ## Operative SAR rule
 

@@ -92,8 +92,8 @@ Fix: each row in the data-recipient duties block carries the DPA-vs-actual recon
 
 ## Engagement scope absent and not flagged
 
-Symptom: the artifact reads as if a formal engagement-scope record were on file when it was not.
+Symptom: the artifact reads as if a formal scope record were on file when it was not.
 
-Why it fails: downstream skills key off the engagement-scope record (institution type, primary regulators, sector overlay set, persona, source posture). When scope was not formalised, the pack must say so; otherwise downstream consumers (`fintech-partner-controls` updating after this review, `payment-operations-incident-review` cross-linking on a subsequent incident, `third-party-operational-resilience/vendor-diligence` running on an aggregator-recipient) cannot calibrate.
+Why it fails: downstream skills key off the scope record (institution type, primary regulators, sector overlay set, persona, source posture). When scope was not formalised, the pack must say so; otherwise downstream consumers (`fintech-partner-controls` updating after this review, `payment-operations-incident-review` cross-linking on a subsequent incident, `third-party-operational-resilience/vendor-diligence` running on an aggregator-recipient) cannot calibrate.
 
-Fix: when the practitioner did not supply a formal engagement-scope record, ask the questions in the SKILL's "Ask first" section and default to public posture if the practitioner declines. Note in the artifact that scope was not formalised; do not silently apply a default.
+Fix: when the practitioner did not supply a formal scope record, ask the questions in the SKILL's "Ask first" section and default to public posture if the practitioner declines. Note in the artifact that scope was not formalised; do not silently apply a default.

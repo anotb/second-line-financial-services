@@ -1,6 +1,6 @@
 # Payments-fintech sector overlay — dora-register-builder
 
-When the engagement scope flags payments or fintech (payment institutions, e-money institutions, account information service providers, crypto-asset service providers under MiCA), load this overlay alongside `references/source-anchors.md`. It carries the payments-fintech-specific scope and counterparty considerations the generic skill does not own.
+When the scope flags payments or fintech (payment institutions, e-money institutions, account information service providers, crypto-asset service providers under MiCA), load this overlay alongside `references/source-anchors.md`. It carries the payments-fintech-specific scope and counterparty considerations the generic skill does not own.
 
 ## DORA scope across payments-fintech entity types
 

@@ -4,7 +4,7 @@
 **Customer (role / type)**: [no named natural persons or institutions in narrative]
 **Institution type**: [bank | broker-dealer | mutual fund | covered-product life insurer | FCM/IB | MSB | fintech (sponsor-bank) | covered investment adviser | other]
 **Operative anchors**: [e.g., FFIEC PEP / private banking / correspondent sections; `31 CFR §1010.620`; `§1010.610`; CDD Final Rule]
-**Engagement ID**: [pointer to engagement-scope record, or "none — scope not formalised"]
+**Engagement ID**: [pointer to scope record, or "none — scope not formalised"]
 **As of**: [date]
 **EDD trigger**: [pep | private_banking | correspondent | cash_intensive | high_risk_jurisdiction | complex_ownership | msb_affiliated | sanctions_adjacent | event_driven | other]
 **Pack type**: [initial_escalation | periodic_refresh | event_driven_refresh | exit_deliberation_basis]
@@ -88,7 +88,7 @@
 
 ## 8. Conduct-risk indicators
 
-> Loaded when the engagement scope flags conduct or when a PEP / wealth / private-banking profile makes conduct exposure material. See `references/cross-cutting/conduct.md`.
+> Loaded when the scope flags conduct or when a PEP / wealth / private-banking profile makes conduct exposure material. See `references/cross-cutting/conduct.md`.
 
 | Indicator | Evidence | Severity | Anchor |
 |---|---|---|---|

@@ -6,7 +6,7 @@ Public-source-derived. No named institution. This scenario carries the substance
 
 A US-only personal-lines auto and homeowners P&C insurer is in pre-prod for an agentic claims-AI system. The agent runs against the carrier's claims platform with a TPA partner handling first-notice-of-loss intake. Architecture: planner-executor split, foundation-model dependent (vendor-pinned), RAG over claims-platform records, OCR-ingested correspondence, repair-estimate documents, police reports; tool inventory includes claim-read, claim-note-write, automated-payment-issue (under threshold), reasoned-denial-draft, claim-acknowledgment-send, callback-schedule, supervisor-escalation-flag.
 
-Engagement scope provided by `engagement-scoping`:
+Engagement scope provided by `scoping`:
 
 - Institution type: stock P&C insurer, multi-state-licensed (35-state footprint including CA, NY, CO, FL, TX); ORSA filer.
 - Persona: AI Governance Lead (second line); MRMO and chief actuary as model-risk co-reviewers; CISO function as cyber co-reviewer; privacy officer (HIPAA does not apply for auto/HO P&C, but state breach-law analysis is structural); claims operations leadership as conduct co-reviewer; chief underwriting officer (out of direct scope but informed); state-licensing function for cross-state UCSPA matrix.

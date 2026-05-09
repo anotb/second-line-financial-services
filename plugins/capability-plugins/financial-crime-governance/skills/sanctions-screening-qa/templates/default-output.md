@@ -2,7 +2,7 @@
 
 **Program ID**: [program identifier; placeholder for sample]
 **Institution type**: [bank | broker-dealer | mutual fund | covered-product life insurer | FCM/IB | MSB | fintech (sponsor-bank) | covered investment adviser | other]
-**Engagement ID**: [pointer to engagement-scope record, or "none — scope not formalised"]
+**Engagement ID**: [pointer to scope record, or "none — scope not formalised"]
 **Review type**: [periodic_sample_qa | pre_validation_review | exam_readiness_review | list_event_review | cyber_evasion_targeted_review]
 **Review window**: [start_date] to [end_date]
 **As of**: [date the QA was last revised]
@@ -64,7 +64,7 @@ The OFAC publication date is the benchmark for response timing, not the institut
 
 ## Cyber-evasion exposure (cross-cutting overlay)
 
-> Loaded when the engagement scope flags cyber. See `references/cross-cutting/cyber.md`.
+> Loaded when the scope flags cyber. See `references/cross-cutting/cyber.md`.
 
 - **Virtual-currency exposure**: [material | limited | none | unknown]. Controls evidence: [blockchain-analytics vendor; address screening; attribution governance]. Vendor outputs are vendor outputs; cite the vendor and route vendor-diligence findings to `third-party-operational-resilience/vendor-diligence`.
 - **Ransomware-payment exposure**: [material | limited | none | unknown]. Controls evidence aligned to OFAC ransomware advisories and FinCEN ransomware advisories: pre-payment OFAC analysis, voluntary self-disclosure posture, sanctions-officer routing for incident-response, cyber-insurance, and remediation-vendor payment paths.

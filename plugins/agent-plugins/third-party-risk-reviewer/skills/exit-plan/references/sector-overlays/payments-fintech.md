@@ -1,6 +1,6 @@
 # Payments-fintech sector overlay — exit-plan
 
-When the engagement scope flags payments or fintech (BaaS programs, payment processors, prepaid issuers, MSBs, digital-payment apps), load this overlay alongside `references/source-anchors.md`. Settlement-network access continuity and regulated-customer-notice clocks are the dominant exit-planning constraints.
+When the scope flags payments or fintech (BaaS programs, payment processors, prepaid issuers, MSBs, digital-payment apps), load this overlay alongside `references/source-anchors.md`. Settlement-network access continuity and regulated-customer-notice clocks are the dominant exit-planning constraints.
 
 ## Operative supervisory frame
 

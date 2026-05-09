@@ -34,7 +34,7 @@ Before drafting, get plain answers to a few things. Most escalations answer them
 - **What upstream and adjacent records are on file.** The pack consumes the CDD review record where present, the `negative-news-triage` triaged hits where present, and the `sanctions-screening-qa` dispositions where present. Where any is missing, draft against what is on file and flag the absence as a finding; do not block.
 - **What the source posture supports.** A public-only posture limits the pack to public-source corroboration on SoW / SoF and on the ownership chain; a posture with firm-system-of-record evidence carries more. Set the posture to what the engagement has, not to what it would prefer.
 
-When the engagement-scope record is supplied, the skill consumes it for institution type, primary regulator, sector overlay, persona, source posture, and cross-cutting overlays. Otherwise it asks the practitioner the few facts it needs.
+When the scope record is supplied, the skill consumes it for institution type, primary regulator, sector overlay, persona, source posture, and cross-cutting overlays. Otherwise it asks the practitioner the few facts it needs.
 
 ## How the pack gets built
 
@@ -60,7 +60,7 @@ The **customer rationale and expected vs. actual activity** captures the custome
 
 The **sanctions screening posture** consumes `sanctions-screening-qa` outputs. Current screening status, historical hits with disposition pointers, watchlist coverage and scope, and connected-party screening posture (beneficial owners, signatories, key counterparties named) sit here. The pack does not re-dispose hits.
 
-The **conduct-risk indicators** load when the engagement scope flags conduct, or when a PEP, wealth, private-banking, or correspondent profile makes conduct exposure material (foreign-procurement exposure on a PEP family member; complaint patterns on a wealth relationship; vulnerable-customer overlap; sales-practice exposure). The conduct overlay carries the indicators and the anchors. The conduct lens does not turn the pack into a conduct review; conduct findings sit alongside the financial-crime findings and bear on the EDD committee's decision.
+The **conduct-risk indicators** load when the scope flags conduct, or when a PEP, wealth, private-banking, or correspondent profile makes conduct exposure material (foreign-procurement exposure on a PEP family member; complaint patterns on a wealth relationship; vulnerable-customer overlap; sales-practice exposure). The conduct overlay carries the indicators and the anchors. The conduct lens does not turn the pack into a conduct review; conduct findings sit alongside the financial-crime findings and bear on the EDD committee's decision.
 
 The **ongoing monitoring plan** lists the scenarios in scope at the post-EDD profile, the threshold-calibration implications against the (post-EDD) expected-activity profile, the recommended refresh-cycle interval (event-driven and time-based), and the off-cycle refresh triggers. Threshold tuning belongs to `aml-model-monitoring`; the pack flags the implication and cross-references.
 
@@ -75,8 +75,8 @@ Depth flexes with trigger and customer profile. A correspondent-bank EDD pack re
 ## Pointers
 
 - `references/source-anchors.md` — citations and excerpts for the named anchors (FFIEC PEP / private-banking / correspondent / CDD sections; CDD Final Rule; `§1010.230`; `§1010.620`; `§1010.610`; 31 USC §5318(i) and §5318A; `§1010.380` BOI rule; FinCEN PEP advisory and the 2020 joint statement; OCC/FRB/FDIC/NCUA risk-focused supervision joint statement; Wolfsberg PEP / SoW / CBDDQ as public industry standard).
-- `references/sector-overlays/banking.md`, `payments-fintech.md`, `capital-markets.md`, `insurance.md` — sector overlays loaded per engagement scope.
-- `references/cross-cutting/conduct.md` — conduct overlay loaded per engagement scope or per customer-profile materiality.
+- `references/sector-overlays/banking.md`, `payments-fintech.md`, `capital-markets.md`, `insurance.md` — sector overlays loaded per scope.
+- `references/cross-cutting/conduct.md` — conduct overlay loaded per scope or per customer-profile materiality.
 - `references/firm-overlay.md` — firm policy, EDD trigger set, named systems and owners, decision-machinery composition (consumed when present).
 - `templates/default-output.md` — pack template (named sections, fields).
 - `examples/private-banking-pep-family-foreign-procurement.md`, `foreign-correspondent-respondent-bank-higher-risk-jurisdiction.md` — public-source-derived scenarios.

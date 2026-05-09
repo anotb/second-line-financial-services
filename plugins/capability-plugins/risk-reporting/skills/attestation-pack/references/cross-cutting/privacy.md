@@ -1,8 +1,8 @@
 # Privacy cross-cutting overlay for attestation-pack
 
-When the engagement-scope record flags `privacy` for the attestation pack, this overlay sets the privacy-attestation content for named pack sections. Privacy-control attestations surface where the scoped process touches consumer financial information; the GLBA Safeguards Rule annual report is the recurring use case for nonbank financial institutions in scope.
+When the scope record flags `privacy` for the attestation pack, this overlay sets the privacy-attestation content for named pack sections. Privacy-control attestations surface where the scoped process touches consumer financial information; the GLBA Safeguards Rule annual report is the recurring use case for nonbank financial institutions in scope.
 
-Loaded by: `attestation-pack/SKILL.md` when `engagement_scope.cross_cutting_set` includes `privacy`. Cited and section-referenced anchors live in `references/source-anchors.md`.
+Loaded by: `attestation-pack/SKILL.md` when `scope.cross_cutting_set` includes `privacy`. Cited and section-referenced anchors live in `references/source-anchors.md`.
 
 ## Source basis
 

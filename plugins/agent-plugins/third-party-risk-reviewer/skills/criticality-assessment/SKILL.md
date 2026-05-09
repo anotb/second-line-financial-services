@@ -32,7 +32,7 @@ Before drafting, get plain answers to four things. Most engagements answer them 
 - **What is the firm's regulatory profile.** Institution type and primary regulators. The DORA flag and the UK SS2/21 flag are recorded only for entities in those perimeters; otherwise `not-in-scope`.
 - **What is the engagement type.** Pre-onboarding, annual recertification, off-cycle trigger, material-change re-review, post-incident re-review, IBS-change re-review, contract-renewal re-review. Each carries a different decision-forum context.
 
-When `engagement-scope` is supplied, the skill consumes it (institution type, sector overlay set, cross-cutting overlay set, persona, source posture). When it is not, ask the four questions and default to public posture if the practitioner declines. Note in the assessment that scope was not formalised; do not silently apply a default sector overlay.
+When `scope` is supplied, the skill consumes it (institution type, sector overlay set, cross-cutting overlay set, persona, source posture). When it is not, ask the four questions and default to public posture if the practitioner declines. Note in the assessment that scope was not formalised; do not silently apply a default sector overlay.
 
 ## How the assessment gets built
 
@@ -65,7 +65,7 @@ Flexes by engagement. Assessment depth and length scale to the proposed tier and
 ## Pointers
 
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
-- `references/sector-overlays/banking.md`, `insurance.md`, `capital-markets.md`, `payments-fintech.md` — sector-specific criticality criteria loaded per engagement-scope.
+- `references/sector-overlays/banking.md`, `insurance.md`, `capital-markets.md`, `payments-fintech.md` — sector-specific criticality criteria loaded per scope.
 - `references/firm-overlay.md` — firm-installed IBS map, impact-tolerance taxonomy, criticality-policy thresholds, and decision forums beyond the regulatory baseline; consumed when present.
 - `templates/default-output.md` — assessment template.
 - `schemas/criticality-assessment.schema.json` — structured-output contract for downstream consumption.

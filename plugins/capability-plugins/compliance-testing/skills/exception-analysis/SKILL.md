@@ -33,7 +33,7 @@ Before classifying, get plain answers. Most cycles answer them in the test plan 
 - **Is there a prior cycle with similar deviations.** A repeat-issue flag changes severity calibration and the issue-writeup handoff. Check the issue log for the same control or population before classifying; do not let "looks new" pass when the prior issue is still open.
 - **What does the firm's tolerable deviation rate say.** Pulled from the test plan. Aggregation reads against tolerable, not against the preparer's intuition. If the rate is unset, that is a test-plan defect to flag back, not a number to invent here.
 
-When `engagement-scope` (per `risk-compliance-core/engagement-scoping`) is supplied, consume it: `institution.type` and `institution.primary_regulators` set the supervisory framing for severity rationale and dispositional language, `sector_overlay_set` selects which `references/sector-overlays/<sector>.md` loads, `cross_cutting_overlay_set` selects the `references/cross-cutting/<topic>.md` files, `persona.role` sets which decision forum the register passes through, `source_posture` constrains what the body can carry. When it is not supplied, draft against what the test plan and workpaper carry, default to the testing program's standing posture, and note in the register that scope was not formalised separately.
+When `scope` (per `risk-compliance-core/scoping`) is supplied, consume it: `institution.type` and `institution.primary_regulators` set the supervisory framing for severity rationale and dispositional language, `sector_overlay_set` selects which `references/sector-overlays/<sector>.md` loads, `cross_cutting_overlay_set` selects the `references/cross-cutting/<topic>.md` files, `persona.role` sets which decision forum the register passes through, `source_posture` constrains what the body can carry. When it is not supplied, draft against what the test plan and workpaper carry, default to the testing program's standing posture, and note in the register that scope was not formalised separately.
 
 ## How the register gets built
 
@@ -68,7 +68,7 @@ The sign-off block carries preparer, reviewer (separate role), and a confidence 
 
 ### Sector and cross-cutting overlays
 
-The same classification spine carries different criteria sources, different severity calibrations, and different reviewer machinery across sectors and cross-cutting topics. Load only the overlays the engagement scope flags:
+The same classification spine carries different criteria sources, different severity calibrations, and different reviewer machinery across sectors and cross-cutting topics. Load only the overlays the scope flags:
 
 - `references/sector-overlays/banking.md` carries large-bank supervisory-finding terminology context (the firm drafts in the same shape so its records align to examiner vocabulary; the firm does not invent a regulator-issued matter), heightened-standards severity flavour, and the BSA/AML and consumer-compliance exception conventions.
 - `references/sector-overlays/insurance.md` carries state DOI market-conduct exception conventions and the model-audit-rule severity framing for ICFR-relevant findings.
@@ -94,12 +94,12 @@ Holds across every register:
 
 ## Adaptation
 
-Register depth and length scale to deviation volume and severity range. A clean cycle with two evidence-gap exceptions reads short; a cycle with classified exceptions across multiple severities and root-cause categories reads longer with the disposition summary clustered for the audience that decides next steps. Sector overlay loading follows engagement-scope plus the rule that the regulator the test was designed for drives the sector overlay. Cross-cutting overlay loading: cyber overlay is default-on for any control test touching IAM, data-protection, or supervisory-rule-mandated security areas; conduct overlay is default-on for any consumer-facing test where customer-harm framing matters separately from technical control conclusion.
+Register depth and length scale to deviation volume and severity range. A clean cycle with two evidence-gap exceptions reads short; a cycle with classified exceptions across multiple severities and root-cause categories reads longer with the disposition summary clustered for the audience that decides next steps. Sector overlay loading follows scope plus the rule that the regulator the test was designed for drives the sector overlay. Cross-cutting overlay loading: cyber overlay is default-on for any control test touching IAM, data-protection, or supervisory-rule-mandated security areas; conduct overlay is default-on for any consumer-facing test where customer-harm framing matters separately from technical control conclusion.
 
 ## Pointers
 
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
-- `references/sector-overlays/banking.md`, `insurance.md`, `capital-markets.md`, `payments-fintech.md` — sector-specific exception conventions loaded per engagement-scope.
+- `references/sector-overlays/banking.md`, `insurance.md`, `capital-markets.md`, `payments-fintech.md` — sector-specific exception conventions loaded per scope.
 - `references/cross-cutting/cyber.md`, `conduct.md` — cross-cutting flavour; cyber default-on for IAM, data-protection, and security-rule-mandated controls; conduct default-on for consumer-facing populations.
 - `references/firm-overlay.md` — firm-installed methodology, taxonomy, severity ladder, named committee gates, and policy-floor overrides beyond the regulatory baseline; consumed when present.
 - `templates/default-output.md` — exception register template.

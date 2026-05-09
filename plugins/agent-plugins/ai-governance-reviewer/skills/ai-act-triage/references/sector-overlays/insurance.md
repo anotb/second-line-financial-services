@@ -1,10 +1,10 @@
 # Insurance sector overlay for ai-act-triage
 
-When the engagement-scope record names sector `insurance`, this overlay adds insurance-specific scoping, named-bulletin reach, and parallel-regime reconciliation to the EU AI Act triage.
+When the scope record names sector `insurance`, this overlay adds insurance-specific scoping, named-bulletin reach, and parallel-regime reconciliation to the EU AI Act triage.
 
 This overlay carries the substance of the deprecated `insurance-ai-act-triage` skill. A US carrier with EU operations or EU policyholders, an EU carrier in EU-only operations, and a reinsurer with EU cedents all use this overlay alongside the capability triage. Where there is conflict between the capability defaults and this overlay, the overlay governs the insurance-specific elements.
 
-Loaded by: `ai-act-triage/SKILL.md` when `engagement_scope.sector_overlay_set` includes `insurance`, or when the institution type implicates an insurance entity (life, health, P&C, reinsurance, captive). Cited and section-referenced anchors live in `references/source-anchors.md`.
+Loaded by: `ai-act-triage/SKILL.md` when `scope.sector_overlay_set` includes `insurance`, or when the institution type implicates an insurance entity (life, health, P&C, reinsurance, captive). Cited and section-referenced anchors live in `references/source-anchors.md`.
 
 ## What changes for an insurance triage
 

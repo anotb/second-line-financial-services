@@ -34,7 +34,7 @@ Before drafting, settle a few things. The conversation usually surfaces them in 
 - What downstream artifacts need to refresh. Training modules, controls in the matrix, attestation rosters, system configurations, customer-facing disclosures, vendor contracts, the risk register. The skill enumerates the touchpoints that the change actually affects, not a generic checklist.
 - Whether a control matrix or obligation register exists for the policy domain. When they do, the change log can foreign-key into them so a control owner sees the affected control IDs and the obligation register sees the affected obligation IDs without a separate cross-walk.
 
-When `engagement-scope` is supplied, the skill consumes it for institution type, persona, source posture, sector overlay, and cross-cutting overlay. Otherwise it asks the few questions above and defaults to public posture if the practitioner declines. The change log notes when scope was not formalised.
+When `scope` is supplied, the skill consumes it for institution type, persona, source posture, sector overlay, and cross-cutting overlay. Otherwise it asks the few questions above and defaults to public posture if the practitioner declines. The change log notes when scope was not formalised.
 
 ## How the change log gets built
 
@@ -61,7 +61,7 @@ The tail of the artifact carries what the rows cannot. Cross-policy ripple is wh
 
 ### Sector and cross-cutting overlays
 
-The change-log spine is the same across sectors. What flexes is the kind of policy in scope and the approver expectations. Load only the overlay the engagement scope flags.
+The change-log spine is the same across sectors. What flexes is the kind of policy in scope and the approver expectations. Load only the overlay the scope flags.
 
 - `references/sector-overlays/banking.md` carries OCC heightened-standards expectations on written framework reviews and the federal-banking-agency expectation that material policy changes route to the board or a delegated committee with documented rationale.
 - `references/sector-overlays/insurance.md` carries NAIC Corporate Governance Annual Disclosure expectations, ORSA policy lifecycle, and state market-conduct policy considerations.
@@ -86,7 +86,7 @@ The change log is a draft until the policy owner and named approver attest. The 
 
 ## Adaptation
 
-Audience drives shape: a policy-committee paper clusters material rows to the front; a training-rollout pack clusters by audience; an examiner-readiness file pulls the trigger and the prior-state-vs-new-state delta forward. Source posture drives what the downstream-impact rows can carry. Sector and cross-cutting overlays load from engagement scope. Confidence labels track by section.
+Audience drives shape: a policy-committee paper clusters material rows to the front; a training-rollout pack clusters by audience; an examiner-readiness file pulls the trigger and the prior-state-vs-new-state delta forward. Source posture drives what the downstream-impact rows can carry. Sector and cross-cutting overlays load from scope. Confidence labels track by section.
 
 ## Output
 
@@ -95,8 +95,8 @@ The change log in `templates/default-output.md` shape and the structured record 
 ## Pointers
 
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
-- `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md` — sector overlays loaded from engagement scope.
-- `references/cross-cutting/{cyber,conduct}.md` — cross-cutting overlays loaded from engagement scope.
+- `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md` — sector overlays loaded from scope.
+- `references/cross-cutting/{cyber,conduct}.md` — cross-cutting overlays loaded from scope.
 - `references/firm-overlay.md` — firm-installed taxonomy, named approver titles, committee structure, policy-management system labels, internal cross-policy references; consumed when present.
 - `templates/default-output.md` — change-log template.
 - `schemas/policy-diff.schema.json` — structured-output contract.

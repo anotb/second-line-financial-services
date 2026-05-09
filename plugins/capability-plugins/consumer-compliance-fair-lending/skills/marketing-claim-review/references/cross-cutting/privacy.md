@@ -2,7 +2,7 @@
 
 This overlay loads on every digital-channel review because privacy-claim accuracy, AdChoices representation, dark-pattern privacy, and state-privacy-law interaction are recurring asset-level findings. Where the marketing surface is broadcast or print only and includes no privacy-claim or privacy-disclosure element, the overlay can be skipped; in practice, almost every modern campaign has a digital-channel asset and the overlay applies.
 
-Loaded by: `marketing-claim-review/SKILL.md` when `engagement_scope.cross_cutting_set` includes `privacy` or when any digital-channel asset is in scope. Cited and section-referenced anchors live in `references/source-anchors.md`.
+Loaded by: `marketing-claim-review/SKILL.md` when `scope.cross_cutting_set` includes `privacy` or when any digital-channel asset is in scope. Cited and section-referenced anchors live in `references/source-anchors.md`.
 
 ## What changes for privacy-flagged marketing-review memos
 

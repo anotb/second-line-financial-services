@@ -1,8 +1,8 @@
 # Cyber cross-cutting overlay for management-response
 
-When the engagement-scope record flags `cyber` for a management-response engagement, this overlay sets the cyber-specific evidence-of-effectiveness expectations, the response-to-disclosure-process linkage, and the cyber-program reporting cadence.
+When the scope record flags `cyber` for a management-response engagement, this overlay sets the cyber-specific evidence-of-effectiveness expectations, the response-to-disclosure-process linkage, and the cyber-program reporting cadence.
 
-Loaded by: `management-response/SKILL.md` when `engagement_scope.cross_cutting_overlay_set` includes `cyber`. Cited and section-referenced anchors live in `references/source-anchors.md`.
+Loaded by: `management-response/SKILL.md` when `scope.cross_cutting_overlay_set` includes `cyber`. Cited and section-referenced anchors live in `references/source-anchors.md`.
 
 ## Source basis
 

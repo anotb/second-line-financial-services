@@ -1,6 +1,6 @@
 # Capital-markets sector overlay — edd-escalation-pack
 
-When the engagement scope flags capital markets (broker-dealer, mutual fund, FCM/IB, covered investment adviser), load this overlay alongside `references/source-anchors.md`. It carries the capital-markets-specific EDD frame the generic capability skill does not own. Private-banking and prime-brokerage customer populations carry the heaviest EDD load in this sector; investment-adviser EDD obligations are evolving with the FinCEN adviser AML rule.
+When the scope flags capital markets (broker-dealer, mutual fund, FCM/IB, covered investment adviser), load this overlay alongside `references/source-anchors.md`. It carries the capital-markets-specific EDD frame the generic capability skill does not own. Private-banking and prime-brokerage customer populations carry the heaviest EDD load in this sector; investment-adviser EDD obligations are evolving with the FinCEN adviser AML rule.
 
 ## Operative EDD rule set in capital markets
 

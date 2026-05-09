@@ -1,8 +1,8 @@
 # Cyber cross-cutting overlay for fund-board-reporting
 
-When the engagement-scope record flags `cyber` for the fund-board pack, this overlay sets the cyber-risk content for the named pack sections. The cyber surface a fund board oversees runs through the Rule 38a-1 service-provider compliance program (the adviser, transfer agent, custodian, fund accountant, distributor, valuation designee, sub-advisers all sit on top of cyber control programs) and through the Reg S-P customer-information safeguards as amended in May 2024.
+When the scope record flags `cyber` for the fund-board pack, this overlay sets the cyber-risk content for the named pack sections. The cyber surface a fund board oversees runs through the Rule 38a-1 service-provider compliance program (the adviser, transfer agent, custodian, fund accountant, distributor, valuation designee, sub-advisers all sit on top of cyber control programs) and through the Reg S-P customer-information safeguards as amended in May 2024.
 
-Loaded by: `fund-board-reporting/SKILL.md` when the engagement scope flags cyber, when a material cyber event affecting the fund or fund shareholders has occurred in the period, or when a service-provider cyber event has reached the §38a-1 material-compliance-matter threshold. Cited and section-referenced anchors live in `references/source-anchors.md`.
+Loaded by: `fund-board-reporting/SKILL.md` when the scope flags cyber, when a material cyber event affecting the fund or fund shareholders has occurred in the period, or when a service-provider cyber event has reached the §38a-1 material-compliance-matter threshold. Cited and section-referenced anchors live in `references/source-anchors.md`.
 
 ## Source basis
 

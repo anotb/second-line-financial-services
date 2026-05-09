@@ -1,6 +1,6 @@
 # Capital-markets sector overlay — dora-register-builder
 
-When the engagement scope flags capital markets (investment firms, trading venues, CSDs, CCPs, fund managers, depositaries), load this overlay alongside `references/source-anchors.md`. It carries the capital-markets-specific competent-authority and counterparty considerations the generic skill does not own.
+When the scope flags capital markets (investment firms, trading venues, CSDs, CCPs, fund managers, depositaries), load this overlay alongside `references/source-anchors.md`. It carries the capital-markets-specific competent-authority and counterparty considerations the generic skill does not own.
 
 ## DORA scope across capital-markets entity types
 

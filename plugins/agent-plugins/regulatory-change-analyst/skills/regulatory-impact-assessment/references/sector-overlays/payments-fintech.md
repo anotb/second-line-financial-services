@@ -1,6 +1,6 @@
 # Payments and fintech sector overlay — regulatory-impact-assessment
 
-When the engagement scope flags payments or fintech and the rule touches non-bank consumer-finance providers, money transmitters, payment processors, prepaid issuers, BNPL providers, crypto-asset firms, neobanks operating under sponsor-bank arrangements, or bank-fintech partnerships, load this overlay alongside `references/source-anchors.md`. The overlay carries the CFPB larger-participant authority, the state-money-transmitter overlay, the bank-fintech partnership posture, and the strategy-lens posture for non-bank engagement.
+When the scope flags payments or fintech and the rule touches non-bank consumer-finance providers, money transmitters, payment processors, prepaid issuers, BNPL providers, crypto-asset firms, neobanks operating under sponsor-bank arrangements, or bank-fintech partnerships, load this overlay alongside `references/source-anchors.md`. The overlay carries the CFPB larger-participant authority, the state-money-transmitter overlay, the bank-fintech partnership posture, and the strategy-lens posture for non-bank engagement.
 
 ## Institution-type and regulatory-frame scoping
 

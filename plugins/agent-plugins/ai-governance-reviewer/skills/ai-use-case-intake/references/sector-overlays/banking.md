@@ -1,8 +1,8 @@
 # Banking sector overlay for ai-use-case-intake
 
-When the engagement-scope record names sector `banking`, this overlay tells the intake what additional fields to capture, which named regulators belong on the regulatory-flags table, and which review gates are firm-policy defaults at federally regulated banks. The overlay does not invent firm taxonomy (those are firm-overlay content); it tells the intake which banking-specific facts are load-bearing for the downstream tier and pre-prod work.
+When the scope record names sector `banking`, this overlay tells the intake what additional fields to capture, which named regulators belong on the regulatory-flags table, and which review gates are firm-policy defaults at federally regulated banks. The overlay does not invent firm taxonomy (those are firm-overlay content); it tells the intake which banking-specific facts are load-bearing for the downstream tier and pre-prod work.
 
-Loaded by: `ai-use-case-intake/SKILL.md` when `engagement_scope.sector_overlay_set` includes `banking`, or when the institution type implicates a federal banking regulator (national bank, state member bank, savings association, BHC, FBO with US operations).
+Loaded by: `ai-use-case-intake/SKILL.md` when `scope.sector_overlay_set` includes `banking`, or when the institution type implicates a federal banking regulator (national bank, state member bank, savings association, BHC, FBO with US operations).
 
 ## Source basis
 

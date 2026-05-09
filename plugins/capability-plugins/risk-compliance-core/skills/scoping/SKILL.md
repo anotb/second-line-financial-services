@@ -1,7 +1,7 @@
 ---
-name: engagement-scoping
+name: scoping
 description: |
-  Produces an engagement charter and a structured engagement-scope record that downstream second-line skills consume. The charter sets institution, engagement, persona, source posture, risk lens, and overlay context so other skills do not reinvent these facts each time they are called.
+  Produces a scoping charter and a structured scope record that downstream second-line skills consume. The charter sets institution, engagement, persona, source posture, risk lens, and overlay context so other skills do not reinvent these facts each time they are called.
 
   Best for:
   - An advisory engagement starting up and the lead needs a written scope before review work begins.
@@ -10,19 +10,19 @@ description: |
   - A downstream skill called with contested or unclear scope.
 
   Not the right tool when:
-  - A current scope is already on file and the downstream skill is engagement-scope-aware (pass the existing record).
-  - The work is a one-off question rather than an engagement.
+  - A current scope is already on file and the downstream skill is scope-aware (pass the existing record).
+  - The work is a one-off question rather than a scoped review.
   - The institution and persona are already encoded in a `references/firm-overlay.md` the firm has installed.
 argument-hint: "[institution and engagement type, or pointer to existing scope]"
 ---
 
-# Engagement scoping
+# Scoping
 
 The first thing a senior reviewer does on any non-trivial second-line engagement is set the scope. Who is the institution. What is the engagement. Who is the persona running it. What evidence is actually available. Which risks are in scope. Which sector and cross-cutting overlays apply. What is excluded. What is being assumed. What is left to clarify.
 
 This skill produces that scope as a written charter for the engagement to carry, and as a structured record that downstream skills consume. Both 1.5-line embedded teams and 2-line independent reviewers benefit; advisory engagements run the charter formally, internal teams run it lighter.
 
-Engagement-scoping runs in two situations. At kickoff, the engagement lead calls it to set the charter before any review work begins. Mid-flight, another skill calls it because that skill has hit contested or unclear scope (the source posture is too low for the evidence ask, the persona review gates are unnamed, the sector overlay is ambiguous). Both entries produce the same artifact; the mid-flight version focuses the revision on the contested section and hands back to the calling skill.
+Scoping runs in two situations. At kickoff, the engagement lead calls it to set the charter before any review work begins. Mid-flight, another skill calls it because that skill has hit contested or unclear scope (the source posture is too low for the evidence ask, the persona review gates are unnamed, the sector overlay is ambiguous). Both entries produce the same artifact; the mid-flight version focuses the revision on the contested section and hands back to the calling skill.
 
 ## Ask first
 
@@ -63,10 +63,10 @@ The revision log is append-only. The first row is the initial scope, every mater
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
 - `references/firm-overlay.md` — firm-installed taxonomy, machinery, and policy pointers; consumed when present.
 - `templates/default-output.md` — content spec for the charter (named sections, fields).
-- `schemas/engagement-scope.schema.json` — structured-output contract consumed by every downstream second-line skill.
+- `schemas/scope.schema.json` — structured-output contract consumed by every downstream second-line skill.
 - `examples/` — advisory exam-readiness sprint at a regional bank; internal AI use-case intake review at a registered investment adviser.
 - `TROUBLESHOOTING.md` — recurring defects in scope records.
 
 ## Output
 
-Two artifacts. The charter is the human-readable memo against the named sections in `templates/default-output.md`; render it Word-natural for advisory engagements that want a signed deliverable, markdown for internal use, or whatever the sponsor expects. The `docx` skill in the `document-skills` plugin handles Word rendering when called for. The structured engagement-scope record conforms to `schemas/engagement-scope.schema.json`; this is the cross-skill contract every other skill in the second-line repo consumes, and it is the canonical case where a schema genuinely helps downstream automation. Both emit together; the sponsor signs the charter and the structured record flows to whichever skill the engagement calls next.
+Two artifacts. The charter is the human-readable memo against the named sections in `templates/default-output.md`; render it Word-natural for advisory engagements that want a signed deliverable, markdown for internal use, or whatever the sponsor expects. The `docx` skill in the `document-skills` plugin handles Word rendering when called for. The structured scope record conforms to `schemas/scope.schema.json`; this is the cross-skill contract every other skill in the second-line repo consumes, and it is the canonical case where a schema genuinely helps downstream automation. Both emit together; the sponsor signs the charter and the structured record flows to whichever skill the engagement calls next.

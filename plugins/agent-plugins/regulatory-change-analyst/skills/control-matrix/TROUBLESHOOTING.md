@@ -52,7 +52,7 @@ Fix: a rating change requires a test result that supports it. The `last_test_dat
 
 ## 7. Cyber overlay loaded but ignored
 
-Symptom: the engagement scope flags `cyber` in the cross-cutting overlay set; the matrix has no cyber-tagged rows. The cyber overlay was loaded but did not land in the matrix.
+Symptom: the scope flags `cyber` in the cross-cutting overlay set; the matrix has no cyber-tagged rows. The cyber overlay was loaded but did not land in the matrix.
 
 Why it happens: the overlay is treated as background reading rather than as content that adds rows. Or the matrix author defers cyber to "the CISO's separate matrix" without surfacing the cyber-tagged rows the substantive process needs.
 
@@ -64,7 +64,7 @@ Symptom: banking sector overlay loaded but the matrix has no Heightened-Standard
 
 Why it happens: the overlay is treated as background framing rather than as a directive on what rows the matrix carries.
 
-Fix: when the engagement scope names a sector, the matching `references/sector-overlays/<sector>.md` content lands as named rows in the matrix. The overlay's "what changes" content is the contract; the matrix author honours it. Sector-specific reviewer questions go to the reviewer-question list.
+Fix: when the scope names a sector, the matching `references/sector-overlays/<sector>.md` content lands as named rows in the matrix. The overlay's "what changes" content is the contract; the matrix author honours it. Sector-specific reviewer questions go to the reviewer-question list.
 
 ## 9. Joint ownership left implicit
 

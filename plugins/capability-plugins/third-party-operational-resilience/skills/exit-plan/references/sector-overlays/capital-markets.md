@@ -1,6 +1,6 @@
 # Capital-markets sector overlay — exit-plan
 
-When the engagement scope flags capital markets (advisers, broker-dealers, registered funds, asset managers), load this overlay alongside `references/source-anchors.md`. The bank-flavoured interagency-guidance termination frame is not the operative supervisory frame for SEC and FINRA registrants. Capital-markets exit plans for fund service-provider transitions are the most substantive sub-domain in this overlay.
+When the scope flags capital markets (advisers, broker-dealers, registered funds, asset managers), load this overlay alongside `references/source-anchors.md`. The bank-flavoured interagency-guidance termination frame is not the operative supervisory frame for SEC and FINRA registrants. Capital-markets exit plans for fund service-provider transitions are the most substantive sub-domain in this overlay.
 
 ## Operative supervisory frame
 

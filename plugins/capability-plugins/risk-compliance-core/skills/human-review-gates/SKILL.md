@@ -36,13 +36,13 @@ A handful of facts settle before drafting. Most of them are on the table by the 
 - Whether independence is regulatorily required, advisory, or absent. SR 11-7 demands validation independence from development. Interagency TPRM expects line-1 vs. line-2 separation on critical-vendor decisions. EU AI Act Article 14 expects human oversight by persons with the competence, authority, and resources to fulfil it. The matrix captures independence as a per-reviewer attribute, not a global one.
 - Whether the engagement is standing up a new gate set or auditing an existing workflow. New gate set is a green-field design from the source guidance; audit of an existing workflow surfaces under-specified gates, missing independence, stop conditions that are not stops, and decision criteria that are not criteria.
 
-When `engagement-scope` is supplied, the skill consumes it for institution, persona, source posture, sector overlay, and cross-cutting overlay. Otherwise it asks the questions above and defaults to public posture if the practitioner declines. The matrix notes scope was not formalised; it does not silently assume.
+When `scope` is supplied, the skill consumes it for institution, persona, source posture, sector overlay, and cross-cutting overlay. Otherwise it asks the questions above and defaults to public posture if the practitioner declines. The matrix notes scope was not formalised; it does not silently assume.
 
 ## How the matrix gets built
 
 The matrix has the same spine across workflows. A senior practitioner builds it in roughly the order below, but the conversation surfaces gates in whatever order the workflow shows up; the structured record sorts itself.
 
-The frame opens with the workflow in scope, the decision authority hierarchy, and the source posture. The workflow is named at the right scope (the AI use-case lifecycle, the critical-vendor lifecycle, the issue lifecycle for second-line findings) rather than at the program level. The decision authority block names the primary committee, the escalation committee, and the dissent path. Source posture and source list come from the engagement scope or the four-question default.
+The frame opens with the workflow in scope, the decision authority hierarchy, and the source posture. The workflow is named at the right scope (the AI use-case lifecycle, the critical-vendor lifecycle, the issue lifecycle for second-line findings) rather than at the program level. The decision authority block names the primary committee, the escalation committee, and the dissent path. Source posture and source list come from the scope or the four-question default.
 
 Gates are workflow-anchored. Each row starts with a stable gate ID and works left to right across the named columns:
 
@@ -64,7 +64,7 @@ The source trace block and sign-off block close the artifact. Material claims ci
 
 ### Sector and cross-cutting overlays
 
-The same gate spine carries different decision authorities, different independence expectations, and different documentation conventions across sectors and cross-cutting topics. Load only the overlays the engagement scope flags. The overlays change which sources the matrix cites and what the practitioner expects to find; they do not change the column structure.
+The same gate spine carries different decision authorities, different independence expectations, and different documentation conventions across sectors and cross-cutting topics. Load only the overlays the scope flags. The overlays change which sources the matrix cites and what the practitioner expects to find; they do not change the column structure.
 
 - `references/sector-overlays/banking.md` carries large-bank heightened-standards expectations on board and risk-committee oversight, FRB supervisory expectations on senior-management oversight, and the enhanced-prudential-standards risk-committee shape for large BHCs.
 - `references/sector-overlays/insurance.md` carries NAIC ORSA governance, the corporate-governance-disclosure model-act gate flavour, and state DOI committee-charter conventions including audit-committee requirements under state insurance-holding-company statutes.
@@ -93,7 +93,7 @@ No named institutions in narrative unless they are public defendants in a finali
 
 ## Adaptation
 
-Audience drives shape: a committee-adoption pack pulls the one-page narrative and the recommended charter language to the front; an audit-readiness review leads with the gap section and the recommended actions; an examiner-readiness file leads with the source-anchor trace. Source posture drives what the body can carry; public-only matrices sit at named-role and decision-criteria description, mixed and firm-policy-overlay let named committees, system-of-record names, and policy-version section references land. Sector and cross-cutting overlays load from the engagement scope. Frequency, escalation cadence, and dissent-path mechanics track the firm's governance taxonomy where one exists.
+Audience drives shape: a committee-adoption pack pulls the one-page narrative and the recommended charter language to the front; an audit-readiness review leads with the gap section and the recommended actions; an examiner-readiness file leads with the source-anchor trace. Source posture drives what the body can carry; public-only matrices sit at named-role and decision-criteria description, mixed and firm-policy-overlay let named committees, system-of-record names, and policy-version section references land. Sector and cross-cutting overlays load from the scope. Frequency, escalation cadence, and dissent-path mechanics track the firm's governance taxonomy where one exists.
 
 ## Output
 
@@ -102,7 +102,7 @@ The matrix in `templates/default-output.md` shape and the structured record per 
 ## Pointers
 
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
-- `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md` — sector overlays loaded from engagement scope.
+- `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md` — sector overlays loaded from scope.
 - `references/cross-cutting/{cyber,conduct}.md` — cross-cutting overlays loaded when the gates cover information-security or customer-facing decisions.
 - `references/firm-overlay.md` — firm-installed taxonomy, named committees, GRC-platform decision-record fields, escalation ladders, dissent-path mechanics beyond the regulatory baseline; consumed when present.
 - `templates/default-output.md` — gate matrix template.

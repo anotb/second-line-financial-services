@@ -1,6 +1,6 @@
 # Cyber cross-cutting overlay — control-sampling
 
-Loaded when `engagement-scope.cross_cutting_overlay_set` includes `cyber`, when the test addresses IAM controls, vulnerability management, data-protection controls, or covered-entity-cybersecurity-mandated areas, or when the firm is a Covered Entity under a state cybersecurity regime (e.g., NYDFS 23 NYCRR Part 500). Supplements `references/source-anchors.md`.
+Loaded when `scope.cross_cutting_overlay_set` includes `cyber`, when the test addresses IAM controls, vulnerability management, data-protection controls, or covered-entity-cybersecurity-mandated areas, or when the firm is a Covered Entity under a state cybersecurity regime (e.g., NYDFS 23 NYCRR Part 500). Supplements `references/source-anchors.md`.
 
 ## Population definition conventions for cyber control sampling
 

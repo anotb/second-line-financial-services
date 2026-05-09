@@ -1,6 +1,6 @@
 # Payments-fintech sector overlay — sar-decision-qa
 
-When the engagement scope flags payments or fintech (sponsor-bank programs, BaaS platforms, money transmitters, MSBs, card-program operators, virtual-currency on-ramps), load this overlay alongside `references/source-anchors.md`.
+When the scope flags payments or fintech (sponsor-bank programs, BaaS platforms, money transmitters, MSBs, card-program operators, virtual-currency on-ramps), load this overlay alongside `references/source-anchors.md`.
 
 ## SAR-filing-responsibility allocation
 

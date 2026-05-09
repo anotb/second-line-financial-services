@@ -24,9 +24,9 @@
       "type": "string",
       "format": "date"
     },
-    "engagement_scope_ref": {
+    "scope_ref": {
       "type": "string",
-      "description": "Pointer to the engagement-scope record this diff was produced under, when one exists."
+      "description": "Pointer to the scope record this diff was produced under, when one exists."
     },
     "policy": {
       "type": "object",

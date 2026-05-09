@@ -28,7 +28,7 @@
     },
     "engagement_id": {
       "type": "string",
-      "description": "Optional pointer to the engagement-scope record under which this QA was produced."
+      "description": "Optional pointer to the scope record under which this QA was produced."
     },
     "as_of_date": {
       "type": "string",
@@ -283,7 +283,7 @@
     },
     "cyber_evasion_exposure": {
       "type": "object",
-      "description": "Cross-cutting cyber overlay: sanctions evasion via virtual currency, ransomware payments, mixers and chain-hopping, cyber-enabled identity manipulation, deepfake / synthetic-identity, BIN sponsorship and prepaid-card abuse, decentralized finance and bridge exposure. Loaded when engagement scope flags cyber.",
+      "description": "Cross-cutting cyber overlay: sanctions evasion via virtual currency, ransomware payments, mixers and chain-hopping, cyber-enabled identity manipulation, deepfake / synthetic-identity, BIN sponsorship and prepaid-card abuse, decentralized finance and bridge exposure. Loaded when scope flags cyber.",
       "additionalProperties": false,
       "properties": {
         "virtual_currency_exposure": {

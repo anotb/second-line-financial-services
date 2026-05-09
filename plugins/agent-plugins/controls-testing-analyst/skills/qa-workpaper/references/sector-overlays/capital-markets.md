@@ -1,6 +1,6 @@
 # Capital-markets sector overlay — qa-workpaper
 
-Loaded when `engagement-scope.sector_overlay_set` includes `capital-markets` or when the QA review covers a workpaper at a broker-dealer, investment adviser, or registered fund. Supplements `references/source-anchors.md`.
+Loaded when `scope.sector_overlay_set` includes `capital-markets` or when the QA review covers a workpaper at a broker-dealer, investment adviser, or registered fund. Supplements `references/source-anchors.md`.
 
 ## QA conventions for capital-markets testing workpapers
 

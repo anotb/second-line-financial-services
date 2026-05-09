@@ -1,8 +1,8 @@
 # Cyber cross-cutting overlay for risk-committee-pack
 
-When the engagement-scope record flags `cyber` for the committee pack, this overlay sets the cyber-risk content for named pack sections. The committee pack carries the enterprise-level cyber slice; deeper material on disclosure decisions, 8-K Item 1.05 trigger analysis, and CISO-program reporting lives elsewhere.
+When the scope record flags `cyber` for the committee pack, this overlay sets the cyber-risk content for named pack sections. The committee pack carries the enterprise-level cyber slice; deeper material on disclosure decisions, 8-K Item 1.05 trigger analysis, and CISO-program reporting lives elsewhere.
 
-Loaded by: `risk-committee-pack/SKILL.md` when `engagement_scope.cross_cutting_set` includes `cyber`. Cited and section-referenced anchors live in `references/source-anchors.md`.
+Loaded by: `risk-committee-pack/SKILL.md` when `scope.cross_cutting_set` includes `cyber`. Cited and section-referenced anchors live in `references/source-anchors.md`.
 
 ## Source basis
 

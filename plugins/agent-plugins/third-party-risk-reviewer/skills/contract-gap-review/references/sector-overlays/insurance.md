@@ -1,6 +1,6 @@
 # Insurance sector overlay — contract-gap-review
 
-When the engagement scope flags insurance, load this overlay alongside `references/source-anchors.md`. The insurance overlay carries the clause expectations the bank-flavoured capability skill does not own.
+When the scope flags insurance, load this overlay alongside `references/source-anchors.md`. The insurance overlay carries the clause expectations the bank-flavoured capability skill does not own.
 
 ## Vendor and contract types specific to insurance
 

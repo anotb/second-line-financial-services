@@ -1,6 +1,6 @@
 # Sector overlay: insurance
 
-Loaded when the engagement scope flags `insurance` as the sector. The change-log spine is unchanged; what changes is the source-citation set, the approver expectations, and the typical patterns for insurer policy diffs.
+Loaded when the scope flags `insurance` as the sector. The change-log spine is unchanged; what changes is the source-citation set, the approver expectations, and the typical patterns for insurer policy diffs.
 
 ## Approver routing expectations
 

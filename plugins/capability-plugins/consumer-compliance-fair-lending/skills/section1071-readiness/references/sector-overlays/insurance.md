@@ -21,7 +21,7 @@ In all of these, route the engagement to the appropriate sector overlay (`bankin
 ## What this overlay tells the reviewer
 
 - **Do not run a §1071 readiness assessment at an insurance entity that does not originate covered credit transactions.** It produces a memo full of "not applicable" rows and a misleading source trace.
-- **Surface the boundary in the engagement-scoping conversation.** Where the engagement scope flags insurance but the underlying question is about an affiliated lender, restate the scope at the lender and load the appropriate overlay.
+- **Surface the boundary in the scoping conversation.** Where the scope flags insurance but the underlying question is about an affiliated lender, restate the scope at the lender and load the appropriate overlay.
 - **Where premium financing or credit insurance sits structurally close to credit extension,** the threshold question (is this a covered credit transaction under 1002.106?) is itself the question, and a legal review is appropriate before assuming §1071 scope.
 
 ## Common errors at insurance entities

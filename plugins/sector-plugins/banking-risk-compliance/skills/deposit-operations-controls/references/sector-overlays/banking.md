@@ -1,6 +1,6 @@
 # Sector overlay — banking (deposit-operations-controls)
 
-This skill is banking-sector-only by definition. The overlay is fixed-loaded, not engagement-scope-conditional. The file carries the banking-specific row vocabulary that makes the deposit-operations matrix recognisably a banking matrix rather than a generic controls inventory.
+This skill is banking-sector-only by definition. The overlay is fixed-loaded, not scope-conditional. The file carries the banking-specific row vocabulary that makes the deposit-operations matrix recognisably a banking matrix rather than a generic controls inventory.
 
 ## What the overlay puts into the matrix
 

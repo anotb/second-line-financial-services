@@ -3,13 +3,13 @@
 Date: 2026-05-06
 Reviewer: phase-2 reviewer subagent
 Subject: revised `plugins/capability-plugins/third-party-operational-resilience/skills/vendor-diligence/SKILL.md`
-Compared against: spec sheet (`docs/specs/third-party-operational-resilience/vendor-diligence.md`), boundary spec (`docs/specs/ai-governance-model-risk/llm-vendor-evidence-review.md`), chained specs (`contract-gap-review.md`, `exit-plan.md`, `concentration-risk-review.md`), build contract, anti-AI-tells memory (updated), practitioner-lens memory, engagement-scoping review memo for shape reference.
+Compared against: spec sheet (`docs/specs/third-party-operational-resilience/vendor-diligence.md`), boundary spec (`docs/specs/ai-governance-model-risk/llm-vendor-evidence-review.md`), chained specs (`contract-gap-review.md`, `exit-plan.md`, `concentration-risk-review.md`), build contract, anti-AI-tells memory (updated), practitioner-lens memory, scoping review memo for shape reference.
 
 ## 1. Top-line judgment
 
 About right, leaning slightly under-cut in three places. The prose carries the work. AI tells are mostly gone. The four "Ask first" questions are intact. The `ai_vendor` boolean is a real branch with the `llm-vendor-evidence-review` chain wired in. Risk-based evidence ask is intact. AI-overlay pitfalls are folded into a working paragraph. Lifecycle cross-links are all there with their named field handles. Recommendation enum is complete. The 6-phase spine reads in prose without numbering and a runtime reader can follow it without ladder structure — the named opening clauses ("The frame opens with...", "Evidence collection is risk-based...", "Reading the evidence is where...", "The AI overlay...", "The lifecycle cross-links close...", "The pack ends with...") give Claude the handles it needs.
 
-The revision over-cut in three small but load-bearing spots: the impact-tolerance test against vendor RTO/RPO claims (the second half of spec pitfall #5), the schema-stability discipline (one slogan-line, same as engagement-scoping), and a missing explicit reviewer-question-clusters-by-forum cue in the recommendation paragraph. One smaller cleanup on `load-bearing` overuse and one on naming the agent-tool / agentic posture explicitly in the AI overlay.
+The revision over-cut in three small but load-bearing spots: the impact-tolerance test against vendor RTO/RPO claims (the second half of spec pitfall #5), the schema-stability discipline (one slogan-line, same as scoping), and a missing explicit reviewer-question-clusters-by-forum cue in the recommendation paragraph. One smaller cleanup on `load-bearing` overuse and one on naming the agent-tool / agentic posture explicitly in the AI overlay.
 
 Net: five proposed edits, all small. None reintroduce numbered ladders or rigidity tells.
 
@@ -35,7 +35,7 @@ The revision has one sentence:
 
 > The schema is the cross-skill contract; additive changes only.
 
-Same gap as engagement-scoping. Vendor-diligence's schema is consumed by `contract-gap-review`, `exit-plan`, `concentration-risk-review`, `dora-register-builder`, and `llm-vendor-evidence-review`, which makes the cross-skill-contract claim more, not less, load-bearing here. One added sentence brings the rule from slogan to operational guidance without ballooning it.
+Same gap as scoping. Vendor-diligence's schema is consumed by `contract-gap-review`, `exit-plan`, `concentration-risk-review`, `dora-register-builder`, and `llm-vendor-evidence-review`, which makes the cross-skill-contract claim more, not less, load-bearing here. One added sentence brings the rule from slogan to operational guidance without ballooning it.
 
 ### 2.3 Reviewer questions by forum is named earlier but not at the recommendation point
 
@@ -155,6 +155,6 @@ Five edits, all small. None reintroduce numbered-step rigidity, AI-tell prose, o
 
 ## 5. Closing
 
-The revision is good and lands close to the engagement-scoping pattern. The 6-phase spine works in prose because each phase opens with a named handle. The four "Ask first" questions are intact. The AI-vendor branch is wired correctly with the `llm-vendor-evidence-review` chain. The five edits proposed are surgical: one resilience-test substance restoration, one schema-stability sentence, one runtime locality fix on forum clustering, one agentic-posture naming, one stylistic trim. None restore numbered ladders, fake-precision ranges, repeated must/mandatory stacking, or AI-tell prose.
+The revision is good and lands close to the scoping pattern. The 6-phase spine works in prose because each phase opens with a named handle. The four "Ask first" questions are intact. The AI-vendor branch is wired correctly with the `llm-vendor-evidence-review` chain. The five edits proposed are surgical: one resilience-test substance restoration, one schema-stability sentence, one runtime locality fix on forum clustering, one agentic-posture naming, one stylistic trim. None restore numbered ladders, fake-precision ranges, repeated must/mandatory stacking, or AI-tell prose.
 
 If the orchestrator can only land one edit, land Edit 1 (impact-tolerance test). It is the single piece of substance whose absence a senior op-resilience reviewer would notice on first read.

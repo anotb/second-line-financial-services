@@ -130,14 +130,14 @@ A practitioner note before the list: agentic AI sits across three regulator pers
 ### 18. NYDFS Insurance Circular Letter on AI / ECDIS in Insurance Underwriting and Pricing (January 2024)
 
 - Citation: New York Department of Financial Services, "Use of Artificial Intelligence Systems and External Consumer Data and Information Sources in Insurance Underwriting and Pricing", Insurance Circular Letter No. 7 (January 17, 2024) [verify circular-letter number].
-- Excerpt-paraphrase: NY-licensed insurers using AI systems and external consumer data and information sources (ECDIS) in life-insurance underwriting and pricing must implement governance, risk management, testing, fairness assessment, transparency, disclosure, and consumer-recourse processes per the letter. For agentic systems in NY-licensed life-carrier underwriting scope, the letter's expectations apply; the agentic-controls review references this anchor when the engagement scope places it in.
+- Excerpt-paraphrase: NY-licensed insurers using AI systems and external consumer data and information sources (ECDIS) in life-insurance underwriting and pricing must implement governance, risk management, testing, fairness assessment, transparency, disclosure, and consumer-recourse processes per the letter. For agentic systems in NY-licensed life-carrier underwriting scope, the letter's expectations apply; the agentic-controls review references this anchor when the scope places it in.
 - Link: https://www.dfs.ny.gov/industry-guidance/circular-letters — Insurance Circular Letter 2024-7 [verify section] and circular-letter number
 - Notes: Insurance overlay anchor for NY-licensed life carriers. Binding within scope.
 
 ### 19. Colorado Division of Insurance regulation implementing SB 21-169
 
 - Citation: Colorado Division of Insurance, "Governance and Risk Management Framework Requirements for Life Insurers' Use of External Consumer Data and Information Sources, Algorithms, and Predictive Models", Regulation 10-1-1 (effective November 14, 2023) [verify regulation number].
-- Excerpt-paraphrase: Life insurers operating in Colorado must implement a documented governance and risk-management framework for the use of ECDIS, algorithms, and predictive models, including testing for unfair discrimination, consumer disclosure, and consumer-recourse processes. For agentic systems in CO life-carrier underwriting scope, the regulation applies; the controls review references this anchor when the engagement scope places it in.
+- Excerpt-paraphrase: Life insurers operating in Colorado must implement a documented governance and risk-management framework for the use of ECDIS, algorithms, and predictive models, including testing for unfair discrimination, consumer disclosure, and consumer-recourse processes. For agentic systems in CO life-carrier underwriting scope, the regulation applies; the controls review references this anchor when the scope places it in.
 - Link: https://doi.colorado.gov/announcements/colorado-division-of-insurance-final-adopted-algorithm-and-predictive-model-governance — final adopted regulation [verify section] and regulation number
 - Notes: Insurance overlay anchor for CO life carriers. Binding within scope.
 

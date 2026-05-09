@@ -32,7 +32,7 @@ Most of what the review needs is on the table by the time someone reaches for th
 - What evidence the review actually has access to. Notice text, decision system extract, model output, feature contributions, FCRA disclosure content, comparator data — set source posture at what the engagement has, not at what it would prefer.
 - Who the audience is and which decision forums apply. Consumer compliance committee, fair-lending committee, model risk committee, CRA officer (where dwelling-secured and assessment-area overlap), privacy team, counsel. Audience drives audit-trail depth and the cross-routing on recommended actions.
 
-When `engagement-scope` is supplied, the skill consumes it for institution, persona, source posture, sector overlay set, and cross-cutting overlay set. When it is not, the skill asks the questions above and defaults source posture to public-only with the absence flagged in the memo's decision summary.
+When `scope` is supplied, the skill consumes it for institution, persona, source posture, sector overlay set, and cross-cutting overlay set. When it is not, the skill asks the questions above and defaults source posture to public-only with the absence flagged in the memo's decision summary.
 
 ## How the memo gets built
 
@@ -40,7 +40,7 @@ The memo has the same named-section spine across product types and triggers. The
 
 ### 1. Decision summary
 
-The opening panel records review ID, reviewer role, population reviewed (product, decision type, period, count), sampling basis, the action categories in scope under the notification rule's adverse-action definition, source posture, engagement-scope record path, and the sector and cross-cutting overlays loaded.
+The opening panel records review ID, reviewer role, population reviewed (product, decision type, period, count), sampling basis, the action categories in scope under the notification rule's adverse-action definition, source posture, scope record path, and the sector and cross-cutting overlays loaded.
 
 A review that does not name the action categories in scope cannot test the full population; the panel forces the scope on the face of the artifact. Where the scope is "denials only", the artifact says so explicitly with the rationale, and the recommended-action section flags the unreviewed populations.
 
@@ -102,13 +102,13 @@ Every material claim cites a source from `references/source-anchors.md` (or the 
 
 Quality bar (inline above where they apply, restated once): cite a source for every material claim and mark unsupported items `[evidence needed]`; do not fabricate regulatory facts; no named institutions in narrative outside public defendants in finalized enforcement actions; the memo stops at draft and the named owners sign before any notice re-issuance, model release, or external communication.
 
-Adaptation: audience and depth flex. A working-group memo reads short; a fair-lending committee memo reads structured; a counsel-direction memo reads denser; a regulator-response file reads formal. Sector and cross-cutting overlays load from the engagement scope. Banking is the heaviest overlay on this skill (depository product perimeter, FCRA risk-score disclosure, model-risk fabric, CRA assessment-area overlap, sponsor-bank arrangements). Payments-fintech adds the sponsor-bank vs. fintech-of-record allocation, the BNPL adverse-action posture, and vendor-supplied decisioning. Capital-markets narrows the population to the consumer-purpose subset and excludes margin calls and forced liquidations from §1002.9 scope. Insurance flags the scope boundary at the state-DOI / NAIC perimeter and routes insurance-underwriting questions out.
+Adaptation: audience and depth flex. A working-group memo reads short; a fair-lending committee memo reads structured; a counsel-direction memo reads denser; a regulator-response file reads formal. Sector and cross-cutting overlays load from the scope. Banking is the heaviest overlay on this skill (depository product perimeter, FCRA risk-score disclosure, model-risk fabric, CRA assessment-area overlap, sponsor-bank arrangements). Payments-fintech adds the sponsor-bank vs. fintech-of-record allocation, the BNPL adverse-action posture, and vendor-supplied decisioning. Capital-markets narrows the population to the consumer-purpose subset and excludes margin calls and forced liquidations from §1002.9 scope. Insurance flags the scope boundary at the state-DOI / NAIC perimeter and routes insurance-underwriting questions out.
 
 ## Pointers
 
 - `references/source-anchors.md` — citations and excerpts for the named anchors (ECOA / Reg B §1002.9, Staff Commentary, CFPB Circulars 2022-03 and 2023-03, the April 2023 Joint Statement, FHA, FCRA / Reg V §1022.74, third-party guidance, BNPL interpretive rule, SR 11-7, GLBA Safeguards Rule, NAIC Model #880).
-- `references/sector-overlays/banking.md` (heaviest overlay), `payments-fintech.md`, `capital-markets.md` (narrow), `insurance.md` (scope boundary) — loaded per `engagement_scope.sector_overlay_set`.
-- `references/cross-cutting/privacy.md` — GLBA Safeguards Rule on the review's own data handling, state-privacy interaction, BISG-derived attribute treatment; loaded when `engagement_scope.cross_cutting_set` includes `privacy`.
+- `references/sector-overlays/banking.md` (heaviest overlay), `payments-fintech.md`, `capital-markets.md` (narrow), `insurance.md` (scope boundary) — loaded per `scope.sector_overlay_set`.
+- `references/cross-cutting/privacy.md` — GLBA Safeguards Rule on the review's own data handling, state-privacy interaction, BISG-derived attribute treatment; loaded when `scope.cross_cutting_set` includes `privacy`.
 - `references/firm-overlay.md` — firm-installed notice-template version, reason-code dictionary, named first-line controls, MRM model-risk inventory paths, and named owners; consumed when present.
 - `templates/default-output.md` — content spec for the memo (named sections, per-decision tables, recommended-action routing).
 - `examples/xgboost-personal-loan-decline-sample.md`, `examples/mortgage-decline-redlining-flag.md` — public-source-derived worked examples.

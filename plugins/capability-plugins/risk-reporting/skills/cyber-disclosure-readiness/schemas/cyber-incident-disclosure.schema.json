@@ -22,9 +22,9 @@
       "type": "string",
       "description": "Stable internal ID for the incident. Not the SEC filing accession number."
     },
-    "engagement_scope_id": {
+    "scope_id": {
       "type": ["string", "null"],
-      "description": "Links to engagement-scoping record if supplied."
+      "description": "Links to scoping record if supplied."
     },
     "registrant_filer_category": {
       "type": "string",

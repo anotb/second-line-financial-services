@@ -40,11 +40,11 @@ QA over individual SAR decisions sits in `sar-decision-qa`. The monitoring memo 
 
 ## Sector overlay not loaded
 
-Reading a payments-fintech monitoring system through a deposit-bank lens (or a broker-dealer system through a deposit-bank lens) misses the typology surface that matters. The engagement scope should name the sector overlay; if it does not, the QA asks the practitioner before drafting and notes the assumption in the memo. A memo that does not name the sector overlay it loaded has not engaged the question.
+Reading a payments-fintech monitoring system through a deposit-bank lens (or a broker-dealer system through a deposit-bank lens) misses the typology surface that matters. The scope should name the sector overlay; if it does not, the QA asks the practitioner before drafting and notes the assumption in the memo. A memo that does not name the sector overlay it loaded has not engaged the question.
 
 ## Cyber overlay not loaded when the typology surface implicates it
 
-Customer base shows VASP transaction patterns, the firm has experienced ATO loss, BEC payouts have appeared in prior SAR filings — but the cyber cross-cutting overlay is not loaded and the scenario inventory carries no ATO, BEC, or VASP-conversion scenarios. The QA loads the cyber overlay (`references/cross-cutting/cyber.md`) when the typology evidence is on file, even if the engagement scope did not explicitly flag it; the memo notes the load.
+Customer base shows VASP transaction patterns, the firm has experienced ATO loss, BEC payouts have appeared in prior SAR filings — but the cyber cross-cutting overlay is not loaded and the scenario inventory carries no ATO, BEC, or VASP-conversion scenarios. The QA loads the cyber overlay (`references/cross-cutting/cyber.md`) when the typology evidence is on file, even if the scope did not explicitly flag it; the memo notes the load.
 
 ## Source-anchor citations in the memo body
 

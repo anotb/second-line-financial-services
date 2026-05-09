@@ -1,6 +1,6 @@
 # Privacy cross-cutting overlay — policy-gap-review
 
-Loads when the engagement-scope `cross_cutting_overlay_set` includes `privacy`. Binds the matrix to privacy-and-data-handling-policy expectations when the policy in scope is a privacy policy, a customer-data-handling policy, a data-governance policy, or a substantive policy that includes a section on personally identifiable information or nonpublic personal information.
+Loads when the scope `cross_cutting_overlay_set` includes `privacy`. Binds the matrix to privacy-and-data-handling-policy expectations when the policy in scope is a privacy policy, a customer-data-handling policy, a data-governance policy, or a substantive policy that includes a section on personally identifiable information or nonpublic personal information.
 
 ## Source basis
 

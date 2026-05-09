@@ -4,7 +4,7 @@
 **Service type**: [concise, e.g., core banking SaaS, transfer agent, claims TPA, foundation-model API]
 **Arrangement ID**: [stable ID; reused across criticality-assessment, vendor-diligence, contract-gap-review, concentration-risk-review]
 **Vendor-diligence record**: [ID; the plan consumes criticality, subcontractors, data_access, residual_risk, exit_plan_status from this record]
-**Engagement ID**: [pointer to engagement-scope record, or "none — scope not formalised"]
+**Engagement ID**: [pointer to scope record, or "none — scope not formalised"]
 **As of**: [date]
 **Review type**: [pre-onboarding | annual-recertification | off-cycle-trigger | post-incident-re-review | concentration-driven-re-review | scope-change-re-review]
 **Owner (role)**: [usually IBS owner or head of TPRM]

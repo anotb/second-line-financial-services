@@ -1,6 +1,6 @@
 # Banking sector overlay — edd-escalation-pack
 
-When the engagement scope flags banking, load this overlay alongside `references/source-anchors.md`. It carries the bank-specific EDD frame the generic capability skill does not own. The two regulator-driven EDD frames in banking are private banking (`§1010.620`) and foreign correspondent banking (`§1010.610`); both interact with PEP and Section 311 / 312 considerations.
+When the scope flags banking, load this overlay alongside `references/source-anchors.md`. It carries the bank-specific EDD frame the generic capability skill does not own. The two regulator-driven EDD frames in banking are private banking (`§1010.620`) and foreign correspondent banking (`§1010.610`); both interact with PEP and Section 311 / 312 considerations.
 
 ## Operative EDD rule set in banking
 

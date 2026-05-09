@@ -30,7 +30,7 @@
           "type": "string",
           "enum": ["pre-prod-gate", "in-prod-periodic", "post-incident", "post-foundation-model-swap", "post-retrieval-stack-change", "annual-revalidation", "exam-readiness"]
         },
-        "engagement_scope_id": { "type": "string" },
+        "scope_id": { "type": "string" },
         "model_card_id": { "type": "string", "description": "Links to the model-card-builder output when the card is in hand." },
         "validation_plan_id": { "type": "string", "description": "Links to the validation-plan output when the testing block is in hand." }
       }

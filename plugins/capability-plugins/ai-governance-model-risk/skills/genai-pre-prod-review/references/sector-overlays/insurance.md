@@ -1,6 +1,6 @@
 # Insurance sector overlay for genai-pre-prod-review
 
-When the engagement-scope record names `insurance` as the sector, this overlay adds insurance-specific gate considerations: named co-reviewers, additional notification triggers, sector-specific monitoring expectations, and recommended-action items typical of insurance GenAI gate reviews. Loaded by `genai-pre-prod-review/SKILL.md` when `engagement_scope.sector_overlay_set` includes `insurance`. Cited and section-referenced anchors live in `references/source-anchors.md`.
+When the scope record names `insurance` as the sector, this overlay adds insurance-specific gate considerations: named co-reviewers, additional notification triggers, sector-specific monitoring expectations, and recommended-action items typical of insurance GenAI gate reviews. Loaded by `genai-pre-prod-review/SKILL.md` when `scope.sector_overlay_set` includes `insurance`. Cited and section-referenced anchors live in `references/source-anchors.md`.
 
 ## Source basis
 

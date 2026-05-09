@@ -1,8 +1,8 @@
 # Banking sector overlay for cyber-disclosure-readiness
 
-When the engagement scope names banking, the federal banking agencies' Computer-Security Incident Notification Rule (12 CFR Parts 53/225/304) runs on a 36-hour clock alongside the SEC 4-business-day clock; bank service providers face a 4-hour customer-notification trigger; and FFIEC IT-Handbook expectations underpin the Item 106(b) risk-management narrative.
+When the scope names banking, the federal banking agencies' Computer-Security Incident Notification Rule (12 CFR Parts 53/225/304) runs on a 36-hour clock alongside the SEC 4-business-day clock; bank service providers face a 4-hour customer-notification trigger; and FFIEC IT-Handbook expectations underpin the Item 106(b) risk-management narrative.
 
-Loaded by: `cyber-disclosure-readiness/SKILL.md` when `engagement_scope.sector_overlay_set` includes `banking`. Cited and section-referenced anchors live in `references/source-anchors.md`.
+Loaded by: `cyber-disclosure-readiness/SKILL.md` when `scope.sector_overlay_set` includes `banking`. Cited and section-referenced anchors live in `references/source-anchors.md`.
 
 ## Source basis
 
@@ -32,7 +32,7 @@ A single incident can determine to be a "notification incident" before, simultan
 
 Where the registrant is a bank service provider (a vendor providing services to a banking organization), 12 CFR Parts 53/225/304 require notification to affected banking-organization customers as soon as possible after determining a computer-security incident has caused, or is reasonably likely to cause, a service disruption of four or more hours.
 
-This trigger runs on the service-provider side, independent of the registrant-side 36-hour clock. The pack flags bank-service-provider status in the engagement scope and surfaces the 4-hour trigger when applicable.
+This trigger runs on the service-provider side, independent of the registrant-side 36-hour clock. The pack flags bank-service-provider status in the scope and surfaces the 4-hour trigger when applicable.
 
 ### 3. FFIEC IT-Handbook content underpins Item 106(b)
 

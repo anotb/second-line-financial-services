@@ -13,7 +13,7 @@ The pack is a draft until the AI Governance Lead and the head of model risk revi
 - Period covered: [start YYYY-MM-DD] to [end YYYY-MM-DD]
 - Classification: [internal / board-confidential / regulator-shareable]
 - Pack version: [v1 / v1-revised]
-- Engagement-scope ID (if `engagement-scoping` was run): [ID]
+- Engagement-scope ID (if `scoping` was run): [ID]
 
 ---
 

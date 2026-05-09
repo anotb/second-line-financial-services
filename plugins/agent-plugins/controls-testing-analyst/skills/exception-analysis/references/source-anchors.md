@@ -98,4 +98,4 @@ When the engagement carries cyber, privacy, or conduct risk lens, the cross-cutt
 - Privacy: GLBA Safeguards Rule (16 CFR Part 314), specifically §314.4 on safeguards and incident response [verify section labels]; HIPAA Security Rule where the population includes protected health information.
 - Conduct: CFPB UDAAP Examination Manual sections on identifying unfair, deceptive, or abusive practices [verify section labels]; the manual's framing of consumer harm shifts severity calibration when the population is consumer-facing.
 
-These overlays load when the engagement scope's `cross_cutting_overlay_set` includes the corresponding entry.
+These overlays load when the scope's `cross_cutting_overlay_set` includes the corresponding entry.

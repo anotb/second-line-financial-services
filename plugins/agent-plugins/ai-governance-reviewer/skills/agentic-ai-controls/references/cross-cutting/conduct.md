@@ -1,8 +1,8 @@
 # Conduct cross-cutting overlay for agentic-ai-controls
 
-When the engagement-scope record flags `conduct` for an agentic-controls review, this overlay adds conduct-specific scoping rules, monitoring signals, regulator-notification triggers, and co-reviewer expectations. The conduct overlay is the seam where customer-impact actuation intersects with consumer-protection regimes (CFPB UDAAP, NAIC #880 fair-claims-settlement, state insurance advertising rules, FINRA supervisory and Marketing Rule frameworks).
+When the scope record flags `conduct` for an agentic-controls review, this overlay adds conduct-specific scoping rules, monitoring signals, regulator-notification triggers, and co-reviewer expectations. The conduct overlay is the seam where customer-impact actuation intersects with consumer-protection regimes (CFPB UDAAP, NAIC #880 fair-claims-settlement, state insurance advertising rules, FINRA supervisory and Marketing Rule frameworks).
 
-Loaded by: `agentic-ai-controls/SKILL.md` when `engagement_scope.cross_cutting_set` includes `conduct`. Cited and section-referenced anchors live in `references/source-anchors.md`.
+Loaded by: `agentic-ai-controls/SKILL.md` when `scope.cross_cutting_set` includes `conduct`. Cited and section-referenced anchors live in `references/source-anchors.md`.
 
 ## Source basis
 

@@ -1,8 +1,8 @@
 # Insurance sector overlay for adverse-action-review
 
-When the engagement-scope record names sector `insurance`, this overlay flags the scope boundary. Insurance underwriting and pricing is regulated under state-DOI unfair-discrimination statutes, not under ECOA / Regulation B; the adverse-action review does not extend to insurance underwriting decisions.
+When the scope record names sector `insurance`, this overlay flags the scope boundary. Insurance underwriting and pricing is regulated under state-DOI unfair-discrimination statutes, not under ECOA / Regulation B; the adverse-action review does not extend to insurance underwriting decisions.
 
-Loaded by: `adverse-action-review/SKILL.md` when `engagement_scope.sector_overlay_set` includes `insurance`. The default behavior on this trigger is to confirm scope with the engagement lead before proceeding.
+Loaded by: `adverse-action-review/SKILL.md` when `scope.sector_overlay_set` includes `insurance`. The default behavior on this trigger is to confirm scope with the engagement lead before proceeding.
 
 Cited and section-referenced anchors live in `references/source-anchors.md`.
 

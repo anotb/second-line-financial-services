@@ -1,6 +1,6 @@
 # Cyber cross-cutting overlay — aml-model-monitoring
 
-When the engagement scope flags the cyber cross-cutting overlay, load this file. It carries the cyber-typology lens for transaction-monitoring scenario coverage. The overlay is scoped to typologies that surface in transaction monitoring, not to general cyber controls (NYDFS Part 500 program-level, SEC cyber 8-K, cyber-resilience framework reviews) which sit elsewhere.
+When the scope flags the cyber cross-cutting overlay, load this file. It carries the cyber-typology lens for transaction-monitoring scenario coverage. The overlay is scoped to typologies that surface in transaction monitoring, not to general cyber controls (NYDFS Part 500 program-level, SEC cyber 8-K, cyber-resilience framework reviews) which sit elsewhere.
 
 ## Scope of this overlay
 

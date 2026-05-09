@@ -1,6 +1,6 @@
 # Sector overlay — payments and fintech
 
-Loaded when the engagement scope names payments or fintech (non-bank money transmitter, payment processor, prepaid issuer, neobank operating through a sponsor bank, BNPL provider, PFM, crypto exchange or custodian, remittance provider, P2P platform). The overlay carries non-bank supervision implementation-plan conventions on top of the generic spine.
+Loaded when the scope names payments or fintech (non-bank money transmitter, payment processor, prepaid issuer, neobank operating through a sponsor bank, BNPL provider, PFM, crypto exchange or custodian, remittance provider, P2P platform). The overlay carries non-bank supervision implementation-plan conventions on top of the generic spine.
 
 ## CFPB non-bank supervision
 

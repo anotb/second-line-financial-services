@@ -1,8 +1,8 @@
 # Insurance sector overlay for bcbs239-gap-assessment
 
-When the engagement-scope record names sector `insurance`, this overlay adds insurance-specific fields and review demands to the assessment. Where there is conflict between the capability defaults and this overlay, the overlay governs the insurance-sector elements.
+When the scope record names sector `insurance`, this overlay adds insurance-specific fields and review demands to the assessment. Where there is conflict between the capability defaults and this overlay, the overlay governs the insurance-sector elements.
 
-Loaded by: `bcbs239-gap-assessment/SKILL.md` when `engagement_scope.sector_overlay_set` includes `insurance`. This is a light overlay. BCBS 239 does not directly apply to insurers. The overlay covers the case where an insurance group voluntarily applies BCBS 239 as an internal benchmark, and maps the BCBS 239 principles onto the operative insurance regimes (NAIC ORSA, IAIS ICPs, state Holding Company filings).
+Loaded by: `bcbs239-gap-assessment/SKILL.md` when `scope.sector_overlay_set` includes `insurance`. This is a light overlay. BCBS 239 does not directly apply to insurers. The overlay covers the case where an insurance group voluntarily applies BCBS 239 as an internal benchmark, and maps the BCBS 239 principles onto the operative insurance regimes (NAIC ORSA, IAIS ICPs, state Holding Company filings).
 
 ## Source basis
 

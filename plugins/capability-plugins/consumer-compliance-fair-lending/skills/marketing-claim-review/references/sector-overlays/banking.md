@@ -1,8 +1,8 @@
 # Banking sector overlay for marketing-claim-review
 
-When the engagement-scope record names sector `banking`, this overlay adds banking-specific disclosure rules, FDIC-attribution mechanics, and recurring fact patterns to the asset-level marketing review. Where there is conflict between the capability defaults and this overlay, the overlay governs the banking-sector elements.
+When the scope record names sector `banking`, this overlay adds banking-specific disclosure rules, FDIC-attribution mechanics, and recurring fact patterns to the asset-level marketing review. Where there is conflict between the capability defaults and this overlay, the overlay governs the banking-sector elements.
 
-Loaded by: `marketing-claim-review/SKILL.md` when `engagement_scope.sector_overlay_set` includes `banking`, or when the institution type implicates a federal banking regulator (national bank, state member bank, savings association, bank holding company, foreign banking organization with US operations).
+Loaded by: `marketing-claim-review/SKILL.md` when `scope.sector_overlay_set` includes `banking`, or when the institution type implicates a federal banking regulator (national bank, state member bank, savings association, bank holding company, foreign banking organization with US operations).
 
 Cited and section-referenced anchors live in `references/source-anchors.md`.
 

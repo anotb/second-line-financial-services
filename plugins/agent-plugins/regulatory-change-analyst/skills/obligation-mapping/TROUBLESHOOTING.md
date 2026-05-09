@@ -106,13 +106,13 @@ The obligation register is a foundational primitive: control-matrix, policy-gap-
 - Where the effective date is contingent (rule subject to litigation, guidance subject to revision, sunset awaiting reauthorisation), the row notes the contingency.
 - Compliance-date schedules that the firm has not yet hit but will hit are still flagged so the firm sees them coming.
 
-## 10. The register is built without engagement scope
+## 10. The register is built without scope
 
 **Symptom**: Multiple registers across engagements use inconsistent jurisdiction labels, persona vocabulary, and overlay choices. Downstream skills load the wrong overlays or the wrong taxonomy.
 
-**Why it happens**: The skill was invoked without an engagement-scope record on file, the practitioner declined the four scoping questions, and the defaults set the wrong tone.
+**Why it happens**: The skill was invoked without an scope record on file, the practitioner declined the four scoping questions, and the defaults set the wrong tone.
 
 **Resolution**:
-- When `engagement-scope` is supplied, consume it. Sector overlays, cross-cutting overlays, persona, source posture, jurisdiction all key off the scope record.
+- When `scope` is supplied, consume it. Sector overlays, cross-cutting overlays, persona, source posture, jurisdiction all key off the scope record.
 - When it is not supplied, ask the four questions. If the practitioner declines, default to public posture and note in the artifact that scope was not formalised.
-- For a firm running many registers, the engagement-scope record is what keeps them coherent across functions.
+- For a firm running many registers, the scope record is what keeps them coherent across functions.

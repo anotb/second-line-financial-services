@@ -80,13 +80,13 @@ A clean sample supports a conclusion of operating effectiveness for the tested p
 
 ## Engagement-scope and overlay loading
 
-### Drafting without engagement scope or test-plan-defined scope
+### Drafting without scope or test-plan-defined scope
 
-If neither engagement-scope nor test-plan scope is on file, the workpaper has no scope to test against. Stop and route to `engagement-scoping` (or `test-plan-builder`) before drafting. The workpaper is not a place to invent scope.
+If neither scope nor test-plan scope is on file, the workpaper has no scope to test against. Stop and route to `scoping` (or `test-plan-builder`) before drafting. The workpaper is not a place to invent scope.
 
 ### Loading the wrong sector overlay
 
-Institution type and the regulator the test was designed for drive the sector overlay. HMDA testing pulls banking; an adviser compliance-program test pulls capital-markets; a sponsor-bank end-customer reconciliation test pulls payments-fintech and banking together (dual-overlay loading is normal for sponsor-bank arrangements). Do not collapse to one overlay when the engagement scope says two.
+Institution type and the regulator the test was designed for drive the sector overlay. HMDA testing pulls banking; an adviser compliance-program test pulls capital-markets; a sponsor-bank end-customer reconciliation test pulls payments-fintech and banking together (dual-overlay loading is normal for sponsor-bank arrangements). Do not collapse to one overlay when the scope says two.
 
 ### Skipping cyber overlay on IAM or Part 500 populations
 
