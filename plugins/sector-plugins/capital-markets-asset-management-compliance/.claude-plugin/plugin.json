@@ -5,5 +5,9 @@
   "author": {
     "name": "Second Line Financial Services contributors"
   },
+  "license": "MIT",
+  "homepage": "https://github.com/anotb/second-line-financial-services",
+  "repository": "https://github.com/anotb/second-line-financial-services",
+  "keywords": ["claude-code", "capital-markets", "asset-management", "sec", "finra", "investment-adviser", "marketing-rule", "rule-206-4-1", "best-execution", "fund-board", "form-adv", "form-pf", "ria", "broker-dealer", "second-line"],
   "dependencies": ["risk-compliance-core"]
 }

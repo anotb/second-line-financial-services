@@ -8,62 +8,134 @@
     {
       "name": "risk-compliance-core",
       "source": "./plugins/capability-plugins/risk-compliance-core",
-      "description": "Core GRC workflow skills for obligation mapping, control matrices, evidence binders, issue write-ups, human-review gates, and policy gap reviews."
+      "description": "Core GRC workflow skills for obligation mapping, control matrices, evidence binders, issue write-ups, human-review gates, and policy gap reviews.",
+      "license": "MIT",
+      "homepage": "https://github.com/anotb/second-line-financial-services",
+      "repository": "https://github.com/anotb/second-line-financial-services",
+      "category": "compliance",
+      "keywords": ["claude-code", "grc", "risk-management", "compliance", "obligation-mapping", "control-matrix", "evidence-binder", "issue-management", "policy-gap-review", "second-line", "1.5-line", "financial-services", "scoping"],
+      "tags": ["grc", "compliance", "risk", "second-line", "scoping", "controls"]
     },
     {
       "name": "regulatory-change-management",
       "source": "./plugins/capability-plugins/regulatory-change-management",
-      "description": "Regulatory change management skills for impact assessment, obligation extraction, policy diffing, implementation planning, and exam brief preparation."
+      "description": "Regulatory change management skills for impact assessment, obligation extraction, policy diffing, implementation planning, and exam brief preparation.",
+      "license": "MIT",
+      "homepage": "https://github.com/anotb/second-line-financial-services",
+      "repository": "https://github.com/anotb/second-line-financial-services",
+      "category": "compliance",
+      "keywords": ["claude-code", "regulatory-change", "regulatory-impact-assessment", "obligation-extraction", "policy-diff", "implementation-plan", "exam-brief", "compliance", "supervisory-readiness", "financial-services", "second-line"],
+      "tags": ["regulatory-change", "compliance", "exam-readiness", "policy", "second-line"]
     },
     {
       "name": "ai-governance-model-risk",
       "source": "./plugins/capability-plugins/ai-governance-model-risk",
-      "description": "AI governance and model risk skills for AI intake, risk tiering, model cards, validation planning, agentic controls, EU AI Act triage, AI vendor review, and board risk packs."
+      "description": "AI governance and model risk skills for AI intake, risk tiering, model cards, validation planning, agentic controls, EU AI Act triage, AI vendor review, and board risk packs.",
+      "license": "MIT",
+      "homepage": "https://github.com/anotb/second-line-financial-services",
+      "repository": "https://github.com/anotb/second-line-financial-services",
+      "category": "ai-governance",
+      "keywords": ["claude-code", "ai-governance", "model-risk", "mrm", "sr-11-7", "occ-2026-13", "nist-ai-rmf", "iso-42001", "eu-ai-act", "model-card", "validation-plan", "agentic-ai", "genai", "rag", "llm-vendor-evidence", "prompt-injection", "naic-ai-bulletin", "nydfs-ai", "second-line"],
+      "tags": ["ai-governance", "model-risk", "genai", "agentic-ai", "eu-ai-act", "second-line"]
     },
     {
       "name": "third-party-operational-resilience",
       "source": "./plugins/capability-plugins/third-party-operational-resilience",
-      "description": "Third-party risk and operational resilience skills for vendor diligence, criticality assessment, DORA registers, contract gaps, exit plans, resilience testing, and concentration risk."
+      "description": "Third-party risk and operational resilience skills for vendor diligence, criticality assessment, DORA registers, contract gaps, exit plans, resilience testing, and concentration risk.",
+      "license": "MIT",
+      "homepage": "https://github.com/anotb/second-line-financial-services",
+      "repository": "https://github.com/anotb/second-line-financial-services",
+      "category": "third-party-risk",
+      "keywords": ["claude-code", "third-party-risk", "tprm", "vendor-diligence", "operational-resilience", "dora", "occ-2023-17", "ffiec", "criticality-assessment", "exit-plan", "concentration-risk", "ict-risk", "fintech-partner", "bank-fintech", "second-line"],
+      "tags": ["tprm", "vendor-risk", "operational-resilience", "dora", "second-line"]
     },
     {
       "name": "compliance-testing",
       "source": "./plugins/capability-plugins/compliance-testing",
-      "description": "Compliance and controls testing skills for test plans, sampling, evidence requests, workpapers, exception analysis, issue drafting, and QA review."
+      "description": "Compliance and controls testing skills for test plans, sampling, evidence requests, workpapers, exception analysis, issue drafting, and QA review.",
+      "license": "MIT",
+      "homepage": "https://github.com/anotb/second-line-financial-services",
+      "repository": "https://github.com/anotb/second-line-financial-services",
+      "category": "compliance",
+      "keywords": ["claude-code", "compliance-testing", "controls-testing", "internal-audit", "iia", "aicpa", "coso", "test-plan", "control-sampling", "workpaper", "exception-analysis", "qa-review", "audit-evidence", "second-line"],
+      "tags": ["compliance-testing", "internal-audit", "controls", "workpaper", "second-line"]
     },
     {
       "name": "risk-reporting",
       "source": "./plugins/capability-plugins/risk-reporting",
-      "description": "Risk and regulatory reporting skills for risk committee packs, BCBS 239 gap assessment, KRI commentary, SEC cyber disclosure readiness, attestations, and management responses."
+      "description": "Risk and regulatory reporting skills for risk committee packs, BCBS 239 gap assessment, KRI commentary, SEC cyber disclosure readiness, attestations, and management responses.",
+      "license": "MIT",
+      "homepage": "https://github.com/anotb/second-line-financial-services",
+      "repository": "https://github.com/anotb/second-line-financial-services",
+      "category": "risk-reporting",
+      "keywords": ["claude-code", "risk-reporting", "risk-committee", "bcbs-239", "kri", "sec-cyber-disclosure", "8-k-item-105", "reg-sk-item-106", "attestation", "mra-response", "board-pack", "cro", "second-line"],
+      "tags": ["risk-reporting", "bcbs-239", "board-pack", "cyber-disclosure", "second-line"]
     },
     {
       "name": "financial-crime-governance",
       "source": "./plugins/capability-plugins/financial-crime-governance",
-      "description": "Financial crime governance skills for CDD, SAR decision QA, AML monitoring model governance, sanctions screening QA, EDD escalation, and negative-news triage."
+      "description": "Financial crime governance skills for CDD, SAR decision QA, AML monitoring model governance, sanctions screening QA, EDD escalation, and negative-news triage.",
+      "license": "MIT",
+      "homepage": "https://github.com/anotb/second-line-financial-services",
+      "repository": "https://github.com/anotb/second-line-financial-services",
+      "category": "financial-crime",
+      "keywords": ["claude-code", "financial-crime", "bsa-aml", "fincen", "ofac", "sanctions", "cdd", "edd", "kyc", "sar", "aml-monitoring", "ffiec-bsa-aml", "beneficial-ownership", "negative-news", "second-line"],
+      "tags": ["bsa-aml", "sanctions", "kyc", "sar", "financial-crime", "second-line"]
     },
     {
       "name": "consumer-compliance-fair-lending",
       "source": "./plugins/capability-plugins/consumer-compliance-fair-lending",
-      "description": "Consumer compliance and fair lending skills for fair-lending testing, adverse action review, UDAAP risk review, Section 1071 readiness, complaint themes, and marketing claim review."
+      "description": "Consumer compliance and fair lending skills for fair-lending testing, adverse action review, UDAAP risk review, Section 1071 readiness, complaint themes, and marketing claim review.",
+      "license": "MIT",
+      "homepage": "https://github.com/anotb/second-line-financial-services",
+      "repository": "https://github.com/anotb/second-line-financial-services",
+      "category": "consumer-compliance",
+      "keywords": ["claude-code", "consumer-compliance", "fair-lending", "ecoa", "regulation-b", "adverse-action", "udaap", "cfpb", "section-1071", "marketing-review", "complaint-management", "hmda", "reg-z", "second-line"],
+      "tags": ["fair-lending", "udaap", "cfpb", "consumer-compliance", "second-line"]
     },
     {
       "name": "banking-risk-compliance",
       "source": "./plugins/sector-plugins/banking-risk-compliance",
-      "description": "Banking-sector overlays for supervision readiness, credit risk governance, deposit operations controls, and bank-fintech partnership review."
+      "description": "Banking-sector overlays for supervision readiness, credit risk governance, deposit operations controls, and bank-fintech partnership review.",
+      "license": "MIT",
+      "homepage": "https://github.com/anotb/second-line-financial-services",
+      "repository": "https://github.com/anotb/second-line-financial-services",
+      "category": "sector-banking",
+      "keywords": ["claude-code", "banking", "occ", "frb", "fdic", "ffiec", "ncua", "supervision-readiness", "camels", "credit-risk", "deposit-operations", "bank-fintech", "baas", "heightened-standards", "second-line"],
+      "tags": ["banking", "supervision", "credit-risk", "deposits", "bank-fintech", "second-line"]
     },
     {
       "name": "insurance-risk-compliance",
       "source": "./plugins/sector-plugins/insurance-risk-compliance",
-      "description": "Insurance-sector overlays for AI triage, life and health pricing governance, claims AI controls, and outsourcing resilience."
+      "description": "Insurance-sector overlays for AI triage, life and health pricing governance, claims AI controls, and outsourcing resilience.",
+      "license": "MIT",
+      "homepage": "https://github.com/anotb/second-line-financial-services",
+      "repository": "https://github.com/anotb/second-line-financial-services",
+      "category": "sector-insurance",
+      "keywords": ["claude-code", "insurance", "naic", "state-doi", "naic-ai-bulletin", "model-880", "model-668", "model-900", "ai-pricing", "claims-ai", "mga-tpa", "outsourcing", "orsa", "colorado-sb-21-169", "nydfs-letter", "second-line"],
+      "tags": ["insurance", "naic", "ai-pricing", "claims-ai", "outsourcing", "second-line"]
     },
     {
       "name": "capital-markets-asset-management-compliance",
       "source": "./plugins/sector-plugins/capital-markets-asset-management-compliance",
-      "description": "Capital markets and asset-management overlays for adviser exam readiness, marketing evidence, best-execution surveillance, and fund board reporting."
+      "description": "Capital markets and asset-management overlays for adviser exam readiness, marketing evidence, best-execution surveillance, and fund board reporting.",
+      "license": "MIT",
+      "homepage": "https://github.com/anotb/second-line-financial-services",
+      "repository": "https://github.com/anotb/second-line-financial-services",
+      "category": "sector-capital-markets",
+      "keywords": ["claude-code", "capital-markets", "asset-management", "sec", "finra", "investment-adviser", "marketing-rule", "rule-206-4-1", "best-execution", "fund-board", "form-adv", "form-pf", "ria", "broker-dealer", "second-line"],
+      "tags": ["capital-markets", "asset-management", "sec", "finra", "ria", "second-line"]
     },
     {
       "name": "payments-fintech-compliance",
       "source": "./plugins/sector-plugins/payments-fintech-compliance",
-      "description": "Payments and fintech overlays for payments risk assessment, fintech partner controls, payment operations incidents, and open-banking data controls."
+      "description": "Payments and fintech overlays for payments risk assessment, fintech partner controls, payment operations incidents, and open-banking data controls.",
+      "license": "MIT",
+      "homepage": "https://github.com/anotb/second-line-financial-services",
+      "repository": "https://github.com/anotb/second-line-financial-services",
+      "category": "sector-payments-fintech",
+      "keywords": ["claude-code", "payments", "fintech", "open-banking", "section-1033", "msb", "money-transmitter", "fednow", "rtp", "ach", "card-networks", "fintech-partner", "baas", "sponsor-bank", "second-line"],
+      "tags": ["payments", "fintech", "open-banking", "msb", "baas", "second-line"]
     }
   ]
 }

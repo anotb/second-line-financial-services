@@ -5,5 +5,9 @@
   "author": {
     "name": "Second Line Financial Services contributors"
   },
+  "license": "MIT",
+  "homepage": "https://github.com/anotb/second-line-financial-services",
+  "repository": "https://github.com/anotb/second-line-financial-services",
+  "keywords": ["claude-code", "payments", "fintech", "open-banking", "section-1033", "msb", "money-transmitter", "fednow", "rtp", "ach", "card-networks", "fintech-partner", "baas", "sponsor-bank", "second-line"],
   "dependencies": ["risk-compliance-core"]
 }

@@ -4,5 +4,9 @@
   "description": "Core GRC workflow skills for obligation mapping, control matrices, evidence binders, issue write-ups, human-review gates, and policy gap reviews.",
   "author": {
     "name": "Second Line Financial Services contributors"
-  }
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/anotb/second-line-financial-services",
+  "repository": "https://github.com/anotb/second-line-financial-services",
+  "keywords": ["claude-code", "grc", "risk-management", "compliance", "obligation-mapping", "control-matrix", "evidence-binder", "issue-management", "policy-gap-review", "second-line", "1.5-line", "financial-services", "scoping"]
 }

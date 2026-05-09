@@ -5,5 +5,9 @@
   "author": {
     "name": "Second Line Financial Services contributors"
   },
+  "license": "MIT",
+  "homepage": "https://github.com/anotb/second-line-financial-services",
+  "repository": "https://github.com/anotb/second-line-financial-services",
+  "keywords": ["claude-code", "third-party-risk", "tprm", "vendor-diligence", "operational-resilience", "dora", "occ-2023-17", "ffiec", "criticality-assessment", "exit-plan", "concentration-risk", "ict-risk", "fintech-partner", "bank-fintech", "second-line"],
   "dependencies": ["risk-compliance-core"]
 }

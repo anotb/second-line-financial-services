@@ -5,5 +5,9 @@
   "author": {
     "name": "Second Line Financial Services contributors"
   },
+  "license": "MIT",
+  "homepage": "https://github.com/anotb/second-line-financial-services",
+  "repository": "https://github.com/anotb/second-line-financial-services",
+  "keywords": ["claude-code", "insurance", "naic", "state-doi", "naic-ai-bulletin", "model-880", "model-668", "model-900", "ai-pricing", "claims-ai", "mga-tpa", "outsourcing", "orsa", "colorado-sb-21-169", "nydfs-letter", "second-line"],
   "dependencies": ["risk-compliance-core"]
 }

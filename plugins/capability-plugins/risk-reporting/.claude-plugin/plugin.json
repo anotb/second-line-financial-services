@@ -5,5 +5,9 @@
   "author": {
     "name": "Second Line Financial Services contributors"
   },
+  "license": "MIT",
+  "homepage": "https://github.com/anotb/second-line-financial-services",
+  "repository": "https://github.com/anotb/second-line-financial-services",
+  "keywords": ["claude-code", "risk-reporting", "risk-committee", "bcbs-239", "kri", "sec-cyber-disclosure", "8-k-item-105", "reg-sk-item-106", "attestation", "mra-response", "board-pack", "cro", "second-line"],
   "dependencies": ["risk-compliance-core"]
 }

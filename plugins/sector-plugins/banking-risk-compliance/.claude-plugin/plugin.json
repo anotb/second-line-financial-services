@@ -5,5 +5,9 @@
   "author": {
     "name": "Second Line Financial Services contributors"
   },
+  "license": "MIT",
+  "homepage": "https://github.com/anotb/second-line-financial-services",
+  "repository": "https://github.com/anotb/second-line-financial-services",
+  "keywords": ["claude-code", "banking", "occ", "frb", "fdic", "ffiec", "ncua", "supervision-readiness", "camels", "credit-risk", "deposit-operations", "bank-fintech", "baas", "heightened-standards", "second-line"],
   "dependencies": ["risk-compliance-core"]
 }

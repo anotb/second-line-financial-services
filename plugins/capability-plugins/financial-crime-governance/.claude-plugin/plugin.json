@@ -5,5 +5,9 @@
   "author": {
     "name": "Second Line Financial Services contributors"
   },
+  "license": "MIT",
+  "homepage": "https://github.com/anotb/second-line-financial-services",
+  "repository": "https://github.com/anotb/second-line-financial-services",
+  "keywords": ["claude-code", "financial-crime", "bsa-aml", "fincen", "ofac", "sanctions", "cdd", "edd", "kyc", "sar", "aml-monitoring", "ffiec-bsa-aml", "beneficial-ownership", "negative-news", "second-line"],
   "dependencies": ["risk-compliance-core"]
 }

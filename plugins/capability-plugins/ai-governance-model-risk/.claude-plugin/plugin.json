@@ -5,5 +5,9 @@
   "author": {
     "name": "Second Line Financial Services contributors"
   },
+  "license": "MIT",
+  "homepage": "https://github.com/anotb/second-line-financial-services",
+  "repository": "https://github.com/anotb/second-line-financial-services",
+  "keywords": ["claude-code", "ai-governance", "model-risk", "mrm", "sr-11-7", "occ-2026-13", "nist-ai-rmf", "iso-42001", "eu-ai-act", "model-card", "validation-plan", "agentic-ai", "genai", "rag", "llm-vendor-evidence", "prompt-injection", "naic-ai-bulletin", "nydfs-ai", "second-line"],
   "dependencies": ["risk-compliance-core"]
 }

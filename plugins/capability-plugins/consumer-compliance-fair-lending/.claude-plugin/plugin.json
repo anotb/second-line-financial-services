@@ -5,5 +5,9 @@
   "author": {
     "name": "Second Line Financial Services contributors"
   },
+  "license": "MIT",
+  "homepage": "https://github.com/anotb/second-line-financial-services",
+  "repository": "https://github.com/anotb/second-line-financial-services",
+  "keywords": ["claude-code", "consumer-compliance", "fair-lending", "ecoa", "regulation-b", "adverse-action", "udaap", "cfpb", "section-1071", "marketing-review", "complaint-management", "hmda", "reg-z", "second-line"],
   "dependencies": ["risk-compliance-core"]
 }

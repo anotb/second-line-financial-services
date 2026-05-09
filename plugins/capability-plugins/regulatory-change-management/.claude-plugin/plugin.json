@@ -5,5 +5,9 @@
   "author": {
     "name": "Second Line Financial Services contributors"
   },
+  "license": "MIT",
+  "homepage": "https://github.com/anotb/second-line-financial-services",
+  "repository": "https://github.com/anotb/second-line-financial-services",
+  "keywords": ["claude-code", "regulatory-change", "regulatory-impact-assessment", "obligation-extraction", "policy-diff", "implementation-plan", "exam-brief", "compliance", "supervisory-readiness", "financial-services", "second-line"],
   "dependencies": ["risk-compliance-core"]
 }
