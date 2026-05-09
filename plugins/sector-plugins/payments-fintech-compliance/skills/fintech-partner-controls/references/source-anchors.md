@@ -14,7 +14,7 @@ The lens here is fintech-side self-evidence for production to a sponsor bank's t
 
 - **FDIC Request for Information on Banks' Arrangements with Third Parties to Deliver Bank Deposit Products and Services** (July 25, 2024) [verify date alignment with the joint statement and exact RFI release title]. Companion to the joint statement; supervisory signal on what additional rule or guidance may follow. https://www.fdic.gov/news/press-releases/2024/ [verify exact press-release link].
 
-- **FDIC misrepresentation rule, 12 CFR Part 328 Subpart B** (final rule effective May 2022, amended 2024) [verify exact citation and the 2024 amendments effective dates]. Prohibits misrepresenting deposit insurance and provides standards for non-bank entities holding out deposit insurance. The fintech-side reading: every "FDIC-insured" framing on a fintech surface (web, mobile app, marketing email, statement) re-papered to the pass-through caveats. https://www.ecfr.gov/current/title-12/chapter-III/subchapter-B/part-328/subpart-B .
+- **FDIC Part 328 final rule (December 2023) with effective-date extensions through 2024-2025** — verify current effective date for the engagement. **12 CFR Part 328 Subpart B** prohibits misrepresenting deposit insurance and provides standards for non-bank entities holding out deposit insurance. The fintech-side reading: every "FDIC-insured" framing on a fintech surface (web, mobile app, marketing email, statement) re-papered to the pass-through caveats. https://www.ecfr.gov/current/title-12/chapter-III/subchapter-B/part-328/subpart-B .
 
 ## Federal payments rules — customer-facing duties
 
@@ -66,7 +66,7 @@ The lens here is fintech-side self-evidence for production to a sponsor bank's t
 
 - **CFPB larger-participant rule for general-use digital consumer payment applications** — finalised November 21, 2024; nullified by Public Law 119-11 (CRA resolution of disapproval) effective May 9, 2025. Not in force. The fintech-side reading: do not carry a CFPB direct-supervision posture row anchored to this rule; consumer-protection reach to payment-app firms now runs through general CFPB supervisory authority over service providers and through enforcement.
 
-- **CFPB Personal Financial Data Rights Final Rule under §1033 of the Dodd-Frank Act** (October 22, 2024). Stayed compliance-date posture and CFPB-initiated reconsideration with an ANPR for follow-on changes [verify operative state at write time]. Carry the §1033 status note in any artifact that touches the rule. Detail in `open-banking-data-controls`. https://www.consumerfinance.gov/rules-policy/final-rules/required-rulemaking-on-personal-financial-data-rights/ .
+- **CFPB Personal Financial Data Rights Final Rule under §1033 of the Dodd-Frank Act** (October 22, 2024). **§1033 compliance dates stayed as of October 29, 2025 (Forcht Bank, N.A. v. CFPB); CFPB-initiated reconsideration with ANPR (August 22, 2025).** Carry the §1033 status note in any artifact that touches the rule. Detail in `open-banking-data-controls`. https://www.consumerfinance.gov/rules-policy/final-rules/required-rulemaking-on-personal-financial-data-rights/ .
 
 - **CFPB Supervisory Highlights (current cycles)** [verify which issues are current as of the analysis date]. Recurring fintech themes that read straight into this skill's customer-protection control row: account-closure / hold UDAAP, Reg E §1005.11 timing failures, fee disclosure, FDIC misrepresentation, junk-fees, BNPL, dark patterns. https://www.consumerfinance.gov/data-research/research-reports/supervisory-highlights/ .
 

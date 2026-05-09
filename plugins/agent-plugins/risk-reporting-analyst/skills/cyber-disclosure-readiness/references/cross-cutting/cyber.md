@@ -34,7 +34,7 @@ Parallel-clock anchors that surface in Artifact A's parallel-clocks table for in
 Operational and supervisory frames:
 
 - NIST Cybersecurity Framework 2.0 (CSWP 29, February 26, 2024) — Govern function maps to Item 106(c); Identify-Protect-Detect-Respond-Recover map to Item 106(b).
-- NIST SP 800-61 Rev. 2 — Computer Security Incident Handling Guide (August 2012). Lifecycle and classification taxonomy underpinning the timeline section in Artifact A.
+- **NIST SP 800-61 Rev. 3 — Incident Response Recommendations and Considerations for Cybersecurity Risk Management: A CSF 2.0 Community Profile (April 3, 2025)**, superseding Rev. 2 (Computer Security Incident Handling Guide, August 2012). Rev. 3 re-maps incident-response activities into CSF 2.0 functions (Govern, Identify, Protect, Detect, Respond, Recover) rather than the Rev. 2 four-phase lifecycle. Underpinning the timeline section in Artifact A; verify which revision the firm's IR function operates under.
 - FFIEC IT Examination Handbook Information Security booklet (September 2016) — bank-supervisory expectations for incident response and cybersecurity governance.
 
 ## What changes for the workflow

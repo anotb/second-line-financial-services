@@ -69,7 +69,7 @@ Geography panel (where dwelling-secured population in scope):
 
 ## 7. AI / complex-model specific findings
 
-Findings that turn on the CFPB Circular 2022-03 (specificity is not foreclosed by model complexity) and CFPB Circular 2023-03 (sample-form reasons must reflect the principal reasons actually relied upon) anchors. Joint Statement (April 2023) on enforcement against algorithmic discrimination loaded from `references/source-anchors.md`.
+Findings that turn on Reg B §1002.9 and Comment 9(b)(2)-3 of the Official Staff Commentary (principal-reasons specificity is not foreclosed by model complexity; sample-form reasons must reflect the principal reasons actually relied upon). CFPB Circulars 2022-03 / 2023-03 are **withdrawn May 12, 2025; historical only.** Joint Statement (April 2023) on enforcement against algorithmic discrimination loaded from `references/source-anchors.md`.
 
 | Finding ID | Model in scope (ID, version) | Decision use | Defect type (no-explainability / impossible-mapping / sample-form-substitution / generic-reason-only / model-reason-mismatch) | Decisions affected | Supporting evidence | Recommended action ref |
 |---|---|---|---|---|---|---|

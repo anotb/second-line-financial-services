@@ -65,7 +65,7 @@ NACHA Operating Rules and the card-network rulebooks (Visa Core Rules, Visa Prod
 
 - **CFPB larger-participant rule for general-use digital consumer payment applications** — finalised November 21, 2024; nullified by Public Law 119-11 (CRA resolution of disapproval) effective May 9, 2025. Not in force. Direct CFPB supervision of payment-app firms does not flow from this rule; consumer-protection reach now runs through general CFPB supervisory authority over service providers and through enforcement.
 
-- **CFPB Personal Financial Data Rights Final Rule under §1033 of the Dodd-Frank Act** (October 22, 2024). Stayed compliance-date posture and CFPB-initiated reconsideration with an Advance Notice of Proposed Rulemaking (ANPR) for follow-on changes [verify operative state at write time]. Where the incident touched authorisation flows, developer-interface tokens, or data-recipient feeds, the §1033 status note carries through. Cross-link to `open-banking-data-controls`. https://www.consumerfinance.gov/rules-policy/final-rules/required-rulemaking-on-personal-financial-data-rights/ .
+- **CFPB Personal Financial Data Rights Final Rule under §1033 of the Dodd-Frank Act** (October 22, 2024). **§1033 compliance dates stayed as of October 29, 2025 (Forcht Bank, N.A. v. CFPB); CFPB-initiated reconsideration with ANPR (August 22, 2025).** Where the incident touched authorisation flows, developer-interface tokens, or data-recipient feeds, the §1033 status note carries through. Cross-link to `open-banking-data-controls`. https://www.consumerfinance.gov/rules-policy/final-rules/required-rulemaking-on-personal-financial-data-rights/ .
 
 - **CFPB Supervisory Highlights (current cycles)** [verify which issues are current as of the analysis date]. Recurring fintech-incident themes: §1005.11 dispute-timing failures, account closure / hold UDAAP, fee disclosure, FDIC misrepresentation, P2P scam-recovery posture. https://www.consumerfinance.gov/data-research/research-reports/supervisory-highlights/ .
 
@@ -75,7 +75,7 @@ NACHA Operating Rules and the card-network rulebooks (Visa Core Rules, Visa Prod
 
 ## FDIC misrepresentation and conduct frame
 
-- **FDIC misrepresentation rule, 12 CFR Part 328 Subpart B** (final rule effective May 2022, amended 2024) [verify exact citation and the 2024 amendments effective dates]. Standards for non-bank entities holding out deposit insurance. Where a customer-impact pattern intersects FDIC-pass-through framing on fintech surfaces, the rule frames the customer-facing-posture review. https://www.ecfr.gov/current/title-12/chapter-III/subchapter-B/part-328/subpart-B .
+- **FDIC Part 328 final rule (December 2023) with effective-date extensions through 2024-2025** — verify current effective date for the engagement. **12 CFR Part 328 Subpart B** standards for non-bank entities holding out deposit insurance. Where a customer-impact pattern intersects FDIC-pass-through framing on fintech surfaces, the rule frames the customer-facing-posture review. https://www.ecfr.gov/current/title-12/chapter-III/subchapter-B/part-328/subpart-B .
 
 ## Cyber-leg cross-anchors (cross-cutting overlay carries the detail)
 

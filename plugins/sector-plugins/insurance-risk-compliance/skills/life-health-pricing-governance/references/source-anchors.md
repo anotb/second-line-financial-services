@@ -56,9 +56,9 @@ NAIC Model Laws and Regulations are model text; what binds the carrier is the st
 
 ## Model-risk frame (analogous)
 
-- **SR 11-7 — Supervisory Guidance on Model Risk Management** (OCC Bulletin 2011-12 / FRB SR 11-7, April 2011). Federal banking model-risk guidance. Cite as **analogous** model-risk expectation language for ML pricing models in insurance; state DOIs increasingly point to SR 11-7 as analogous, not directly applicable. https://www.federalreserve.gov/supervisionreg/srletters/sr1107.htm .
+- **Joint Interagency Revised Guidance on Model Risk Management** (OCC Bulletin 2026-13 / FRB SR 26-2 / FDIC FIL-15-2026, April 17, 2026). The federal banking model-risk anchor; supersedes SR 11-7 (April 4, 2011) and SR 21-8. Cite as **analogous** model-risk expectation language for ML pricing models in insurance; state DOIs cite the federal model-risk frame as analogous, not directly applicable. The guidance is non-binding (does not set forth enforceable standards) and is most relevant to banking organizations with over $30 billion in total assets; generative AI and agentic AI models are explicitly out of scope (footnote 3). https://occ.gov/news-issuances/bulletins/2026/bulletin-2026-13a.pdf ; https://www.federalreserve.gov/supervisionreg/srletters/SR2602.htm ; https://www.fdic.gov/news/financial-institution-letters/2026/agencies-revise-interagency-model-risk-management-guidance .
 
-- **OCC Bulletin 2026-13 (revised interagency model-risk management guidance — verify final issuance date and bulletin number)**. The successor / revision to SR 11-7 in the federal banking frame. Same analogous-citation posture for insurance: cite as analogous model-risk expectation language, not as binding. Mark `[verify final OCC 2026-13 issuance date and bulletin number]` on the analysis date until confirmed.
+- **SR 11-7 (April 2011)** retained as historical citation anchor only when reading pre-April-17-2026 evidence or model documentation. Not the operative current standard. https://www.federalreserve.gov/supervisionreg/srletters/sr1107.htm .
 
 ## Privacy-of-insurance-information frame
 
@@ -77,5 +77,5 @@ NAIC Model Laws and Regulations are model text; what binds the carrier is the st
 - Date every external source on retrieval. Bulletins and model laws are revised; an artifact citing a stale revision reads as not-ready.
 - `[verify section]` markers are deliberate, not omissions. Resolve before final issuance, not by guessing.
 - Distinguish model text from state adoption. NAIC models bind nothing on their own; the state's adoption is the binding instrument.
-- Cite SR 11-7 and OCC 2026-13 as analogous, not binding. State DOIs use the language as analogous expectation.
+- Cite the Joint Interagency Revised Guidance on Model Risk Management (OCC 2026-13 / SR 26-2 / FIL-15-2026) as analogous, not binding. State DOIs use the language as analogous expectation. SR 11-7 is superseded; cite only when reading pre-April-17-2026 evidence.
 - Public defendants in finalised state-DOI rate-filing rejections or unfair-discrimination consent orders may be cited by name; otherwise, do not name institutions.

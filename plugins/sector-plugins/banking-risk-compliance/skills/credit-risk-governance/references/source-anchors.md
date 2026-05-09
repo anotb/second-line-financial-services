@@ -76,7 +76,7 @@ The named, dated public regulatory sources this skill anchors to for second-line
 
 ### Fair-lending route-out
 
-The fair-lending lens (ECOA, Regulation B, FHA, HMDA, Section 1071, disparate impact and treatment) is not in scope for this skill. Route to the consumer-compliance fair-lending skills (when present) for that artifact. Anchors there: ECOA at 15 USC §1691; Regulation B at 12 CFR Part 1002, including §1002.107 (Section 1071 small-business lending data); Fair Housing Act at 42 USC §3601 et seq.; HMDA at 12 CFR Part 1003.
+The fair-lending lens (ECOA, Regulation B, FHA, HMDA, Section 1071, disparate impact and treatment) is not in scope for this skill. Route to the consumer-compliance fair-lending skills (when present) for that artifact. Anchors there: ECOA at 15 USC §1691; Regulation B at 12 CFR Part 1002, including §1002.107 (Section 1071 small-business lending data — **§1071 revised final rule May 1, 2026; 1,000 covered transactions; effective June 30, 2026; compliance January 1, 2028 — supersedes 2023 tiered schedule**); Fair Housing Act at 42 USC §3601 et seq.; HMDA at 12 CFR Part 1003.
 
 ## Public enforcement reference set (anonymous, pattern only)
 

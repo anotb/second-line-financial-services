@@ -27,7 +27,7 @@ Where the asset is for a deposit-equivalent product (consumer-facing surface whe
 For BNPL assets, the asset-level review reads:
 
 - "No interest" representations against the late-fee, returned-payment-fee, and cost-of-credit reality.
-- Cost-of-credit framing against the bureau's interpretive posture on Reg Z applicability to BNPL [verify operative status of the May 2024 interpretive rule at memo date].
+- Cost-of-credit framing against the underlying Reg Z framework as applied to the BNPL product structure (the May 2024 CFPB BNPL Interpretive Rule was **nullified by Pub. L. 119-11 (May 9, 2025); historical only.** Reg Z applicability now turns on the product structure under the regulatory text rather than the nullified interpretive rule).
 - Autopay and default-payment-method representations.
 - Multi-merchant payment-allocation logic where the asset implies a single-payment cadence but the underlying product allocates across merchants.
 - Dispute-handling representations against the operative dispute-mechanics framework.
@@ -112,7 +112,7 @@ The following fields are added to the per-asset block:
 ## Common pitfalls in payments and fintech marketing-review memos
 
 - Assuming the fintech is the sole accountable party when the sponsor bank's name or logo is on the asset; the bank inherits asset-level review duty.
-- BNPL marketing reviewed under generic deceptive-marketing framing without the operative interpretive-rule overlay; verify Reg Z applicability at memo date.
+- BNPL marketing reviewed under generic deceptive-marketing framing without anchoring to the underlying Reg Z framework as applied to the product structure (the May 2024 CFPB BNPL Interpretive Rule was **nullified by Pub. L. 119-11 (May 9, 2025); historical only.**).
 - "Instant funding" and tip-mechanic marketing reviewed for substantiation only and missing the cost-of-credit framing on the asset.
 - Influencer and creator endorsements reviewed against firm-policy material-connection disclosure only and missing the channel-specific FTC Endorsement Guides expectations.
 - AI-generated avatars or AI-generated testimonials reviewed as marketing creative without the synthetic-content disclosure analysis.

@@ -57,7 +57,7 @@ Each pulls a different rule set into the diligence checklist.
 ## CFPB direct supervision
 
 - **CFPB §1024 larger-participant rules** for digital wallets and payment apps (December 2024) [verify Federal Register citation, effective date, and current state including any litigation or congressional review]. Where the fintech is a designated larger participant, the CFPB has direct supervisory and examination authority. The diligence pack must surface applicability and the fintech's CFPB-readiness posture as relevant to the firm's bank.
-- **CFPB Circular series** on account closures and holds, junk-fees, dark patterns, FDIC misrepresentation, BNPL [verify which circulars are current as of the date of analysis].
+- **CFPB Circular series** on account closures and holds, junk-fees, dark patterns, and FDIC misrepresentation. Many CFPB Circulars (UDAAP, overdraft / NSF, adverse-action with complex algorithms, account reopening) were **withdrawn May 12, 2025; historical only** — anchor diligence findings to the regulatory text rather than the withdrawn circular layer. The CFPB BNPL Interpretive Rule (May 2024) was separately **nullified by Pub. L. 119-11 (May 9, 2025); historical only.**
 
 ## Cross-link inside the plugin
 

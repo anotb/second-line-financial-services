@@ -16,8 +16,7 @@ This repository intentionally uses public, regulator, standards-body, and offici
 
 | Domain | Public anchor | URL |
 |---|---|---|
-| Model risk management | OCC Bulletin 2026-13, revised interagency model risk guidance | https://www.occ.gov/news-issuances/bulletins/2026/bulletin-2026-13.html |
-| Model risk management | FDIC FIL on revised model risk guidance | https://www.fdic.gov/news/financial-institution-letters/2026/agencies-revise-interagency-model-risk-management-guidance |
+| Model risk management | Joint Interagency Revised Guidance on Model Risk Management (OCC Bulletin 2026-13 / FRB SR 26-2 / FDIC FIL-15-2026, April 17, 2026; supersedes SR 11-7 and SR 21-8). Non-binding; most relevant to banks over $30B; GenAI / agentic AI explicitly out of scope (footnote 3). | https://www.occ.gov/news-issuances/bulletins/2026/bulletin-2026-13.html ; https://www.federalreserve.gov/supervisionreg/srletters/SR2602.htm ; https://www.fdic.gov/news/financial-institution-letters/2026/agencies-revise-interagency-model-risk-management-guidance |
 | AI governance | NIST AI RMF 1.0 | https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-ai-rmf-10 |
 | AI governance | NIST AI RMF crosswalks | https://www.nist.gov/itl/ai-risk-management-framework/crosswalks-nist-artificial-intelligence-risk-management-framework |
 | AI management system | ISO/IEC 42001 overview | https://www.iso.org/standard/42001 |
@@ -28,7 +27,7 @@ This repository intentionally uses public, regulator, standards-body, and offici
 | Third-party risk | U.S. interagency third-party risk management guidance, FDIC release | https://www.fdic.gov/news/press-releases/2023/pr23047.html |
 | Risk data and reporting | BCBS 239 principles for effective risk data aggregation and risk reporting | https://www.bis.org/publ/bcbs239.htm |
 | Cyber reporting | SEC cybersecurity risk management, strategy, governance, and incident disclosure guide | https://www.sec.gov/corpfin/secg-cybersecurity |
-| Small business lending and fair lending | CFPB Section 1071 small business lending final rule page | https://www.consumerfinance.gov/rules-policy/final-rules/small-business-lending-under-the-equal-credit-opportunity-act-regulation-b/ |
+| Small business lending and fair lending | CFPB Section 1071 small business lending revised final rule (May 1, 2026; 1,000 covered transactions; effective June 30, 2026; compliance January 1, 2028) | https://www.consumerfinance.gov/rules-policy/final-rules/small-business-lending-under-the-equal-credit-opportunity-act-regulation-b-2026/ |
 | Small business lending data | CFPB Regulation B section 1002.107 data compilation rule text | https://www.consumerfinance.gov/rules-policy/regulations/1002/107 |
 | Financial crime governance | FFIEC BSA/AML CDD manual | https://bsaaml.ffiec.gov/manual/AssessingComplianceWithBSARegulatoryRequirements/02 |
 | Financial crime governance | FFIEC BSA/AML SAR manual | https://bsaaml.ffiec.gov/manual/AssessingComplianceWithBSARegulatoryRequirements/04 |

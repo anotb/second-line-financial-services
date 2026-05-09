@@ -24,7 +24,7 @@ For BHCs reporting under FRB SR 12-17, the risk taxonomy aligns to the LFI ratin
 - Shows the ladder from the RAS metric to first-line operating limits. A pack that reports RAS metrics without the operating-limit linkage does not demonstrably meet the Section III expectation.
 - Names breach owners and recalibration requests as decision items, not as status updates.
 
-For non-OCC banks (state member banks, FDIC-supervised state nonmembers), the RAS expectation comes through SR 11-7 §III, FDIC Statement of Policy on Bank Risk Management, or the firm's own framework; the substantive shape is the same.
+For non-OCC banks (state member banks, FDIC-supervised state nonmembers), the RAS expectation comes through Regulation YY (12 CFR Part 252 — Subpart C §252.22 risk-committee at $50B; Subpart D §§252.31-252.36 enhanced prudential standards at $100B), FDIC Statement of Policy on Bank Risk Management, or the firm's own framework; the substantive shape is the same. (SR 11-7 was the model-risk anchor, **superseded by the Joint Interagency Revised Guidance on Model Risk Management — OCC Bulletin 2026-13 / FRB SR 26-2 / FDIC FIL-15-2026, April 17, 2026** — and is not the RAS anchor.)
 
 ### 3. MRA / MRIA aging and closure status is a standing section
 

@@ -59,7 +59,7 @@ Customer-facing policies are the policies whose gaps get litigated, enforced, an
 
 ### Fair-lending policy gaps
 
-- Adverse-action-notice content policy under Reg B §1002.9, where the policy does not require principal-reasons specificity at the rigor CFPB Circular 2022-03 expects (frequent gap site for ML-decisioning policies).
+- Adverse-action-notice content policy under Reg B §1002.9, where the policy does not require principal-reasons specificity at the rigor Reg B and Comment 9(b)(2)-3 of the Official Staff Commentary expect (frequent gap site for ML-decisioning policies).
 - Prohibited-basis monitoring policy (testing, comparator-file analysis, exception-and-override review) where the policy is silent or generic.
 - Disparate-impact assessment policy, where the policy is silent on the disparate-impact dimension.
 - Section 1071 small-business data collection policy, where the firm meets the originations-volume threshold and the policy is silent or pre-rule.

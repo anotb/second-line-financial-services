@@ -11,7 +11,7 @@ The overlay carries the theme list to read into the segment matrix and the cross
 - **CFPB Circular series** — verify which circulars are current.
 - **FDIC misrepresentation rule, 12 CFR Part 328 Subpart B** — standards for non-bank entities holding out deposit insurance.
 - **Reg E (12 CFR Part 1005)** §1005.6 unauthorised-transfer liability and §1005.11 dispute-timing — failures here are pursued as both Reg E findings and UDAAP findings.
-- **CFPB Pay-in-Four interpretive rule and BNPL market-monitoring report** (verify current state).
+- **CFPB BNPL / Pay-in-Four Interpretive Rule** — **nullified by Pub. L. 119-11 (May 9, 2025); historical only.** **CFPB BNPL market-monitoring report** (verify current state for any successor data publications).
 - **CFPB final rule on larger participants of digital consumer payment applications** (December 2024 — verify Federal Register citation and current state) — direct CFPB supervision over designated larger participants.
 
 ## Theme list to read into the matrix
@@ -22,9 +22,9 @@ The overlay carries the theme list to read into the segment matrix and the cross
 
 **Fee disclosure failures.** Junk-fee themes; surprise-fee patterns; NSF / overdraft framing on fintech accounts. CFPB has issued Circulars and supervisory guidance on overdraft and junk fees (verify current circular numbers and dates). Fee-disclosure-vs-actual reconciliation is the operative test.
 
-**FDIC-insurance representation.** The Synapse-era enforcement and the FDIC misrepresentation rule (12 CFR Part 328 Subpart B, May 2022, amended 2024 — verify exact dates and amendments) require any "FDIC-insured" framing on fintech surfaces to be re-papered to the pass-through caveats. Marketing-claim review against the FDIC misrepresentation rule.
+**FDIC-insurance representation.** The Synapse-era enforcement and the **FDIC Part 328 final rule (December 2023) with effective-date extensions through 2024-2025** — verify current effective date for the engagement — require any "FDIC-insured" framing on fintech surfaces to be re-papered to the pass-through caveats. Marketing-claim review against 12 CFR Part 328 Subpart B.
 
-**BNPL UDAAP themes.** Fee disclosure, dispute-rights presentation, comparative-shopping framing, late-fee policy. Anchored to CFPB BNPL market-monitoring report (September 2022) and any subsequent CFPB BNPL actions or interpretive rulings. The Pay-in-Four interpretive rule on whether BNPL is a credit-card-like product subject to Reg Z dispute-resolution provisions [verify current state].
+**BNPL UDAAP themes.** Fee disclosure, dispute-rights presentation, comparative-shopping framing, late-fee policy. Anchored to the CFPB BNPL market-monitoring report (September 2022) and any subsequent CFPB BNPL actions. The CFPB BNPL / Pay-in-Four Interpretive Rule (which framed BNPL as a credit-card-like product subject to Reg Z dispute-resolution provisions) was **nullified by Pub. L. 119-11 (May 9, 2025); historical only** — Reg Z applicability now turns on the product structure under the regulatory text rather than through the nullified interpretive rule.
 
 **Dark-pattern risk in onboarding and product-selection flows.** Pre-checked consents; choice-architecture nudges that bury opt-outs; comparative-shopping suppression. CFPB Circular on dark patterns [verify which circular and date]. FTC dark-pattern guidance.
 

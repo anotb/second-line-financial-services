@@ -14,7 +14,7 @@ The conduct overlay threads through several pack sections:
 
 ## Top AI conduct risks (catalogue for selection, not all-required)
 
-- Adverse-action notice quality on AI-driven credit decisioning. CFPB Circular 2022-03 and 2023-03 set the framing; the principal-reasons standard under ECOA / Reg B applies to AI-driven decisions. Specificity is the recurring exam topic.
+- Adverse-action notice quality on AI-driven credit decisioning. Reg B §1002.9 and Comment 9(b)(2)-3 of the Official Staff Commentary set the framing; the principal-reasons standard under ECOA / Reg B applies to AI-driven decisions. Specificity is the recurring exam topic. (CFPB Circulars 2022-03 / 2023-03 are **withdrawn May 12, 2025; historical only.**)
 - Fairness exposure on AI-driven underwriting (credit, life and health insurance). The conduct overlay carries the firm-side fairness testing posture; depth lives in `validation-plan` outputs and the model card fairness sections.
 - Claims-handling AI fairness and accuracy. Multistate market-conduct exam focus on claims AI; consumer-protection enforcement on claims-AI accuracy and recourse.
 - AI-generated client communications quality and accuracy where the firm is an investment adviser (Marketing Rule scope) or a broker-dealer (FINRA communications standards). Capital-markets sector overlay carries the depth.

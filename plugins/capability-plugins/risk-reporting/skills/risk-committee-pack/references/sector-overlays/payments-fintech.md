@@ -55,7 +55,7 @@ For instant-payments entities (FedNow, RTP, Same Day ACH), the pack carries frau
 
 For nonbank entities under CFPB §1024 supervisory authority (larger participants in defined markets), the pack carries CFPB exam status, MRA / MRIA-equivalent supervisory letter posture, and any §1031 / §1036 enforcement engagement. The pack should not represent CFPB authority as out of scope for nonbanks; that is a recurring committee misframing.
 
-For in-scope entities, §1033 (open banking, final rule October 2024) and §1071 (small-business lending data collection, final rule March 2023; subject to litigation and stay history) implementation status belongs in the regulatory-horizon section. Verify current effectiveness at pack-write time.
+For in-scope entities, §1033 (open banking, final rule October 2024; **§1033 compliance dates stayed as of October 29, 2025 per Forcht Bank, N.A. v. CFPB; CFPB-initiated reconsideration with ANPR August 22, 2025**) and §1071 (small-business lending data collection; **§1071 revised final rule May 1, 2026 — 1,000 covered transactions, effective June 30, 2026, compliance January 1, 2028 — supersedes 2023 tiered schedule**) implementation status belongs in the regulatory-horizon section. Verify current effectiveness at pack-write time.
 
 ### 6. State-licensing posture
 

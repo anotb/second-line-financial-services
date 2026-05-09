@@ -16,8 +16,7 @@ This repository intentionally uses public, regulator, standards-body, and offici
 
 | Domain | Public anchor | URL |
 |---|---|---|
-| Model risk management | OCC Bulletin 2026-13, revised interagency model risk guidance | https://www.occ.gov/news-issuances/bulletins/2026/bulletin-2026-13.html |
-| Model risk management | FDIC FIL on revised model risk guidance | https://www.fdic.gov/news/financial-institution-letters/2026/agencies-revise-interagency-model-risk-management-guidance |
+| Model risk management | Joint Interagency Revised Guidance on Model Risk Management (OCC Bulletin 2026-13 / FRB SR 26-2 / FDIC FIL-15-2026, April 17, 2026; supersedes SR 11-7 and SR 21-8). Non-binding; most relevant to banks over $30B; GenAI / agentic AI explicitly out of scope (footnote 3). | https://www.occ.gov/news-issuances/bulletins/2026/bulletin-2026-13.html ; https://www.federalreserve.gov/supervisionreg/srletters/SR2602.htm ; https://www.fdic.gov/news/financial-institution-letters/2026/agencies-revise-interagency-model-risk-management-guidance |
 | AI governance | NIST AI RMF 1.0 | https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-ai-rmf-10 |
 | AI governance | NIST AI RMF crosswalks | https://www.nist.gov/itl/ai-risk-management-framework/crosswalks-nist-artificial-intelligence-risk-management-framework |
 | AI management system | ISO/IEC 42001 overview | https://www.iso.org/standard/42001 |

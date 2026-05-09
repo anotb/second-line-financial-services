@@ -34,9 +34,9 @@ NY DFS Circular Letter: consumer-recourse channel is named (a dedicated AU-decli
 
 Six AIS Program elements `in-place`, two `partial`, one `gap`. The gap is third-party-AI accountability for the vendor: the contractual clauses are present but the monitoring evidence is not yet flowing.
 
-### Documentation completeness vs SR 11-7-equivalent
+### Documentation completeness vs federal model-risk-equivalent
 
-Validation evidence is `partial`; the vendor's validation is documented but the carrier's own outcomes-analysis plan is dated within the last 30 days and has no observation period yet. Cite SR 11-7 as analogous.
+Validation evidence is `partial`; the vendor's validation is documented but the carrier's own outcomes-analysis plan is dated within the last 30 days and has no observation period yet. Cite the **Joint Interagency Revised Guidance on Model Risk Management (OCC Bulletin 2026-13 / FRB SR 26-2 / FDIC FIL-15-2026, April 17, 2026; supersedes SR 11-7)** as analogous.
 
 ### State DOI bulletin alignment
 
@@ -60,4 +60,4 @@ ECDIS: consumer-recourse channel named (above); adverse-information-disclosure p
 - Colorado SB 21-169 implementing regulation.
 - NY DFS Insurance Circular Letter on AI and ECDIS in life-insurance underwriting (January 2024).
 - HIPAA Privacy Rule, 45 CFR Part 164 Subpart E.
-- SR 11-7 (cited as analogous model-risk expectation language).
+- Joint Interagency Revised Guidance on Model Risk Management (OCC Bulletin 2026-13 / FRB SR 26-2 / FDIC FIL-15-2026, April 17, 2026; supersedes SR 11-7) — cited as analogous model-risk expectation language.

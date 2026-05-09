@@ -32,9 +32,9 @@ State guidance limited in the three states in scope; no CO, NY, or CA presence i
 
 Vendor ML input pulls third-party-AI-accountability obligations under the NAIC Bulletin December 2023. Six AIS Program elements `in-place`, three `partial`. The carrier-level monitoring against the vendor's input is the key open item.
 
-### Documentation completeness vs SR 11-7-equivalent
+### Documentation completeness vs federal model-risk-equivalent
 
-Vendor-supplied validation evidence; carrier-level validation `partial` (similar to the AU example). Cite SR 11-7 as analogous.
+Vendor-supplied validation evidence; carrier-level validation `partial` (similar to the AU example). Cite the **Joint Interagency Revised Guidance on Model Risk Management (OCC Bulletin 2026-13 / FRB SR 26-2 / FDIC FIL-15-2026, April 17, 2026; supersedes SR 11-7)** as analogous.
 
 ### State DOI bulletin alignment
 
@@ -63,4 +63,4 @@ HIPAA applies (small-group health). Vendor BAA chain on file. Minimum-necessary 
 - NAIC Bulletin on the Use of Artificial Intelligence Systems by Insurers (December 2023).
 - NAIC Unfair Trade Practices Act, Model #880.
 - HIPAA Privacy Rule, 45 CFR Part 164 Subpart E.
-- SR 11-7 (cited as analogous model-risk expectation language).
+- Joint Interagency Revised Guidance on Model Risk Management (OCC Bulletin 2026-13 / FRB SR 26-2 / FDIC FIL-15-2026, April 17, 2026; supersedes SR 11-7) — cited as analogous model-risk expectation language.

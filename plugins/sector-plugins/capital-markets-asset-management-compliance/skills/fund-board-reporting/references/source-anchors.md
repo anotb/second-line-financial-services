@@ -78,7 +78,7 @@ The skill cites these by file path. SKILL.md does not restate excerpts.
 
 ### 11. Rule 35d-1 — Names Rule
 
-- Citation: 17 CFR §270.35d-1 (Investment Company Act Rule 35d-1). Original rule adopted 2001 (Release No. IC-24828, January 17, 2001); 2023 amendments adopted in SEC Release No. IC-35000 (September 20, 2023). Compliance dates as extended: large fund groups (≥$1 billion AUM) December 11, 2025; smaller fund groups June 11, 2026 [verify the current compliance dates against any further SEC extension or staff guidance].
+- Citation: 17 CFR §270.35d-1 (Investment Company Act Rule 35d-1). Original rule adopted 2001 (Release No. IC-24828, January 17, 2001); 2023 amendments adopted in SEC Release No. IC-35000 (September 20, 2023). **Compliance dates extended (SEC March 14, 2025): large fund groups ($1B+ net assets at most recent fiscal-year end) June 11, 2026; smaller fund groups (less than $1B net assets) December 11, 2026. Form N-PORT Names Rule reporting compliance further extended February 2026 to November 17, 2027 (large) / May 18, 2028 (smaller) — N-PORT reporting only, not the underlying Names Rule.**
 - Excerpt-paraphrase: Rule 35d-1 governs the use of fund names that suggest a particular type of investment, industry, geographic focus, or tax status, and requires a fund with such a name to adopt a policy to invest at least 80% of its assets in the type of investment, industry, geographic area, or tax-related investment its name suggests. The 2023 amendments expanded the rule's reach to fund names suggesting that the fund focuses on investments that have, or whose issuers have, particular characteristics (including names that incorporate ESG, sustainable, growth, value, and other thematic terminology). The amendments also include compliance-policy and recordkeeping requirements.
 - Link: https://www.ecfr.gov/current/title-17/chapter-II/part-270/section-270.35d-1 — 17 CFR §270.35d-1; https://www.sec.gov/rules/2023/09/investment-company-names — SEC Release No. IC-35000 (September 20, 2023)
 - Notes: ESG-labeled fund disclosures, greenwashing risk in shareholder reports, and ESG fund-name compliance feed the climate cross-cutting overlay (when loaded) and the issues-and-management-actions section of the board pack.
@@ -128,7 +128,7 @@ Items carrying `[verify current state]`, `[verify section]`, or `[verify complia
 
 - Rule 22e-4 amendments and the 2022 swing-pricing proposal (Release No. IC-34746) — current state of the rulemaking.
 - Reg S-P May 2024 amendments — compliance dates: larger entities December 3, 2025; smaller entities June 3, 2026; verify entity-tier scope.
-- Rule 35d-1 (Names Rule) — extended compliance dates: large fund groups December 11, 2025; smaller groups June 11, 2026; verify against the most recent SEC extension order.
+- Rule 35d-1 (Names Rule) — **compliance dates extended (SEC March 14, 2025): large fund groups ($1B+) June 11, 2026; smaller groups December 11, 2026.** Form N-PORT reporting further extended Feb 2026 to Nov 17, 2027 / May 18, 2028.
 - Form N-CEN and Form N-CSR — current form-version date.
 - SEC Division of Examinations Annual Examination Priorities — current published year and registered-fund focus.
 - SEC Cybersecurity Risk Management Rule for Advisers and Funds (proposed February 9, 2022) — withdrawn from the SEC's regulatory agenda June 12, 2025; not in force, not pending. Reg S-P is the operative customer-information safeguarding rule.

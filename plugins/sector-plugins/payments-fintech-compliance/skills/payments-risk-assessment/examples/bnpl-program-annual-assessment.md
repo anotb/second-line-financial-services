@@ -1,10 +1,10 @@
 # Example: BNPL program operator preparing its annual risk assessment after a CFPB action wave
 
-Public-source-derived. No named program operator. The shape mirrors a common pattern at a mid-stage BNPL program operator running on debit-card and ACH rails through two sponsor processors with a thirty-state US footprint, preparing its annual second-line risk assessment in the wake of the CFPB Pay-in-Four interpretive rule, the larger-participant rule for digital consumer payment applications, and the BNPL-themed Supervisory Highlights cycles.
+Public-source-derived. No named program operator. The shape mirrors a common pattern at a mid-stage BNPL program operator running on debit-card and ACH rails through two sponsor processors with a thirty-state US footprint, preparing its annual second-line risk assessment in the wake of the CFPB BNPL / Pay-in-Four Interpretive Rule (May 2024 — **nullified by Pub. L. 119-11 (May 9, 2025); historical only**), the larger-participant rule for digital consumer payment applications, and the BNPL-themed Supervisory Highlights cycles.
 
 ## Input
 
-- **Program operator role**: `bnpl-provider`. Pay-in-Four product structure on debit-card and ACH rails. Closed-end credit posture asserted by the firm; CFPB interpretive rule on whether Pay-in-Four constitutes a credit-card-like product subject to Reg Z dispute-resolution provisions has been litigated; verify current state on the analysis date.
+- **Program operator role**: `bnpl-provider`. Pay-in-Four product structure on debit-card and ACH rails. Closed-end credit posture asserted by the firm; the CFPB Interpretive Rule on whether Pay-in-Four constitutes a credit-card-like product subject to Reg Z dispute-resolution provisions was **nullified by Pub. L. 119-11 (May 9, 2025); historical only.** Reg Z applicability now turns on the product structure under the regulatory text rather than the nullified interpretive rule.
 - **Rails in scope**: card debit (settlement and dispute mechanics), ACH (repayment-pull mechanics), card credit (where the merchant settles via card credit; rare in the cohort), check (legacy rails for a small subset of the borrower book).
 - **Segments in scope**: BNPL borrower (consumer); BNPL merchant (SMB).
 - **Geographic footprint**: 30 US states. State-AG enforcement on BNPL fee disclosure has been active in CA, NY, and others; verify current state-AG actions on the analysis date.
@@ -71,7 +71,7 @@ The assessment stops at the recommendation. The CCO and the head of payments com
 - Visa Core Rules and Mastercard Rules (current edition; paywalled; conceptual citation) — chargeback program escalation thresholds.
 - CFPB Personal Financial Data Rights Final Rule under §1033 (October 22, 2024 — verify Federal Register citation and current docket status).
 - CFPB final rule on larger participants of digital consumer payment applications (December 2024 — verify Federal Register citation and current state).
-- CFPB Pay-in-Four interpretive rule (verify current state).
+- CFPB BNPL / Pay-in-Four Interpretive Rule (May 2024) — **nullified by Pub. L. 119-11 (May 9, 2025); historical only.**
 - CFPB Supervisory Highlights and Circular series (current cycles).
 - FDIC misrepresentation rule, 12 CFR Part 328 Subpart B.
 - State Money Transmitter Modernization Act adoption status via NMLS (state-by-state; verify on the analysis date).

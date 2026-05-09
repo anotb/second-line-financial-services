@@ -57,7 +57,7 @@ Privacy-tagged effective-challenge questions probe concrete gaps:
 - The PIA was completed at design; what evidence supports that the deployed system matches the PIA assumptions.
 - The vendor BAA / DPA covers the model service; what is the firm's evidence that prompt content does not flow into vendor training or evaluation.
 - For an automated-decisioning use case in EU footprint, what is the firm's process for the right to obtain meaningful information about the logic involved (GDPR Article 22).
-- For a credit-decisioning model, what is the SHAP / reason-code-mapped adverse-action notice generation method, and how does it satisfy the actual-principal-reasons standard under CFPB Circular 2023-03.
+- For a credit-decisioning model, what is the SHAP / reason-code-mapped adverse-action notice generation method, and how does it satisfy the principal-reasons standard under Reg B §1002.9 and Comment 9(b)(2)-3 of the Official Staff Commentary.
 - For a GenAI model with NPI/PHI in the prompt context, what is the firm's leak-detection cadence and what is the off-switch criterion.
 
 ### 6. Dependencies add privacy functions

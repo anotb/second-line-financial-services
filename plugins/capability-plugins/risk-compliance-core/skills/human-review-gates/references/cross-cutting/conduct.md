@@ -35,7 +35,7 @@ A product-approval gate for a consumer financial product names:
 - **Trigger**: introduction of a new product, material change to an existing product, or extension of a product to a new customer segment or geography.
 - **Required reviewers**: business sponsor (line 1), CCO (line 2), CRO (line 2), General Counsel, fair-lending officer, BSA Officer (when AML-relevant), CISO (when cyber-relevant), and (for sponsor-bank arrangements) the partner-fintech lead.
 - **Decision criteria**: UDAAP risk assessment (substantial injury, reasonable avoidability, countervailing benefits); fair-lending impact assessment under ECOA; disclosure adequacy under TILA / RESPA; suitability framework under Rule 2111 / Reg BI for broker-dealer products; complaint-handling readiness; restitution-readiness for likely-error scenarios.
-- **Stop conditions**: no go-live if the UDAAP risk assessment surfaces unmitigated risks; no go-live if the fair-lending impact analysis is incomplete; no go-live if disclosures are not finalized and reviewed by counsel; no go-live for AI-driven decisions if the adverse-action-notice framework is not validated against CFPB Circular 2022-03.
+- **Stop conditions**: no go-live if the UDAAP risk assessment surfaces unmitigated risks; no go-live if the fair-lending impact analysis is incomplete; no go-live if disclosures are not finalized and reviewed by counsel; no go-live for AI-driven decisions if the adverse-action-notice framework is not validated against Reg B §1002.9 and Comment 9(b)(2)-3 of the Official Staff Commentary.
 - **Documentation requirement**: product approval memorandum, UDAAP risk assessment, fair-lending impact analysis, disclosure review record, suitability/Reg BI documentation (where applicable), CCO sign-off log.
 
 ### Fee-change and marketing-change gates
@@ -44,7 +44,7 @@ Fee-change approval gates and marketing-change approval gates carry the same sca
 
 ### Fair-lending second-review gate
 
-For credit decisions, ECOA and Reg B frame the second-review-of-adverse-action expectation. Some firms run a structured second-review program where adverse-action decisions on protected-class applicants flow through a second reviewer before final decision; the gate is named, the second reviewer is independent of the original decision, and the documentation requirement names the second-review log. CFPB Circular 2022-03 (for AI-driven credit decisions) requires that adverse-action notices be specific and accurate; the gate's decision criteria address notice-quality independent of the second-review-of-decision question.
+For credit decisions, ECOA and Reg B frame the second-review-of-adverse-action expectation. Some firms run a structured second-review program where adverse-action decisions on protected-class applicants flow through a second reviewer before final decision; the gate is named, the second reviewer is independent of the original decision, and the documentation requirement names the second-review log. Reg B §1002.9 and Comment 9(b)(2)-3 of the Official Staff Commentary (for AI-driven credit decisions) require that adverse-action notices be specific and accurate; the gate's decision criteria address notice-quality independent of the second-review-of-decision question.
 
 ### Restitution-decision gate
 
@@ -76,6 +76,6 @@ For insurers, state DOI claims-handling regulations frame named gates on dispute
 - 12 CFR Part 1024 — Reg X (RESPA implementing regulation). https://www.ecfr.gov/current/title-12/chapter-X/part-1024
 - FINRA Rule 2111 — Suitability. https://www.finra.org/rules-guidance/rulebooks/finra-rules/2111
 - 17 CFR §240.15l-1 — Regulation Best Interest. https://www.ecfr.gov/current/title-17/chapter-II/part-240/section-240.15l-1
-- CFPB Circular 2022-03 — Adverse Action Notification Requirements in Connection with Credit Decisions Based on Complex Algorithms. https://www.consumerfinance.gov/compliance/circulars/circular-2022-03/
+- CFPB Circular 2022-03 — Adverse Action Notification Requirements in Connection with Credit Decisions Based on Complex Algorithms. **Withdrawn May 12, 2025; historical only.** Reg B §1002.9 and Comment 9(b)(2)-3 of the Official Staff Commentary continue to apply on their own terms. https://www.consumerfinance.gov/compliance/circulars/circular-2022-03/
 - NAIC Unfair Trade Practices Act (MDL-880) and state DOI claims-handling regulations. https://content.naic.org/sites/default/files/MO880.pdf
 - State market-conduct regulations — vary by state; firm-overlay names the state-specific rules that apply.

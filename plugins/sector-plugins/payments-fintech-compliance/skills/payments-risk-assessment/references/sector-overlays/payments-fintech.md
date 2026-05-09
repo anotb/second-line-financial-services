@@ -36,11 +36,11 @@ Drop these into the **risk universe by rail** matrix as the top-three failure-mo
 
 **SMB.** Treasury-management dispute mechanics (Reg E does not cover business-account EFTs; UCC Article 4A governs commercial wires; commercial-account terms govern ACH and card). Account-closure / hold posture (UDAAP exposure carries through where the program markets to SMB consumer-style). Funding-flow concentration (single-customer-of-the-program risk).
 
-**Payroll-on-demand / earned-wage access (EWA).** State-licensing applicability (state EWA frameworks vary; verify state-by-state). Fee-vs-tip presentation (CFPB Pay-in-Four interpretive rule, EWA proposed rule, and Supervisory Highlights themes; verify current state). Reg E and Reg Z applicability question.
+**Payroll-on-demand / earned-wage access (EWA).** State-licensing applicability (state EWA frameworks vary; verify state-by-state). Fee-vs-tip presentation (the CFPB BNPL / Pay-in-Four Interpretive Rule was **nullified by Pub. L. 119-11 (May 9, 2025); historical only.** EWA proposed rule and Supervisory Highlights themes; verify current state). Reg E and Reg Z applicability question.
 
 **Gig-economy disbursement.** Push-to-card disbursement velocity (fraud signal); 1099-payment information reporting (separate from the risk lane but operationally adjacent). Account-takeover patterns on instant-funded accounts.
 
-**BNPL borrower / merchant.** Pay-in-Four interpretive rule applicability (CFPB; verify current state). Reg Z open-end vs closed-end credit posture (verify how the firm has structured the product). Dispute-rights presentation. Fee disclosure. Late-fee policy. Reg E §1005.11 applicability where the BNPL flow runs on debit-card rails.
+**BNPL borrower / merchant.** The CFPB BNPL / Pay-in-Four Interpretive Rule was **nullified by Pub. L. 119-11 (May 9, 2025); historical only.** Reg Z applicability now turns on the product structure under the regulatory text rather than the nullified interpretive rule (verify open-end vs closed-end credit posture for how the firm has structured the product). Dispute-rights presentation. Fee disclosure. Late-fee policy. Reg E §1005.11 applicability where the BNPL flow runs on debit-card rails.
 
 **Cross-border remittance sender / receiver.** Reg E §1005.31 subpart B remittance-transfer rule pre-payment and post-payment disclosure timing. OFAC sanctions-screening posture per corridor. Travel Rule. Corridor-specific consumer-protection (each corridor country has its own; verify per corridor).
 

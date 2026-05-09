@@ -50,16 +50,16 @@ Build the per-state row using the NAIC AI Working Group adoption tracker as the 
 - **Other adopting states.** NAIC December 2023 Model Bulletin adoption status tracked by the NAIC AI Working Group. Adoption may be by bulletin, by regulation, or by guidance letter; the format affects the artifact's bulletin-alignment row.
 - **Non-adopting states.** Where a state has not adopted the Model Bulletin or analogous guidance, the artifact carries the standard state DOI rate-filing checklist and the federal-baseline analysis only; do not import expectations the state has not adopted.
 
-## SR 11-7-equivalent posture
+## Federal model-risk-equivalent posture
 
-State DOIs cite SR 11-7 / OCC 2026-13 as analogous model-risk expectation language for ML pricing models. Treat as analogous, not binding.
+State DOIs cite the **Joint Interagency Revised Guidance on Model Risk Management (OCC Bulletin 2026-13 / FRB SR 26-2 / FDIC FIL-15-2026, April 17, 2026)** — which supersedes SR 11-7 — as analogous model-risk expectation language for ML pricing models. Treat as analogous, not binding. (GenAI / agentic AI is out of scope of the joint guidance per footnote 3; state DOI AI bulletins remain the operative source for AI-specific governance.)
 
 - **Model documentation.** Purpose, theory, design choices, data-input documentation, assumptions, limitations.
 - **Validation evidence.** Independent validation; conceptual-soundness review; ongoing-monitoring plan; outcomes analysis; benchmarking.
 - **Performance-monitoring plan.** Performance metrics; drift detection; threshold-breach response; monitoring cadence; owner role.
 - **Change-management process.** Trigger criteria for revalidation; approval chain; documentation update obligations.
 
-Cite SR 11-7 and OCC 2026-13 by reference into `references/source-anchors.md`. Mark `[verify final OCC 2026-13 issuance date and bulletin number]` until confirmed.
+Cite the joint guidance (OCC 2026-13 / SR 26-2 / FIL-15-2026, April 17, 2026) by reference into `references/source-anchors.md`. SR 11-7 is superseded; cite only when reading pre-April-17-2026 evidence.
 
 ## ACA bright-lines (where individual / small-group health is in scope)
 
@@ -86,7 +86,7 @@ Model #582. Carry the section-by-section status against the model regulation.
 - Letting the actuarial memorandum stand in for the governance review. The actuarial work justifies the rates; the second-line file justifies the governance over the actuaries and the model.
 - Skipping ECDIS provenance for any rating factor that touches third-party consumer data. CO and NY DFS guidance is explicit.
 - Forgetting the AIS Program structure. Carriers are increasingly being asked for the AIS Program document by state DOIs.
-- Treating SR 11-7 as a banking-only thing. State DOIs cite it as analogous; address it explicitly.
+- Treating the federal model-risk frame (now OCC 2026-13 / SR 26-2 / FIL-15-2026, superseding SR 11-7) as a banking-only thing. State DOIs cite the federal frame as analogous; address it explicitly.
 - Missing the ACA layer when individual or small-group health is in scope.
 - Conflating illustration governance (Model #582) with rate-filing governance.
 - Drafting the artifact as a model-validation report. The artifact is a pricing-governance review; validation is one input.

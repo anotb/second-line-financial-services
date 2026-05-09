@@ -9,7 +9,7 @@ When the scope flags capital markets (broker-dealer, mutual fund, FCM/IB, covere
 - **31 CFR §1026.220** [verify section] — FCM and IB CIP.
 - **FinCEN CDD Final Rule (May 2016)** [verify section] — applies to broker-dealers, mutual funds, and FCMs/IBs across the four pillars.
 - **31 CFR §1010.230** — beneficial ownership for legal-entity customers across the same institution set.
-- **FinCEN AML / CFT Programs and SAR Rule for Registered Investment Advisers and Exempt Reporting Advisers (Final Rule, August 2024)** [verify current effective date and scope as of the date of analysis]. Brings covered investment advisers within the BSA regime; CDD and beneficial-ownership obligations extend to covered advisers under the rule's scope and timing. The QA dates the read because the implementation timeline is live and the scope-and-effective-date posture has been the subject of ongoing rulemaking activity.
+- **FinCEN AML / CFT Programs and SAR Rule for Registered Investment Advisers and Exempt Reporting Advisers (Final Rule, August 2024)**. **IA AML Rule effective date delayed to January 1, 2028 (FinCEN final rule January 2, 2026; 91 FR 14) — superseding the original January 1, 2026 effective date.** Until the effective date, the rule's obligations are not enforceable against RIAs / ERAs. Brings covered investment advisers within the BSA regime when operative; CDD and beneficial-ownership obligations extend to covered advisers under the rule's scope and timing.
 
 ## Capital-markets-specific risk drivers the QA reads
 

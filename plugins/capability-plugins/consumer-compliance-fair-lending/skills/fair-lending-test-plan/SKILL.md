@@ -91,7 +91,7 @@ When the scope names a sector, load the matching `references/sector-overlays/<se
 
 - *Banking* — depository specifics: HMDA-reportable mortgage and HELOC, indirect auto, credit card, deposit overdraft fairness, CRA assessment-area overlap.
 - *Capital markets* — securities-based lending fair-lending scope (limited but in-scope where retail); private-banking and wealth-credit boundary; not principally a fair-lending bucket but the perimeter is named.
-- *Payments-fintech* — sponsor-bank model: where fair-lending duty sits between bank and fintech-of-record per the program agreement; BNPL fair-lending under emerging CFPB BNPL guidance; merchant cash advance fair-lending boundary; data-only-decisioning models with no traditional credit data.
+- *Payments-fintech* — sponsor-bank model: where fair-lending duty sits between bank and fintech-of-record per the program agreement; BNPL fair-lending under ECOA / Reg B as applied to the product structure (the May 2024 CFPB BNPL Interpretive Rule was **nullified by Pub. L. 119-11 (May 9, 2025); historical only.**); merchant cash advance fair-lending boundary; data-only-decisioning models with no traditional credit data.
 - *Insurance* — life and health insurance fair-lending boundary (state-DOI unfair-discrimination, not ECOA / FHA); flag the scope boundary so reviewers do not over-extend ECOA into insurance.
 
 ### Cross-cutting overlays

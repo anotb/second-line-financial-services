@@ -7,7 +7,7 @@ Loaded by: `genai-pre-prod-review/SKILL.md` when `scope.cross_cutting_set` inclu
 ## Source basis
 
 - CFPB UDAAP authority under the Consumer Financial Protection Act and the FTC Act §5 (12 USC §5531 and 15 USC §45) for unfair, deceptive, or abusive acts or practices.
-- CFPB Circulars and Bulletins on AI-related consumer-compliance considerations (e.g., CFPB Circular 2022-03 on adverse-action notices and AI; CFPB Circular 2023-03 on adverse-action accuracy under ECOA; CFPB Bulletin and policy statements on AI in chatbots and customer service).
+- CFPB Circulars and Bulletins on AI-related consumer-compliance considerations (CFPB Circular 2022-03 on adverse-action notices and AI and CFPB Circular 2023-03 on adverse-action accuracy under ECOA were **withdrawn May 12, 2025; historical only.** Reg B §1002.9 and Comment 9(b)(2)-3 of the Official Staff Commentary continue to apply on their own terms. CFPB Bulletin and policy statements on AI in chatbots and customer service remain).
 - ECOA / Reg B (12 CFR Part 1002) and the Fair Housing Act for credit-decisioning use cases; adverse-action accuracy and fair-lending exposure.
 - Reg E (12 CFR Part 1005) for AI-assisted dispute handling on electronic fund transfers.
 - Reg Z (12 CFR Part 1026) for credit-product communication exposure.
@@ -30,7 +30,7 @@ For tier-1 use cases the head of consumer compliance or chief compliance officer
 ### Open conditions the overlay typically adds
 
 - UDAAP output-filter specification signed off by consumer compliance for any consumer-facing communication generated or assisted by the system.
-- Adverse-action notice quality review for any credit-decisioning use case where the AI affects the adverse-action reason or score; CFPB Circular 2022-03 and 2023-03 set the quality bar.
+- Adverse-action notice quality review for any credit-decisioning use case where the AI affects the adverse-action reason or score; Reg B §1002.9 and Comment 9(b)(2)-3 of the Official Staff Commentary set the quality bar (CFPB Circulars 2022-03 / 2023-03 are **withdrawn May 12, 2025; historical only.**).
 - Fair-lending integration: the consumer-compliance fair-lending test plan and the gate review reference each other; fair-lending residual risk is recorded in the gate residual-risk section with the fair-lending owner.
 - For insurance underwriting and pricing: unfair-discrimination output-filter specification signed off by the underwriting actuary; the chief actuarial officer signs the residual-risk acceptance for unfair-discrimination exposure.
 - Complaint-channel readiness: consumer-recourse channel covers AI-relevant complaints; complaint-coding includes AI-specific codes for downstream signal.
@@ -85,7 +85,7 @@ In the structured object (`schemas/genai-pre-prod-review.schema.json`):
 - Treating UDAAP exposure as a downstream consumer-compliance review. UDAAP is the seat consumer compliance owns at the gate, not after; the gate decision is incomplete without consumer compliance sign-off.
 - Treating fair-lending as a separate workstream that runs after AI gate. For credit-decisioning use cases the fair-lending integration is a gate-time co-review; the gate review's residual-risk section names the fair-lending residual risk explicitly.
 - Treating refusal behaviour as a vendor-side concern. The refusal posture is firm-side configuration (system prompt, guardrails, output filtering) and a firm-side gate decision; vendor refusal behaviour is one input.
-- Recording adverse-action notice quality as compliant by assertion. CFPB Circular 2022-03 and 2023-03 set a substantive quality bar; the gate review records sampling evidence, not assertion.
+- Recording adverse-action notice quality as compliant by assertion. Reg B §1002.9 and Comment 9(b)(2)-3 of the Official Staff Commentary set a substantive quality bar; the gate review records sampling evidence, not assertion.
 - Treating complaint-channel readiness as a downstream concern. Complaint channels need AI-relevant codes live before go-live so the post-go-live signal exists; adding the codes after a complaint surfaces is too late.
 - Omitting the chief actuarial officer co-signature on insurance underwriting and pricing use cases. The unfair-discrimination seam is the chief actuarial officer's seat; the gate decision is incomplete without it.
 - Treating multi-state operations as having a uniform consumer-protection posture. State UDAP statutes and state insurance advertising rules vary; the gate review records state-by-state status.

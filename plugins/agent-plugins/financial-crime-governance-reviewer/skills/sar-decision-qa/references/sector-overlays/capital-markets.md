@@ -4,7 +4,7 @@ When the scope flags capital markets (broker-dealers, investment advisers runnin
 
 ## Operative SAR rules in scope
 
-- **31 CFR §1023.320** — Reports by brokers or dealers in securities of suspicious transactions [verify section]. The BD SAR rule. Threshold $5,000; 30-day filing window; 60-day window where no suspect identified. Continuing-activity 90-day review expectation.
+- **31 CFR §1023.320** — Reports by brokers or dealers in securities of suspicious transactions [verify section]. The BD SAR rule. Threshold $5,000; 30-day filing window; 60-day window where no suspect identified. **Per October 9, 2025 SAR FAQ posture: 90-day continuing-SAR cadence is firm-policy convention, not a rule requirement.**
 - **31 CFR §1024.320** — Reports by mutual funds of suspicious transactions [verify section]. Open-end management investment companies registered under the Investment Company Act. The fund or the fund's transfer agent / principal underwriter, depending on the program design, files.
 - **31 CFR §1026.320** — Reports by futures commission merchants and introducing brokers of suspicious transactions [verify section]. The FCM SAR rule.
 

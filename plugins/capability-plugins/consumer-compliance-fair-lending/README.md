@@ -8,7 +8,7 @@ Consumer compliance officers, fair-lending and fair-housing leads, UDAAP review 
 
 ## Skills (v1)
 
-1. `adverse-action-review` — Review a population of adverse action decisions and notices for ECOA / Reg B 1002.9 compliance, traceability of cited reasons back to the model and data, and disparate-impact red flags. Cites CFPB Circular 2022-03, Circular 2023-03, and the April 2023 Joint Statement on algorithmic discrimination where AI / complex models are in the decisioning path.
+1. `adverse-action-review` — Review a population of adverse action decisions and notices for ECOA / Reg B 1002.9 compliance, traceability of cited reasons back to the model and data, and disparate-impact red flags. Anchors on Reg B §1002.9 and Comment 9(b)(2)-3 of the Official Staff Commentary plus the April 2023 Joint Statement on algorithmic discrimination where AI / complex models are in the decisioning path. (CFPB Circulars 2022-03 / 2023-03 are **withdrawn May 12, 2025; historical only.**)
 2. `complaint-theme-analysis` — Aggregate and theme a population of consumer complaints (CFPB Complaint Database, internal, AG, social) into named themes with severity, root-cause hypotheses, regulatory exposure, and conduct-risk implications.
 3. `fair-lending-test-plan` — Draft a fair-lending test plan covering scope, decision points, test types (redlining, comparative file review, regression on underwriting and pricing, marketing distribution, steering, servicing / loss mitigation, less-discriminatory-alternative search), and committee approval gate. Cites CFPB Circulars and HUD AI guidance where AI / ML decisioning is in scope.
 4. `marketing-claim-review` — Review consumer-financial marketing assets for claim substantiation, Reg Z / MLA / TRID disclosure adequacy, fair-lending distribution / targeting, dark patterns, privacy claim accuracy, and UDAAP triggers.
@@ -26,7 +26,7 @@ Per the v1 plan, cross-cutting topics live as reference docs inside the skills t
 - Privacy: `adverse-action-review/references/cross-cutting/privacy.md` (GLBA Safeguards, state privacy implications), `marketing-claim-review/references/cross-cutting/privacy.md` (privacy-claim substantiation, AdChoices, dark-pattern privacy).
 - Conduct: `udaap-risk-review/references/cross-cutting/conduct.md`, `complaint-theme-analysis/references/cross-cutting/conduct.md`.
 
-AI-related cross-cutting is implicit on `adverse-action-review` and `fair-lending-test-plan`. Both MUST cite CFPB Circular 2022-03, CFPB Circular 2023-03, and the April 2023 Joint Statement on algorithmic discrimination where the underlying decisioning is AI / ML. `marketing-claim-review` and `udaap-risk-review` cite the Joint Statement when AI personalization or AI-generated content is in scope.
+AI-related cross-cutting is implicit on `adverse-action-review` and `fair-lending-test-plan`. Both MUST anchor on Reg B §1002.9 and Comment 9(b)(2)-3 of the Official Staff Commentary and the April 2023 Joint Statement on algorithmic discrimination where the underlying decisioning is AI / ML. (CFPB Circulars 2022-03 / 2023-03 are **withdrawn May 12, 2025; historical only.** Reg B §1002.9 and Comment 9(b)(2)-3 of the Official Staff Commentary continue to apply on their own terms.) `marketing-claim-review` and `udaap-risk-review` cite the Joint Statement when AI personalization or AI-generated content is in scope.
 
 ## Components
 

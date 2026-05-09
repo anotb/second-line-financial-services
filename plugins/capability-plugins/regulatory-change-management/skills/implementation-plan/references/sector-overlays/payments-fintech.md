@@ -6,7 +6,7 @@ Loaded when the scope names payments or fintech (non-bank money transmitter, pay
 
 For larger participants and non-bank entities under CFPB supervisory authority, the CFPB Supervision and Examination Manual is the framing document. CFPB examinations produce Matters Requiring Attention (the parallel to the federal banking MRA convention) and supervisory letters. Implementation plans triggered by a CFPB MRA mirror the federal banking convention; the plan's effective date is the date the CFPB communicated.
 
-CFPB Supervisory Highlights frames the recurring focus areas; the implementation-plan author tracks the most recent edition for the supervisory pattern that explains the firm's MRA. (Many CFPB Circulars on UDAAP, overdraft, NSF, adverse-action with complex algorithms, and BNPL-related interpretive material were **withdrawn May 12, 2025; historical only** — anchor design decisions to the regulatory text rather than the withdrawn circular layer.)
+CFPB Supervisory Highlights frames the recurring focus areas; the implementation-plan author tracks the most recent edition for the supervisory pattern that explains the firm's MRA. (Many CFPB Circulars on UDAAP, overdraft, NSF, adverse-action with complex algorithms, and account reopening were **withdrawn May 12, 2025; historical only** — anchor design decisions to the regulatory text rather than the withdrawn circular layer. The CFPB Interpretive Rule on BNPL (May 2024) was separately **nullified by Pub. L. 119-11 (May 9, 2025); historical only.**)
 
 ## State money-transmitter remediation
 

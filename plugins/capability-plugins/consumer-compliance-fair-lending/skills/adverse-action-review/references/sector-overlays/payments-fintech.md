@@ -20,7 +20,7 @@ Joint review is the operational norm: the bank's compliance second-line and the 
 
 ### 2. BNPL adverse-action posture
 
-The CFPB Interpretive Rule on BNPL (May 2024) treats certain BNPL lenders that issue digital user accounts as card issuers under Regulation Z. The interpretive rule clarifies Reg Z applicability; Reg B and ECOA continue to apply to BNPL credit decisions independently. Adverse action on a BNPL decline (including soft-decline patterns where the customer is shown only longer-tenor or smaller-amount offers) falls under §1002.9.
+The CFPB Interpretive Rule on BNPL (May 2024) was **nullified by Pub. L. 119-11 (May 9, 2025); historical only.** The earlier framing treated certain BNPL lenders that issue digital user accounts as card issuers under Regulation Z; that Reg Z reach is no longer in force. Reg B and ECOA continue to apply to BNPL credit decisions on their own terms. Adverse action on a BNPL decline (including soft-decline patterns where the customer is shown only longer-tenor or smaller-amount offers) falls under §1002.9.
 
 The §1002.2(c) action category is load-bearing: a BNPL flow that presents the customer with a smaller amount or longer tenor than requested is a counteroffer; if not accepted, it is adverse action. Many BNPL flows do not surface this as an adverse-action event today; the review tests the flow against the §1002.2(c) categories.
 
@@ -28,7 +28,7 @@ The §1002.2(c) action category is load-bearing: a BNPL flow that presents the c
 
 Where the underwriting decision uses a vendor-supplied model (turn-key fraud-deny, identity-deny, alternative-data score, open-banking cash-flow score), the fintech and the sponsor bank inherit the model-supported-reasons obligation. The vendor may not produce per-decision feature contributions out of the box; the review records the vendor's explainability artifact as evidence and flags where it is absent.
 
-Vendor-of-record reason coding is a recurring defect: vendor returns a numeric score and a small set of reason flags from a fixed dictionary, the fintech's notice template selects the closest sample-form match, and neither the vendor nor the fintech can demonstrate per-decision feature contributions. The CFPB Circulars 2022-03 and 2023-03 are the operative anchors; the review records vendor explainability as a named gap when absent.
+Vendor-of-record reason coding is a recurring defect: vendor returns a numeric score and a small set of reason flags from a fixed dictionary, the fintech's notice template selects the closest sample-form match, and neither the vendor nor the fintech can demonstrate per-decision feature contributions. Reg B §1002.9 and Comment 9(b)(2)-3 of the Official Staff Commentary are the operative anchors (CFPB Circulars 2022-03 / 2023-03 are **withdrawn May 12, 2025; historical only.**); the review records vendor explainability as a named gap when absent.
 
 ### 4. Alternative-data feature posture
 
@@ -52,8 +52,8 @@ The sponsor-bank program agreement typically grants the bank approval rights ove
 ## Common pitfalls in payments / fintech adverse-action review
 
 - Treating Reg B as the bank's problem when the fintech operates the workflow; the bank is the §1002.9 obligor in a sponsor-bank arrangement and the fintech is the operational owner. Both audiences read the artifact.
-- Treating BNPL adverse action as a Reg Z question because the May 2024 Interpretive Rule was about Reg Z; ECOA and Reg B apply independently.
+- Treating BNPL adverse action as a Reg Z question (the May 2024 Interpretive Rule was about Reg Z and is **nullified by Pub. L. 119-11 (May 9, 2025); historical only.**); ECOA and Reg B apply on their own terms.
 - Missing the soft-decline counteroffer pattern on BNPL, where the customer is shown a smaller amount or longer tenor. Counteroffers not accepted are adverse action.
-- Accepting a vendor's fixed reason-code dictionary as the creditor's compliance evidence; the creditor must demonstrate the cited reasons reflect the actual principal feature contributions per CFPB Circular 2023-03.
+- Accepting a vendor's fixed reason-code dictionary as the creditor's compliance evidence; the creditor must demonstrate the cited reasons reflect the actual principal feature contributions per Reg B §1002.9 and Comment 9(b)(2)-3 of the Official Staff Commentary.
 - Reviewing notices against the current template version when the population was decided under an earlier version; the population review tests the template version that was in force at decision time.
 - Routing a finding only to the fintech compliance team where the sponsor-bank program agreement requires joint sign-off; both routes are needed and the artifact names both.
