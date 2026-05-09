@@ -4,6 +4,12 @@ Cited regulatory sources this skill anchors to. Every primary anchor names the s
 
 The skill cites these by file path. SKILL.md does not restate excerpts.
 
+## CFPB current-status posture (as of memo date)
+
+On May 12, 2025 the CFPB withdrew a substantial portion of its prior advisory guidance, including Circulars 2022-03 and 2023-03 (the AAN-with-complex-algorithms anchors). Separately, the BNPL Interpretive Rule (May 2024) was nullified by Public Law 119-11 (Congressional Review Act resolution).
+
+These shifts do not change what Reg B requires. The §1002.9 notification rule is statutory regulatory text; the Official Staff Commentary on specificity (Comment 9(b)(2)-3, -4, -5) is binding interpretation; the FCRA risk-score-disclosure obligation under §1681m and Reg V §1022.74 is statutory. The withdrawn CFPB items are preserved here for historical reference because pre-2025 fact patterns reference them, and because state AGs, prudential regulators, and private plaintiffs continue to pursue analogous theories under their own authority (the substantive obligation on a creditor to disclose actual principal reasons survives the rescission of bureau interpretive guidance). For the BNPL nullification, Reg B continues to apply on its own terms to BNPL adverse action; only the Reg Z applicability question reverts to the pre-Interpretive-Rule posture.
+
 ## Primary anchors
 
 ### 1. Equal Credit Opportunity Act (ECOA) — 15 U.S.C. §1691
@@ -34,19 +40,19 @@ The skill cites these by file path. SKILL.md does not restate excerpts.
 - Link: https://www.consumerfinance.gov/rules-policy/regulations/1002/Interp-9/ — Comments to §1002.9.
 - Notes: Operative anchor for the specificity standard against which cited reasons are tested in the per-notice content-compliance field.
 
-### 5. CFPB Circular 2022-03 — Adverse action with complex algorithms
+### 5. CFPB Circular 2022-03 — Adverse action with complex algorithms (withdrawn May 12, 2025)
 
-- Citation: CFPB Circular 2022-03 (May 26, 2022), "Adverse action notification requirements in connection with credit decisions based on complex algorithms".
-- Excerpt-paraphrase: Creditors using complex algorithms, including algorithms that use what are sometimes referred to as artificial intelligence or machine learning, are not absolved from their obligation to provide a statement of specific reasons under ECOA and Regulation B. The complexity of the model is not a defense to the specificity requirement; if a creditor cannot accurately identify the principal reasons relied on, the creditor cannot meet the requirement and may be in violation of ECOA.
+- Citation: CFPB Circular 2022-03 (May 26, 2022), "Adverse action notification requirements in connection with credit decisions based on complex algorithms". **Withdrawn by the CFPB on May 12, 2025**.
+- Excerpt-paraphrase: The circular took the position that creditors using complex algorithms (including AI / ML) are not absolved from the §1002.9(a)(2) specific-reasons obligation; model complexity is not a defense to the specificity requirement.
 - Link: https://www.consumerfinance.gov/compliance/circulars/circular-2022-03-adverse-action-notification-requirements-in-connection-with-credit-decisions-based-on-complex-algorithms/ — Circular sections "Question Presented" and "Response".
-- Notes: Operative anchor for the model-supported-reasons review. A creditor that cannot produce per-decision feature contribution evidence cannot demonstrate compliance with §1002.9(a)(2) on a complex-algorithm decision; this skill's per-decision `reasons_model_supported[]` field operationalizes the test.
+- Notes: Withdrawn. The substantive obligation does not depend on the circular: Reg B §1002.9(a)(2) requires the statement of specific reasons, and Comment 9(b)(2)-3 of the Official Staff Commentary states that the specific reasons must "relate to and accurately describe the factors actually considered or scored by a creditor". A creditor that cannot accurately identify the principal reasons relied on still cannot meet §1002.9(a)(2) on its face, regardless of whether the bureau has issued a circular saying so. The skill's per-decision `reasons_model_supported[]` field continues to operationalize this test against the regulation and the Staff Commentary; the circular is preserved here as historical interpretive context.
 
-### 6. CFPB Circular 2023-03 — Sample reason codes and AI / complex models
+### 6. CFPB Circular 2023-03 — Sample reason codes and AI / complex models (withdrawn May 12, 2025)
 
-- Citation: CFPB Circular 2023-03 (September 19, 2023), "Adverse action notification requirements and the proper use of the CFPB's sample forms provided in Regulation B".
-- Excerpt-paraphrase: Creditors must provide accurate and specific reasons for adverse action. Creditors cannot rely on the checklist of reasons in CFPB sample forms (Appendix C to Regulation B) when those sample reasons do not reflect the principal reasons that actually contributed to the adverse action. The accuracy obligation reaches creditors using complex models (AI / ML); a creditor whose model relied principally on factors not present on the sample form must disclose those factors specifically, not select the closest sample-form proxy.
+- Citation: CFPB Circular 2023-03 (September 19, 2023), "Adverse action notification requirements and the proper use of the CFPB's sample forms provided in Regulation B". **Withdrawn by the CFPB on May 12, 2025**.
+- Excerpt-paraphrase: The circular took the position that creditors cannot rely on the checklist of reasons in Appendix C to Regulation B where those sample reasons do not reflect the principal reasons that actually contributed to the adverse decision.
 - Link: https://www.consumerfinance.gov/compliance/circulars/circular-2023-03-adverse-action-notification-requirements-and-the-proper-use-of-the-cfpbs-sample-forms-provided-in-regulation-b/ — Circular section "Required Information" [verify section title].
-- Notes: Operative anchor for the reason-mapping-accuracy review. Skills that find a notice citing sample-form reasons that do not match the model's principal feature contributions flag this circular as the controlling guidance.
+- Notes: Withdrawn. The accuracy obligation continues to flow from §1002.9(a)(2) and the Staff Commentary (Comment 9(b)(2)-3). Appendix C explicitly does not deem a notice compliant where the sample reason cited is not the principal reason actually relied on. The skill's reason-mapping-accuracy review continues to test against the regulation; the circular's position is preserved as historical reference.
 
 ### 7. Joint Statement on Enforcement of Civil Rights, Fair Lending, Fair Housing, and Consumer Financial Protection Laws (April 2023)
 
@@ -85,12 +91,12 @@ The skill cites these by file path. SKILL.md does not restate excerpts.
 - Link: https://www.occ.gov/news-issuances/bulletins/2023/bulletin-2023-17.html — Bulletin 2023-17.
 - Notes: Payments-fintech sector overlay anchor; relevant where the adverse-action notice or model is vendor-supplied.
 
-### 12. CFPB BNPL Interpretive Rule (May 2024)
+### 12. CFPB BNPL Interpretive Rule (May 2024) — nullified by Pub. L. 119-11 (Congressional Review Act)
 
-- Citation: CFPB Interpretive Rule, "Use of Digital User Accounts to Access Buy Now, Pay Later Loans" (89 Fed. Reg. 47068; May 31, 2024) [verify Federal Register citation].
-- Excerpt-paraphrase: The bureau interprets BNPL lenders that issue digital user accounts to access credit as card issuers under Regulation Z; the interpretive rule clarifies application of Regulation Z requirements to BNPL products. Regulation B and ECOA continue to apply to BNPL credit decisions independently of Regulation Z; adverse action notices on BNPL declines remain subject to §1002.9.
-- Link: https://www.consumerfinance.gov/rules-policy/final-rules/truth-in-lending-regulation-z-use-of-digital-user-accounts-to-access-buy-now-pay-later-loans/ — Interpretive Rule [verify section].
-- Notes: Payments-fintech sector overlay anchor; clarifies that BNPL adverse action falls under Reg B even where Reg Z applicability has been the contested question.
+- Citation: CFPB Interpretive Rule, "Use of Digital User Accounts to Access Buy Now, Pay Later Loans" (89 Fed. Reg. 47068; May 31, 2024). **Nullified by Public Law 119-11 (joint CRA resolution of disapproval, signed 2025)**, which means the interpretive rule has no legal effect and the CFPB cannot reissue substantially the same rule without further authorisation from Congress.
+- Excerpt-paraphrase: The interpretive rule had positioned BNPL lenders that issue digital user accounts to access credit as card issuers under Regulation Z. With nullification, that position no longer carries the bureau's interpretive weight.
+- Link: https://www.consumerfinance.gov/rules-policy/final-rules/truth-in-lending-regulation-z-use-of-digital-user-accounts-to-access-buy-now-pay-later-loans/ — Interpretive Rule [historical reference].
+- Notes: The Reg Z applicability of BNPL is now an open question to be resolved on the facts and the regulatory text, not on the rescinded interpretive rule. **Regulation B continues to apply to BNPL credit decisions on its own terms**: a BNPL lender taking adverse action on a credit application remains subject to the §1002.9 notification rule. This skill's scope on BNPL adverse-action notices is unchanged; only the Reg Z question is open. Payments-fintech sector overlay anchor.
 
 ### 13. SR 11-7 — Guidance on Model Risk Management
 

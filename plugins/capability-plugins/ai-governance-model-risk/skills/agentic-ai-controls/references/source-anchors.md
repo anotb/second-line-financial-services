@@ -62,12 +62,12 @@ A practitioner note before the list: agentic AI sits across three regulator pers
 - Link: https://atlas.mitre.org/ — ATLAS matrix, case studies section [verify technique IDs at SKILL.md write time]
 - Notes: Industry-practice reference. The most widely used adversarial-threat taxonomy in AI red-teaming and the cyber-team-friendly framing of the agentic threat surface.
 
-### 9. OWASP Top 10 for Large Language Model Applications
+### 9. OWASP Top 10 for LLM Applications and OWASP Agentic threat catalogue
 
-- Citation: OWASP Top 10 for LLM Applications [verify edition; v1.1 published 2023, v2.0 in development as of 2025], with particular relevance for agentic systems on LLM01 Prompt Injection (direct and indirect), LLM02 Insecure Output Handling, LLM06 Sensitive Information Disclosure, LLM07 Insecure Plugin / Tool Design, LLM08 Excessive Agency.
-- Excerpt-paraphrase: LLM07 (Insecure Plugin / Tool Design) and LLM08 (Excessive Agency) are the two entries that bite hardest for agentic systems. LLM07 covers tool-design weaknesses that magnify injection impact (broad permissions, weak input validation, unauthenticated tool calls). LLM08 covers excessive agency, where the LLM has authority to take consequential actions and where the per-action guardrails do not catch the chained-action outcome (the canonical agentic failure mode). LLM01 and LLM02 carry the prompt-injection and output-handling framings used elsewhere in the review.
-- Link: https://owasp.org/www-project-top-10-for-large-language-model-applications/ — Top 10 list, LLM07 and LLM08 sections, current edition [verify version at SKILL.md write time]
-- Notes: OWASP is not a regulator. The taxonomy is industry-practice and the vocabulary most commonly used in vendor red-team reports and internal AI-security programmes for agentic systems.
+- Citation: OWASP Top 10 for LLM Applications, 2025 edition (latest published version of the Top 10), with particular relevance for agentic systems on LLM01 Prompt Injection (direct and indirect), LLM02 Sensitive Information Disclosure, LLM05 Improper Output Handling, LLM06 Excessive Agency, LLM07 System Prompt Leakage, LLM08 Vector and Embedding Weaknesses. Plus the OWASP Agentic threat catalogue (the 2025 OWASP project on agentic-AI-specific threats: tool misuse, planner/executor seam exploits, multi-agent message injection, memory poisoning, sandbox escape) [verify section references at write time].
+- Excerpt-paraphrase: In the 2025 LLM Top 10 numbering, LLM06 Excessive Agency is the entry that bites hardest for agentic systems. LLM06 covers the case where the LLM has authority to take consequential actions and the per-action guardrails do not catch the chained-action outcome (the canonical agentic failure mode). LLM01 covers prompt injection (direct via user prompt; indirect via retrieved content or tool output). LLM05 covers output-handling weaknesses where downstream systems trust LLM output without validation. LLM08 covers vector and embedding weaknesses (RAG-poisoning surface). The OWASP Agentic threat catalogue extends the Top 10 to the agentic-specific surface and is the closest thing to a community-maintained taxonomy of agent threats.
+- Link: https://owasp.org/www-project-top-10-for-large-language-model-applications/ — Top 10 list, 2025 edition; OWASP Agentic threat catalogue under the same project umbrella.
+- Notes: OWASP is not a regulator. The taxonomy is industry-practice and the vocabulary vendor red-team reports and internal AI-security programmes use for agentic systems. The 2025 numbering shifted from the 2023 edition (Excessive Agency moved from LLM08 to LLM06; Insecure Plugin Design was absorbed into other entries). Cite the 2025 numbering by default; flag if the firm is still operating against the 2023 list.
 
 ### 10. NCSC Guidelines for Secure AI System Development
 
@@ -206,7 +206,7 @@ The following items carry `[verify section]` or `[verify ...]` flags and must be
 - NYDFS Industry Letter on AI cybersecurity (October 2024) — confirm exact section reference for the prompt-injection and tool-use passages.
 - ISO/IEC 42001:2023 — confirm Annex A control IDs relevant to agentic-AI controls including oversight, supplier, and AI-system-specific entries.
 - MITRE ATLAS — confirm exact technique IDs for the agentic-relevant entries including LLM Plugin Compromise, LLM Prompt Injection, and any newly added agentic technique entries.
-- OWASP Top 10 for LLM Applications — confirm current edition (v1.1 vs v2.0 etc.) and the exact LLM07 / LLM08 framing at write time.
+- OWASP Top 10 for LLM Applications — using 2025 edition numbering. Confirm if newer edition published at write time and update the entry numbering if so.
 - NCSC Guidelines for Secure AI System Development — confirm exact section reference for the tool-use and untrusted-input guidance.
 - FFIEC IT Examination Handbook — confirm section reference for AI-system-specific guidance where it exists.
 - NAIC #880 — confirm current section numbering for the unfair-claims-settlement provisions.

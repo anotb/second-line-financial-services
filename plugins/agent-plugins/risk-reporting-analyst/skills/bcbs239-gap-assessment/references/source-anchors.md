@@ -17,12 +17,12 @@ The skill cites these by file path. SKILL.md does not restate excerpts.
 - Link: https://www.bis.org/publ/bcbs239.htm (Principles 1-14, four-group structure)
 - Notes: The four-group structure and the rating vocabulary (compliant, largely compliant, materially non-compliant, non-compliant) used in BCBS thematic reviews are the structural inheritance of this skill. Principle 12 is supervisor-facing and read at the firm as a readiness expectation. Principles 13 and 14 read at the firm as posture toward open findings and toward home/host coordination; they are not self-rated in the same way as Principles 1 to 11.
 
-### 2. BCBS Progress Reports on the implementation of the principles
+### 2. BCBS Progress Reports and Newsletters on the implementation of the principles
 
-- Citation: Basel Committee on Banking Supervision, progress reports on the adoption of the principles for effective risk data aggregation and risk reporting. Published reports include December 2013, January 2015, December 2015, March 2017, June 2018, April 2020, November 2023, and the most recent thematic update [verify date of most recent BCBS thematic review].
-- Excerpt-paraphrase: The progress reports rate G-SIB compliance principle by principle. Persistent thematic findings across the series concentrate in Principle 2 (data architecture and IT infrastructure), Principle 3 (accuracy and integrity, particularly the dependence on manual workarounds), and Principle 6 (adaptability, particularly the ability to produce ad-hoc and stress-scenario aggregations within required timeframes). The 2023 report restated that no G-SIB had achieved full compliance with all principles in the decade since BCBS 239 issuance.
-- Link: https://www.bis.org/bcbs/publications.htm (filter on "risk data aggregation"; section: Progress Reports series)
-- Notes: Use the most recent progress report as the comparator for direction-of-travel commentary in the executive summary. The thematic-finding pattern is what supervisors expect a self-assessment to address head-on; an assessment that rates Principle 6 as `largely-compliant` without recent ad-hoc-aggregation evidence is not credible against the BCBS pattern.
+- Citation: Basel Committee on Banking Supervision, progress reports and newsletters on the adoption of the principles for effective risk data aggregation and risk reporting. Published reports include December 2013, January 2015, December 2015, March 2017, June 2018, April 2020, and November 2023, plus the BCBS Newsletter on RDARR implementation issued January 2026 [verify exact title and publication date].
+- Excerpt-paraphrase: The progress-report series rates G-SIB compliance principle by principle. Persistent thematic findings concentrate in Principle 2 (data architecture and IT infrastructure), Principle 3 (accuracy and integrity, particularly dependence on manual workarounds), and Principle 6 (adaptability — ad-hoc and stress-scenario aggregation within required timeframes). The 2023 report restated that no G-SIB had achieved full compliance with all principles in the decade since BCBS 239 issuance. The January 2026 Newsletter is the most recent supervisory commentary on persistent gaps and on board-level data-quality framework expectations; it is supervisory commentary, not new rule text.
+- Link: https://www.bis.org/bcbs/publications.htm — filter on "risk data aggregation"; the Progress Reports series and the January 2026 Newsletter on RDARR
+- Notes: Use the most recent progress report or newsletter as the comparator for direction-of-travel commentary in the executive summary. The thematic-finding pattern is what supervisors expect a self-assessment to address head-on; an assessment that rates Principle 6 as `largely-compliant` without recent ad-hoc-aggregation evidence is not credible against the BCBS pattern.
 
 ### 3. ECB Guide on effective risk data aggregation and risk reporting
 
@@ -33,10 +33,10 @@ The skill cites these by file path. SKILL.md does not restate excerpts.
 
 ### 4. FRB SR 12-17 — Consolidated Supervision Framework for Large Financial Institutions
 
-- Citation: Board of Governors of the Federal Reserve System, Supervision and Regulation Letter SR 12-17, "Consolidated Supervision Framework for Large Financial Institutions" (December 17, 2012), section on management of core business lines and risks, including risk-data and risk-reporting capabilities.
-- Excerpt-paraphrase: SR 12-17 sets the consolidated supervisory framework for LFIs and articulates the expectation that LFI management has the risk-data infrastructure to aggregate exposures and concentrations across the firm, support stress testing, and produce timely and accurate risk reporting to the board and senior management. The letter is the US supervisory expectation chain that BCBS 239 capabilities are present at large BHCs.
-- Link: https://www.federalreserve.gov/supervisionreg/srletters/sr1217.htm (SR 12-17, section on management of core business lines and risks)
-- Notes: SR 12-17 predates BCBS 239 final issuance by one month and was the FRB's framing for what BCBS 239 codified. For a US LFI, the SR 12-17 frame is the supervisory expectation; the BCBS 239 principles are the assessment grammar. For BCBS 239 large-bank-specific expectations under FRB horizontal-review practice, FRB SR 21-19 is also referenced [verify SR 21-19 content and applicability — confirm this is the operative SR letter on BCBS 239 large-bank expectations and not a placeholder].
+- Citation: Board of Governors of the Federal Reserve System, Supervision and Regulation Letter SR 12-17, "Consolidated Supervision Framework for Large Financial Institutions" (December 17, 2012), section on management of core business lines and risks, including risk-data and risk-reporting capabilities. Operationalised for LFI ratings by SR 19-3 (LFI rating system).
+- Excerpt-paraphrase: SR 12-17 sets the consolidated supervisory framework for LFIs and articulates the expectation that LFI management has the risk-data infrastructure to aggregate exposures and concentrations across the firm, support stress testing, and produce timely and accurate risk reporting to the board and senior management. The letter is the US supervisory expectation chain that BCBS 239 capabilities are present at large BHCs; the LFI rating components in SR 19-3 are where risk-data weaknesses surface in supervisory ratings.
+- Link: https://www.federalreserve.gov/supervisionreg/srletters/sr1217.htm — SR 12-17; https://www.federalreserve.gov/supervisionreg/srletters/sr1903.htm — SR 19-3 LFI rating system
+- Notes: SR 12-17 predates BCBS 239 final issuance by one month and was the FRB's framing for what BCBS 239 codified. For a US LFI, the SR 12-17 frame plus the SR 19-3 rating system is the supervisory expectation chain; the BCBS 239 principles are the assessment grammar. The FRB has periodically issued horizontal-review themes on RDARR through supervisory letters and presentations rather than a single named "BCBS 239 SR letter"; cite the operative letter or theme at write time and do not cite SR 21-19 (which has been removed).
 
 ### 5. OCC Heightened Standards (12 CFR Part 30 Appendix D)
 
@@ -86,9 +86,9 @@ The skill cites these by file path. SKILL.md does not restate excerpts.
 
 The following items carry `[verify section]` or `[verify ...]` flags and must be confirmed at SKILL.md write time and at assessment-write time:
 
-- BCBS Progress Reports — confirm date of the most recent thematic review at assessment-write time.
-- ECB Guide on effective risk data aggregation and risk reporting (May 2024) — confirm current published version and pin cites to specific sections of the Guide where surfaced as supplementary criteria.
-- FRB SR 21-19 — confirm content and applicability as the operative SR letter on BCBS 239 large-bank expectations; if not, identify the operative SR letter (or note that the FRB framing flows through SR 12-17 plus horizontal-review practice rather than a single SR 21-19).
+- BCBS Progress Reports and the January 2026 RDARR Newsletter — confirm exact title and publication date of the most recent issuance at assessment-write time.
+- ECB Guide on effective risk data aggregation and risk reporting (May 2024 final) — confirm current published version and pin cites to specific sections of the Guide where surfaced as supplementary criteria.
+- FRB BCBS-239-related supervisory guidance — for US LFIs, the framing flows through SR 12-17 plus SR 19-3 (LFI rating system) plus periodic horizontal-review themes; do not cite SR 21-19 (removed).
 - OCC Heightened Standards — confirm §II section labels for risk-data infrastructure expectations.
 - Basel III monitoring exercise data templates — confirm current version and reporting cycle.
 - NAIC Model #505 — confirm section reference for risk identification, measurement, monitoring, and reporting expectations.

@@ -8,7 +8,7 @@ description: |
   - A CCO is preparing the annual mock-exam exercise as part of the Rule 206(4)-7 / Rule 38a-1 / FINRA Rule 3110 / 3130 review cycle.
   - A new CCO is doing a 90-day baseline assessment of the compliance program against current EXAMS priorities and Risk Alerts.
   - A consulting team is performing a pre-exam diagnostic for an adviser or BD client and needs the SEC-specific readiness lattice (not the generic exam-engagement playbook).
-  - A private-fund adviser is reading the firm's posture against the post-PFA-Rule landscape (the PFA Rule was vacated June 5, 2024) and the operative Form PF amendments.
+  - A private-fund adviser is reading the firm's posture against the post-PFA-Rule landscape (the PFA Rule was vacated June 5, 2024 and is not in force) and the operative Form PF 2023 / 2024 amendments (which remain in force as a separate rulemaking).
   - A registered-fund adviser is feeding readiness evidence into the Rule 38a-1 CCO annual report cycle for the fund board.
 
   Not the right tool when:
@@ -55,7 +55,7 @@ The pack has a four-part body around a cover. Walk it in the order the conversat
 
 This skill is capital-markets-only. The registration-class branching (IA / BD / dual registrant / private-fund adviser / fund adviser) lives in `references/sector-overlays/capital-markets.md`. There is no banking, insurance, or payments-fintech overlay file. Cross-cutting overlays load when the cycle scope implicates them.
 
-- `cross-cutting/cyber.md` loads when the document-request scope includes Reg S-P, cybersecurity, or information-security topics; when EXAMS' notification cites the SEC cyber rule for advisers and funds; or when the firm is NY-licensed and NYDFS Part 500 is in scope.
+- `cross-cutting/cyber.md` loads when the document-request scope includes Reg S-P, cybersecurity, or information-security topics, or when the firm is NY-licensed and NYDFS Part 500 is in scope. The SEC's separately-proposed adviser-and-fund cyber rule (2022) was withdrawn in 2025 and is not in force; Reg S-P is the operative anchor.
 - `cross-cutting/conduct.md` loads by default for retail-customer-serving firms and on demand for institutional firms with material conflict-of-interest topics in scope. Anchors: IA Act §206 fiduciary duty (SEC Commission Interpretation, June 5, 2019); Reg BI; Form CRS; FINRA Rule 2111 suitability.
 - `cross-cutting/privacy.md` does not load in v1. Privacy-specific obligations under Reg S-P and GLBA load through the cyber overlay.
 - `cross-cutting/climate.md` loads only when ESG-labeled product disclosures or Names Rule 35d-1 amendments are specifically in exam scope; otherwise carry as a reviewer question and skip the overlay.
@@ -66,7 +66,7 @@ This skill is capital-markets-only. The registration-class branching (IA / BD / 
 - Source evidence, firm management assertion, public-source obligation, generated inference, and open legal or compliance question stay distinguishable. The pack shows the seams.
 - Roles only, never named individuals. No named institutions in narrative beyond a public defendant in a finalised SEC or FINRA enforcement action with a published order, and only for structural pattern.
 - The pack stops short of speaking for the firm to the regulator. The CCO and the named lead attest; external counsel signs the privilege-confirmation block where engaged.
-- The SEC rule pipeline 2023-2026 has been volatile. Confirm current state at write time on the PFA Rule (vacated June 5, 2024), the Form PF amendments (separate rulemaking from the PFA Rule), Reg S-P May 2024 compliance dates, the cyber rule for advisers and funds, the Predictive Data Analytics Rule, the Names Rule compliance schedule, and the Corporate Transparency Act BO reporting rule. Verification flags carry through `references/source-anchors.md`.
+- The SEC rule pipeline 2023-2026 has been volatile. Confirm current state at write time. As of late 2025-early 2026: the PFA Rule was vacated (June 5, 2024) and is not in force; the SEC withdrew the proposed adviser-and-fund cyber rule and the Predictive Data Analytics Rule from its regulatory agenda (June 12, 2025) — neither is pending; Reg S-P amendments are the operative customer-information safeguarding rule, compliance December 3, 2025 (larger) / June 3, 2026 (smaller); Names Rule compliance dates were extended to December 11, 2025 (large fund groups) / June 11, 2026 (smaller groups); the Form PF amendments are operative and separate from the vacated PFA Rule. The Corporate Transparency Act BO reporting rule docket has been active across 2024-2025; verify the operative state. Verification flags carry through `references/source-anchors.md`.
 
 ## Pointers
 
@@ -78,6 +78,6 @@ This skill is capital-markets-only. The registration-class branching (IA / BD / 
 
 ## Output
 
-Two artifacts. The Word memo carries the narrative pack per `templates/default-output.md`; render it via the `docx` skill (in the `document-skills` plugin). The Excel gap-and-evidence matrix carries the per-domain working tabs; render it via the `xlsx` skill. Both ship together. The CCO and the named lead attest; the pack is a draft until that step.
+Default to drafting against `templates/default-output.md`. Render as Word, Excel, PowerPoint, or Markdown when the audience or workflow asks for it; the typical pair is a Word memo via the `docx` skill plus the gap-and-evidence matrix as an Excel workbook via the `xlsx` skill (both in the `document-skills` plugin). The CCO and the named lead attest; the pack is a draft until that step.
 
 Downstream consumers: `exam-brief` reads the engagement context and the document-request matrix to set the engagement-side scaffolding (request-list mapping, document-handling, interview-prep). `marketing-rule-evidence` reads the Marketing Rule lane gaps to refresh the substantive evidence pack. `best-execution-surveillance` reads the trading-and-execution evidence asks. `fund-board-reporting` reads the Rule 38a-1 lane for the fund-board cycle. `risk-committee-pack` reads the gap-and-remediation list and the open-finding posture for the standing committee section.

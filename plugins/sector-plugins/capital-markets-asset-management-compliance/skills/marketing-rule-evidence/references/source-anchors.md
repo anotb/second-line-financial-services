@@ -34,19 +34,19 @@ The skill cites these by file path. SKILL.md does not restate excerpts.
 - Link: https://www.sec.gov/files/exams-risk-alert-marketing-rule.pdf — Risk Alert, "Initial Areas of Review" section
 - Notes: Pin point for the EXAMS-focus posture in pre-dissemination and look-back reviews. Where the firm is in or near an exam, the pack cross-references the alert's named focus areas in the residual-issues block.
 
-### 5. SEC Division of Examinations Risk Alert, "Examinations Focused on Additional Areas of the Adviser Marketing Rule" (April 17, 2023) [verify exact title]
+### 5. SEC Division of Examinations Risk Alert, "Examinations Focused on Additional Areas of the Adviser Marketing Rule" (June 8, 2023)
 
-- Citation: U.S. Securities and Exchange Commission, Division of Examinations, "Risk Alert: Examinations Focused on Additional Areas of the Adviser Marketing Rule", April 17, 2023 [verify exact title — sometimes referenced as "Marketing Rule: Compliance Issues"; confirm the operative title at memo date].
-- Excerpt-paraphrase: The second Marketing Rule risk alert expands the EXAMS focus areas with emphasis on (i) testimonial and endorsement compliance, including the disclosure-clarity and clear-and-prominent placement requirements, written-agreement requirements, oversight, and ineligible-person disqualification; (ii) third-party-rating compliance, including the reasonable-basis and the rating-related disclosures; and (iii) Form ADV amendments tied to the Marketing Rule (the new Item 5.L. responses on the use of testimonials, endorsements, third-party ratings, and the inclusion of hypothetical or predecessor performance in advertising).
-- Link: https://www.sec.gov/files/exams-risk-alert-marketing-rule-2023.pdf — Risk Alert, focus-areas section [verify URL slug — confirm the operative URL at memo date]
-- Notes: Pin point for the per-element checklists on testimonials, endorsements, third-party ratings, and Form ADV cross-checks. The exact title and URL carry `[verify]` flags pending confirmation against the operative SEC page.
+- Citation: U.S. Securities and Exchange Commission, Division of Examinations, "Risk Alert: Examinations Focused on Additional Areas of the Adviser Marketing Rule", June 8, 2023.
+- Excerpt-paraphrase: The second Marketing Rule risk alert expands the EXAMS focus areas with emphasis on (i) Marketing Rule books-and-records and substantiation; (ii) the Marketing Rule's general prohibitions; (iii) testimonial and endorsement compliance, including the disclosure-clarity and clear-and-prominent placement requirements, written-agreement requirements, oversight, and ineligible-person disqualification; (iv) third-party-rating compliance, including the reasonable-basis and the rating-related disclosures; and (v) Form ADV amendments tied to the Marketing Rule (Item 5.L. responses on the use of testimonials, endorsements, third-party ratings, and the inclusion of hypothetical or predecessor performance in advertising).
+- Link: https://www.sec.gov/files/exams-risk-alert-marketing-rule-additional-areas.pdf — Risk Alert (June 8, 2023) [verify exact URL slug at memo date]
+- Notes: Pin point for the per-element checklists on testimonials, endorsements, third-party ratings, and Form ADV cross-checks. Earlier drafts of this skill cited the alert as "April 17, 2023"; the operative date is June 8, 2023.
 
-### 6. SEC Marketing Rule FAQ (staff FAQ, periodically updated)
+### 6. SEC Marketing Rule FAQ (staff FAQ, periodically updated; current pin January 15, 2026)
 
-- Citation: U.S. Securities and Exchange Commission, Division of Investment Management, "Marketing Compliance Frequently Asked Questions" (staff FAQ; periodically updated; pin operative version at memo date) [verify current state].
-- Excerpt-paraphrase: The staff FAQ addresses recurring practitioner questions on the Marketing Rule, including the gross-and-net presentation requirement for extracted performance, the treatment of model performance, the application of the rule to private-fund advisers, the scope of the one-on-one private-fund-investor exception on net presentation, and the operation of the testimonial / endorsement framework. The FAQ is staff-level guidance, not a Commission rule; the pack cites with the staff-FAQ caveat.
-- Link: https://www.sec.gov/investment/marketing-faq — Marketing Compliance FAQ, current version [verify section]
-- Notes: Pin operative version at pack date. Where the FAQ has updated since the operative review, the pack records the version pin and any change in posture.
+- Citation: U.S. Securities and Exchange Commission, Division of Investment Management, "Marketing Compliance Frequently Asked Questions" (staff FAQ; periodically updated). The most recent material update relevant to this skill is the January 15, 2026 revision [verify exact date at memo write time]; the FAQ is staff-level guidance, not a Commission rule.
+- Excerpt-paraphrase: The staff FAQ addresses recurring practitioner questions on the Marketing Rule — gross-and-net presentation for extracted performance; treatment of model and predecessor performance; application to private-fund advisers; the scope of the one-on-one private-fund-investor exception on net presentation; the operation of the testimonial / endorsement framework. The pack pins the FAQ version operative on the analysis date and records any change in staff posture since the prior cycle.
+- Link: https://www.sec.gov/investment/marketing-faq — Marketing Compliance FAQ
+- Notes: Pin the operative version at pack date. Earlier cycles operated against the post-2022-adoption FAQ baseline; the January 15, 2026 update is the current pin pending further revisions.
 
 ### 7. SEC Rule 204-2 — Books and records (Marketing Rule recordkeeping)
 
@@ -94,9 +94,9 @@ The skill cites these by file path. SKILL.md does not restate excerpts.
 
 The following items carry `[verify]` flags and must be confirmed at SKILL.md write time and at pack-write time:
 
-- April 17, 2023 SEC Risk Alert — confirm exact title (the alert is variously referenced as "Examinations Focused on Additional Areas of the Adviser Marketing Rule" and as "Marketing Rule: Compliance Issues") and the operative SEC URL slug.
-- SEC Marketing Compliance FAQ — confirm operative version pin at pack date.
-- Form ADV Part 1A Item 5.L. — confirm exact item numbering on the operative Form ADV.
+- June 8, 2023 SEC Risk Alert "Examinations Focused on Additional Areas of the Adviser Marketing Rule" — confirm the operative SEC URL slug at memo date.
+- SEC Marketing Compliance FAQ — current pin January 15, 2026; confirm at pack date and record any subsequent staff revision.
+- Form ADV Part 1A Item 5.L. — confirm exact item numbering on the operative Form ADV (Item 5.L. has been the operative numbering since the Marketing Rule amendments).
 - September 2023 SEC enforcement sweep — confirm the exact release count (commonly referenced as nine advisers), the file numbers, and the order dates.
 - Subsequent Marketing Rule enforcement actions — confirm named cases at pack date.
 

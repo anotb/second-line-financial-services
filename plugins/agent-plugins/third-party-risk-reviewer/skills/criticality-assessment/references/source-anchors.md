@@ -6,7 +6,7 @@ The named, dated regulatory sources this skill anchors to. SKILL.md cites this f
 
 - **Interagency Guidance on Third-Party Relationships: Risk Management** (OCC Bulletin 2023-17 / FRB SR 23-4 / FDIC FIL-29-2023, issued June 6, 2023). Risk-based application of third-party risk management; the guidance does not prescribe a fixed tier scheme. More rigorous oversight is expected for activities that pose higher risk; criticality is set proportionate to risk [verify section numbering across the released bulletin]. OCC release: https://www.occ.gov/news-issuances/news-releases/2023/nr-ia-2023-53.html . FDIC release: https://www.fdic.gov/news/press-releases/2023/pr23047.html . FRB release: https://www.federalreserve.gov/newsevents/pressreleases/bcreg20230606a.htm .
 
-- **OCC Bulletin 2013-29 — Third-Party Relationships: Risk Management Guidance** (October 30, 2013). Predecessor framing for "critical activities" still cited in supervisory practice as supplemental [verify section]. https://www.occ.gov/news-issuances/bulletins/2013/bulletin-2013-29.html .
+- **OCC Bulletin 2013-29 — Third-Party Relationships: Risk Management Guidance** (October 30, 2013). Historical framing for "critical activities". The June 2023 interagency guidance is the current operative anchor; 2013-29 is no longer the operative reference for new diligence cycles. Where examiners reference it, treat as supplemental context, not as the operative frame. https://www.occ.gov/news-issuances/bulletins/2013/bulletin-2013-29.html .
 
 - **FFIEC Information Technology Examination Handbook — Outsourcing Technology Services booklet** [verify current edition and section structure]. Risk-assessment criteria for technology service providers, including criticality and inherent-risk reads. https://ithandbook.ffiec.gov/ .
 
@@ -16,13 +16,13 @@ The named, dated regulatory sources this skill anchors to. SKILL.md cites this f
 
 - **BCBS Principles for Operational Resilience** (March 2021). Cross-jurisdictional anchor for the concept of important business services and impact tolerance; substitutability and third-party arrangements considered as part of the IBS resilience read. https://www.bis.org/bcbs/publ/d516.htm .
 
-- **UK PRA SS2/21 — Outsourcing and third-party risk management** (March 2021) and **SS1/21 — Operational resilience: impact tolerances for important business services** (March 2021) [verify section]. UK overlay only. The IBS framing and impact-tolerance concept anchor the UK call. https://www.bankofengland.co.uk/prudential-regulation/publication/2021/march/outsourcing-and-third-party-risk-management-ss .
+- **UK PRA SS1/21 (Operational resilience: impact tolerances for important business services, March 2021; updated March 2022)** and **SS2/21 (Outsourcing and third-party risk management, March 2021)**. UK overlay only. Operational-resilience compliance milestone was 31 March 2025. PS7/26 with accompanying SS1/26 introduces a UK incident-reporting and material-third-party-arrangement-reporting framework and updates SS2/21 expectations; verify current SS2/21 version on the engagement date. The IBS framing and impact-tolerance concept anchor the UK call. https://www.bankofengland.co.uk/prudential-regulation/publication/2021/march/operational-resilience-impact-tolerances-for-important-business-services-ss .
 
 ## DORA and EU criticality criteria
 
-- **DORA — Regulation (EU) 2022/2554, Article 28**. General principles for management of ICT third-party risk. Article 28(2) on proportionate ICT-third-party risk management; Article 28(7) and 28(8) on sub-outsourcing and exit posture for arrangements supporting critical or important functions [verify subarticle]. https://eur-lex.europa.eu/eli/reg/2022/2554/oj .
+- **DORA — Regulation (EU) 2022/2554, Article 28**. General principles for sound management of ICT third-party risk. Structure: 28(1)-(2) management and strategy; 28(3) register of information at entity / sub-consolidated / consolidated levels distinguishing critical-or-important-function-supporting contracts with annual reporting to competent authorities; 28(4) prior-notification obligation for new arrangements supporting critical or important functions; 28(5) pre-contractual due diligence; 28(6) ongoing monitoring; 28(7) termination triggers; 28(8) documented and tested exit strategies. Applicable from 17 January 2025. https://eur-lex.europa.eu/eli/reg/2022/2554/oj .
 
-- **DORA — Regulation (EU) 2022/2554, Article 6**. ICT risk management framework; the link from ICT risk to important functions [verify subarticle]. https://eur-lex.europa.eu/eli/reg/2022/2554/oj .
+- **DORA — Regulation (EU) 2022/2554, Article 6**. ICT risk management framework; the link from ICT risk to important functions. https://eur-lex.europa.eu/eli/reg/2022/2554/oj .
 
 - **EBA Guidelines on outsourcing arrangements (EBA/GL/2019/02)**. Definition of "critical or important function" and the assessment criteria for criticality [verify section number]. https://www.eba.europa.eu/regulation-and-policy/internal-governance/guidelines-on-outsourcing-arrangements .
 

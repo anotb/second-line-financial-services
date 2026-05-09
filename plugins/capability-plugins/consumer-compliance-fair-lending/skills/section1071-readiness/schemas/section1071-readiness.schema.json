@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://second-line-financial-services/plugins/capability-plugins/consumer-compliance-fair-lending/skills/section1071-readiness/schemas/section1071-readiness.schema.json",
   "title": "section1071-readiness",
-  "description": "Structured Section 1071 readiness output. Mirrors the readiness matrix and feeds downstream remediation tracking, GRC platforms, and audit-workpaper systems without re-keying. The data_points[] array carries one entry per 12 CFR 1002.107 data point; the structured record is the authoritative per-data-point readiness state, the markdown narrative is the executive read. The 12 CFR 1002.114 compliance dates have been moved by court order and bureau response (the CTA-style litigation history); cfi_determination.compliance_date carries the date as a sourced citation, marked [verify current effectiveness and tier dates] until pinned. Downstream consumers: fair-lending-test-plan (reads the data-point matrix to confirm the dataset is fit for fair-lending testing), the firm's regulatory-reporting pipeline (consumes reporting_readiness once go-live approaches), the firm's audit function (reads the matrix, gap list, and source trace).",
+  "description": "Structured Section 1071 readiness output under the May 2026 revised final rule. Mirrors the readiness matrix and feeds downstream remediation tracking, GRC platforms, and audit-workpaper systems without re-keying. The data_points[] array carries one entry per 12 CFR 1002.107 data point; the structured record is the authoritative per-data-point readiness state, the markdown narrative is the executive read. Under the revised rule a CFI is a financial institution that originated 1,000 or more covered originations to small businesses in each of the two preceding calendar years; the compliance date is January 1, 2028 for all CFIs (the prior tier-based schedule is superseded). Downstream consumers: fair-lending-test-plan (reads the data-point matrix to confirm the dataset is fit for fair-lending testing), the firm's regulatory-reporting pipeline (consumes reporting_readiness once go-live approaches), the firm's audit function (reads the matrix, gap list, and source trace).",
   "type": "object",
   "required": [
     "assessment_id",
@@ -87,7 +87,7 @@
     },
     "cfi_determination": {
       "type": "object",
-      "description": "Covered-financial-institution determination per 12 CFR 1002.105 and tier per 1002.114.",
+      "description": "Covered-financial-institution determination per 12 CFR 1002.105 under the May 2026 revised rule. Threshold is 1,000 covered originations to small businesses in each of the two preceding calendar years; CFI / not-CFI is the binary (no tiers).",
       "required": ["determination", "compliance_date"],
       "additionalProperties": false,
       "properties": {
@@ -97,8 +97,8 @@
           "type": "object",
           "additionalProperties": false,
           "properties": {
-            "value": { "type": "integer", "minimum": 0 },
-            "rule_reference": { "type": "string", "default": "12 CFR 1002.105" },
+            "value": { "type": "integer", "minimum": 0, "default": 1000 },
+            "rule_reference": { "type": "string", "default": "12 CFR 1002.105 (May 2026 revised rule)" },
             "verify_marker": { "type": "string", "description": "[verify under current rule] where applicable." }
           }
         },
@@ -109,21 +109,22 @@
         },
         "tier": {
           "type": "string",
-          "enum": ["tier-1", "tier-2", "tier-3", "not-applicable"]
+          "description": "Deprecated under the May 2026 revised rule (single threshold, single compliance date; no tiers). Retained for backward compatibility with pre-2026 records; new assessments use 'not-applicable'.",
+          "enum": ["tier-1", "tier-2", "tier-3", "not-applicable"],
+          "default": "not-applicable"
         },
         "compliance_date": {
           "type": "object",
-          "description": "Currently effective compliance date for the firm's tier. Carried as a sourced citation, not a bare value, because the dates have been moved by court order and bureau response.",
-          "required": ["value", "source", "verify_marker"],
+          "description": "Compliance date under the May 2026 revised rule: January 1, 2028 for all CFIs. Carried as a sourced citation, not a bare value.",
+          "required": ["value", "source"],
           "additionalProperties": false,
           "properties": {
-            "value": { "type": "string", "format": "date" },
+            "value": { "type": "string", "format": "date", "default": "2028-01-01" },
             "source": { "type": "string", "description": "URL or document reference for the date, with retrieval date." },
             "retrieval_date": { "type": "string", "format": "date" },
             "verify_marker": {
               "type": "string",
-              "default": "[verify current effectiveness and tier dates]",
-              "description": "Mandatory verify marker for compliance-date references."
+              "description": "Optional verify marker; the January 1, 2028 compliance date is set by the revised rule and is stable absent further amendment."
             }
           }
         },

@@ -15,7 +15,7 @@ The named, dated public regulatory sources this skill anchors to for US bank sup
 
 - **Uniform Financial Institutions Rating System (CAMELS)** — revised composite and component definitions, effective January 1, 1997, codified in interagency guidance and FDIC Manual section 5.1 [verify section]. The shared rating system across OCC, FRB, FDIC, NCUA, and state banking departments for depository institutions. https://www.fdic.gov/regulations/laws/rules/5000-900.html [verify URL].
 - **FDIC Risk Management Manual of Examination Policies — section 5.1 Uniform Financial Institutions Rating System** [verify section in current edition]. FDIC's published reference to the CAMELS component definitions and rating-driver vocabulary. https://www.fdic.gov/regulations/safety/manual/.
-- **FRB BHC rated framework** (RFI/C(D) or successor as applicable) [verify current FRB rating system]. The component framework FRB applies for BHC supervisory ratings. Documented in the FRB Bank Holding Company Supervision Manual.
+- **FRB BHC rating frameworks — LFI for large institutions; RFI/C(D) for community-banking and smaller-regional BHCs.** SR 19-3 (Large Financial Institution Rating System) sets the LFI rating system for BHCs, intermediate holding companies of FBOs, and non-insurance, non-commercial savings-and-loan holding companies above the LFI threshold; the LFI rating components are Capital Planning and Positions, Liquidity Risk Management and Positions, and Governance and Controls. RFI/C(D) remains the framework for BHCs and SLHCs below the LFI threshold (covers Risk management, Financial condition, potential Impact on subsidiary depository institutions, Composite, with sub-components for Depository institution rating, where applicable). https://www.federalreserve.gov/supervisionreg/srletters/sr1903.htm — SR 19-3; https://www.federalreserve.gov/publications/supervision_manual.htm — BHC Supervision Manual.
 
 ### CAMELS component anchors
 
@@ -28,13 +28,14 @@ The named, dated public regulatory sources this skill anchors to for US bank sup
 
 ## MRA / MRIA framework
 
-- **FRB SR letters governing the MRA / MRIA framework** (SR 13-17 and SR 22-3 [verify both are operative]). Define matters requiring attention and matters requiring immediate attention, expected closure cadence, evidence sufficiency, and escalation to enforcement. https://www.federalreserve.gov/supervisionreg/srletters/srletters.htm.
+- **FRB SR 13-13 — Supervisory Considerations for the Communication of Supervisory Findings** (June 17, 2013). The FRB letter that defines Matters Requiring Immediate Attention and Matters Requiring Attention, the supervisory expectation on the institution's written corrective-action plan, and the progress-reporting cadence the supervisor specifies. https://www.federalreserve.gov/supervisionreg/srletters/sr1313.htm.
 - **OCC Comptroller's Handbook — Bank Supervision Process booklet** (current edition) [verify edition and section on MRA categorisation]. OCC's MRA categorisation, supervisory-letter mechanics, and follow-up expectations.
 - **FDIC published guidance on Matters Requiring Board Attention** [verify FIL or section reference]. FDIC's parallel construct.
+- **OCC PPM 5310-3 — enforcement actions** (separate from the routine findings-communication framework above). Applies once a matter has escalated beyond routine supervision into formal or informal enforcement.
 
 ## Heightened Standards (covered banks, $50B+ avg total consolidated assets)
 
-- **12 CFR Part 30 Appendix D — OCC Heightened Standards for large banks**. Sections include II (covered bank scope), III (risk-governance framework), IV (board's role) [verify section labels — published Appendix uses letters without the III.B-style sub-numbering used colloquially]. The OCC's enforceable guidelines for covered banks. https://www.ecfr.gov/current/title-12/chapter-I/part-30 (Appendix D).
+- **12 CFR Part 30 Appendix D — OCC Heightened Standards for large banks**. The published Appendix uses lettered Roman-numeral headings: I Introduction; II Risk Governance Framework (which itself names the eight risk categories — credit, interest rate, liquidity, price, operational, compliance, strategic, reputation — and the front-line / independent-risk-management / internal-audit roles); III Risk Appetite Statement; IV Concentration Risk Management; V (and following) cover board responsibilities and other expectations [verify exact section labels at write time]. The OCC's enforceable guidelines for covered banks. https://www.ecfr.gov/current/title-12/chapter-I/part-30 (Appendix D).
 - **OCC Comptroller's Handbook — Corporate and Risk Governance booklet** (current edition) [verify edition]. OCC examiner-facing detail on risk-governance-framework expectations.
 
 ## Topical examination manuals
@@ -46,7 +47,7 @@ The named, dated public regulatory sources this skill anchors to for US bank sup
 - **CFPB Supervision and Examination Manual** (current edition) [verify edition and section]. Where a CFPB exam runs at the bank in parallel or as the topical scope. https://www.consumerfinance.gov/compliance/supervision-examinations/.
 - **Interagency Guidance on Third-Party Relationships: Risk Management** (June 6, 2023, OCC Bulletin 2023-17 / FRB SR 23-4 / FDIC FIL-29-2023) [verify FRB SR number]. Risk-based third-party-risk lifecycle for the topical readiness slice. https://www.occ.gov/news-issuances/bulletins/2023/bulletin-2023-17.html.
 - **Interagency Guidance on Credit Risk Review Systems** (May 8, 2020). Replaces OCC Bulletin 2006-47; framework for independent credit risk review. https://www.federalreserve.gov/supervisionreg/srletters/SR2013.htm [verify URL].
-- **CRA modernised rule (2023)** [verify current effective state given litigation history; the 2023 CRA final rule has been subject to legal challenge]. Cite the operative regime (1995 framework or the 2023 modernised rule) at write time. https://www.federalreserve.gov/consumerscommunities/cra_about.htm.
+- **CRA — current operative regime**. The 2023 interagency CRA modernisation final rule was subject to litigation; the agencies subsequently rescinded the 2023 rule in 2025 and re-aligned with the prior framework (the 1995 / amended-1995 regulations). Cite the operative regime at write time and date-stamp; do not assume the 2023 modernised rule is in force. https://www.federalreserve.gov/consumerscommunities/cra_about.htm.
 
 ## Confidential supervisory information regimes
 
@@ -85,9 +86,9 @@ The named, dated public regulatory sources this skill anchors to for US bank sup
 
 The banking regulatory pipeline carries several moving pieces. Phase 2 authors confirm the following at write time before publishing the pack:
 
-- CRA modernised rule current effective state given the litigation history of the 2023 final rule.
-- 12 CFR Part 30 Appendix D section labels (Appendix uses letters without the III.B-style sub-numbering used colloquially).
-- FRB SR letters governing the MRA / MRIA framework (SR 13-17 / SR 22-3 confirmed operative).
+- CRA current operative regime — confirm whether the 2023 modernised rule is in force or whether the 2025 rescission has restored the prior framework.
+- 12 CFR Part 30 Appendix D section labels (Appendix uses lettered Roman-numeral headings without the III.B-style sub-numbering colloquially used).
+- FRB SR 13-13 — confirm continuing operation as the FRB's MRA / MRIA communication framework; verify any successor letter at write time.
 - OCC Comptroller's Handbook booklet edition dates (booklets are revised periodically; pin the operative edition in source-trace).
 - FFIEC Examination Modernization Project current effective initiatives.
 - CECL implementation guidance current state (ASC 326-20 binding; the 2016 / 2017 / 2019 interagency joint statements need post-CECL state confirmation).

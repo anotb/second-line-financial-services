@@ -14,7 +14,9 @@ The named, dated regulatory sources this skill anchors to for implementation-pla
 
 - **FRB SR 21-3 / OCC Bulletin 2021-X — Sound Practices to Strengthen Operational Resilience** [verify exact bulletin number]. Operational-resilience-touching elements of an implementation programme. https://www.federalreserve.gov/supervisionreg/srletters/sr2103.htm .
 
-- **FRB SR 11-7 / OCC Bulletin 2011-12 — Supervisory Guidance on Model Risk Management** (April 2011, with subsequent revisions). Model-risk-touching elements of an implementation programme. https://www.federalreserve.gov/supervisionreg/srletters/sr1107.htm .
+- **Joint Interagency Revised Guidance on Model Risk Management** (OCC Bulletin 2026-13 / FRB SR 26-2 / FDIC FIL-15-2026, April 17 2026). One document issued through three agency channels with the same date, text, and signatories; supersedes and replaces SR 11-7 / OCC Bulletin 2011-12 (April 4, 2011) and SR 21-8 (April 9, 2021). The operative current standard for model-risk-touching elements of an implementation programme. The guidance is non-binding (Section I, footnote 1) and "expected to be most relevant to banking organizations with over $30 billion in total assets"; GenAI and agentic-AI models are explicitly out of scope (footnote 3). https://occ.gov/news-issuances/bulletins/2026/bulletin-2026-13a.pdf ; https://www.federalreserve.gov/supervisionreg/srletters/SR2602.htm ; https://www.fdic.gov/news/financial-institution-letters/2026/agencies-revise-interagency-model-risk-management-guidance .
+
+- **Superseded — SR 11-7 / OCC Bulletin 2011-12 (April 4, 2011) and SR 21-8 (April 9, 2021).** Cite as superseded when reading historical evidence (legacy validation reports, prior-cycle plans). Do not cite as the operative current standard. https://www.federalreserve.gov/supervisionreg/srletters/sr1107.htm .
 
 - **FRB SR 16-11 — Supervisory Expectations for Risk Management at Large Financial Institutions** (June 2016, Section II.A risk-management framework). Risk-management framing for material implementation programmes at large bank holding companies. https://www.federalreserve.gov/supervisionreg/srletters/sr1611.htm .
 
@@ -38,7 +40,7 @@ The named, dated regulatory sources this skill anchors to for implementation-pla
 
 - **CFPB Circulars** (issued periodically). Interpretive positions that drive design decisions in implementation plans. Reference the specific circular relevant to the rule under remediation. https://www.consumerfinance.gov/compliance/circulars/ .
 
-- **CFPB final rule, Small Business Lending Under the Equal Credit Opportunity Act (Regulation B), 12 CFR Part 1002 Subpart B Section 1071** (March 30 2023, with subsequent amendments). The Section 1071 rule, with tiered effective dates set post-litigation. https://www.consumerfinance.gov/rules-policy/final-rules/small-business-lending-under-the-equal-credit-opportunity-act-regulation-b/ . §1002.108 firewall; §1002.107 data points; §1002.109 reporting; §1002.114 effective dates and tiers.
+- **CFPB final rule, Small Business Lending Under the Equal Credit Opportunity Act (Regulation B), 12 CFR Part 1002 Subpart B Section 1071** (March 30 2023, with subsequent amendments). Tiered compliance dates have been adjusted post-litigation; the implementation programme must read the dates currently in effect at planning time rather than the originally published schedule. §1002.108 firewall; §1002.107 data points; §1002.109 reporting; §1002.114 effective dates and tiers. https://www.consumerfinance.gov/rules-policy/final-rules/small-business-lending-under-the-equal-credit-opportunity-act-regulation-b/ .
 
 ## SEC and FINRA — adviser, fund, and broker-dealer implementation
 
@@ -56,9 +58,9 @@ The named, dated regulatory sources this skill anchors to for implementation-pla
 
 - **SEC final rule, Cybersecurity Risk Management, Strategy, Governance, and Incident Disclosure** (Release Nos. 33-11216; 34-97989, July 26 2023). 8-K Item 1.05 and Reg S-K Item 106. Drives cyber-disclosure implementation plans for public companies. https://www.sec.gov/files/rules/final/2023/33-11216.pdf .
 
-- **SEC final rule, Climate-Related Disclosures** (Release Nos. 33-11275; 34-99678, March 6 2024). Reg S-K Item 1500 and Reg S-X Article 14. Drives climate-disclosure implementation plans where the rule is operative. https://www.sec.gov/files/rules/final/2024/33-11275.pdf .
+- **SEC final rule, Climate-Related Disclosures** (Release Nos. 33-11275; 34-99678, March 6 2024). Reg S-K Item 1500 and Reg S-X Article 14. Status: the SEC voluntarily stayed compliance with the rule in April 2024 pending judicial review; the climate-disclosure implementation programme should not be sequenced against this rule unless and until it becomes operative again. State-level climate disclosure regimes (California SB 253 / SB 261) and EU CSRD remain operative for in-scope filers regardless. https://www.sec.gov/files/rules/final/2024/33-11275.pdf .
 
-- **SEC final rule, Personal Financial Data Rights, 12 CFR Part 1033** (October 2024 final, Section 1033 of Dodd-Frank). Drives consumer-financial-data implementation plans for covered data providers. https://www.consumerfinance.gov/rules-policy/final-rules/required-rulemaking-on-personal-financial-data-rights/ .
+- **CFPB final rule, Personal Financial Data Rights, 12 CFR Part 1033** (October 22 2024 final, Section 1033 of Dodd-Frank). Status: subject to litigation; portions have been stayed and the compliance-date schedule has shifted post-publication. The implementation programme should reflect the stay-and-litigation posture in effect at planning time and should not assume the original compliance dates. https://www.consumerfinance.gov/rules-policy/final-rules/required-rulemaking-on-personal-financial-data-rights/ .
 
 - **SEC Division of Examinations annual examination priorities** (most recent letter) [verify section in most recent priorities letter]. The basis for anticipated regulator focus when planning implementation. https://www.sec.gov/exams .
 

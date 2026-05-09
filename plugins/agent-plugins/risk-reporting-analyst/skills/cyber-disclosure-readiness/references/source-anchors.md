@@ -57,10 +57,10 @@ The skill cites these by file path. SKILL.md does not restate excerpts.
 
 ### 8. SEC Regulation S-P Amendments (May 2024)
 
-- Citation: SEC Release Nos. 34-100155, IA-6604, IC-35193, "Regulation S-P: Privacy of Consumer Financial Information and Safeguarding Customer Information" (final May 16, 2024). Amends 17 CFR Part 248.30 (Safeguards Rule), adds incident-response program requirements and customer-notification requirements. Compliance dates phased: large entities 18 months from publication in the Federal Register; smaller entities 24 months [verify entity-type definitions and current compliance dates at draft time].
-- Excerpt-paraphrase: The amendments require covered institutions (broker-dealers, investment advisers, registered investment companies, transfer agents) to (i) develop, implement, and maintain written policies and procedures for an incident-response program reasonably designed to detect, respond to, and recover from unauthorized access to or use of customer information; (ii) notify each affected individual whose sensitive customer information was, or is reasonably likely to have been, accessed or used without authorization, as soon as practicable but not later than 30 days after the institution becomes aware that such access or use has occurred. The notice must include the description of the incident, the type of sensitive customer information affected, and the contact information.
-- Link: https://www.sec.gov/files/rules/final/2024/34-100155.pdf — Release Nos. 34-100155 et al., Section II (incident-response program), Section III (customer notification 30-day clock)
-- Notes: The 30-day customer-notice clock under Reg S-P starts at awareness of unauthorized access; the SEC 4-business-day Item 1.05 clock starts at materiality determination. The two clocks again resolve from different basis events and a single incident can trigger both. Covered-institution categories and compliance dates must be verified at draft time.
+- Citation: SEC Release Nos. 34-100155, IA-6604, IC-35193, "Regulation S-P: Privacy of Consumer Financial Information and Safeguarding Customer Information" (final May 16, 2024). Amends 17 CFR Part 248 §§248.30 and adds new requirements; adds incident-response program requirements and a 30-day customer-notification trigger. Compliance dates: larger entities December 3, 2025; smaller entities June 3, 2026 [verify the larger-entity / smaller-entity scope cut against the operative final-rule definitions at draft time].
+- Excerpt-paraphrase: The amendments require covered institutions (broker-dealers, investment advisers, registered investment companies, transfer agents) to (i) maintain a written incident-response program reasonably designed to detect, respond to, and recover from unauthorised access to or use of customer information; (ii) notify each affected individual whose sensitive customer information was, or is reasonably likely to have been, accessed or used without authorisation, as soon as practicable but not later than 30 days after the institution becomes aware. The notice must describe the incident, the type of sensitive customer information affected, and contact information.
+- Link: https://www.sec.gov/files/rules/final/2024/34-100155.pdf — Release Nos. 34-100155 et al.
+- Notes: The 30-day customer-notice clock under Reg S-P starts at awareness of unauthorised access; the SEC 4-business-day Item 1.05 clock starts at materiality determination. The two clocks resolve from different basis events and a single incident can trigger both. Verify entity-tier scope against the operative final-rule definitions at draft time.
 
 ### 9. SEC Climate Disclosure Rule
 
@@ -78,12 +78,12 @@ The skill cites these by file path. SKILL.md does not restate excerpts.
 
 ## Secondary anchors
 
-### 11. NIST SP 800-61 Rev. 2 — Computer Security Incident Handling Guide
+### 11. NIST SP 800-61 Rev. 3 — Incident Response Recommendations and Considerations for Cybersecurity Risk Management
 
-- Citation: National Institute of Standards and Technology, Special Publication 800-61 Revision 2, "Computer Security Incident Handling Guide" (August 2012), Sections 2 (Organizing a Computer Security Incident Response Capability), 3 (Handling an Incident), 4 (Coordination and Information Sharing).
-- Excerpt-paraphrase: NIST SP 800-61 sets the working incident-handling lifecycle (preparation, detection and analysis, containment-eradication-recovery, post-incident activity) that the firm's incident-response function uses operationally and that the disclosure committee's materiality call references for the timeline section. The guide's incident classification taxonomy feeds the trigger analysis in Artifact A.
-- Link: https://csrc.nist.gov/publications/detail/sp/800-61/rev-2/final — NIST SP 800-61 Rev. 2, Sections 2, 3, 4
-- Notes: NIST SP 800-61 Rev. 3 is currently in development and may supersede Rev. 2; verify current revision at draft time.
+- Citation: National Institute of Standards and Technology, Special Publication 800-61 Revision 3, "Incident Response Recommendations and Considerations for Cybersecurity Risk Management" (April 3, 2025) [verify exact publication date and any errata at draft time]. Re-anchored to NIST CSF 2.0; replaces Rev. 2 (August 2012).
+- Excerpt-paraphrase: SP 800-61 Rev. 3 reorients incident-response guidance around the CSF 2.0 functions (Govern, Identify, Protect, Detect, Respond, Recover) rather than the Rev. 2 four-phase lifecycle. The disclosure committee's materiality call references the operational chronology the incident-response function produces under this guide; the cyber-disclosure pack's DCP trace and parallel-clocks table draw on the Respond and Recover function content, with the materiality call sitting outside SP 800-61's scope.
+- Link: https://csrc.nist.gov/pubs/sp/800/61/r3/final — NIST SP 800-61 Rev. 3
+- Notes: Rev. 2 (2012) remains in widespread use and may still be referenced in firm runbooks; the migration to Rev. 3 is in progress across the industry. Verify which revision the firm's IR function operates under at draft time.
 
 ### 12. FFIEC IT Examination Handbook — Information Security
 
@@ -145,10 +145,10 @@ The following items carry `[verify section]`, `[verify current...]`, or `[verify
 - 17 CFR §229.106 Item 106 — verify section labels after any Federal Register updates.
 - TSC Industries v. Northway, Basic v. Levinson — verify pin cites at draft time.
 - 23 NYCRR Part 500 §500.17 — verify section labels and compliance dates after Second Amendment.
-- SEC Reg S-P amendments (May 2024) — verify entity-type definitions and current compliance dates.
+- SEC Reg S-P amendments (May 2024) — compliance dates: larger entities December 3, 2025; smaller entities June 3, 2026; verify entity-tier scope against the operative final-rule definitions.
 - SEC Climate Disclosure Rule (March 2024) — verify current effectiveness given Eighth Circuit consolidated litigation and SEC stay.
 - FFIEC IT Handbook — verify section labels and any successor to the sunset Cybersecurity Assessment Tool.
-- NIST SP 800-61 — verify current revision (Rev. 3 in development).
+- NIST SP 800-61 Rev. 3 (April 2025) — verify the firm's IR function operates under Rev. 3 (re-anchored to CSF 2.0) versus Rev. 2 (legacy four-phase lifecycle).
 - NAIC Model #668 — verify state-by-state adoption status and state-specific deviations.
 - SEC C&DIs — verify current question numbers for Item 1.05 and Item 106 interpretations.
 - FINRA Rule 4530 — verify subsection labels at draft time.

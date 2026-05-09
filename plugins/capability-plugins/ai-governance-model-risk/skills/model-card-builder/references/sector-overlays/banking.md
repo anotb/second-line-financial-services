@@ -10,11 +10,13 @@ Cited and section-referenced in `references/source-anchors.md`. This overlay nam
 
 ## What changes for banking model cards
 
-### 1. SR 11-7 is binding for federally regulated banks
+### 1. Joint interagency model-risk guidance for federally supervised banks
 
-SR 11-7 §V sets the documentation expectation for banks; the model card is the firm-side artifact that satisfies (in part) that expectation. For banks, the card is not optional governance polish; it is a prudential expectation under the Fed/OCC/FDIC interagency model risk guidance, refreshed in 2026 (OCC Bulletin 2026-13 and parallel FRB/FDIC issuances). Note: the 2026 revision excludes generative AI and agentic AI from its scope; for GenAI/agentic content in a card, anchor to the AI-specific frameworks (NIST AI RMF, NIST AI 600-1, ISO/IEC 42001) and the cross-cutting overlays.
+The 2026 joint interagency Revised Guidance on Model Risk Management (OCC Bulletin 2026-13 / FRB SR 26-2 / FDIC FIL-15-2026, April 17, 2026) is the current model-risk supervisory expectation for OCC-, FRB-, and FDIC-supervised banks. It supersedes SR 11-7 (2011) and SR 21-8 (the 2021 BSA/AML model-risk interagency statement). The model card is the firm-side documentation artifact aligned to the principles in the joint guidance.
 
-For non-bank registrants under the same parent (e.g., a sister broker-dealer or asset manager subsidiary), SR 11-7 reaches by extension only when the bank inherits model risk through transactions, services, or balance-sheet exposure. Card-writer should not over-claim SR 11-7 reach to non-bank entities.
+Practical reach. The joint guidance is most relevant to banking organizations with over $30 billion in total assets, and is non-binding (does not set enforceable standards). For mid-size and community banks below that threshold, treat the principles as leading-practice rather than as a prudential mandate; firm policy still drives card scope and depth. Generative AI and agentic AI are explicitly out of scope (footnote 3); for those use cases, anchor the card to the AI-specific frameworks (NIST AI RMF, NIST AI 600-1, ISO/IEC 42001) and the cross-cutting overlays. The joint guidance does not reference NIST AI RMF or NIST AI 600-1; do not cite the joint guidance as the controlling anchor for GenAI/agentic documentation.
+
+For non-bank affiliates under the same parent (a sister broker-dealer or asset manager), the joint guidance reaches by extension only when the bank inherits model risk through transactions, services, or balance-sheet exposure. Card-writer should not over-claim reach to non-bank entities.
 
 ### 2. OCC Heightened Standards (12 CFR Part 30 Appendix D)
 
@@ -87,7 +89,7 @@ The following fields are added to the card (mapped to schema where present):
 ## Common pitfalls in banking model cards
 
 - Treating CFPB authority as out of scope because the entity is OCC- or FRB-supervised; CFPB consumer-protection authority reaches large banks for ECOA, RESPA, EFTA, and UDAAP purposes.
-- Reporting model performance only on a development holdout; SR 11-7 §V expectations include performance under deployment conditions.
+- Reporting model performance only on a development holdout; supervisory expectations look for performance under deployment conditions, not just lab metrics.
 - Omitting the proxy-variable post-deployment process; both CFPB and OCC fair-lending exam practice probe this seam.
 - Citing "vendor system card" as standalone evidence for a foundation-model dependency; for banks, vendor evidence supplements but does not substitute for the firm's own validation and documentation.
 - Omitting the stress-testing pedigree section when the model is in fact used in stress; auditors and examiners catch this in the cross-walk.

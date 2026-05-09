@@ -16,11 +16,17 @@ The named, dated regulatory sources this skill anchors to. SKILL.md cites this f
 
 - **NAIC Producer Licensing Model Act** [verify model number]. Per-state per-individual licensing required for any party exercising binding, quoting, issuance, or producer authority on the carrier's behalf [verify section]. The exam reviews per-individual status, not entity-only. https://content.naic.org/cipr-topics/producer-licensing [verify URL].
 
+- **NAIC Managing General Agents Act, Model #225**. Sets the carrier-side oversight expectations on MGAs (and, by extension, MGUs where state law treats them analogously): written contract requirements, books-and-records access, audit rights, claims-handling oversight, underwriting-authority limits, prohibition on certain MGA conduct, and the carrier's annual on-site review obligation where the MGA writes business at or above the threshold. State adoption is variable; verify the carrier's domiciliary-state and operating-state adoption status and any state-specific deviations at pack-write time. The §4.F third-party-service-provider review under Model #668 sits alongside Model #225 for cyber and information-security clauses, but Model #225 is the operative source for the MGA-specific control families (binding authority limits, claims-handling oversight, premium-handling fiduciary obligations, on-site review). https://content.naic.org/sites/default/files/MDL-225.pdf [verify URL].
+
 ## State Department of Insurance bulletins
 
 - **State DOI bulletins on TPA registration and oversight**. Pin by state and date when used; treat each as a state-specific overlay. Many states have a TPA Act based on the NAIC TPA Model Act with their own registration and fiduciary requirements [verify state-by-state model adoption against the current NAIC adoption tracker].
 
-- **State DOI bulletins on AI use in insurance**. Operating footprint drives which bulletins apply; cite by state and date when used. Examples that recur in the operating footprint: Colorado SB 21-169 implementing regulation (life-insurance underwriting governance and risk management); NY DFS Insurance Circular Letter on AI and ECDIS in life-insurance underwriting (January 2024) [verify exact circular number]; California DOI bulletin on AI use in insurance [verify exact bulletin]. The NAIC AI Working Group adoption tracker covers state-by-state adoption of the NAIC Bulletin December 2023 model.
+- **State DOI bulletins on AI use in insurance**. Operating footprint drives which bulletins apply; cite by state and date when used. Examples that recur:
+  - **Colorado** — SB 21-169 (2021) and the Colorado DOI implementing Regulation 10-1-1 on governance and risk management of external consumer data and information sources (ECDIS) and predictive models in life-insurance underwriting; Reg 10-1-1 was amended October 15, 2025 [verify the current scope — the regulation has historically applied to life-insurance underwriting and the 2025 amendment posture should be confirmed against the operative DOI text].
+  - **New York** — NY DFS Insurance Circular Letter No. 7 (2024) on the use of AI and ECDIS in life-insurance underwriting and pricing [verify final issuance date and any amendment]; sets disclosure, fairness, governance, and consumer-recourse expectations.
+  - **California** — California DOI bulletin on AI use in insurance [verify exact bulletin number and date]; broader product-line scope than CO and NY.
+  - The NAIC AI Working Group adoption tracker covers state-by-state adoption of the NAIC December 2023 Model Bulletin.
 
 ## Vendor-AI accountability anchor
 
@@ -52,4 +58,13 @@ A firm using this skill in production adds firm-specific detail in `references/f
 
 ## Verification posture
 
-`[verify model number]`, `[verify section]`, and `[verify URL]` flags are deliberate. Several NAIC model numbers (Holding Company Act / Reg #440 and #450; ORSA Model #505; Producer Licensing Model Act; NAIC Insurance Information and Privacy Protection Model Act #670) need confirmation against the live NAIC Model Laws & Regulations index before the citation is used in a final pack. Phase-3 verification grinds these down. Fabrication is not the alternative.
+`[verify model number]`, `[verify section]`, and `[verify URL]` flags are deliberate. Several NAIC model numbers (Holding Company Act / Reg #440 and #450; ORSA Model #505; Producer Licensing Model Act; NAIC Insurance Information and Privacy Protection Model Act #670; MGA Model #225) need confirmation against the live NAIC Model Laws & Regulations index before the citation is used in a final pack.
+
+Cross-cutting items also need date-stamped verification:
+
+- NAIC AI Bulletin (December 4, 2023) — adoption is state-by-state via the NAIC AI Working Group adoption tracker; the Bulletin itself is model text, not law.
+- State DOI bulletins on AI in insurance (CO Reg 10-1-1 amended October 15, 2025; NY DFS Insurance Circular Letter 7 [verify final date and scope]; CA DOI bulletin [verify exact bulletin number]) — pin by state and date.
+- Model #668 (Insurance Data Security Model Law) — adoption is state-by-state; pin operating footprint.
+- HIPAA applicability — applies wherever the TPA or claims administrator handles protected health information; the BAA chain runs from the carrier (or the health-plan affiliate) to the TPA.
+
+Phase-3 verification grinds these down. Fabrication is not the alternative.

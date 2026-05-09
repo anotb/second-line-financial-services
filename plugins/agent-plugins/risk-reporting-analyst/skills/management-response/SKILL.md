@@ -91,6 +91,7 @@ The sector overlay is content that lands in the response, not background reading
 - Reporting cadence to the issuing party is named (frequency, form, reporting role). Defaults flex by finding tier; the absence of a named cadence does not.
 - Where a prior response exists on the same finding ID, the current response acknowledges the slippage and the changed commitment. Silently revising the prior commitment fails the schema check.
 - The response is a draft until the responding role and the firm-level signatory attest. The skill does not assert sign-off, send to the issuing party, or post to the response-file folder.
+- Supervisory finding text and prior supervisory communications are confidential supervisory information for federal banking findings (12 CFR Part 4 Subpart C for OCC; Part 261 for FRB; Part 309 for FDIC) and carry parallel restrictions for SEC EXAMS, FINRA, NYDFS, and state-DOI matters. The response itself becomes part of the supervisory record when delivered. The pack's access population and any onward circulation honour the issuing regulator's confidentiality regime; do not move CSI to a population reading at a lower clearance.
 
 ## Adaptation
 

@@ -19,7 +19,7 @@ argument-hint: "[incident reference, prior-year 10-K Item 106, DCP map, engageme
 
 # Cyber disclosure readiness
 
-The pack is what the disclosure committee reaches for when an incident lands on the materiality call agenda or when the 10-K Item 106 disclosure is up for refresh. Three linked artifacts share the same source spine: an 8-K Item 1.05 trigger and disclosure-decision pack for an incident-driven workflow, a 10-K Item 106 disclosure pack for the annual filing cycle, and a disclosure controls and procedures (DCP) readiness map for the framework that links the two. Audience is the head of disclosure, the GC office, the CISO, the CFO, the CRO, and securities counsel as the named reviewer.
+The pack is what the disclosure committee reaches for when an incident lands on the materiality call agenda or when the 10-K Item 106 disclosure is up for refresh. Three artifacts share the source spine and can run independently: an 8-K Item 1.05 trigger and disclosure-decision pack for an incident-driven workflow; a 10-K Item 106 disclosure pack for the annual filing cycle; and a disclosure controls and procedures (DCP) readiness map for the framework. Most engagements run one of the three at a time. Audience is the head of disclosure, the GC office, the CISO, the CFO, the CRO, and securities counsel as the named reviewer.
 
 This is a disclosure artifact, not an incident-response artifact. The vocabulary is materiality, four-business-day clock from determination, four required disclosure elements (nature, scope, timing, material impact or reasonably likely material impact), aggregation of related occurrences, delay provision, parallel notification clocks, governance and risk-management narrative. Forensic detail, IOCs, and remediation specifics belong to the incident response file; they appear here only where the four required elements demand them.
 
@@ -29,7 +29,7 @@ The pack is a draft until the disclosure committee, securities counsel, and the 
 
 Most of the spine is set by the trigger and the source posture. A few things settle before drafting:
 
-- **Which artifact is the work**. An 8-K Item 1.05 incident pack runs on a clock and is materiality-loaded. A 10-K Item 106 refresh runs on the annual cycle and is governance-loaded. A DCP readiness map is framework-level and is process-loaded. The same skill produces all three; the first ask sets which artifact the engagement needs.
+- **Which artifact is the work**. An 8-K Item 1.05 incident pack runs on a clock and is materiality-loaded. A 10-K Item 106 refresh runs on the annual cycle and is governance-loaded. A DCP readiness map is framework-level and is process-loaded. The same skill produces all three but they ship independently; the first ask sets which one (or which combination) the engagement needs and which sit out.
 - **Where the firm sits on filer category**. Domestic large accelerated filer, accelerated filer, smaller reporting company, foreign private issuer (Form 6-K, not 8-K). The Item 1.05 phase-in differed for SRCs (June 15, 2024 effective rather than December 18, 2023) and FPI treatment is structurally different. The pack adapts to the category named in the engagement scope.
 - **For an Item 1.05 pack: where the firm is on the materiality call**. Pre-determination, pending, just-determined, determined-and-clocked. The pack content shifts; pre-determination work is workpaper-heavy and disclosure-light, post-determination work is the inverse. The 4-business-day clock starts at the materiality determination, not at detection; the skill rejects any draft that conflates these.
 - **What parallel clocks apply to the registrant**. Federal banking agencies' 36-hour rule (covered banking organizations under 12 CFR 53/225/304); NYDFS 72-hour notice under 23 NYCRR Part 500 §500.17 if NYDFS-licensed; state breach-notification clocks where customer information is implicated; SEC Reg S-P 30-day customer notice for in-scope BDs, IAs, transfer agents, and registered funds; HIPAA Breach Notification Rule for in-scope entities; counterparty contractual notification. Surface every clock applicable to the registrant; missing one is a frequent regulator finding.
@@ -122,7 +122,7 @@ Default to drafting against `templates/default-output.md`. Render as Word, Excel
 - Artifact B — 10-K Item 106 pack — `schemas/item-106-disclosure.schema.json`.
 - Artifact C — DCP readiness map — `schemas/dcp-readiness.schema.json`.
 
-The template covers all three artifacts with the named sections; the engagement names which artifact the practitioner is producing and the rest compresses to a brief or is omitted with rationale.
+The engagement names which artifact (or artifacts) the practitioner is producing; the others sit out rather than padding the pack.
 
 Downstream consumers: the structured objects feed the firm's disclosure-committee minutes system, the 10-K source-trace file, the regulator-response file when supervisors ask for the DCP map, and the `risk-committee-pack` cyber heat-map cell (which consumes the high-water-mark posture from Artifact A or the brief from Artifact C). The schema is the cross-skill contract; additive changes only, never silent renames.
 

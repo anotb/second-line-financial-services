@@ -6,7 +6,7 @@ The named, dated regulatory sources this skill anchors to. SKILL.md cites this f
 
 - **Interagency Guidance on Third-Party Relationships: Risk Management** (OCC Bulletin 2023-17 / FRB SR 23-4 / FDIC FIL-29-2023, issued June 6, 2023). Ongoing-monitoring expectations include testing of vendor performance and contingency plans on a risk-based basis [verify section numbering across the released bulletin]. Risk-based application; more substantive testing expected for critical activities. OCC release: https://www.occ.gov/news-issuances/news-releases/2023/nr-ia-2023-53.html . FDIC release: https://www.fdic.gov/news/press-releases/2023/pr23047.html . FRB release: https://www.federalreserve.gov/newsevents/pressreleases/bcreg20230606a.htm .
 
-- **OCC Bulletin 2013-29 — Third-Party Relationships: Risk Management Guidance** (October 30, 2013). Predecessor framing still cited as supplemental in supervisory practice; ongoing-monitoring section addresses vendor-test-result review [verify section]. https://www.occ.gov/news-issuances/bulletins/2013/bulletin-2013-29.html .
+- **OCC Bulletin 2013-29 — Third-Party Relationships: Risk Management Guidance** (October 30, 2013). Historical framing for vendor-test-result review. The June 2023 interagency guidance is the operative anchor. https://www.occ.gov/news-issuances/bulletins/2013/bulletin-2013-29.html .
 
 - **FFIEC Information Technology Examination Handbook — Business Continuity Management booklet** [verify current edition and section structure]. The testing-and-exercise section is the examiner-facing reference for the test-method taxonomy: tabletop, walkthrough, simulation, full-functional exercise. Recovery-strategy considerations including third-party arrangements. https://ithandbook.ffiec.gov/ .
 
@@ -14,19 +14,19 @@ The named, dated regulatory sources this skill anchors to. SKILL.md cites this f
 
 - **FFIEC inter-agency cloud joint statement** (Security in a Cloud Computing Environment, April 30, 2020) [verify exact title and date]. Cloud-services BCDR testing including failover validation, customer-data-portability rehearsals, and shared-responsibility-model testing.
 
-- **DORA — Regulation (EU) 2022/2554, Article 24**. Digital operational resilience testing programme for in-scope financial entities; programme is risk-based, proportionate, and documented [verify subarticle]. https://eur-lex.europa.eu/eli/reg/2022/2554/oj .
+- **DORA — Regulation (EU) 2022/2554, Article 24**. Digital operational resilience testing programme for in-scope financial entities; programme is risk-based, proportionate, and documented. https://eur-lex.europa.eu/eli/reg/2022/2554/oj .
 
-- **DORA — Regulation (EU) 2022/2554, Article 25**. Test types: vulnerability assessments, open-source analyses, network security assessments, gap analyses, physical security reviews, source code reviews, scenario-based tests, compatibility testing, performance testing, end-to-end testing, penetration testing [verify subarticle]. The breadth of named test types matters for programme design.
+- **DORA — Regulation (EU) 2022/2554, Article 25**. Test types: vulnerability assessments, open-source analyses, network security assessments, gap analyses, physical security reviews, source code reviews, scenario-based tests, compatibility testing, performance testing, end-to-end testing, penetration testing. The breadth of named test types matters for programme design.
 
-- **DORA — Regulation (EU) 2022/2554, Article 26**. Advanced testing including threat-led penetration testing (TLPT) for designated firms [verify subarticle]. Designation criteria, methodology, and supervisory engagement model.
+- **DORA — Regulation (EU) 2022/2554, Article 26**. Advanced testing including threat-led penetration testing (TLPT) for designated firms. Designation criteria, methodology, and supervisory engagement model.
 
-- **DORA RTS on TLPT** [verify Commission Delegated Regulation reference and OJ publication]. Detailed methodology requirements aligned to TIBER-EU.
+- **Commission Delegated Regulation (EU) 2025/1190 of 13 February 2025** (OJ 18 June 2025, applicable from 8 July 2025) — RTS on threat-led penetration testing under DORA Article 26. Specifies criteria for identifying financial entities required to perform TLPT; test cadence (at least once every three years unless otherwise specified by the competent authority); red-team / control-team / blue-team conventions; live-production testing scope; reporting. Aligned to TIBER-EU. https://eur-lex.europa.eu/eli/reg_del/2025/1190/oj/eng .
 
 - **EBA Guidelines on outsourcing arrangements (EBA/GL/2019/02)**. Test posture guideline within the outsourcing-monitoring expectations [verify section number]. https://www.eba.europa.eu/regulation-and-policy/internal-governance/guidelines-on-outsourcing-arrangements .
 
 - **BCBS Principles for Operational Resilience** (March 2021). Mapping principle, scenario-testing principle, third-party-arrangement principle, ICT principle. https://www.bis.org/bcbs/publ/d516.htm .
 
-- **UK PRA SS2/21 — Operational resilience: impact tolerances for important business services** (March 2021) and **SS1/21 — Outsourcing and third-party risk management** (March 2021) [verify section]. UK overlay only. Severe-but-plausible scenario testing as the testing frame; impact-tolerance is the test the recovery posture must meet. https://www.bankofengland.co.uk/prudential-regulation/publication/2021/march/operational-resilience-impact-tolerances-for-important-business-services-ss .
+- **UK PRA SS1/21 (Operational resilience: impact tolerances for important business services, March 2021; updated March 2022)** and **SS2/21 (Outsourcing and third-party risk management, March 2021)**. UK overlay only. Operational-resilience compliance milestone was 31 March 2025. PS7/26 with SS1/26 introduces a UK incident-reporting and material-third-party-arrangement-reporting framework and updates SS2/21; verify current version on engagement date. Severe-but-plausible scenario testing is the testing frame; impact-tolerance is the test the recovery posture must meet. https://www.bankofengland.co.uk/prudential-regulation/publication/2021/march/operational-resilience-impact-tolerances-for-important-business-services-ss .
 
 - **TIBER-EU framework** (European Central Bank) [verify current version and date]. Threat-led penetration-testing methodology referenced by DORA Article 26 advanced-testing requirements. https://www.ecb.europa.eu/paym/cyber-resilience/tiber-eu/ .
 

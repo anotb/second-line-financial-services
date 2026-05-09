@@ -50,10 +50,10 @@ Citations and excerpts for the named regulatory anchors this skill relies on. Lo
 - **Link**: https://www.finra.org/rules-guidance/notices/15-46
 - **Section reference**: Whole notice. [verify whether superseded by 2024-2026 best-execution refresh on analysis date]
 
-## FINRA 2024-2026 best-execution refresh
+## FINRA best-execution refresh (post-2015)
 
-- **Citation**: [verify whether FINRA has issued a refreshed best-execution notice in the 2024-2026 cycle on the analysis date]
-- **Operative for this skill**: If issued, supersedes or supplements 15-46 on cross-asset-class application; the skill should pull the refreshed guidance into the factor analysis.
+- **Citation**: FINRA Regulatory Notice 15-46 remains the principal cross-asset-class best-execution notice. FINRA has from time to time issued additional Regulatory Notices, exam priorities letters, and Reports on Examination Findings touching best-execution practice; verify any post-2015 refresh applicable on the analysis date and pull it into the factor analysis only where it is genuinely operative. Do not assert a 2024-2026 best-execution refresh exists without confirming.
+- **Operative for this skill**: Use 15-46 as the baseline. Where FINRA has published a more recent refresh applicable to the period under review, supplement; do not invent.
 
 ## FINRA Rule 3110 — Supervision
 
@@ -81,11 +81,11 @@ Citations and excerpts for the named regulatory anchors this skill relies on. Lo
 
 ## SEC Final Rule on Order Execution Disclosure — Release 34-99679
 
-- **Citation**: SEC Release No. 34-99679 (March 6, 2024), "Disclosure of Order Execution Information." [verify release number, exact name, and compliance dates on analysis date]
+- **Citation**: SEC Release No. 34-99679 (March 6, 2024), "Disclosure of Order Execution Information." Compliance date August 1, 2026 [verify against the most recent SEC compliance-date guidance — the SEC has historically issued staff guidance and short extensions on Rule 605 as the industry approaches the implementation date].
 - **What it carries**: Amendments to Rule 605 expanding the universe of reporting entities (broker-dealers introducing more than 100,000 customer accounts in addition to market centres), adding new statistics, modernising reporting formats, and adjusting the order-size and type categories.
-- **Operative for this skill**: For periods governed by the amendments, the reconciliation block must use the amended definitions and categories. The compliance-date schedule may stagger by entity type and size; the skill verifies the operative date for the period under review.
-- **Link**: https://www.sec.gov/files/rules/final/2024/34-99679.pdf [verify URL on analysis date]
-- **Section reference**: Whole release; specifically the amendments to §242.605 and the compliance-date table. [verify section reference]
+- **Operative for this skill**: For periods on or after the August 1, 2026 compliance date, the reconciliation block uses the amended definitions and categories. For earlier periods, the legacy 605 fields apply. The skill date-stamps the operative regime for the period under review.
+- **Link**: https://www.sec.gov/files/rules/final/2024/34-99679.pdf
+- **Section reference**: Amendments to 17 CFR §242.605 and the compliance-date table.
 
 ## SEC Division of Examinations — Annual Examination Priorities
 

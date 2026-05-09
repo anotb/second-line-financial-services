@@ -1,13 +1,13 @@
 ---
 name: section1071-readiness
 description: |
-  Drafts a Section 1071 small-business lending data readiness assessment: covered-financial-institution determination, covered-application and covered-credit-transaction scoping, data-point inventory against 12 CFR 1002.107, applicant-demographic data-collection mechanics, the 12 CFR 1002.108 firewall design, recordkeeping under 12 CFR 1002.110, and reporting-and-filing readiness against the CFPB Filing Instructions Guide. Produces a readiness matrix per data point and a narrative gap memo for the named accountable executive. The current §1071 compliance dates have been moved by court order and bureau response; the skill carries that current-state caveat through every dated reference.
+  Drafts a Section 1071 small-business lending data readiness assessment under the CFPB's revised final rule (May 1, 2026; effective June 30, 2026; compliance date January 1, 2028). Covers covered-financial-institution determination against the 1,000-covered-transactions threshold, covered-application and covered-credit-transaction scoping, the 12 CFR 1002.107 data-point inventory, applicant-demographic data-collection mechanics, the 12 CFR 1002.108 firewall design, recordkeeping under 12 CFR 1002.110, and reporting-and-filing readiness against the CFPB Filing Instructions Guide. Produces a readiness matrix per data point and a narrative gap memo for the named accountable executive.
 
   Best for:
-  - Pre-compliance-date readiness check for a covered financial institution (Tier 1, 2, or 3 under the litigation-revised compliance schedule [verify current effectiveness and tier dates]).
+  - Pre-compliance-date readiness check for a covered financial institution against the January 1, 2028 compliance date (now a single compliance date for all CFIs at or above the 1,000-transaction threshold; the prior tier-based schedule is superseded).
+  - Threshold-determination work for a firm sitting at or near the 1,000 covered-credit-transactions floor in each of the two preceding calendar years.
   - Annual operating-state readiness refresh post-go-live, against the firm's first or subsequent submission cycle.
   - Vendor or loan-origination-system readiness assessment where 1071 data capture is vendor-supplied (the firm remains the covered financial institution; the vendor is the data-collection agent).
-  - Re-scoping after a change in originated credit volume that changes Tier classification.
 
   Not the right tool when:
   - The question is HMDA / Reg C readiness (different rule, different population — refer the reviewer to a HMDA-specific routine).
@@ -19,9 +19,9 @@ argument-hint: "[CFI determination data, product list, LOS / data extracts, vend
 
 # Section 1071 readiness
 
-Section 1071 added a small-business analogue of HMDA: covered financial institutions must collect, compile, and report data on credit applications from small businesses, with applicant-demographic data captured under a strict firewall that limits underwriting access. The CFPB's 2023 final rule (12 CFR 1002.101–1002.114) sets the data points, the firewall, the recordkeeping, and the tier-based compliance schedule. That schedule has been moved by court order and bureau response (the CTA-style litigation history). Phase-2 work pins the current dates and re-pins when they move.
+Section 1071 added a small-business analogue of HMDA: covered financial institutions must collect, compile, and report data on credit applications from small businesses, with applicant-demographic data captured under a strict firewall that limits underwriting access. The CFPB issued a revised final rule on May 1, 2026 (codified at 12 CFR 1002.101–1002.114) that supersedes the 2023 rule's tier-based compliance schedule and most of the *Texas Bankers Association v. CFPB* litigation posture. Under the revised rule: the covered-financial-institution threshold is 1,000 covered originations to small businesses in each of the two preceding calendar years (up from the 2023 rule's tiered thresholds), the rule is effective June 30, 2026, and the compliance date is January 1, 2028 for all CFIs. There are no longer three tiers with three different effective dates; there is one threshold and one compliance date.
 
-This skill drafts the firm's readiness assessment. It produces two artifacts: a readiness matrix (one row per 12 CFR 1002.107 data point, with system-of-record, capture method, readiness, gap, owner, due date) and a narrative gap memo for the named accountable executive. The matrix is the structured artifact downstream remediation tracking and audit reads from; the memo is what the executive signs off before the firm commits to a compliance-date go-live.
+This skill drafts the firm's readiness assessment under the revised rule. It produces two artifacts: a readiness matrix (one row per 12 CFR 1002.107 data point, with system-of-record, capture method, readiness, gap, owner, due date) and a narrative gap memo for the named accountable executive. The matrix is the structured artifact downstream remediation tracking and audit reads from; the memo is what the executive signs off before the firm commits to the January 1, 2028 go-live.
 
 The skill stops at draft. It does not file Section 1071 data, sign off readiness, finalize covered-institution determinations, or take any operational action. The covered financial institution decides; this skill structures the decision.
 
@@ -29,8 +29,8 @@ The skill stops at draft. It does not file Section 1071 data, sign off readiness
 
 Before drafting, settle six things. The matrix is identifier-driven against the 1002.107 list, and getting these wrong upstream costs more than asking once.
 
-- **Covered-financial-institution determination**. Origination counts of covered credit transactions to small businesses for each of the two preceding calendar years, against the 12 CFR 1002.105 thresholds, and the resulting Tier classification. The methodology used to count (covered transaction definition under 1002.106 applied per product) and the source-of-record for the count. If the firm has not done the count, the readiness work begins here; if the firm sits below the threshold and is not a CFI, the skill says so and stops.
-- **Currently effective compliance date for the firm's tier**. Pin from `references/source-anchors.md` and mark `[verify current effectiveness and tier dates]` because the dates are court-revised and have moved more than once. Carry the date as a sourced citation in `cfi_determination.compliance_date`, not as a bare value.
+- **Covered-financial-institution determination**. Counts of covered originations to small businesses for each of the two preceding calendar years, against the revised 1,000-transaction threshold under 12 CFR 1002.105. The methodology used to count (covered-transaction definition under 1002.106 applied per product) and the source-of-record for the count. If the firm has not done the count, the readiness work begins here; if the firm sits below 1,000 in either of the two preceding calendar years and is not a CFI, the skill says so and stops. There is no tier classification under the revised rule; CFI / not-CFI is the binary.
+- **Distance from the threshold**. A firm at 700 originations is in a different posture from a firm at 9,500. The memo names the headroom or the proximity, because near-threshold firms need watch-list monitoring and may flip in or out year-over-year. Far-above-threshold firms are sized for compliance regardless.
 - **Product list and per-product covered-credit-transaction mapping**. The firm's product taxonomy (term loans, lines of credit, business credit cards, SBA 7(a), SBA 504, merchant cash advance, sales-based financing, factoring, equipment finance, trade finance, etc.) mapped to the 1002.106 covered-credit-transaction definition with `in / out / edge` classification and rule-cited rationale per product. Skipping this and assuming the procurement product list is the scope is the most common scoping error.
 - **System-of-record per data point**. For each 1002.107 data point, the system the data lives in or will live in (LOS, CRM, deposit system, manual capture, vendor-supplied). Multiple systems per data point is normal; pick the canonical source and record the others as feeders.
 - **Vendor / LOS posture**. Where the LOS is vendor-supplied, the vendor's readiness is not the firm's readiness. The firm is the covered financial institution. Capture each vendor's role, attestations, change-control identifier for any 1071-driven change, and the contractual responsibility allocation. Sponsor-bank arrangements (a fintech operating under a sponsor bank) require separate treatment: the sponsor bank is the covered financial institution; the fintech is the data-collection agent.
@@ -42,9 +42,9 @@ When the engagement-scope record is supplied, the skill consumes it for institut
 
 The assessment has the same spine across firm types. A senior practitioner walks it in roughly the order the inputs land, not in lockstep. The matrix sorts itself; the memo reads in the order below.
 
-### Covered-financial-institution determination and tier
+### Covered-financial-institution determination
 
-Open with the 12 CFR 1002.105 threshold count. Origination counts of covered credit transactions to small businesses for each of the two preceding calendar years, the methodology used (covered-transaction definition per product), and the resulting tier. Carry the currently effective compliance date for the tier as a sourced citation, marked `[verify current effectiveness and tier dates]`. Where the firm sits at or near a tier boundary, surface the sensitivity in a reviewer question: a tier shift moves the compliance date and may move the readiness urgency materially.
+Open with the 12 CFR 1002.105 threshold count under the revised rule: 1,000 covered originations to small businesses in each of the two preceding calendar years. Carry the year T-1 and year T-2 counts, the methodology (covered-transaction definition per product), and the resulting CFI / not-CFI determination. The compliance date is January 1, 2028 for all CFIs (no tiers); the rule was effective June 30, 2026. Where the firm sits at or near the 1,000-transaction line in either year, surface the sensitivity in a reviewer question and recommend year-over-year monitoring; a near-threshold firm may flip in or out and the readiness posture has to be set up to handle that.
 
 ### Covered-application and covered-credit-transaction scoping
 
@@ -96,7 +96,7 @@ When the engagement scope names a sector, load the matching `references/sector-o
 
 Holds across every assessment:
 
-- **Tier classification with current compliance-date citation**. The tier and the date are the engagement's anchoring fact. Date carried as a sourced citation marked `[verify current effectiveness and tier dates]`.
+- **CFI determination against the 1,000-transaction threshold**. CFI / not-CFI is the binary; the compliance date is January 1, 2028. Date and threshold carried as sourced citations into `references/source-anchors.md`.
 - **Per-product covered-transaction mapping with rule citation**. Not the procurement taxonomy.
 - **One matrix row per 12 CFR 1002.107 data point**. The list is the contract; partial matrices are not assessments.
 - **Firewall as a control review, not a UI question**. 1002.108 is half the rule.
@@ -122,7 +122,7 @@ Downstream consumers: `fair-lending-test-plan` reads the data-point matrix to co
 
 ## Pointers
 
-- `references/source-anchors.md` — citations and verification posture for the §1071 final rule, the 1002.107 data points, the tier-based compliance dates (carried with `[verify current effectiveness and tier dates]`), the FIG, and the CFPB §1071 litigation status.
+- `references/source-anchors.md` — citations for the May 1, 2026 revised final rule, the 1,000-transaction threshold, the June 30, 2026 effective date, the January 1, 2028 compliance date, the 1002.107 data points, the FIG, and the superseded litigation history.
 - `references/sector-overlays/banking.md` — depository-institution overlay (heaviest); SBA 7(a) / 504 inclusion, business credit cards, trade finance, CFI tier-classification mechanics for banks.
 - `references/sector-overlays/payments-fintech.md` — fintech small-business lending; merchant cash advance and sales-based financing; sponsor-bank attribution; vendor LOS readiness; BNPL-for-business edge cases.
 - `references/sector-overlays/capital-markets.md` — out-of-scope flag with the boundary explicitly named so reviewers do not over-extend.

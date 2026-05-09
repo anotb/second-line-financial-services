@@ -6,7 +6,7 @@ When the engagement scope flags payments-fintech, load this overlay alongside `r
 
 The first question for a fintech operating under a sponsor bank is which entity is the covered financial institution. The rule looks to the entity extending the credit; in most sponsor-bank arrangements:
 
-- **The sponsor bank is the covered financial institution** for the credit transactions originated under its name on its balance sheet, and the sponsor bank's CFI determination, tier classification, and compliance date apply.
+- **The sponsor bank is the covered financial institution** for the credit transactions originated under its name on its balance sheet; the sponsor bank's CFI determination (against the revised 1,000-transaction threshold) and the January 1, 2028 compliance date apply.
 - **The fintech is the data-collection agent** under the contractual arrangement, with operational responsibility for the application flow, the demographic-collection mechanics, the LOS data capture, and the data-flow back to the sponsor bank for inclusion in the bank's submission.
 - **The firewall posture** (12 CFR 1002.108) sits on both sides: the sponsor bank's firewall expectations need to mirror in the fintech's environment, and the fintech's underwriting team (where the fintech does any underwriting work, even if the credit decision is the bank's) cannot have access to demographic data outside the rule's permitted exceptions.
 

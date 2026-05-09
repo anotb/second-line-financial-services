@@ -4,6 +4,12 @@ Cited regulatory sources this skill anchors to. Every primary anchor names the s
 
 The skill cites these by file path. SKILL.md does not restate excerpts.
 
+## CFPB current-status posture (as of memo date)
+
+On May 12, 2025 the CFPB withdrew a substantial portion of its prior advisory guidance (overdraft, NSF representment, AAN-with-algorithms circulars; the April 2023 Abusiveness Policy Statement). The bureau's Supervisory Highlights publication cadence has slowed materially; older issues remain useful as historical signal but the bureau's current focal items have to be confirmed at memo date. The CFPB Complaint Database itself remains operational and continues to publish public complaint extracts.
+
+Theme-grade work is signal-grade, not finding-grade. The withdrawal of CFPB advisory guidance does not change the underlying complaint patterns, the consumer harm hypotheses, or the regulatory-text touchpoints (UDAAP §1031, Reg E §1005.11, Reg X §1024 Subpart C, Reg B §1002.9, FCRA §1681s-2, etc.). State AGs, prudential regulators, and class-action plaintiffs continue to reach the same fact patterns under their own authority. Anchor regulatory-exposure mapping to the statute and regulation; reference the withdrawn CFPB items as historical interpretive context where useful, but do not depend on them as current bureau posture. Use `[verify operative status at memo date]` for any item where the CFPB's enforcement priorities materially affect the read.
+
 ## Primary anchors
 
 ### 1. CFPB Consumer Complaint Database
@@ -61,26 +67,26 @@ The skill cites these by file path. SKILL.md does not restate excerpts.
 - Link: https://www.ecfr.gov/current/title-12/chapter-X/part-1026 — Reg Z, 12 CFR Part 1026, sections cited above
 - Notes: Cited per theme. Verify §1026.52 operative status at memo date given the 2024 amendment and subsequent litigation.
 
-### 9. CFPB Circular 2022-06 — Unanticipated overdraft fee assessment practices
+### 9. CFPB Circular 2022-06 — Unanticipated overdraft fee assessment practices (withdrawn May 12, 2025)
 
-- Citation: CFPB Circular 2022-06 (October 26, 2022), "Unanticipated Overdraft Fee Assessment Practices".
-- Excerpt-paraphrase: The circular addresses overdraft fees assessed in circumstances where the consumer could not reasonably anticipate the fee, including the authorize-positive-settle-negative (APSN) pattern. Where a deposit-overdraft theme surfaces in the population with an APSN fact pattern, the circular is the operative regulatory exposure anchor and the cross-skill chain into `udaap-risk-review` carries the element-by-element analysis.
+- Citation: CFPB Circular 2022-06 (October 26, 2022), "Unanticipated Overdraft Fee Assessment Practices". **Withdrawn by the CFPB on May 12, 2025**.
+- Excerpt-paraphrase: The circular addressed overdraft fees assessed where the consumer could not reasonably anticipate them, including the authorize-positive-settle-negative (APSN) pattern.
 - Link: https://www.consumerfinance.gov/compliance/circulars/circular-2022-06-unanticipated-overdraft-fee-assessment-practices/ — Circular sections "Question Presented" and "Response"
-- Notes: Banking sector overlay anchor.
+- Notes: Withdrawn. Deposit-overdraft themes still anchor regulatory exposure to §1031 unfairness on the statute. State AGs and class-action plaintiffs continue to pursue APSN fact patterns. Banking sector overlay anchor.
 
-### 10. CFPB Circular 2022-04 — Insufficient funds fees on representment
+### 10. CFPB Circular 2022-04 — Insufficient funds fees on representment (withdrawn May 12, 2025)
 
-- Citation: CFPB Circular 2022-04 (October 26, 2022), "Insufficient funds fees charged on transactions that the consumer's bank has previously declined".
-- Excerpt-paraphrase: The circular addresses surprise representment NSF fees: when a merchant resubmits a previously-declined transaction and the consumer's bank assesses an additional NSF fee on the resubmission. Surprise-representment themes in the population cite this circular as the operative regulatory exposure anchor.
+- Citation: CFPB Circular 2022-04 (October 26, 2022), "Insufficient funds fees charged on transactions that the consumer's bank has previously declined". **Withdrawn by the CFPB on May 12, 2025**.
+- Excerpt-paraphrase: The circular addressed surprise representment NSF fees on previously-declined transactions resubmitted by the merchant.
 - Link: https://www.consumerfinance.gov/compliance/circulars/circular-2022-04-insufficient-funds-fees-charged-on-transactions-that-the-consumers-bank-has-previously-declined-on-presentment/ — Circular sections "Question Presented" and "Response"
-- Notes: Banking sector overlay anchor.
+- Notes: Withdrawn. Surprise-representment themes still anchor to §1031 on the statute. Multiple banks have already paid restitution under interagency consent orders pre-dating the withdrawal; those orders remain in force. Banking sector overlay anchor.
 
-### 11. CFPB Circulars 2022-03 and 2023-03 — Adverse-action notification with complex algorithms
+### 11. CFPB Circulars 2022-03 and 2023-03 — Adverse-action notification with complex algorithms (withdrawn May 12, 2025)
 
-- Citation: CFPB Circular 2022-03 (May 26, 2022), "Adverse action notification requirements in connection with credit decisions based on complex algorithms"; CFPB Circular 2023-03 (September 19, 2023), "Adverse action notification requirements and the proper use of the CFPB's sample forms provided in Regulation B".
-- Excerpt-paraphrase: Circular 2022-03 establishes that complex algorithms do not relieve creditors of the Reg B specificity requirement. Circular 2023-03 reinforces and extends the position: reasons in AANs must be the actual principal reasons for the adverse action; pretextual or sample-list reasons do not satisfy the specificity obligation. Complaint themes that surface AAN-content concerns (consumers complaining that the reason does not match their understanding) where complex models are in path cite both circulars and feed the cross-skill chain into `adverse-action-review`.
-- Link: https://www.consumerfinance.gov/compliance/circulars/circular-2022-03-adverse-action-notification-requirements-in-connection-with-credit-decisions-based-on-complex-algorithms/ — Circular sections "Question Presented" and "Response" ; https://www.consumerfinance.gov/compliance/circulars/circular-2023-03-adverse-action-notification-requirements-and-the-proper-use-of-the-cfpbs-sample-forms-provided-in-regulation-b/ — Circular section "Required Information"
-- Notes: Cited where complaint themes surface algorithmic AAN-content concerns.
+- Citation: CFPB Circular 2022-03 (May 26, 2022) and CFPB Circular 2023-03 (September 19, 2023). **Both withdrawn by the CFPB on May 12, 2025**.
+- Excerpt-paraphrase: The circulars took the position that complex algorithms do not relieve creditors of the Reg B specificity requirement, and that pretextual or sample-list reasons do not satisfy §1002.9(a)(2).
+- Link: https://www.consumerfinance.gov/compliance/circulars/circular-2022-03-adverse-action-notification-requirements-in-connection-with-credit-decisions-based-on-complex-algorithms/ ; https://www.consumerfinance.gov/compliance/circulars/circular-2023-03-adverse-action-notification-requirements-and-the-proper-use-of-the-cfpbs-sample-forms-provided-in-regulation-b/
+- Notes: Withdrawn. The substantive Reg B §1002.9 obligation and the Staff Commentary on specificity remain operative; complaint themes on AAN content map to the regulation directly and feed the cross-skill chain into `adverse-action-review`.
 
 ### 12. FCRA / Reg V furnisher-conduct authority
 

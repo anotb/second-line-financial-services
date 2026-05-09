@@ -4,6 +4,16 @@ Cited regulatory sources this skill anchors to. Every primary anchor names the s
 
 The skill cites these by file path. SKILL.md does not restate excerpts.
 
+## CFPB and FDIC current-status posture (as of memo date)
+
+Two date-sensitive items affect this skill:
+
+- The CFPB withdrew a substantial portion of its prior advisory guidance on May 12, 2025 (overdraft, NSF representment, AAN-with-algorithms circulars). The withdrawn items are preserved here as historical reference; the underlying statutes (Dodd-Frank §§1031, 1036, FTC Act §5) and the regulatory text (Reg Z, Reg DD, Reg E, Reg B) remain in force. State AGs and the FTC continue to pursue analogous theories under their own authority.
+- The CFPB BNPL Interpretive Rule (May 2024) was nullified by Public Law 119-11 (Congressional Review Act). BNPL Reg Z applicability is now an open question on the regulatory text; BNPL marketing review continues to test against the consumer-credit advertising rules where the product is consumer credit.
+- FDIC Part 328 (Advertisement of Membership; the FDIC official sign and advertising rule) was substantially revised effective April 1, 2024, with key compliance dates and elements rolled out through 2025. Verify the operative compliance date for Part 328 elements at memo date; non-bank attribution rules and the digital-channel official-sign requirements have specific effective-date treatments.
+
+For any marketing review, anchor primarily to the statute and regulation; treat withdrawn or nullified CFPB items as historical interpretive context, and verify Part 328's operative compliance posture at memo date.
+
 ## Primary anchors
 
 ### 1. Dodd-Frank §1031 / §1036 — UDAAP standards and prohibition
@@ -113,7 +123,7 @@ The skill cites these by file path. SKILL.md does not restate excerpts.
 
 ### 16. CFPB and FTC dark-pattern framings
 
-- Citation: Federal Trade Commission, "Bringing Dark Patterns to Light" (Staff Report, September 2022); CFPB Supervisory Highlights coverage of dark patterns in digital consumer-finance interfaces (issue numbers and dates rotate; pin the operative two issues at memo date) [verify issue number]; CFPB Circular 2023-01 (regarding unauthorised charges, January 2023) [verify exact title and date — the bureau has discussed dark patterns in multiple supervisory and circular contexts; pin the most-recent named source at memo date].
+- Citation: Federal Trade Commission, "Bringing Dark Patterns to Light" (Staff Report, September 2022) — operative; CFPB Supervisory Highlights coverage of dark patterns in digital consumer-finance interfaces (issue numbers and dates rotate; the publication cadence has slowed materially since 2024; pin the operative issue at memo date and treat older issues as historical signal) [verify issue number and operative status]; CFPB circular discussions of dark patterns in unauthorised-charge contexts [verify whether the operative circular has been withdrawn in the May 12, 2025 sweep before citing as current bureau posture].
 - Excerpt-paraphrase: The FTC Staff Report sets out a taxonomy of dark patterns observed across consumer-facing interfaces: nagging, obstruction, sneaking (including hidden costs and bait-and-switch), interface interference (including asymmetric choice and confirmshaming), forced action (including hidden registration and forced disclosure), and social-proof manipulation. The bureau has discussed dark-pattern mechanics under existing UDAAP authority; the framework is that interface design that materially interferes with consumer understanding or choice can raise abusiveness or deception concerns under §1031(c) and §1031(d).
 - Link: https://www.ftc.gov/system/files/ftc_gov/pdf/P214800%20Dark%20Patterns%20Report%209.14.2022%20-%20FINAL.pdf — FTC Staff Report, dark-pattern taxonomy section; https://www.consumerfinance.gov/data-research/research-reports/supervisory-highlights/ — CFPB Supervisory Highlights index, dark-pattern coverage [verify issue]
 - Notes: Dark-pattern taxonomy anchor. Use the FTC catalog as the structural reference; supplement with the firm's own UX taxonomy where one exists. CFPB references should be pinned to the operative supervisory-highlights issue or circular at memo date; do not invent.
@@ -134,10 +144,10 @@ The skill cites these by file path. SKILL.md does not restate excerpts.
 
 ### 19. FDIC advertising rule 12 CFR Part 328 — FDIC insurance representation
 
-- Citation: Federal Deposit Insurance Corporation, Advertisement of Membership rule, 12 CFR Part 328, particularly 12 CFR §328.3 (signs of insurance — official advertising statement), §328.4 (advertising of insured deposits — required statement), §328.5 (false advertising; misrepresentation of insured status; misuse of FDIC's name or logo).
-- Excerpt-paraphrase: Insured depositories must include the official advertising statement ("Member FDIC" or longer form) on advertisements that promote deposit products; non-bank entities and certain advertisements may not represent or imply that uninsured products are FDIC-insured. The 2022 final rule on §328.5 addresses misrepresentations of FDIC insurance status, particularly in the fintech and crypto-adjacent context [verify operative effective date].
-- Link: https://www.ecfr.gov/current/title-12/chapter-III/subchapter-B/part-328 — §328.4 required statement, §328.5 false advertising
-- Notes: Banking sector overlay anchor; load on any deposit-product asset and on any consumer-facing surface where a reasonable consumer might infer FDIC insurance (sweep programs; cash-management surfaces; non-bank fintech surfaces partnered with insured depositories). The fintech-attribution rule under §328.5 has been a recent focal area.
+- Citation: Federal Deposit Insurance Corporation, Advertisement of Membership rule, 12 CFR Part 328, particularly 12 CFR §328.3 (signs of insurance — official advertising statement), §328.4 (advertising of insured deposits — required statement), §328.5 (false advertising; misrepresentation of insured status; misuse of FDIC's name or logo). Substantially revised by the 2023 final rule (88 Fed. Reg. 92020, December 30, 2023; effective April 1, 2024 with subsequent FDIC date extensions for digital and non-bank attribution elements through 2025) [verify the operative compliance date for each Part 328 element at memo date].
+- Excerpt-paraphrase: Insured depositories must include the official advertising statement ("Member FDIC" or longer form) on advertisements that promote deposit products; non-bank entities and certain advertisements may not represent or imply that uninsured products are FDIC-insured. The 2023 final rule modernised the digital-channel official-sign requirements, refined the non-bank-attribution disciplines (the fintech / crypto / sweep-program edge), and tightened the §328.5 misrepresentation rule. The FDIC issued multiple compliance-date extensions through 2024–2025 for specific elements, particularly the digital-channel sign placement and the non-bank attribution rules.
+- Link: https://www.ecfr.gov/current/title-12/chapter-III/subchapter-B/part-328 — §328.3 official sign, §328.4 required statement, §328.5 false advertising
+- Notes: Banking sector overlay anchor; load on any deposit-product asset and on any consumer-facing surface where a reasonable consumer might infer FDIC insurance (sweep programs; cash-management surfaces; non-bank fintech surfaces partnered with insured depositories). The compliance-date posture matters: pin the operative effective date for each in-scope Part 328 element at memo date.
 
 ### 20. State privacy law landscape (CCPA / CPRA and successors)
 
@@ -169,10 +179,10 @@ The skill cites these by file path. SKILL.md does not restate excerpts.
 - Link: https://content.naic.org/sites/default/files/MO880.pdf — NAIC Model #880, unfair-trade-practice section [verify section]; https://content.naic.org/cipr-topics/advertising-and-marketing — NAIC topic page on advertising and marketing
 - Notes: Insurance overlay scope-boundary anchor. Load only to flag the boundary; route insurance-side advertising review to the firm's insurance-conduct function and the state-DOI framework.
 
-### 24. CFPB BNPL marketing observations and interpretive rule
+### 24. CFPB BNPL marketing observations and interpretive rule (interpretive rule nullified by Pub. L. 119-11)
 
-- Citation: CFPB, "Buy Now, Pay Later: Market trends and consumer impacts" (September 2022); CFPB Buy Now, Pay Later interpretive rule (May 2024) on Regulation Z applicability [verify exact title and date — the bureau has issued an interpretive rule that affirms BNPL is subject to certain credit-card provisions of Reg Z; pin operative status given any subsequent revision or litigation].
-- Excerpt-paraphrase: The bureau has documented BNPL marketing themes (cost framing, "no interest" representations, late-fee mechanics, dispute-handling representations). The interpretive rule applies certain Regulation Z provisions to BNPL products, including provisions relevant to billing-statement and dispute mechanics; the marketing review reaches whether BNPL marketing accurately represents the credit nature and the cost.
+- Citation: CFPB, "Buy Now, Pay Later: Market trends and consumer impacts" (September 2022); CFPB Buy Now, Pay Later interpretive rule (May 2024). **The May 2024 interpretive rule was nullified by Public Law 119-11 (CRA resolution of disapproval).**
+- Excerpt-paraphrase: The 2022 market report remains historical context on BNPL marketing themes (cost framing, "no interest" representations, late-fee mechanics, dispute-handling representations). The interpretive rule had positioned certain Reg Z provisions as applicable to BNPL; with nullification, that interpretation no longer carries the bureau's interpretive weight. The Reg Z applicability of BNPL is now an open question on the regulatory text.
 - Link: https://www.consumerfinance.gov/data-research/research-reports/buy-now-pay-later-market-trends-and-consumer-impacts/ — Market report, executive summary section; https://www.consumerfinance.gov/compliance/supervisory-guidance/ — CFPB supervisory guidance index, interpretive rules section [verify section]
 - Notes: Payments-fintech sector overlay anchor for BNPL marketing review. Verify operative status of the interpretive rule at memo date.
 
@@ -194,9 +204,9 @@ The following items carry `[verify section]` or `[verify ...]` flags and must be
 - FTC Endorsement Guides 2023 revisions — confirm exact treatment of AI-generated endorsements.
 - CFPB Supervisory Highlights — confirm the operative two issues at memo date for dark-pattern coverage.
 - CFPB dark-pattern circular or supervisory reference — pin the most-recent named source at memo date.
-- FDIC advertising rule §328.5 — confirm operative effective date for the 2022 amendments.
+- FDIC advertising rule 12 CFR Part 328 — confirm operative effective date for each in-scope element under the 2023 final rule (effective April 1, 2024) and the FDIC's subsequent compliance-date extensions through 2024–2025.
 - State privacy law footprint — confirm the operative state list at memo date.
-- CFPB BNPL interpretive rule — confirm operative status given any subsequent revision or litigation.
+- CFPB BNPL interpretive rule — nullified by Pub. L. 119-11; treat as historical reference. Reg Z applicability to BNPL is an open question on the regulatory text.
 
 Where verification is incomplete, the SKILL.md cites with the `[verify section]` flag carried forward; do not invent.
 

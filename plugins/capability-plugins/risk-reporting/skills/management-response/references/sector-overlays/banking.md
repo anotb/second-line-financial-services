@@ -7,9 +7,9 @@ Loaded by: `management-response/SKILL.md` when `engagement_scope.sector_overlay_
 ## Source basis
 
 - FRB SR 13-13 (Supervisory Considerations for the Communication of Supervisory Findings, June 2013) — the principal federal-banking-agency framework for the MRA / MRIA distinction and the management-response posture the FRB expects.
-- OCC PPM 5310-3 [verify current PPM number] and the OCC Comptroller's Handbook Bank Supervision Process booklet — the OCC's framework for findings communication and corrective actions.
+- OCC Comptroller's Handbook Bank Supervision Process booklet — the OCC's operative framework for routine findings communication and corrective actions; PPM 5310-3 (enforcement actions) applies once a matter has escalated beyond routine supervision.
 - FDIC Risk Management Manual of Examination Policies — the FDIC's framework for examination findings and Matters Requiring Board Attention.
-- 12 CFR Part 30 Appendix D (OCC Heightened Standards) — for OCC-supervised covered banks, the framework binding on the response (board oversight under Section IV; risk governance framework under Section II).
+- 12 CFR Part 30 Appendix D (OCC Heightened Standards) — for OCC-supervised covered banks, the framework binding on the response (board oversight; risk governance framework). The published Appendix uses lettered Roman-numeral headings without the III.B-style sub-numbering colloquially used.
 - FRB SR 12-17 (Consolidated Supervision Framework for Large Financial Institutions, December 2012) and SR 19-3 (LFI rating system) — for BHCs above thresholds, the consolidated supervision framework that contextualises the response.
 - Federal banking agencies' interagency guidance on third-party risk management (June 2023) — frequent subject of supervisory findings.
 - BCBS principles for sound management of operational risk (revised March 2021) — for operational-risk findings, the prudential framework the response references.
@@ -29,18 +29,18 @@ Defaults are starting points, not constraints; the supervisory team's specificat
 ### 2. Addressee conventions
 
 - **FRB findings**: addressee is the supervisory office identified in the SR-13-13-conformant communication (e.g., the relevant Reserve Bank or the Board's Division of Supervision and Regulation for Board-supervised entities). The response form follows formal supervisory-letter convention.
-- **OCC findings**: addressee is the OCC supervisory office identified in the PPM-5310-3-conformant communication (typically the assigned examiner-in-charge or the supervisory-office director). The response form follows the OCC's letter convention; for Heightened Standards-covered banks the response may also need to be acknowledged at the risk committee under 12 CFR Part 30 Appendix D Section IV.
+- **OCC findings**: addressee is the OCC supervisory office identified in the supervisory-letter communication (typically the assigned examiner-in-charge or the supervisory-office director). The response form follows the OCC's letter convention; for Heightened Standards-covered banks the response may also need to be acknowledged at the risk committee under the heightened-standards board-oversight expectations.
 - **FDIC findings**: addressee is the FDIC regional office or the examiner-in-charge identified in the report of examination; the response is appended to the report.
 
 ### 3. Linkage to 12 CFR Part 30 Appendix D for Heightened Standards-covered banks
 
 For OCC-supervised banks above the Heightened Standards threshold (currently $50 billion average total consolidated assets), the response carries explicit linkage to:
 
-- Section II Risk Governance Framework — the response acknowledges where the finding implicates a deficiency in the framework and what change to the framework is committed.
-- Section III Risk Appetite Statement — where the finding implicates a RAS metric or a RAS limit, the response identifies any RAS recalibration request and links to the risk committee pack section.
-- Section IV Roles and Responsibilities — the response identifies the responsible role at front-line, independent risk management, or internal audit.
+- Risk Governance Framework — the response acknowledges where the finding implicates a deficiency in the framework and what change to the framework is committed.
+- Risk Appetite Statement — where the finding implicates a RAS metric or a RAS limit, the response identifies any RAS recalibration request and links to the risk committee pack section.
+- Roles and Responsibilities — the response identifies the responsible role at front-line, independent risk management, or internal audit.
 
-This linkage is typically required for MRAs and MRIAs that hit Heightened Standards-covered topics; for more routine findings it is best-practice rather than required.
+This linkage is typically required for MRAs and MRIAs that hit Heightened Standards-covered topics; for more routine findings it is best-practice rather than required. Citations live in `references/source-anchors.md`.
 
 ### 4. Linkage to LFI ratings and BHC supervision
 

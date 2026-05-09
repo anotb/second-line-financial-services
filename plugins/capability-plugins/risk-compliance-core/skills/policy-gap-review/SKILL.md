@@ -5,7 +5,7 @@ description: |
 
   Best for:
   - Refreshing a policy ahead of a regulator exam, internal audit, post-enforcement uplift, or scheduled triennial review.
-  - Comparing a legacy policy against a newly published rule or refreshed guidance (legacy SR 11-7-anchored MRM policy against OCC Bulletin 2026-13; pre-2023 vendor-management policy against the June 2023 interagency TPRM guidance; legacy AI policy against NIST AI RMF 1.0 plus AI 600-1).
+  - Comparing a legacy policy against a newly published rule or refreshed guidance (legacy SR 11-7-anchored MRM policy against the joint April 2026 model-risk guidance; pre-2023 vendor-management policy against the June 2023 interagency TPRM guidance; legacy AI policy against NIST AI RMF 1.0 plus AI 600-1).
   - Reviewing a draft policy before approval to surface gaps against the named benchmark before it goes to committee.
   - Converting an examiner-cited policy weakness into a structured gap inventory the firm can remediate row by row.
 
@@ -77,15 +77,15 @@ The tail of the matrix earns its keep by what it surfaces:
 
 The same row spine carries different benchmark sources and different severity calibrations across sectors and across cross-cutting topics. Load only the overlays the engagement scope flags. The overlays do not change the row structure; they change which sources the matrix benchmarks against and which gap patterns the practitioner expects to find.
 
-- `references/sector-overlays/banking.md` carries OCC Heightened Standards (12 CFR Part 30 Appendix D) policy expectations, FRB SR letters as policy benchmark, FDIC FILs as policy guidance, and the BSA/AML manual policy-pillar expectations when the policy in scope is a banking policy.
-- `references/sector-overlays/insurance.md` carries NAIC Model Audit Rule policy expectations, ORSA policy expectations, and state DOI conduct-of-business policy expectations.
-- `references/sector-overlays/capital-markets.md` carries SEC Rule 206(4)-7 (advisers compliance program) policy expectations, FINRA 3110 supervisory procedures policy expectations, and SEC Rule 38a-1 fund compliance policy expectations.
-- `references/sector-overlays/payments-fintech.md` carries OCC fintech bank-partnership policy expectations and CFPB consumer-compliance policy expectations for sponsor-bank arrangements.
-- `references/cross-cutting/cyber.md` is the most-loaded cross-cutting overlay. NYDFS Part 500 §500.3 cybersecurity policy expectations, FFIEC IT Examination Handbook Information Security booklet §II.A, and SEC Reg S-K Item 106 governance disclosure expectations land here. The cyber overlay fires whenever the policy in scope is a cybersecurity policy or a policy that includes a cybersecurity section.
-- `references/cross-cutting/privacy.md` loads when the policy in scope is a privacy or data-handling policy. GLBA Safeguards Rule (16 CFR §314.4), state privacy laws, Reg P, and Reg S-P customer-information safeguards land here.
-- `references/cross-cutting/conduct.md` loads when the policy in scope is a customer-facing policy: product approval, marketing, complaints, fair lending. CFPB UDAAP exam manual benchmarks land here.
+- `references/sector-overlays/banking.md` carries large-bank heightened-standards policy expectations, FRB SR letters and FDIC FILs as policy guidance, and the BSA/AML manual policy-pillar expectations.
+- `references/sector-overlays/insurance.md` carries NAIC Model Audit Rule, ORSA, and state DOI conduct-of-business policy expectations.
+- `references/sector-overlays/capital-markets.md` carries the SEC advisers and fund compliance-program rules and FINRA supervisory-procedures expectations.
+- `references/sector-overlays/payments-fintech.md` carries OCC bank-fintech partnership and CFPB consumer-compliance policy expectations for sponsor-bank arrangements.
+- `references/cross-cutting/cyber.md` is the most-loaded overlay. State cyber policy content elements, FFIEC IT information-security framing, and the SEC public-company governance-disclosure expectations land here. The overlay fires whenever the policy in scope is a cybersecurity policy or includes a cybersecurity section.
+- `references/cross-cutting/privacy.md` loads for privacy or data-handling policies. GLBA Safeguards, state privacy laws, Reg P, and the post-2024 Reg S-P customer-information safeguards land here.
+- `references/cross-cutting/conduct.md` loads for customer-facing policies (product approval, marketing, complaints, fair lending). CFPB UDAAP benchmarks land here.
 
-Climate cross-cutting follows the same pattern; this skill ships cyber, privacy, and conduct as the v1 cross-cutting files because they are the most frequent triggers for policy gap reviews. Where firm policy or taxonomy applies (firm-specific severity ladders, named committee gates, firm-specific role titles), it lives in `references/firm-overlay.md` and is consumed when present.
+For GenAI, agentic AI, or other AI-system policy scope, the matrix benchmarks against NIST AI RMF 1.0, NIST AI 600-1, ISO/IEC 42001, the EU AI Act, and the firm's AI governance framework — those are out of scope of the joint April 2026 model-risk guidance and route to a separate workstream. Climate overlay follows the same pattern; this skill ships cyber, privacy, and conduct as v1. Granular citations (CFR sections, rule paragraphs) live in `references/source-anchors.md` and the overlay files. Firm-specific severity ladders, named committees, and firm-specific role titles live in `references/firm-overlay.md`.
 
 ## Quality bar
 

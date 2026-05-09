@@ -6,7 +6,7 @@ description: |
   Best for:
   - A compliance team building the response binder for a regulator exam against the examiner's request list (RFI).
   - An internal-audit lead assembling the fieldwork evidence pack for a control-test program.
-  - A model-risk validator pulling the evidence pack for an annual model revalidation under SR 11-7 / OCC 2026-13.
+  - A model-risk validator pulling the evidence pack for a model revalidation cycle under the firm's MRM frame (cadence per the firm's own policy, not assumed annual).
   - A TPRM team assembling the diligence evidence file for a critical or important vendor review.
   - A committee secretary compiling the evidence file behind a risk-committee or AI-risk-committee paper, where the committee will be asked "what supports this".
   - A second-line owner closing an issue and indexing the remediation evidence the issue-writeup will cite.
@@ -82,7 +82,7 @@ No fabricated regulatory facts. No named institutions in narrative unless they a
 
 ## Adaptation
 
-Depth and length scale to purpose and audience. A vendor-review binder for a non-critical SaaS may run to ten rows and fit on a page; a regulator-exam binder reconciled against a 60-item RFI runs long, with the sufficiency log and gap section in full. A committee binder leads with the headline sufficiency and pushes row-level detail into an appendix; an audit fieldwork binder leads with row-level detail because the auditor will read every row. A model-validation binder groups rows by validation activity (conceptual soundness, ongoing monitoring, outcomes analysis, benchmarking); a vendor-review binder groups rows by lifecycle phase (planning, due diligence, contract, ongoing monitoring, termination) per the 2023 interagency third-party guidance. The sector overlay set drives which `references/sector-overlays/<sector>.md` is loaded. The cross-cutting overlay set follows engagement scope, with the rule that `references/cross-cutting/privacy.md` loads whenever the binder may carry NPI, PHI, PCI, or other regulated personal data, regardless of how the engagement-scope reads.
+Depth and length scale to purpose and audience. A vendor-review binder for a non-critical SaaS may run to ten rows and fit on a page; a regulator-exam binder reconciled against a 60-item RFI runs long, with the sufficiency log and gap section in full. A committee binder leads with headline sufficiency and pushes row-level detail into an appendix; an audit fieldwork binder leads with row-level detail because the auditor will read every row. A model-validation binder groups rows by validation activity (conceptual soundness, ongoing monitoring, outcomes analysis, benchmarking, independent challenge); a vendor-review binder groups rows by the interagency TPRM lifecycle phases. The sector overlay set drives which `references/sector-overlays/<sector>.md` is loaded. The cross-cutting overlay set follows engagement scope, with the rule that `references/cross-cutting/privacy.md` loads whenever the binder may carry NPI, PHI, PCI, or other regulated personal data, regardless of how the engagement-scope reads.
 
 ## Pointers
 

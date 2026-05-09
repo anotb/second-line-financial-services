@@ -59,13 +59,13 @@ The named, dated public regulatory sources this skill anchors to for SEC EXAMS a
 
 ## SEC rulemaking — current state requiring verification at write time
 
-- **SEC Cybersecurity Risk Management Rules for Advisers and Funds** — proposed Feb 9, 2022 (Release IA-5956 / IC-34497; proposed §275.206(4)-9 for advisers and §270.38a-2 for funds). [verify current state: re-proposed, withdrawn, finalised, or still pending.] https://www.sec.gov/rules/proposed/2022/33-11028.pdf.
-- **SEC Reg S-P amendments** (adopted May 16, 2024; Release 34-100155; amends 17 CFR Part 248 §§248.1-248.30). Customer-information safeguarding and incident-response notification for broker-dealers, investment advisers, investment companies, and transfer agents; tiered compliance dates by entity size [verify exact compliance dates by entity type and size]. https://www.sec.gov/rules/final/2024/34-100155.pdf.
-- **SEC Private Fund Advisers Rule** (adopted Aug 23, 2023; Release IA-6383). Vacated by the 5th Circuit in *National Association of Private Fund Managers v. SEC*, June 5, 2024. The PFA Rule is not in force; antifraud and recordkeeping reach via §206 of the IA Act and Rule 204-2 remains. https://www.sec.gov/rules/final/2023/ia-6383.pdf. Vacatur opinion: 5th Circuit case 23-60471.
-- **SEC Predictive Data Analytics Rule** — proposed July 26, 2023 ("Conflicts of Interest Associated with the Use of Predictive Data Analytics by Broker-Dealers and Investment Advisers"; Release 34-97990 / IA-6353; proposed §275.211(h)(2)-4 for advisers and §240.15l-2 for BDs). [verify current state.] https://www.sec.gov/rules/proposed/2023/34-97990.pdf.
-- **SEC Names Rule amendments** (Rule 35d-1 under the ICA, amended Sept 20, 2023). 80% policy on names suggesting investment focus, including ESG-themed funds. Compliance dates [verify exact compliance schedule by fund size]. https://www.sec.gov/rules/final/2023/33-11238.pdf.
-- **Form PF 2023 amendments** (adopted May 3, 2023; current-event reporting) and 2024 amendments (adopted Feb 8, 2024; jointly with CFTC) [verify operative compliance dates and post-PFA-Rule context]. https://www.sec.gov/rules/final/2023/ia-6297.pdf.
-- **Rule 605 / 606 amendments** [verify release number and exact compliance dates; spec sheet references Release 34-99679 March 6, 2024 — verify]. Cross-skill linkage: `best-execution-surveillance`.
+- **SEC Cybersecurity Risk Management Rules for Advisers and Funds** — proposed Feb 9, 2022 (Release IA-5956 / IC-34497; proposed §275.206(4)-9 for advisers and §270.38a-2 for funds). Withdrawn from the SEC's regulatory agenda June 12, 2025 [verify exact withdrawal posture]. Not in force; not pending. The Reg S-P amendments are the operative customer-information safeguarding rule for advisers and funds. https://www.sec.gov/rules/proposed/2022/33-11028.pdf — historical record.
+- **SEC Reg S-P amendments** (adopted May 16, 2024; Release 34-100155; amends 17 CFR Part 248). Customer-information safeguarding and incident-response notification for broker-dealers, investment advisers, investment companies, and transfer agents. Compliance dates: larger entities December 3, 2025; smaller entities June 3, 2026 [verify the larger-entity / smaller-entity scope cut against the operative final-rule definitions]. https://www.sec.gov/rules/final/2024/34-100155.pdf.
+- **SEC Private Fund Advisers Rule** (adopted Aug 23, 2023; Release IA-6383). Vacated by the 5th Circuit in *National Association of Private Fund Managers v. SEC*, June 5, 2024. Not in force; antifraud and recordkeeping reach via IA Act §206 and Rule 204-2 remains. https://www.sec.gov/rules/final/2023/ia-6383.pdf — historical record. Vacatur opinion: 5th Circuit case 23-60471.
+- **SEC Predictive Data Analytics Rule** — proposed July 26, 2023 ("Conflicts of Interest Associated with the Use of Predictive Data Analytics by Broker-Dealers and Investment Advisers"; Release 34-97990 / IA-6353). Withdrawn from the SEC's regulatory agenda June 12, 2025 [verify exact withdrawal posture]. Not in force; not pending. https://www.sec.gov/rules/proposed/2023/34-97990.pdf — historical record.
+- **SEC Names Rule amendments** (Rule 35d-1 under the ICA, amended Sept 20, 2023). 80% policy on names suggesting investment focus, including ESG-themed funds. Compliance dates as extended: large fund groups (≥$1 billion AUM) December 11, 2025; smaller fund groups June 11, 2026 [verify exact tier definitions and most-recent extension order]. https://www.sec.gov/rules/final/2023/33-11238.pdf.
+- **Form PF 2023 amendments** (adopted May 3, 2023; current-event reporting) and 2024 amendments (adopted Feb 8, 2024; jointly with CFTC). The Form PF amendments are a separate rulemaking from the vacated PFA Rule and remain operative; verify current effective dates by adviser tier. https://www.sec.gov/rules/final/2023/ia-6297.pdf.
+- **Rule 605 amendments — Disclosure of Order Execution Information** (Release 34-99679, March 6, 2024). Compliance date August 1, 2026 (originally 18-month implementation period from publication; verify the operative compliance date against the SEC's most recent guidance at write time). Cross-skill linkage: `best-execution-surveillance`. https://www.sec.gov/files/rules/final/2024/34-99679.pdf.
 
 ## Cross-cutting overlays — anchors
 
@@ -93,12 +93,12 @@ The named, dated public regulatory sources this skill anchors to for SEC EXAMS a
 The SEC rule pipeline has been unusually volatile across 2023-2026 (multiple vacaturs, withdrawals, and proposed rules in flight). Phase 2 authors confirm the following at write time before publishing the readiness pack:
 
 - SEC Private Fund Advisers Rule — vacated by 5th Circuit June 5, 2024; not in force; antifraud and recordkeeping reach via §206 and Rule 204-2 remains.
-- SEC Cybersecurity Risk Management Rules for Advisers and Funds — proposed Feb 9, 2022; current state [verify: re-proposed, withdrawn, finalised, or pending].
-- SEC Predictive Data Analytics Rule — proposed July 26, 2023; current state [verify].
-- Form PF 2023 / 2024 amendments — verify current-event-reporting effectiveness and the post-PFA-Rule context (the Form PF amendments are a separate rulemaking from the vacated PFA Rule).
-- Reg S-P amendments — adopted May 16, 2024; verify exact compliance dates by entity type and size at write time.
-- Names Rule amendments — adopted Sept 20, 2023; verify compliance dates by fund size.
-- Rule 605 / 606 amendments — verify release number and compliance dates.
+- SEC Cybersecurity Risk Management Rules for Advisers and Funds — withdrawn from the SEC's regulatory agenda June 12, 2025; not in force, not pending. Reg S-P is the operative customer-information safeguarding rule.
+- SEC Predictive Data Analytics Rule — withdrawn from the SEC's regulatory agenda June 12, 2025; not in force, not pending.
+- Form PF 2023 / 2024 amendments — separate rulemaking from the vacated PFA Rule; verify current effective dates by adviser tier.
+- Reg S-P amendments — compliance dates: larger entities December 3, 2025; smaller entities June 3, 2026; verify entity-tier scope.
+- Names Rule amendments — compliance dates as extended: large fund groups December 11, 2025; smaller groups June 11, 2026; verify against the most recent SEC extension order.
+- Rule 605 amendments — Release 34-99679; compliance date August 1, 2026; verify against current SEC guidance at write time.
 - SEC EXAMS Annual Examination Priorities — refresh required to current year.
 - FINRA cybersecurity Notices — current operative set [verify].
 - FinCEN beneficial-ownership rules — distinguish 31 CFR §1010.230 BD legal-entity-customer BO rule from the Corporate Transparency Act FinCEN BO reporting rule [verify current state of the CTA BO reporting rule given litigation history].

@@ -4,17 +4,18 @@ Named, dated regulatory sources this skill anchors to. SKILL.md cites this file 
 
 The CFPB Personal Financial Data Rights Final Rule is the central anchor. Its docket has been active since finalisation; the `s1033_status_note` field in the artifact carries the verification date for the firm's tier and the current docket posture as of each engagement. The FDX API specification is industry, not regulator; alignment is supervisory expectation, not a legal obligation by itself. Network and card-network rulebooks are paywalled where they appear in adjacent overlays; this skill does not cite them directly.
 
-## Personal Financial Data Rights Final Rule (central anchor)
+## Personal Financial Data Rights Final Rule (central anchor) — current docket posture
 
-- **CFPB Personal Financial Data Rights Final Rule under §1033 of the Dodd-Frank Act**, codifying 12 CFR Part 1033 [verify exact part number against the published final rule], finalised October 22, 2024 [verify Federal Register publication date and exact citation]. Key elements (treat as current as of the rule text published October 22, 2024; verify effective dates for the firm's tier on each engagement):
-  - **Covered data** — transaction data, account balance, configuration data, and payment-initiation information for accounts in scope (consumer asset accounts under the consumer-EFT regime, credit cards under the credit-card regime, and certain payment products) [verify exact covered-data list and account scope on the analysis date].
-  - **Developer interface** — the data provider's obligation to maintain a covered-data interface meeting performance, security, and access standards; prohibition on charging consumers or authorised third parties for access [verify exact section reference and wording].
-  - **Authorisation, scope, duration, revocation** — consumer authorisation, one-year reauthorisation cadence, scope limited to what is reasonably necessary, revocation handling end-to-end [verify exact timing rules and section reference].
-  - **Authorised third party / data recipient duties** — limits on collection, use, retention; secondary-use restrictions; data-deletion duties on revocation; certifications [verify section reference].
-  - **Implementation tiers** — staggered compliance dates by data-provider asset size [verify the dates and tiers operative on the date of analysis; the rule has been subject to litigation and dates may have shifted].
-  - **Litigation status** — the final rule has been challenged in court [verify current docket status, any stays, and any compliance-date relief on the analysis date]. CFPB final-rule landing page: https://www.consumerfinance.gov/rules-policy/final-rules/required-rulemaking-on-personal-financial-data-rights/ .
+- **CFPB Personal Financial Data Rights Final Rule under §1033 of the Dodd-Frank Act**, codified at 12 CFR Part 1033, finalised October 22, 2024. The rule has had an active docket: legal challenge concentrated on the rule's authority and scope, plus a CFPB-initiated reconsideration that has produced a stayed compliance-date posture and an Advance Notice of Proposed Rulemaking (ANPR) for follow-on rulemaking [verify the current state at write time — as of late 2025-early 2026 the rule's final compliance dates are stayed pending the reconsideration outcome; the ANPR contemplates further changes to the data-recipient duty set, the developer-interface specification, and the implementation-tier schedule].
+- Key elements (the final-rule architecture, treated as the substantive frame, with all dates `[verify operative state]`):
+  - **Covered data** — transaction data, account balance, configuration data, and payment-initiation information for accounts in scope (consumer asset accounts under the consumer-EFT regime, credit cards under the credit-card regime, and certain payment products).
+  - **Developer interface** — the data provider's obligation to maintain a covered-data interface meeting performance, security, and access standards; prohibition on charging consumers or authorised third parties for access.
+  - **Authorisation, scope, duration, revocation** — consumer authorisation, one-year reauthorisation cadence, scope limited to what is reasonably necessary, revocation handling end-to-end.
+  - **Authorised third party / data recipient duties** — limits on collection, use, retention; secondary-use restrictions; data-deletion duties on revocation; certifications.
+  - **Implementation tiers** — the as-finalised schedule staggered compliance dates by data-provider asset size; the operative state is `[verify]` given the stay and ANPR.
+- Link: https://www.consumerfinance.gov/rules-policy/final-rules/required-rulemaking-on-personal-financial-data-rights/ — CFPB final-rule landing page; check the CFPB ANPR docket for the reconsideration follow-on.
 
-The artifact's `s1033_status_note` block carries the firm-specific application of the bullets above and date-stamps each engagement's verification.
+The artifact's `s1033_status_note` block carries the firm-specific application of the bullets above and date-stamps each engagement's verification — including which compliance dates are stayed, which are operative, and which are subject to the pending ANPR.
 
 ## Federal Safeguards and Privacy frame
 
@@ -34,7 +35,7 @@ The artifact's `s1033_status_note` block carries the firm-specific application o
 
 - **OpenID FAPI 1.0 — Financial-grade API Security Profile** [verify whether the firm cites FAPI 1.0 Final, FAPI 2.0, or a later profile on the analysis date]. Security profile for financial-data API access. https://openid.net/specs/openid-financial-api-part-1-1_0.html .
 
-- **Financial Data Exchange (FDX) API specification (current major version)** [verify version number and release date on the analysis date]. The de facto US industry standard for tokenised open-banking data exchange. Conceptual citation; FDX is industry, not regulator. https://financialdataexchange.org/ .
+- **Financial Data Exchange (FDX) API specification (current major version)** [verify version number and release date on the analysis date]. The de facto US industry standard for tokenised open-banking data exchange; CFPB's January 8, 2025 recognition of FDX as a standard-setting body under the §1033 final rule established a formal CFPB-recognised channel for industry-standard development [verify the current state of FDX's recognition and any subsequent CFPB action on the standard-setting framework]. Citation is conceptual — FDX is industry, not regulator — but alignment with the CFPB-recognised standard is a supervisory expectation in practice. https://financialdataexchange.org/ ; CFPB recognition: https://www.consumerfinance.gov/about-us/newsroom/ — verify exact press-release link.
 
 ## Consumer-EFT error-resolution overlay (data-recipient incidents)
 
@@ -52,7 +53,7 @@ The artifact's `s1033_status_note` block carries the firm-specific application o
 
 ## CFPB direct supervision and supervisory signal
 
-- **CFPB final rule defining larger participants of a market for general-use digital consumer payment applications** (December 2024) [verify Federal Register citation and current state including any litigation, congressional review, or compliance-date relief on the analysis date]. Brings designated non-bank larger participants under direct CFPB supervision; a designated firm faces direct CFPB EXAMS posture rather than sponsor-bank-mediated supervision. https://www.consumerfinance.gov/rules-policy/final-rules/ [verify exact link to the final rule].
+- **CFPB larger-participant rule for general-use digital consumer payment applications** — finalised November 21, 2024; nullified by Public Law 119-11 (Congressional Review Act resolution of disapproval) effective May 9, 2025. Not in force. The CRA disapproval also bars the CFPB from issuing a substantially similar rule absent further authorising legislation. Direct CFPB supervision of payment-app firms therefore does not flow from this rule; consumer-protection reach to designated firms now runs through the CFPB's general supervisory authority over service providers and through enforcement, not through the LPR. The artifact's status note records the rule as "nullified".
 
 - **CFPB Circular series** [verify section and which circulars in the 2024-26 series directly address §1033 implementation, data-recipient duties, or screen-scraping migration on the analysis date]. https://www.consumerfinance.gov/compliance/circulars/ .
 

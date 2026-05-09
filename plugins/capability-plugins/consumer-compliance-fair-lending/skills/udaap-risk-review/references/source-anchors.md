@@ -4,6 +4,16 @@ Cited regulatory sources this skill anchors to. Every primary anchor names the s
 
 The skill cites these by file path. SKILL.md does not restate excerpts.
 
+## CFPB current-status posture (as of memo date)
+
+On May 12, 2025 the CFPB withdrew a substantial portion of its prior advisory guidance — circulars, advisory opinions, and policy statements — including several anchors below. The statutory framework (Dodd-Frank §§1031 and 1036, FTC Act §5) and the Reg B / Reg E / Reg Z / Reg V regulatory text remain in force. The withdrawn items are preserved here because:
+
+- Pre-2025 fact patterns and engagement records reference them.
+- Withdrawal is not a substantive disagreement with the underlying legal theory; it is a rescission of the bureau's interpretive posture.
+- Other regulators and state AGs continue to pursue analogous theories under their own authority.
+
+For any UDAAP review, anchor primarily to the statute and regulation, treat the withdrawn CFPB items as historical interpretive context rather than current bureau posture, and verify the most recent CFPB enforcement and supervisory posture at memo date — the bureau's enforcement priorities have shifted since 2025 and the Supervisory Highlights schedule has slowed materially. Pin the operative posture rather than relying on pre-2025 framing.
+
 ## Primary anchors
 
 ### 1. Dodd-Frank §1031 — Prohibition on unfair, deceptive, or abusive acts or practices
@@ -27,12 +37,12 @@ The skill cites these by file path. SKILL.md does not restate excerpts.
 - Link: https://www.consumerfinance.gov/compliance/supervision-examinations/ — Supervision and Examination Manual, UDAAP module section [verify section]
 - Notes: The module is the operational anchor for the element tests. Where the manual edition has rotated, cite the operative edition at memo date.
 
-### 4. CFPB Policy Statement on Abusive Acts or Practices (April 2023)
+### 4. CFPB Policy Statement on Abusive Acts or Practices (April 2023) — withdrawn May 12, 2025
 
-- Citation: Consumer Financial Protection Bureau, "Policy Statement on Abusive Acts or Practices", 88 Fed. Reg. 21883 (April 12, 2023; issued April 3, 2023).
-- Excerpt-paraphrase: The policy statement consolidates the bureau's analytical framework for the abusiveness prong, including the analytical posture for material-interference (whether the act or practice obscures, withholds, or otherwise interferes with the ability of consumers to understand) and the unreasonable-advantage analysis (the three statutory bases of unreasonable advantage and how the bureau evaluates each). The statement is non-binding interpretive guidance; it sets out how the bureau will analyse abusiveness in supervision and enforcement.
+- Citation: Consumer Financial Protection Bureau, "Policy Statement on Abusive Acts or Practices", 88 Fed. Reg. 21883 (April 12, 2023; issued April 3, 2023). **Withdrawn by the CFPB on May 12, 2025**.
+- Excerpt-paraphrase: The policy statement consolidated the bureau's analytical framework for the abusiveness prong, including the analytical posture for material-interference and the unreasonable-advantage analysis (the three statutory bases of unreasonable advantage). It was non-binding interpretive guidance.
 - Link: https://www.consumerfinance.gov/about-us/newsroom/cfpb-issues-policy-statement-to-help-enforcers-identify-abusive-conduct-in-consumer-financial-markets/ — Policy Statement, sections "Materially Interferes" and "Takes Unreasonable Advantage"
-- Notes: Replaces the prior 2020 policy statement on abusiveness (which the bureau rescinded). Use the April 2023 statement as the operative analytical guide for the abusiveness block.
+- Notes: Withdrawn. The §1031(d) statutory standard remains in force (anchor #1) and is the operative basis for any abusiveness analysis. The April 2023 framework remains useful as analytical scaffolding (the three statutory bases are still the right way to read 1031(d)), but the memo cites the statute, not the withdrawn policy statement. State AGs and private plaintiffs may still rely on the analytical framework; the bureau's posture is the variable.
 
 ### 5. FTC Act §5 — Unfair or deceptive acts or practices
 
@@ -48,19 +58,19 @@ The skill cites these by file path. SKILL.md does not restate excerpts.
 - Link: https://www.ftc.gov/legal-library/browse/ftc-policy-statement-deception — Policy Statement, sections "Likely to Mislead", "Reasonable Consumer", and "Materiality"
 - Notes: Adopted by the CFPB as the deception standard for UDAAP. The three-element framework (likely to mislead; reasonable consumer; material) is the structural anchor for the deception block in the memo.
 
-### 7. CFPB Circular 2022-06 — Unanticipated overdraft fee assessment practices
+### 7. CFPB Circular 2022-06 — Unanticipated overdraft fee assessment practices (withdrawn May 12, 2025)
 
-- Citation: CFPB Circular 2022-06 (October 26, 2022), "Unanticipated Overdraft Fee Assessment Practices".
-- Excerpt-paraphrase: The circular addresses overdraft fees assessed in circumstances where the consumer could not reasonably anticipate the fee. The circular calls out the authorize-positive-settle-negative (APSN) pattern: a transaction is authorised when the account has a sufficient available balance, but is later assessed an overdraft fee at settlement because intervening transactions have reduced the available balance. The bureau's position is that APSN fees can violate the unfairness prong of CFPA §1031 when the consumer could not reasonably anticipate the fee.
+- Citation: CFPB Circular 2022-06 (October 26, 2022), "Unanticipated Overdraft Fee Assessment Practices". **Withdrawn by the CFPB on May 12, 2025**.
+- Excerpt-paraphrase: The circular addressed the authorize-positive-settle-negative (APSN) pattern: a transaction is authorised when the account has a sufficient available balance, but is later assessed an overdraft fee at settlement because intervening transactions have reduced the available balance. The bureau's pre-withdrawal position was that APSN fees can violate §1031 unfairness when the consumer could not reasonably anticipate the fee.
 - Link: https://www.consumerfinance.gov/compliance/circulars/circular-2022-06-unanticipated-overdraft-fee-assessment-practices/ — Circular sections "Question Presented" and "Response"
-- Notes: The APSN-overdraft pattern is the anchor example for unfairness in the deposit-account fee context. The banking sector overlay carries the operational detail.
+- Notes: Withdrawn. The §1031 unfairness standard is unchanged; APSN fact patterns remain analyzable under the statute. State AGs (notably NY DFS, MA AG, CA DFPI) continue to pursue analogous theories. The banking sector overlay carries the operational detail; cite the statute rather than the withdrawn circular.
 
-### 8. CFPB Circular 2022-04 — Insufficient funds fees on representment
+### 8. CFPB Circular 2022-04 — Insufficient funds fees on representment (withdrawn May 12, 2025)
 
-- Citation: CFPB Circular 2022-04 (October 26, 2022), "Insufficient funds fees charged on transactions that the consumer's bank has previously declined".
-- Excerpt-paraphrase: The circular addresses surprise representment fees: when a merchant resubmits a previously-declined transaction and the consumer's bank assesses an additional NSF fee on the resubmission, the consumer often has no notice and cannot reasonably anticipate the second fee. The bureau's position is that representment NSF fees in this pattern can violate the unfairness prong.
+- Citation: CFPB Circular 2022-04 (October 26, 2022), "Insufficient funds fees charged on transactions that the consumer's bank has previously declined". **Withdrawn by the CFPB on May 12, 2025**.
+- Excerpt-paraphrase: The circular addressed surprise representment fees on previously-declined transactions resubmitted by the merchant. The bureau's pre-withdrawal position was that representment NSF fees can violate the unfairness prong.
 - Link: https://www.consumerfinance.gov/compliance/circulars/circular-2022-04-insufficient-funds-fees-charged-on-transactions-that-the-consumers-bank-has-previously-declined-on-presentment/ — Circular sections "Question Presented" and "Response"
-- Notes: Companion to Circular 2022-06; both circulars anchor the unfairness analysis on deposit-account fee mechanics.
+- Notes: Withdrawn. Same posture as 2022-06: the statutory unfairness standard is unchanged and state-AG / class-action exposure persists. Multiple banks have already paid restitution under interagency consent orders that pre-date the withdrawal; those orders' remediation obligations remain in force.
 
 ### 9. CFPB Advisory Opinion on pay-to-pay (convenience) fees
 
@@ -69,26 +79,26 @@ The skill cites these by file path. SKILL.md does not restate excerpts.
 - Link: https://www.consumerfinance.gov/compliance/supervisory-guidance/advisory-opinion-debt-collection-practices-regulation-f-pay-by-phone-fees/ — Advisory Opinion sections "Background" and "Analysis"
 - Notes: Junk-fee theme anchor. Pay-to-pay fees recur across servicing, collections, and payment-processing flows; UDAAP analysis tracks the consumer-journey design and the materiality of the fee disclosure.
 
-### 10. CFPB Circular 2023-02 — Reopening deposit accounts that consumers had previously closed
+### 10. CFPB Circular 2023-02 — Reopening deposit accounts that consumers had previously closed (withdrawn May 12, 2025)
 
-- Citation: CFPB Circular 2023-02 (May 10, 2023), "Reopening deposit accounts that consumers had previously closed".
-- Excerpt-paraphrase: The circular addresses the practice of unilaterally reopening deposit accounts that consumers had closed (typically to process a posthumous deposit, a third-party deposit, or a settlement disbursement) and then assessing fees against the reopened account. The bureau's position is that the practice can violate the unfairness prong because the consumer cannot reasonably avoid the resulting fees and the injury (account fees on an account the consumer believed closed) is substantial.
+- Citation: CFPB Circular 2023-02 (May 10, 2023), "Reopening deposit accounts that consumers had previously closed". **Withdrawn by the CFPB on May 12, 2025**.
+- Excerpt-paraphrase: The circular addressed unilateral reopening of closed deposit accounts to process posthumous deposits, third-party deposits, or settlement disbursements, with fees assessed against the reopened account. The bureau's pre-withdrawal position was that the practice can violate the unfairness prong.
 - Link: https://www.consumerfinance.gov/compliance/circulars/circular-2023-02-reopening-deposit-accounts-that-consumers-had-previously-closed/ — Circular sections "Question Presented" and "Response"
-- Notes: Account-closure-mechanic anchor. Useful as a worked example of the unfairness prong applied to a deposit-account flow that consumers do not perceive as ongoing.
+- Notes: Withdrawn. The statutory unfairness standard remains the operative anchor; the fact pattern (account fees on accounts the consumer believed closed) still passes the §1031(c) elements on its own.
 
-### 11. CFPB Circular 2022-03 — Adverse action notification with complex algorithms
+### 11. CFPB Circular 2022-03 — Adverse action notification with complex algorithms (withdrawn May 12, 2025)
 
-- Citation: CFPB Circular 2022-03 (May 26, 2022), "Adverse action notification requirements in connection with credit decisions based on complex algorithms".
-- Excerpt-paraphrase: Creditors using complex algorithms must still provide a statement of specific reasons to applicants against whom adverse action is taken; the complexity of the model is not a defence to the specificity requirement under ECOA / Regulation B. The circular addresses a recurring industry posture that black-box models exempt the creditor from the specificity obligation; the bureau's position is that they do not. The reasoning extends to UDAAP where AAN content obscures the actual reason for the adverse action (deception prong) or where the AAN-generation process otherwise misleads.
+- Citation: CFPB Circular 2022-03 (May 26, 2022), "Adverse action notification requirements in connection with credit decisions based on complex algorithms". **Withdrawn by the CFPB on May 12, 2025**.
+- Excerpt-paraphrase: The circular took the position that creditors using complex algorithms must still provide specific reasons under ECOA / Reg B; model complexity is not a defence. The UDAAP angle is the deception prong where AAN content obscures the actual decision reason.
 - Link: https://www.consumerfinance.gov/compliance/circulars/circular-2022-03-adverse-action-notification-requirements-in-connection-with-credit-decisions-based-on-complex-algorithms/ — Circular sections "Question Presented" and "Response"
-- Notes: Cited in this skill where the in-scope flow includes algorithmic AAN generation and the UDAAP angle on the AAN content is in scope. The Reg B §1002.9 specificity obligation lives next door at `adverse-action-review`.
+- Notes: Withdrawn. The Reg B §1002.9 specificity obligation and the Official Staff Commentary remain the operative anchor for AAN content (anchors at `adverse-action-review` source-anchors). The circular's analytical framing is preserved here as historical reference, but the regulatory text and Staff Commentary are what controls.
 
-### 12. CFPB Circular 2023-03 — Adverse action notices and proper use of sample reason codes
+### 12. CFPB Circular 2023-03 — Adverse action notices and proper use of sample reason codes (withdrawn May 12, 2025)
 
-- Citation: CFPB Circular 2023-03 (September 19, 2023), "Adverse action notification requirements and the proper use of the CFPB's sample forms provided in Regulation B".
-- Excerpt-paraphrase: Creditors cannot rely on illegitimate reasons in adverse action notices, including reasons not actually relied upon in the adverse decision. Reasons given must be the actual principal reasons for the adverse action, even when sample reason codes are used. The circular reinforces and extends the 2022-03 position for AI / ML and complex models. The UDAAP angle is the deception prong: an AAN that lists pretextual reasons misleads the consumer about the actual decision logic.
+- Citation: CFPB Circular 2023-03 (September 19, 2023), "Adverse action notification requirements and the proper use of the CFPB's sample forms provided in Regulation B". **Withdrawn by the CFPB on May 12, 2025**.
+- Excerpt-paraphrase: The circular took the position that creditors cannot select the closest sample-form reason where it does not match the principal reason actually relied upon. Companion to 2022-03 for AAN in algorithmic-decisioning paths.
 - Link: https://www.consumerfinance.gov/compliance/circulars/circular-2023-03-adverse-action-notification-requirements-and-the-proper-use-of-the-cfpbs-sample-forms-provided-in-regulation-b/ — Circular section "Required Information"
-- Notes: Companion to Circular 2022-03 for AAN in algorithmic-decisioning paths.
+- Notes: Withdrawn. The Reg B §1002.9(a)(2) specific-reasons requirement and the Official Staff Commentary on specificity (Comment 9(b)(2)-3, -4, -5) remain the controlling authority. The accuracy obligation is statutory; the withdrawal does not change what the regulation requires of a creditor.
 
 ### 13. Joint Statement on Enforcement of Civil Rights, Fair Lending, Fair Housing, and Consumer Financial Protection Laws (April 2023)
 

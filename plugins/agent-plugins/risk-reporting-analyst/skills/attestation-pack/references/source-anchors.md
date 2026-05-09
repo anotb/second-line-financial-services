@@ -22,10 +22,10 @@ The skill cites these by file path. SKILL.md does not restate excerpts.
 
 ### 3. PCAOB AS 2201 — Audit of Internal Control Over Financial Reporting
 
-- Citation: Public Company Accounting Oversight Board, Auditing Standard 2201, "An Audit of Internal Control Over Financial Reporting That Is Integrated with An Audit of Financial Statements" (formerly AS 5).
-- Excerpt-paraphrase: AS 2201 sets the auditor's responsibilities for the integrated audit of ICFR and the financial statements. Sections govern management's responsibility (referenced via Item 308), control identification, evaluation of evidence, evaluation of identified deficiencies, and reporting. The attestation pack is structured to anticipate the AS 2201 evidence and deficiency lens because the external auditor's evaluation runs against the same control set the management assertion covers. [verify pin cites against current PCAOB text at pack-write time.]
-- Link: https://pcaobus.org/oversight/standards/auditing-standards/details/AS2201 — PCAOB AS 2201 [verify section pin cites]
-- Notes: PCAOB has periodically amended AS 2201 since adoption; pin cites verified at pack-write time. The standard governs the auditor; management's assertion is structured to align with the evidence the auditor will test.
+- Citation: Public Company Accounting Oversight Board, Auditing Standard 2201, "An Audit of Internal Control Over Financial Reporting That Is Integrated with An Audit of Financial Statements" (formerly AS 5). PCAOB has periodically amended AS 2201; verify the operative text and any future-effective amendments at pack-write time, including the 2024 amendments to AS 1000 / general responsibilities and the AS 2201 follow-on amendments under PCAOB rulemaking [verify exact release numbers and effective dates against the operative PCAOB inspection-cycle calendar].
+- Excerpt-paraphrase: AS 2201 sets the auditor's responsibilities for the integrated audit of ICFR and the financial statements. Sections govern management's responsibility (referenced via Item 308 of Reg S-K), control identification, evaluation of evidence, evaluation of identified deficiencies, and reporting. The attestation pack is structured to anticipate the AS 2201 evidence and deficiency lens because the external auditor's evaluation runs against the same control set the management assertion covers.
+- Link: https://pcaobus.org/oversight/standards/auditing-standards/details/AS2201 — PCAOB AS 2201
+- Notes: PCAOB amendments are released under release numbers (e.g., 2024-005 for AS 1000 / general responsibilities; subsequent releases for AS 2201 follow-on amendments). Verify which amendments are operative for the audit-period under review and which are future-effective. The standard governs the auditor; management's assertion is structured to align with the evidence the auditor will test.
 
 ### 4. AICPA SSAE 18 — SOC 1 (AT-C 320) and SOC 2 (AT-C 105 / 205)
 
@@ -71,19 +71,19 @@ The skill cites these by file path. SKILL.md does not restate excerpts.
 - Link: https://www.ecfr.gov/current/title-17/chapter-II/part-240/subject-group-ECFR1c0e3a3a4eb2e1c/section-240.17a-5 — 17 CFR §240.17a-5 [verify subsection]
 - Notes: PCAOB AS 3105 (audit of broker-dealer financial reports) governs the auditor work; this skill produces management's attestation, not the auditor's.
 
-### 10. NYDFS 23 NYCRR Part 500 §500.17(b) — annual CISO certification
+### 10. NYDFS 23 NYCRR Part 500 §500.17(b) — annual notice of compliance (Form B)
 
-- Citation: New York Department of Financial Services, 23 NYCRR Part 500 §500.17(b) (Annual notice of compliance) [verify section labels post-Second-Amendment, effective November 1, 2023].
-- Excerpt-paraphrase: §500.17(b) (post-Second-Amendment) requires covered entities to submit an annual written notice of compliance signed by the CISO and the highest-ranking executive (Form B), or a written acknowledgement that they were not in compliance with one or more requirements. The cyber-annual attestation use case anchors to this section. Cyber overlay loads this anchor.
-- Link: https://www.dfs.ny.gov/industry-guidance/cybersecurity — 23 NYCRR Part 500 §500.17(b) [verify section labels]
-- Notes: Second Amendment effective November 1, 2023, with phased compliance. Verify current Form B requirements at pack-write time.
+- Citation: New York Department of Financial Services, 23 NYCRR Part 500 §500.17(b) "Notices to Superintendent — annual notice of compliance" (current text reflects the Second Amendment effective November 1, 2023, with phased compliance dates through November 2025) [verify section labels at pack-write time].
+- Excerpt-paraphrase: §500.17(b) requires covered entities to submit an annual written notice of compliance — Form B — signed by the highest-ranking executive and the CISO, certifying that the covered entity materially complied with the requirements of Part 500 for the prior calendar year, or a written acknowledgement (also signed by both) identifying the section(s) of Part 500 with which the covered entity has not complied, the nature and extent of non-compliance, and the remediation areas, timeline, and confirmation that the issue is or will be remediated. The cyber-annual attestation use case anchors here.
+- Link: https://www.dfs.ny.gov/industry-guidance/cybersecurity — 23 NYCRR Part 500 §500.17(b)
+- Notes: Form B is the named form. The signing-officer pair is the CISO plus the highest-ranking executive; the certification language and the acknowledgement-of-non-compliance template are NYDFS-prescribed. Verify the current Form B template at pack-write time.
 
-### 11. GLBA Safeguards Rule §314.4(g) — annual report to board
+### 11. GLBA Safeguards Rule §314.4(i) — annual report to board; §314.4(j) breach-notification trigger
 
-- Citation: Federal Trade Commission, Standards for Safeguarding Customer Information, 16 CFR §314.4(g) (Annual report to board) [verify section labels post-2021/2023 amendments].
-- Excerpt-paraphrase: §314.4(g) requires the qualified individual (CISO-equivalent) to report at least annually in writing to the board or governing body on the firm's information-security program, including overall program status, risk assessment, service-provider arrangements, testing results, security events, and recommendations. The privacy-annual attestation use case anchors to this section. Privacy overlay loads this anchor for nonbank financial institutions in scope of the Safeguards Rule.
-- Link: https://www.ecfr.gov/current/title-16/chapter-I/subchapter-C/part-314 — 16 CFR §314.4(g) [verify section labels]
-- Notes: 2021 amendments effective in stages through 2023; 2023 amendment added the breach-notification requirement at §314.4(j). Verify current text at pack-write time.
+- Citation: Federal Trade Commission, Standards for Safeguarding Customer Information, 16 CFR Part 314 (current text reflects December 2021 final rule with phased compliance through 2023, plus the November 13, 2023 amendment adding the notification trigger). §314.4(i) (annual written report to the board or governing body); §314.4(j) (notice to FTC of any unauthorised acquisition of unencrypted customer information of 500 or more consumers, no later than 30 days after discovery) [verify section labels — the December 2021 final rule reorganised §314.4 and earlier paraphrases that placed the annual-board-report at §314.4(g) reflect the pre-amendment numbering].
+- Excerpt-paraphrase: §314.4(i) requires the qualified individual to report at least annually in writing to the board or equivalent governing body (or, where there is none, to a senior officer) on the firm's information-security program, covering overall program status, risk assessment, service-provider arrangements, testing results, security events, and recommendations. §314.4(j) (added November 2023) requires non-bank financial institutions in FTC scope to notify the FTC of breaches affecting 500 or more consumers within 30 days of discovery. Privacy overlay loads these anchors for nonbank financial institutions in scope of the Safeguards Rule.
+- Link: https://www.ecfr.gov/current/title-16/chapter-I/subchapter-C/part-314 — 16 CFR Part 314 §§314.4(i), 314.4(j)
+- Notes: The December 2021 amendments restructured §314.4 (the older §314.4(g) annual-report cite is from the pre-amendment text). The November 2023 §314.4(j) breach-notification amendment is a separate trigger from the GLBA-bank parallel under the Interagency Guidance on Response Programs. Verify section labels at pack-write time.
 
 ## Cross-cutting overlays cited
 

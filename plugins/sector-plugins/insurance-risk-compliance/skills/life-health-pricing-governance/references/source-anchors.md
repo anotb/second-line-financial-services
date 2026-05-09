@@ -18,9 +18,9 @@ NAIC Model Laws and Regulations are model text; what binds the carrier is the st
 
 ## State DOI bulletins on AI in insurance
 
-- **Colorado SB 21-169** (2021) and the **Colorado Division of Insurance regulation 10-1-1** (or successor — verify current regulation number) implementing regulation on governance and risk management of external consumer data and information sources (ECDIS) and predictive models in life-insurance underwriting. The Colorado posture is the most prescriptive in the United States on ECDIS provenance, governance, monitoring, and consumer-recourse for life-insurance underwriting; verify whether the regulation has been extended beyond life-insurance underwriting on the analysis date. https://leg.colorado.gov/bills/sb21-169 ; https://doi.colorado.gov/ — verify exact regulation number, effective date, and current scope.
+- **Colorado SB 21-169** (2021) and the **Colorado Division of Insurance Regulation 10-1-1** implementing the Act. Regulation 10-1-1 covers governance and risk management of external consumer data and information sources (ECDIS) and predictive models in life-insurance underwriting; the regulation was amended October 15, 2025 [verify the current scope and any expansion to product lines beyond life-insurance underwriting on the analysis date]. The Colorado posture is the most prescriptive in the United States on ECDIS provenance, governance, monitoring, and consumer-recourse. https://leg.colorado.gov/bills/sb21-169 ; https://doi.colorado.gov/ — verify exact effective date of the October 15, 2025 amendment and the current scope.
 
-- **NY DFS Insurance Circular Letter on the Use of AI and External Consumer Data and Information Sources (ECDIS) in Life Insurance Underwriting and Pricing** (January 2024 — verify exact issuance date and circular letter number). Sets disclosure, fairness, governance, and consumer-recourse expectations for AI and ECDIS in life-insurance underwriting in New York. https://www.dfs.ny.gov/industry_guidance/circular_letters/ — verify URL.
+- **NY DFS Insurance Circular Letter No. 7 (2024)** on the use of artificial intelligence systems and external consumer data and information sources (ECDIS) in insurance underwriting and pricing [verify final issuance date and any amendment — Circular Letter No. 7 issued in 2024 superseded the earlier proposal; the operative scope covers life-insurance underwriting and pricing and may extend further per subsequent NY DFS guidance]. Sets disclosure, fairness, governance, and consumer-recourse expectations. https://www.dfs.ny.gov/industry_guidance/circular_letters/ — verify URL.
 
 - **California Department of Insurance bulletin on the use of artificial intelligence in insurance** (verify exact bulletin number and issuance date). Broader scope than the CO regulation and the NY DFS Circular Letter; covers multiple lines of business. https://www.insurance.ca.gov/ — verify URL.
 
@@ -46,7 +46,7 @@ NAIC Model Laws and Regulations are model text; what binds the carrier is the st
 
 - **HIPAA Security Rule, 45 CFR Part 164 Subpart C**. Applies where PHI is in electronic form (most pricing-governance contexts). https://www.ecfr.gov/current/title-45/subtitle-A/subchapter-C/part-164/subpart-C .
 
-- **HHS OCR guidance on HIPAA and underwriting**. Verify current state.
+- **HHS OCR guidance on HIPAA and underwriting**. HIPAA reach: applies wherever the carrier or its underwriting model is a covered entity (a health plan or a healthcare provider transmitting health information electronically) or where the carrier acts as a business associate of a covered entity. For pure life-insurance underwriting where the carrier is not a HIPAA-covered entity, HIPAA may not directly apply but the same PHI may be in scope of the GLBA Privacy Rule, state insurance information-and-privacy frameworks, and any vendor-supplied data subject to HIPAA at the source. Verify current state of any HHS OCR guidance and the carrier's coverage analysis on the analysis date.
 
 ## ORSA and prudential frame
 

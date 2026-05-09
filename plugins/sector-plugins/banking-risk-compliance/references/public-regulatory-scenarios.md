@@ -4,8 +4,8 @@ These scenarios are not tied to named institutions. They are testable examples b
 
 | Scenario | Primary sources | Included example |
 |---|---|---|
-| AI creditworthiness triage | EU AI Act, NIST AI RMF, ISO/IEC 42001, OCC 2026 MRM guidance | `examples/public-regulatory/ai-governance/eu-ai-act-creditworthiness-triage.md` |
-| Agentic AI control design | NIST AI RMF, ISO/IEC 42001, OCC 2026 MRM guidance | `examples/public-regulatory/ai-governance/agentic-ai-controls-review.md` |
+| AI creditworthiness triage | EU AI Act, NIST AI RMF, NIST AI 600-1 (GenAI Profile), ISO/IEC 42001 | `examples/public-regulatory/ai-governance/eu-ai-act-creditworthiness-triage.md` |
+| Agentic AI control design | NIST AI RMF, NIST AI 600-1 (GenAI Profile), OWASP LLM Top 10, MITRE ATLAS, ISO/IEC 42001 | `examples/public-regulatory/ai-governance/agentic-ai-controls-review.md` |
 | ICT third-party register | DORA register of information materials, EBA DORA oversight materials | `examples/public-regulatory/third-party-operational-resilience/dora-ict-register-entry.yaml` |
 | Third-party lifecycle review | U.S. interagency third-party risk management guidance | `examples/public-regulatory/third-party-operational-resilience/interagency-tprm-contract-gap.md` |
 | BCBS 239 reporting gap | BCBS 239 | `examples/public-regulatory/risk-reporting/bcbs239-risk-report-gap.md` |

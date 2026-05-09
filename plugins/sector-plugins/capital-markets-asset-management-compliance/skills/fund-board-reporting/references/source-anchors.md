@@ -78,7 +78,7 @@ The skill cites these by file path. SKILL.md does not restate excerpts.
 
 ### 11. Rule 35d-1 — Names Rule
 
-- Citation: 17 CFR §270.35d-1 (Investment Company Act Rule 35d-1). Original rule adopted 2001 (Release No. IC-24828, January 17, 2001); 2023 amendments adopted in SEC Release No. IC-35000 (September 20, 2023). Compliance dates phased: 24 months for fund groups with $1 billion or more in net assets, 30 months for smaller fund groups. [verify current compliance dates against any extension or stay]
+- Citation: 17 CFR §270.35d-1 (Investment Company Act Rule 35d-1). Original rule adopted 2001 (Release No. IC-24828, January 17, 2001); 2023 amendments adopted in SEC Release No. IC-35000 (September 20, 2023). Compliance dates as extended: large fund groups (≥$1 billion AUM) December 11, 2025; smaller fund groups June 11, 2026 [verify the current compliance dates against any further SEC extension or staff guidance].
 - Excerpt-paraphrase: Rule 35d-1 governs the use of fund names that suggest a particular type of investment, industry, geographic focus, or tax status, and requires a fund with such a name to adopt a policy to invest at least 80% of its assets in the type of investment, industry, geographic area, or tax-related investment its name suggests. The 2023 amendments expanded the rule's reach to fund names suggesting that the fund focuses on investments that have, or whose issuers have, particular characteristics (including names that incorporate ESG, sustainable, growth, value, and other thematic terminology). The amendments also include compliance-policy and recordkeeping requirements.
 - Link: https://www.ecfr.gov/current/title-17/chapter-II/part-270/section-270.35d-1 — 17 CFR §270.35d-1; https://www.sec.gov/rules/2023/09/investment-company-names — SEC Release No. IC-35000 (September 20, 2023)
 - Notes: ESG-labeled fund disclosures, greenwashing risk in shareholder reports, and ESG fund-name compliance feed the climate cross-cutting overlay (when loaded) and the issues-and-management-actions section of the board pack.
@@ -92,8 +92,8 @@ The skill cites these by file path. SKILL.md does not restate excerpts.
 
 ### 13. Reg S-P — Privacy of consumer financial information; safeguarding
 
-- Citation: 17 CFR Part 248 (Regulation S-P). May 2024 amendments adopted in SEC Release Nos. 34-100155, IA-6604, IC-35193 (May 16, 2024). Compliance dates: 18 months from publication for large entities; 24 months for smaller entities. [verify current compliance dates and entity-size definitions]
-- Excerpt-paraphrase: Reg S-P, as amended in May 2024, requires SEC-registered broker-dealers, investment advisers, registered investment companies, and transfer agents to develop, implement, and maintain written policies and procedures for incident-response programs reasonably designed to detect, respond to, and recover from unauthorized access to or use of customer information. Covered entities must provide notice to affected individuals as soon as practicable, but no later than 30 days after becoming aware that unauthorized access to or use of customer information has occurred or is reasonably likely to have occurred. The amendments also expanded the safeguards rule, the disposal rule, and the recordkeeping requirements. Fund-board reporting carries the cyber overlay's enterprise-rollup of Reg S-P incident-response posture and any breach-notice events affecting fund shareholders.
+- Citation: 17 CFR Part 248 (Regulation S-P). May 2024 amendments adopted in SEC Release Nos. 34-100155, IA-6604, IC-35193 (May 16, 2024). Compliance dates: larger entities December 3, 2025; smaller entities June 3, 2026 [verify the larger / smaller-entity scope cut against the operative final-rule definitions].
+- Excerpt-paraphrase: Reg S-P, as amended in May 2024, requires SEC-registered broker-dealers, investment advisers, registered investment companies, and transfer agents to maintain written incident-response programs reasonably designed to detect, respond to, and recover from unauthorised access to or use of customer information. Covered entities provide notice to affected individuals as soon as practicable, but no later than 30 days after becoming aware that unauthorised access to or use has occurred or is reasonably likely to have occurred. The amendments also expanded the safeguards rule, the disposal rule, and the recordkeeping requirements. Fund-board reporting carries the cyber overlay's enterprise-rollup of Reg S-P incident-response posture and any breach-notice events affecting fund shareholders.
 - Link: https://www.sec.gov/files/rules/final/2024/34-100155.pdf — SEC Release Nos. 34-100155, IA-6604, IC-35193 (May 16, 2024)
 - Notes: The customer-notice provision covers natural-person customers including fund shareholders. Service-provider breach notification flows up through the adviser to the fund board through the §38a-1 service-provider compliance program oversight loop.
 
@@ -127,11 +127,11 @@ The skill cites these by file path. SKILL.md does not restate excerpts.
 Items carrying `[verify current state]`, `[verify section]`, or `[verify compliance dates]` flags must be confirmed at pack-write time:
 
 - Rule 22e-4 amendments and the 2022 swing-pricing proposal (Release No. IC-34746) — current state of the rulemaking.
-- Reg S-P May 2024 amendments — exact compliance dates by entity type and size.
-- Rule 35d-1 (Names Rule) — current compliance dates given any post-rulemaking extensions.
+- Reg S-P May 2024 amendments — compliance dates: larger entities December 3, 2025; smaller entities June 3, 2026; verify entity-tier scope.
+- Rule 35d-1 (Names Rule) — extended compliance dates: large fund groups December 11, 2025; smaller groups June 11, 2026; verify against the most recent SEC extension order.
 - Form N-CEN and Form N-CSR — current form-version date.
 - SEC Division of Examinations Annual Examination Priorities — current published year and registered-fund focus.
-- SEC Cybersecurity Risk Management Rule for Advisers and Funds (proposed February 9, 2022) — current state (re-proposed, withdrawn, or pending).
+- SEC Cybersecurity Risk Management Rule for Advisers and Funds (proposed February 9, 2022) — withdrawn from the SEC's regulatory agenda June 12, 2025; not in force, not pending. Reg S-P is the operative customer-information safeguarding rule.
 - SEC Tailored Shareholder Report rules — implementation experience and any subsequent guidance.
 
 Where verification is incomplete, the pack carries the flag forward; do not invent.

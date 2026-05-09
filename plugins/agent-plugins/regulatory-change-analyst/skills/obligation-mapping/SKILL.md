@@ -47,7 +47,7 @@ Rows are obligation-anchored. Each row carries the named columns:
 - **Obligation ID.** Stable identifier scoped to the register. The control-matrix and policy-gap-review skills key off it.
 - **Source citation.** Regulator or issuer, document, edition or date, section reference (CFR subsection, SR letter section, manual chapter, SLA clause, policy section), URL or document identifier. The section reference is mandatory; a bare URL is not a citation. Where the section is genuinely unknown, the row carries `[verify section]` rather than fabricated detail.
 - **Requirement summary.** One sentence stating what specifically must be done and on whom. "Firm must do CDD" is not a requirement summary; "the bank must obtain and verify the identity of each beneficial owner of a legal-entity customer at account opening" is. Paraphrase preserves the operative verb and the operative object. If the source uses "shall," the summary uses must; if the source uses "should," the summary says should.
-- **Applicability.** Institution type, product, activity, geography, threshold. The threshold matters: a 1071 obligation that triggers at 100 covered originations per year is a different obligation for a 50-origination firm than for a 500-origination firm. Where the source does not name a threshold, applicability says so. "All operations" is not applicability.
+- **Applicability.** Institution type, product, activity, geography, threshold. The threshold matters: a 1071 obligation now triggers at 1,000 covered transactions per year under the May 1, 2026 final rule (effective June 30, 2026; first compliance date January 1, 2028); the obligation reads differently for a 600-transaction firm than for a 5,000-transaction firm. Where the source does not name a threshold, applicability says so. "All operations" is not applicability.
 - **Effective date.** With phase-in stages where the source specifies them. Tier-by-tier compliance dates (1071, DORA implementation), deferred-effective-date provisions, sunset clauses, transition periods. Where the effective date is contingent (rule subject to litigation, guidance subject to revision, sunset awaiting reauthorisation), the row says so.
 - **Impacted process or function.** Named: account opening, vendor onboarding, model deployment, transaction monitoring, marketing review, complaint handling, board reporting. The named process is what control-matrix will scope a row against.
 - **Control objective.** One sentence on the condition that must be true for the obligation to be satisfied. "Beneficial owners of legal-entity customers are identified and verified at account opening, and the verification record is retained per the rule's retention period." Distinct from the requirement summary; the summary states what the rule says, the objective states what the firm has to make true.
@@ -63,21 +63,19 @@ The tail of the register surfaces what the body cannot. The open-question summar
 
 The same row spine carries different source labels and different rigor expectations across sectors and across cross-cutting topics. Load only the overlays the engagement scope flags. The overlays do not change the row structure; they change which sources the register is permitted to cite and which obligation patterns the practitioner expects to find.
 
-- `references/sector-overlays/banking.md` carries Reg O insider lending, Reg W affiliate transactions, OCC heightened standards (12 CFR Part 30 Appendix D), FRB SR letters as obligation sources, and BSA/AML manual structure when the register scopes a banking process.
-- `references/sector-overlays/insurance.md` carries state-by-state insurance code obligations (NAIC model laws as starting point), ORSA obligations, market-conduct exam manuals, and the federal-state interplay specific to insurance.
-- `references/sector-overlays/capital-markets.md` carries SEC adviser rules under the Investment Advisers Act of 1940, SEC broker-dealer rules under the 1934 Act, the FINRA rule book, SEC EXAMS priorities as scoping input, and the Investment Company Act of 1940 for fund-side work.
-- `references/sector-overlays/payments-fintech.md` carries Reg E, Reg Z, Reg DD obligations for consumer-payment products; OCC fintech bank-partnership expectations; CFPB Section 1033 (open banking) when applicable; sponsor-bank allocation patterns.
-- `references/cross-cutting/cyber.md` loads when source is cyber-anchored: NYDFS Part 500, SEC cyber rules, FFIEC IT booklet, GLBA Safeguards Rule for security-program obligations.
-- `references/cross-cutting/privacy.md` loads when source is privacy-anchored: GLBA Privacy Rule, state privacy laws, Reg P for consumer financial information.
-- `references/cross-cutting/conduct.md` loads when source is conduct-anchored: CFPB UDAAP exam manual, fair-lending rules, complaint-handling expectations.
+- `references/sector-overlays/banking.md` carries insider-lending and affiliate-transactions rules, large-bank heightened standards, FRB SR letters as obligation sources, and the BSA/AML manual structure for banking processes.
+- `references/sector-overlays/insurance.md` carries state-by-state insurance-code obligations (NAIC model laws as starting point), ORSA obligations, market-conduct exam manuals, and the federal-state interplay specific to insurance.
+- `references/sector-overlays/capital-markets.md` carries SEC adviser and broker-dealer rules, the FINRA rule book, SEC EXAMS priorities as scoping input, and the registered-fund rule set for fund-side work.
+- `references/sector-overlays/payments-fintech.md` carries Reg E / Reg Z / Reg DD obligations for consumer-payment products, OCC bank-fintech partnership expectations, CFPB open-banking obligations when applicable, and sponsor-bank allocation patterns.
+- `references/cross-cutting/cyber.md` loads when source is cyber-anchored (state cyber rules, SEC cyber rules, FFIEC IT, GLBA Safeguards security-program obligations).
+- `references/cross-cutting/privacy.md` loads when source is privacy-anchored (GLBA Privacy, state privacy laws, Reg P).
+- `references/cross-cutting/conduct.md` loads when source is conduct-anchored (CFPB UDAAP, fair-lending rules, complaint-handling expectations).
 
-Where firm policy or taxonomy applies, it lives in `references/firm-overlay.md` (consumed when present) and never in the register directly. The register carries the obligation source from the regulator and the firm's labelling from the overlay as distinct columns.
+Granular citations (CFR sections, SR letter numbers, NAIC model numbers) live in `references/source-anchors.md` and the overlay files. Firm policy or taxonomy lives in `references/firm-overlay.md` (consumed when present) and never in the register directly. The register carries the obligation source from the regulator and the firm's labelling from the overlay as distinct columns.
 
-## What's load-bearing and what flexes
+## Quality bar
 
-A handful of things do not flex.
-
-The source citation carries both a URL and a section, paragraph, or chapter reference. A bare URL is not a citation. Where the section is genuinely unknown, the row carries `[verify section]` and the open-question summary picks it up; fabricating a section reference fails the quality bar.
+The source citation carries both a URL and a section, paragraph, or chapter reference. A bare URL is not a citation. Where the section is genuinely unknown, the row carries `[verify section]` and the open-question summary picks it up; fabricating a section reference fails the bar.
 
 The requirement summary preserves substance. Paraphrasing away the operative verb or the operative object loses the obligation. The summary is what the firm will be tested against; it has to read like the rule it came from.
 
@@ -87,11 +85,13 @@ Owner is a named role with accountability. Departments are not owners; "Complian
 
 Status starts at `draft` or `open-question`. The skill does not set rows to `approved`; only the named reviewer does, and that happens outside the skill.
 
-The register is rule-anchored. Internal policy can be a source, but a row whose only source is the firm's own policy, with no external rule, supervisory guidance, or contractual anchor underneath, belongs in `policy-gap-review`'s output, not here. The register is what the firm has to do; the policy library is what the firm says it does about it.
+The register is rule-anchored. Internal policy can be a source, but a row whose only source is the firm's own policy, with no external rule, supervisory guidance, or contractual anchor underneath, belongs in `policy-gap-review`'s output. The register is what the firm has to do; the policy library is what the firm says it does about it.
 
 Material claims cite a source from the source list. `[evidence needed]` flags items needing follow-up and routes to the open-question summary. The register is a draft until a named reviewer attests; the skill stops at draft.
 
-Everything else adapts to context. Audience drives shape: a 1.5-line refresh reads operational, a 2-line register for committee challenge clusters open questions to the front, an audit support file pulls applicability rationale forward, an examiner-readiness pack sequences rows by source. Source posture drives what the row body can carry; public-only registers stop at obligation, control objective, and evidence type, while mixed and firm-policy-overlay let named owners and named systems land. Sector and cross-cutting overlays are loaded from the engagement scope. Confidence labels track by section, not as a single overall label, because most registers have high-confidence rows and low-confidence rows side by side.
+## Adaptation
+
+Audience drives shape: a 1.5-line refresh reads operational, a 2-line register for committee challenge clusters open questions to the front, an audit support file pulls applicability rationale forward, an examiner-readiness pack sequences rows by source. Source posture drives what the row body can carry; public-only registers stop at obligation, control objective, and evidence type, while mixed and firm-policy-overlay let named owners and named systems land. Sector and cross-cutting overlays load from the engagement scope. Confidence labels track by section, not as a single overall label, because most registers have high-confidence rows and low-confidence rows side by side.
 
 ## Output
 

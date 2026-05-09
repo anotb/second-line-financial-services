@@ -4,6 +4,12 @@ Cited regulatory sources this skill anchors to. Every primary anchor names the s
 
 The skill cites these by file path. SKILL.md does not restate excerpts.
 
+## CFPB and HUD current-status posture (as of memo date)
+
+The doctrinal frame for fair-lending testing is statutory: ECOA (15 U.S.C. §1691) and the Fair Housing Act (42 U.S.C. §3601 et seq.), with Reg B (12 CFR Part 1002), HUD's discriminatory-effects framework (24 CFR §100.500), and the Interagency Fair Lending Examination Procedures as the operating framework. None of that has changed.
+
+The bureau's interpretive layer has changed. On May 12, 2025 the CFPB withdrew Circulars 2022-03 and 2023-03 (the AAN-with-complex-algorithms anchors). The April 2023 Joint Statement on Enforcement Against Discrimination and Bias in Automated Systems remains a four-agency document; the CFPB's posture on it has narrowed but the DOJ Civil Rights Division, FTC, and EEOC postures remain active. State AGs continue to pursue analogous theories. Fair-lending test programs continue to operate against the statutory and regulatory frame; the bureau's circular layer is a softer signal than it was pre-2025. Treat the LDA-search expectation as a defensible second-line discipline under disparate-impact case law and Reg B §1002.6(a) effects-test framing, not as something that depends on a CFPB circular.
+
 ## Primary anchors
 
 ### 1. Equal Credit Opportunity Act (ECOA)
@@ -55,19 +61,19 @@ The skill cites these by file path. SKILL.md does not restate excerpts.
 - Link: https://www.consumerfinance.gov/data-research/research-reports/fair-lending-reports/ — CFPB Fair Lending Reports, supervisory-priorities section [verify section]
 - Notes: The report is a supervisory-priority signal, not a rule. Test-plan scope often references the most recent report's focal items.
 
-### 8. CFPB Circular 2022-03 — Adverse action and complex algorithms
+### 8. CFPB Circular 2022-03 — Adverse action and complex algorithms (withdrawn May 12, 2025)
 
-- Citation: CFPB Circular 2022-03 (May 26, 2022), "Adverse action notification requirements in connection with credit decisions based on complex algorithms".
-- Excerpt-paraphrase: Creditors using complex algorithms must still provide a statement of specific reasons to applicants against whom adverse action is taken; the complexity of the model is not a defence to the specificity requirement under ECOA / Regulation B (15 USC §1691; 12 CFR §1002.9). The circular addresses a recurring industry posture that black-box models exempt the creditor from the specificity obligation; the bureau's position is that they do not.
+- Citation: CFPB Circular 2022-03 (May 26, 2022), "Adverse action notification requirements in connection with credit decisions based on complex algorithms". **Withdrawn by the CFPB on May 12, 2025**.
+- Excerpt-paraphrase: The circular took the position that creditors using complex algorithms must still provide specific reasons under ECOA / Reg B; model complexity is not a defence.
 - Link: https://www.consumerfinance.gov/compliance/circulars/circular-2022-03-adverse-action-notification-requirements-in-connection-with-credit-decisions-based-on-complex-algorithms/ — Circular sections "Question Presented" and "Response"
-- Notes: Test plans that include AI/ML models in the underwriting perimeter consume this circular as part of the framing for adverse-action sampling and for the model-feature-review test type.
+- Notes: Withdrawn. The substantive obligation flows from the regulation (Reg B §1002.9 and Comment 9(b)(2)-3 of the Staff Commentary); see `adverse-action-review/references/source-anchors.md` for the operative anchors. Test plans that include AI/ML models in the underwriting perimeter still test against the regulation; the LDA-search expectation as a fair-lending discipline runs separately on its own footing under disparate-impact case law.
 
-### 9. CFPB Circular 2023-03 — Adverse action notices and sample reason codes
+### 9. CFPB Circular 2023-03 — Adverse action notices and sample reason codes (withdrawn May 12, 2025)
 
-- Citation: CFPB Circular 2023-03 (September 19, 2023), "Adverse action notification requirements and the proper use of the CFPB's sample forms provided in Regulation B".
-- Excerpt-paraphrase: Creditors cannot rely on illegitimate reasons in adverse action notices, including reasons not actually relied upon in the adverse decision. Reasons given must be the actual principal reasons for the adverse action, even when sample reason codes are used. The circular reinforces and extends the 2022-03 position for AI/ML and complex models.
+- Citation: CFPB Circular 2023-03 (September 19, 2023), "Adverse action notification requirements and the proper use of the CFPB's sample forms provided in Regulation B". **Withdrawn by the CFPB on May 12, 2025**.
+- Excerpt-paraphrase: The circular took the position that creditors cannot select sample-form reasons that do not match the principal reasons actually relied upon.
 - Link: https://www.consumerfinance.gov/compliance/circulars/circular-2023-03-adverse-action-notification-requirements-and-the-proper-use-of-the-cfpbs-sample-forms-provided-in-regulation-b/ — Circular section "Required Information"
-- Notes: Anchors the LDA-search expectation for any AI/ML model in scope; the bureau's framing is that creditors using complex models actively look for less-discriminatory alternatives and document the search.
+- Notes: Withdrawn. The accuracy obligation flows from §1002.9(a)(2) and the Staff Commentary; the regulation continues to require disclosure of the principal reasons actually relied on. The LDA-search discipline as a separate fair-lending control under the disparate-impact framework (24 CFR §100.500 for dwelling-secured; ECOA effects-test case law) is independent of the withdrawn circular and remains a defensible second-line expectation for AI/ML models in the credit-decisioning path.
 
 ### 10. Joint Statement on Enforcement of Civil Rights, Fair Lending, Fair Housing, and Consumer Financial Protection Laws (April 2023)
 

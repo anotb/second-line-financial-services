@@ -18,9 +18,9 @@ This template carries two artifacts: the **narrative gap memo** (rendered as a W
 
 ### 1. Executive summary
 
-Five bullets maximum. Lead with the current-state caveat on §1071 compliance dates (the dates have been moved by court order and bureau response; the date carried in this memo is sourced as of the as-of date and may move).
+Five bullets maximum. Open with the CFI determination and the January 1, 2028 compliance date under the May 2026 revised rule.
 
-- [Tier classification and currently effective compliance date, marked `[verify current effectiveness and tier dates]` and sourced]
+- [CFI / not-CFI determination against the 1,000-transaction threshold, with year T-1 and year T-2 counts; January 1, 2028 compliance date sourced from `references/source-anchors.md`]
 - [Headline readiness state across the 12 CFR 1002.107 data points: how many `ready`, how many `partial`, how many `gap`, how many `unverifiable`]
 - [The most material gap (firewall, demographic-collection mechanics, vendor LOS, FIG conformance, or other)]
 - [Open legal / interpretive question that, if it resolves the wrong way, changes the readiness state]
@@ -45,10 +45,11 @@ Five bullets maximum. Lead with the current-state caveat on §1071 compliance da
 |---|---|---|
 | Covered originations to small businesses, year T-1 | [count] | [system / report] |
 | Covered originations to small businesses, year T-2 | [count] | [system / report] |
-| 12 CFR 1002.105 threshold | [value, marked `[verify under current rule]`] | `references/source-anchors.md` |
-| CFI determination | [is-CFI | not-CFI | sensitivity-at-boundary] | |
-| Tier classification | [Tier 1 | Tier 2 | Tier 3] | |
-| Currently effective compliance date for tier | [YYYY-MM-DD] `[verify current effectiveness and tier dates]` | [CFPB compliance-resources page URL with retrieval date] |
+| 12 CFR 1002.105 threshold (revised rule) | 1,000 covered originations in each of the two preceding calendar years | `references/source-anchors.md` |
+| CFI determination | [covered-financial-institution | not-covered-financial-institution | boundary-sensitivity] | |
+| Distance from threshold | [headroom in originations, or proximity if near 1,000] | |
+| Compliance date | 2028-01-01 (single compliance date for all CFIs under the May 2026 revised rule) | `references/source-anchors.md` |
+| Effective date of revised rule | 2026-06-30 | `references/source-anchors.md` |
 | Methodology used to count covered originations | [narrative; per-product covered-transaction mapping reference] | |
 | Affiliate aggregation question | [resolved / open question for legal] | |
 
@@ -173,14 +174,14 @@ Severity definitions: `blocking` (cannot go live), `high` (must remediate before
 |---|---|---|---|---|
 | | | | | |
 
-Cite `references/source-anchors.md` for the canonical citations. Use `[verify current effectiveness and tier dates]` for compliance-date references, `[verify current edition]` for FIG and other edition-specific references, `[verify state-specific scope]` for state-privacy references, and `[verify subsection]` where the exact 1002.107 subsection label is uncertain. Do not invent.
+Cite `references/source-anchors.md` for the canonical citations. Use `[verify Federal Register citation]` for the May 2026 revised rule's exact FR page reference, `[verify current edition]` for FIG and other edition-specific references, `[verify state-specific scope]` for state-privacy references, and `[verify subsection]` where the exact 1002.107 subsection label is uncertain. Do not invent.
 
 ### 18. Decision checkpoints and sign-off ask
 
 - **Decision checkpoints this assessment must clear**: [scope | evidence | authority | impact | decision] per `references/review-gates.md`.
 - **The skill does not file**. The matrix and memo carry the readiness state; the named accountable executive signs off; the firm's regulatory-reporting pipeline files the actual submission through the CFPB-specified channel.
 - **Sign-off ask of the accountable executive**: [the specific decision the memo asks the executive to make]
-- **Next review trigger**: [next compliance milestone | scope-change trigger | tier-shift trigger | post-go-live operating-state refresh date]
+- **Next review trigger**: [next compliance milestone | scope-change trigger | threshold-crossing trigger (year-over-year origination volume crosses 1,000) | post-go-live operating-state refresh date]
 
 ---
 
@@ -203,7 +204,7 @@ The matrix workbook produced by the `xlsx` skill carries the structured per-reco
 
 ### Sheet 2 — Scope and CFI determination
 
-Mirrors §3 of the memo: covered-origination counts, threshold, CFI determination, tier classification, compliance date with sourced citation, methodology, affiliate aggregation note.
+Mirrors §3 of the memo: covered-origination counts (year T-1 and year T-2), 1,000-transaction threshold, CFI determination, distance-from-threshold, compliance date (January 1, 2028) with sourced citation, methodology, affiliate aggregation note.
 
 ### Sheet 3 — Product mapping (per 12 CFR 1002.106)
 

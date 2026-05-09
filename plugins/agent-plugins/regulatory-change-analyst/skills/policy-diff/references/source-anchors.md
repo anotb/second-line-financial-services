@@ -14,13 +14,13 @@ What this skill relies on: that large national banks operate under a written-fra
 
 - Link with section: https://www.ecfr.gov/current/title-12/chapter-I/part-30/appendix-Appendix%20D — §II framework, §V policies and procedures.
 
-### OCC Bulletin 2021-36 — Governance over Policies, Procedures, and Other Written Guidance (issued September 27, 2021)
+### Comptroller's Handbook — "Bank Supervision Process" and the Written-Framework expectation
 
-Anchor: Sections on the lifecycle expectation for written guidance — drafting, approval, communication, training, exception management, periodic review. [verify section labels against the published bulletin.]
+Anchor: The OCC Comptroller's Handbook framing on policies, procedures, and written guidance as control activities subject to the supervisory cycle. The lifecycle expectation (drafting, approval, communication, training, exception management, periodic review) lives across the Handbook booklets that examiners use to read written frameworks at OCC-supervised institutions; the discrete bulletin previously cited here as `OCC Bulletin 2021-36` is the wrong instrument (that bulletin is "Information Security: FFIEC Statement on Authentication and Access to Financial Institution Services and Systems," September 27, 2021), and the policy-governance lifecycle pattern is anchored more reliably in 12 CFR Part 30 Appendix D §V (above) plus the Comptroller's Handbook framing rather than to a single named bulletin.
 
-What this skill relies on: that the OCC views the written-guidance lifecycle as a supervisory-relevant control. The diff is a lifecycle artifact; the materiality call, the approver routing, and the training-impact field map to the bulletin's lifecycle expectations.
+What this skill relies on: that the OCC reads written-guidance lifecycle as a supervisory-relevant control under the Heightened Standards framework; that the diff is a lifecycle artifact; that the materiality call, the approver routing, and the training-impact field map to the lifecycle expectations the framework names.
 
-- Link with section: https://www.occ.gov/news-issuances/bulletins/2021/bulletin-2021-36.html — Bulletin §II, §III [verify section letters].
+- Comptroller's Handbook index: https://www.occ.gov/publications-and-resources/publications/comptrollers-handbook/index-comptrollers-handbook.html .
 
 ## Internal-control framing for policy-as-control
 
