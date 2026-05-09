@@ -28,7 +28,7 @@ Standalone agent plugins (one-shot reviewers that orchestrate related skills end
 
 | Plugin | What it covers |
 |---|---|
-| `risk-compliance-core` | Engagement scoping, obligation mapping, control matrices, evidence binders, issue write-ups, human-review gates, policy-gap reviews. |
+| `risk-compliance-core` | Scoping, obligation mapping, control matrices, evidence binders, issue write-ups, human-review gates, policy-gap reviews. |
 | `regulatory-change-management` | Regulatory impact assessment, rule-to-obligation extraction, policy diffs, implementation plans, exam briefs. |
 | `ai-governance-model-risk` | AI use-case intake, AI risk tiering, EU AI Act triage, model cards, validation plans, agentic-AI controls, board AI-risk pack, GenAI deep-dive (prompt injection, RAG eval, pre-prod review, LLM vendor evidence). |
 | `third-party-operational-resilience` | Vendor diligence, criticality, contract-gap review, exit plans, concentration, DORA register, severe-but-plausible resilience testing. |

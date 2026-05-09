@@ -4,8 +4,8 @@ What's next, in rough priority order.
 
 ## Near term
 
-1. Run `claude plugin validate` against each plugin in the target Claude Code version.
-2. Per-skill independent reviewer pass: drafting edits against the source spec for each skill.
+1. Per-skill independent reviewer pass: drafting edits against the source spec for each skill.
+2. Tighten `scripts/check-skill-content.py` Rule 3 (source-anchor depth): the rule fires per-bullet but anchors are split across `Citation:` / `Excerpt:` / `Link:` bullets, producing structural false positives. Either skip `Link:` bullets or evaluate the citation block as a unit.
 
 ## Next release
 

@@ -20,11 +20,12 @@ The resulting taxonomy is:
 
 - `plugins/capability-plugins/` for reusable second-line functions.
 - `plugins/sector-plugins/` for banking, insurance, capital markets and asset management, and payments or fintech overlays.
-- `plugins/agent-plugins/` for self-contained workflow agents.
+
+Agent plugins (planned for a later release): self-contained workflow agents that orchestrate capability and sector skills. See [ROADMAP.md](../ROADMAP.md) for the rebuild target.
 
 ## Subagent convention
 
-Each standalone agent plugin includes a primary workflow agent and focused worker subagents. This follows Claude Code's plugin agent pattern, where agents are specialized Markdown files under `agents/` with frontmatter for name, description, model, effort, max turns, and tool scoping.
+When agent plugins ship, each will include a primary workflow agent and focused worker subagents, following Claude Code's plugin agent pattern, where agents are specialized Markdown files under `agents/` with frontmatter for name, description, model, effort, max turns, and tool scoping.
 
 ## Commands convention
 
