@@ -2,6 +2,10 @@
 
 ## 0.4.0 — 2026-05-09
 
+### Manifest dependencies on risk-compliance-core
+
+All 7 downstream capability plugins and all 4 sector plugins now declare `risk-compliance-core` as a bare-name dependency in `.claude-plugin/plugin.json`. Installing any one of them auto-pulls `risk-compliance-core` (and the `scoping` primitive). Refcount-aware: `claude plugin uninstall <plugin> --prune` removes `risk-compliance-core` only when no other plugin still requires it. Verified live against Claude Code 2.1.137.
+
 ### Pre-launch agentic eval and fix bundle
 
 Eight-case validation eval (forked Opus maker subagent applies skill to a dummy brief; independent forked Opus checker reviews the output blind) covering 6 capability skills and the 2 most-used agent plugins. Findings: capability-skill layer is practitioner-grade; agent-plugin subagent layer is half-built (six-rule frontmatter stubs distinguished only by name; writer artifact shape and tool scope mismatched to program-level engagements; primaries under-prompt for engagement-level scoping moves).

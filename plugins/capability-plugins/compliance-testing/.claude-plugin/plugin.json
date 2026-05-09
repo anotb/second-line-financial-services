@@ -4,5 +4,6 @@
   "description": "Compliance and controls testing skills for test plans, sampling, evidence requests, workpapers, exception analysis, issue drafting, and QA review.",
   "author": {
     "name": "Second Line Financial Services contributors"
-  }
+  },
+  "dependencies": ["risk-compliance-core"]
 }

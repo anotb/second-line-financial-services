@@ -4,5 +4,6 @@
   "description": "Regulatory change management skills for impact assessment, obligation extraction, policy diffing, implementation planning, and exam brief preparation.",
   "author": {
     "name": "Second Line Financial Services contributors"
-  }
+  },
+  "dependencies": ["risk-compliance-core"]
 }

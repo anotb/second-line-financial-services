@@ -4,5 +4,6 @@
   "description": "Payments and fintech overlays for payments risk assessment, fintech partner controls, payment operations incidents, and open-banking data controls.",
   "author": {
     "name": "Second Line Financial Services contributors"
-  }
+  },
+  "dependencies": ["risk-compliance-core"]
 }

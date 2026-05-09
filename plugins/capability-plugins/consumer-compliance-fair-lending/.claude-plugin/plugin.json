@@ -4,5 +4,6 @@
   "description": "Consumer compliance and fair lending skills for fair-lending testing, adverse action review, UDAAP risk review, Section 1071 readiness, complaint themes, and marketing claim review.",
   "author": {
     "name": "Second Line Financial Services contributors"
-  }
+  },
+  "dependencies": ["risk-compliance-core"]
 }

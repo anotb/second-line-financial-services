@@ -34,12 +34,15 @@ When the agents land, the marketplace manifest gets the six entries back and the
 
 - `bsa-aml-ra-methodology` skill in `financial-crime-governance`. Eval surfaced the gap (FDIC RA-methodology supervisory finding had no skill anchor; makers built workstream scaffolding off FFIEC and cross-skill RA references). Ships as a standalone skill, mirrors the existing `cdd-risk-review` shape.
 
-### Modular install
+### Modular install: README persona recipes
 
-Two stages:
+The plugin manifests already declare `risk-compliance-core` as a dependency, so installing any downstream plugin auto-pulls the foundation. The remaining work is on the README install section:
 
-- **Stage 1, README install paths.** Replace the current Install section with Quick start (everything one-liner), Persona recipes (8 personas with copy-paste install blocks), and Layered install (core / capability / sector explanation). Surface the "sector overlays inside capability skills are free" point so users don't double-install. Pure docs change.
-- **Stage 2, manifest dependencies.** Add `"dependencies": ["risk-compliance-core"]` to all 8 capability and 4 sector plugin manifests. Bare-name deps pull latest from same marketplace; versioned constraints require `claude plugin tag --push` discipline if adopted. Agent-plugin dependency declarations land alongside the agent rebuild.
+- Replace the current single install block with Quick start (everything one-liner), Persona recipes (8 personas with copy-paste install blocks), and Layered install (core / capability / sector explanation).
+- Surface the "sector overlays inside capability skills are free" point so users don't double-install.
+- Pure docs change.
+
+Agent-plugin dependency declarations land alongside the agent rebuild.
 
 ### dora-register-builder full rebuild
 

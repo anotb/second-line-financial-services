@@ -4,5 +4,6 @@
   "description": "Capital markets and asset-management overlays for adviser exam readiness, marketing evidence, best-execution surveillance, and fund board reporting.",
   "author": {
     "name": "Second Line Financial Services contributors"
-  }
+  },
+  "dependencies": ["risk-compliance-core"]
 }
