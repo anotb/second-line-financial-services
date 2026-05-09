@@ -254,7 +254,7 @@
     "human_review_required": {
       "type": "boolean",
       "default": true,
-      "description": "Always true for v1. The skill stops at draft; severity assignment always carries human review."
+      "description": "Always true. The skill stops at draft; severity assignment always carries human review."
     },
     "revisions": {
       "type": "array",

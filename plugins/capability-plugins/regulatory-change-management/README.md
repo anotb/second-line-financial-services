@@ -42,7 +42,7 @@ Public anchors only. The substantive set varies by skill: the FRB / OCC / FDIC S
 
 - `skills/` — the five skills above. Each ships its own `SKILL.md`, `references/source-anchors.md`, sector overlays where applicable, `templates/default-output.md`, and (where useful) `schemas/` and `examples/`.
 - `references/` — plugin-level shared references: source map, policy and control library, public regulatory scenarios, named decision forums.
-- `schemas/` — JSON schemas (`obligation.schema.json` is the cross-skill anchor; artifact-specific schemas move to skill folders in Phase 3).
+- `schemas/` — JSON schemas. `obligation.schema.json` is the cross-skill anchor; artifact-specific schemas live with each skill under `<skill>/schemas/`. Schema dedup is tracked in [ROADMAP.md](../../../ROADMAP.md).
 - `.mcp.example.json` — illustrative MCP configuration for self-hosted reference servers.
 
 ## Operating posture

@@ -63,36 +63,6 @@
       "name": "payments-fintech-compliance",
       "source": "./plugins/sector-plugins/payments-fintech-compliance",
       "description": "Payments and fintech overlays for payments risk assessment, fintech partner controls, payment operations incidents, and open-banking data controls."
-    },
-    {
-      "name": "ai-governance-reviewer",
-      "source": "./plugins/agent-plugins/ai-governance-reviewer",
-      "description": "Runs end-to-end second-line review of AI use cases, model-risk artifacts, agentic controls, EU AI Act triage, AI vendor evidence, and AI risk committee materials."
-    },
-    {
-      "name": "regulatory-change-analyst",
-      "source": "./plugins/agent-plugins/regulatory-change-analyst",
-      "description": "Converts new public rules, guidance, supervisory expectations, and policy changes into obligation maps, impact assessments, policy diffs, controls, and implementation plans."
-    },
-    {
-      "name": "third-party-risk-reviewer",
-      "source": "./plugins/agent-plugins/third-party-risk-reviewer",
-      "description": "Reviews third-party and operational-resilience evidence, including ICT arrangements, DORA-style registers, due diligence packs, contract gaps, exit plans, and concentration risk."
-    },
-    {
-      "name": "controls-testing-analyst",
-      "source": "./plugins/agent-plugins/controls-testing-analyst",
-      "description": "Builds and QA-reviews compliance and control testing workpapers, including test plans, sampling, evidence requests, exception analysis, issue write-ups, and remediation tracking."
-    },
-    {
-      "name": "risk-reporting-analyst",
-      "source": "./plugins/agent-plugins/risk-reporting-analyst",
-      "description": "Produces risk committee, BCBS 239, KRI, cyber disclosure readiness, attestation, and management-response materials from risk metrics and evidence."
-    },
-    {
-      "name": "financial-crime-governance-reviewer",
-      "source": "./plugins/agent-plugins/financial-crime-governance-reviewer",
-      "description": "Reviews CDD, EDD, SAR decision QA, sanctions screening QA, negative-news triage, and AML monitoring governance without making final onboarding, SAR, or sanctions decisions."
     }
   ]
 }

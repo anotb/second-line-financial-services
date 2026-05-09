@@ -2,7 +2,7 @@
 
 This file holds the named, dated regulatory and professional-standard sources the human-review-gates skill anchors to. SKILL.md cites this file by path; the named anchors are not restated inline. Firm-specific anchors (named committees, GRC-platform decision-record fields, escalation ladders) belong in `references/firm-overlay.md`.
 
-`[verify section]` placeholders mark anchors where the precise section reference still needs verification against the current edition of the source. They are deliberate, not omissions. Phase 2 carries verification load; phase 3 grinds it down. Fabricating a section reference is worse than leaving the placeholder.
+`[verify section]` placeholders mark anchors where the precise section reference still needs verification against the current edition of the source. They are deliberate, not omissions. Fabricating a section reference is worse than leaving the placeholder.
 
 ## Model-risk effective challenge
 

@@ -50,7 +50,7 @@ All four sectors apply. Banking overlay carries Heightened Standards integration
 
 - `skills/` — the six skills above. Each ships its own `SKILL.md`, `references/source-anchors.md`, sector overlays, `templates/default-output.md`, and (where useful) `schemas/` and `examples/`.
 - `references/` — plugin-level shared references: source map, policy and control library, named decision forums and confidence labels.
-- `schemas/` — `risk-report.schema.json` (canonical), `bcbs239-assessment.schema.json`, `attestation-pack.schema.json`, `cyber-incident-disclosure.schema.json`, `item-106-disclosure.schema.json`, `dcp-readiness.schema.json`, `management-response.schema.json`. Schemas borrowed from other plugins move to their owning plugins in Phase 3.
+- `schemas/` — `risk-report.schema.json` (canonical), `bcbs239-assessment.schema.json`, `attestation-pack.schema.json`, `cyber-incident-disclosure.schema.json`, `item-106-disclosure.schema.json`, `dcp-readiness.schema.json`, `management-response.schema.json`. Schema dedup (drop schemas a plugin's skills don't actually use) is tracked in [ROADMAP.md](../../../ROADMAP.md).
 
 ## Install
 

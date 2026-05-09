@@ -120,4 +120,4 @@ Symptom: the skill produces a write-up with severity asserted as final, status s
 
 Why it happens: builder over-runs the human-review gate.
 
-Fix: the write-up is a draft until the named reviewer attests. The skill stops at draft and surfaces the reviewer questions; it does not assert sign-off, distribute, post to the GRC system, or move the status past under-review. The `human_review_required` field is always true for v1; severity attestation is the named gate.
+Fix: the write-up is a draft until the named reviewer attests. The skill stops at draft and surfaces the reviewer questions; it does not assert sign-off, distribute, post to the GRC system, or move the status past under-review. The `human_review_required` field is always true; severity attestation is the named gate.

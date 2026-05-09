@@ -1,6 +1,10 @@
 # Conduct cross-cutting overlay for genai-pre-prod-review
 
-When the scope record flags `conduct` for a pre-prod gate review, this overlay adds conduct-specific gate considerations: consumer-compliance co-review, fairness and harmful-content posture, complaint-readiness, and recommended-action items typical of conduct-flagged GenAI gate reviews. Loaded for any use case generating or assisting customer-facing communications, or making or supporting decisions that affect consumer outcomes.
+When the scope record flags `conduct` for a pre-prod gate review, this overlay adds conduct-specific gate considerations: consumer-compliance co-review, fairness and harmful-content posture, complaint-readiness, and recommended-action items typical of conduct-flagged GenAI gate reviews. Loaded when any of the following holds:
+
+- The use case generates or assists customer-facing communications.
+- The use case makes or supports decisions that affect consumer outcomes.
+- The tool is internal-only but operates on contract content, regulatory-correspondence content, marketing assets, complaint files, regulatory submissions, or other documents that encode customer-facing obligations. Internal-scope does not displace conduct loading where the documents the tool acts on carry obligations that flow through to customers (a contract-review tool inside legal still touches consumer-protection terms; a marketing-asset reviewer still touches advertising content the firm publishes; a regulatory-correspondence drafter still shapes positions taken with examiners on consumer matters). Load narrow-scope conduct review on these; the 1L "internal-only, no consumer-facing implications" assertion is the trap this trigger closes.
 
 Loaded by: `genai-pre-prod-review/SKILL.md` when `scope.cross_cutting_set` includes `conduct`. Cited and section-referenced anchors live in `references/source-anchors.md`.
 

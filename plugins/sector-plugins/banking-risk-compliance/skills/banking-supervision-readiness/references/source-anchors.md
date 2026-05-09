@@ -84,7 +84,7 @@ The named, dated public regulatory sources this skill anchors to for US bank sup
 
 ## Edition and verification notes
 
-The banking regulatory pipeline carries several moving pieces. Phase 2 authors confirm the following at write time before publishing the pack:
+The banking regulatory pipeline carries several moving pieces. Confirm the following at write time before publishing the pack:
 
 - CRA current operative regime — confirm whether the 2023 modernised rule is in force or whether the 2025 rescission has restored the prior framework.
 - 12 CFR Part 30 Appendix D section labels (Appendix uses lettered Roman-numeral headings without the III.B-style sub-numbering colloquially used).
@@ -95,4 +95,4 @@ The banking regulatory pipeline carries several moving pieces. Phase 2 authors c
 - FinCEN beneficial-ownership rule current state under Corporate Transparency Act litigation context (31 CFR §1010.230 bank BO rule for legal-entity customers is distinct from the FinCEN BO reporting rule under the CTA; pin the operative regime).
 - FRB tailoring-framework category and CCAR scope post-EGRRCPA for the institution at write time.
 - LCR / NSFR rule applicability and the operative part by charter (12 CFR Part 50 / Part 249 / Part 329).
-- Climate-related financial-risk supervision current state (carry as a `[verify current state]` reviewer question rather than embedding an overlay in v1).
+- Climate-related financial-risk supervision current state (carry as a `[verify current state]` reviewer question rather than embedding an overlay).

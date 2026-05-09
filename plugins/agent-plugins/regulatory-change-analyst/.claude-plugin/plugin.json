@@ -1,8 +1,0 @@
-{
-  "name": "regulatory-change-analyst",
-  "version": "0.2.0",
-  "description": "Converts new public rules, guidance, supervisory expectations, and policy changes into obligation maps, impact assessments, policy diffs, controls, and implementation plans.",
-  "author": {
-    "name": "Second Line Financial Services contributors"
-  }
-}

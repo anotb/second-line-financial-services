@@ -28,20 +28,23 @@ Status: <draft / signed-off / under-revision>
 - **Sponsor**: <accountable-executive role>
 - **Audience for the deliverable**: <roles>
 - **Timeframe**: start <YYYY-MM-DD>, target completion <YYYY-MM-DD>
-  - Milestones:
-    - <YYYY-MM-DD> — <milestone label> (<owner>)
+  - Milestones (default to two anchor dates plus one mid-engagement check; full sequencing belongs in the workplan, not the charter):
+    - <YYYY-MM-DD> — kickoff / scope sign-off
+    - <YYYY-MM-DD> — mid-engagement check (steering, partner read, or interim deliverable as applicable)
+    - <YYYY-MM-DD> — target completion / final deliverable
 - **Deliverable shape**: <memo | workpaper-set | board-pack | exam-response-file | register | model-card | charter | playbook | other>
 - **Charter or SOW reference**: <ID>
 
 ## 4. Persona profile
 
-- **Role**: <CRO | head-of-model-risk | head-of-TPRM | head-of-operational-resilience | CCO | BSA-officer | AI-governance-lead | head-of-regulatory-affairs | head-of-internal-audit | engagement-partner | engagement-lead-advisory | embedded-business-risk-officer-1.5-line | fund-board-secretary | general-counsel | other>
+- **Role (running-lead, day-to-day)**: <CRO | head-of-model-risk | head-of-TPRM | head-of-operational-resilience | CCO | compliance-risk-lead | BSA-officer | AI-governance-lead | head-of-regulatory-affairs | head-of-internal-audit | engagement-partner | engagement-lead-advisory | embedded-business-risk-officer-1.5-line | fund-board-secretary | general-counsel | other>
+- **Accountable executive (where distinct from the running-lead)**: <CRO | CCO | BSA-officer | AI-governance-lead | head-of-regulatory-affairs | other>
 - **Function**: <plain-language function the persona sits in>
-- **Decision rights**: <what this persona signs off on within this engagement>
+- **Decision rights**: <what the running-lead signs off on, what is reserved to the accountable executive>
 - **Review gates**:
   - <gate name> — <criteria> — <stop condition>
 
-> Review gates drive every downstream skill's output discipline. Be explicit. "Committee review" alone is not enough; name the committee.
+> The running-lead and the accountable executive are often different people. A Compliance Risk Lead reports to the CCO and runs the engagement; the CCO signs the charter. Capture both. Review gates drive every downstream skill's output discipline. Be explicit. "Committee review" alone is not enough; name the committee.
 
 ## 5. Source posture
 

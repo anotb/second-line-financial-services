@@ -73,7 +73,7 @@ The same gate spine carries different decision authorities, different independen
 - `references/cross-cutting/cyber.md` loads when gates cover incident-response decisions, materiality-determination for cyber events, or cyber-disclosure decisions. SEC public-company disclosure-committee posture, state cyber senior-governing-body responsibility, and FFIEC IT incident-response framing land here.
 - `references/cross-cutting/conduct.md` loads when gates cover customer-facing decisions: product approval, fee-change approval, marketing approval, restitution approval, fair-lending second-look. CFPB UDAAP and ECOA second-review conventions land here.
 
-Privacy and climate cross-cutting overlays follow the same pattern; this skill ships cyber and conduct as the v1 cross-cutting files because they are the most frequent triggers. Granular citations (specific section labels, rule numbers) live in `references/source-anchors.md` and the overlay files; the body cites by path. Where firm policy or taxonomy applies (named committees specific to the firm, GRC-platform-specific decision-record fields, internal escalation ladders), it lives in `references/firm-overlay.md` and is consumed when present.
+Privacy and climate cross-cutting overlays follow the same pattern; this skill ships cyber and conduct as the cross-cutting files because they are the most frequent triggers. Granular citations (specific section labels, rule numbers) live in `references/source-anchors.md` and the overlay files; the body cites by path. Where firm policy or taxonomy applies (named committees specific to the firm, GRC-platform-specific decision-record fields, internal escalation ladders), it lives in `references/firm-overlay.md` and is consumed when present.
 
 ## Quality bar
 

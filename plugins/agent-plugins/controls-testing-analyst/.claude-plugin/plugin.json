@@ -1,8 +1,0 @@
-{
-  "name": "controls-testing-analyst",
-  "version": "0.2.0",
-  "description": "Builds and QA-reviews compliance and control testing workpapers, including test plans, sampling, evidence requests, exception analysis, issue write-ups, and remediation tracking.",
-  "author": {
-    "name": "Second Line Financial Services contributors"
-  }
-}

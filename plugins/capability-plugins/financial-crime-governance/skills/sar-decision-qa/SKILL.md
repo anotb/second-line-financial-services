@@ -104,7 +104,8 @@ Downstream consumers: a sample-level QA roll-up reads the structured record acro
 - `references/sector-overlays/banking.md`, `payments-fintech.md`, `capital-markets.md`, `insurance.md` — sector-specific SAR rule reads loaded per scope.
 - `references/cross-cutting/cyber.md` — cyber-event SAR considerations loaded when the alert is cyber-related.
 - `references/firm-overlay.md` — firm policy, typology library, named systems, owners, and review machinery (consumed when present).
-- `templates/default-output.md` — memo template.
+- `templates/default-output.md` — single-decision memo template.
+- `templates/sample-roll-up.md` — sample-based program QA roll-up template (executive summary, scope, per-case findings table, themes, recommendations, source trace, decision forum) for the sample-based review type.
 - `schemas/sar-decision-qa.schema.json` — structured-output contract.
 - `examples/structuring-pattern-bank.md`, `crypto-payments-fintech.md` — public-source-derived scenarios.
 - `TROUBLESHOOTING.md` — recurring defects in SAR decision files and in QA memos written against them.

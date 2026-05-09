@@ -120,4 +120,4 @@ Symptom: the matrix is "signed off" with severity ratings asserted and recommend
 
 Why it happens: builder over-runs the human-review gate.
 
-Fix: the matrix is a draft until the named reviewer attests. Severity assignment always carries human review. The skill stops at the draft and surfaces the reviewer questions; it does not assert severity sign-off, distribute the matrix to committee, or post recommended edits to the policy management system. The `human_review_required` field is always true for v1.
+Fix: the matrix is a draft until the named reviewer attests. Severity assignment always carries human review. The skill stops at the draft and surfaces the reviewer questions; it does not assert severity sign-off, distribute the matrix to committee, or post recommended edits to the policy management system. The `human_review_required` field is always true.

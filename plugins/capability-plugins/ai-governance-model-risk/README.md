@@ -4,7 +4,7 @@ Second-line workflows for AI and model risk management. Eleven skills covering t
 
 Flagship plugin in this repo. Carries the heaviest source-anchor depth. The bank model-risk anchor is the joint interagency Revised Guidance on Model Risk Management (OCC 2026-13 / FRB SR 26-2 / FDIC FIL-15-2026, April 17 2026; supersedes SR 11-7 and SR 21-8) for traditional statistical and quantitative models; the bulletin expressly excludes generative AI and agentic AI from its scope (footnote 3). For GenAI and agentic use cases the substantive anchors are NIST AI RMF 1.0, NIST AI 600-1 (Generative AI Profile), ISO/IEC 42001:2023, EU AI Act, OWASP Top 10 for LLM Applications, MITRE ATLAS, NCSC/CISA secure-AI guidelines, NYDFS October 2024 letter on AI cyber, and the NAIC AI Bulletin for insurers.
 
-## v1 differentiator: GenAI expansion
+## GenAI expansion
 
 Four new skills make this the most regulator-active part of the repo for 2025-26 supervisory activity:
 
@@ -13,7 +13,7 @@ Four new skills make this the most regulator-active part of the repo for 2025-26
 - `genai-pre-prod-review` — pre-production gate review for a GenAI use case. Roll-up of upstream artifacts, conditions, residual risk, monitoring readiness, sign-off block. Substantive anchors: NIST AI RMF, NIST AI 600-1, ISO/IEC 42001, EU AI Act Articles 9, 13, 14, 26 where applicable. The bank model-risk bulletin (OCC 2026-13 et al.) excludes generative AI from scope.
 - `llm-vendor-evidence-review` — review of foundation-model vendor evidence packs (system cards, model cards, evaluation reports, red-team results, responsible-use policies) against firm criteria. Sufficiency view, gaps, residual reliance. Substantive anchors: NIST AI 600-1 Govern 6.x and Manage 3.x, ISO/IEC 42001:2023 §7.4 / §8.x, the joint interagency third-party guidance (June 2023), EU AI Act Articles 51 to 55 for GPAI where applicable. Public system cards from frontier labs (Anthropic, OpenAI, Google) referenced as the form-factor pattern under review.
 
-## Skill inventory (v1)
+## Skill inventory
 
 Foundational AI governance:
 

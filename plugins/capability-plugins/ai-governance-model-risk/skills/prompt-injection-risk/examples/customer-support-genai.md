@@ -72,7 +72,7 @@ Sections produced (abbreviated):
 
 ## Why this scenario matters
 
-- The scenario is the v1 archetype for prompt-injection review: a RAG-using GenAI assistant where the highest-likelihood vector is indirect injection in retrieved customer content, not direct injection by the user. Direct-only reviews miss the spine.
+- The scenario is the archetype for prompt-injection review: a RAG-using GenAI assistant where the highest-likelihood vector is indirect injection in retrieved customer content, not direct injection by the user. Direct-only reviews miss the spine.
 - Trust posture is the spine of the threat surface table; the scenario shows partially-trusted carriers where the trust basis is operational, not architectural.
 - The mitigations list links each control to evidence and to the test that exercised it; mitigations without exercise become recommended actions, not assertions of coverage.
 - Residual risk uses likelihood-and-impact framing with a one-line basis; "low" without basis is opinion, not analysis.

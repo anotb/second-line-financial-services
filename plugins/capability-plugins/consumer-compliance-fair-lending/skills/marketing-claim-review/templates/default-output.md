@@ -41,7 +41,7 @@ For each asset in the register, populate the following blocks. Repeat sections 3
 
 | Claim ID | Claim text (as it appears) | Category | Substantiation status | Substantiation source | Date | Notes |
 |---|---|---|---|---|---|---|
-| | | rate / fee / apr-mapr / eligibility / endorsement / comparative-superlative / privacy / security / rewards / availability / time-to-funding / green-or-esg / ai-capability / other | substantiated / partially-substantiated / not-substantiated / not-substantiable / evidence-needed | internal-data / third-party-study / regulator-data / controlled-study / MAP / other | YYYY-MM-DD | |
+| | | rate / fee / apr-mapr / eligibility / endorsement / comparative-superlative / privacy / security / rewards / availability / time-to-funding / green-or-sustainability / ai-capability / other | substantiated / partially-substantiated / not-substantiated / not-substantiable / evidence-needed | internal-data / third-party-study / regulator-data / controlled-study / MAP / other | YYYY-MM-DD | |
 
 ### 3.b Disclosure adequacy (asset `[asset_id]`)
 

@@ -41,7 +41,7 @@ The fair-lending lens on credit (ECOA, Regulation B, FHA, HMDA, Section 1071 sma
 Route to the consumer-compliance fair-lending skills (when present in the consumer-compliance plugin) for that artifact. The handoff lines:
 
 - **ECOA at 15 USC §1691** and **Regulation B at 12 CFR Part 1002**. Anti-discrimination in credit transactions across protected bases (race, colour, religion, national origin, sex, marital status, age, public-assistance income).
-- **Regulation B §1002.107 — Section 1071 small-business lending data collection**. The CFPB's small-business lending data rule. Subject to litigation history; phase-2 authors confirm current effective state at write time.
+- **Regulation B §1002.107 — Section 1071 small-business lending data collection**. The CFPB's small-business lending data rule. Subject to litigation history; confirm current effective state at write time.
 - **Fair Housing Act at 42 USC §3601 et seq.** Anti-discrimination in residential real-estate-related transactions.
 - **HMDA at 12 CFR Part 1003**. Mortgage-lending data collection for fair-lending statistical analysis.
 - **Joint Statement on Discrimination and Discouragement under ECOA** (where applicable) [verify current joint statement]. Inter-agency guidance on discouragement as an ECOA violation.

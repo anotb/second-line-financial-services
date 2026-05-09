@@ -112,7 +112,7 @@ Downstream consumers: the structured object feeds the firm's committee minutes s
 
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
 - `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md` — sector overlays loaded from scope.
-- `references/cross-cutting/{cyber,conduct}.md` — cross-cutting overlays loaded from scope.
+- `references/cross-cutting/{cyber,conduct,ai-ethics}.md` — cross-cutting overlays loaded from scope.
 - `references/firm-overlay.md` — firm-installed AI policy, taxonomy, named owners, threshold values (consumed when present).
 - `templates/default-output.md` — pack template with the named sections.
 - `schemas/board-ai-risk-pack.schema.json` — structured-output contract.

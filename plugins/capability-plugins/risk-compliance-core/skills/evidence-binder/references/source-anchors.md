@@ -120,12 +120,12 @@ Link: https://www.sec.gov/rules/final/2022/34-96034.pdf
 
 ## Cyber, privacy, climate, conduct (when applicable)
 
-When the engagement carries cyber, privacy, climate, or conduct overlay, the cross-cutting overlay files add the relevant anchors. The privacy overlay (`references/cross-cutting/privacy.md`) is currently the only one shipped at v1; cyber, climate, and conduct overlays may be added in subsequent waves when scope demands.
+When the engagement carries cyber, privacy, climate, or conduct overlay, the cross-cutting overlay files add the relevant anchors. The privacy overlay (`references/cross-cutting/privacy.md`) is the one currently shipped; cyber, climate, and conduct overlays may be added when scope demands.
 
 Specifically:
 - Cyber: NYDFS 23 NYCRR Part 500 §500.16 (incident response) and §500.17 (notice of cybersecurity event) [verify current section labels]; SEC Form 8-K Item 1.05 cyber disclosure [verify rule citation]; SEC Reg S-K Item 106 [verify].
 - Privacy: covered in `references/cross-cutting/privacy.md`.
-- Climate: not anchored at v1.
+- Climate: not anchored.
 - Conduct: CFPB Examination Manual UDAAP module [verify edition reference]; fair-lending exam evidence patterns under ECOA / Reg B and HMDA / Reg C.
 
 These overlays load when the scope's `cross_cutting_overlay_set` includes the corresponding entry.

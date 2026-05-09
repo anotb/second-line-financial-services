@@ -77,7 +77,7 @@ The same classification spine carries different criteria sources, different seve
 - `references/cross-cutting/cyber.md` is the most-loaded cross-cutting overlay. Cyber exceptions need careful classification because evidence gaps (no log) often look like control failures; the overlay carries the disambiguation pattern, IAM-recertification exception flavour, and incident-response control-effectiveness language.
 - `references/cross-cutting/conduct.md` loads when the test sampled a consumer-impact population. Conduct exceptions need consumer-harm framing distinct from technical control deviation; severity calibration shifts when customer harm is identifiable.
 
-Privacy and climate cross-cutting overlays follow the same pattern; this skill ships cyber and conduct as the v1 cross-cutting files because they are the most frequent triggers for exception classification. Where firm policy or taxonomy applies (severity ladder specific to the firm, named committee gates, policy-floor severity overrides for privileged access or critical data), it lives in `references/firm-overlay.md` and is consumed when present.
+Privacy and climate cross-cutting overlays follow the same pattern; this skill ships cyber and conduct as the cross-cutting files because they are the most frequent triggers for exception classification. Where firm policy or taxonomy applies (severity ladder specific to the firm, named committee gates, policy-floor severity overrides for privileged access or critical data), it lives in `references/firm-overlay.md` and is consumed when present.
 
 ## Quality bar
 

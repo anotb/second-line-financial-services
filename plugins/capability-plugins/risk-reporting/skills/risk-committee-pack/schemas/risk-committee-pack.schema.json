@@ -236,7 +236,7 @@
     },
     "human_review_required": {
       "type": "boolean",
-      "description": "Always true for v1."
+      "description": "Always true."
     }
   },
   "$defs": {

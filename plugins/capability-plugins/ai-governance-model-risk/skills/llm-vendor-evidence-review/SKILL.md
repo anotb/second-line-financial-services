@@ -23,7 +23,7 @@ The work this skill produces is the second-line read of a foundation-model vendo
 
 This is the model-evidence layer. It pairs with the entity-level layer in `vendor-diligence` (third-party-operational-resilience): vendor-diligence handles financial health, contracts, exit posture, sub-contractor footprint, and entity-level security attestations as entity evidence; this skill goes deep on whether the vendor's published evidence about the model itself is sufficient for the firm's deployment context. The chain is one-directional: vendor-diligence runs first, sets `eval_evidence_status = deferred-to-evidence-review` where the question is "is the vendor's published evidence pack sufficient for our deployment context", and links to this skill's record by ID. This skill closes the loop with `linked_vendor_diligence_id`. Neither side restates the other.
 
-The audience reads from three angles at once. The AI Governance Lead owns the artefact and consolidates the analysis. The model risk function (MRMO) co-reviews where the firm's model risk programme treats the use case as in scope, and is the primary co-attestor in bank-affiliated entities. The vendor-diligence officer or head of TPRM consumes the structured record back into the entity-level vendor record. The CISO function co-reviews the security and privacy criteria for any deployment with a cyber overlay (which is most v1 GenAI deployments). The chief privacy officer co-reviews where regulated personal data flows to vendor-side processing. The CCO co-reviews where the use case touches consumer-facing communications, recommendation, or decisioning.
+The audience reads from three angles at once. The AI Governance Lead owns the artefact and consolidates the analysis. The model risk function (MRMO) co-reviews where the firm's model risk programme treats the use case as in scope, and is the primary co-attestor in bank-affiliated entities. The vendor-diligence officer or head of TPRM consumes the structured record back into the entity-level vendor record. The CISO function co-reviews the security and privacy criteria for any deployment with a cyber overlay (which is most GenAI deployments). The chief privacy officer co-reviews where regulated personal data flows to vendor-side processing. The CCO co-reviews where the use case touches consumer-facing communications, recommendation, or decisioning.
 
 The review is a draft until the named reviewers attest. The skill stops at the recommendation.
 
@@ -69,7 +69,7 @@ Depth flexes with deployment form, tier, and sector. A hosted-API tier-1 review 
 
 When the scope names a sector (banking, insurance, capital-markets, payments-fintech), load the matching `references/sector-overlays/<sector>.md`. Each overlay carries sector-specific evidence asks, co-reviewer expectations, re-review triggers, and the named additions to the structured-output `sector_overlay_notes` block. Treating the overlay as background reading is the failure mode; the overlay's named additions land in the review.
 
-The cyber cross-cutting overlay should be considered the default for v1 foundation-model evidence reviews. The threat surface a foundation-model vendor exposes is, in the named regulatory anchors' framing, a cybersecurity risk class; the CISO function co-reviews the security and privacy criteria. The privacy and conduct overlays load when the scope flags them: privacy where regulated personal data may flow to vendor-side processing; conduct where the use case touches consumer-facing communications, recommendation, or decisioning. Climate is not applicable.
+The cyber cross-cutting overlay should be considered the default for foundation-model evidence reviews. The threat surface a foundation-model vendor exposes is, in the named regulatory anchors' framing, a cybersecurity risk class; the CISO function co-reviews the security and privacy criteria. The privacy and conduct overlays load when the scope flags them: privacy where regulated personal data may flow to vendor-side processing; conduct where the use case touches consumer-facing communications, recommendation, or decisioning. Climate is not applicable.
 
 Load only the overlays the scope names. Gold-plating with overlays the engagement does not implicate adds noise without challenge value.
 
@@ -103,7 +103,7 @@ Downstream consumers: `genai-pre-prod-review` consumes the structured object for
 
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
 - `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md` — sector overlays loaded from scope.
-- `references/cross-cutting/{cyber,privacy,conduct}.md` — cross-cutting overlays; cyber is the default for v1 GenAI reviews.
+- `references/cross-cutting/{cyber,privacy,conduct}.md` — cross-cutting overlays; cyber is the default for GenAI reviews.
 - `references/firm-overlay.md` — firm policy, taxonomy, named owners (consumed when present).
 - `templates/default-output.md` — review template.
 - `schemas/llm-vendor-evidence-review.schema.json` — structured-output contract.

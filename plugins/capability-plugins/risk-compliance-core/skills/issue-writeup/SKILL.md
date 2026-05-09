@@ -69,7 +69,7 @@ The same CCCE spine carries different criteria sources, different severity calib
 - `references/cross-cutting/cyber.md` is the most-loaded cross-cutting overlay. State cyber finding patterns, FFIEC IT conventions, SEC public-company disclosure-process patterns, and customer-information incident-notification severity shading land here. The overlay fires whenever the underlying condition touches information-security controls, which is most issues in practice.
 - `references/cross-cutting/conduct.md` loads when the issue concerns customer-facing harm. UDAAP severity shifts when customer harm is identifiable; restitution scope drives the closure evidence.
 
-Privacy and climate overlays follow the same pattern; this skill ships cyber and conduct as v1 because they are the most frequent triggers. Granular citations (specific section labels, rule numbers) live in `references/source-anchors.md` and the overlay files. Where firm policy or taxonomy applies (issue-rating ladders specific to the firm, named committee gates, GRC-platform status enums), it lives in `references/firm-overlay.md`.
+Privacy and climate overlays follow the same pattern; this skill ships cyber and conduct because they are the most frequent triggers. Granular citations (specific section labels, rule numbers) live in `references/source-anchors.md` and the overlay files. Where firm policy or taxonomy applies (issue-rating ladders specific to the firm, named committee gates, GRC-platform status enums), it lives in `references/firm-overlay.md`.
 
 ## Quality bar
 

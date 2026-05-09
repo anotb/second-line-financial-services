@@ -182,7 +182,7 @@
     "human_review_required": {
       "type": "boolean",
       "default": true,
-      "description": "Always true for v1. The skill stops at draft; a named reviewer attests before the matrix is filed."
+      "description": "Always true. The skill stops at draft; a named reviewer attests before the matrix is filed."
     },
     "revisions": {
       "type": "array",

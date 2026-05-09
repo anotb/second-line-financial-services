@@ -157,7 +157,7 @@ For every material claim in the pack, the source mapping. Carried as an appendix
 ## Confidence label and review gate
 
 - **Confidence label**: [high / medium / low / unknown]. Reflects strength of the evidence base, not substantive control posture. `high` requires complete evidence-index coverage of in-scope controls.
-- **Human review required**: yes (always for v1).
+- **Human review required**: yes (always).
 - **Recommended owner actions before sign-off**: [list, including any reviewer-question responses or any source-criteria year-over-year checks the legal reviewer should run].
 
 The skill stops at the draft. The attesting officer signs after the named reviewers review; the firm's certification system records the signed pack.

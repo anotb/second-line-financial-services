@@ -1,8 +1,0 @@
-{
-  "name": "financial-crime-governance-reviewer",
-  "version": "0.2.0",
-  "description": "Reviews CDD, EDD, SAR decision QA, sanctions screening QA, negative-news triage, and AML monitoring governance without making final onboarding, SAR, or sanctions decisions.",
-  "author": {
-    "name": "Second Line Financial Services contributors"
-  }
-}

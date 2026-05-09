@@ -2,7 +2,7 @@
 
 Starting structure for a validation plan. Depth flexes per pillar with tier and validation type; the section list does not. A targeted revalidation may compress conceptual soundness to a paragraph; a full initial validation expands every section. Items without evidence carry `[evidence needed]` and route to the engagement issue log.
 
-The plan is a draft until the validator and the model risk committee (or equivalent reviewer) attest. The validation report (phase 3) consumes this plan as its scope contract; this plan does not execute the testing.
+The plan is a draft until the validator and the model risk committee (or equivalent reviewer) attest. The downstream validation report consumes this plan as its scope contract; this plan does not execute the testing.
 
 ---
 
@@ -142,7 +142,7 @@ Each question names the design choice or assumption it probes. "Does the model m
 | [draft validation report] | [date] | [function] |
 | [reviewer attestation] | [date] | [function] |
 
-Deliverables: [validation report (phase 3 skill); refreshed model card via `model-card-builder`; issue-log entries; pre-prod or production approval input].
+Deliverables: [downstream validation report; refreshed model card via `model-card-builder`; issue-log entries; pre-prod or production approval input].
 
 ---
 
@@ -193,4 +193,4 @@ The plan is reviewable when every named section is filled and source trace is co
 - **Conditions (if any)**: [conditions, owners, dates]
 - **Onward routing**: [validation execution / pre-prod gate via `genai-pre-prod-review` for GenAI / model risk committee]
 
-The plan is filed only after attestation. The validation report (phase 3) consumes this plan as its scope contract.
+The plan is filed only after attestation. The downstream validation report consumes this plan as its scope contract.

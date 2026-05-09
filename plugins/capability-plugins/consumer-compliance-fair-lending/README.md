@@ -6,7 +6,7 @@ Second-line capability plugin for consumer compliance and fair-lending work. Six
 
 Consumer compliance officers, fair-lending and fair-housing leads, UDAAP review teams, marketing review teams, complaint management leads. Both inside regulated firms (depository, fintech with sponsor bank, mortgage, auto, BNPL, small-business lending) and inside advisory or consulting teams running the same work for those firms.
 
-## Skills (v1)
+## Skills
 
 1. `adverse-action-review` — Review a population of adverse action decisions and notices for ECOA / Reg B 1002.9 compliance, traceability of cited reasons back to the model and data, and disparate-impact red flags. Anchors on Reg B §1002.9 and Comment 9(b)(2)-3 of the Official Staff Commentary plus the April 2023 Joint Statement on algorithmic discrimination where AI / complex models are in the decisioning path. (CFPB Circulars 2022-03 / 2023-03 are **withdrawn May 12, 2025; historical only.**)
 2. `complaint-theme-analysis` — Aggregate and theme a population of consumer complaints (CFPB Complaint Database, internal, AG, social) into named themes with severity, root-cause hypotheses, regulatory exposure, and conduct-risk implications.
@@ -21,7 +21,7 @@ Public-source anchored. Named regulatory sources, dated, with section references
 
 ## Cross-cutting overlays embedded in skills
 
-Per the v1 plan, cross-cutting topics live as reference docs inside the skills they touch, not as separate plugins:
+Cross-cutting topics live as reference docs inside the skills they touch, not as separate plugins:
 
 - Privacy: `adverse-action-review/references/cross-cutting/privacy.md` (GLBA Safeguards, state privacy implications), `marketing-claim-review/references/cross-cutting/privacy.md` (privacy-claim substantiation, AdChoices, dark-pattern privacy).
 - Conduct: `udaap-risk-review/references/cross-cutting/conduct.md`, `complaint-theme-analysis/references/cross-cutting/conduct.md`.
@@ -30,11 +30,11 @@ AI-related cross-cutting is implicit on `adverse-action-review` and `fair-lendin
 
 ## Components
 
-- `skills/` — the six v1 skills. Skills supersede legacy `commands/` for new content per current Claude Code guidance.
-- `references/` — plugin-level shared references: source map (pruned to consumer-compliance / fair-lending in v1), policy-control library, decision checkpoints.
-- `schemas/` — plugin-level schemas for cross-skill artifacts. Phase 3 moves borrowed schemas to their owning plugins; new per-skill schemas land under `<skill>/schemas/`.
+- `skills/` — the six skills. Skills supersede legacy `commands/` for new content per current Claude Code guidance.
+- `references/` — plugin-level shared references: source map (scoped to consumer-compliance / fair-lending), policy-control library, decision checkpoints.
+- `schemas/` — plugin-level schemas for cross-skill artifacts. Per-skill schemas live under `<skill>/schemas/`. Schema dedup (drop schemas a plugin's skills don't actually use) is tracked in [ROADMAP.md](../../../ROADMAP.md).
 
-Per-skill anatomy (v1, mirrors the Anthropic per-skill layout):
+Per-skill anatomy (mirrors the Anthropic per-skill layout):
 
 ```
 <skill>/

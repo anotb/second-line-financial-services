@@ -277,7 +277,7 @@
     "human_review_required": {
       "type": "boolean",
       "default": true,
-      "description": "Always true for v1. The assessment is a draft until the named sign-offs land."
+      "description": "Always true. The assessment is a draft until the named sign-offs land."
     },
     "sign_offs": {
       "type": "array",

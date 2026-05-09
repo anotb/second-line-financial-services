@@ -104,4 +104,4 @@ Symptom: the skill produces a matrix asserting committee adoption, charter langu
 
 Why it happens: builder over-runs the human-review gate.
 
-Fix: gate architecture is committee-adopted; the skill stops at draft. The matrix is a draft until the named reviewer attests. The `human_review_required` field is always true for v1; committee adoption is the named gate (the gate matrix's own meta-gate). The skill surfaces reviewer questions and recommended charter language; it does not assert sign-off, distribute, or post the matrix as adopted.
+Fix: gate architecture is committee-adopted; the skill stops at draft. The matrix is a draft until the named reviewer attests. The `human_review_required` field is always true; committee adoption is the named gate (the gate matrix's own meta-gate). The skill surfaces reviewer questions and recommended charter language; it does not assert sign-off, distribute, or post the matrix as adopted.

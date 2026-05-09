@@ -65,7 +65,7 @@ Sections produced (abbreviated):
 
 ## Why this scenario matters
 
-- The scenario is the v1 archetype for material-expansion pre-prod gate review: the use case is in production at one scope, the expansion changes the corpora scope, the privacy and notification footprint, and the operational handoff. Treating a material expansion as a copy-paste of the prior gate decision is the recurring failure mode.
+- The scenario is the archetype for material-expansion pre-prod gate review: the use case is in production at one scope, the expansion changes the corpora scope, the privacy and notification footprint, and the operational handoff. Treating a material expansion as a copy-paste of the prior gate decision is the recurring failure mode.
 - The hold call is principled: an open privacy-relevant retrieval finding combined with unverified state-by-state notification readiness is hold, not go-with-conditions. The skill enforces "go-with-conditions equivalent to no-go in disguise" by structure.
 - The sector overlay (insurance) brings the chief actuarial officer and consumer compliance in as co-signers, surfaces HIPAA and state Insurance Data Security Model Law triggers alongside the cyber-overlay-named ones, and adds the AIS Program documentation expectation per state.
 - The monitoring-readiness section flags the audit-log retention dependency: a signal listed as live but blocked on a policy-control change is not actually live before go-live. The structure surfaces the dependency by construction.

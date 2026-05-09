@@ -1,6 +1,6 @@
-# Example: agentic-controls review for an insurance claims-AI agent (absorbing the deprecated claims-ai-controls skill)
+# Example: agentic-controls review for an insurance claims-AI agent
 
-Public-source-derived. No named institution. This scenario carries the substance of the deprecated `claims-ai-controls` skill via the insurance overlay; it is the canonical use case the v1 plan named when the absorption was decided.
+Public-source-derived. No named institution. This scenario carries the substance of what would otherwise be a standalone claims-AI controls workflow, applied here through the insurance overlay.
 
 ## Input description
 
@@ -129,7 +129,7 @@ Sections produced (abbreviated):
 
 ## Why this scenario matters
 
-- The scenario is the canonical insurance use case the v1 plan named when the deprecated `claims-ai-controls` skill was absorbed into this skill via the insurance overlay.
+- The scenario is the canonical insurance use case carried by the insurance overlay rather than a standalone claims-AI controls skill.
 - Authority statement enumerates the claims-AI-specific out-of-scope actions (no denial without licensed-adjuster review, no payment above threshold, no UPL-crossing communications). The fair-claims-settlement bar is structural; the agent cannot move it.
 - Tool inventory carries blast-radius framing in claims-specific terms (per-claim cap, daily aggregate cap, per-shift cap, communication blast in policy units).
 - Human oversight enforces block-and-wait on reasoned-denial drafting (post-hoc on a sent denial would be a UCSPA violation, not a control). The insurance overlay's claims-AI control bar comes through here.

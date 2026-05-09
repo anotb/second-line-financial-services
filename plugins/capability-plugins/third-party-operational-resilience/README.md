@@ -9,7 +9,7 @@ Audience: third-party risk managers, ICT risk managers, vendor risk teams, opera
 | Skill | What it produces |
 |---|---|
 | `criticality-assessment` | Sets the criticality tier for a third-party arrangement and ties it to the firm's important business service, RTO / RPO, and customer / regulatory impact. Feeds every other skill in the plugin. |
-| `vendor-diligence` | Second-line diligence pack for one ICT, fintech, cloud, data, or AI vendor. Carries an explicit AI-vendor branch (the v0.2 `ai-vendor-review` skill is consolidated into this skill in v1). |
+| `vendor-diligence` | Second-line diligence pack for one ICT, fintech, cloud, data, or AI vendor. Carries an explicit AI-vendor branch covering what an `ai-vendor-review` would otherwise produce. |
 | `contract-gap-review` | Clause-by-clause review of a third-party contract against named regulatory clause-coverage expectations. |
 | `exit-plan` | Exit triggers, transition target, data extraction, knowledge transfer, regulatory notification, and the testing that proves the plan. |
 | `concentration-risk-review` | Portfolio view across vendors and fourth parties: provider, geography, jurisdiction, technology stack, AI provider. |
@@ -34,7 +34,7 @@ Public anchors only. Primary anchors:
 - NAIC Model Law on insurance outsourcing (insurance overlay).
 - UK PRA SS2 / 21 (operational resilience) and SS1 / 21 (impact tolerances) as UK overlay reference.
 
-US-deep is the v1 default. EU and UK live as overlay reference docs inside the skills.
+US-deep is the default. EU and UK live as overlay reference docs inside the skills.
 
 ## Sector overlays
 
@@ -57,7 +57,7 @@ Cyber and privacy live as embedded reference docs inside the skills that touch t
 
 - `skills/` — the seven skills above. Each ships its own `references/`, `templates/`, `examples/`, and (where useful) `schemas/` and `scripts/`.
 - `references/` — plugin-level shared references: source map, policy-control library rows, named decision forums and confidence labels.
-- `schemas/` — `vendor.schema.json` is the primary anchor and carries the v1 AI-vendor extension consumed by `vendor-diligence`.
+- `schemas/` — `vendor.schema.json` is the primary anchor and carries the AI-vendor extension consumed by `vendor-diligence`.
 
 ## Operating posture
 

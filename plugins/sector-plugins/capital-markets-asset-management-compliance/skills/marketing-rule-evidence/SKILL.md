@@ -73,7 +73,7 @@ This skill is sector-unique to SEC-registered investment advisers and the asset-
 
 ### Cross-cutting overlays
 
-Conduct overlay loads where the substantiation gap, the testimonial framing, or the performance presentation crosses the antifraud "fair and balanced" threshold; the file lives at `references/cross-cutting/conduct.md`. Privacy overlay loads where a testimonial discloses client identity or where account-level details appear in the advertisement; client-consent and Reg S-P treatment live at `references/cross-cutting/privacy.md`. Cyber and climate overlays are not in scope by default; load them only where the advertisement makes claims about firm cybersecurity posture or ESG / climate characteristics, and route to the broader programs.
+Conduct overlay loads where the substantiation gap, the testimonial framing, or the performance presentation crosses the antifraud "fair and balanced" threshold; the file lives at `references/cross-cutting/conduct.md`. Privacy overlay loads where a testimonial discloses client identity or where account-level details appear in the advertisement; client-consent and Reg S-P treatment live at `references/cross-cutting/privacy.md`. Cyber and climate overlays are not in scope by default; load them only where the advertisement makes claims about firm cybersecurity posture or sustainability / climate characteristics, and route to the broader programs.
 
 ## Pointers
 

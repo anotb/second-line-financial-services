@@ -65,4 +65,4 @@ For NYDFS engagements at NY-licensed insurers, layer NYDFS-specific conventions 
 
 ## When this overlay applies and when it does not
 
-This overlay applies for the engagement playbook on a state DOI examination. There is no separate sector exam-readiness skill for insurance in this plugin set as of phase 2; the substantive readiness work runs against the firm's existing program, with this overlay framing the engagement-side mechanics. If a future `sector-plugins/insurance-prudential-conduct/insurance-exam-readiness` skill is added, the substantive readiness sprint moves there and this overlay continues to carry the engagement playbook.
+This overlay applies for the engagement playbook on a state DOI examination. There is no separate sector exam-readiness skill for insurance in this plugin set; the substantive readiness work runs against the firm's existing program, with this overlay framing the engagement-side mechanics. If a future `sector-plugins/insurance-prudential-conduct/insurance-exam-readiness` skill is added, the substantive readiness sprint moves there and this overlay continues to carry the engagement playbook.

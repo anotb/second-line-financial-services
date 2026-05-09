@@ -86,7 +86,7 @@ This skill is banking-sector-only. There is no `references/sector-overlays/` dir
 - `cross-cutting/cyber.md` loads when the cycle includes IT examination scope, when the FFIEC IT Examination Handbook drives the request list, or when a cyber incident in the review period shapes the Management or Sensitivity component. Anchors: FFIEC IT Examination Handbook (Information Security booklet, current edition [verify edition]), 23 NYCRR Part 500 for state-chartered banks supervised by NYDFS, the SEC cyber-disclosure framework for the BHC where the BHC is a public registrant.
 - `cross-cutting/conduct.md` loads when the cycle includes consumer-compliance scope. Anchors: CFPB Supervision and Examination Manual (current edition [verify section]), FDIC Compliance Examination Manual, OCC consumer-compliance handbook, UDAAP examiner expectations.
 - `cross-cutting/privacy.md` loads when the cycle includes IT or compliance with information-security overlap. Anchors: GLBA Safeguards Rule (16 CFR 314.4 [verify]), Reg P (12 CFR 1016).
-- `cross-cutting/climate.md` does not load in v1. Climate-related financial-risk supervision is evolving; flag as a `[verify current state]` reviewer question rather than embedding an overlay.
+- `cross-cutting/climate.md` does not load. Climate-related financial-risk supervision is evolving; flag as a `[verify current state]` reviewer question rather than embedding an overlay.
 
 Loading an overlay the cycle does not implicate adds noise without challenge value. Loading none when one applies is the more common failure mode.
 

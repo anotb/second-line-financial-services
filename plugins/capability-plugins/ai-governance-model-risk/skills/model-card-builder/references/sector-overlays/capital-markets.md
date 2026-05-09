@@ -2,7 +2,7 @@
 
 When the scope record names sector `capital-markets`, this overlay adds capital-markets-specific fields and review demands to the card. Where there is conflict between the capability defaults and this overlay, the overlay governs the capital-markets-sector elements.
 
-Source content in this overlay derives from the capital-markets lead's overlay snippets in the phase-1 spec sheets, adapted to the model-card context. Cited and section-referenced anchors in `references/source-anchors.md`.
+Cited and section-referenced anchors in `references/source-anchors.md`.
 
 ## What changes for capital-markets model cards
 

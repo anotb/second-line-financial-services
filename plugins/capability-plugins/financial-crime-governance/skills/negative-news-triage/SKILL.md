@@ -73,7 +73,7 @@ Sector overlays load from the scope or the institution type. **Banking** carries
 
 The **conduct cross-cutting overlay** loads when the scope `cross_cutting_overlay_set` includes `conduct`. Adverse media frequently surfaces customer-harm patterns (sales-practice exposure, disclosure-deficiency narratives, vulnerable-customer overlap with high-risk profiles, market-conduct exposure) that intersect with the financial-crime read but are not themselves financial-crime typologies. The overlay carries the discipline that names the conduct dimension as a parallel routing — to the consumer-compliance function, to the conduct-risk committee, or to the producer-oversight owner — without collapsing it into the AML triage. Load it explicitly when the engagement names conduct; do not pull it in by default.
 
-Cyber overlap (account-takeover-adjacent adverse media, ransomware-exposure reporting on a customer counterparty) is captured in the typology references and the source anchors rather than as a separate cross-cutting overlay at v1; the cyber framing on a sanctions-screening overlap routes to `sanctions-screening-qa` where the cyber overlay does live.
+Cyber overlap (account-takeover-adjacent adverse media, ransomware-exposure reporting on a customer counterparty) is captured in the typology references and the source anchors rather than as a separate cross-cutting overlay; the cyber framing on a sanctions-screening overlap routes to `sanctions-screening-qa` where the cyber overlay does live.
 
 ## Pointers
 

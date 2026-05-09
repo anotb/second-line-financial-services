@@ -62,7 +62,7 @@
 
 | Claim ID | Claim text (as it appears) | Claim category | Substantiation status | Substantiation source | Date of source | Fair-and-balanced read | Reviewer note |
 |---|---|---|---|---|---|---|---|
-| | | rate / fee / aum / track-record / capability / experience / award / endorsement / privacy / cyber / esg / other | substantiated / partially-substantiated / not-substantiated / not-substantiable / evidence-needed | internal-data / third-party-study / regulator-data / controlled-study / promoter-records / other | YYYY-MM-DD | balanced / unbalanced / not-applicable | |
+| | | rate / fee / aum / track-record / capability / experience / award / endorsement / privacy / cyber / sustainability / other | substantiated / partially-substantiated / not-substantiated / not-substantiable / evidence-needed | internal-data / third-party-study / regulator-data / controlled-study / promoter-records / other | YYYY-MM-DD | balanced / unbalanced / not-applicable | |
 
 ## 6. Performance-presentation review
 

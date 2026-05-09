@@ -1,6 +1,6 @@
 # Example: agentic-controls review for a CSR co-pilot at a regional US bank
 
-Public-source-derived. No named institution. The scenario is the v1 archetype for agentic controls in retail banking: a vendor-hosted GenAI assistant inside the consumer-banking call center that summarises customer state, suggests next-best actions, drafts written follow-ups, and is wired to a small inventory of tools (account-read, card-lock-temp, callback-schedule, comm-draft).
+Public-source-derived. No named institution. The scenario is the archetype for agentic controls in retail banking: a vendor-hosted GenAI assistant inside the consumer-banking call center that summarises customer state, suggests next-best actions, drafts written follow-ups, and is wired to a small inventory of tools (account-read, card-lock-temp, callback-schedule, comm-draft).
 
 ## Input description
 
@@ -108,7 +108,7 @@ Sections produced (abbreviated):
 
 ## Why this scenario matters
 
-- The scenario is the v1 archetype for agentic-controls review in retail banking. The most-likely failure modes (cross-customer retrieval bleed, indirect injection in customer history, tool-misuse via repeated card-lock) are surfaced by the threat-assessment table.
+- The scenario is the archetype for agentic-controls review in retail banking. The most-likely failure modes (cross-customer retrieval bleed, indirect injection in customer history, tool-misuse via repeated card-lock) are surfaced by the threat-assessment table.
 - Authority statement enumerates concrete out-of-scope actions, not descriptive prose. The boundary against scope drift is explicit.
 - Tool inventory carries blast radius on every entry. A tool list without blast-radius framing would not surface the per-shift abuse case.
 - Human oversight entries carry effective-oversight evidence pointers (gate-decision logs, sampling audit logs, send-event logs). Theatrical oversight is the failure mode the section exists to surface.

@@ -57,7 +57,7 @@ This skill is capital-markets-only. The registration-class branching (IA / BD / 
 
 - `cross-cutting/cyber.md` loads when the document-request scope includes Reg S-P, cybersecurity, or information-security topics, or when the firm is NY-licensed and NYDFS Part 500 is in scope. The SEC's separately-proposed adviser-and-fund cyber rule (2022) was withdrawn in 2025 and is not in force; Reg S-P is the operative anchor.
 - `cross-cutting/conduct.md` loads by default for retail-customer-serving firms and on demand for institutional firms with material conflict-of-interest topics in scope. Anchors: IA Act §206 fiduciary duty (SEC Commission Interpretation, June 5, 2019); Reg BI; Form CRS; FINRA Rule 2111 suitability.
-- `cross-cutting/privacy.md` does not load in v1. Privacy-specific obligations under Reg S-P and GLBA load through the cyber overlay.
+- `cross-cutting/privacy.md` does not load. Privacy-specific obligations under Reg S-P and GLBA load through the cyber overlay.
 - `cross-cutting/climate.md` loads only when ESG-labeled product disclosures or Names Rule 35d-1 amendments are specifically in exam scope; otherwise carry as a reviewer question and skip the overlay.
 
 ## Non-negotiables

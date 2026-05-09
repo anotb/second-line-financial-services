@@ -14,7 +14,7 @@ Policy gap reviews in capital markets typically benchmark against the federal ru
 
 Anchor: 17 CFR §275.206(4)-7. The rule requires registered advisers to adopt and implement written policies and procedures reasonably designed to prevent violation of the Advisers Act, designate a Chief Compliance Officer, and review the adequacy of the policies annually. The matrix benchmarks an adviser's compliance policy framework against the rule and against the SEC EXAMS published examination priorities for the year. [verify the most-recent EXAMS priorities document.]
 
-What the gap review picks up: legacy adviser policies that pre-date specific risk areas the SEC has subsequently flagged in EXAMS priorities (e.g., the Marketing Rule under amended Rule 206(4)-1, custody under Rule 206(4)-2, ESG-related disclosures, off-channel communications, AI-system use in advisory decisioning).
+What the gap review picks up: legacy adviser policies that pre-date specific risk areas the SEC has subsequently flagged in EXAMS priorities (e.g., the Marketing Rule under amended Rule 206(4)-1, custody under Rule 206(4)-2, sustainability-related disclosures, off-channel communications, AI-system use in advisory decisioning).
 
 ### SEC Marketing Rule — Rule 206(4)-1 (amended, effective November 2022)
 

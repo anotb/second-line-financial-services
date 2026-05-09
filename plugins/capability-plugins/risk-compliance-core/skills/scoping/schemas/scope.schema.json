@@ -210,12 +210,14 @@
       "properties": {
         "role": {
           "type": "string",
+          "description": "Role running the engagement day-to-day. Backward-compatible field that downstream skills still read as 'persona.role'; semantically equivalent to 'running_lead'. On most CCO/CRO-sponsored engagements this is a delegate (e.g., a Compliance Risk Lead reporting to the CCO), not the accountable executive themselves; capture the delegate here and the executive in 'accountable_executive'.",
           "enum": [
             "CRO",
             "head-of-model-risk",
             "head-of-TPRM",
             "head-of-operational-resilience",
             "CCO",
+            "compliance-risk-lead",
             "BSA-officer",
             "AI-governance-lead",
             "head-of-regulatory-affairs",
@@ -229,6 +231,14 @@
           ]
         },
         "role_other_label": { "type": "string" },
+        "running_lead": {
+          "type": "string",
+          "description": "Delegate who runs the engagement day-to-day (e.g., compliance-risk-lead, model-risk-lead, TPRM-analyst-lead). Optional and additive; when not supplied, downstream consumers should default running_lead to the value of 'role' (and, if role is absent, to 'accountable_executive'). Semantically aligned with 'role' for backward compatibility; specifies the running-lead distinct from the accountable executive when the two differ. Free-text to allow lead-role variants the executive enum does not capture."
+        },
+        "accountable_executive": {
+          "type": "string",
+          "description": "Accountable executive who owns engagement sign-off. Optional. Same enum vocabulary as 'role'; common values include CRO, CCO, BSA-officer, AI-governance-lead, head-of-regulatory-affairs. When 'running_lead' is supplied without 'accountable_executive', downstream consumers should treat the executive as not yet named (open question for the sponsor) rather than infer one."
+        },
         "function": {
           "type": "string",
           "description": "Plain-language function the persona sits in (risk management, model risk, AI governance, TPRM, operational resilience, compliance, financial crime, regulatory affairs, internal audit, advisory)."

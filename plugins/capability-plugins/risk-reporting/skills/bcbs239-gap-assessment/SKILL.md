@@ -58,7 +58,7 @@ Lines of evidence: document review, system tracing, reconciliation tests, interv
 
 ### Group B — Risk data aggregation capabilities
 
-**Principle 3 (Accuracy and integrity).** Automated reconciliation between source systems and risk-aggregation layer; manual workaround inventory with rationale and remediation path; data-quality KPI set with thresholds and breach-driven escalation; data-quality testing across the in-scope risk types. Climate-data lineage from vendor-supplied scenario providers and ESG feeds reads here when the climate overlay is loaded; a vendor refresh cadence not aligned to the firm's stress cycle is a Principle 3 finding.
+**Principle 3 (Accuracy and integrity).** Automated reconciliation between source systems and risk-aggregation layer; manual workaround inventory with rationale and remediation path; data-quality KPI set with thresholds and breach-driven escalation; data-quality testing across the in-scope risk types. Climate-data lineage from vendor-supplied scenario providers and sustainability feeds reads here when the climate overlay is loaded; a vendor refresh cadence not aligned to the firm's stress cycle is a Principle 3 finding.
 
 **Principle 4 (Completeness).** Coverage of all material risk types, lines of business, legal entities, geographies. On-balance-sheet versus off-balance-sheet exposures. The Basel III monitoring exercise is a working evidence pointer here; the aggregation discipline required to populate the templates is a test of completeness.
 

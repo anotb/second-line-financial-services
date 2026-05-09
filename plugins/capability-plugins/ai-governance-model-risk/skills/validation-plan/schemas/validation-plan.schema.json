@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://second-line-financial-services/schemas/validation-plan.schema.json",
   "title": "ValidationPlan",
-  "description": "Validator-side scope contract for an AI or model use case. For traditional models in scope at federally regulated banks the binding anchor is the joint interagency Revised Guidance on Model Risk Management (OCC 2026-13 / FRB SR 26-2 / FDIC FIL-15-2026, supersedes SR 11-7); the bulletin excludes GenAI and agentic AI from scope so for those use cases the plan anchors to NIST AI 600-1, ISO/IEC 42001, and the EU AI Act where applicable. Consumed by model-card-builder, validation-report (phase 3), and the ai-governance-reviewer agent.",
+  "description": "Validator-side scope contract for an AI or model use case. For traditional models in scope at federally regulated banks the binding anchor is the joint interagency Revised Guidance on Model Risk Management (OCC 2026-13 / FRB SR 26-2 / FDIC FIL-15-2026, supersedes SR 11-7); the bulletin excludes GenAI and agentic AI from scope so for those use cases the plan anchors to NIST AI 600-1, ISO/IEC 42001, and the EU AI Act where applicable. Consumed by model-card-builder, the downstream validation report, and the ai-governance-reviewer agent.",
   "type": "object",
   "required": [
     "plan_metadata",

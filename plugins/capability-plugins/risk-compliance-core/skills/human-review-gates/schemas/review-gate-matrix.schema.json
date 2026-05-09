@@ -183,7 +183,7 @@
     "human_review_required": {
       "type": "boolean",
       "default": true,
-      "description": "Always true for v1. Gate architecture is committee-adopted; the skill stops at draft and the named reviewer attests."
+      "description": "Always true. Gate architecture is committee-adopted; the skill stops at draft and the named reviewer attests."
     },
     "revisions": {
       "type": "array",

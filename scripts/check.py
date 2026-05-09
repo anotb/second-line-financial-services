@@ -131,8 +131,14 @@ def check_no_removed_patterns():
         if (ROOT / rel).exists():
             err(f'removed path still exists: {rel}')
 
+AGENTS_DEFERRED = ROOT / 'internal' / 'agent-plugins-deferred' / 'agent-plugins'
+
 def check_agent_skill_drift():
-    for agent_dir in sorted((ROOT / 'plugins' / 'agent-plugins').iterdir()):
+    # Agent plugins are deferred from v1 to v1.x and live under internal/.
+    # Skip cleanly when the deferred path is absent (e.g., fresh checkouts).
+    if not AGENTS_DEFERRED.exists():
+        return
+    for agent_dir in sorted(AGENTS_DEFERRED.iterdir()):
         if not agent_dir.is_dir():
             continue
         bundle = agent_dir / 'skills.bundle.json'
@@ -141,7 +147,17 @@ def check_agent_skill_drift():
             continue
         data = load_json(bundle)
         for item in data.get('bundled_skills', []):
-            src = (agent_dir / item['from']).resolve()
+            raw_from = item['from']
+            src = (agent_dir / raw_from).resolve()
+            if not src.exists():
+                # Legacy bundles use ../../capability-plugins/... relative to the old
+                # in-tree location; resolve under plugins/ for the deferred copy.
+                for prefix in ('../../', '../'):
+                    if raw_from.startswith(prefix):
+                        candidate = (ROOT / 'plugins' / raw_from[len(prefix):]).resolve()
+                        if candidate.exists():
+                            src = candidate
+                            break
             dst = agent_dir / 'skills' / src.name
             if not src.exists():
                 err(f'{agent_dir.name}: source skill missing {src}')
@@ -154,7 +170,7 @@ def check_agent_skill_drift():
             if src_text != dst_text:
                 err(f'{agent_dir.name}: bundled skill drift for {src.name}; run scripts/sync-agent-skills.py')
 
-for base in [ROOT / 'plugins' / 'capability-plugins', ROOT / 'plugins' / 'sector-plugins', ROOT / 'plugins' / 'agent-plugins']:
+for base in [ROOT / 'plugins' / 'capability-plugins', ROOT / 'plugins' / 'sector-plugins']:
     if not base.exists():
         err(f'missing {base}')
         continue

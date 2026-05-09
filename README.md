@@ -18,10 +18,11 @@ If you work in 1.5L, 2L, or adjacent functions, the skills let Claude (or other 
 
 - **Capability plugins** for horizontal GRC work: foundational primitives, regulatory change, AI / model risk, third-party / operational resilience, controls testing, risk reporting, financial crime governance, consumer compliance and fair lending.
 - **Sector overlay plugins** for institution-specific context: banking, insurance, capital markets and asset management, payments and fintech. Sector overlays ship sector-unique skills only; sector flavour on cross-industry capability skills lives as `references/sector-overlays/<sector>.md` inside the relevant capability skill, loaded conditionally from the scoping record.
-- **Standalone agent plugins** that bundle related capability and sector skills behind a single agent (AI governance reviewer, regulatory change analyst, third-party risk reviewer, controls testing analyst, risk reporting analyst, financial-crime governance reviewer). Each carries a primary workflow agent plus reader / critic / writer subagents.
 - **Source posture per skill.** Skills ship a `references/source-anchors.md` with the regulatory and standards citations they lean on. US-deep at v1, EU as overlay, UK as see-also.
 
 The skill set is public-source-derived and anonymous, with no firm-specific policy baked in.
+
+Standalone agent plugins (one-shot reviewers that orchestrate related skills end-to-end) are deferred from v1 to v1.x. The v1.x design adds a maker / checker loop with genuine context-isolated subagent forking, primary-plus-critic two-agent shape, and plugin dependencies in place of bundled-skill copies. See [ROADMAP.md](ROADMAP.md) for the full target shape.
 
 ### Capability plugins
 
@@ -45,17 +46,6 @@ The skill set is public-source-derived and anonymous, with no firm-specific poli
 | `capital-markets-asset-management-compliance` | SEC / FINRA adviser exam readiness, marketing-rule evidence, best-execution surveillance, fund-board reporting, plus capital-markets overlays into capability skills. |
 | `payments-fintech-compliance` | Fintech-partner controls, open-banking data controls, payment-operations incident review, payments risk assessment, plus payments overlays into capability skills. |
 
-### Standalone agent plugins
-
-| Agent plugin | Subagent pattern |
-|---|---|
-| `ai-governance-reviewer` | evidence reader / control critic / pack writer |
-| `regulatory-change-analyst` | source reader / policy mapper / challenge reviewer |
-| `third-party-risk-reviewer` | document reader / resilience critic / register writer |
-| `controls-testing-analyst` | population reader / testing critic / workpaper writer |
-| `risk-reporting-analyst` | metric reader / reporting critic / committee writer |
-| `financial-crime-governance-reviewer` | case reader / financial-crime critic / escalation writer |
-
 ## Repository layout
 
 ```text
@@ -63,10 +53,9 @@ The skill set is public-source-derived and anonymous, with no firm-specific poli
 plugins/
   capability-plugins/   # Horizontal GRC, AI / model risk, TPRM / resilience, testing, reporting, financial crime, consumer compliance
   sector-plugins/       # Banking, insurance, capital markets, payments / fintech overlays
-  agent-plugins/        # Self-contained agents with bundled skills and reader / critic / writer subagents
 docs/                   # Architecture, source map, test strategy, public examples, conventions review
-scripts/                # sync-agent-skills.py, check.py, check-skill-content.py
-internal/               # Specs, reviews, plans, templates kept for build continuity
+scripts/                # check.py, check-skill-content.py, sync-agent-skills.py (build-time tooling)
+internal/               # Specs, reviews, plans, templates kept for build continuity (gitignored)
 ```
 
 Each skill is self-contained: `plugins/<type>/<plugin>/skills/<skill>/` ships its own `SKILL.md`, `references/source-anchors.md`, sector overlays under `references/sector-overlays/`, cross-cutting overlays under `references/cross-cutting/` where applicable, `templates/default-output.md`, optional `schemas/*.schema.json`, and worked `examples/`.

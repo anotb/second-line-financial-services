@@ -2,7 +2,7 @@
 
 When the scope record names sector `insurance`, this overlay adds insurance-specific fields and review demands to the card. Where there is conflict between the capability defaults and this overlay, the overlay governs the insurance-sector elements.
 
-Source content in this overlay derives from the insurance lead's overlay snippets in the phase-1 spec sheets; mapped here into the model-card context. Cited and section-referenced anchors in `references/source-anchors.md`.
+Cited and section-referenced anchors in `references/source-anchors.md`.
 
 ## What changes for insurance model cards
 

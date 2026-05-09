@@ -63,7 +63,7 @@ The pack has a cover, an eight-section body, and a tail. Walk it in the order th
 
 ## Sector and cross-cutting overlays
 
-This skill is banking-sector-only. The `references/sector-overlays/banking.md` file carries the deeper banking-specific nuance the body keeps generic (booklet-by-booklet citation patterns, charter-specific rule cites, Heightened Standards cross-walk lines for covered banks). `references/cross-cutting/conduct.md` loads when the credit program touches consumer or small-business borrowers and second-line review needs to surface UDAAP exposure on lending practices, with an explicit pointer to route the fair-lending lens out to the consumer-compliance plugin. Climate, privacy, and cyber overlays do not load in v1.
+This skill is banking-sector-only. The `references/sector-overlays/banking.md` file carries the deeper banking-specific nuance the body keeps generic (booklet-by-booklet citation patterns, charter-specific rule cites, Heightened Standards cross-walk lines for covered banks). `references/cross-cutting/conduct.md` loads when the credit program touches consumer or small-business borrowers and second-line review needs to surface UDAAP exposure on lending practices, with an explicit pointer to route the fair-lending lens out to the consumer-compliance plugin. Climate, privacy, and cyber overlays do not load.
 
 ## Quality bar
 

@@ -18,7 +18,7 @@ The skill cites these by file path. SKILL.md does not restate excerpts.
 - Citation: NIST AI 600-1, "Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile" (July 2024), Govern 1.6 (GenAI inventory considerations) and Map 1.1 (use case context for GenAI) [verify exact subcategory numbering at decision-write time].
 - Excerpt-paraphrase: NIST AI 600-1 extends the AI RMF for GenAI-specific concerns including data provenance, hallucination, content provenance, prompt-injection exposure, training-data poisoning, and synthetic-content risk. The GenAI overlay block in this skill (foundation-model identity and pinning posture, RAG corpus and refresh cadence, tool inventory, autonomy uplift) aligns to Govern 1.6 and Map 1.1 in this profile.
 - Link: https://www.nist.gov/itl/ai-risk-management-framework — Generative AI Profile (NIST AI 600-1) [verify section]
-- Notes: Subcategory numbering confirmed at decision-write time; phase-1 spec sheet flags the verification.
+- Notes: Subcategory numbering confirmed at decision-write time.
 
 ### 3. ISO/IEC 42001:2023 — AI management system
 

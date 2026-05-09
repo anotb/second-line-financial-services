@@ -38,7 +38,7 @@ Plan sections produced (abbreviated):
 
 - **Dependencies** — bureau attribute extract for the validation window; performance-pack data feed access; fair-lending test plan output (cross-reference to consumer-compliance test cycle); override decision log access; complaint-rate data feed access.
 
-- **Timeline** — 8-week revalidation cycle with milestones (data assembly, conceptual soundness review, outcomes analysis, fairness testing, draft validation report). Deliverables: validation report (phase 3 skill), refreshed model card via `model-card-builder`, MRA / issue log entries where defects are found.
+- **Timeline** — 8-week revalidation cycle with milestones (data assembly, conceptual soundness review, outcomes analysis, fairness testing, draft validation report). Deliverables: downstream validation report, refreshed model card via `model-card-builder`, MRA / issue log entries where defects are found.
 
 - **Source trace and confidence** — every scope item cited to the source artifact (prior validation report, firm fair-lending test plan, monitoring pack 2025-09, override policy update memo 2025-Q2, scope record). Two `[evidence needed]` flags carried forward to the engagement issue log: 2025-Q2 override policy threshold change rationale (memo refers to a quantitative analysis the validator has not yet seen); two-added-states sample size for segment robustness testing (whether the sample is large enough to support a credible test).
 
@@ -49,4 +49,4 @@ Plan sections produced (abbreviated):
 - It exercises the conduct cross-cutting overlay: SHAP-based adverse action reason generation with sampling QC, complaint-rate drift in monitoring, ECOA / Reg B disparity testing in fairness scope.
 - It exercises the banking sector overlay: ECOA / Reg B adverse action surface, OCC primary regulator framing, CFPB consumer-protection authority over a large bank.
 - It exercises the validator-vs-model-owner monitoring distinction: each monitoring entry declares whether breach is a revalidation trigger or a routine operational alert. The two views overlap but are not the same.
-- The plan stops at draft. The head of model risk signs off. The validation report (phase 3) consumes this plan as its scope contract.
+- The plan stops at draft. The head of model risk signs off. The downstream validation report consumes this plan as its scope contract.

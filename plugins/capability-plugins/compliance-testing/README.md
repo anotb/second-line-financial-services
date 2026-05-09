@@ -2,7 +2,7 @@
 
 Second-line and internal-audit control testing skills for financial-services firms and the advisory teams that support them. Covers the full testing arc for a single control or test cycle: scoping, sampling, evidence ask, exception classification, workpaper drafting, and QA review. Issue write-up and downstream issue tracking live in `risk-compliance-core` (the foundational primitives plugin).
 
-## Skills (v1)
+## Skills
 
 - `control-sampling` — Sampling memo (population, stratification, method, size rationale, selection, tolerable deviation rate, sample drawn).
 - `evidence-request-builder` — Numbered, traceable evidence request list per control test or examination ask.
@@ -29,7 +29,7 @@ The supporting skills compose into the test plan and workpaper:
 
 - `skills/` — invocable Claude Code skills. New plugins use skills, not legacy `commands/`.
 - `references/` — public-source map, policy-control library, decision checkpoints, and output templates copied into this plugin so it is self-contained after installation.
-- `schemas/` — JSON schemas for test plans, controls, obligations, issues, and adjacent artifacts. Several schemas are borrowed from `risk-compliance-core` and will be reorganised as part of v1 cleanup.
+- `schemas/` — JSON schemas for test plans, controls, obligations, issues, and adjacent artifacts. Several schemas are borrowed from `risk-compliance-core`; schema dedup is tracked in [ROADMAP.md](../../../ROADMAP.md).
 
 ## Source posture
 
@@ -43,7 +43,7 @@ Skills are anchored to public, named regulatory and standards sources. Primary a
 - OCC PPM 5310-3 (compliance management systems for OCC-supervised banks). [verify exact reference and current effective date]
 - CFPB Compliance Management System Review Procedures (current Supervision and Examination Manual edition).
 
-Sector overlays (banking, insurance, capital markets, payments and fintech) and cross-cutting overlays (cyber, privacy, conduct on UDAAP-related testing) live as reference documents inside the skills they apply to. Climate is not in scope at v1 for testing-cycle work product.
+Sector overlays (banking, insurance, capital markets, payments and fintech) and cross-cutting overlays (cyber, privacy, conduct on UDAAP-related testing) live as reference documents inside the skills they apply to. Climate is out of scope for testing-cycle work product.
 
 ## Operating posture
 

@@ -10,7 +10,7 @@ description: |
   - An internal audit or ORSA review is sampling pricing governance for life or health.
 
   Not the right tool when:
-  - The product is P&C (different rate-regulation model and different unfair-discrimination posture; out of v1 scope).
+  - The product is P&C (different rate-regulation model and different unfair-discrimination posture; out of scope).
   - The exposure is fair-lending under ECOA / Reg B for a credit-insurance product underwritten via a bank channel (use `consumer-compliance-fair-lending/fair-lending-test-plan` with the insurance overlay).
   - The use case is claims AI rather than pricing or underwriting (use `ai-governance-model-risk/agentic-ai-controls` with the insurance overlay).
   - The work is reserving, IBNR, or solvency capital rather than pricing.

@@ -60,7 +60,7 @@ This skill is banking-sector-only; `references/sector-overlays/banking.md` is lo
 - `references/cross-cutting/cyber.md` is the load-bearing companion for BaaS sponsor-program and embedded-lending relationships, for any fintech that holds customer NPI or sits in the authentication or fraud-decision path, and for any fintech whose serving environment is examined under FFIEC IT Handbook expectations. The CISO function co-reviews on cyber-flagged partnerships and co-decides on residual-risk acceptance.
 - `references/cross-cutting/privacy.md` loads when the fintech receives consumer financial information from the bank or shares it with the bank. Reg P and the GLBA Safeguards Rule flow down contractually; state privacy laws (CCPA / CPRA, Texas, Virginia, Colorado) reach the partnership where the fintech operates in those footprints.
 - `references/cross-cutting/conduct.md` loads when the fintech is customer-facing on a deposit, payments, or credit product. The CFPB UDAAP examination procedures, the FDIC Compliance Examination Manual deposit-program sections, and the OCC consumer-compliance handbook drive the customer-facing-controls section's depth.
-- `references/cross-cutting/climate.md` does not load at v1.
+- `references/cross-cutting/climate.md` does not load.
 
 Loading an overlay the engagement does not implicate adds noise without challenge value. Loading none when one applies is the more common failure mode.
 

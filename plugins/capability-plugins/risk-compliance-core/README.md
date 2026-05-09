@@ -40,7 +40,7 @@ All four sectors and the cyber / privacy / conduct cross-cutting topics apply to
 
 - `skills/` — the seven skills above. Each ships its own `SKILL.md`, `references/source-anchors.md`, sector and cross-cutting overlays where applicable, `templates/default-output.md`, and (where useful) `schemas/` and `examples/`.
 - `references/` — plugin-level shared references: source map, policy and control library, named decision forums and confidence labels.
-- `schemas/` — structured-output templates for obligations, controls, and issues. Schemas borrowed from this plugin by other capability plugins move to their owning plugins in Phase 3 of the build.
+- `schemas/` — structured-output templates for obligations, controls, and issues. Each plugin self-ships the schemas its skills use, matching Anthropic's first-party self-contained pattern. Schema dedup (drop schemas a plugin's skills don't actually use) is tracked in [ROADMAP.md](../../../ROADMAP.md).
 
 ## Operating posture
 

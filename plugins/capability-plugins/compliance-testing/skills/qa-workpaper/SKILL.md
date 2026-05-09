@@ -76,7 +76,7 @@ The same QA spine carries different conventions across sectors and cross-cutting
 - `references/cross-cutting/cyber.md` is the most-loaded cross-cutting overlay. Cyber workpapers fail QA on evidence-reliability more often than financial-control workpapers; the overlay carries the vendor-supplied-scan-result reliance pattern, the screenshot-only access-review pattern, the production-versus-test environment evidence pattern, and the privileged-access tolerable-rate-floor pattern.
 - `references/cross-cutting/conduct.md` loads when the workpaper sampled a consumer-impact population. The overlay carries the conclusion-language hygiene pattern (rewriting legal-violation framing to control-effectiveness framing), the customer-harm-distinct-from-technical-control-conclusion pattern, and the UDAAP all-three-prongs consideration pattern.
 
-Privacy and climate cross-cutting overlays follow the same pattern; this skill ships cyber and conduct as the v1 cross-cutting files because they are the most frequent triggers for QA deficiencies. Where firm policy or taxonomy applies (severity floors specific to the firm, named QA-committee gates, escalation paths for QA disagreement, template variants), it lives in `references/firm-overlay.md` and is consumed when present.
+Privacy and climate cross-cutting overlays follow the same pattern; this skill ships cyber and conduct as the cross-cutting files because they are the most frequent triggers for QA deficiencies. Where firm policy or taxonomy applies (severity floors specific to the firm, named QA-committee gates, escalation paths for QA disagreement, template variants), it lives in `references/firm-overlay.md` and is consumed when present.
 
 ## Quality bar
 

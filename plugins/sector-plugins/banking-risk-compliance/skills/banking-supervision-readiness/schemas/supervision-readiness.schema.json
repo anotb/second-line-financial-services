@@ -436,7 +436,7 @@
     },
     "human_review_required": {
       "type": "boolean",
-      "description": "Always true for v1. The named lead attests; the pack is a draft until that step."
+      "description": "Always true. The named lead attests; the pack is a draft until that step."
     },
     "sign_off": {
       "type": "array",

@@ -85,7 +85,7 @@ The same row spine carries different benchmark sources and different severity ca
 - `references/cross-cutting/privacy.md` loads for privacy or data-handling policies. GLBA Safeguards, state privacy laws, Reg P, and the post-2024 Reg S-P customer-information safeguards land here.
 - `references/cross-cutting/conduct.md` loads for customer-facing policies (product approval, marketing, complaints, fair lending). CFPB UDAAP benchmarks land here.
 
-For GenAI, agentic AI, or other AI-system policy scope, the matrix benchmarks against NIST AI RMF 1.0, NIST AI 600-1, ISO/IEC 42001, the EU AI Act, and the firm's AI governance framework — those are out of scope of the joint April 2026 model-risk guidance and route to a separate workstream. Climate overlay follows the same pattern; this skill ships cyber, privacy, and conduct as v1. Granular citations (CFR sections, rule paragraphs) live in `references/source-anchors.md` and the overlay files. Firm-specific severity ladders, named committees, and firm-specific role titles live in `references/firm-overlay.md`.
+For GenAI, agentic AI, or other AI-system policy scope, the matrix benchmarks against NIST AI RMF 1.0, NIST AI 600-1, ISO/IEC 42001, the EU AI Act, and the firm's AI governance framework — those are out of scope of the joint April 2026 model-risk guidance and route to a separate workstream. Climate overlay follows the same pattern; this skill ships cyber, privacy, and conduct. Granular citations (CFR sections, rule paragraphs) live in `references/source-anchors.md` and the overlay files. Firm-specific severity ladders, named committees, and firm-specific role titles live in `references/firm-overlay.md`.
 
 ## Quality bar
 

@@ -86,7 +86,7 @@ principles:
       Reconciliation tests across credit, market, liquidity, and operational
       risk evidenced; manual workaround inventory captured (29 entries);
       climate-data lineage reviewed, including vendor-supplied scenario data
-      and ESG-provider feeds.
+      and sustainability-provider feeds.
     ecb_overlay_delta: >
       ECB Guide raises expectations on data-quality measurement and reporting
       to the management body; the firm's data-quality KPI set is current but

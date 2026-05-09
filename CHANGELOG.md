@@ -1,5 +1,33 @@
 # Changelog
 
+## 0.4.0 — 2026-05-09
+
+### Pre-launch agentic eval and fix bundle
+
+Eight-case validation eval (forked Opus maker subagent applies skill to a dummy brief; independent forked Opus checker reviews the output blind) covering 6 capability skills and the 2 most-used agent plugins. Synthesis at `internal/eval-2026-05-09/synthesis/findings.md` (gitignored). Findings: capability-skill layer is practitioner-grade; agent-plugin subagent layer is half-built (six-rule frontmatter stubs distinguished only by name; writer artifact shape and tool scope mismatched to program-level engagements; primaries under-prompt for engagement-level scoping moves).
+
+### Standalone agent plugins deferred to v1.x
+
+Six agent plugins (`ai-governance-reviewer`, `regulatory-change-analyst`, `third-party-risk-reviewer`, `controls-testing-analyst`, `risk-reporting-analyst`, `financial-crime-governance-reviewer`) pulled from v1 marketplace and held under `internal/agent-plugins-deferred/` for the v1.x revival pass. v1.x design adds a maker / checker loop with genuine context-isolated subagent forking, primary-plus-critic two-agent shape, engagement-level scoping prompts, and plugin dependencies in place of bundled-skill copies. See ROADMAP.
+
+`scripts/sync-agent-skills.py` and `scripts/check.py` updated to point at the new internal location and skip cleanly when absent. Marketplace manifest reduced from 18 to 12 entries (8 capability + 4 sector).
+
+### New cross-cutting overlay: ai-ethics
+
+`references/cross-cutting/ai-ethics.md` shipped to the 5 most load-bearing AI / model-risk skills: `genai-pre-prod-review`, `ai-use-case-intake`, `ai-risk-tiering`, `agentic-ai-controls`, `board-ai-risk-pack`. Per-skill tailored intro and pitfalls heading; body content matches existing `privacy.md` / `conduct.md` / `cyber.md` overlay structure (Source basis, Co-reviewer expectation, What changes when X is flagged with Open conditions / Monitoring readiness / Incident-response readiness / Recommended-action items, X-specific output additions, Common pitfalls). SKILL.md `Pointers` cross-cutting load list updated in all 5 skills to add `ai-ethics` to the brace expansion. Rollout to the remaining 6 AI / model-risk skills deferred to v1.1.
+
+### New cross-cutting overlay: privacy for `dora-register-builder`
+
+`references/cross-cutting/privacy.md` shipped at `dora-register-builder`. Threads GDPR (Articles 28, 30, 32, 35, 44-49, 25), SCCs (Decision 2021/914), EU-US DPF (with `[verify current adequacy status]`), EDPB Recommendations 01/2020 on supplementary measures, and national-supervisor data-protection guidance through the existing register fields (data classification, residency, sub-processor chain) without reshaping the artefact. SKILL.md `Pointers` updated to load privacy alongside cyber.
+
+### Capability skill fixes from eval
+
+- **`scoping`**: schema persona enum gains `compliance-risk-lead`; new optional `accountable_executive_role` field surfaces the running-lead vs accountable-executive split. SKILL.md and `templates/default-output.md` updated to name the split. Milestone block tightened from open list to defaulted three-row shape (kickoff, mid-engagement check, target completion); full sequencing pushed to the workplan.
+- **`sar-decision-qa`**: new `templates/sample-roll-up.md` companion template for the sample-based QA review type. Matches `default-output.md` voice and shape; tracks the multi-item table pattern used in `complaint-theme-analysis` and `udaap-risk-review`. SKILL.md `Pointers` names both templates.
+- **`fair-lending-test-plan`**: `templates/default-output.md` thickened to carry the per-test specification block (test ID, hypothesis, scope, methodology, sample, controls, decision points, evidence, AAN-coverage method) directly. Default-and-flag posture preserved; missing fields surface as `[evidence needed]` rather than blocking.
+- **`dora-register-builder`** capital-markets sector overlay: new "National-supervisor outsourcing texts (alongside DORA)" section names CSSF Circular 22/806 (Luxembourg), KAGB plus BaFin MaRisk plus KAIT (Germany), AMF Position-Recommandation 2018-04 plus DOC-2014-13 (France), CBI Cross-Industry Guidance on Outsourcing 2021 (Ireland). Each entry hedged with `[verify section]` markers. New common-pitfall added: treating DORA as the sole outsourcing reference for UCITS / AIFM entities.
+- **`genai-pre-prod-review`** conduct overlay: B2B-with-customer-flow-through trigger added as a third loading-rule bullet. Closes the trap where 1L declares a tool "internal-only" while the documents the tool acts on encode customer-facing obligations (contract content, regulatory correspondence, marketing assets, complaint files, regulatory submissions). Rollout to the other 8 conduct overlay files in `ai-governance-model-risk` deferred to v1.1.
+
 ## 0.3.0 — 2026-05-08
 
 ### Phase 2 editorial review (commit 5fd4cf6)

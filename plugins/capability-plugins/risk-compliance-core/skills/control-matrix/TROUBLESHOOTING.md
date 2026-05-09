@@ -104,4 +104,4 @@ Symptom: the skill produces a "signed-off" matrix with effectiveness ratings ass
 
 Why it happens: builder over-runs the human-review gate.
 
-Fix: the matrix is a draft until the named reviewer attests. The skill stops at the draft and surfaces the reviewer questions; it does not assert sign-off, distribute, or post to the GRC system. The `human_review_required` field is always true for v1.
+Fix: the matrix is a draft until the named reviewer attests. The skill stops at the draft and surfaces the reviewer questions; it does not assert sign-off, distribute, or post to the GRC system. The `human_review_required` field is always true.

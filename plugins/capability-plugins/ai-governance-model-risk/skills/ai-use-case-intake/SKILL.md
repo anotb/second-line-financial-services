@@ -111,7 +111,7 @@ Downstream consumers: `ai-risk-tiering` reads the structured object to score the
 
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
 - `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md` — sector overlays loaded from scope.
-- `references/cross-cutting/{cyber,privacy,conduct}.md` — cross-cutting overlays loaded from scope.
+- `references/cross-cutting/{cyber,privacy,conduct,ai-ethics}.md` — cross-cutting overlays loaded from scope.
 - `references/firm-overlay.md` — firm policy, taxonomy, named owners, AI inventory schema extensions (consumed when present).
 - `templates/default-output.md` — intake-record template.
 - `schemas/ai-use-case-intake.schema.json` — structured-output contract.

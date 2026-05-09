@@ -80,7 +80,7 @@ Symptom: the plan reads as if it has executed the validation rather than scoped 
 
 Why it happens: the planner conflates the plan with the report; or the planner is repurposing the prior cycle's report into a new plan.
 
-Fix: the validation plan is the validator's scope contract before testing. The validation report (phase 3) consumes the plan and records execution. The plan does not assert results; it scopes what tests will run and what success looks like. If results are already in hand, route to the validation-report skill, not to the plan skill.
+Fix: the validation plan is the validator's scope contract before testing. The downstream validation report consumes the plan and records execution. The plan does not assert results; it scopes what tests will run and what success looks like. If results are already in hand, route to the validation-report skill, not to the plan skill.
 
 ## Tier and depth disagree silently
 

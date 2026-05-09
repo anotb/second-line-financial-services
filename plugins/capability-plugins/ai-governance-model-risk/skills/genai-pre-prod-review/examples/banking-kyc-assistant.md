@@ -70,7 +70,7 @@ Sections produced (abbreviated):
 
 ## Why this scenario matters
 
-- The scenario is a v1 archetype for the gate review: tier-1 GenAI use case where every upstream artifact is current and the gate review is the integration motion, not the diagnostic motion. Most pre-prod gate failures land here, not in artifact gaps.
+- The scenario is an archetype for the gate review: tier-1 GenAI use case where every upstream artifact is current and the gate review is the integration motion, not the diagnostic motion. Most pre-prod gate failures land here, not in artifact gaps.
 - The blocking-versus-tracking distinction is load-bearing: without it, "go-with-conditions" is no-go in disguise or is permission to defer. The scenario shows three legitimate blocking items (IR drill, version pinning, baseline), and two legitimate tracking items.
 - The sign-off block has six named roles, each with explicit position; the single-name sign-off failure mode is avoided by construction.
 - The sector overlay (banking) brings the BSA officer in as co-signer and adds the 36-hour banking computer-security incident notification rule alongside the cyber-overlay-named NYDFS and SEC triggers; the overlay is consumed, not background reading.

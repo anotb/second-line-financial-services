@@ -78,4 +78,4 @@ Where two or more tracks run concurrently (CFPB non-bank exam + state money-tran
 
 ## When this overlay applies and when it does not
 
-This overlay applies for the engagement playbook on payments and fintech examinations. There is no separate sector exam-readiness skill for payments-fintech in this plugin set as of phase 2; the substantive readiness work runs against the firm's existing program with this overlay framing the engagement-side mechanics. If a future `sector-plugins/payments-fintech-supervision/non-bank-exam-readiness` skill is added, the substantive readiness sprint moves there and this overlay continues to carry the engagement playbook.
+This overlay applies for the engagement playbook on payments and fintech examinations. There is no separate sector exam-readiness skill for payments-fintech in this plugin set; the substantive readiness work runs against the firm's existing program with this overlay framing the engagement-side mechanics. If a future `sector-plugins/payments-fintech-supervision/non-bank-exam-readiness` skill is added, the substantive readiness sprint moves there and this overlay continues to carry the engagement playbook.

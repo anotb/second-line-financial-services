@@ -82,7 +82,7 @@ Re-tiering triggers are named events with monitoring owners. Dates do not earn a
 
 ### Sector and cross-cutting overlays
 
-When the scope names a sector, load the matching `references/sector-overlays/<sector>.md`. The overlay's tier-elevation criteria land in the per-factor justifications. Same pattern for the cross-cutting overlays this skill carries: cyber and privacy. Conduct lives inside the rubric directly because conduct exposure is a named factor; the cross-cutting `references/cross-cutting/conduct.md` is consulted where the conduct lens needs more depth than the factor row carries. Climate is not applicable to AI tiering.
+When the scope names a sector, load the matching `references/sector-overlays/<sector>.md`. The overlay's tier-elevation criteria land in the per-factor justifications. Same pattern for the cross-cutting overlays this skill carries: cyber, privacy, and ai-ethics. Conduct lives inside the rubric directly because conduct exposure is a named factor; the cross-cutting `references/cross-cutting/conduct.md` is consulted where the conduct lens needs more depth than the factor row carries. The ai-ethics overlay sits alongside the conduct factor rather than collapsing into it; the harm classes it surfaces (representational, dignitary, autonomy-related, attributable-misrepresentation, vulnerable-population-specific) are not all captured by the disparate-impact framing the conduct factor primarily carries. Climate is not applicable to AI tiering.
 
 Load only the overlays the scope names. Gold-plating a tier with overlays the engagement does not implicate adds noise without challenge value.
 
@@ -113,7 +113,7 @@ Downstream consumers: `model-card-builder` pulls the tier and overlay flags to s
 
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
 - `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md` — sector overlays loaded from scope.
-- `references/cross-cutting/{cyber,privacy}.md` — cross-cutting overlays loaded from scope; conduct lives in the factor row.
+- `references/cross-cutting/{cyber,privacy,ai-ethics}.md` — cross-cutting overlays loaded from scope; conduct lives in the factor row.
 - `references/firm-overlay.md` — firm tier names, cutoffs, named committees, validation-depth mapping (consumed when present).
 - `templates/default-output.md` — tier-record template.
 - `schemas/risk-tier.schema.json` — structured-output contract.

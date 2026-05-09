@@ -68,13 +68,13 @@ Specific to this matrix. Tied to specific gates, gaps, or independence concerns.
 
 A short narrative summarising the gate flow for the committee that adopts the matrix. Decision authority, gate sequence, escalation, documentation. Reads as readable prose for a board or committee that does not read matrices line by line.
 
-> [Narrative — three to four short paragraphs, written in committee-pack voice. Names the workflow, the primary committee, the gate sequence, the escalation pattern, the documentation discipline, and the source basis. Optional in v1; populated when the engagement is standing up or refreshing committee adoption material.]
+> [Narrative — three to four short paragraphs, written in committee-pack voice. Names the workflow, the primary committee, the gate sequence, the escalation pattern, the documentation discipline, and the source basis. Optional; populated when the engagement is standing up or refreshing committee adoption material.]
 
 ## Recommended charter language
 
 Suggested wording the committee charter or policy section can adopt directly. Reads as charter prose, not as matrix commentary.
 
-> [Charter prose — typically a three-paragraph block. Paragraph 1: committee purpose and decision authority. Paragraph 2: gate sequence and stop-condition discipline. Paragraph 3: escalation, dissent, documentation, and review cadence. Optional in v1; populated when the scope flags charter-refresh as in scope.]
+> [Charter prose — typically a three-paragraph block. Paragraph 1: committee purpose and decision authority. Paragraph 2: gate sequence and stop-condition discipline. Paragraph 3: escalation, dissent, documentation, and review cadence. Optional; populated when the scope flags charter-refresh as in scope.]
 
 ## Source trace
 
