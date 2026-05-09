@@ -14,8 +14,6 @@ description: |
   - The artifact is a single KRI commentary; use `kri-commentary`.
   - The artifact is a one-off data-quality issue write-up; use `risk-compliance-core/skills/issue-writeup`.
   - The work is enterprise data governance generally. BCBS 239 is risk-data anchored. SOX 404 financial-reporting data quality is a different regime.
-
-  Anchored to: BCBS 239 (January 2013), BCBS Progress Reports on the implementation of the principles, ECB Guide on effective risk data aggregation and risk reporting (May 2024), FRB SR 12-17, FRB SR 21-19, OCC Heightened Standards (12 CFR Part 30 Appendix D), Basel III monitoring exercise. Citations and excerpts live in `references/source-anchors.md`.
 argument-hint: "[engagement scope, prior assessment, risk-data inventory, MRA/MRIA register, system-tracing evidence, reconciliation tests, or scenario]"
 ---
 
@@ -100,17 +98,17 @@ The four group ratings roll up from the principle ratings within each group; the
 
 Sector overlays (`references/sector-overlays/banking.md` is the primary; `insurance.md`, `capital-markets.md`, `payments-fintech.md` are light overlays for cases where a non-bank entity adopts BCBS 239 voluntarily or where a broker-dealer subsidiary inherits the parent's posture) load when the engagement scope names the sector. Cross-cutting overlays (`references/cross-cutting/cyber.md`, `climate.md`) load when the engagement scope flags the topic. The overlay's named criteria land inside the principle blocks they apply to (climate-data lineage inside Principle 3 and 6; cyber-control failures affecting risk-data infrastructure inside Principle 1 and 2). Loading overlays the engagement does not implicate adds noise without challenge value.
 
-## What's load-bearing and what flexes
-
-A handful of things do not flex.
+## Quality bar
 
 Every material claim cites a source. Unsupported items carry `[evidence needed]` and route to the engagement issue log, not silently into the assessment. Evidence is separated from inference; vendor self-attestation is not on the same line as firm-independent evaluation; document review is not on the same line as a passing reconciliation test. Ratings in groups B and C cannot rest on document review and interviews alone; at least one reconciliation test or system trace per principle is needed to defend a rating above `materially-non-compliant`. Principle 6 above `materially-non-compliant` requires evidence of recent ad-hoc and stress-scenario runs within the required timeframe. Open MRAs and MRIAs related to risk data are linked under Principle 13 and reflected in the principle they apply to. The assessment is a draft until the head of risk data, head of regulatory reporting, CRO, and (where reviewing) chief internal auditor attest; the skill stops at draft.
 
-Everything else adapts. Audience drives tone (CRO and CDO read the executive summary; the data-management committee reads the body; the Risk Committee reads the priority-gap section and the open-issue linkage; internal audit reads the methodology and source trace; an examiner reads the whole thing). Depth flexes with engagement type (a regulator-driven self-assessment runs deep; a post-acquisition refresh focuses on the principles the change implicates). Per-entity rating is allowed where it tells a more honest story than a group-level average; document the rationale. Confidence label is methodology-anchored, not finding-anchored; a `high` label requires multi-line evidence per principle in groups B and C.
+## Adaptation
+
+Audience drives tone (CRO and CDO read the executive summary; the data-management committee reads the body; the Risk Committee reads the priority-gap section and the open-issue linkage; internal audit reads the methodology and source trace; an examiner reads the whole thing). Depth flexes with engagement type (a regulator-driven self-assessment runs deep; a post-acquisition refresh focuses on the principles the change implicates). Per-entity rating is allowed where it tells a more honest story than a group-level average; document the rationale. Confidence label is methodology-anchored, not finding-anchored; a `high` label requires multi-line evidence per principle in groups B and C.
 
 ## Output
 
-Two artifacts: the assessment per `templates/default-output.md`, and the structured record per `schemas/bcbs239-gap-assessment.schema.json`. The structured record is the cross-skill contract; additive changes only between minor versions, never silent renames. Downstream consumers: `risk-committee-pack` pulls the overall rating, the top-five priority gaps, and the data-confidence label for the data-confidence appendix; `attestation-pack` pulls the linked-issues and sign-off block; `kri-commentary` pulls the per-principle posture for KRI commentary on data-quality KRIs.
+Default to drafting against `templates/default-output.md`. Render as Word, Excel, PowerPoint, or Markdown when the audience or workflow asks for it; a regulator-facing self-assessment usually rides as a Word memo with the per-principle rating grid in Excel, while a Risk Committee read-out collapses to a deck. Produce the structured record at `schemas/bcbs239-gap-assessment.schema.json` when downstream automation or a registered consumer needs it. The schema is the cross-skill contract; additive changes only between minor versions, never silent renames. Downstream consumers: `risk-committee-pack` pulls the overall rating, the top-five priority gaps, and the data-confidence label for the data-confidence appendix; `attestation-pack` pulls the linked-issues and sign-off block; `kri-commentary` pulls the per-principle posture for KRI commentary on data-quality KRIs.
 
 The reviewer attestation is filled by the human reviewer, not the skill. The assessment files only after attestation.
 

@@ -50,7 +50,7 @@ NACHA Operating Rules and the card-network rulebooks (Visa Core Rules, Visa Prod
 
 - **FinCEN MSB rules, 31 CFR Part 1022**. Subpart A definitions and registration (§1022.380 registration requirements; the categorical determination of MSB status is fact-specific against the FinCEN administrative-ruling library and is not a matter the artifact should assert categorically). Subpart B program rules (§1022.210 written AML program). Subpart C reporting (§1022.320 SAR filing duties; threshold $2,000 generally and $5,000 with information about a possible insider [verify current thresholds]). https://www.ecfr.gov/current/title-31/subtitle-B/chapter-X/part-1022 .
 
-- **FinCEN MSB registration**, 31 CFR §1010.380. Initial registration within 180 days of becoming an MSB; renewal every two years. https://www.ecfr.gov/current/title-31/subtitle-B/chapter-X/part-1010/subpart-D/section-1010.380 .
+- **FinCEN MSB registration**, 31 CFR §1022.380. Initial registration within 180 days of becoming an MSB; renewal every two years. https://www.ecfr.gov/current/title-31/subtitle-B/chapter-X/part-1022/subpart-D/section-1022.380 .
 
 - **Money Transmitter Modernization Act (MTMA) — Conference of State Bank Supervisors (CSBS) model law** [verify section and state-by-state adoption status on the analysis date]. Many state money-transmitter regimes require notification of material operational incidents to the state regulator, often through NMLS. Notification thresholds, content, and timing vary state-by-state; verify per state in the geographic footprint. https://www.csbs.org/mtma .
 

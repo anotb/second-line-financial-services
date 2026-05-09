@@ -14,8 +14,6 @@ description: |
   - The work is the prompt-injection threat-surface review; use prompt-injection-risk. The two skills sit side by side for a RAG agent and reference each other.
   - The work is the corpus access-control review only; use the cyber and privacy overlays inside vendor-diligence or genai-pre-prod-review.
   - The work is the firm-side governance card for the use case; use model-card-builder. This skill consumes the card and produces the focused memo.
-
-  Anchored to: US interagency model risk management guidance, NIST AI RMF and the Generative AI Profile, ISO/IEC 42001, EU AI Act data-governance requirements where applicable, FFIEC IT Examination Handbook, NAIC Model Bulletin on AI in insurance, SEC Marketing Rule, NYDFS AI guidance, GLBA Safeguards Rule, HIPAA, CFPB UDAAP framework. Industry-practice grounding-evaluation metric families (RAGAS-style: faithfulness, answer relevance, context precision, context recall, citation precision, refusal rate) are referenced as practitioner standard, not as binding regulation. Citations and excerpts live in `references/source-anchors.md`.
 argument-hint: "[use-case ID, model-card record, validation-plan record, vendor evaluation report, firm evaluation report, monitoring evidence, or scope statement]"
 ---
 
@@ -23,11 +21,11 @@ argument-hint: "[use-case ID, model-card record, validation-plan record, vendor 
 
 A RAG evaluation review is the second-line judgement on whether a retrieval-augmented GenAI system can be relied on for its stated use. The work names the corpus the system actually retrieves over (per source, not per label), the metric framework used to evaluate retrieval and grounding (with semantics documented), the failure modes catalogued, the mitigations in place with evidence, the residual risk with framing, the production monitoring with a ground-truth pipeline, and the gaps that need to close. The reliance assertion is the headline; everything else supports it.
 
-Two regulator perspectives sit on this work and they need to be kept distinct. The model-risk validation expectations (the named anchors carry binding language for in-scope models at federally regulated banks) apply where the firm's model risk programme treats the GenAI use case as a model. The broader AI-management and information-integrity framings (NIST and ISO anchors) are voluntary and leading-practice. The metric family in widest practitioner use (the RAGAS-style families: faithfulness, answer relevance, context precision, context recall) is **industry practice, not regulator language**; no US financial-services regulator names these metrics in published guidance. Any equivalent named framework or in-house equivalent is acceptable as long as the metric semantics are documented. Be explicit in the review about which expectations carry binding regulator language and which carry industry-practice weight; over-claiming on either side is a finding.
+Three regulator perspectives sit on this work and they need to be kept distinct. The US interagency model-risk guidance (the joint OCC/FRB/FDIC revised guidance issued April 2026) carries binding language for in-scope statistical and quantitative models at supervised banks; that guidance expressly excludes generative AI and agentic AI from its scope, so a RAG system is not within it. Where the firm's model risk programme treats the RAG use case as a model by analogy, the principles still inform but the binding hook is firm policy, not the bulletin. The AI-specific framings (NIST AI RMF, NIST AI 600-1, ISO/IEC 42001) are voluntary and leading-practice; they are the substantive anchors for grounding evaluation, retrieval quality, and corpus governance. The metric family in widest practitioner use (the RAGAS-style families: faithfulness, answer relevance, context precision, context recall) is **industry practice, not regulator language**; no US financial-services regulator names these metrics in published guidance. Any equivalent named framework or in-house equivalent is acceptable as long as the metric semantics are documented. Be explicit in the review about which expectations carry binding regulator language and which carry industry-practice weight; over-claiming on either side is a finding.
 
 The audience reads from three angles. The AI Governance Lead owns the artefact and consolidates the analysis. The MRMO function inherits the model-risk seam and challenges the residual-risk view; for any in-scope use case the MRMO is a co-acceptor on residual risk. The model owner is the source of upstream evidence (model card, validation plan, vendor evaluation results, monitoring data) and is the operational counterpart for the recommended actions.
 
-The memo is a draft until the human reviewer attests. Sign-off is the gate; this skill stops short.
+The memo is a draft until the human reviewer attests. The skill stops short of filing or approving it.
 
 ## Ask first
 
@@ -85,30 +83,33 @@ Climate is not applicable.
 
 Load only the overlays the engagement scope names. Gold-plating with overlays the engagement does not implicate adds noise without challenge value.
 
-## What's load-bearing and what flexes
+## Quality bar
 
-A handful of things do not flex.
+The memo is only credible when these hold:
 
 - Every material claim cites a source. Unsupported items carry `[evidence needed]` and route to recommended actions, not silently into the memo body.
 - Evidence is separated from inference. Vendor-supplied evaluation results are not the same line as firm-internal SME-adjudicated results; vendor self-attestation confidence is recorded explicitly.
 - No fabricated regulatory facts. Unknown section references carry `[verify section]` in the source-anchors file (not in the memo body).
 - Per-source corpus enumeration is non-optional. A "corpus" that is actually multiple sources records as multiple rows.
-- Citation precision must be defined as supports-the-claim, not contains-a-marker. The metric definition field carries the documentation.
+- Citation precision is defined as supports-the-claim, not contains-a-marker. The metric definition field carries the documentation.
 - Refusal rate requires a labelled out-of-scope test set. Without it the metric is meaningless and routes to recommended actions.
-- Segment-level reporting on grounding metrics is required at minimum by query type and by corpus; by population dimension where the use case has one.
+- Segment-level reporting on grounding metrics covers query type and corpus at minimum; population dimension where the use case has one.
 - Mitigations without evidence pointers route to recommended actions. They do not count as coverage.
-- Residual risk requires likelihood, impact, and basis. Rating without basis is opinion.
-- Monitoring entries require all five fields (signal, sampling cadence, ground-truth pipeline, owner, escalation path). User-feedback thumbs alone is not a ground-truth pipeline.
-- Foundation-model swap re-validation flag is a non-optional recommended action for any architecture depending on a third-party foundation model.
+- Residual risk carries likelihood, impact, and basis. Rating without basis is opinion.
+- Monitoring entries carry all five fields (signal, sampling cadence, ground-truth pipeline, owner, escalation path). User-feedback thumbs alone is not a ground-truth pipeline.
+- Foundation-model swap re-validation is a non-optional recommended action for any architecture depending on a third-party foundation model.
 - The grounding-evaluation metric vocabulary is industry practice, not regulator language. The review does not over-claim binding regulator endorsement of any specific metric framework; it cites the underlying validation expectations and applies the practitioner-standard framing.
+- No named institutions outside finalised public enforcement actions; examples are anonymised and public-source-derived.
 - Reviewer roles are functions, never named individuals.
-- The memo is a draft until the human reviewer attests. The skill does not assert sign-off, file the memo, post to the AI risk committee, or trigger an incident-response runbook.
+- The memo is a draft until the human reviewer attests. The skill does not file the memo, post to the AI risk committee, or trigger an incident-response runbook.
 
-Everything else adapts to context. Tier drives depth. Lifecycle stage drives which sections lean heavy. Audience drives tone (working group is plain, committee is structured, examiner response is formal, board distillation pulls residual risk and recommended actions to the front). Sector and cross-cutting overlays load from the engagement scope. Where firm-specific policy or taxonomy applies (named metric framework, named ground-truth pipeline, named owners), it lives in `references/firm-overlay.md` (consumed when present) and never in the memo directly.
+## Adaptation
+
+Tier drives depth. Lifecycle stage drives which sections lean heavy. Audience drives tone (working group is plain, committee is structured, examiner response is formal, board distillation pulls residual risk and recommended actions to the front). Sector and cross-cutting overlays load from the engagement scope. Source posture sets what the memo can assert at high confidence and what carries `[evidence needed]`. Where firm-specific policy or taxonomy applies (named metric framework, named ground-truth pipeline, named owners), it lives in `references/firm-overlay.md` (consumed when present) and never in the memo directly.
 
 ## Output
 
-Two artefacts: the memo per `templates/default-output.md`, and the structured object per `schemas/rag-evaluation-review.schema.json`. The reviewer-attestation block is filled by the human reviewer (AI Governance Lead with MRMO co-acceptance for in-scope use cases; co-acceptors per sector and cross-cutting overlay where applicable); the memo is filed only after.
+Default to drafting the memo against `templates/default-output.md`. Render as Word for committee review, or another format the audience asks for. Produce the structured record at `schemas/rag-evaluation-review.schema.json` when downstream consumers (`genai-pre-prod-review`, `board-ai-risk-pack`, `ai-governance-reviewer`) need it. The reviewer-attestation block is filled by the human reviewer (AI Governance Lead with MRMO co-acceptance for in-scope use cases; co-acceptors per sector and cross-cutting overlay where applicable); the memo is filed only after.
 
 Downstream consumers: `genai-pre-prod-review` consumes the structured object for the gate decision; `board-ai-risk-pack` pulls the residual-risk summary and the recommended-actions list; the `ai-governance-reviewer` agent pulls the structured object for second-line challenge; the firm's model risk programme consumes the review as input to the validation file. The schema is the input contract for those consumers; additive changes only.
 

@@ -1,6 +1,6 @@
 # Source anchors: policy-diff
 
-This file holds the named, dated regulatory and professional-standard sources the policy-diff skill anchors to. The SKILL.md file does not restate these citations beyond the activation-tuned description's "Anchored to:" line. Firm-specific anchors (a firm's own policy lifecycle, named approver titles, committee charters, policy-management system) belong in `references/firm-overlay.md`.
+This file holds the named, dated regulatory and professional-standard sources the policy-diff skill anchors to. SKILL.md cites this file by path and does not restate excerpts. Firm-specific anchors (a firm's own policy lifecycle, named approver titles, committee charters, policy-management system) belong in `references/firm-overlay.md`.
 
 `[verify section]` placeholders mark anchors where the precise section reference still needs verification against the current edition of the source. They are deliberate, not omissions.
 
@@ -44,21 +44,30 @@ What this skill relies on: that diffs against risk-reporting-supporting policies
 
 ## Model-risk policy lifecycle
 
-### SR 11-7 / OCC Bulletin 2011-12 — Supervisory Guidance on Model Risk Management (Federal Reserve and OCC, April 4, 2011)
+### Joint Interagency Revised Guidance on Model Risk Management — OCC Bulletin 2026-13 / FRB SR 26-2 / FDIC FIL-15-2026 (April 17, 2026)
 
-Anchor: §VI (governance, policies, controls — including the policy on model risk management itself; review cadence; named-role expectations). [verify section labels against the published letter.]
+Anchor: Section II (definitions, scope, the threshold relevance for banking organizations over $30 billion in total assets); sections covering model identification and inventory, validation, ongoing monitoring, governance. The joint guidance is one document issued through three agency channels with the same date, text, and signatories. It supersedes and replaces SR 11-7 / OCC Bulletin 2011-12 (April 4, 2011) and SR 21-8 (April 9, 2021).
 
-What this skill relies on: that diffs of model-risk policies carry §VI's named-role and review-cadence expectations; that material changes to a model-risk policy almost always route to the model risk committee or equivalent and trigger a refresh of the model inventory's policy-version field.
+What this skill relies on: that diffs of model-risk policies post-April 17, 2026 carry the joint guidance refresh; that the supersession of SR 11-7 and SR 21-8 itself is a material policy-version event for any firm whose prior model-risk policy cited those documents by name; that the named-role and review-cadence expectations sit inside the governance, ongoing-monitoring, and inventory sections of the revised guidance and that material changes to a model-risk policy generally route to the model risk committee or equivalent.
 
-- Link with section: https://www.federalreserve.gov/supervisionreg/srletters/sr1107.htm — §VI governance.
+Caveats:
 
-### OCC Bulletin 2026-13 — Revised Interagency Model Risk Management Guidance (2026)
+- The joint guidance is non-binding (does not set forth enforceable standards or prescriptive requirements; non-compliance does not result in supervisory criticism per Section I, footnote 1) and is "expected to be most relevant to banking organizations with over $30 billion in total assets." For smaller institutions the diff records the relevance posture explicitly.
+- Generative AI and agentic AI models are explicitly out of scope (footnote 3 of the joint guidance text). The principles cover only traditional statistical / quantitative models and non-generative, non-agentic AI models. Where a firm's version B introduces GenAI or agentic-AI provisions in the model-risk policy, those provisions do not draw their authority from this bulletin; the diff routes the AI-system materiality call to NIST AI RMF, NIST AI 600-1, ISO/IEC 42001, or the EU AI Act as the operative anchor for those provisions, with the bulletin cited as analogous principle reference only.
+- The bulletin contains zero references to NIST AI RMF or NIST AI 600-1; do not assert the bulletin incorporates them.
 
-Anchor: §III (refreshed control environment, third-party model controls, AI-system extensions). [verify section labels against the published bulletin.]
+### Superseded — SR 11-7 / OCC Bulletin 2011-12 (April 4, 2011) and SR 21-8 (April 9, 2021)
 
-What this skill relies on: that diffs of model-risk policies post-2026 carry the OCC Bulletin 2026-13 refresh; that AI-system policy provisions are new sections in version B for many firms and carry material materiality calls.
+Retained as citation anchors only because legacy version-A policies, prior-cycle audit reports, and pre-April-17-2026 examination evidence frequently reference these documents by name. Cite as superseded when reading historical evidence; the operative current standard is the joint interagency revised guidance above.
 
-- Link with section: https://www.occ.gov/news-issuances/bulletins/ — OCC Bulletin 2026-13 §III.
+- https://www.federalreserve.gov/supervisionreg/srletters/sr1107.htm
+- https://www.federalreserve.gov/supervisionreg/srletters/SR2108.htm
+
+Links to operative joint guidance:
+
+- https://occ.gov/news-issuances/bulletins/2026/bulletin-2026-13a.pdf
+- https://www.federalreserve.gov/supervisionreg/srletters/SR2602.htm
+- https://www.fdic.gov/news/financial-institution-letters/2026/agencies-revise-interagency-model-risk-management-guidance
 
 ## Compliance-program written-policy lifecycle
 

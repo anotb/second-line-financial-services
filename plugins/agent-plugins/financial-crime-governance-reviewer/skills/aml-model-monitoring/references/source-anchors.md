@@ -6,29 +6,28 @@ Named, dated regulatory and supervisory sources the AML model-monitoring review 
 
 ## Model risk supervisory guidance — applied to AML transaction monitoring as a model
 
-### SR 11-7 / OCC Bulletin 2011-12 — Supervisory Guidance on Model Risk Management (Federal Reserve and OCC, April 4, 2011)
+### Joint Interagency Revised Guidance on Model Risk Management — OCC Bulletin 2026-13 / FRB SR 26-2 / FDIC FIL-15-2026 (April 17, 2026)
 
-Anchor: Section III (Model Development, Implementation, and Use), Section IV (Model Validation), Section V (Governance, Policies, and Controls). [verify subsection labels in the current edition.]
+Anchor: Section II (definitions, scope, threshold relevance for banking organizations over $30 billion in total assets); sections covering model identification and inventory, validation requirements, ongoing monitoring expectations, and governance. The joint guidance is one document issued through three agency channels with the same date, text, and signatories. It supersedes and replaces SR 11-7 / OCC Bulletin 2011-12 (Supervisory Guidance on Model Risk Management, April 4, 2011) and SR 21-8 (Interagency Statement on Model Risk Management for Bank Systems Supporting Bank Secrecy Act / Anti-Money Laundering Compliance, April 9, 2021). For AML transaction monitoring, the supersession of SR 21-8 is the consequential change: the bank-AML-specific prescription has been withdrawn and the general principles in the revised joint guidance now cover BSA/AML model use.
 
-What this skill relies on: that AML transaction-monitoring systems sit inside the model-risk perimeter (the guidance defines a model as a quantitative method that applies statistical, economic, financial, or mathematical theories, techniques, and assumptions to process input data into output — AML scenarios, thresholds, segmentation, and tuning all qualify); that ongoing monitoring, effective challenge, and validation are program-level expectations, not optional; and that governance over scenario change, threshold change, and segmentation refresh requires documented review and challenge.
+What this skill relies on: that AML transaction-monitoring systems sit inside the model-risk perimeter under the joint guidance's definition (a complex quantitative method, system, or approach that applies statistical, economic, or financial theories to process input data into quantitative estimates — AML scenarios, thresholds, segmentation, and tuning all qualify, while deterministic rule-based processes without statistical, economic, or financial theory are explicitly out of scope per Section II); that ongoing monitoring, effective challenge, and validation are program-level expectations; and that governance over scenario change, threshold change, and segmentation refresh requires documented review and challenge under the inventory and ongoing-monitoring expectations.
 
-Link: https://www.federalreserve.gov/supervisionreg/srletters/sr1107.htm
+Caveats the memo carries:
 
-### OCC Bulletin 2026-13 — Revised Interagency Model Risk Management Guidance (2026)
+- The joint guidance is non-binding (does not set forth enforceable standards or prescriptive requirements; non-compliance does not result in supervisory criticism per Section I, footnote 1) and is "expected to be most relevant to banking organizations with over $30 billion in total assets." Smaller institutions still draft against it as the prevailing supervisory expectation, but the memo records the relevance posture explicitly rather than asserting a uniform standard.
+- Generative AI and agentic AI models are explicitly out of scope (footnote 3 of the joint guidance text). The principles cover only traditional statistical / quantitative models and non-generative, non-agentic AI models. Where the AML monitoring stack incorporates GenAI components (LLM-driven typology classification, agentic alert triage, RAG-enhanced narrative generation, embedding-based segmentation), AI scope routes to NIST AI RMF, NIST AI 600-1 GenAI Profile, and the EU AI Act for relevant exposure, not to the bulletin. The QA names the route explicitly rather than collapsing GenAI components into the model-risk frame.
+- The joint guidance contains zero references to NIST AI RMF or NIST AI 600-1. NIST instruments are voluntary and non-bank-supervisory; the QA cites them as analogous principle reference where AI-system governance is the artifact's subject, not as the controlling federal model-risk standard.
 
-Anchor: Sections covering model identification and inventory, validation requirements, ongoing monitoring expectations, and governance. [verify section labels and effective date as repo references mature; this revises the 2011 interagency guidance.]
+Links:
 
-What this skill relies on: the revised inventory expectation (AML transaction monitoring identified explicitly as a model in the firm's inventory), the expanded ongoing-monitoring expectations on scenario performance and benchmarking, and the strengthened governance over change and effective challenge.
+- https://occ.gov/news-issuances/bulletins/2026/bulletin-2026-13a.pdf (OCC bulletin guidance text PDF)
+- https://www.occ.treas.gov/news-issuances/bulletins/2026/bulletin-2026-13.html (OCC bulletin landing page)
+- https://www.federalreserve.gov/supervisionreg/srletters/SR2602.htm (FRB SR 26-2)
+- https://www.fdic.gov/news/financial-institution-letters/2026/agencies-revise-interagency-model-risk-management-guidance (FDIC FIL-15-2026)
 
-Link: https://www.occ.gov/news-issuances/bulletins/2026/bulletin-2026-13.html
+### Superseded — SR 11-7 / OCC Bulletin 2011-12 and SR 21-8
 
-### FDIC Financial Institution Letter — Revised Interagency Model Risk Management Guidance (2026)
-
-Anchor: FDIC FIL adopting the revised interagency MRM guidance. [verify FIL number and section labels.]
-
-What this skill relies on: confirmation that the revised guidance applies to FDIC-supervised institutions on the same terms.
-
-Link: https://www.fdic.gov/news/financial-institution-letters/2026/agencies-revise-interagency-model-risk-management-guidance
+Retained as a citation anchor only because legacy validation reports, prior-cycle memos, and pre-April-17-2026 examination evidence frequently reference these documents by name. Cite as superseded when reading historical evidence; do not cite as the operative current standard. SR 11-7 (https://www.federalreserve.gov/supervisionreg/srletters/sr1107.htm) covered model risk management generally; SR 21-8 (https://www.federalreserve.gov/supervisionreg/srletters/SR2108.htm) was the AML-specific interagency statement.
 
 ## BSA/AML examination expectations on transaction monitoring
 

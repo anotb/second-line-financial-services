@@ -4,7 +4,7 @@ When the engagement-scope record names `banking` as the sector, this overlay add
 
 ## Source basis
 
-- SR 11-7 / OCC Bulletin 2026-13 model risk framing where the bank's model risk programme treats the GenAI use case as in scope; the pre-prod gate exercises §III to V of the supervisory expectation.
+- The joint interagency Revised Guidance on Model Risk Management (OCC 2026-13 / FRB SR 26-2 / FDIC FIL-15-2026, April 17 2026; supersedes SR 11-7 and SR 21-8) for traditional non-generative components in scope. The bulletin expressly excludes generative AI and agentic AI from its scope (footnote 3); for the GenAI use case itself the firm's model risk programme reaches it by analogy at firm policy level, and the pre-prod gate exercises the governance, validation, and documentation expectations the firm has elected to apply.
 - Joint Interagency Guidance on Third-Party Relationships (June 2023; OCC Bulletin 2023-17 / FRB SR 23-4 / FDIC FIL-29-2023) where the GenAI system is vendor-hosted or relies on a foundation-model provider.
 - 12 CFR Part 30 Appendix D (OCC Heightened Standards) for OCC-supervised large banks where the GenAI use case sits inside a risk-appetite-statement-relevant function; the chief risk executive function signs the residual-risk acceptance.
 - 12 CFR Part 53 (OCC), 12 CFR Part 225 Subpart N (FRB), 12 CFR Part 304 (FDIC) — the 36-hour banking computer-security incident notification rule (effective 2022).

@@ -2,7 +2,9 @@
 
 Cited regulatory sources this skill anchors to. Every primary anchor names the source, the section reference (or `[verify section]` flag), a one-paragraph excerpt or paraphrase of the relevant content, and the link.
 
-The skill cites these by file path. SKILL.md does not restate excerpts.
+The skill body cites these by file path; this file carries the citations.
+
+A practitioner note before the list: the model-risk anchors and the AI-specific anchors are distinct and load against different parts of the card. The US interagency model-risk guidance (SR 11-7 and the 2026 revised guidance, OCC Bulletin 2026-13 and the parallel FDIC and FRB issuances) covers the model-card baseline for traditional statistical or quantitative models in scope of bank model-risk programs. The 2026 bulletin expressly excludes generative AI and agentic AI from its scope; for the GenAI overlay in this card (foundation-model dependence, RAG corpus, tool use, prompt-injection robustness, content provenance, autonomy-level uplift) the binding anchors are the AI-specific frameworks (NIST AI RMF, NIST AI 600-1, ISO/IEC 42001) and the sector and cross-cutting overlays (NAIC AI Bulletin, NYDFS October 2024 letter, EU AI Act where applicable). Be explicit about which scope is in play in any individual card.
 
 ## Primary anchors
 
@@ -15,10 +17,10 @@ The skill cites these by file path. SKILL.md does not restate excerpts.
 
 ### 2. OCC Bulletin 2026-13 — Revised Interagency Model Risk Management Guidance (2026)
 
-- Citation: OCC Bulletin 2026-13, "Revised Interagency Guidance on Model Risk Management" (issued 2026 by OCC; FDIC parallel FIL and Federal Reserve parallel SR letter expected) [verify section on model documentation].
-- Excerpt-paraphrase: The revised guidance refreshes SR 11-7 documentation expectations to incorporate AI/ML and generative-AI use cases, including foundation-model dependence, retrieval-augmented generation (RAG), tool use, and agentic configurations. The card-builder treats the 2026 refresh as the current anchor where state of the bulletin is final at card-write time.
-- Link: https://www.occ.gov/news-issuances/bulletins/2026/bulletin-2026-13.html — Bulletin 2026-13 [verify section]
-- Notes: Card-writer flag — confirm the published bulletin section numbering at card-write time. The phase-1 spec sheet records `[verify section]` and the SKILL.md does not over-claim binding language until verified.
+- Citation: OCC Bulletin 2026-13, "Revised Interagency Guidance on Model Risk Management" (issued by OCC in 2026; parallel FDIC and FRB issuances accompany it) [verify section on model documentation].
+- Excerpt-paraphrase: The revised guidance refreshes SR 11-7 documentation expectations for in-scope statistical and quantitative models. The bulletin expressly excludes generative AI and agentic AI from its scope; AI/ML scope is bounded accordingly. The card-builder treats the 2026 revision as the current anchor for traditional model documentation in covered banking organisations.
+- Link: https://www.occ.gov/news-issuances/bulletins/2026/bulletin-2026-13a.pdf — Bulletin 2026-13 PDF; scope-exclusion language for GenAI and agentic AI is on the cited PDF.
+- Notes: Anchor for traditional model-risk framing in bank-supervised entities. Do not cite this bulletin for GenAI, RAG, tool-use, or agentic-AI documentation expectations; for those, route to the AI-specific anchors (NIST AI RMF, NIST AI 600-1, ISO/IEC 42001) and sector and cross-cutting overlays. Confirm the published section numbering for traditional-model documentation at card-write time.
 
 ### 3. NIST AI Risk Management Framework 1.0
 
@@ -152,9 +154,9 @@ The skill cites these by file path. SKILL.md does not restate excerpts.
 
 The following items carry `[verify section]` or `[verify ...]` flags and must be confirmed at SKILL.md write time and at card-write time:
 
-- OCC Bulletin 2026-13 — confirm published section numbering on model documentation.
-- FDIC FIL parallel issuance to OCC Bulletin 2026-13 — confirm number and section.
-- FRB SR letter parallel issuance to OCC Bulletin 2026-13 — confirm number and section.
+- OCC Bulletin 2026-13 — confirm published section numbering on traditional-model documentation. The bulletin's GenAI/agentic-AI scope exclusion is verified against the PDF; GenAI documentation expectations route to NIST AI RMF, NIST AI 600-1, and ISO/IEC 42001.
+- FDIC FIL parallel issuance to OCC Bulletin 2026-13 — confirm number and section for the in-scope traditional-model documentation expectations.
+- FRB SR letter parallel issuance to OCC Bulletin 2026-13 — confirm number and section for the in-scope traditional-model documentation expectations.
 - NIST AI 600-1 — confirm exact Measure subcategory numbering for the GenAI elements cited.
 - NYDFS Insurance Circular Letter (January 2024) — confirm section reference.
 - Colorado Division of Insurance regulation implementing SB 21-169 — confirm regulation number and effective date.

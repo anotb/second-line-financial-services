@@ -12,7 +12,7 @@ Cited and section-referenced in `references/source-anchors.md`. This overlay nam
 
 ### 1. SR 11-7 §III risk-based principle is binding
 
-For federally regulated banks, the tier produced by this skill is the firm-side artefact that operationalises the SR 11-7 §III risk-based principle and the §IV materiality framing. OCC Bulletin 2026-13 refreshes the guidance for AI/ML inclusion. Tier names and cutoffs remain firm policy; the materiality factors (purpose, decision influence, financial exposure, complexity, uncertainty, vendor dependence) are the spine of the rubric.
+For federally regulated banks, the tier produced by this skill is the firm-side artefact that operationalises the materiality-based risk-rating principle. The current binding anchor is the joint interagency Revised Guidance on Model Risk Management (OCC 2026-13 / FRB SR 26-2 / FDIC FIL-15-2026, April 17 2026; supersedes SR 11-7 and SR 21-8) for traditional statistical and quantitative models. The bulletin expressly excludes generative AI and agentic AI from its scope (footnote 3); for those use cases the rubric's GenAI-specific factor anchors to NIST AI 600-1, ISO/IEC 42001, and the cyber overlay rather than the bulletin. Tier names and cutoffs remain firm policy; the materiality factors (purpose, decision influence, financial exposure, complexity, uncertainty, vendor dependence) are the spine of the rubric.
 
 For non-bank registrants under the same parent, SR 11-7 reaches by extension only when the bank inherits model risk through transactions, services, or balance-sheet exposure. Tiering record should not over-claim SR 11-7 reach to non-bank entities.
 
@@ -44,7 +44,7 @@ For banks subject to stress testing (DFAST, CCAR for the largest BHCs) and for C
 - Names the annual stress-testing cycle as a re-tiering trigger.
 - Cross-references CCAR/DFAST owner; this skill does not own the stress-testing-side documentation expectations.
 
-Tiering-record flag: a stress-eligible model carries SR 15-18 or successor-letter expectations [verify SR letter] in addition to SR 11-7 / OCC Bulletin 2026-13.
+Tiering-record flag: a stress-eligible model carries SR 15-18 or successor-letter expectations [verify SR letter] in addition to the joint interagency Revised Guidance on Model Risk Management (OCC 2026-13 / FRB SR 26-2 / FDIC FIL-15-2026).
 
 ### 5. AML, BSA, sanctions, and fraud framing
 

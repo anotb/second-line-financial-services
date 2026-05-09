@@ -132,7 +132,7 @@ The skill cites these by file path. SKILL.md does not restate excerpts.
 - Citation: Federal Reserve SR 11-7 / OCC Bulletin 2011-12, "Guidance on Model Risk Management" (April 4, 2011), §V (Model Documentation) and §VI (Third-Party Models).
 - Excerpt-paraphrase: SR 11-7 sets the supervisory expectation for model risk management at federally regulated banks; documentation and validation expectations are the structural anchor for any model in the fair-lending test perimeter. The fair-lending test plan and the model card consume each other's outputs (the card states intended use, fairness method, and limitations; the test plan stresses those statements).
 - Link: https://www.federalreserve.gov/supervisionreg/srletters/sr1107.htm — §V and §VI
-- Notes: The 2026 refresh under OCC Bulletin 2026-13 carries forward and extends the SR 11-7 expectations for AI/ML and GenAI; cite at plan time the operative bulletin per the bank's primary federal regulator.
+- Notes: OCC Bulletin 2026-13 refreshes the model risk framework but does not extend it to generative AI, retrieval-augmented generation, tool use, or agentic AI; cite at plan time the operative bulletin per the bank's primary federal regulator. For GenAI / RAG / tool-use / agentic-AI scope, anchor to NIST AI RMF (1.0, January 2023), NIST AI 600-1 (Generative AI Profile, July 2024), and the EU AI Act (Regulation (EU) 2024/1689) where extraterritorial reach applies; the AI / ML overlay block in the plan body cites these directly.
 
 ### 19. GLBA Safeguards Rule — 16 CFR Part 314
 

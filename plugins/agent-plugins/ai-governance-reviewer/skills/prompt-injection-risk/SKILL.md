@@ -14,8 +14,6 @@ description: |
   - The system uses a foundation model only for embedding generation or classification with no instruction-following surface.
   - The work is broader red-teaming across hallucination, bias, and abuse; use validation-plan with the GenAI testing block. This skill is the prompt-injection-only deep-dive.
   - The work is the firm-side governance card for the use case; use model-card-builder. This skill consumes the card and produces the focused memo.
-
-  Anchored to: NYDFS Industry Letter on Cybersecurity Risks Arising from AI (October 2024), NIST AI 600-1 Generative AI Profile, OWASP Top 10 for LLM Applications, MITRE ATLAS, NCSC Guidelines for Secure AI System Development, SR 11-7 / OCC Bulletin 2026-13, SEC cyber disclosure rules (8-K Item 1.05 and Reg S-K Item 106), ISO/IEC 42001. Citations and excerpts live in `references/source-anchors.md`.
 argument-hint: "[use-case ID, model-card record, validation-plan record, vendor red-team report, firm red-team report, IR runbook reference, or scope statement]"
 ---
 
@@ -23,11 +21,11 @@ argument-hint: "[use-case ID, model-card record, validation-plan record, vendor 
 
 A prompt-injection review is the second-line surfacing of one specific risk class in a GenAI deployment: instructions arriving through a content carrier and overriding, redirecting, or extracting from the system. It is not a full GenAI risk review; it is the cyber-and-AI-governance memo that names the threat surface, the testing, the mitigations with evidence, the residual risk with framing, the production signals with thresholds and owners, the incident classes with regulator-notification triggers, and the gaps that need to close.
 
-Prompt injection sits across two regulator perspectives. The cyber framings (NYDFS Part 500 and the October 2024 AI Industry Letter, SEC 8-K Item 1.05 and Reg S-K Item 106, FFIEC IT Handbook, the 36-hour banking computer-security incident notification rule, state Insurance Data Security Model Law) carry binding supervisory expectation in their respective scopes. The AI-specific framings (NIST AI 600-1, OWASP LLM Top 10, MITRE ATLAS, NCSC AI guidance) are leading-practice references; they are not, in themselves, binding regulation. The model-risk framing (SR 11-7, OCC 2026-13) applies where the firm's model risk programme treats the GenAI use case as in scope. Be explicit about which scope is in play.
+Prompt injection sits across two regulator perspectives. The cyber framings (NYDFS Part 500 and the October 2024 AI Industry Letter, SEC 8-K Item 1.05 and Reg S-K Item 106, FFIEC IT Handbook, the 36-hour banking computer-security incident notification rule, state Insurance Data Security Model Law) carry binding supervisory expectation in their respective scopes. The AI-specific framings (NIST AI 600-1, OWASP LLM Top 10, MITRE ATLAS, NCSC AI guidance) are leading-practice references; they are not, in themselves, binding regulation. The model-risk framing (the joint interagency revised guidance, OCC 2026-13 / FRB SR 26-2 / FDIC FIL-15-2026 issued April 2026) expressly excludes generative AI and agentic AI from its scope; where the firm's model risk programme treats the GenAI use case as a model by analogy, the principles inform but the binding hook is firm policy. Be explicit about which scope is in play.
 
 The audience reads from three angles at once. The AI Governance Lead owns the artefact and consolidates the analysis. The CISO function is a co-reviewer, not a downstream consumer; for any cyber-flagged review (which is most v1 GenAI reviews) the cyber overlay sits as the primary lens. The MRMO function and the model owner inherit the model-risk seams; the model owner is the source of upstream evidence (model card, validation plan, vendor system card) and the MRMO challenges the residual-risk view.
 
-The memo is a draft until the human reviewer attests. Sign-off is the gate; this skill stops short.
+The memo is a draft until the human reviewer attests. The skill stops short of filing or approving it.
 
 ## Ask first
 
@@ -78,27 +76,30 @@ The privacy and conduct cross-cutting overlays load when the engagement scope fl
 
 Load only the overlays the engagement scope names. Gold-plating with overlays the engagement does not implicate adds noise without challenge value.
 
-## What's load-bearing and what flexes
+## Quality bar
 
-A handful of things do not flex:
+The memo is only credible when these hold:
 
 - Every material claim cites a source. Unsupported items carry `[evidence needed]` and route to recommended actions, not silently into the memo body.
 - Evidence is separated from inference. Vendor red-team results are not the same line as firm-internal red-team results; vendor self-attestation confidence is recorded explicitly.
 - No fabricated regulatory facts. Unknown section references carry `[verify section]` in the source-anchors file (not in the memo body).
 - Trust basis populates on every threat-surface row. "Trusted, no controls" without a basis fails the review.
 - Mitigations without evidence pointers route to recommended actions. They do not count as coverage.
-- Residual risk requires likelihood, impact, and basis. Rating without basis is opinion.
-- Monitoring entries require all five fields (signal, threshold, frequency, owner, escalation path).
-- Incident response entries require regulator-notification trigger evaluation per the loaded overlays. Off-switch criteria on cyber-relevant classes are non-optional.
-- Foundation-model swap re-validation flag is a non-optional recommended action for any architecture depending on a third-party foundation model.
+- Residual risk carries likelihood, impact, and basis. Rating without basis is opinion.
+- Monitoring entries carry all five fields (signal, threshold, frequency, owner, escalation path).
+- Incident response entries name regulator-notification triggers per the loaded overlays. Off-switch criteria on cyber-relevant classes are non-optional.
+- Foundation-model swap re-validation is a non-optional recommended action for any architecture depending on a third-party foundation model.
+- No named institutions outside finalised public enforcement actions; examples are anonymised and public-source-derived.
 - Reviewer roles are functions, never named individuals.
-- The memo is a draft until the human reviewer attests. The skill does not assert sign-off, file the memo, post to the AI risk committee, or trigger an IR runbook.
+- The memo is a draft until the human reviewer attests. The skill does not file the memo, post to the AI risk committee, or trigger an IR runbook.
 
-Everything else adapts to context. Tier drives depth. Lifecycle stage drives which sections lean heavy (pre-prod-gate emphasises tested attacks and mitigations; in-prod-periodic emphasises monitoring and residual risk; post-incident emphasises incident response and recommended actions). Audience drives tone (working group is plain, committee is structured, examiner response is formal, board distillation pulls residual risk and recommended actions to the front). Sector and cross-cutting overlays load from the engagement scope. Where firm-specific policy or taxonomy applies, it lives in `references/firm-overlay.md` (consumed when present) and never in the memo directly.
+## Adaptation
+
+Tier drives depth. Lifecycle stage drives which sections lean heavy (pre-prod-gate emphasises tested attacks and mitigations; in-prod-periodic emphasises monitoring and residual risk; post-incident emphasises incident response and recommended actions). Audience drives tone (working group is plain, committee is structured, examiner response is formal, board distillation pulls residual risk and recommended actions to the front). Sector and cross-cutting overlays load from the engagement scope. Source posture sets what the memo can assert at high confidence and what carries `[evidence needed]`. Where firm-specific policy or taxonomy applies, it lives in `references/firm-overlay.md` (consumed when present) and never in the memo directly.
 
 ## Output
 
-Two artefacts: the memo per `templates/default-output.md`, and the structured object per `schemas/prompt-injection-review.schema.json`. The reviewer-attestation block is filled by the human reviewer (AI Governance Lead with CISO function for cyber-flagged reviews; co-acceptors per sector overlay where applicable); the memo is filed only after.
+Default to drafting the memo against `templates/default-output.md`. Render as Word for committee or CISO review, or another format the audience asks for. Produce the structured record at `schemas/prompt-injection-review.schema.json` when downstream consumers (`genai-pre-prod-review`, `board-ai-risk-pack`, `ai-governance-reviewer`, the firm cyber IR chain) need it. The reviewer-attestation block is filled by the human reviewer (AI Governance Lead with CISO function for cyber-flagged reviews; co-acceptors per sector overlay where applicable); the memo is filed only after.
 
 Downstream consumers: `genai-pre-prod-review` consumes the structured object for the gate decision; `board-ai-risk-pack` pulls the residual-risk summary, the recommended-actions list, and material incident-response triggers; the `ai-governance-reviewer` agent pulls the structured object for second-line challenge; the firm cyber IR chain consumes the incident-response section as input to runbook design and IR drill scope. The schema is the input contract for those consumers; additive changes only.
 

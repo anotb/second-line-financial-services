@@ -60,7 +60,7 @@ The named, dated regulatory sources this skill anchors to. SKILL.md cites this f
 
 - **NACHA Operating Rules (current edition)** Third-Party Sender registration and risk-management rules [verify rule citations]. Paywalled; cite as "current edition; specific sections to be confirmed against the firm's licensed copy." https://www.nacha.org/ .
 
-- **FinCEN MSB rules at 31 CFR Part 1022** and registration requirements at 31 CFR §1010.380 [verify §]. https://www.ecfr.gov/current/title-31/subtitle-B/chapter-X/part-1022 .
+- **FinCEN MSB rules at 31 CFR Part 1022** and registration requirements at 31 CFR §1022.380. https://www.ecfr.gov/current/title-31/subtitle-B/chapter-X/part-1022 . FinCEN's MSB-registration page confirms §1022.380 is the operative section (https://www.fincen.gov/resources/money-services-business-msb-registration). Note: 31 CFR §1010.380 is the BOI / Corporate Transparency Act beneficial-ownership rule, a different obligation.
 
 - **CFPB final rule defining larger participants of a market for general-use digital consumer payment applications** (December 2024) [verify Federal Register citation and current state including any litigation or congressional review]. https://www.consumerfinance.gov/compliance/supervisory-guidance/ [verify URL].
 

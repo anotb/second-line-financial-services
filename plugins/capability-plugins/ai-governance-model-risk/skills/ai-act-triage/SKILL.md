@@ -14,8 +14,6 @@ description: |
   - The intake record is missing (route to ai-use-case-intake first; triage runs against a use-case record, not against a hallway description).
   - The artifact required is the Annex IV technical documentation itself (use model-card-builder for the firm-side card; this skill scopes the Annex IV deltas).
   - The work is generic third-party diligence on the vendor (use third-party-operational-resilience vendor diligence with the AI vendor mode).
-
-  Anchored to: EU AI Act (Regulation (EU) 2024/1689), GDPR, NIS2, DORA, ISO/IEC 42001.
 argument-hint: "[use-case ID, intake record, vendor system card, engagement-scope record, or scope statement]"
 ---
 
@@ -55,18 +53,21 @@ Five passes, in order. Skipping a pass on the assumption the answer is obvious i
 
 After the five passes, the artifact records the classification (prohibited, high_risk_annex_I, high_risk_annex_III, limited_risk_article_50, minimal_risk, gpai, gpai_systemic_risk; multi-classification is allowed where high-risk and Article 50 both apply) and enumerates obligations per Article reference, owner role, and target date. Annex IV documentation deltas, Article 71 / Annex VIII registration requirement, Article 27 fundamental-rights impact assessment trigger (where the deployer is a public body, a private operator providing public services, or a credit institution or insurer providing the listed services), and the Article 113 applicable date are each captured as named fields.
 
-## What is load-bearing
+## Quality bar
 
-A handful of things do not flex.
+The triage is only credible when these hold:
 
 - Every classification claim cites Article and Annex (or `[verify section]`). Unsourced claims do not enter the artifact.
 - The Annex III screen runs row by row, including rows that do not apply. The audit trail is the deliverable; a reviewer in two years' time should see every row was screened.
 - The provider-versus-deployer line is enumerated for every entity in the chain. "We are not the provider" is not a sufficient basis to skip Article 25 (substantial modification) or to assume Article 26 deployer obligations are light. Article 26 is substantive: logs (paragraph 6), human oversight (paragraph 2), input-data quality (paragraph 4), serious-incident reporting (paragraph 5), data subject information (paragraph 11), workplace deployment information to workers (paragraph 7).
 - Article 27 FRIA is not the GDPR DPIA. Where Article 27 is in scope, the artifact carries an explicit FRIA-versus-DPIA reconciliation note. Legal owns the reconciliation; the skill flags it.
 - Article 113 phasing dates are recorded against each obligation. Article 5 prohibited-practice obligations, GPAI obligations, transparency obligations, and high-risk obligations apply on different dates. Missing this puts the firm either ahead of an obligation or, the worse failure, behind one that has already applied.
+- No named institutions outside finalised public enforcement actions; examples are anonymised and public-source-derived.
 - The triage does not reach a final regulatory determination. The artifact reads "draft for legal/compliance review" on the cover and the schema's `triage_metadata.legal_reviewer` is required before downstream skills consume the record.
 
-Everything else flexes with context. Source posture sets what can be asserted at high confidence and what carries `[evidence needed]`. Sector and cross-cutting overlays load from the engagement scope. Persona drives the review-gate machinery: an in-house AI governance lead routes to the AI risk committee, an advisory engagement routes to partner approval and counsel sign-off.
+## Adaptation
+
+Source posture sets what can be asserted at high confidence and what carries `[evidence needed]`. Sector and cross-cutting overlays load from the engagement scope. Persona sets the review path: an in-house AI governance lead routes to the AI risk committee; an advisory engagement routes to partner approval and counsel sign-off.
 
 ## Sector and cross-cutting overlays
 
@@ -84,7 +85,7 @@ Climate is not applicable to AI Act triage.
 
 ## Output
 
-Two artifacts: the triage record per `templates/default-output.md`, and the structured object per `schemas/ai-act-triage.schema.json`. The legal/compliance reviewer block is filled by a human; the triage is filed only after.
+Default to drafting the triage record against `templates/default-output.md`. Render as Word for legal/compliance review or another format the audience asks for. Produce the structured record at `schemas/ai-act-triage.schema.json` when downstream skills (`model-card-builder` for Annex IV deltas, `genai-pre-prod-review` for Article 26 obligations, `llm-vendor-evidence-review` for the GPAI screen, `board-ai-risk-pack`) need it. The legal/compliance reviewer block is filled by a human; the triage is filed only after.
 
 Downstream consumers: `model-card-builder` pulls the Annex IV documentation deltas to scope the firm-side card. `genai-pre-prod-review` pulls the Article 50 transparency obligations and the Article 26 deployer obligations into its gate. `llm-vendor-evidence-review` pulls the operator-role determination and the GPAI screen. `board-ai-risk-pack` pulls classification, applicable date, and material open questions. The `ai-governance-reviewer` agent pulls the structured object for second-line challenge. The schema is the input contract; additive changes only, never silent renames.
 

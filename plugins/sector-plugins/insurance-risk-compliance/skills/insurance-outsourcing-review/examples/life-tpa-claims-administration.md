@@ -16,7 +16,7 @@ The Insurance Data Security Model Law §4.F third-party-service-provider review 
 
 HIPAA cross-overlay loads because PHI flows. The business-associate agreement (BAA) is in place between the carrier and the TPA but a corresponding subcontractor BAA was not executed before the OCR sub-processor change. Breach-notification clock posture is read against the HIPAA 60-day clock and the §4.F clock; both findings go in `data_security_findings` with a privacy-overlay tag.
 
-Claims-handling oversight runs against Model #880 fair-claims-settlement standards and the relevant state unfair-claims-settlement-practices acts. A sample of the TPA's denial letters shows reasoned-denial language is generally consistent with state requirements; one state's required appeal-rights notice is missing in two of the sampled letters. That goes in `claims_handling_findings` with severity medium and an owner.
+Claims-handling oversight runs against the NAIC Unfair Claims Settlement Practices Act (Model #900) and the relevant state unfair-claims-settlement-practices acts. A sample of the TPA's denial letters shows reasoned-denial language is generally consistent with state requirements; one state's required appeal-rights notice is missing in two of the sampled letters. That goes in `claims_handling_findings` with severity medium and an owner.
 
 Premium-handling and fiduciary-account posture is not applicable (closed-block claims-only); the section reads "not applicable" with a note.
 
@@ -28,4 +28,4 @@ Recommended disposition: remediate-then-re-review. The §4.F sub-processor and H
 
 ## Why this scenario matters
 
-It exercises the §4.F sub-processor and breach-notification chain on a real PHI flow, the HIPAA BAA cross-overlay, the Model #880 fair-claims-settlement read on the delegated function, and the negative-answer disciplines (Form D not triggered, producer-licensing not applicable, vendor-AI not present, premium-handling not applicable) that keep the artifact honest about what was reviewed and what was not. Public-source-derived; no named institutions.
+It exercises the §4.F sub-processor and breach-notification chain on a real PHI flow, the HIPAA BAA cross-overlay, the Model #900 fair-claims-settlement read on the delegated function, and the negative-answer disciplines (Form D not triggered, producer-licensing not applicable, vendor-AI not present, premium-handling not applicable) that keep the artifact honest about what was reviewed and what was not. Public-source-derived; no named institutions.

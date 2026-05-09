@@ -6,7 +6,7 @@ Loaded by: `ai-risk-tiering/SKILL.md` when `engagement_scope.sector_overlay_set`
 
 ## Source basis
 
-- SR 11-7 reach is partial for non-bank registrants (advisers and BDs that are not part of a BHC); the rubric falls back on NIST AI RMF and ISO/IEC 42001 as the primary anchor and uses SR 11-7 / OCC Bulletin 2026-13 only where the parent BHC inherits the model risk through a banking subsidiary.
+- The bank model-risk anchor (the joint interagency Revised Guidance on Model Risk Management, OCC 2026-13 / FRB SR 26-2 / FDIC FIL-15-2026; supersedes SR 11-7) reach is partial for non-bank registrants (advisers and BDs that are not part of a BHC); the rubric falls back on NIST AI RMF and ISO/IEC 42001 as the primary anchor and reaches the bank bulletin only where the parent BHC inherits the model risk through a banking subsidiary, and only for traditional non-generative models (the bulletin excludes GenAI and agentic AI per footnote 3).
 - SEC Investment Advisers Act Rule 206(4)-7 (compliance program) and Rule 206(4)-1 (Marketing Rule).
 - FINRA Rule 3110 (supervisory system); FINRA Rule 5310 (best execution); SEC Reg BI for BDs.
 - SEC Rule 15c3-5 (Market Access Rule) for execution algos and order-routing models.

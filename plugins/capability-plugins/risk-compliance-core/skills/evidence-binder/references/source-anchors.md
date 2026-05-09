@@ -1,6 +1,6 @@
 # Source anchors: evidence-binder
 
-This file holds the named, dated regulatory and professional-standard sources the evidence-binder skill anchors to. The SKILL.md file does not restate these citations beyond the activation-tuned description's "Anchored to:" line. Sector-specific anchors live in `references/sector-overlays/<sector>.md`; cross-cutting anchors live in `references/cross-cutting/<topic>.md`. Firm-specific evidence-handling rules belong in `references/firm-overlay.md` when the firm installs one.
+This file holds the named, dated regulatory and professional-standard sources the evidence-binder skill anchors to. SKILL.md cites this file by path; the named anchors are not restated inline. Sector-specific anchors live in `references/sector-overlays/<sector>.md`; cross-cutting anchors live in `references/cross-cutting/<topic>.md`. Firm-specific evidence-handling rules belong in `references/firm-overlay.md` when the firm installs one.
 
 `[verify section]` placeholders mark anchors where the precise section reference still needs verification against the current edition of the source. They are deliberate, not omissions. The discipline of the binder is the same discipline applied here: a screenshot is not evidence, the system-of-record link is.
 
@@ -54,21 +54,19 @@ Link: https://ithandbook.ffiec.gov/
 
 ## Model-validation evidence
 
-### SR 11-7 / OCC Bulletin 2011-12 — Supervisory Guidance on Model Risk Management
+### Joint Interagency Revised Guidance on Model Risk Management — OCC Bulletin 2026-13 / FRB SR 26-2 / FDIC FIL-15-2026 (April 17, 2026)
 
-Anchor: §V on model validation (conceptual soundness, ongoing monitoring, outcomes analysis, benchmarking) and §VI on governance, policies, and controls (model documentation, inventory, and recordkeeping). [verify section labels; OCC Bulletin 2026-13 has revised the interagency model risk guidance.]
+Anchor: Section II (scope and definitions), Section III (control environment, third-party model controls, documentation, independent challenge). The April 2026 joint guidance supersedes SR 11-7 (2011) and SR 21-8 (BSA/AML model risk, 2021). Most relevant to banking organizations with total assets over $30 billion; non-binding (does not set forth enforceable standards). Generative AI and agentic AI are out of scope (footnote 3); the principles cover traditional statistical and quantitative models and non-generative, non-agentic AI models.
 
-What this skill relies on: the model-validation evidence categories the binder's `evidence_type` and `linked_control_ids` fields organize against. A model-validation binder built without grouping rows by §V activity (conceptual soundness, monitoring, outcomes, benchmarking) is unreviewable by the model-risk function.
+What this skill relies on: the model-validation evidence categories the binder organizes against (conceptual soundness, ongoing monitoring, outcomes analysis, benchmarking, independent challenge). A model-validation binder built without grouping rows by validation activity is unreviewable by the model-risk function. Where the validation binder lacks evidence of independent challenge, the gaps section names that absence directly. For GenAI or agentic AI evidence packs, the binder anchors on NIST AI RMF, NIST AI 600-1, ISO/IEC 42001, the EU AI Act, and the firm's AI governance policy rather than this bulletin.
+
+Link: https://www.occ.gov/news-issuances/bulletins/2026/bulletin-2026-13.html (parallels: https://www.federalreserve.gov/supervisionreg/srletters/SR2602.htm, https://www.fdic.gov/news/financial-institution-letters/2026/agencies-revise-interagency-model-risk-management-guidance)
+
+### SR 11-7 / OCC Bulletin 2011-12 — Supervisory Guidance on Model Risk Management (April 4, 2011, superseded April 17, 2026)
+
+Anchor: §V on model validation (conceptual soundness, ongoing monitoring, outcomes analysis, benchmarking) and §VI on governance, policies, and controls. Superseded by the joint April 2026 guidance above; retained as historical citation for binders that reach back to validation evidence produced under the prior framing.
 
 Link: https://www.federalreserve.gov/supervisionreg/srletters/sr1107.htm
-
-### OCC Bulletin 2026-13 — Revised Interagency Model Risk Management Guidance (2026)
-
-Anchor: §III.D on documentation expectations and §III.E on independent challenge evidence. [verify section labels.]
-
-What this skill relies on: the documentation expectations for model-validation evidence packs and the independent-challenge evidence the binder must surface for the model-risk committee. Where the validation binder lacks evidence of independent challenge, the gaps section names that absence directly.
-
-Link: https://www.occ.gov/news-issuances/bulletins/
 
 ### FRB SR 13-19 — Guidance on Managing Outsourcing Risk (December 5, 2013)
 

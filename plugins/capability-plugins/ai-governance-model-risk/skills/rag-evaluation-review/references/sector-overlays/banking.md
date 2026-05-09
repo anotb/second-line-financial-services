@@ -6,7 +6,7 @@ When the engagement-scope record names `banking` as the sector, this overlay add
 
 - FFIEC IT Examination Handbook, Information Security and AIO booklets, applied to the data-integrity controls on retrieval corpora and to the retrieval-side access enforcement.
 - Joint Interagency Guidance on Third-Party Relationships (June 2023; OCC Bulletin 2023-17 / FRB SR 23-4 / FDIC FIL-29-2023) where the corpus is vendor-supplied or the foundation model is vendor-hosted.
-- SR 11-7 / OCC Bulletin 2026-13 model risk framing where the bank's model risk programme treats the GenAI use case as in scope. The validation expectations on data-review and outcomes-analysis apply to retrieval corpora and grounding outputs.
+- The joint interagency Revised Guidance on Model Risk Management (OCC 2026-13 / FRB SR 26-2 / FDIC FIL-15-2026, supersedes SR 11-7 and SR 21-8) expressly excludes generative AI from its scope (footnote 3); a RAG system is generative AI and is not within the bulletin. Where the bank's model risk programme treats the use case as a model by analogy, data-review and outcomes-analysis expectations apply at firm policy level rather than as binding regulator language.
 - FFIEC BSA/AML Examination Manual where the use case touches AML alert handling, customer risk rating, or SAR drafting.
 - 12 CFR Part 30 Appendix D (OCC Heightened Standards) for OCC-supervised large banks where the use case sits inside a risk-appetite-statement-relevant function.
 

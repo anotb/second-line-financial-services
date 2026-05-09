@@ -14,8 +14,6 @@ description: |
   - The criticality flag has not been set (run `criticality-assessment` first; the register consumes the determination).
   - The job is per-arrangement diligence (use `vendor-diligence`), contract clause coverage (use `contract-gap-review`), portfolio-level concentration (use `concentration-risk-review`), or exit posture for a specific arrangement (use `exit-plan`).
   - The submission is governed by an NCA-specific technical filing rule that diverges from the ITS templates. The skill drafts to the ITS schema; the firm's regulatory-reporting pipeline applies the NCA-specific channel and validation overlay.
-
-  Anchored to: DORA (Regulation (EU) 2022/2554) Articles 28 to 30 and Article 6; the Commission Implementing Regulation laying down the ITS for the Register of Information under Article 28(9); the joint ESA Final Report on the draft ITS; the Commission Delegated Regulation laying down the RTS on sub-contracting under Article 30(5); EBA Guidelines on outsourcing arrangements (EBA/GL/2019/02) §11; and the ECB SSM, EBA-, EIOPA-, and ESMA-coordinated technical instructions for register submission. Citations and uncertainty markers live in `references/source-anchors.md`.
 argument-hint: "[arrangement set, prior-year register, criticality outputs, vendor-diligence pack, TPRM register export, contract repository pointers, scope statement]"
 ---
 
@@ -32,7 +30,7 @@ Before drafting, settle six things. The build is identifier-driven and relationa
 - **Which legal entities are in scope, and at what consolidation level.** Individual, sub-consolidated, or consolidated. An EU subsidiary of a non-EU group typically files individually to its host-state NCA; the parent's consolidated register is a separate filing where the parent has its own DORA scope through other EU entities. Resolve at scope, not in the table records.
 - **Reporting reference date and reporting reference period.** The ITS sets the reference-date convention; pin it from the adopted Commission Implementing Regulation and the NCA's filing-cycle instructions for the cycle in flight.
 - **National competent authority and submission channel.** ECB SSM for direct-supervised significant institutions. Host-state NCA for less-significant institutions, payment and e-money institutions, insurers and reinsurers, investment firms, fund managers, trading venues, CSDs, and CCPs (with ESMA, EIOPA, EBA coordination as applicable). The technical channel and validation rules vary; pin per filing.
-- **Build review type.** First-cycle build, annual refresh, off-cycle update, quality-review-only, post-onboarding update, post-termination update. Each has a different evidence ask, a different reviewer-question cluster, and a different review-gate posture. A first-cycle build for a complex group runs long and carries heavy data-quality and reconciliation sections; a quality-review-only run skips the substantive table records and concentrates on findings and reconciliations.
+- **Build review type.** First-cycle build, annual refresh, off-cycle update, quality-review-only, post-onboarding update, post-termination update. Each has a different evidence ask, a different reviewer-question cluster, and a different decision-forum context. A first-cycle build for a complex group runs long and carries heavy data-quality and reconciliation sections; a quality-review-only run skips the substantive table records and concentrates on findings and reconciliations.
 - **Source-data posture.** Which firm systems are inputs: TPRM register, contract repository, ICT-asset inventory, prior-year register, EBA outsourcing register (EBA/GL/2019/02 §11), criticality-assessment outputs, vendor-diligence packs. Each carries a quality caveat. Name them.
 - **Criticality-assessment availability.** The register's `b_04_functions.criticality` field is sourced from `criticality-assessment` and backed by a `criticality_evidence_record_id`. If criticality has not been formally set for in-scope arrangements, route there first and consume the output here. Setting the flag in this skill without backing evidence is a defect, not a shortcut.
 
@@ -82,9 +80,9 @@ When the engagement scope names a sector, load the matching `references/sector-o
 
 The cyber cross-cutting overlay (`references/cross-cutting/cyber.md`) loads when ICT services in scope materially expose the firm to cyber risk that the register's data-residency, sub-contractor-chain, or service-type fields surface for supervisory attention. Privacy and concentration considerations show up via fields the schema already includes (data location, sub-outsourcing chain, function-supported); the deeper treatment lives with `vendor-diligence`, `exit-plan`, and `concentration-risk-review`. Load only the overlays the engagement scope names. Gold-plating a build with overlays the engagement does not implicate adds noise without supervisory value.
 
-## What's load-bearing and what flexes
+## Quality bar
 
-Load-bearing across every build:
+Holds across every build regardless of firm type, audience, or render format.
 
 - **Identifier integrity.** The register is identifier-driven. Missing LEI or other identifiers break relational integrity and the supervisory pipeline. Best available identifier with `identifier_type` set, plus a finding. Never invented.
 - **Relational integrity across the table chain.** B.01 references resolve to B.02 which resolves to B.03, B.05, and B.04. B.06 chains hang off B.05 and B.03. B.07 links group entities to B.01. A record that does not resolve is a defect.
@@ -93,9 +91,11 @@ Load-bearing across every build:
 - **Sub-contractor visibility for critical-or-important services.** B.06 entries to the depth the chain reveals; opacity is a finding, not an absence.
 - **Data-quality findings section is part of the build, not a separate document.** A register without findings reads wrong.
 - **Source trace.** Every material claim cites `references/source-anchors.md` (or a loaded overlay) by path. Uncertain ITS column codes are marked in the structured record only, per the verification posture in `references/source-anchors.md`; the build-pack body does not carry verification markers. Unsupported items go to the engagement issue log, not silently into the build.
-- **The skill does not file.** The build pack carries reviewer questions and named review gates. The named accountable executive signs off. Submission goes through the firm's regulatory-reporting pipeline.
+- **The skill does not file.** The build pack carries reviewer questions and named decision checkpoints. The named accountable executive signs off via the attestation block. Submission goes through the firm's regulatory-reporting pipeline.
 
-Flexes to the engagement:
+## Adaptation
+
+Flexes by engagement.
 
 - **Build depth scales to scope and review type.** First-cycle builds run long. Annual refreshes lead with the year-on-year delta. Quality-review-only runs skip the table records and concentrate on findings and reconciliations. Off-cycle updates concentrate on the changed records and the relational impact.
 - **Audience drives shape.** A pack for the DORA programme lead reads operational. A pack for the accountable executive leads with the residual data-quality posture and the sign-off question. A pack for the host-state NCA dialogue reads as a justification of the firm's own quality posture before the supervisor asks.

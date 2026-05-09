@@ -1,6 +1,6 @@
 # Source anchors: exception-analysis
 
-This file holds the named, dated regulatory and professional-standard sources the exception-analysis skill anchors to. The SKILL.md body uses generic workflow language and does not restate these citations beyond the activation-tuned description's "Anchored to:" line. Firm-specific anchors (severity ladder, named committee gates, policy-floor overrides) belong in `references/firm-overlay.md`.
+This file holds the named, dated regulatory and professional-standard sources the exception-analysis skill anchors to. The SKILL.md body uses generic workflow language and cites this file by path; named citations live here, not in the activation-tuned description. Firm-specific anchors (severity ladder, named committee gates, policy-floor overrides) belong in `references/firm-overlay.md`.
 
 `[verify section]` placeholders mark anchors where the precise section reference still needs verification against the current edition of the source. They are deliberate, not omissions.
 

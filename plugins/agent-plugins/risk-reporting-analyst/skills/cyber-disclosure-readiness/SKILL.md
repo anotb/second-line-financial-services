@@ -14,8 +14,6 @@ description: |
   - The artifact is an internal incident response runbook or a forensic timeline (out of scope; this skill is the disclosure decision, not incident handling).
   - The artifact is a vendor cyber due-diligence pack (use `third-party-operational-resilience/skills/vendor-diligence`).
   - The trigger is a non-public regulator-only notification (NYDFS Part 500 §500.17, federal banking agencies' 36-hour rule, state breach-notification). Those clocks surface in the parallel-clocks table here, but the regulator-specific notification artifact lives elsewhere.
-
-  Anchored to: SEC Cybersecurity Risk Management, Strategy, Governance, and Incident Disclosure final rule (Release 33-11216 / 34-97989, July 2023), Form 8-K Item 1.05, Regulation S-K Item 106, Exchange Act Rule 13a-15, TSC Industries v. Northway materiality standard, NYDFS 23 NYCRR Part 500 §500.17, federal banking agencies' Computer-Security Incident Notification Rule (12 CFR Parts 53/225/304), SEC Regulation S-P amendments (May 2024), SEC Climate Disclosure Rule (status carries a current-effectiveness flag). Citations and excerpts live in `references/source-anchors.md`.
 argument-hint: "[incident reference, prior-year 10-K Item 106, DCP map, engagement scope, or scope statement]"
 ---
 
@@ -99,9 +97,7 @@ Load only the overlay the engagement scope names. Banking covered-bank packs car
 
 The sector overlay is content that lands in the pack, not background reading. A banking overlay loaded but no 36-hour-rule row in the parallel-clocks table is the failure mode.
 
-## What's load-bearing and what flexes
-
-A handful of things do not flex:
+## Quality bar
 
 - The 4-business-day Item 1.05 clock starts at materiality determination, not detection. The schema computes the filing-due datetime from `materiality_determination_date`; conflating the two fails the schema.
 - Materiality is a disclosure committee determination with securities counsel input. The cyber team contributes facts; they do not own the determination. The workpaper records the determined-by role accordingly.
@@ -114,15 +110,17 @@ A handful of things do not flex:
 - Every material claim cites a source. Unsupported claims carry `[evidence needed]` and route to the engagement issue log, not silently into the pack.
 - The pack is a draft until the disclosure committee, securities counsel, and the named officers attest. The skill does not assert sign-off, file, or distribute.
 
-Everything else adapts. Filer category drives the 8-K-versus-6-K spine and the SRC versus non-SRC phase-in. Audience drives tone (working-group draft is plain, disclosure-committee material is challenge-shaped, examiner response is formal). Sector and cross-cutting overlays load from the engagement scope. Where firm-specific DCP, board-committee structure, or disclosure-policy machinery applies, it lives in `references/firm-overlay.md` (consumed when present) and never in the pack directly.
+## Adaptation
+
+Filer category drives the 8-K-versus-6-K spine and the SRC versus non-SRC phase-in. Audience drives tone (working-group draft is plain, disclosure-committee material is challenge-shaped, examiner response is formal). Sector and cross-cutting overlays load from the engagement scope. Where firm-specific DCP, board-committee structure, or disclosure-policy machinery applies, it lives in `references/firm-overlay.md` (consumed when present) and never in the pack directly.
 
 ## Output
 
-Three artifacts, three schemas:
+Default to drafting against `templates/default-output.md`. Render as Word, Excel, PowerPoint, or Markdown when the audience or workflow asks for it; the 8-K Item 1.05 draft and the 10-K Item 106 narrative ride as Word memos for securities counsel review, the parallel-clocks table lifts to Excel for incident-response coordination, and a board cyber-readiness read-out collapses to a deck. Produce structured records at the schemas below when downstream automation or a registered consumer needs them:
 
-- Artifact A — 8-K Item 1.05 pack — template at `templates/default-output.md` (incident section) and structured object at `schemas/cyber-incident-disclosure.schema.json`.
-- Artifact B — 10-K Item 106 pack — template at `templates/default-output.md` (Item 106 section) and structured object at `schemas/item-106-disclosure.schema.json`.
-- Artifact C — DCP readiness map — template at `templates/default-output.md` (DCP section) and structured object at `schemas/dcp-readiness.schema.json`.
+- Artifact A — 8-K Item 1.05 pack — `schemas/cyber-incident-disclosure.schema.json`.
+- Artifact B — 10-K Item 106 pack — `schemas/item-106-disclosure.schema.json`.
+- Artifact C — DCP readiness map — `schemas/dcp-readiness.schema.json`.
 
 The template covers all three artifacts with the named sections; the engagement names which artifact the practitioner is producing and the rest compresses to a brief or is omitted with rationale.
 

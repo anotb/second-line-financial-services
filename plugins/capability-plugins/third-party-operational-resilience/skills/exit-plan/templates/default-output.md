@@ -184,11 +184,12 @@ Each question names the decision it supports.
 
 - [bulleted]
 
-## Recommended owner actions and review gates
+## Recommended owner actions and decision checkpoints
 
 - **Owner (role)**: [IBS owner or head of TPRM; procurement supports execution but does not own customer-facing impact].
 - **Approver (role)**: [per firm policy for this criticality tier].
-- **Review gates this plan must clear**: [scope, evidence, authority, impact, decision].
+- **Decision checkpoints this plan must clear**: scope, evidence, authority, impact, decision.
+- **Decision forum and attestation block**: [operational-resilience committee | TPRM forum | risk committee | AI risk committee | fund board]; owner and approver named; sign-off conditions written out.
 - **Next-review trigger**: [annual cycle date; scope-change trigger; contract-amendment trigger; vendor-incident-driven re-review condition; for AI vendors, model-version-change trigger].
 - The plan does not approve transition. The named approver decides.
 

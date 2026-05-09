@@ -13,8 +13,6 @@ description: |
   - The job is QA on a completed workpaper. That is `qa-workpaper`. Boundary: this skill writes the workpaper from results; `qa-workpaper` reviews the completed workpaper for sufficiency. Sequential, not redundant.
   - Exceptions still need to be classified before the conclusion can land. Run `exception-analysis` first; this skill consumes its register.
   - The work is writing up a confirmed finding for issue tracking. That is `issue-writeup` in `risk-compliance-core`; this skill hands off to it.
-
-  Anchored to: AICPA AU-C 230 (Audit Documentation), AICPA AU-C 500 (Audit Evidence), AICPA AU-C 530 (Audit Sampling), IIA International Standard 2330 (Documenting Information), FFIEC IT Examination Handbook (Audit booklet, April 2012), SR 08-8 (Federal Reserve, October 2008), OCC PPM 5310-3, COSO 2013 Internal Control Integrated Framework. Citations and excerpts live in `references/source-anchors.md`.
 argument-hint: "[test plan ID, exception register ID, evidence inspection notes, or pointer to completed fieldwork]"
 ---
 
@@ -22,7 +20,7 @@ argument-hint: "[test plan ID, exception register ID, evidence inspection notes,
 
 A testing workpaper is what compliance-testing or internal-audit produces so a QA reviewer, the testing manager, internal-audit lead, or an examiner picking up the file later can see what was tested, what evidence was inspected, what the sample showed, and what the conclusion is. The bar is the AU-C 230 test: an experienced reviewer with no prior connection to the engagement should be able to read this workpaper and understand the work performed and the conclusions reached.
 
-This skill writes the workpaper from completed fieldwork. It does not run the test, classify exceptions, or close findings. It produces the markdown artifact in `templates/default-output.md` shape and a structured record conforming to `schemas/workpaper.schema.json` for downstream consumers (QA, issue write-up, internal audit). The skill stops at preparer sign-off; the named reviewer signs separately.
+This skill writes the workpaper from completed fieldwork. It does not run the test, classify exceptions, or close findings. It drafts the workpaper against `templates/default-output.md` and emits a structured record conforming to `schemas/workpaper.schema.json` for downstream consumers (QA, issue write-up, internal audit). The skill stops at preparer sign-off; the named reviewer signs separately.
 
 ## Ask first
 
@@ -67,18 +65,20 @@ Limitations and reliance is the protection paragraph. What the workpaper does no
 
 The sign-off block carries preparer, reviewer (separate role), and QA placeholder. Preparer signs with date. Reviewer signs with date. QA placeholder is filled by `qa-workpaper`, not here. Source trace and confidence label close the file: every material claim cites a source with section reference, and the confidence label (high / medium / low / unknown) reflects evidence sufficiency, sample size, source posture, and any reliance on second-hand evidence.
 
-## What's load-bearing and what flexes
+## Quality bar
 
-Load-bearing across every workpaper: every conclusion sentence ties to a procedure result that ties to an evidence item; the AU-C 230 experienced-reviewer test is the bar. Source evidence, management assertion, public-source obligation, generated inference, and open legal or compliance question stay distinguishable. Citations carry section references or `[verify section]` markers; URL alone does not pass. Preparer and reviewer are different roles. Conclusions speak to control effectiveness, not legal violation. The workpaper stops at preparer sign-off; the reviewer signs separately and QA is downstream. No named institutions in the workpaper unless they are public defendants in a finalised enforcement action.
+Holds across every workpaper: every conclusion sentence ties to a procedure result that ties to an evidence item; the AU-C 230 experienced-reviewer test is the bar. Source evidence, management assertion, public-source obligation, generated inference, and open legal or compliance question stay distinguishable. Citations carry section references or `[verify section]` markers; URL alone does not pass. Preparer and reviewer are different roles. Conclusions speak to control effectiveness, not legal violation. The workpaper stops at preparer sign-off; the reviewer signs separately and QA is downstream. No named institutions in the workpaper unless they are public defendants in a finalised enforcement action.
 
-Flexes to the engagement: workpaper depth and length scale to control complexity, sample size, and exception volume. A clean, low-volume control test with no exceptions reads short; a high-volume test with classified exceptions across multiple severities reads longer with the exception summary clustered for the audience that decides next steps. Sector overlay loading follows engagement-scope plus the rule that the regulator the test was designed for drives the sector overlay (HMDA testing pulls banking; an adviser compliance-program test pulls capital-markets; a sponsor-bank end-customer reconciliation test pulls payments-fintech and banking together). Cross-cutting overlay loading: cyber overlay is default-on for any control test touching IAM, data-protection, or NYDFS Part 500-mandated areas; conduct overlay is default-on for any consumer-facing test where customer-harm framing matters separately from technical control conclusion. Privacy overlay loads when GLBA Safeguards or HIPAA touches the population. Audience drives shape: a workpaper for QA reads operationally, a workpaper drafted with an upcoming exam in mind reads heavier on criteria and limitations.
+## Adaptation
+
+Workpaper depth and length scale to control complexity, sample size, and exception volume. A clean, low-volume control test with no exceptions reads short; a high-volume test with classified exceptions across multiple severities reads longer with the exception summary clustered for the audience that decides next steps. Sector overlay loading follows engagement-scope plus the rule that the regulator the test was designed for drives the sector overlay (HMDA testing pulls banking; an adviser compliance-program test pulls capital-markets; a sponsor-bank end-customer reconciliation test pulls payments-fintech and banking together). Cross-cutting overlay loading: cyber overlay is default-on for any control test touching IAM, data-protection, or NYDFS Part 500-mandated areas; conduct overlay is default-on for any consumer-facing test where customer-harm framing matters separately from technical control conclusion. Privacy overlay loads when GLBA Safeguards or HIPAA touches the population. Audience drives shape: a workpaper for QA reads operationally, a workpaper drafted with an upcoming exam in mind reads heavier on criteria and limitations.
 
 ## Pointers
 
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
 - `references/sector-overlays/banking.md`, `insurance.md`, `capital-markets.md`, `payments-fintech.md` — sector-specific workpaper conventions loaded per engagement-scope.
 - `references/cross-cutting/cyber.md`, `conduct.md` — cross-cutting flavour; cyber default-on for IAM and Part 500 controls, conduct default-on for consumer-facing tests.
-- `references/firm-overlay.md` — firm-installed methodology, taxonomy, review gates, and template variants beyond the regulatory baseline; consumed when present.
+- `references/firm-overlay.md` — firm-installed methodology, taxonomy, decision checkpoints, and template variants beyond the regulatory baseline; consumed when present.
 - `templates/default-output.md` — workpaper template.
 - `schemas/workpaper.schema.json` — structured-output contract for downstream consumption.
 - `examples/` — HMDA LAR data-integrity workpaper; NYDFS Part 500 access-recertification workpaper.
@@ -88,4 +88,6 @@ The plugin-level shared references (`references/source-map.md`, `references/poli
 
 ## Output
 
-The skill emits a workpaper in `templates/default-output.md` shape and a structured record conforming to `schemas/workpaper.schema.json`. Downstream consumers: `qa-workpaper` reads the full record for sufficiency review; `risk-compliance-core/skills/issue-writeup` reads `issues_elevated` and pulls the handoff packages built from the exception register; internal audit consumes the workpaper as supporting documentation when scoping reliance on second-line testing. The schema is the cross-skill contract; additive changes only. Add fields, do not rename or repurpose them. A breaking change is a versioned migration with the downstream skills told in advance.
+Default to drafting against `templates/default-output.md`. Render as Word, Excel, PowerPoint, or Markdown when the audience or workflow asks for it. Produce the structured record at `schemas/workpaper.schema.json` when downstream automation or a registered consumer needs it. The standard real-world deliverable in most engagements is a Word workpaper with the named sections, often paired with an Excel sample-results tab when the sample is large.
+
+Downstream consumers: `qa-workpaper` reads the full record for sufficiency review; `risk-compliance-core/skills/issue-writeup` reads `issues_elevated` and pulls the handoff packages built from the exception register; internal audit consumes the workpaper as supporting documentation when scoping reliance on second-line testing. The schema is the cross-skill contract; additive changes only. Add fields, do not rename or repurpose them. A breaking change is a versioned migration with the downstream skills told in advance.

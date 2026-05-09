@@ -11,7 +11,7 @@ The skill cites these by file path. SKILL.md does not restate excerpts.
 - Citation: National Institute of Standards and Technology, AI Risk Management Framework 1.0 (January 2023), Govern function, subcategories Govern 1.x (organisational governance and policies), Govern 4.x (accountability structures, roles, and responsibilities), Govern 6.x (third-party considerations), Govern 5.x (consultation and engagement with affected communities).
 - Excerpt-paraphrase: The Govern function establishes that a culture of risk management is cultivated and present, that AI risk management is integrated and supported across the organization, that organizational structures, roles, and responsibilities related to AI risk management are clear, and that issues related to third-party AI are addressed. The board AI risk pack is the standing instrument by which the AI risk committee discharges its responsibilities under Govern 1.x and Govern 4.x; the vendor exposure section anchors to Govern 6.x; the policy and framework changes section anchors to Govern 1.x organisational policies.
 - Link: https://www.nist.gov/itl/ai-risk-management-framework — Govern function section, Govern 1.x, 4.x, 6.x subcategories
-- Notes: NIST AI RMF 1.0 is voluntary, not binding; it is the dominant framing US firms use for AI governance maturity narrative when SR 11-7, OCC Bulletin 2026-13, or sector-specific anchors do not apply directly. Subcategory numbering verified against NIST AI RMF 1.0 publication.
+- Notes: NIST AI RMF 1.0 is voluntary, not binding; it is the dominant framing US firms use for AI governance maturity narrative. The bank model-risk bulletin (OCC 2026-13 / FRB SR 26-2 / FDIC FIL-15-2026) excludes generative AI and agentic AI from its scope, so for those use cases NIST is the substantive anchor. Subcategory numbering verified against NIST AI RMF 1.0 publication.
 
 ### 2. NIST AI 600-1 — Generative AI Profile
 
@@ -20,19 +20,19 @@ The skill cites these by file path. SKILL.md does not restate excerpts.
 - Link: https://www.nist.gov/itl/ai-risk-management-framework — Generative AI Profile (NIST AI 600-1) [verify section]
 - Notes: Subcategory numbering confirmed at pack-write time; verification flag carried until the published profile section refs are pinned.
 
-### 3. OCC Bulletin 2026-13 — Revised Interagency Model Risk Management Guidance (2026)
+### 3. Joint Interagency Revised Guidance on Model Risk Management — OCC 2026-13 / FRB SR 26-2 / FDIC FIL-15-2026
 
-- Citation: OCC Bulletin 2026-13, "Revised Interagency Guidance on Model Risk Management" (issued 2026 by OCC; FDIC parallel FIL and Federal Reserve parallel SR letter expected) [verify section on board oversight and inventory governance].
-- Excerpt-paraphrase: The revised guidance refreshes SR 11-7 governance and oversight expectations to incorporate AI/ML and generative-AI use cases, including foundation-model dependence, retrieval-augmented generation, tool use, and agentic configurations. The board pack consumes the revised guidance as the current anchor where the bulletin is final at pack-write time; the inventory state, model performance trends, and vendor exposure sections all consume from this anchor.
-- Link: https://www.occ.gov/news-issuances/bulletins/2026/bulletin-2026-13.html — Bulletin 2026-13 [verify section]
-- Notes: Confirm published bulletin section numbering at pack-write time. Where the bulletin is not yet final, fall back on SR 11-7 §II and §III (anchor 4 below) and flag the AI/ML inclusion as the firm's interpretation pending the published refresh.
+- Citation: Joint Interagency Revised Guidance on Model Risk Management, OCC Bulletin 2026-13 / FRB SR 26-2 / FDIC FIL-15-2026, dated April 17, 2026. The three issuances are the same joint document; supersedes SR 11-7 (2011) and SR 21-8 (2021).
+- Excerpt-paraphrase (footnote 3, verbatim): "Generative AI and agentic AI models are novel and rapidly evolving. As such, they are not within the scope of this guidance. ... However, the principles described in this guidance apply to traditional statistical and quantitative models and non-generative, non-agentic AI models." Most relevant to banking organizations with over $30 billion in total assets; non-binding.
+- Link: https://occ.gov/news-issuances/bulletins/2026/bulletin-2026-13a.pdf — guidance text PDF
+- Notes: For traditional models in the firm's inventory and the model performance trends section, this is the current anchor at federally regulated banks. For GenAI and agentic use cases (which dominate the GenAI program status and foundation-model exposure sections of this pack) the bulletin is out of scope; those sections anchor to NIST AI RMF, NIST AI 600-1, ISO/IEC 42001, NAIC Bulletin (insurers), NYDFS October 2024 letter, and the EU AI Act where applicable.
 
-### 4. Federal Reserve SR 11-7 — Guidance on Model Risk Management, §II and §III
+### 4. Federal Reserve SR 11-7 — Guidance on Model Risk Management, §II and §III (superseded; cited for historical framing only)
 
 - Citation: Board of Governors of the Federal Reserve System, Supervision and Regulation Letter SR 11-7 / OCC Bulletin 2011-12, "Guidance on Model Risk Management" (April 4, 2011), §II "Overview of Model Risk Management" and §III "Model Risk Governance".
-- Excerpt-paraphrase: §II frames the board and senior management responsibilities for model risk: setting tolerance for model risk, ensuring the model risk management framework is adequate, and overseeing the framework's operation. §III sets governance, policies, and controls expectations including the role of an oversight committee, written policies, internal standards, periodic reporting, and the model inventory. The board AI risk pack is the standing reporting instrument under §II and §III for AI and ML use cases in scope of the firm's model risk policy.
+- Excerpt-paraphrase: §II framed board and senior-management responsibilities for model risk. §III set governance, policies, and controls expectations including the role of an oversight committee, written policies, internal standards, periodic reporting, and the model inventory. As of April 17, 2026 it is superseded by the joint interagency Revised Guidance on Model Risk Management (anchor 3) for federally regulated banks; SR 21-8 is also superseded.
 - Link: https://www.federalreserve.gov/supervisionreg/srletters/sr1107.htm — sections §II and §III
-- Notes: SR 11-7 is binding on federally regulated banks. For non-bank registrants, used as leading-practice anchor. SR 11-7 §VI on third-party models is the related anchor for the vendor exposure section.
+- Notes: Superseded for binding purposes by OCC 2026-13 / FRB SR 26-2 / FDIC FIL-15-2026 as of April 17 2026. Cite for historical framing only.
 
 ### 5. ISO/IEC 42001:2023 — Artificial Intelligence Management System
 
@@ -152,9 +152,7 @@ The skill cites these by file path. SKILL.md does not restate excerpts.
 
 The following items carry `[verify section]` or `[verify ...]` flags and must be confirmed at pack-write time:
 
-- OCC Bulletin 2026-13 — confirm published section numbering on board oversight and inventory governance.
-- FDIC FIL parallel issuance to OCC Bulletin 2026-13 — confirm number and section.
-- FRB SR letter parallel issuance to OCC Bulletin 2026-13 — confirm number and section.
+- OCC 2026-13 / FRB SR 26-2 / FDIC FIL-15-2026 — verbatim GenAI/agentic scope exclusion confirmed against the OCC PDF (footnote 3). The three issuances are the same joint document, not parallels. SR 11-7 and SR 21-8 are confirmed superseded as of April 17 2026.
 - NIST AI 600-1 — confirm exact Govern and Manage subcategory numbering for the GenAI elements cited.
 - NYDFS Industry Letter on AI cybersecurity (October 2024) — confirm section reference for board-oversight language.
 - NYDFS Insurance Circular Letter (January 2024) — confirm section reference.

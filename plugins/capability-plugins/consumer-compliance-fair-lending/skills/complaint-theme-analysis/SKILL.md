@@ -16,8 +16,6 @@ description: |
   - The question is statistical fair-lending testing on outcomes data (use `fair-lending-test-plan`; this skill flags, that skill finds).
   - The question is element-by-element UDAAP analysis on a specific product, fee, or flow (use `udaap-risk-review`; this skill themes the population, that skill tests the elements).
   - The question is the firm's overall CMS or compliance-program quality (use the broader compliance-testing or risk-compliance-core skills).
-
-  Anchored to: CFPB Consumer Complaint Database; CFPB Compliance Management Review module of the Supervision and Examination Manual; CFPB Supervisory Highlights; Dodd-Frank §1031 / §1036; Joint Statement on Enforcement Efforts Against Discrimination and Bias in Automated Systems (CFPB / DOJ / FTC / EEOC, April 2023); Reg B 12 CFR §1002.9; Reg Z 12 CFR Part 1026; Reg E 12 CFR §1005.11; Reg X 12 CFR Part 1024 Subpart C; FCRA / Reg V furnisher-conduct authority; CFPB BISG methodology; FINRA Rules 4513 and 4530 (capital-markets sector); NAIC Model Acts #880 and #900 (insurance sector).
 argument-hint: "[complaint-data extract or pointer, period, source channels, product or business in scope; or trigger event (regulator inquiry, peer enforcement) and scope]"
 ---
 

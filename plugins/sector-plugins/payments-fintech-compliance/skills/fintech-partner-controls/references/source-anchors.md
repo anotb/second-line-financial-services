@@ -48,7 +48,7 @@ The lens here is fintech-side self-evidence for production to a sponsor bank's t
 
 - **FinCEN MSB rules, 31 CFR Part 1022**. §1022.380 registration requirements (categorical MSB-status determination is fact-specific against the FinCEN administrative-ruling library and is not a matter the controls pack should assert categorically). §1022.210 written AML program. §1022.220 Customer Identification Program where applicable. §1022.320 SAR filing duties (SAR threshold $2,000 generally and $5,000 with information about a possible insider) [verify current thresholds]. Subpart D recordkeeping. https://www.ecfr.gov/current/title-31/subtitle-B/chapter-X/part-1022 .
 
-- **FinCEN MSB registration**, 31 CFR §1010.380. Initial registration within 180 days; renewal every two years. https://www.ecfr.gov/current/title-31/subtitle-B/chapter-X/part-1010/subpart-D/section-1010.380 .
+- **FinCEN MSB registration**, 31 CFR §1022.380. Initial registration within 180 days of becoming an MSB; renewal every two years. https://www.ecfr.gov/current/title-31/subtitle-B/chapter-X/part-1022/subpart-D/section-1022.380 .
 
 - **FinCEN Travel Rule**, 31 CFR §1010.410(f). Recordkeeping and information-passing on transmittals of funds at or above the threshold (currently $3,000 for non-bank financial institutions and banks per the 1995 joint rule) [verify current threshold and the status of the FinCEN proposed rule to lower the threshold]. https://www.ecfr.gov/current/title-31/subtitle-B/chapter-X/part-1010/subpart-D/section-1010.410 .
 

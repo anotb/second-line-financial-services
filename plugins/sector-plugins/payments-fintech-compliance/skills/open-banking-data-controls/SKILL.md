@@ -67,7 +67,7 @@ The **self-evidence index** is the artifact list mapped to each control section.
 
 The artifact closes with **gaps and issues** (severity, owner, target close date), **recommended disposition** (`ready_for_review`, `ready_with_conditions`, `remediate_then_re_review`, `not_ready`), **conditions** attached to a ready-with-conditions disposition, **open items and named follow-ups**, and **source citations with date** (the `s1033_status_note` block repeats in the citations footer).
 
-## What is non-negotiable
+## Quality bar
 
 - Every material claim cites a source from `references/source-anchors.md` (or a loaded overlay) by file path. Unsupported claims are marked `[evidence needed]`.
 - The `s1033_status_note` block is required and cannot be blank. Effective date with `[verify]` flag, firm implementation tier, litigation status as of the analysis date, and notes. The same block propagates into any downstream artifact that touches the data-rights frame.
@@ -77,7 +77,7 @@ The artifact closes with **gaps and issues** (severity, owner, target close date
 - Named institutions appear in narrative only when they are public defendants in a finalised enforcement action with a published consent order.
 - The skill stops at draft. The named approver decides.
 
-## What flexes
+## Adaptation
 
 Pack depth and length scale to the firm role and the audience. A data-provider readiness pack ahead of an implementation-tier date runs longer than a data-recipient quarterly review. A both-sides firm produces two control families with a shared current-state regulatory frame and shared cyber and privacy overlays. A screen-scraping migration plan runs deeper where the credential-storage inventory is large; where it is empty, the block collapses to a status line.
 
@@ -98,6 +98,6 @@ The plugin-level shared references (`references/source-map.md`, `references/poli
 
 ## Output
 
-The deliverable is a Word memo. The skill emits the pack content in `templates/default-output.md` shape and renders it as a `.docx` via the `docx` skill in the `document-skills` plugin (the `docx` skill consumes the populated markdown and produces the Word file with the named sections, tables, and a header block including the `s1033_status_note`). The plugin README names `document-skills` as a required companion plugin.
+Default to drafting against `templates/default-output.md`. Render as Word, Excel, PowerPoint, or Markdown when the audience or workflow asks for it; the typical deliverable is a Word memo via the `docx` skill in the `document-skills` plugin, with the header block carrying the `s1033_status_note`. The plugin README names `document-skills` as a companion plugin.
 
-The structured record is emitted in the same shape as the named-section template; downstream consumers — `fintech-partner-controls` (programme-agreement-mapped controls inventory updates), `payment-operations-incident-review` (where an incident touches authorisation flows, developer-interface tokens, or data-recipient feeds), `third-party-operational-resilience/vendor-diligence` (aggregator or developer-portal vendor diligence) — read the named blocks and propagate the `s1033_status_note` directly. The status-note block is the cross-skill contract; the rest of the artifact is consumed as a memo.
+Downstream consumers — `fintech-partner-controls` (programme-agreement-mapped controls inventory updates), `payment-operations-incident-review` (where an incident touches authorisation flows, developer-interface tokens, or data-recipient feeds), `third-party-operational-resilience/vendor-diligence` (aggregator or developer-portal vendor diligence) — read the named blocks and propagate the `s1033_status_note` directly. The status-note block is the cross-skill contract.

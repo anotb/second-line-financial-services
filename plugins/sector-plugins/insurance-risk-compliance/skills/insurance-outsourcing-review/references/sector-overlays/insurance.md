@@ -9,7 +9,7 @@ This skill is insurance-only by design; the overlay carries the insurance frame 
 | Managing General Agent (MGA) | applies if affiliate (Form D) | applies | applies if claims-touching | applies (binding / quoting) | apply materiality |
 | Managing General Underwriter (MGU) | applies if affiliate (Form D) | applies | applies if claims-touching | applies | apply materiality |
 | Third-Party Administrator (TPA) | applies if affiliate (Form D) | applies | applies (claims-handling) | applies if premium-collecting or producer-acting | apply materiality |
-| Claims administrator | applies if affiliate (Form D) | applies | applies (Model #880 §4) | usually n/a | apply materiality |
+| Claims administrator | applies if affiliate (Form D) | applies | applies (Model #900 plus state UCSPAs) | usually n/a | apply materiality |
 | Underwriting bureau | applies if affiliate (Form D) | applies | n/a | n/a | apply materiality |
 | IT outsourcer | applies if affiliate (Form D) | applies (cyber chain) | n/a | n/a | apply materiality |
 | Actuarial outsourcer | applies if affiliate (Form D) | applies (data) | n/a | n/a | apply materiality |
@@ -26,9 +26,9 @@ The §4.F clause set on the Insurance Data Security Model Law is insurance-speci
 
 The exam reviews per-state per-individual-producer status where binding, quoting, issuance, premium-collection, or producer authority is exercised. Confirming the counterparty entity holds a corporate licence is not enough. The pack lists the per-state per-individual licensing posture or flags it as an open gap with an owner. Appointment status by state runs alongside licensing — a licensed producer who is not appointed by the carrier in a state where they are exercising authority is a finding.
 
-## Claims-handling under Model #880 follows the function
+## Claims-handling under Model #900 plus state UCSPAs follows the function
 
-UDAP and unfair-claims-settlement-practices exposure under NAIC Unfair Trade Practices Act Model #880 attach to the carrier of record regardless of who executes the claim decision. The TPA's letters are the carrier's letters for that purpose. The pack reads denial-letter samples against the standard, surfaces drift in acknowledgement and decision timing, and confirms the complaint flow from policyholder through TPA back to the carrier. Most states have an unfair-claims-settlement-practices act that adds state-specific timing, notice, and reasoned-denial expectations on top; cite by state when used.
+UDAP and unfair-claims-settlement-practices exposure under the NAIC Unfair Claims Settlement Practices Act (Model #900) and the relevant state unfair-claims-settlement-practices acts attach to the carrier of record regardless of who executes the claim decision. The TPA's letters are the carrier's letters for that purpose. The pack reads denial-letter samples against the standard, surfaces drift in acknowledgement and decision timing, and confirms the complaint flow from policyholder through TPA back to the carrier. State UCSPAs add state-specific timing, notice, and reasoned-denial expectations on top of the model; cite by state when used. Where a state's unfair-trade-practices act (often the analogue to NAIC Model #880) reaches claims-handling conduct, name it alongside the UCSPA cite.
 
 ## Premium-handling and fiduciary-account posture
 

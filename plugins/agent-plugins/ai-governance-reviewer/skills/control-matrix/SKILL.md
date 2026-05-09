@@ -13,8 +13,6 @@ description: |
   - The work is a single-control workpaper for an audit sample (use compliance-testing's control-test-workpaper).
   - The work is drafting a finding (use `issue-writeup`).
   - The work is portfolio-level coverage commentary across many matrices (the risk-committee pack, not this).
-
-  Anchored to: COSO Internal Control Integrated Framework (2013), BCBS 239, SR 11-7 / OCC Bulletin 2026-13, FFIEC IT Examination Handbook, Interagency Guidance on Third-Party Relationships (June 2023), 12 CFR Part 30 Appendix D (OCC Heightened Standards), NYDFS 23 NYCRR Part 500, and CFPB Compliance Management System guidance. Citations and excerpts live in `references/source-anchors.md`.
 argument-hint: "[process or product in scope, plus pointer to obligation set or extract]"
 ---
 
@@ -24,7 +22,7 @@ A risk-control matrix is the obligation-anchored row structure that lets a contr
 
 The matrix is a primitive. Compliance-testing samples against the row's evidence pointer and test method. Vendor-diligence reads the relevant rows when it asks the third-party question. Exit-plan reads the rows that govern a critical-vendor relationship. Exam-brief leans on the matrix to answer "what controls cover this rule." Model-card-builder pulls its controls section from the model-lifecycle rows of the same matrix. Both the CRO function (risk-data, model risk, op risk, third-party risk) and the compliance function (consumer compliance, BSA, fair lending) consume it; the row spine is identical, the source labels and overlays differ.
 
-The skill produces a matrix as a markdown artifact in `templates/default-output.md` shape and a structured record conforming to `schemas/control-matrix.schema.json`. The artifact is a draft until a named reviewer attests.
+The matrix is the deliverable; the format is whatever the engagement and audience need. A 2-line MRMO challenge sitting renders Excel-natural; a board distillation may want PowerPoint with the matrix appendixed; a developer-touched artifact stays markdown. The skill drafts against `templates/default-output.md` and the structured record conforms to `schemas/control-matrix.schema.json`. The artifact is a draft until a named reviewer signs off.
 
 ## Ask first
 
@@ -32,7 +30,7 @@ Before drafting, settle a few things. Most of the answers are on the table by th
 
 - What process, product, or function is in scope. The matrix is scoped tight: commercial real estate origination, vendor lifecycle for a critical fraud-screening service, monthly board credit-risk pack, model lifecycle for tier-1 retail credit models. "The risk program" is too wide.
 - What obligation set is the matrix anchored on. Pointer into `obligation-mapping`'s output, or the obligation source list named directly. Without an anchored obligation set, the matrix is policy commentary, not a control matrix.
-- Who reads it, and what decision it supports. A 1.5-line refresh for the BU controls tester reads differently from a 2-line matrix headed for an MRMO challenge session, an audit support file, an examiner-readiness pack, or a board-committee summary. Persona drives review-gate machinery; audience drives compression.
+- Who reads it, and what decision it supports. A 1.5-line refresh for the BU controls tester reads differently from a 2-line matrix headed for an MRMO challenge session, an audit support file, an examiner-readiness pack, or a board-committee summary. Persona drives the sign-off forum; audience drives compression.
 - What source posture the engagement runs at. Public-only sets the ceiling at obligation, control objective, and control-activity description. Firm-policy-overlay or mixed lets named owners, named systems of record, and last-test results land in the body.
 
 When `engagement-scope` is supplied, the skill consumes it for institution, persona, source posture, sector overlay, and cross-cutting overlay. Otherwise it asks the four questions and defaults to public posture if the practitioner declines. The matrix notes scope was not formalised; it does not silently assume.
@@ -74,30 +72,38 @@ Privacy, climate, and conduct overlays follow the same pattern; this skill ships
 
 Where firm policy or taxonomy applies, it lives in `references/firm-overlay.md` (consumed when present) and never in the matrix directly. The matrix carries the obligation source from `references/source-anchors.md` and the firm's labelling from the overlay, distinct columns.
 
-## What's load-bearing and what flexes
+## Quality bar
 
-A handful of things do not flex:
+Every row carries an obligation source. A control without a source obligation is either a hygiene control mis-located into the matrix or evidence that the obligation extraction is incomplete; either way, it does not stay as an unsourced row.
 
-- Every row carries an obligation source. A control without a source obligation is either a hygiene control mis-located into the matrix or evidence that the obligation extraction is incomplete; either way, it does not stay as an unsourced row.
-- Control objective and control activity are distinct and both required. The objective is the condition that must be true; the activity is who does what, how often, using what system. Single-field rows are not yet controls.
-- Evidence is a pointer to a system-of-record output, a sample report, a sign-off log, or a workflow record. The policy document is the control statement, not evidence. Vendor marketing and management assertion are not evidence either.
-- Coverage gaps are surfaced. Obligations in scope with no mapped control land in the gaps section of the artifact; they do not get buried in a footnote or papered over with a generic policy reference.
-- Owners are named roles with accountability, not collective nouns. Where the role taxonomy is firm-specific, it comes from `references/firm-overlay.md`.
-- Material claims cite a source. `[evidence needed]` flags items needing follow-up and routes to the engagement issue log.
-- The matrix is a draft until a named reviewer attests. The skill stops at draft.
+Control objective and control activity are distinct and both required. The objective is the condition that must be true; the activity is who does what, how often, using what system. Single-field rows are not yet controls.
 
-Everything else adapts to context. Audience drives shape: a 1.5-line refresh reads operational, a 2-line matrix for committee challenge reads with reviewer questions clustered, an audit support file reads with the testing column to the front, a board distillation pulls coverage gaps and recommended actions to the front. Source posture drives what the body can carry; public-only matrices sit at obligation-and-objective level, mixed and firm-policy-overlay let owners, system-of-record names, and test results land. Sector and cross-cutting overlays are loaded from the engagement scope. Frequency, test method, and effectiveness ratings track the firm's testing taxonomy where one exists.
+Evidence is a pointer to a system-of-record output, a sample report, a sign-off log, or a workflow record. The policy document is the control statement, not evidence. Vendor marketing, RFP narrative, and management assertion are not evidence either; the seams between source evidence, management assertion, public-source obligation, and inference stay visible.
+
+Coverage gaps are surfaced. Obligations in scope with no mapped control land in the gaps section of the artifact; they do not get buried in a footnote or papered over with a generic policy reference.
+
+Owners are named roles with accountability, not collective nouns. Where the role taxonomy is firm-specific, it comes from `references/firm-overlay.md`.
+
+Material claims cite a source. `[evidence needed]` flags items needing follow-up and route to the engagement issue log. `[verify section]` markers belong in source-anchors verification, not the matrix body.
+
+No named institutions in the matrix or narrative unless they are public defendants in a finalised enforcement action with a published consent order. The matrix stops at recommendation; the artifact is a draft until a named reviewer signs off.
+
+## Adaptation
+
+Audience drives shape. A 1.5-line refresh reads operational. A 2-line matrix for committee challenge reads with reviewer questions clustered. An audit support file pulls the testing column forward. A board distillation pulls coverage gaps and recommended actions to the front. Source posture drives what the body can carry: public-only matrices sit at obligation-and-objective level; mixed and firm-policy-overlay let owners, system-of-record names, and test results land. Sector and cross-cutting overlays load from the engagement scope. Frequency, test method, and effectiveness ratings track the firm's testing taxonomy where one exists.
 
 ## Output
 
-The matrix in `templates/default-output.md` shape and the structured record per `schemas/control-matrix.schema.json`. Downstream consumers: `compliance-testing` reads `controls[*].evidence` and `controls[*].test_method` to scope sample work; `vendor-diligence` reads the rows that touch the in-scope third-party process and uses `coverage_gaps` to flag pre-onboarding conditions; `exit-plan` reads the critical-vendor rows and the `open_issue_ids`; `exam-brief` reads `controls` and `coverage_gaps` against the rule the examiner is asking about; `model-card-builder` pulls the model-lifecycle rows for the card's controls section; `policy-gap-review` reads the source list and `coverage_gaps` to triangulate policy edits. The schema is the cross-skill contract; additive changes only, never silent renames. Breaking changes ship as a versioned migration with downstream skills told in advance.
+Default to drafting against `templates/default-output.md`. The matrix is Excel-natural in practice (rows, named columns, sortable views) so most engagements render the deliverable as Excel via the `xlsx` skill in the `document-skills` plugin. Word with the matrix as an attached register, PowerPoint for a board distillation, or markdown for a developer-touched artifact each have their place; render to whatever the audience and workflow ask for. Produce the structured record at `schemas/control-matrix.schema.json` when downstream automation or a registered consumer needs it.
+
+Downstream consumers: `compliance-testing` reads `controls[*].evidence` and `controls[*].test_method` to scope sample work; `vendor-diligence` reads the rows that touch the in-scope third-party process and uses `coverage_gaps` to flag pre-onboarding conditions; `exit-plan` reads the critical-vendor rows and the `open_issue_ids`; `exam-brief` reads `controls` and `coverage_gaps` against the rule the examiner is asking about; `model-card-builder` pulls the model-lifecycle rows for the card's controls section; `policy-gap-review` reads the source list and `coverage_gaps` to triangulate policy edits. The schema is the cross-skill contract; additive changes only, never silent renames. Breaking changes ship as a versioned migration with downstream skills told in advance.
 
 ## Pointers
 
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
 - `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md` — sector overlays loaded from engagement scope.
 - `references/cross-cutting/cyber.md` — cyber overlay; loaded whenever the scoped process touches information-security controls.
-- `references/firm-overlay.md` — firm-installed taxonomy, named role labels, system-of-record names, internal policy pointers, review gates beyond the regulatory baseline; consumed when present.
+- `references/firm-overlay.md` — firm-installed taxonomy, named role labels, system-of-record names, internal policy pointers, decision forums and sign-off conditions beyond the regulatory baseline; consumed when present.
 - `templates/default-output.md` — matrix template.
 - `schemas/control-matrix.schema.json` — structured-output contract.
 - `examples/` — credit-risk reporting matrix anchored on BCBS 239; AI-governance controls matrix anchored on SR 11-7 and the AI overlay.

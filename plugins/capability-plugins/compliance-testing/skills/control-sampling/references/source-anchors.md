@@ -88,7 +88,7 @@ Also consult, when present in the plugin:
 
 - `references/source-map.md` — plugin-wide named-source map.
 - `references/policy-control-library.md` — plugin-wide policy-and-control library used as the firm-side analog of the source map.
-- `references/review-gates.md` — named human-review gates and confidence-label definitions used across all six compliance-testing skills for sign-off and confidence labeling.
+- `references/review-gates.md` — named decision checkpoints and confidence-label definitions used across all six compliance-testing skills for sign-off and confidence labeling.
 
 ## Firm overlays
 

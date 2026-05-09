@@ -8,7 +8,7 @@ This is a **strict sector-overlay plugin**. It ships only sector-unique skills. 
 
 ## v1 skills (2)
 
-- `insurance-outsourcing-review` — second-line review of an MGA, MGU, TPA, claims-administrator, or other delegated-authority arrangement against NAIC outsourcing model law (Insurance Holding Company Model #440 / #450 family [verify]), Insurance Data Security Model Law (Model #668) §4.F, NAIC Unfair Trade Practices Act (Model #880) where claims handling is delegated, and Producer Licensing Model Act expectations. Output is a state-DOI-grade oversight memo with disposition.
+- `insurance-outsourcing-review` — second-line review of an MGA, MGU, TPA, claims-administrator, or other delegated-authority arrangement against NAIC outsourcing model law (Insurance Holding Company Model #440 / #450 family [verify]), Insurance Data Security Model Law (Model #668) §4.F, NAIC Unfair Claims Settlement Practices Act (Model #900) plus the relevant state unfair-claims-settlement-practices acts where claims handling is delegated, and Producer Licensing Model Act expectations. Output is a state-DOI-grade oversight memo with disposition.
 - `life-health-pricing-governance` — second-line governance review of life or health pricing, rate-filing, accelerated-underwriting, or ML-rating-factor changes against NAIC Model #880 unfair-discrimination, NAIC Bulletin on the Use of AI Systems by Insurers (December 2023), state DOI AI bulletins (Colorado SB 21-169 implementing regulation, NY DFS Insurance Circular Letter on AI and ECDIS in life insurance, January 2024, California DOI bulletin), ACA pricing rules where in scope, and Model #582 illustrations where in scope.
 
 ## What changed from v0.2

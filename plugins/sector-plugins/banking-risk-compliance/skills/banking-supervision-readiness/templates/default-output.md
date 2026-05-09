@@ -131,7 +131,7 @@ For BHC supervisory cycles, replace the CAMELS subsections below with the BHC ra
 
 **Component summary.** [IRR profile; EVE and NII sensitivities under standard rate-shock scenarios; model governance for IRR models; ALCO oversight cadence.]
 
-**Public criteria.** OCC Comptroller's Handbook Interest Rate Risk booklet (current edition) [verify edition]; Interagency Advisory on Interest Rate Risk Management (January 7, 2010, FRB SR 10-1 / OCC OCC-2010-1 / FDIC FIL-2-2010) [verify SR number]; OCC Bulletin 2026-13 model risk expectations for IRR-model governance [verify final 2026 bulletin number and date].
+**Public criteria.** OCC Comptroller's Handbook Interest Rate Risk booklet (current edition) [verify edition]; Interagency Advisory on Interest Rate Risk Management (January 7, 2010, FRB SR 10-1 / OCC OCC-2010-1 / FDIC FIL-2-2010) [verify SR number]; OCC Bulletin 2026-13 (revised interagency model-risk guidance) for traditional IRR-model governance [verify final 2026 bulletin number and date]; the bulletin scope covers traditional models and excludes GenAI and agentic AI.
 
 **Evidence inventory.** [ALCO packs; IRR model validation reports; back-testing; ALCO-policy IRR-limit cross-walk.]
 

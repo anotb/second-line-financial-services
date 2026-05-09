@@ -12,7 +12,7 @@ Cited and section-referenced in `references/source-anchors.md`. This overlay nam
 
 ### 1. SR 11-7 is binding for federally regulated banks
 
-SR 11-7 §V sets the documentation expectation for banks; the model card is the firm-side artifact that satisfies (in part) that expectation. For banks, the card is not optional governance polish; it is a prudential expectation under the Fed/OCC/FDIC interagency model risk guidance, refreshed in 2026 (OCC Bulletin 2026-13 and parallel FRB/FDIC issuances).
+SR 11-7 §V sets the documentation expectation for banks; the model card is the firm-side artifact that satisfies (in part) that expectation. For banks, the card is not optional governance polish; it is a prudential expectation under the Fed/OCC/FDIC interagency model risk guidance, refreshed in 2026 (OCC Bulletin 2026-13 and parallel FRB/FDIC issuances). Note: the 2026 revision excludes generative AI and agentic AI from its scope; for GenAI/agentic content in a card, anchor to the AI-specific frameworks (NIST AI RMF, NIST AI 600-1, ISO/IEC 42001) and the cross-cutting overlays.
 
 For non-bank registrants under the same parent (e.g., a sister broker-dealer or asset manager subsidiary), SR 11-7 reaches by extension only when the bank inherits model risk through transactions, services, or balance-sheet exposure. Card-writer should not over-claim SR 11-7 reach to non-bank entities.
 

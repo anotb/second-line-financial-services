@@ -14,8 +14,6 @@ description: |
   - The test plan itself is being reviewed (design-stage review of `test-plan-builder` output, not QA of a completed workpaper).
   - Exceptions identified during QA need their own classification. Use `exception-analysis` for the QA-identified deviations from the methodology, not for the original control deviations the workpaper already classified.
   - The work is drafting an issue from a confirmed finding. Use `risk-compliance-core/skills/issue-writeup`; this skill's deficiency findings on the workpaper are not the same as control issues on the entity.
-
-  Anchored to: AICPA AU-C 220 (Quality Management for an Engagement), AICPA AU-C 230 (Audit Documentation), AICPA AU-C 265 (Communicating Internal Control Related Matters), AICPA AU-C 530 (Audit Sampling), IIA Global Internal Audit Standards Standard 1300 (Quality Assurance and Improvement Program) and Standard 2340 (Engagement Supervision), FFIEC IT Examination Handbook (Audit booklet, April 2012), SR 08-8 (Federal Reserve, October 2008), OCC PPM 5310-3, COSO 2013 Internal Control Integrated Framework Principle 17, PCAOB QC 1000 (borrowed methodology). Citations and excerpts live in `references/source-anchors.md`.
 argument-hint: "[workpaper ID, exception register ID, prior QA note for re-QA, or pointer to a workpaper population for examiner-prep sweep]"
 ---
 
@@ -35,7 +33,7 @@ Before reviewing, get plain answers. Most reviews answer them in the workpaper h
 - **What is the firm methodology floor for severity calibration.** Pulled from `references/firm-overlay.md` if installed, else from `references/source-anchors.md` (AICPA AU-C 265 deficiency / significant deficiency / material weakness hierarchy). Severity inflation and severity deflation are both calibration findings; the floor is the discipline that catches both.
 - **Does this workpaper carry open issues.** A clean workpaper does not necessarily mean a closeable issue. The QA review note's decision (accept / return / conditional accept) is distinct from the issue closure approval status; both are filled separately at sign-off.
 
-When `engagement-scope` (per `risk-compliance-core/engagement-scoping`) is supplied, consume it: `institution.type` and `institution.primary_regulators` set the supervisory framing, `sector_overlay_set` selects which `references/sector-overlays/<sector>.md` loads, `cross_cutting_overlay_set` selects the `references/cross-cutting/<topic>.md` files, `persona.role` sets which review gate the QA pack passes through, `source_posture` constrains what the body can carry. When it is not supplied, draft against what the workpaper carries, default to the testing program's standing posture, and note in the QA review note that scope was not formalised separately.
+When `engagement-scope` (per `risk-compliance-core/engagement-scoping`) is supplied, consume it: `institution.type` and `institution.primary_regulators` set the supervisory framing, `sector_overlay_set` selects which `references/sector-overlays/<sector>.md` loads, `cross_cutting_overlay_set` selects the `references/cross-cutting/<topic>.md` files, `persona.role` sets which decision forum the QA pack passes through, `source_posture` constrains what the body can carry. When it is not supplied, draft against what the workpaper carries, default to the testing program's standing posture, and note in the QA review note that scope was not formalised separately.
 
 ## How the QA review gets built
 
@@ -80,9 +78,9 @@ The same QA spine carries different conventions across sectors and cross-cutting
 
 Privacy and climate cross-cutting overlays follow the same pattern; this skill ships cyber and conduct as the v1 cross-cutting files because they are the most frequent triggers for QA deficiencies. Where firm policy or taxonomy applies (severity floors specific to the firm, named QA-committee gates, escalation paths for QA disagreement, template variants), it lives in `references/firm-overlay.md` and is consumed when present.
 
-## Non-negotiables
+## Quality bar
 
-A handful of things do not flex:
+Holds across every QA pack:
 
 - Every deficiency cites a methodology reference. Generic references ("firm methodology" alone) do not pass.
 - Source evidence, management assertions, public-source obligations, generated inferences, and open legal or compliance questions stay distinguishable in the QA review note. The artifact shows the seams.
@@ -110,4 +108,6 @@ The plugin-level shared references (`references/source-map.md`, `references/poli
 
 ## Output
 
-The skill emits a QA review pack: an Excel workbook with QA markup tabs (header, criteria, deficiencies, sample re-perform, severity calibration, conclusion support, source trace, reviewer questions) rendered via the `xlsx` skill in `document-skills`, and a Word QA memo summary (executive summary, QA scope, deficiency findings, sample re-perform results, severity calibration, conclusion support, decision, reviewer questions, sign-off, source trace and confidence label) rendered via the `docx` skill in `document-skills`. The content spec for both artifacts is in `templates/default-output.md`. Both artifacts emit together; the QA reviewer signs the Word memo, and the Excel workbook is the supporting documentation. Both file against the workpaper ID. The QA review note is consultative input to the workpaper reviewer for re-submission; the firm's testing-program closure machinery picks up the workpaper after QA sign-off.
+Default to drafting against `templates/default-output.md`. Render as Word, Excel, PowerPoint, or Markdown when the audience or workflow asks for it. Produce the structured record at `schemas/qa-workpaper.schema.json` when downstream automation or a registered consumer needs it. QA work is workpaper-natural: the real deliverable is an Excel test-of-design / test-of-effectiveness workbook with QA markup tabs (header, criteria, deficiencies, sample re-perform, severity calibration, conclusion support, source trace, reviewer questions) paired with a Word cover memo (executive summary, QA scope, deficiency findings, sample re-perform results, severity calibration, conclusion support, decision, reviewer questions, sign-off, source trace and confidence label).
+
+Both artifacts emit together; the QA reviewer signs the Word memo, and the Excel workbook is the supporting documentation. Both file against the workpaper ID. The QA review note is consultative input to the workpaper reviewer for re-submission; the firm's testing-program closure machinery picks up the workpaper after QA sign-off.

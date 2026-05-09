@@ -4,7 +4,7 @@ Recurring defects in outsourcing-review packs and how to read past them.
 
 ## The pack reads like a vendor-diligence pack
 
-A market-conduct examiner will not accept a vendor-diligence pack as evidence of outsourcing oversight. The audience and the statutory frame are different. If the draft talks about SOC 2, hyperscaler concentration, and BCDR test reports without naming Form D, §4.F, Model #880, or per-state producer licensing, the wrong skill ran. Restart from the spec; the bank-flavoured `vendor-diligence` does not produce a state-DOI-grade artifact.
+A market-conduct examiner will not accept a vendor-diligence pack as evidence of outsourcing oversight. The audience and the statutory frame are different. If the draft talks about SOC 2, hyperscaler concentration, and BCDR test reports without naming Form D, §4.F, Model #900 (and the relevant state UCSPA), or per-state producer licensing, the wrong skill ran. Restart from the spec; the bank-flavoured `vendor-diligence` does not produce a state-DOI-grade artifact.
 
 ## Form D filing trigger missed on an affiliate transaction
 
@@ -24,7 +24,7 @@ The MGA or TPA has often rolled out an AI rating tool, an FNOL chatbot, or a cla
 
 ## Claims-handling controls assessed against fairness rather than fair-claims-settlement
 
-Fairness vocabulary belongs in AI governance. Insurance claims oversight runs on Model #880 and the state's unfair-claims-settlement-practices act: timing, notice, documentation, reasoned denial. The pack tests the delegated function against the insurance standard, not against generic AI fairness. Where both vocabularies apply (claims AI), the artifact carries both reads and translates between them.
+Fairness vocabulary belongs in AI governance. Insurance claims oversight runs on the NAIC Unfair Claims Settlement Practices Act (Model #900) and the state's unfair-claims-settlement-practices act: timing, notice, documentation, reasoned denial. The pack tests the delegated function against the insurance standard, not against generic AI fairness. Where both vocabularies apply (claims AI), the artifact carries both reads and translates between them.
 
 ## ORSA-fit answered with a guess
 
@@ -32,7 +32,7 @@ Whether the outsourced function belongs in the ORSA Summary Report depends on th
 
 ## TPA premium-handling not separated from claims-handling
 
-A TPA that collects or holds premium sits on a fiduciary-account posture (state TPA acts and producer-licensing rules) that is distinct from claims-handling oversight under Model #880. Folding both into one section loses the fiduciary-account question. Keep them as two named sections in the pack.
+A TPA that collects or holds premium sits on a fiduciary-account posture (state TPA acts and producer-licensing rules) that is distinct from claims-handling oversight under Model #900 and the state UCSPAs. Folding both into one section loses the fiduciary-account question. Keep them as two named sections in the pack.
 
 ## Sub-processor changes treated as a notification rather than a control
 

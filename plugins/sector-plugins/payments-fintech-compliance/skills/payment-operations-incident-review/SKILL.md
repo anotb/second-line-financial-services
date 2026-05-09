@@ -76,7 +76,7 @@ The **lessons learned and forward controls** block ties the incident back to spe
 
 The artifact closes with **open items and named follow-ups**, **gaps**, the **recommended disposition** (`closed`, `monitoring`, `open-remediation`, `escalate`), and **source citations with date**. The named-rail rule citations carry the disclaimer "current edition; specific sections to be confirmed against the firm's licensed copy" wherever the named-rail rule is paywalled.
 
-## What is non-negotiable
+## Quality bar
 
 - Every material claim cites a source from `references/source-anchors.md` (or a loaded overlay) by file path. Unsupported claims are marked `[evidence needed]`.
 - The consumer-EFT error-resolution clock runs from the consumer's notice, not from incident detection or confirmed impact. Mis-stating that is an automatic finding; the chronology and the Reg E triggers block separate the two.
@@ -87,7 +87,7 @@ The artifact closes with **open items and named follow-ups**, **gaps**, the **re
 - Named institutions appear in narrative only when they are public defendants in a finalised enforcement action with a published consent order.
 - The skill stops at draft. The named approver decides.
 
-## What flexes
+## Adaptation
 
 Pack depth and length scale to the trigger and the audience. A sponsor-bank operating-committee read-out runs longer than a quarterly internal-audit retrospective. A near-miss pack carries the same named sections but with the customer-impact population at zero and the lessons-learned block as the centre of gravity. A multi-rail incident keeps the rail-by-rail breakdown visible at every relevant block; a single-rail incident collapses the unused rail rows to status lines.
 
@@ -108,6 +108,6 @@ The plugin-level shared references (`references/source-map.md`, `references/poli
 
 ## Output
 
-The deliverable is a Word memo. The skill emits the pack content in `templates/default-output.md` shape and renders it as a `.docx` via the `docx` skill in the `document-skills` plugin (the `docx` skill consumes the populated markdown and produces the Word file with the named sections, tables, and a header block). The plugin README names `document-skills` as a required companion plugin.
+Default to drafting against `templates/default-output.md`. Render as Word, Excel, PowerPoint, or Markdown when the audience or workflow asks for it; the typical deliverable is a Word memo via the `docx` skill in the `document-skills` plugin, with rail-by-rail population tables that can lift to Excel for sponsor-bank reconciliation. The plugin README names `document-skills` as a companion plugin.
 
-The structured record is emitted in the same shape as the named-section template; downstream consumers — `payments-risk-assessment` (to update the rail / segment / geography baseline after the incident), `fintech-partner-controls` (to update the program-agreement-mapped controls inventory after the lessons-learned block lands), `risk-reporting/cyber-disclosure-readiness` (where the cyber leg has public-disclosure reach) — read the named blocks directly. Schema files are not generated for this skill; the named-section structure is the contract, and the artifact is consumed as a memo, not as a programmatic payload.
+Downstream consumers — `payments-risk-assessment` (to update the rail / segment / geography baseline after the incident), `fintech-partner-controls` (to update the program-agreement-mapped controls inventory after the lessons-learned block lands), `risk-reporting/cyber-disclosure-readiness` (where the cyber leg has public-disclosure reach) — read the named blocks directly. The named-section structure is the cross-skill contract.

@@ -15,8 +15,6 @@ description: |
   - The system is a vendor-hosted agentic product still in procurement (use vendor-diligence in third-party-operational-resilience with the AI-vendor scenario mode; this skill assumes a deployment review on a system the firm is operating).
   - The work is the prompt-injection-only deep-dive (use prompt-injection-risk; this skill folds prompt-injection into the broader agentic-control assessment but the focused memo lives there).
   - The work is the firm-side governance card or the validation plan (use model-card-builder or validation-plan; this skill consumes them and produces the controls-focused artifact).
-
-  Anchored to: NIST AI RMF, NIST AI 600-1 (Generative AI Profile), SR 11-7, OCC Bulletin 2026-13, EU AI Act, ISO/IEC 42001, NYDFS Industry Letter on Cybersecurity Risks Arising from AI, MITRE ATLAS, OWASP Top 10 for LLM Applications, NIST SP 800-53 Rev. 5. Insurance overlay carries NAIC Model Bulletin on Use of AI Systems by Insurers, NAIC Unfair Trade Practices Act (Model #880), state Unfair Claims Settlement Practices Acts, NAIC Insurance Data Security Model Law (Model #668), HIPAA Privacy and Security Rules, and state DOI AI bulletins.
 argument-hint: "[use-case ID, model-card record, validation-plan record, prompt-injection review, runbook references, IR drill records, or scope statement]"
 ---
 
@@ -24,11 +22,11 @@ argument-hint: "[use-case ID, model-card record, validation-plan record, prompt-
 
 An agentic-controls review is the second-line surfacing of one specific class of AI deployment: a system that selects actions, calls tools, reads or writes systems of record, or chains decisions across turns with autonomy beyond single-turn generation. The artifact names the scope and authority the agent operates within, the architecture and the tool inventory with blast-radius framing, the identity and authorisation posture, the human-oversight points with evidence the oversight is effective (not theatrical), the prompt-injection-via-tool-output and tool-misuse threat assessment, the kill-switch and rollback procedures with drill evidence, the logging and audit posture, the incident response with named regulator-notification triggers, the residual risk with accepted owners, and the recommended owner actions.
 
-Agentic systems sit across three regulator perspectives at once. The model-risk framing (SR 11-7, OCC Bulletin 2026-13) applies when the firm's model risk programme treats the agent as in scope, which it should for any agent making consequential decisions. The cyber framing (NYDFS Part 500 and the October 2024 AI Industry Letter, SEC 8-K Item 1.05, FFIEC IT Handbook, the 36-hour banking computer-security incident notification rule, state Insurance Data Security Model Law) carries binding supervisory expectation in their respective scopes; tool-use and external-system actuation widen the cyber surface materially. The human-oversight framing (EU AI Act Article 14 for in-scope deployments, sector consumer-protection regimes, fair-claims-settlement standards in insurance) sets the bar for what "human in the loop" has to mean in practice. Be explicit about which scopes are in play.
+Agentic systems sit across three regulator perspectives at once. The model-risk framing (the joint interagency revised guidance, OCC 2026-13 / FRB SR 26-2 / FDIC FIL-15-2026 issued April 2026) expressly excludes generative AI and agentic AI from its scope (footnote 3); where the firm's model risk programme treats the agent as a model by analogy the principles inform but the binding hook is firm policy, not the bulletin. The cyber framing (NYDFS Part 500 and the October 2024 AI Industry Letter, SEC 8-K Item 1.05, FFIEC IT Handbook, the 36-hour banking computer-security incident notification rule, state Insurance Data Security Model Law) carries binding supervisory expectation in their respective scopes; tool-use and external-system actuation widen the cyber surface materially. The human-oversight framing (EU AI Act Article 14 for in-scope deployments, sector consumer-protection regimes, fair-claims-settlement standards in insurance) sets the bar for what "human in the loop" has to mean in practice. The AI-specific framings (NIST AI RMF, NIST AI 600-1, ISO/IEC 42001, OWASP LLM Top 10, MITRE ATLAS) are leading practice; voluntary, not binding. Be explicit about which scopes are in play.
 
 The audience reads from four angles at once. The AI Governance Lead owns the artefact and consolidates the analysis. The MRMO and the model owner inherit the model-risk seams; the model owner is the source of upstream evidence (model card, validation plan, prompt-injection review, vendor system card) and the MRMO challenges the residual-risk view. The CISO function is a co-reviewer for any agent with tool use, identity, or external-system actuation; for most v1 agentic deployments that is the default. Sector and conduct co-reviewers (for insurance: privacy officer where PHI flows, claims operations leadership for claims AI; for capital markets: surveillance and trading-controls leadership; for banking: BSA officer for AML-touching flows) sit on the residual-risk acceptance.
 
-The artifact is a draft until the human reviewer attests. Sign-off is the gate; this skill stops short.
+The artifact is a draft until the human reviewer attests. The skill stops short of filing or approving it.
 
 ## Ask first
 
@@ -96,14 +94,14 @@ The privacy and conduct cross-cutting overlays load when the engagement scope fl
 
 Load only the overlays the engagement scope names. Gold-plating with overlays the engagement does not implicate adds noise without challenge value.
 
-## What's load-bearing and what flexes
+## Quality bar
 
-A handful of things do not flex:
+The controls review is only credible when these hold:
 
 - Every material claim cites a source. Unsupported items carry `[evidence needed]` and route to recommended actions, not silently into the artifact body.
-- Evidence is separated from inference. Vendor red-team results are not the same line as firm-internal red-team results; vendor self-attestation confidence is recorded explicitly. Drill records, gate-decision logs, and configuration evidence carry higher confidence than attestations.
+- Evidence is separated from inference. Vendor red-team results are not the same line as firm-internal red-team results; vendor self-attestation confidence is recorded explicitly. Drill records, decision-forum logs, and configuration evidence carry higher confidence than attestations.
 - No fabricated regulatory facts. Unknown section references carry `[verify section]` in the source-anchors file (not in the artifact body).
-- Authority statement enumerates out-of-scope actions concretely (at least three entries). Descriptive prose without enumeration fails the section.
+- Authority statement enumerates out-of-scope actions concretely. Descriptive prose without enumeration fails the section.
 - Tool inventory carries blast radius on every entry. A tool list without blast-radius framing is not a control surface.
 - Human oversight entries carry an evidence pointer that supports the assertion the oversight is effective. Theatrical oversight is the failure mode the section exists to surface.
 - Kill switch entries carry a `last_drilled` date. A documented but never-drilled kill switch is theatre.
@@ -111,15 +109,18 @@ A handful of things do not flex:
 - Sandbox and execution-environment guarantees are recorded with enforcement evidence, not policy assertion. Policy without enforcement routes to recommended actions.
 - Logging entries are exercised: confirmed by reading a sample log line, not asserted from a policy document.
 - Incident-response entries name the regulator-notification trigger per the loaded overlays and the off-switch criterion. The off-switch is non-optional on cyber-relevant and customer-impact-relevant classes.
-- Foundation-model swap re-validation flag is a non-optional recommended action for any architecture depending on a third-party foundation model.
+- Foundation-model swap re-validation is a non-optional recommended action for any architecture depending on a third-party foundation model.
+- No named institutions outside finalised public enforcement actions; examples are anonymised and public-source-derived.
 - Reviewer roles are functions, never named individuals.
-- The artifact is a draft until the human reviewer attests. The skill does not assert sign-off, file the artifact, post to the AI risk committee, trigger an IR runbook, or activate a kill switch.
+- The artifact is a draft until the human reviewer attests. The skill does not file the artifact, post to the AI risk committee, trigger an IR runbook, or activate a kill switch.
 
-Everything else adapts to context. Tier drives depth. Lifecycle stage drives which sections lean heavy (pre-prod-gate emphasises tested attacks, sandbox guarantees, oversight design, and drill plans; in-prod-periodic emphasises monitoring evidence, drill records, scope-drift audit; post-incident emphasises the timeline, the IR runbook output, and the recommended actions; expansion-review emphasises the delta against the prior review). Audience drives tone (working group is plain, committee is structured, examiner response is formal, board distillation pulls residual risk and recommended actions to the front). Sector and cross-cutting overlays load from the engagement scope. Where firm-specific policy or taxonomy applies, it lives in `references/firm-overlay.md` (consumed when present) and never in the artifact directly.
+## Adaptation
+
+Tier drives depth. Lifecycle stage drives which sections lean heavy (pre-prod-gate emphasises tested attacks, sandbox guarantees, oversight design, and drill plans; in-prod-periodic emphasises monitoring evidence, drill records, scope-drift audit; post-incident emphasises the timeline, the IR runbook output, and the recommended actions; expansion-review emphasises the delta against the prior review). Audience drives tone (working group is plain, committee is structured, examiner response is formal, board distillation pulls residual risk and recommended actions to the front). Sector and cross-cutting overlays load from the engagement scope. Source posture sets what the artifact can assert at high confidence and what carries `[evidence needed]`. Where firm-specific policy or taxonomy applies, it lives in `references/firm-overlay.md` (consumed when present) and never in the artifact directly.
 
 ## Output
 
-Two artefacts: the controls review per `templates/default-output.md`, and the structured object per `schemas/agentic-controls-review.schema.json`. The reviewer-attestation block is filled by the human reviewer (AI Governance Lead with CISO function for cyber-flagged reviews; co-acceptors per sector and cross-cutting overlays where applicable; for insurance claims AI, the privacy officer co-signs where PHI flows and claims operations leadership co-signs the operational-control acceptance); the artifact is filed only after.
+Default to drafting the controls review against `templates/default-output.md`. Render as Word for committee or CISO review, or another format the audience asks for. Produce the structured record at `schemas/agentic-controls-review.schema.json` when downstream consumers (`genai-pre-prod-review`, `board-ai-risk-pack`, `ai-governance-reviewer`, the firm cyber IR chain, the model inventory of record) need it. The reviewer-attestation block is filled by the human reviewer (AI Governance Lead with CISO function for cyber-flagged reviews; co-acceptors per sector and cross-cutting overlays where applicable; for insurance claims AI, the privacy officer co-signs where PHI flows and claims operations leadership co-signs the operational-control acceptance); the artifact is filed only after.
 
 Downstream consumers: `genai-pre-prod-review` consumes the structured object for the gate decision; `board-ai-risk-pack` pulls the residual-risk summary, the recommended-actions list, the kill-switch posture, and material incident-response triggers; the `ai-governance-reviewer` agent pulls the structured object for second-line challenge; the firm cyber IR chain consumes the incident-response section as input to runbook design and IR drill scope; the model inventory of record pulls the agent metadata for the central registry. The schema is the input contract for those consumers; additive changes only, never silent renames. Breaking changes ship as a versioned migration with the consumers told in advance.
 

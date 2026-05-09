@@ -15,7 +15,6 @@ description: |
   - The job is to extract obligations from a published rule (use `rule-to-obligation-extraction`) or to sequence remediation milestones (use `implementation-plan`).
   - The job is impact assessment of a proposed rule, not engagement with a regulator on an existing rule (use `regulatory-impact-assessment`).
 
-  Anchored to: OCC Comptroller's Handbook (Bank Supervision Process; Internal Controls), FRB Bank Holding Company Supervision Manual, FRB Commercial Bank Examination Manual, FDIC Risk Management Manual of Examination Policies, FFIEC BSA/AML Examination Manual, CFPB Supervision and Examination Manual, SEC Division of Examinations annual examination priorities and risk alerts, FINRA Rule 8210 and Annual Regulatory Oversight Report, NYDFS examination guidance, NAIC Market Conduct and Financial Condition Examiners Handbooks, the federal banking confidential-supervisory-information regimes (12 CFR Part 4 Subpart C, Part 261, Part 309), and published consent orders for response-letter structural pattern. Citations and excerpts live in `references/source-anchors.md`.
 argument-hint: "[regulator, exam type, scope window, in-scope products and entities, prior-cycle posture]"
 ---
 
@@ -73,11 +72,13 @@ The boundary the overlay enforces: a banking sector overlay loaded inside this s
 
 Loading an overlay the engagement does not implicate adds noise without challenge value. Loading none when one applies is the more common failure mode.
 
-## What's load-bearing and what flexes
+## Quality bar
 
-Load-bearing across every brief. Every material claim about regulator process cites a source from `references/source-anchors.md` (or a loaded overlay) by path. Unsupported items carry `[evidence needed]`. Section references that cannot be confirmed get `[verify section]`. Source evidence, vendor or firm management assertion, public-source obligation, generated inference, and open legal question stay distinguishable. Roles only, never named individuals, in every section. No named institutions in narrative beyond a public defendant in a finalised consent order, and only for structural pattern. The brief stops short of speaking for the firm to the regulator. The named lead attests.
+Holds across every brief. Every material claim about regulator process cites a source from `references/source-anchors.md` (or a loaded overlay) by path. Unsupported items carry `[evidence needed]`. Section references that cannot be confirmed get `[verify section]`. Source evidence, vendor or firm management assertion, public-source obligation, generated inference, and open legal question stay distinguishable. Roles only, never named individuals, in every section. No named institutions in narrative beyond a public defendant in a finalised consent order, and only for structural pattern. The brief stops short of speaking for the firm to the regulator. The named lead attests.
 
-Flexes to the engagement. Brief depth scales to engagement type and stakes: a horizontal review brief reads short and operational; a consent-order-response brief reads longer with a milestone tracker and named monitor role; a for-cause brief reads tighter on the precipitating event with counsel-shaped sections. Audience drives shape: regulatory affairs and head of compliance run the operational version; CRO chief of staff and general counsel pull the response-posture and disagreement sections forward; a board pre-read distills to executive summary plus open MRA/MRIA status. Source posture (public-only through connector-aware) drives what the brief can assert at high confidence and what carries `[evidence needed]`. Sector and cross-cutting overlays load from the engagement scope. Where firm-specific policy or named review machinery applies, it lives in `references/firm-overlay.md` and is consumed when present; the brief itself stays generic.
+## Adaptation
+
+Brief depth scales to engagement type and stakes: a horizontal review brief reads short and operational; a consent-order-response brief reads longer with a milestone tracker and named monitor role; a for-cause brief reads tighter on the precipitating event with counsel-shaped sections. Audience drives shape: regulatory affairs and head of compliance run the operational version; CRO chief of staff and general counsel pull the response-posture and disagreement sections forward; a board pre-read distills to executive summary plus open MRA/MRIA status. Source posture (public-only through connector-aware) drives what the brief can assert at high confidence and what carries `[evidence needed]`. Sector and cross-cutting overlays load from the engagement scope. Where firm-specific policy or named review machinery applies, it lives in `references/firm-overlay.md` and is consumed when present; the brief itself stays generic.
 
 ## Pointers
 

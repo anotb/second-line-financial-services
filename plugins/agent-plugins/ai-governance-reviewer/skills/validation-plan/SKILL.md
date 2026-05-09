@@ -14,8 +14,6 @@ description: |
   - The use case has not been intaked or tiered (use ai-use-case-intake or ai-risk-tiering first).
   - The artifact required is the firm-side model card itself (use model-card-builder; this plan consumes the card and scopes the testing against it).
   - The artifact required is the full GenAI pre-prod gate review across people, process, and technology (use genai-pre-prod-review; this plan is the validator-side scope only).
-
-  Anchored to: SR 11-7, OCC Bulletin 2026-13, NIST AI RMF, NIST AI 600-1 (Generative AI Profile), ISO/IEC 42001, EU AI Act Article 9 and Article 15. Citations and excerpts live in `references/source-anchors.md`.
 argument-hint: "[use-case ID, model card, tiering output, prior validation report, vendor evidence, or scope statement]"
 ---
 
@@ -58,7 +56,7 @@ Upstream artifacts come next, before any scope item is drafted: the `ai-use-case
 
 **Ongoing monitoring scope** is what the validator expects to see in production once the model lands. Each entry names the metric, the threshold, the frequency, the owner, the escalation path, and a `revalidation_trigger` flag. All six fields. The trigger flag is what distinguishes the validator's monitoring view from the model owner's operational monitoring view; the same metric may appear in both, but the validator's view is the one that triggers a re-validation cycle when breached. Validator monitoring copy-pasted from the model card without re-grounding is the recurring defect; the model owner's operational monitoring is not the same as the validator's revalidation triggers.
 
-**Effective challenge questions** are the plan's signature. Each names the design choice or assumption it interrogates, the expected evidence, and the owner of the response. SR 11-7 §IV.5 sets the effective challenge expectation: validators have sufficient stature, knowledge, and incentive to challenge the model. Compliance-theatre questions ("does the model meet our policy", "is the model fit for purpose") apply to every model and challenge nothing. Real challenge probes a specific design choice and a specific failure mode: "the agent-review gate is the only preventive control between the assistant output and the customer; what is the off-switch criterion if agent-edit rate falls below threshold for two consecutive months", "the override policy assumes underwriters override at less than five percent; what is the test for that assumption and what triggers a model retire decision if overrides drift above ten percent", "the vendor floats the underlying foundation model with thirty-day notice; what is the validator's drill and what is the rollback path."
+**Effective challenge questions** are the plan's signature. Each names the design choice or assumption it interrogates, the expected evidence, and the owner of the response. SR 11-7 §IV.5 sets the effective challenge expectation: validators have sufficient stature, knowledge, and incentive to challenge the model. Compliance-theatre questions ("does the model meet our policy", "is the model fit for purpose") apply to every model and challenge nothing. Real challenge probes a specific design choice and a specific failure mode: "the agent review of assistant output is the only preventive control between the model and the customer; what is the off-switch criterion if agent-edit rate falls below threshold for two consecutive months", "the override policy assumes underwriters override at less than five percent; what is the test for that assumption and what triggers a model retire decision if overrides drift above ten percent", "the vendor floats the underlying foundation model with thirty-day notice; what is the validator's drill and what is the rollback path."
 
 **Dependencies and prerequisites** lists the access and evidence the plan needs in hand for testing to execute: data extracts and feeds, validation environment and replay capability, vendor evidence package, foundation-model card, upstream artifacts, and cross-function access (consumer compliance for fair-lending integration, information security for cyber tests, vendor management for vendor evidence chase). A plan that depends on access the engagement does not have flags it as `[evidence needed]` rather than asserting the access exists.
 
@@ -87,22 +85,25 @@ When the engagement scope names a sector (banking, insurance, capital markets, p
 
 Load only the overlays the engagement scope names. Stuffing every overlay into a plan adds noise that the model risk committee then has to read past.
 
-## What's load-bearing and what flexes
+## Quality bar
 
-A handful of things do not flex:
+The plan is only credible when these hold:
 
 - Every material scope claim cites a source. Unsupported items carry `[evidence needed]` and go to the engagement issue log.
 - Evidence is separated from inference. Vendor self-attestation is not the same line as firm-independent evaluation.
 - No fabricated regulatory facts. Unknown section references carry `[verify section]` in the source-anchors file (not in the plan body).
 - The GenAI overlay fires when triggered. No skipping the indirect-injection or the vendor-version-swap drill on a plan that has a foundation model, a RAG corpus, or tool use.
 - Effective challenge questions name the design choice or assumption they interrogate. Compliance-theatre wording does not satisfy the field.
+- No named institutions outside finalised public enforcement actions; examples are anonymised and public-source-derived.
 - The plan is a draft until the validator and the model risk committee attest. The skill does not assert sign-off, file the plan, or open the testing window.
 
-Everything else adapts to context. Tier and validation type drive depth per pillar. Architecture drives the attack-class catalogue and the GenAI overlay. Audience drives tone (working group is plain, committee is structured, regulator response is formal). Persona drives the review-gate machinery; tier-1 models in OCC large-bank scope key off 12 CFR Part 30 Appendix D independence expectations. Sector and cross-cutting overlays are loaded from the engagement scope. Where firm-specific policy or taxonomy applies (named system-of-record paths, named committees, internal model-risk-policy thresholds), it lives in `references/firm-overlay.md` (consumed when present) and never in the plan directly.
+## Adaptation
+
+Tier and validation type drive depth per pillar. Architecture drives the attack-class catalogue and the GenAI overlay. Audience drives tone (working group is plain, committee is structured, regulator response is formal). Persona sets the review path; tier-1 models in OCC large-bank scope key off 12 CFR Part 30 Appendix D independence expectations. Sector and cross-cutting overlays load from the engagement scope. Source posture sets what the plan can assert at high confidence and what carries `[evidence needed]`. Where firm-specific policy or taxonomy applies (named system-of-record paths, named committees, internal model-risk-policy thresholds), it lives in `references/firm-overlay.md` (consumed when present) and never in the plan directly.
 
 ## Output
 
-Two artifacts: the plan per `templates/default-output.md`, and the structured object per `schemas/validation-plan.schema.json`. The reviewer attestation block is filled by the human reviewer; the plan is filed only after.
+Default to drafting the plan against `templates/default-output.md`. Render as Word for committee approval, or another format the audience asks for; a model risk committee usually wants a Word memo to file with the meeting record. Produce the structured record at `schemas/validation-plan.schema.json` when downstream consumers (the validation report, `model-card-builder`, `ai-governance-reviewer`) need it. The reviewer attestation block is filled by the human reviewer; the plan is filed only after.
 
 Downstream consumers: the validation report skill (phase 3, in `ai-validation-and-monitoring`) consumes this plan as its scope contract; `model-card-builder` consumes the outcomes-analysis and monitoring blocks for the firm-side card refresh; the `ai-governance-reviewer` agent consumes the structured object for second-line challenge; the model risk committee approves it before testing executes. The schema is the input contract for those consumers; additive changes only, never silent renames. Breaking changes ship as a versioned migration with the consumers told in advance.
 

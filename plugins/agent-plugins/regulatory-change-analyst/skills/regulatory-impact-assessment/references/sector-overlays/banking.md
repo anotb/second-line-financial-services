@@ -31,7 +31,7 @@ Federal banking impact assessments routinely touch the named-policy areas below;
 - **Compliance Risk Management Programme** under OCC, FRB, FDIC supervisory guidance and the FFIEC Compliance Manual.
 - **Third-Party Risk Management Policy** anchored on the June 2023 interagency guidance.
 - **Information Security Programme** anchored on the GLBA Safeguards Rule, 12 CFR Part 30 Appendix B (security guidelines), and the FFIEC IT Examination Handbook.
-- **Model Risk Management Policy** anchored on FRB SR 11-7 / OCC Bulletin 2011-12 (and the OCC Bulletin 2026-13 revision where applicable [verify bulletin]).
+- **Model Risk Management Policy** anchored on the joint interagency Revised Guidance on Model Risk Management (OCC Bulletin 2026-13 / FRB SR 26-2 / FDIC FIL-15-2026, April 17, 2026), which superseded SR 11-7 / OCC Bulletin 2011-12 (April 4, 2011) and SR 21-8 (April 9, 2021). GenAI and agentic AI are explicitly out of scope of the joint guidance; AI scope for those models routes to NIST AI RMF / NIST AI 600-1 / EU AI Act.
 - **BSA-AML Programme** anchored on the FFIEC BSA/AML Examination Manual, 31 CFR Chapter X, and the AMLA 2020 implementation rules.
 - **Fair-Lending Programme** anchored on Reg B (12 CFR Part 1002), Reg C (12 CFR Part 1003), and the FFIEC Interagency Fair Lending Examination Procedures.
 - **Operational Resilience Programme** anchored on the FFIEC Business Continuity Management booklet and the FRB / OCC / FDIC operational-resilience papers (Sound Practices to Strengthen Operational Resilience; the 2020 paper) [verify publication date].

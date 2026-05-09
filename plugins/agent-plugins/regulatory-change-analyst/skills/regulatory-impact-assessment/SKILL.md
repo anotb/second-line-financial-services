@@ -15,7 +15,6 @@ description: |
   - Gaps are already documented and the next step is sequencing the remediation (use implementation-plan).
   - The engagement is a live exam window and the artifact needed is the engagement playbook (use exam-brief).
 
-  Anchored to: Interagency Heightened Standards, OCC Bulletin 2013-29 and the interagency third-party-risk guidance, SR 11-7, OCC Bulletin 2026-13, FFIEC BSA/AML Examination Manual, CFPB Circulars and Bulletins, NYDFS Industry Letters and 23 NYCRR Part 500, SEC final rules and adopting releases, FinCEN advisories and rules, NCUA Letters to Credit Unions, NAIC model law adoption mechanics, ISO/IEC 42001, NIST AI RMF, OMB Circular A-4, and federal agencies' published statements of supervisory priorities.
 argument-hint: "[regulatory source: rule, letter, bulletin, circular, advisory, speech, enforcement theme]"
 ---
 
@@ -81,11 +80,13 @@ The overlay enforces a boundary the generic skill cannot. A banking overlay carr
 
 Load only the overlays the engagement scope flags. Loading none when one applies is the more common failure mode; loading all four for completeness adds noise and dilutes the strategy lens.
 
-## What's load-bearing and what flexes
+## Quality bar
 
-Load-bearing across every assessment. Every material claim about the rule, the in-scope read, the impact area, the cost-to-comply, or the strategy posture cites a source from `references/source-anchors.md` or a loaded overlay by path. Unsupported items carry `[evidence needed]`. Section references that cannot be confirmed get `[verify section]`. Source evidence, vendor or firm management assertion, public-source obligation, generated inference, and open legal question stay distinguishable; the artifact shows the seams. Roles only, never named individuals. No named institutions in narrative beyond a public defendant in a finalised consent order, and only for structural pattern. The skill stops at draft; the named lead attests. The skill does not opine on whether the rule applies as a matter of law.
+Holds across every assessment. Every material claim about the rule, the in-scope read, the impact area, the cost-to-comply, or the strategy posture cites a source from `references/source-anchors.md` or a loaded overlay by path. Unsupported items carry `[evidence needed]`. Section references that cannot be confirmed get `[verify section]`. Source evidence, vendor or firm management assertion, public-source obligation, generated inference, and open legal question stay distinguishable; the artifact shows the seams. Roles only, never named individuals. No named institutions in narrative beyond a public defendant in a finalised consent order, and only for structural pattern. The skill stops at draft; the named lead attests. The skill does not opine on whether the rule applies as a matter of law.
 
-Flexes to context. Depth scales to the source: a 48-hour read on an FIL is shorter than a 30-day read on a 600-page final rule. Audience drives shape: regulatory affairs runs the operational version; CRO chief of staff and general counsel pull the strategy lens forward; a board pre-read distils to executive summary, strategy posture, financial impact, and decision request. Source posture drives what the assessment can assert at high confidence and what carries `[evidence needed]`. Sector and cross-cutting overlays load from the engagement scope. The strategy lens flexes against the source type: a final rule's strategy lens is sparse on comment-period posture (the comment period is over) and rich on engagement posture; a proposed rule's strategy lens is rich on comment-period posture; a speech's strategy lens is rich on examiner-posture-shift signalling and sparse on comment posture. Where firm-specific policy or named review machinery applies, it lives in `references/firm-overlay.md` and is consumed when present; the assessment itself stays generic.
+## Adaptation
+
+Depth scales to the source: a 48-hour read on an FIL is shorter than a 30-day read on a 600-page final rule. Audience drives shape: regulatory affairs runs the operational version; CRO chief of staff and general counsel pull the strategy lens forward; a board pre-read distils to executive summary, strategy posture, financial impact, and decision request. Source posture drives what the assessment can assert at high confidence and what carries `[evidence needed]`. Sector and cross-cutting overlays load from the engagement scope. The strategy lens flexes against the source type: a final rule's strategy lens is sparse on comment-period posture (the comment period is over) and rich on engagement posture; a proposed rule's strategy lens is rich on comment-period posture; a speech's strategy lens is rich on examiner-posture-shift signalling and sparse on comment posture. Where firm-specific policy or named review machinery applies, it lives in `references/firm-overlay.md` and is consumed when present; the assessment itself stays generic.
 
 ## Pointers
 

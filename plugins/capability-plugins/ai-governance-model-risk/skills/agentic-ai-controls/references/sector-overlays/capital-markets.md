@@ -13,7 +13,7 @@ Loaded by: `agentic-ai-controls/SKILL.md` when `engagement_scope.sector_overlay_
 - MAR (Market Abuse Regulation, EU 596/2014) for EU-nexus operations and surveillance integrity.
 - SEC 8-K Item 1.05 and Reg S-K Item 106 for public registrants (cybersecurity disclosure).
 - NYDFS Part 500 for NY-licensed broker-dealers and investment advisers.
-- SR 11-7 / OCC Bulletin 2026-13 [verify section] for bank-affiliated broker-dealers.
+- The joint interagency Revised Guidance on Model Risk Management (OCC 2026-13 / FRB SR 26-2 / FDIC FIL-15-2026; supersedes SR 11-7) for bank-affiliated broker-dealers — note the bulletin expressly excludes agentic AI from scope (footnote 3) and reaches non-agentic components only.
 
 ## Recurring capital-markets agentic-AI use-case patterns
 

@@ -31,7 +31,7 @@ AI-related cross-cutting is implicit on `adverse-action-review` and `fair-lendin
 ## Components
 
 - `skills/` — the six v1 skills. Skills supersede legacy `commands/` for new content per current Claude Code guidance.
-- `references/` — plugin-level shared references: source map (pruned to consumer-compliance / fair-lending in v1), policy-control library, review gates.
+- `references/` — plugin-level shared references: source map (pruned to consumer-compliance / fair-lending in v1), policy-control library, decision checkpoints.
 - `schemas/` — plugin-level schemas for cross-skill artifacts. Phase 3 moves borrowed schemas to their owning plugins; new per-skill schemas land under `<skill>/schemas/`.
 
 Per-skill anatomy (v1, mirrors the Anthropic per-skill layout):

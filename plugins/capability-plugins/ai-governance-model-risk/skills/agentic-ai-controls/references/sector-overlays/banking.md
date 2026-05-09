@@ -9,7 +9,7 @@ Loaded by: `agentic-ai-controls/SKILL.md` when `engagement_scope.sector_overlay_
 - 12 CFR Part 53 (OCC), 12 CFR Part 225 Subpart M (FRB), 12 CFR Part 304 Subpart C (FDIC) — banking computer-security incident notification rule (36-hour notification, effective May 2022).
 - FFIEC IT Examination Handbook, Information Security and Architecture, Infrastructure, and Operations booklets, applied to the agent's serving environment.
 - Joint OCC, FRB, and FDIC Interagency Guidance on Third-Party Relationships (June 2023) — OCC Bulletin 2023-17 / FRB SR 23-4 / FDIC FIL-29-2023.
-- SR 11-7 / OCC Bulletin 2026-13 [verify section] — model risk management applied to agentic systems.
+- The joint interagency Revised Guidance on Model Risk Management (OCC 2026-13 / FRB SR 26-2 / FDIC FIL-15-2026; supersedes SR 11-7 and SR 21-8) expressly excludes agentic AI from its scope (footnote 3); the agentic system is not within the bulletin. Where the bank's model risk programme treats the agent as a model by analogy, the principles inform but the binding hook is firm policy.
 - NYDFS 23 NYCRR Part 500 for NY-licensed bank-affiliated entities; NYDFS October 2024 AI Industry Letter.
 - BSA / AML expectations for AML-touching agent flows (FinCEN; FFIEC BSA/AML Examination Manual).
 - CFPB UDAAP framings under 12 USC §§5531 and 5536 for consumer-financial-product flows.

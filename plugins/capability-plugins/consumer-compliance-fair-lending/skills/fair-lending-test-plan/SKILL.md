@@ -14,8 +14,6 @@ description: |
   - The question is the adverse-action notice itself (use `adverse-action-review`).
   - The question is Section 1071 small-business reporting readiness (use `section1071-readiness`).
   - A final fair-lending determination is required. The plan is reviewed and approved by counsel and the fair-lending committee; the determination follows the test, not the plan.
-
-  Anchored to: ECOA, Regulation B, Fair Housing Act, HUD Disparate Impact Rule, HMDA / Regulation C, FFIEC Interagency Fair Lending Examination Procedures, CFPB Fair Lending Report, CFPB Circulars, Joint Statement on Enforcement Efforts Against Discrimination and Bias in Automated Systems, HUD FHEO algorithmic-underwriting guidance, CFPB UDAAP Examination Manual, DOJ Combatting Redlining Initiative, CFPB BISG methodology, CFPB Section 1071 small-business data rule.
 argument-hint: "[risk-assessment ref, complaint-theme output, adverse-action review output, scope statement, model inventory pointer, or exam-readiness brief]"
 ---
 
@@ -100,11 +98,13 @@ When the engagement scope names a sector, load the matching `references/sector-o
 
 Conduct overlay loads where the plan crosses UDAAP themes (marketing distribution, dark patterns, steering); cross-reference `udaap-risk-review`. Privacy overlay is not primary on this skill (privacy questions sit on `adverse-action-review` and on the analytics workflow that runs the tests). Climate is not applicable.
 
-## What's load-bearing and what flexes
+## Quality bar
 
-Load-bearing across every plan: every material claim cites a source from `references/source-anchors.md` (or a loaded overlay) by file path; unsupported claims are marked `[evidence needed]`; section references that cannot be confirmed get `[verify section]` in the source-anchors file (not in the plan body); source evidence, management assertions, public-source obligations, generated inferences, and open legal or compliance questions stay distinguishable; no named institutions appear in narrative unless they are public defendants in a finalized enforcement action with a published consent order; the plan stops at draft and the fair-lending committee approves before any test runs; per-test demographic-proxy field is filled (no default-to-BISG-without-justification); LDA-search block is present whenever an AI/ML model is in scope; `legal_privilege_posture` is filled; `committee_approval_gate` is named.
+Holds across every plan: every material claim cites a source from `references/source-anchors.md` (or a loaded overlay) by file path; unsupported claims are marked `[evidence needed]`; section references that cannot be confirmed get `[verify section]` in the source-anchors file (not in the plan body); source evidence, management assertions, public-source obligations, generated inferences, and open legal or compliance questions stay distinguishable; no named institutions appear in narrative unless they are public defendants in a finalized enforcement action with a published consent order; the plan stops at draft and the fair-lending committee approves before any test runs; per-test demographic-proxy field is filled (no default-to-BISG-without-justification); LDA-search block is present whenever an AI/ML model is in scope; `legal_privilege_posture` is filled; `committee_approval_gate` is named.
 
-Flexes to the engagement: plan depth and length scale to the trigger and the in-scope inventory. An annual refresh covering one product reads short; a refresh after a regulator signal covering mortgage, indirect auto, and an AI pre-screen reads longer. Audience drives shape: fair-lending committee deck reads structured; outside-counsel direction memo reads denser; statistician working draft reads in test-spec vocabulary. The sector overlay set drives which `references/sector-overlays/<sector>.md` is loaded; a sponsor-bank fintech program may load two. Source posture (public-only through connector-aware) drives the data-required asks; a public-only plan flags the data fields that would be needed but are not yet accessible.
+## Adaptation
+
+Plan depth and length scale to the trigger and the in-scope inventory. An annual refresh covering one product reads short; a refresh after a regulator signal covering mortgage, indirect auto, and an AI pre-screen reads longer. Audience drives shape: fair-lending committee deck reads structured; outside-counsel direction memo reads denser; statistician working draft reads in test-spec vocabulary. The sector overlay set drives which `references/sector-overlays/<sector>.md` is loaded; a sponsor-bank fintech program may load two. Source posture (public-only through connector-aware) drives the data-required asks; a public-only plan flags the data fields that would be needed but are not yet accessible.
 
 ## Pointers
 

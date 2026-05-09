@@ -14,8 +14,6 @@ description: |
   - The vendor model is in-house or open-source with no published vendor evidence pack (the deep work is internal validation under validation-plan).
   - The work is the deployment-level pre-prod gate; this skill feeds genai-pre-prod-review.
   - The work is the focused prompt-injection deep-dive on the deployed system (use prompt-injection-risk).
-
-  Anchored to: US interagency model risk guidance, US interagency third-party risk-management guidance, NIST AI RMF and the Generative AI Profile, ISO/IEC 42001, EU AI Act provisions on general-purpose AI models, NYDFS cyber expectations on third-party AI, SOC 2 and ISO/IEC 27001 third-party attestation form-factors, and public foundation-model provider system-card and model-card pattern references. Citations and excerpts live in `references/source-anchors.md`.
 argument-hint: "[vendor, model, version, deployment form, in-firm use case IDs, evidence pack scope, or pointer to upstream vendor-diligence record where eval_evidence_status = deferred-to-evidence-review]"
 ---
 
@@ -75,26 +73,29 @@ The cyber cross-cutting overlay should be considered the default for v1 foundati
 
 Load only the overlays the engagement scope names. Gold-plating with overlays the engagement does not implicate adds noise without challenge value.
 
-## What's load-bearing and what flexes
+## Quality bar
 
-A handful of things do not flex:
+The review is only credible when these hold:
 
 - Every material claim cites a source. Unsupported items carry `[evidence needed]` and route to recommended actions, not silently into the review body.
 - The sufficiency view is read against the in-firm deployment context, not against the vendor's general claim. The basis column on every criterion is required.
-- Vendor self-attestation is distinguished from third-party attestation. Vendor-authored documents default to vendor-self-attestation confidence; do not collapse to high.
+- Vendor self-attestation is distinguished from third-party attestation. Vendor-authored documents default to vendor-self-attestation confidence; they do not collapse to high.
 - Confidentiality is recorded on every evidence-inventory entry. NDA-bound items are not quoted in artefacts read at lower source posture.
 - Residual reliance is named with caveats and a function-level accepted owner. Implicit reliance is a gap in waiting.
 - Re-review triggers are explicit, not "as needed". For hosted-API and vendor-hosted forms, vendor model-version swap and vendor new-system-card publication are non-optional.
 - Owner roles are functions, never named individuals.
 - The boundary with `vendor-diligence` is respected. This skill is the model-evidence layer; entity-level diligence sits in `vendor-diligence`. The chain is one-directional and the linked record IDs close the loop.
 - No fabricated regulatory facts. Unknown section references stay as `[verify section]` flags in the source-anchors file (not in the review body).
+- No named institutions outside finalised public enforcement actions; examples are anonymised and public-source-derived.
 - The review is a draft until the named reviewers attest.
 
-Everything else adapts to context. Deployment form rewires the evidence-ask scoping. Tier drives depth. Review stage drives which sections lean heavy (onboarding emphasises the full sufficiency view; version-delta focuses on what changed against the prior review and the re-review triggers that fired; post-incident emphasises incident-disclosure history and the linked-incident analysis). Audience drives tone. Sector and cross-cutting overlays load from the engagement scope. Where firm-specific policy or taxonomy applies, it lives in `references/firm-overlay.md` (consumed when present) and never in the review directly.
+## Adaptation
+
+Deployment form rewires the evidence-ask scoping. Tier drives depth. Review stage drives which sections lean heavy (onboarding emphasises the full sufficiency view; version-delta focuses on what changed against the prior review and the re-review triggers that fired; post-incident emphasises incident-disclosure history and the linked-incident analysis). Audience drives tone. Sector and cross-cutting overlays load from the engagement scope. Source posture sets what the review can assert at high confidence and what carries `[evidence needed]`. Where firm-specific policy or taxonomy applies, it lives in `references/firm-overlay.md` (consumed when present) and never in the review directly.
 
 ## Output
 
-Two artefacts: the review per `templates/default-output.md`, and the structured object per `schemas/llm-vendor-evidence-review.schema.json`. The reviewer-attestation block is filled by the named human reviewers (AI Governance Lead with co-attestors per loaded overlays); the review is filed only after.
+Default to drafting the review against `templates/default-output.md`. Render as Word for committee or TPRM forum review, or another format the audience asks for. Produce the structured record at `schemas/llm-vendor-evidence-review.schema.json` when downstream consumers (`genai-pre-prod-review`, `vendor-diligence`, `board-ai-risk-pack`) need it. The reviewer-attestation block is filled by the named human reviewers (AI Governance Lead with co-attestors per loaded overlays); the review is filed only after.
 
 Downstream consumers: `genai-pre-prod-review` consumes the structured object for the gate decision (the linked review ID is part of the gate inputs); `vendor-diligence` consumes the linked record ID and the high-severity gaps and recommended actions back into the entity-level vendor record; `board-ai-risk-pack` pulls the residual-reliance summary, high-severity gaps, and material re-review triggers; the firm's TPRM forum consumes the review summary as the model-evidence input to the entity-level decision; the AI risk committee consumes the review for any tier-1 deployment. The schema is the input contract for those consumers; additive changes only. Add fields, do not rename or repurpose them.
 

@@ -35,11 +35,11 @@ The triage records the regime overlap as a side-by-side block; reviewers downstr
 
 ### 4. EU branches and subsidiaries of US banks
 
-For US banks operating in the EU through a branch, subsidiary, or representative office, the EU entity's deployer or provider role attracts AI Act obligations on the EU side regardless of US-side model-risk practice (SR 11-7, OCC Bulletin 2026-13). The triage records:
+For US banks operating in the EU through a branch, subsidiary, or representative office, the EU entity's deployer or provider role attracts AI Act obligations on the EU side regardless of US-side model-risk practice (the joint interagency Revised Guidance on Model Risk Management, OCC 2026-13 / FRB SR 26-2 / FDIC FIL-15-2026, which in any case is scope-excluded for GenAI and agentic AI per footnote 3). The triage records:
 
 - Which EU entity is the operator (branch, subsidiary, intermediate parent undertaking under the IPU regime).
 - Which roles attach (provider, deployer, importer, distributor, authorised representative).
-- The reconciliation between the US-side model-risk documentation (SR 11-7 / OCC Bulletin 2026-13 model documentation, model inventory, model risk committee evidence) and the EU-side Article 11 / Annex IV technical documentation. The two artifacts overlap substantially; the triage names the deltas the EU-side artifact must add.
+- The reconciliation between the US-side documentation (firm model-risk documentation per the joint interagency bulletin for traditional models, plus the firm's AI governance documentation under NIST AI RMF / NIST AI 600-1 / ISO/IEC 42001 for GenAI use cases, plus model inventory and committee evidence) and the EU-side Article 11 / Annex IV technical documentation. The two artifacts overlap substantially; the triage names the deltas the EU-side artifact must add.
 
 A US-headquartered model used by an EU subsidiary: the EU subsidiary is the deployer. The US parent's role depends on whether the parent develops the model (provider) or simply provides the infrastructure (not provider). The triage records the analysis on the operator-role line.
 
@@ -99,7 +99,7 @@ The triage artifact adds the following blocks when this overlay loads:
 - A use-case category line at the top (origination credit decisioning / SME credit / behavioural scoring / fraud / AML / customer chatbot / internal productivity / marketing personalisation / IRB credit-risk).
 - An EU-entity operator-role table (which EU entity, which role) for cross-border banking groups.
 - A CRR/CRD internal-models overlap line for IRB use cases.
-- A US-side / EU-side parallel-regime reconciliation block where the firm's footprint spans both (SR 11-7 / OCC Bulletin 2026-13 to Article 11 / Annex IV mapping; CFPB Circulars to GDPR Article 22 mapping).
+- A US-side / EU-side parallel-regime reconciliation block where the firm's footprint spans both (joint interagency model-risk bulletin and AI-specific frameworks to Article 11 / Annex IV mapping; CFPB Circulars to GDPR Article 22 mapping).
 - An NCA-and-prudential-supervisor coordination line when designation is split or unclear.
 - A FRIA-vs-DPIA reconciliation note for any (5)(b) or other Article 27 trigger.
 - An AML-regime routing note where the use case is AML-adjacent and (5)(b) does not apply.

@@ -14,8 +14,6 @@ description: |
   - Evidence is in hand and the work is documenting test results. Use `workpaper-drafter`.
   - The work is QAing a completed workpaper for evidence sufficiency. Use `qa-workpaper`.
   - The work is assembling the evidence index after fieldwork closes. Use `evidence-binder` in `risk-compliance-core` — that skill indexes what was produced; this skill asks for what is needed. The two are different artifacts at different lifecycle points.
-
-  Anchored to: AICPA AU-C 500 (Audit Evidence), AU-C 230 (Audit Documentation), AU-C 505 (External Confirmations); IIA Global Internal Audit Standards (effective January 9, 2025) — the prior IPPF Standard 2310 mapping on identifying information; FFIEC IT Examination Handbook Audit booklet (April 2012); SR 08-8 (Federal Reserve, October 16, 2008); CFPB Compliance Management Review examination procedures; OCC PPM 5310-3; COSO 2013 Internal Control Integrated Framework Principles 13 and 14. Citations and excerpts live in `references/source-anchors.md`.
 argument-hint: "[test plan ID, sampling memo ID, control area, or scenario for the period under test]"
 ---
 

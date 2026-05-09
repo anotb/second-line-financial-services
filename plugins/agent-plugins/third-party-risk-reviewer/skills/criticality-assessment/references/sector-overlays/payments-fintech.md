@@ -8,7 +8,7 @@ When the engagement scope flags payments or fintech, load this overlay alongside
 - **FedNow Service Operating Procedures and RTP Operating Rules** [verify section and current editions]. Settlement-network access continuity for instant-payment rails.
 - **Card-network rules (Visa, Mastercard, Amex, Discover) — current editions**. BIN-sponsorship arrangements; the BIN sponsor is critical by construction for any card program.
 - **CFPB Reg E (12 CFR Part 1005)** §1005.6, §1005.11, §1005.18. Consumer-EFT and prepaid obligations affect customer-impact reads.
-- **FinCEN MSB rules at 31 CFR Part 1022** and registration requirements at 31 CFR §1010.380 [verify §]. KYC/AML utilities and other compliance-rail arrangements get the criticality lens through MSB obligations.
+- **FinCEN MSB rules at 31 CFR Part 1022** and registration requirements at 31 CFR §1022.380. KYC/AML utilities and other compliance-rail arrangements get the criticality lens through MSB obligations. Note: 31 CFR §1010.380 is the separate BOI / Corporate Transparency Act rule, not the MSB-registration cite.
 - **CFPB final rule defining larger participants of a market for general-use digital consumer payment applications** (December 2024) [verify Federal Register citation and current state]. Where the firm or arrangement is in scope, supervisory exposure shapes the regulatory-impact read.
 
 ## Candidate IBS for payments-fintech entities

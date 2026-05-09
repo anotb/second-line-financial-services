@@ -14,8 +14,6 @@ description: |
   - The use case is non-generative ML (use validation-plan with the standard model-risk close-out flow; this skill is GenAI-specific).
   - The artifact required is the executive committee or board pre-read (use board-ai-risk-pack; this skill produces the gate review, not the committee summary).
   - The artifact required is the foundation-model vendor evidence pack (use llm-vendor-evidence-review; this skill consumes its output).
-
-  Anchored to: US interagency model risk guidance, NIST AI RMF, NIST AI Generative AI Profile, ISO/IEC 42001, EU AI Act high-risk-deployer obligations, and the cyber-AI supervisory framings carried in the cyber overlay. Citations and excerpts live in `references/source-anchors.md`.
 argument-hint: "[use-case ID, model card, validation-plan results, prompt-injection review, RAG evaluation, vendor evidence review, IR runbook reference, or scope statement]"
 ---
 
@@ -72,26 +70,29 @@ Each loaded cross-cutting overlay names a co-reviewer or co-signer (CISO functio
 
 Load only the overlays the engagement scope names. Gold-plating with overlays the engagement does not implicate adds noise without challenge value.
 
-## What's load-bearing and what flexes
+## Quality bar
 
-A handful of things do not flex:
+The memo is only credible when these hold:
 
 - Every material claim cites a source. Unsupported items carry `[evidence needed]` and route to open conditions, not silently into the memo body.
 - Evidence is separated from inference. Vendor self-attestation is not the same line as firm-independent evidence; upstream artefacts carry their attested confidence forward.
 - No fabricated regulatory facts. Unknown section references carry `[verify section]` in the source-anchors file (not in the memo body).
 - The upstream artefact roll-up is the spine. Stale or missing artefacts block `go` by policy.
-- Open conditions require owner role, SLA, severity, and an explicit blocking-versus-tracking flag. Missing fields fail the review.
+- Open conditions carry owner role, SLA, severity, and an explicit blocking-versus-tracking flag.
 - "Go" with material blocking conditions is not the recommendation; the decision is `go_with_conditions` or `hold`. The blocking-versus-tracking distinction is explicit in the rationale.
-- Foundation-model swap re-validation policy is required when the dependency is present. Silent policy is itself a critical-severity finding.
-- Off-switch criterion is required for cyber-relevant incident classes and for tier-1 or tier-2 human-in-the-loop designs.
-- Sign-off block has multiple named reviewer roles across the relevant functions. Single-name sign-off on tier-1 or tier-2 is itself a finding.
-- The memo is a draft until the human reviewers attest. The skill does not assert sign-off, file the gate decision, post to the AI risk committee, or open production for the use case.
+- Foundation-model swap re-validation policy is named when the dependency is present. Silent policy is itself a critical-severity finding.
+- Off-switch criterion is named for cyber-relevant incident classes and for tier-1 or tier-2 human-in-the-loop designs.
+- The sign-off block names multiple reviewer roles across the relevant functions. A single-name sign-off on tier-1 or tier-2 is itself a finding.
+- No named institutions outside finalised public enforcement actions; examples are anonymised and public-source-derived.
+- The memo is a draft until the human reviewers attest. The skill does not file the gate decision, post to the AI risk committee, or open production.
 
-Everything else adapts to context. Tier and gate type drive depth. Audience drives tone (working group is plain, committee is structured, examiner response is formal, board distillation pulls residual risk and recommended decision to the front). Sector and cross-cutting overlays load from the engagement scope. Where firm-specific policy or taxonomy applies (named committees, named owners, internal model-risk-policy thresholds, firm-specific gate machinery), it lives in `references/firm-overlay.md` (consumed when present) and never in the memo directly.
+## Adaptation
+
+Tier and gate type drive depth. Audience drives tone (working group is plain, committee is structured, examiner response is formal, board distillation pulls residual risk and recommended decision to the front). Sector and cross-cutting overlays load from the engagement scope. Source posture sets what the memo can assert at high confidence and what carries `[evidence needed]`. Where firm-specific policy or taxonomy applies (named committees, named decision owners, internal model-risk-policy thresholds, firm-specific decision-forum machinery), it lives in `references/firm-overlay.md` (consumed when present) and never in the memo directly.
 
 ## Output
 
-Two artefacts: the memo per `templates/default-output.md`, and the structured object per `schemas/genai-pre-prod-review.schema.json`. The reviewer-attestation block is filled by the human reviewers (AI Governance Lead consolidating; AI risk committee secretary owning the gate motion; CISO function for cyber-flagged reviews; Privacy Officer for privacy-flagged reviews; consumer compliance for conduct-flagged reviews; sector-specific co-signers per the loaded overlay); the memo is filed only after.
+Default to drafting the memo against `templates/default-output.md`. Render as Word for committee distribution, or another format the audience asks for; the AI risk committee secretary usually wants a Word memo to file with the meeting record. Produce the structured record at `schemas/genai-pre-prod-review.schema.json` when a downstream consumer (`board-ai-risk-pack`, `ai-governance-reviewer`, the model inventory) needs it. The reviewer-attestation block is filled by the human reviewers (AI Governance Lead consolidating; AI risk committee secretary owning the gate motion; CISO function for cyber-flagged reviews; Privacy Officer for privacy-flagged reviews; consumer compliance for conduct-flagged reviews; sector-specific co-signers per the loaded overlay); the memo is filed only after.
 
 Downstream consumers: `board-ai-risk-pack` pulls the residual-risk summary, the recommended decision, and the open conditions for tier-1 and tier-2 use cases with material residual risk. The `ai-governance-reviewer` agent pulls the structured object for second-line challenge. The model inventory of record records the gate decision and the open conditions against the use-case entry. The regulator response file consumes the full memo with source trace where the use case is examiner-relevant. The schema is the input contract for those consumers; additive changes only, never silent renames. Breaking changes ship as a versioned migration with the consumers told in advance.
 

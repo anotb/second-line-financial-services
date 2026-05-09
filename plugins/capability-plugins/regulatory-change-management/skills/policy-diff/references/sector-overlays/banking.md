@@ -21,7 +21,7 @@ When a banking policy diff cites supervisory letters, the citation carries the S
 - 12 CFR Part 215 (Reg O) — insider lending.
 - 12 CFR Part 223 (Reg W) — affiliate transactions.
 - 12 CFR Part 252 (Reg YY) — enhanced prudential standards for large bank holding companies.
-- FRB SR 11-7 / OCC Bulletin 2011-12 and OCC Bulletin 2026-13 — model risk policy.
+- Joint interagency Revised Guidance on Model Risk Management (OCC Bulletin 2026-13 / FRB SR 26-2 / FDIC FIL-15-2026, April 17, 2026) — model risk policy. Supersedes SR 11-7 / OCC Bulletin 2011-12 (April 4, 2011) and SR 21-8 (April 9, 2021); GenAI and agentic AI explicitly out of scope.
 - Interagency Guidance on Third-Party Relationships (OCC / FRB / FDIC, June 2023) — TPRM policy.
 - FFIEC BSA/AML Examination Manual — BSA/AML policy.
 

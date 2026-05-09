@@ -97,13 +97,15 @@ One-paragraph headline of contract-coverage findings. Pointer to `contract-gap-r
 - Contract gap record: [ID].
 - Headline gaps: [examiner-access clause; breach-notification clock; sub-processor change consent; model-version pin and deprecation notice (AI vendors); deposit-insurance representation (BaaS); Reg S-P clause set (advisers/BDs/funds); HIPAA BAA terms; etc.].
 
-## Recommended onboarding decision and review gates
+## Recommended onboarding decision and decision checkpoints
 
 - **Recommended decision**: [approve | approve-with-conditions | defer | decline | escalate].
 - **Conditions** (if approve-with-conditions): [bulleted, specific, verifiable].
 - **Open evidence gaps**: [bulleted; what was asked, not received, by when].
 - **Reviewer questions**: [bulleted; each question names the decision it supports].
-- **Review gates this pack must clear**: [scope, evidence, authority, impact, decision].
+- **Decision checkpoints this pack must clear**: scope, evidence, authority, impact, decision.
+- **Decision forum**: [TPRM forum | risk committee | AI risk committee | fund board | per firm policy].
+- **Attestation block**: owner (role) and approver (role) named; sign-off conditions written out.
 - **Next-review trigger**: [annual cycle date; scope-change trigger; incident-driven re-review condition; for AI vendors, model-version-change trigger].
 - The pack does not approve. The named approver decides.
 

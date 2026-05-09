@@ -14,8 +14,6 @@ description: |
   - The question is fair-lending testing on the originated 1071 portfolio (use `fair-lending-test-plan`; the 1071 dataset feeds fair-lending testing once it exists).
   - The question is the adverse-action notice for a small-business application (use `adverse-action-review`; Reg B 1002.9 applies).
   - The question is the firm's overall consumer compliance management system (use `risk-compliance-core` or `compliance-testing`).
-
-  Anchored to: ECOA Section 1071 (15 U.S.C. §1691c-2 added by Dodd-Frank §1071); the CFPB Section 1071 final rule (Small Business Lending under the Equal Credit Opportunity Act, March 30, 2023; codified as Regulation B Subpart B at 12 CFR 1002.101–1002.114); 12 CFR 1002.107 — compilation of reportable data (the canonical data-point list this skill enumerates against); 12 CFR 1002.108 — firewall; 12 CFR 1002.110 — recordkeeping; 12 CFR 1002.114 — compliance dates [verify current effectiveness and tier dates given CTA-style litigation and bureau response]; the CFPB Filing Instructions Guide (FIG) for small business lending data [verify current edition]; and the FFIEC Interagency Fair Lending Examination Procedures (current edition) for the fair-lending intersection. Citations and verification posture live in `references/source-anchors.md`.
 argument-hint: "[CFI determination data, product list, LOS / data extracts, vendor attestations, prior readiness pack, scope statement]"
 ---
 
@@ -94,9 +92,9 @@ Each gap rolls up to a separate gap-list row with severity (`blocking` / `high` 
 
 When the engagement scope names a sector, load the matching `references/sector-overlays/<sector>.md`: `banking.md` for depository institutions (the heaviest overlay), `payments-fintech.md` for fintech small-business lenders and sponsor-bank arrangements. `capital-markets.md` and `insurance.md` carry out-of-scope flags so reviewers do not over-extend. Cross-cutting overlays: `privacy.md` for the GLBA Safeguards posture on customer demographic data and the CFPB modified-data publication and re-identification considerations; `conduct.md` for the lender-conduct dimension where 1071 readiness gaps surface conduct themes (data-collection misrepresentation to applicants, firewall failures, vendor mismanagement). Load only the overlays the engagement scope names.
 
-## What's load-bearing and what flexes
+## Quality bar
 
-Load-bearing across every assessment:
+Holds across every assessment:
 
 - **Tier classification with current compliance-date citation**. The tier and the date are the engagement's anchoring fact. Date carried as a sourced citation marked `[verify current effectiveness and tier dates]`.
 - **Per-product covered-transaction mapping with rule citation**. Not the procurement taxonomy.
@@ -105,9 +103,9 @@ Load-bearing across every assessment:
 - **Vendor-readiness rows with attestation and change-control identifier**. The vendor is the data-collection agent; the firm is the CFI.
 - **Bona-fide-error approach documented before go-live**.
 - **Source trace**. Every material claim cites `references/source-anchors.md` by path. Unsupported items go to the engagement issue log, not silently into the memo.
-- **The skill does not file**. The matrix and memo carry reviewer questions and named review gates. The named accountable executive signs off.
+- **The skill does not file**. The matrix and memo carry reviewer questions and named decision checkpoints. The named accountable executive signs off.
 
-Flexes to the engagement:
+## Adaptation
 
 - **Assessment depth scales to source posture and review type**. A pre-compliance-date readiness check at public-plus-firm-policy posture reads narrative-heavy with `unverifiable` rows where evidence has not landed yet; an annual refresh at connector-aware posture reads matrix-heavy with the year-on-year delta as the headline.
 - **Audience drives shape**. A pack for the compliance programme lead reads operational. A pack for the named accountable executive leads with the residual gap posture and the sign-off question. A pack for the regulator dialogue reads as a justification of the firm's own readiness posture.

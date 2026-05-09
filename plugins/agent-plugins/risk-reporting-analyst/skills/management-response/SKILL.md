@@ -16,8 +16,6 @@ description: |
   - The artifact is a public regulatory response forming part of a published enforcement action (these are securities-counsel-led; this skill is the second-line draft, not the final published response).
   - The artifact is the annual SOX 404 management's report on internal control over financial reporting (out of scope; securities-counsel-led).
   - The work is enforcement-action negotiation. Where the matter has escalated to a formal enforcement action, securities counsel and outside counsel lead; this skill drafts second-line responses to supervisory findings and audit findings, not consent orders.
-
-  Anchored to: federal banking agency supervisory letters and examination-handbook guidance on the communication of supervisory findings; state financial-services regulator industry letters on supervisory finding communications; IIA International Standards (Standards 2400 series and Standard 2500 follow-up); PCAOB auditing-standards paragraphs on management's response to identified deficiencies; COSO ERM 2017 review-and-revision component; the Three Lines Model. Citations and excerpts live in `references/source-anchors.md`.
 argument-hint: "[finding text or pointer; finding type (regulator / audit / external); linked issue ID; engagement-scope ID or institution context]"
 ---
 
@@ -83,9 +81,7 @@ Load only the overlay the engagement scope names. Banking responses are the prud
 
 The sector overlay is content that lands in the response, not background reading. A banking overlay loaded but no severity-tier default applied, or an insurance overlay loaded but no state-DOI convention reflected in the addressee block, is the failure mode the troubleshooting file calls out.
 
-## What's load-bearing and what flexes
-
-A handful of things do not flex:
+## Quality bar
 
 - Finding text is quoted verbatim. Paraphrasing the finding, even slightly, reads as a softening attempt and frequently draws the issuing party's challenge. The schema requires `finding_text_verbatim`.
 - Root cause is mechanism-anchored, not a paraphrase of the finding. The schema validates `consistency_with_issue_writeup`; mismatch surfaces as a reviewer question.
@@ -96,11 +92,13 @@ A handful of things do not flex:
 - Where a prior response exists on the same finding ID, the current response acknowledges the slippage and the changed commitment. Silently revising the prior commitment fails the schema check.
 - The response is a draft until the responding role and the firm-level signatory attest. The skill does not assert sign-off, send to the issuing party, or post to the response-file folder.
 
-Everything else adapts to context. Finding tier drives reporting-cadence defaults and signatory level (higher tier = more rapid cadence, more senior signatory). Sector overlays drive addressee conventions and response-window expectations. Cross-cutting overlays drive the evidence-of-effectiveness expectations for cyber, privacy, and conduct findings. Where firm-specific signatory conventions, classification handling, or response-file routing applies, it lives in `references/firm-overlay.md` (consumed when present) and never in the response directly.
+## Adaptation
+
+Finding tier drives reporting-cadence defaults and signatory level (higher tier = more rapid cadence, more senior signatory). Sector overlays drive addressee conventions and response-window expectations. Cross-cutting overlays drive the evidence-of-effectiveness expectations for cyber, privacy, and conduct findings. Where firm-specific signatory conventions, classification handling, or response-file routing applies, it lives in `references/firm-overlay.md` (consumed when present) and never in the response directly.
 
 ## Output
 
-Two artifacts: the response per `templates/default-output.md`, and the structured object per `schemas/management-response.schema.json`. The reviewer attestation block is filled by the responding role and (where applicable) the firm-level signatory; the response is sent to the issuing party only after.
+Default to drafting against `templates/default-output.md`. Render as Word, Excel, PowerPoint, or Markdown when the audience or workflow asks for it; the response itself rides as a Word memo on letterhead, with the action-plan milestones lifting to Excel for tracker integration. Produce the structured record at `schemas/management-response.schema.json` when downstream automation or a registered consumer needs it. The reviewer attestation block is filled by the responding role and (where applicable) the firm-level signatory; the response is sent to the issuing party only after.
 
 Downstream consumers: the structured object feeds `risk-committee-pack` (the issues-and-remediation-status section consumes the response posture, owner, target date, and evidence-of-effectiveness plan). The cyber-overlay-flagged responses cross-link to `cyber-disclosure-readiness` where the underlying event has public-disclosure implications. The schema is the cross-skill contract; additive changes only, never silent renames. Breaking changes ship as a versioned migration with the consumers told in advance.
 

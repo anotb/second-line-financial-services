@@ -32,14 +32,14 @@ The skill cites these by file path. SKILL.md does not restate excerpts.
 - Citation: Board of Governors of the Federal Reserve System, Supervision and Regulation Letter SR 11-7 / OCC Bulletin 2011-12, "Guidance on Model Risk Management" (April 4, 2011), §III "Overview of Model Risk Management" — the model definition and inventory expectations.
 - Excerpt-paraphrase: §III defines a model as "a quantitative method, system, or approach that applies statistical, economic, financial, or mathematical theories, techniques, and assumptions to process input data into quantitative estimates" and calls for a comprehensive inventory of models with their use, status, and validation history. The intake record produced by this skill is the entry an AI or model use case takes in that inventory; the §III definition is the gate for whether a use case is in scope of model risk management at all.
 - Link: https://www.federalreserve.gov/supervisionreg/srletters/sr1107.htm — §III
-- Notes: SR 11-7 is the OCC/FRB joint guidance; binding on federally regulated banks. The AI/ML inclusion question is addressed in OCC Bulletin 2026-13 (next anchor); for firms not yet on the revised guidance, SR 11-7 §III governs the inventory entry.
+- Notes: SR 11-7 was the OCC/FRB joint guidance binding on federally regulated banks for over a decade. As of April 17, 2026 it is superseded by the joint interagency Revised Guidance on Model Risk Management (anchor 5). For traditional models the intake's model-risk inventory entry now anchors there; for GenAI and agentic use cases the bulletin is out of scope and the intake record's role is to capture the use case for the firm's broader AI inventory, anchored in NIST AI RMF (anchor 1).
 
-### 5. OCC Bulletin 2026-13 — Revised Interagency Model Risk Management Guidance (2026)
+### 5. Joint Interagency Revised Guidance on Model Risk Management — OCC 2026-13 / FRB SR 26-2 / FDIC FIL-15-2026
 
-- Citation: OCC Bulletin 2026-13, "Revised Interagency Guidance on Model Risk Management" (issued 2026 by OCC; FDIC parallel FIL and Federal Reserve parallel SR letter expected) [verify section on inventory scope and AI inclusion].
-- Excerpt-paraphrase: The revised guidance refreshes SR 11-7 to incorporate AI and machine learning, including foundation-model dependence, retrieval-augmented generation, tool use, and agentic configurations. Inventory expectations carry forward with explicit recognition that AI and GenAI use cases are in scope; the inventory entry is expected to capture foundation-model identity and version, retrieval architecture, tool inventory, and autonomy posture in addition to the legacy model fields.
-- Link: https://www.occ.gov/news-issuances/bulletins/2026/bulletin-2026-13.html — Bulletin 2026-13 [verify section on inventory scope]
-- Notes: Confirm published section numbering at decision-write time. The SKILL.md does not over-claim binding language until verified. FDIC FIL and FRB SR letter parallel issuances also carry `[verify number and section]` until confirmed.
+- Citation: Joint Interagency Revised Guidance on Model Risk Management, OCC Bulletin 2026-13 / FRB SR 26-2 / FDIC FIL-15-2026, dated April 17, 2026. The three issuances are the same joint document; supersedes SR 11-7 (2011) and SR 21-8 (2021).
+- Excerpt-paraphrase (footnote 3, verbatim): "Generative AI and agentic AI models are novel and rapidly evolving. As such, they are not within the scope of this guidance. ... However, the principles described in this guidance apply to traditional statistical and quantitative models and non-generative, non-agentic AI models." Most relevant to banking organizations with over $30 billion in total assets; non-binding. The bulletin contains no references to NIST publications.
+- Link: https://occ.gov/news-issuances/bulletins/2026/bulletin-2026-13a.pdf — guidance text PDF
+- Notes: Cite this anchor for the inventory entry of a traditional model in scope at a federally regulated bank. For GenAI and agentic use cases the bulletin is out of scope; the intake's GenAI architecture fields (foundation-model identity, RAG corpora, tool inventory, autonomy posture) anchor to NIST AI 600-1, ISO/IEC 42001, and the cross-cutting cyber overlay rather than this bulletin.
 
 ### 6. EU AI Act — Article 6 and Annex III (high-risk classification)
 
@@ -152,9 +152,7 @@ The skill cites these by file path. SKILL.md does not restate excerpts.
 
 The following items carry `[verify section]` or `[verify ...]` flags and must be confirmed at decision-write time:
 
-- OCC Bulletin 2026-13 — confirm published section numbering on inventory scope and AI/ML inclusion.
-- FDIC FIL parallel issuance to OCC Bulletin 2026-13 — confirm number and section.
-- FRB SR letter parallel issuance to OCC Bulletin 2026-13 — confirm number and section.
+- OCC 2026-13 / FRB SR 26-2 / FDIC FIL-15-2026 — verbatim GenAI/agentic scope exclusion confirmed against the OCC PDF (footnote 3). The three issuances are the same joint document, not parallels. SR 11-7 and SR 21-8 are confirmed superseded as of April 17 2026.
 - NIST AI 600-1 — confirm exact subcategory numbering for the GenAI Govern 1.6 and Map 1.1 references.
 - NIST AI RMF Map 3.5 — confirm exact subcategory numbering.
 - NYDFS Insurance Circular Letter (January 2024) — confirm section reference.

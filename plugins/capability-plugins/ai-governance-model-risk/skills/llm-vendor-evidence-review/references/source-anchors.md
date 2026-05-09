@@ -2,7 +2,7 @@
 
 Cited sources this skill anchors to. Each entry names the source, the section reference (or `[verify section]` flag), a one-paragraph excerpt or paraphrase of the relevant content, and the link. The skill cites these by file path; SKILL.md does not restate excerpts.
 
-A practitioner note before the list: foundation-model vendor evidence-pack review sits across three regulator perspectives. The model-risk framings (Federal Reserve SR 11-7, the OCC's revised interagency guidance) carry binding supervisory expectation for federally regulated banks where the firm's MRM programme treats the GenAI use case as in scope. The third-party-risk framings (the 2023 interagency third-party guidance, DORA Article 28 for EU-scope entities) carry the entity-level wrapper that surrounds this skill's model-evidence layer. The AI-specific framings (NIST AI RMF and the Generative AI Profile, ISO/IEC 42001, EU AI Act GPAI provisions for in-scope models) are leading-practice or scope-conditional. Be explicit about which regulator scope is in play in any individual review.
+A practitioner note before the list: foundation-model vendor evidence-pack review sits across three regulator perspectives. The bank model-risk framing (the joint interagency Revised Guidance, OCC 2026-13 / FRB SR 26-2 / FDIC FIL-15-2026 issued April 2026) supersedes SR 11-7 and SR 21-8 but expressly excludes generative AI and agentic AI from its scope (footnote 3); for foundation-model evidence review of a GenAI use case the bulletin is not the binding hook. The third-party-risk framings (the 2023 interagency third-party guidance, DORA Article 28 for EU-scope entities) carry the entity-level wrapper that surrounds this skill's model-evidence layer. The AI-specific framings (NIST AI RMF and the Generative AI Profile, ISO/IEC 42001, EU AI Act GPAI provisions for in-scope models) are the substantive anchors for the foundation-model evidence questions. Be explicit about which regulator scope is in play in any individual review.
 
 ## Primary anchors
 
@@ -11,14 +11,14 @@ A practitioner note before the list: foundation-model vendor evidence-pack revie
 - Citation: Board of Governors of the Federal Reserve System, SR 11-7 / OCC Bulletin 2011-12, "Guidance on Model Risk Management" (April 4, 2011), §VI "Vendor and Third-Party Models".
 - Excerpt-paraphrase: Where the firm's model risk programme treats a GenAI use case as a model in scope, the third-party-model expectations apply. The firm cannot delegate validation responsibility; the firm should perform appropriate validation activities on vendor models, recognising that proprietary methods may limit the depth of validation evidence available. Vendor documentation should be sufficient to support the firm's own ongoing monitoring and outcomes analysis. Vendor-developed models should receive the same validation rigor as internally developed models, scaled to materiality and complexity.
 - Link: https://www.federalreserve.gov/supervisionreg/srletters/sr1107.htm — §VI Vendor and Third-Party Models
-- Notes: Binding for federally regulated banks. The applicability of SR 11-7 to GenAI is a firm-by-firm interpretation; many firms now treat in-scope GenAI use cases as models for the purposes of the model risk programme. SR 11-7 §VI is the load-bearing section for this skill. The 2026 revised interagency guidance (anchor 2) refreshes this for AI/ML and GenAI explicitly.
+- Notes: SR 11-7 was the OCC/FRB joint guidance binding on federally regulated banks for over a decade. As of April 17, 2026 it is superseded by the joint interagency Revised Guidance on Model Risk Management (anchor 2). For traditional non-generative third-party models the supersession carries forward; for GenAI foundation-model evidence the 2026 bulletin is out of scope and the binding hook is firm policy informed by the AI-specific frameworks.
 
-### 2. OCC Bulletin 2026-13 — Revised Interagency Model Risk Management Guidance
+### 2. Joint Interagency Revised Guidance on Model Risk Management — OCC 2026-13 / FRB SR 26-2 / FDIC FIL-15-2026
 
-- Citation: OCC Bulletin 2026-13, "Revised Interagency Guidance on Model Risk Management" (issued 2026 by OCC; FDIC and Federal Reserve parallel issuances expected) [verify section on third-party AI and foundation-model evidence].
-- Excerpt-paraphrase: The revised guidance refreshes SR 11-7 expectations to incorporate AI/ML and generative-AI use cases, including foundation-model dependence, retrieval-augmented generation, tool use, and agentic configurations. Third-party-model expectations are extended to foundation-model providers, with implications for the depth and form of vendor evidence the firm should obtain and review.
-- Link: https://www.occ.gov/news-issuances/bulletins/2026/bulletin-2026-13.html — Bulletin 2026-13 [verify section]
-- Notes: Confirm published bulletin section numbering at SKILL.md write time. Until verified, the SKILL.md and review record do not over-claim binding language on foundation-model evidence from this bulletin.
+- Citation: Joint Interagency Revised Guidance on Model Risk Management, OCC Bulletin 2026-13 / FRB SR 26-2 / FDIC FIL-15-2026, dated April 17, 2026. The three issuances are the same joint document; supersedes SR 11-7 (2011) and SR 21-8 (2021).
+- Excerpt-paraphrase (footnote 3, verbatim): "Generative AI and agentic AI models are novel and rapidly evolving. As such, they are not within the scope of this guidance. ... However, the principles described in this guidance apply to traditional statistical and quantitative models and non-generative, non-agentic AI models." Most relevant to banking organizations with over $30 billion in total assets; non-binding. The bulletin contains no references to NIST publications.
+- Link: https://occ.gov/news-issuances/bulletins/2026/bulletin-2026-13a.pdf — guidance text PDF
+- Notes: Foundation-model vendors are generative AI by definition and are not within this bulletin's scope. The third-party-model framing of the 2026 bulletin reaches non-generative vendor models only. For foundation-model evidence-pack review, anchor to NIST AI RMF Govern 6.x, NIST AI 600-1 Govern subcategories on third-party considerations, ISO/IEC 42001 §7.4 / §8.x, EU AI Act GPAI provisions where applicable, and the entity-level third-party guidance (anchor 3).
 
 ### 3. Joint OCC, FRB, and FDIC Interagency Guidance on Third-Party Relationships (June 6, 2023)
 
@@ -138,8 +138,7 @@ A practitioner note before the list: foundation-model vendor evidence-pack revie
 
 The following items carry `[verify section]` or `[verify ...]` flags and must be confirmed at SKILL.md write time and at review-write time:
 
-- OCC Bulletin 2026-13 — confirm published section numbering on third-party AI and foundation-model evidence.
-- FDIC and Federal Reserve parallel issuances to OCC Bulletin 2026-13 — confirm number and section.
+- OCC 2026-13 / FRB SR 26-2 / FDIC FIL-15-2026 — verbatim GenAI/agentic scope exclusion confirmed against the OCC PDF (footnote 3). The three issuances are the same joint document, not parallels. Foundation-model vendors are out of scope of this bulletin.
 - NIST AI 600-1 — confirm exact Govern and Manage subcategory numbering for the foundation-model and vendor-evidence-specific entries.
 - ISO/IEC 42001:2023 — confirm Annex A control IDs relevant to supplier and third-party AI.
 - EU AI Act Articles 51 to 55 — confirm phasing dates, AI Office Code of Practice status, and AI Office implementing acts current as of write time.

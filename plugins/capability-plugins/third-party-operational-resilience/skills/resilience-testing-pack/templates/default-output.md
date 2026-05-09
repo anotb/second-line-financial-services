@@ -148,11 +148,12 @@ Each question names the decision it supports.
 
 - [bulleted]
 
-## Recommended owner actions and review gates
+## Recommended owner actions and decision checkpoints
 
 - **Owner (role)**: [BCDR lead or head of operational resilience for IBS-level packs; head of TPRM for arrangement-level packs].
 - **Approver (role)**: [per firm policy for tests of this scope and method].
-- **Review gates this pack must clear**: [scope, evidence, authority, impact, decision].
+- **Decision checkpoints this pack must clear**: scope, evidence, authority, impact, decision.
+- **Decision forum and attestation block**: [operational-resilience committee | TPRM forum | risk committee | AI risk committee | audit committee | supervisor]; owner and approver named; sign-off conditions written out.
 - **Next-cycle trigger**: [annual cycle date; scenario-specific cadence; supervisory-driven trigger].
 - The pack does not approve test execution. The named approver decides; the resilience function runs the exercise.
 

@@ -27,6 +27,6 @@ The memo closes with three open questions for counsel (re-issuance scope, custom
 
 ## Why this scenario matters
 
-It exercises the seam between Reg B specificity (Staff Commentary), AI / complex-model accuracy (CFPB Circular 2023-03), and the model-card / explainability fabric (SR 11-7 / OCC Bulletin 2026-13). It produces the two recurring defect types — sample-form-substitution and impossible-mapping — and shows how the artifact recommends action without finalizing any customer-facing change. It also shows the routing pattern to `fair-lending-test-plan` for the disparate-impact signal: the adverse-action review surfaces the red flag, the formal test produces the finding.
+It exercises the seam between Reg B specificity (Staff Commentary), AI / complex-model accuracy (CFPB Circular 2023-03), and the model-card / explainability fabric (SR 11-7 plus OCC Bulletin 2026-13 for traditional models, NIST AI RMF and NIST AI 600-1 for any GenAI / RAG / tool-use / agentic component). It produces the two recurring defect types — sample-form-substitution and impossible-mapping — and shows how the artifact recommends action without finalizing any customer-facing change. It also shows the routing pattern to `fair-lending-test-plan` for the disparate-impact signal: the adverse-action review surfaces the red flag, the formal test produces the finding.
 
 Pattern derived from public CFPB enforcement themes on adverse-action notices using complex models. No named institution.

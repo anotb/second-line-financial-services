@@ -1,7 +1,7 @@
 ---
 name: sar-decision-qa
 description: |
-  Quality-reviews a SAR or no-SAR decision file against named SAR rules and the FFIEC SAR examination expectations. Reads the alert chronology, investigation steps, evidence considered, disposition, decision rationale, continuing-activity posture, and confidentiality controls; produces a QA memo with material gaps, reviewer findings, and a recommendation. Does not file, decline to file, amend, or close any SAR; SAR filing is a regulated act reserved to the BSA officer or designee.
+  Quality-reviews a SAR or no-SAR decision file against named SAR rules and the FFIEC SAR examination expectations. Reads the alert chronology, investigation steps, evidence considered, disposition, decision rationale, continuing-activity posture, and confidentiality controls; produces a QA memo with material gaps, reviewer findings, and a routing recommendation to the named decision forum. Does not file, decline to file, amend, or close any SAR; SAR filing is a regulated act reserved to the BSA officer or designee.
 
   Best for:
   - Second-line QA over a sample of closed alerts (filed and unfiled) within a defined lookback window.
@@ -14,8 +14,6 @@ description: |
   - The work is the underlying CDD or EDD posture of the customer rather than the alert decision; use cdd-risk-review or edd-escalation-pack.
   - The work is a single adverse-media triage rather than a SAR decision; use negative-news-triage.
   - The decision being asked for is whether to file, amend, or supplement a SAR. The skill produces QA artifacts; the BSA officer decides.
-
-  Anchored to: FFIEC BSA/AML Examination Manual (SAR section), 31 USC 5318(g), 31 CFR 1020.320 (banks) and the parallel SAR rules at 31 CFR 1022.320 (MSBs), 1023.320 (broker-dealers), 1024.320 (mutual funds), 1025.320 (insurance), 1026.320 (FCMs/IBs), FinCEN SAR form and filing instructions, applicable FinCEN advisories for the typology under review, OCC/FRB/FDIC/NCUA Joint Statements on Risk-Focused BSA/AML Supervision and on BSA/AML Innovation, and the Interagency Statement on Model Risk Management for BSA/AML and OFAC Compliance. Citations and excerpts live in `references/source-anchors.md`.
 argument-hint: "[alert ID or sample, decision file, investigation case file, supporting evidence, or pointer to SAR program scope]"
 ---
 
@@ -79,9 +77,9 @@ The sector overlay set is loaded from the engagement scope or the institution ty
 
 The cyber cross-cutting overlay loads when the alert is cyber-event-related (account-takeover, business-email compromise, ransomware-adjacent, convertible-virtual-currency typology with cyber indicators). It carries the FinCEN cyber and ransomware advisory references and the structured-field expectations on the SAR for cyber-event indicators. Load it explicitly when the alert is cyber-related; do not pull it in by default.
 
-## What's load-bearing and what flexes
+## Quality bar
 
-A short list does not flex:
+The memo is only credible when these hold:
 
 - The skill produces QA artifacts, not SAR-filing decisions. SAR filing, declining to file, amending, supplementing, and closing are reserved to the BSA officer or the SAR review committee. Any reviewer recommendation that proposes the filing decision is itself a finding to remove.
 - Every material claim cites a source from the case file, the sector overlay, or `references/source-anchors.md`. Unsupported items carry `[evidence needed]` and route to the engagement issue log.
@@ -90,7 +88,9 @@ A short list does not flex:
 - No named institutions in narrative unless they are public defendants in a finalised enforcement action with a published consent order.
 - Confidentiality and tipping-off are case-specific reads, not program-level checkboxes, particularly in fraud-recovery, EDD-overlap, dispute, and law-enforcement-liaison cases.
 
-Everything else adapts. Sample size, lookback window, sector overlay, audience, depth, and the structure of the rolled-up findings flex to the engagement. Where firm-specific policy (sample-selection method, the SAR review committee's standing agenda, the institution's typology library, named system-of-record paths, named owners) applies, it lives in `references/firm-overlay.md` (consumed when present) and never in the memo directly.
+## Adaptation
+
+Sample size, lookback window, sector overlay, audience, depth, and the structure of the rolled-up findings flex to the engagement. Where firm-specific policy (sample-selection method, the SAR review committee's standing agenda, the institution's typology library, named system-of-record paths, named owners) applies, it lives in `references/firm-overlay.md` (consumed when present) and never in the memo directly.
 
 ## Output
 

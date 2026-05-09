@@ -10,11 +10,11 @@ Cited and section-referenced in `references/source-anchors.md`. This overlay nam
 
 ## What changes for banking intake
 
-### 1. Model definition and inventory anchor is SR 11-7 / OCC Bulletin 2026-13
+### 1. Model definition and inventory anchor is the joint interagency revised guidance
 
-For federally regulated banks, the intake record is the entry the use case takes in the model inventory under SR 11-7 §III (or the revised OCC Bulletin 2026-13 inventory expectations once on the new guidance). Intake captures:
+For federally regulated banks, the intake record is the entry the use case takes in the model inventory under the joint interagency Revised Guidance on Model Risk Management (OCC 2026-13 / FRB SR 26-2 / FDIC FIL-15-2026, supersedes SR 11-7 and SR 21-8). The bulletin expressly excludes generative AI and agentic AI from its scope (footnote 3); for GenAI use cases the intake captures the architecture fields (foundation-model identity, RAG corpora, tool inventory, autonomy posture) for the firm's broader AI inventory under NIST AI RMF Govern 1.6 / 4.x, not under the bulletin. Intake captures:
 
-- `regulatory_flags`: `SR_11_7` and `OCC_2026_13` (the latter where the firm has migrated to the revised guidance) with the routing destination `ai-risk-tiering`.
+- `regulatory_flags`: `OCC_2026_13` (and the parallel FRB SR 26-2 / FDIC FIL-15-2026) for traditional models; for GenAI/agentic, `NIST_AI_RMF` and `NIST_AI_600_1` with the routing destination `ai-risk-tiering`.
 - The accountable first-line owner is the model owner role under firm policy, with linkage to the firm's model risk management office.
 - The lifecycle stage drives whether the inventory entry is "in development" or "in use" under the firm's MRMO state machine.
 

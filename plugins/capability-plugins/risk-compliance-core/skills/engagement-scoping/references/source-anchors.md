@@ -1,6 +1,6 @@
 # Source anchors: engagement-scoping
 
-This file holds the named, dated regulatory and professional-standard sources the engagement-scoping skill anchors to. The SKILL.md file does not restate these citations beyond the activation-tuned description's "Anchored to:" line. Firm-specific anchors belong in `references/firm-overlay.md`.
+This file holds the named, dated regulatory and professional-standard sources the engagement-scoping skill anchors to. SKILL.md cites this file by path; the named anchors are not restated inline. Firm-specific anchors belong in `references/firm-overlay.md`.
 
 `[verify section]` placeholders mark anchors where the precise section reference still needs verification against the current edition of the source. They are deliberate, not omissions.
 

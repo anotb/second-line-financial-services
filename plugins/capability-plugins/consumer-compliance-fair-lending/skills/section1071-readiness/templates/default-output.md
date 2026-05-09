@@ -175,9 +175,9 @@ Severity definitions: `blocking` (cannot go live), `high` (must remediate before
 
 Cite `references/source-anchors.md` for the canonical citations. Use `[verify current effectiveness and tier dates]` for compliance-date references, `[verify current edition]` for FIG and other edition-specific references, `[verify state-specific scope]` for state-privacy references, and `[verify subsection]` where the exact 1002.107 subsection label is uncertain. Do not invent.
 
-### 18. Review-gate posture and sign-off ask
+### 18. Decision checkpoints and sign-off ask
 
-- **Review gates this assessment must clear**: [scope | evidence | authority | impact | decision] per `references/review-gates.md`.
+- **Decision checkpoints this assessment must clear**: [scope | evidence | authority | impact | decision] per `references/review-gates.md`.
 - **The skill does not file**. The matrix and memo carry the readiness state; the named accountable executive signs off; the firm's regulatory-reporting pipeline files the actual submission through the CFPB-specified channel.
 - **Sign-off ask of the accountable executive**: [the specific decision the memo asks the executive to make]
 - **Next review trigger**: [next compliance milestone | scope-change trigger | tier-shift trigger | post-go-live operating-state refresh date]

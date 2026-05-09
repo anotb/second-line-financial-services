@@ -35,8 +35,9 @@ Important business services at a bank typically include payments (retail, commer
 
 When `ai_vendor=true` and the firm is a bank:
 
-- **OCC Bulletin 2026-13 (revised interagency model risk management guidance, 2026)** [verify current title, date, and bulletin number] applies where the arrangement supplies a model or AI system used in a credit, compliance, or fraud decision. The criticality call considers model-risk impact alongside operational impact; an AI vendor on the credit-decisioning IBS path is rarely below `important`.
-- A `critical` AI-vendor call triggers parallel review by the model-risk function downstream; record the cross-link.
+- **Joint interagency Revised Guidance on Model Risk Management (OCC Bulletin 2026-13 / FRB SR 26-2 / FDIC FIL-15-2026, April 17, 2026)** applies where the arrangement supplies a **traditional statistical, quantitative, or non-generative, non-agentic AI model** used in a credit, compliance, or fraud decision. The guidance is most relevant to banking organisations with total assets over $30B and is non-binding (does not set forth enforceable standards). For an in-scope traditional model, the criticality call considers model-risk impact alongside operational impact; an AI vendor on the credit-decisioning IBS path is rarely below `important`. Footnote 3 of the guidance text excludes generative and agentic AI from scope.
+- **For GenAI or agentic AI vendors**, the model-risk lens routes to NIST AI 600-1 (Generative AI Profile), the NIST AI Risk Management Framework, the EU AI Act where the EU subsidiary is in scope, and the firm's AI-governance framework rather than to 2026-13. The criticality call still considers AI-specific impact (decisioning influence, customer harm modes, model-version-pin volatility), but the regulatory anchor is different.
+- A `critical` AI-vendor call (traditional or GenAI/agentic) triggers parallel review by the model-risk function downstream; record the cross-link.
 
 ## Output additions for banking
 

@@ -21,7 +21,7 @@ When the engagement scope flags payments-fintech, load this overlay alongside `r
 
 ## MSB and PSP concentration
 
-- **FinCEN MSB rules at 31 CFR Part 1022** and registration requirements at 31 CFR §1010.380 [verify §]. MSB concentration on a single agent network or a single sub-MSB carries the BSA/AML supervisory focus; the dimension reads as `single-vendor` with a regulatory-posture sub-finding.
+- **FinCEN MSB rules at 31 CFR Part 1022** and registration requirements at 31 CFR §1022.380 (initial registration within 180 days of becoming an MSB; renewal every two years). MSB concentration on a single agent network or a single sub-MSB carries the BSA/AML supervisory focus; the dimension reads as `single-vendor` with a regulatory-posture sub-finding. Note: 31 CFR §1010.380 is the separate BOI / Corporate Transparency Act reporting rule, not the MSB-registration cite.
 - **CFPB final rule defining larger participants of a market for general-use digital consumer payment applications** (December 2024) [verify Federal Register citation and current state]. Where the rule applies, the supervisory frame for digital-payment-application providers reads concentration in the technology-stack and shared-utility dimensions.
 
 ## Cross-border correspondent concentration

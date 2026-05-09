@@ -14,8 +14,6 @@ description: |
   - The portfolio question is concentration across vendors (use concentration-risk-review).
   - The arrangement is a non-ICT third party with no information, technology, or business-process dependency the firm relies on.
   - Full diligence is needed (use vendor-diligence; this skill is the upstream input).
-
-  Anchored to: US interagency third-party risk management guidance, FFIEC IT Examination Handbook (Outsourcing Technology Services and Business Continuity Management booklets), DORA, EBA outsourcing guidelines, BCBS Principles for Operational Resilience, UK PRA SS2/21 and SS1/21, NAIC outsourcing and AI bulletins, Investment Company Act service-provider rules. Citations and excerpts live in `references/source-anchors.md`.
 argument-hint: "[arrangement: vendor name, service, supported business process, IBS if known]"
 ---
 
@@ -32,7 +30,7 @@ Before drafting, get plain answers to four things. Most engagements answer them 
 - **What business process does this arrangement support, and which important business service does that process sit on.** Sourced from the firm's IBS map. If the firm has no IBS map, work against the candidate IBS list in the loaded sector overlay and note the absence; do not block.
 - **What is the firm's impact tolerance for that IBS.** Recovery time and recovery point come from the IBS impact analysis, not from the contract. The vendor commitment is the ceiling on what the vendor delivers; the firm tolerance is the test.
 - **What is the firm's regulatory profile.** Institution type and primary regulators. The DORA flag and the UK SS2/21 flag are recorded only for entities in those perimeters; otherwise `not-in-scope`.
-- **What is the engagement type.** Pre-onboarding, annual recertification, off-cycle trigger, material-change re-review, post-incident re-review, IBS-change re-review, contract-renewal re-review. Each carries a different review-gate set.
+- **What is the engagement type.** Pre-onboarding, annual recertification, off-cycle trigger, material-change re-review, post-incident re-review, IBS-change re-review, contract-renewal re-review. Each carries a different decision-forum context.
 
 When `engagement-scope` is supplied, the skill consumes it (institution type, sector overlay set, cross-cutting overlay set, persona, source posture). When it is not, ask the four questions and default to public posture if the practitioner declines. Note in the assessment that scope was not formalised; do not silently apply a default sector overlay.
 
@@ -56,17 +54,19 @@ The owner is named by role, not person. For a `critical` arrangement the owner i
 
 The assessment closes with reviewer questions clustered for the forum that decides, the next-review trigger (annual cycle date, contract-renewal trigger, IBS-change trigger, material-service-change trigger, incident-driven re-review condition, and for AI vendors the model-version-change trigger), and the source trace. The assessment does not approve the tier; the named approver decides.
 
-## What's load-bearing and what flexes
+## Quality bar
 
-Load-bearing across every assessment: every material claim cites a source from `references/source-anchors.md` (or a loaded overlay) by path; unsupported claims are marked `[evidence needed]`; section references that cannot be confirmed get `[verify section]` rather than fabricated; source evidence, vendor commitment, public-source obligation, generated inference, and open legal or compliance question stay distinguishable in the assessment; no named institutions appear in narrative unless they are public defendants in a finalised enforcement action with a published consent order; the assessment stops at the recommendation. The vendor's claimed RTO/RPO is not the test, anywhere; firm tolerance from the IBS impact analysis is the test.
+Holds across every assessment regardless of arrangement type, audience, or render format. Every material claim cites a source from `references/source-anchors.md` (or a loaded overlay) by path. Unsupported claims are marked `[evidence needed]`. Section references that cannot be confirmed get `[verify section]` rather than fabricated. Source evidence, vendor commitment, public-source obligation, generated inference, and open legal or compliance question stay distinguishable in the assessment. No named institutions in narrative unless they are public defendants in a finalised enforcement action with a published consent order. The assessment stops at the recommendation. The vendor's claimed RTO/RPO is not the test, anywhere; firm tolerance from the IBS impact analysis is the test.
 
-Flexes to the engagement: assessment depth and length scale to the proposed tier and to whether the engagement is in DORA or UK SS2/21 scope. A `not-critical` arrangement collapses several sections to a paragraph; a `critical` or DORA-in-scope arrangement runs full depth with reviewer questions clustered for the operational-risk committee (or AI risk committee for AI vendors, fund board for registered funds). The sector overlay set drives which `references/sector-overlays/<sector>.md` is loaded; a dual-registrant or BaaS arrangement may load two. Source posture (public-only, public-plus-firm-policy, public-plus-firm-policy-plus-system-of-record-evidence, connector-aware) drives the evidence ask, particularly for the IBS map and the impact-tolerance read.
+## Adaptation
+
+Flexes by engagement. Assessment depth and length scale to the proposed tier and to whether the engagement is in DORA or UK SS2/21 scope. A `not-critical` arrangement collapses several sections to a paragraph; a `critical` or DORA-in-scope arrangement runs full depth with reviewer questions clustered for the operational-risk committee (or AI risk committee for AI vendors, fund board for registered funds). The sector overlay set drives which `references/sector-overlays/<sector>.md` is loaded; a dual-registrant or BaaS arrangement may load two. Source posture (public-only, public-plus-firm-policy, public-plus-firm-policy-plus-system-of-record-evidence, connector-aware) drives the evidence ask, particularly for the IBS map and the impact-tolerance read. Render format (Word, Excel, PowerPoint, Markdown) follows the workflow.
 
 ## Pointers
 
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
 - `references/sector-overlays/banking.md`, `insurance.md`, `capital-markets.md`, `payments-fintech.md` — sector-specific criticality criteria loaded per engagement-scope.
-- `references/firm-overlay.md` — firm-installed IBS map, impact-tolerance taxonomy, criticality-policy thresholds, and review gates beyond the regulatory baseline; consumed when present.
+- `references/firm-overlay.md` — firm-installed IBS map, impact-tolerance taxonomy, criticality-policy thresholds, and decision forums beyond the regulatory baseline; consumed when present.
 - `templates/default-output.md` — assessment template.
 - `schemas/criticality-assessment.schema.json` — structured-output contract for downstream consumption.
 - `examples/` — core-banking SaaS at a community bank (criticality = critical); HRIS payroll at an EU subsidiary of a US insurer (criticality = important, DORA flag = no, in-scope-of-register).
@@ -76,4 +76,8 @@ The plugin-level shared references (`references/source-map.md`, `references/poli
 
 ## Output
 
-The skill emits a criticality assessment in `templates/default-output.md` shape and a structured record conforming to `schemas/criticality-assessment.schema.json`. Downstream consumers: `vendor-diligence` reads the `criticality` field to set diligence depth; `contract-gap-review` reads the recovery-objective gap and the regulatory-impact regimes to set the clause-coverage test; `exit-plan` reads `tier`, `important_business_service`, `data_scope`, and `operational_impact` to set transition mechanics; `concentration-risk-review` reads the `concentration_considerations` flag to drive portfolio analysis; `dora-register-builder` reads the structured fields, including the `dora_critical_or_important_function` flag, for ICT-third-party register entries where DORA applies. The schema is the cross-skill contract; additive changes only. Add fields, do not rename or repurpose them. A breaking change is a versioned migration with the downstream skills told in advance.
+The deliverable is the criticality assessment. Default to drafting against `templates/default-output.md`. Render as Word, Excel, PowerPoint, or Markdown when the audience or workflow asks for it (a TPRM-cycle batch may want a workbook; an operational-risk-committee read may want a deck or memo). Produce the structured record at `schemas/criticality-assessment.schema.json` when downstream automation or a registered consumer needs it.
+
+Downstream consumers: `vendor-diligence` reads the `criticality` field to set diligence depth; `contract-gap-review` reads the recovery-objective gap and the regulatory-impact regimes to set the clause-coverage test; `exit-plan` reads `tier`, `important_business_service`, `data_scope`, and `operational_impact` to set transition mechanics; `concentration-risk-review` reads the `concentration_considerations` flag to drive portfolio analysis; `dora-register-builder` reads the structured fields, including the `dora_critical_or_important_function` flag, for ICT-third-party register entries where DORA applies.
+
+When the structured record is produced, treat the schema as a downstream contract: additive changes only. Add fields, do not rename or repurpose them. A breaking change is a versioned migration with the downstream skills told in advance.

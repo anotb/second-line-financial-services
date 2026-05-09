@@ -62,9 +62,9 @@ Cite the operative model law(s) in `references/source-anchors.md`; mark `[verify
 
 ## 6. Claims-handling oversight (where claims function is delegated)
 
-- Fair-claims-settlement standards (Model #880 and state UCSPA) coverage: [evidenced | partial | missing].
+- Fair-claims-settlement standards (NAIC Model #900 and state UCSPA; Model #880 where the state UTPA reaches claims-handling conduct) coverage: [evidenced | partial | missing].
 - Acknowledgement, investigation, and decision timing: [meets standard | drift evidenced | not-evidenced].
-- Reasoned-denial drafting and human-review gate: [evidenced | partial | missing].
+- Reasoned-denial drafting and named human-review checkpoint: [evidenced | partial | missing].
 - Complaint flow from policyholder through TPA to carrier: [evidenced | partial | missing].
 - Denial-letter sample review: [scope, sample size, findings].
 

@@ -15,7 +15,6 @@ description: |
   - The work is sequencing remediation across business units after the policy is approved (use `regulatory-change-management/implementation-plan`).
   - The trigger is drafting a new policy from scratch (route to the policy owner; this skill diffs, it does not draft).
 
-  Anchored to: 12 CFR Part 30 Appendix D (OCC heightened standards, written framework expectations), OCC Bulletin 2021-36 (governance over written guidance), COSO Internal Control 2013 (Control Activities, Information and Communication), BCBS 239 (where the policy supports risk reporting), SR 11-7 / OCC Bulletin 2026-13 (model risk policy lifecycle), SEC IAA Rule 206(4)-7 (annual review of compliance policies and procedures), FINRA Rule 3110 (written supervisory procedures), NYDFS 23 NYCRR Part 500 §500.3 (cybersecurity policy), Interagency Guidance on Third-Party Relationships (2023). Citations and excerpts live in `references/source-anchors.md`.
 argument-hint: "[two policy versions, or current policy plus proposed redline]"
 ---
 
@@ -73,9 +72,7 @@ The change-log spine is the same across sectors. What flexes is the kind of poli
 
 Where firm policy or taxonomy applies (named approver titles, a defined committee structure, a particular policy-management system), it lives in `references/firm-overlay.md` and the change log pulls from there.
 
-## What's load-bearing and what flexes
-
-A handful of things do not flex.
+## Quality bar
 
 The diff is anchored on two named versions. Version A and version B both carry version number, approval date, and approver. A diff against an unspecified base is not auditable; "vs the previous version" is not a citation. Where the base version is genuinely unidentified (the prior version was lost in a system migration), the row says so and the open-question summary picks it up.
 
@@ -87,7 +84,9 @@ Approver routing matches the materiality. Material changes route to the named ap
 
 The change log is a draft until the policy owner and named approver attest. The skill does not set rows to approved, and it does not move a policy from draft to live. Material claims cite a source from version A or version B (or, for downstream impact, from the control matrix or obligation register where supplied). `[evidence needed]` flags items needing follow-up.
 
-Everything else adapts to context. Audience drives shape: a policy-committee paper clusters material rows to the front; a training-rollout pack clusters by audience; an examiner-readiness file pulls the trigger and the prior-state-vs-new-state delta forward. Source posture drives what the downstream-impact rows can carry. Sector and cross-cutting overlays load from engagement scope. Confidence labels track by section.
+## Adaptation
+
+Audience drives shape: a policy-committee paper clusters material rows to the front; a training-rollout pack clusters by audience; an examiner-readiness file pulls the trigger and the prior-state-vs-new-state delta forward. Source posture drives what the downstream-impact rows can carry. Sector and cross-cutting overlays load from engagement scope. Confidence labels track by section.
 
 ## Output
 

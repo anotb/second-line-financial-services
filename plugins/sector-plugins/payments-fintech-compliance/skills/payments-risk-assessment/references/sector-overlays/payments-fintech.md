@@ -54,7 +54,7 @@ The geography matrix has one row per US state in scope plus one row per corridor
 
 - MTL via NMLS (status, expiration, last exam date).
 - Money Transmitter Modernization Act adoption status for the state (verify state-by-state on the analysis date).
-- MSB registration status under FinCEN 31 CFR §1010.380 where applicable.
+- MSB registration status under FinCEN 31 CFR §1022.380 where applicable.
 - State DFI / DOB registration where required.
 - Specialised licences (NYDFS BitLicense for VC activity in NY; CA DFPI under CA Money Transmission Act and CCFPL; state-specific EWA frameworks; state-specific BNPL frameworks).
 

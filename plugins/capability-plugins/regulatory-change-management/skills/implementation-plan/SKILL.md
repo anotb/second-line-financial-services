@@ -16,7 +16,6 @@ description: |
   - The objective is to assess whether the firm should comply at all. That is a legal determination and is out of scope for the second line.
   - The trigger is a single low-risk issue suited to issue-management lifecycle (use `risk-compliance-core/issue-management`); this skill is for programme-level remediation.
 
-  Anchored to: OCC Heightened Standards, FRB SR Letters (SR 13-19, SR 21-3, SR 11-7, SR 16-11, SR 13-1), MRA / MRIA federal banking convention, CFPB Matters Requiring Attention, FFIEC IT Examination Handbook, CFPB Supervision and Examination Manual, SEC Investment Advisers Act rules, SEC final rules on cybersecurity and climate disclosure, FINRA supervision rules, NAIC Market Conduct and Financial Condition Examiners Handbooks, NYDFS 23 NYCRR Part 500, banking computer-security incident notification rule, FTC Safeguards Rule, EU DORA, published consent orders.
 argument-hint: "[obligation list, policy-diff output, control-gap input, trigger artifact (rule, MRA, MRIA, consent order), effective date, scope]"
 ---
 
@@ -82,11 +81,13 @@ When the engagement scope names a sector, load `references/sector-overlays/{bank
 
 Loading an overlay the trigger does not implicate adds noise without challenge value. Loading none when one applies is the more common failure mode.
 
-## What's load-bearing and what flexes
+## Quality bar
 
-Load-bearing across every plan. Every material claim cites a source from `references/source-anchors.md` (or a loaded overlay) by path. Unsupported items carry `[evidence needed]`. Source evidence, management assertion, public-source obligation, generated inference, and open legal question stay distinguishable. Owners are roles, never named individuals. No named institutions in narrative beyond a public defendant in a finalised consent order, and only for structural pattern. The plan stops short of approving itself; the named programme sponsor and second-line oversight role attest.
+Holds across every plan. Every material claim cites a source from `references/source-anchors.md` (or a loaded overlay) by path. Unsupported items carry `[evidence needed]`. Source evidence, management assertion, public-source obligation, generated inference, and open legal question stay distinguishable. Owners are roles, never named individuals. No named institutions in narrative beyond a public defendant in a finalised consent order, and only for structural pattern. The plan stops short of approving itself; the named programme sponsor and second-line oversight role attest.
 
-Flexes to the programme. Plan depth scales to criticality and audience: a high-criticality MRIA-driven plan reads long with monitor integration and monthly board reporting; a low-criticality rule-implementation reads tight with biweekly steering and quarterly board reporting; a board pre-read distills to plan summary plus top three risks plus mandatory-date posture. Source posture (public-only through connector-aware) drives what the plan can assert at high confidence and what carries `[evidence needed]`. Sector and cross-cutting overlays load from the engagement scope. Where firm-specific PMO conventions, named monitor relationships, board-charter-driven cadence, or approved governance templates apply, they live in `references/firm-overlay.md` and are consumed when present; the plan itself stays generic.
+## Adaptation
+
+Plan depth scales to criticality and audience: a high-criticality MRIA-driven plan reads long with monitor integration and monthly board reporting; a low-criticality rule-implementation reads tight with biweekly steering and quarterly board reporting; a board pre-read distills to plan summary plus top three risks plus mandatory-date posture. Source posture (public-only through connector-aware) drives what the plan can assert at high confidence and what carries `[evidence needed]`. Sector and cross-cutting overlays load from the engagement scope. Where firm-specific PMO conventions, named monitor relationships, board-charter-driven cadence, or approved governance templates apply, they live in `references/firm-overlay.md` and are consumed when present; the plan itself stays generic.
 
 ## Pointers
 

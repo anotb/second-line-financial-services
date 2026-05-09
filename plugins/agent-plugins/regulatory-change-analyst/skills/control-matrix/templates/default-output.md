@@ -76,7 +76,7 @@ Material claims in this matrix are sourced. `[evidence needed]` flags items that
 | Role | Name on file | Date |
 |---|---|---|
 | Practitioner / matrix author | <role> | |
-| Control owners (one per material control where review gates require) | <roles> | |
+| Control owners (one per material control where the sign-off forum requires) | <roles> | |
 | Reviewer (independent of matrix author) | <role> | |
 | Sponsor (if engagement scope names one) | <role> | |
 

@@ -1,6 +1,6 @@
 # Source anchors: obligation-mapping
 
-This file holds the named, dated regulatory and professional-standard sources the obligation-mapping skill anchors to. The SKILL.md file does not restate these citations beyond the activation-tuned description's "Anchored to:" line. Firm-specific anchors belong in `references/firm-overlay.md`.
+This file holds the named, dated regulatory and professional-standard sources the obligation-mapping skill anchors to. SKILL.md cites this file by path; the named anchors are not restated inline. Firm-specific anchors belong in `references/firm-overlay.md`.
 
 `[verify section]` placeholders mark anchors where the precise section reference still needs verification against the current edition of the source. They are deliberate, not omissions. Phase 2 carries verification load; phase 3 grinds it down. Fabricating a section reference is worse than leaving the placeholder.
 
@@ -64,21 +64,19 @@ What this skill relies on: that CFPB-supervised firms map UDAAP, Reg E, Reg Z, R
 
 ## Model-risk obligation source
 
-### SR 11-7 / OCC Bulletin 2011-12 — Supervisory Guidance on Model Risk Management (Federal Reserve and OCC, April 4, 2011)
+### SR 11-7 / OCC Bulletin 2011-12 — Supervisory Guidance on Model Risk Management (Federal Reserve and OCC, April 4, 2011, superseded April 17, 2026)
 
-Anchor: §IV (model development, implementation, and use), §V (validation), §VI (governance, policies, controls). [verify section labels against the published letter; the interagency text uses Roman-numeral sections.]
-
-What this skill relies on: that model-risk obligations distinguish development from validation from ongoing-monitoring; that segregation between developer and validator is itself an obligation, not a control choice; that material model changes route to a documented change-management gate.
+Anchor: §IV (model development, implementation, and use), §V (validation), §VI (governance, policies, controls). Superseded by the joint April 2026 guidance below. Retained as historical anchor for obligations the firm extracted under the prior framing.
 
 - Link with section: https://www.federalreserve.gov/supervisionreg/srletters/sr1107.htm — §IV, §V, §VI.
 
-### OCC Bulletin 2026-13 — Revised Interagency Model Risk Management Guidance (2026)
+### Joint Interagency Revised Guidance on Model Risk Management — OCC Bulletin 2026-13 / FRB SR 26-2 / FDIC FIL-15-2026 (April 17, 2026)
 
-Anchor: §III.A (control environment refresh), §III.B (third-party model controls), AI-system extensions. [verify section labels against the published bulletin.]
+Anchor: Section II (scope and definitions), Section III (control environment, third-party model controls). The April 2026 joint guidance supersedes SR 11-7 (2011) and SR 21-8 (BSA/AML model risk, 2021). Most relevant to banking organizations with total assets over $30 billion; non-binding (does not set forth enforceable standards). Generative AI and agentic AI are explicitly out of scope (footnote 3); the principles cover traditional statistical and quantitative models and non-generative, non-agentic AI models.
 
-What this skill relies on: refreshed model-risk obligation language layered onto SR 11-7; third-party-model obligations where the model is vendor-developed or vendor-hosted; AI-system obligation patterns inside the model-risk frame.
+What this skill relies on: refreshed model-risk obligation language for traditional statistical and quantitative models and non-generative, non-agentic AI models; third-party-model obligations where the model is vendor-developed or vendor-hosted; the developer-validator segregation expectation carried forward. For GenAI or agentic-AI obligation extraction, the register anchors on NIST AI RMF 1.0, NIST AI 600-1, ISO/IEC 42001, the EU AI Act, and the firm's AI governance policy rather than this bulletin.
 
-- Link with section: https://www.occ.gov/news-issuances/bulletins/ — OCC Bulletin 2026-13 §III.A, §III.B.
+- Link with section: https://www.occ.gov/news-issuances/bulletins/2026/bulletin-2026-13.html — Section II, Section III. Parallels: https://www.federalreserve.gov/supervisionreg/srletters/SR2602.htm, https://www.fdic.gov/news/financial-institution-letters/2026/agencies-revise-interagency-model-risk-management-guidance.
 
 ## Financial-crime obligation source
 

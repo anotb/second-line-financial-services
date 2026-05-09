@@ -33,7 +33,7 @@ A handoff package missing the periodic re-attestation, missing the rationale for
 
 ## MSB screening considerations
 
-- **31 CFR §1010.380** — MSB registration with FinCEN [verify section]. Adjacent program-element check; an unregistered MSB has a foundational program defect that the screening QA notes by reference even though registration is outside the screening artifact.
+- **31 CFR §1022.380** — MSB registration with FinCEN. Initial registration within 180 days of becoming an MSB; renewal every two years. Adjacent program-element check; an unregistered MSB has a foundational program defect that the screening QA notes by reference even though registration is outside the screening artifact. Not the BOI / CTA reporting rule at §1010.380, which is a separate obligation with its own legal status.
 - **State money-transmitter license set** — per-state populations.
 - **Bank Secrecy Act and OFAC dual obligations** — the MSB's program-level posture on BSA / OFAC convergence is the operative read.
 

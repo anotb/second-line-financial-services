@@ -13,8 +13,6 @@ description: |
   - The work is a multi-issue summary or committee narrative. Assemble several issue-writeup outputs and use `risk-reporting/skills/risk-committee-pack`.
   - The condition is unconfirmed (an observation, not a finding). Issues require a confirmed condition; observations belong in the engagement notes until confirmed.
   - The work is policy-level gap analysis upstream of any specific exception. Use `policy-gap-review`.
-
-  Anchored to: IIA International Professional Practices Framework Standard 2410, AICPA AU-C 265, FRB SR 13-13, OCC Bulletin 2014-39, FFIEC IT Examination Handbook (Audit booklet), and COSO Internal Control Integrated Framework. Citations and excerpts live in `references/source-anchors.md`.
 argument-hint: "[exception or finding source: control-test workpaper, exam letter, vendor monitoring record, validation report, audit fieldwork note]"
 ---
 
@@ -24,7 +22,7 @@ A second-line issue is the artifact that turns a confirmed exception into someth
 
 The issue write-up is a primitive. The exception-analysis chain calls it once a control-test exception is confirmed. Internal audit calls it as the deliverable shape for fieldwork findings. Vendor monitoring calls it when a SOC report or KPI threshold is breached. Model validation calls it for findings that warrant tracking outside the validation report. Regulator-response files call it when the firm restates an examiner-issued matter in its internal format. The artifact shape is the same; the source label, the severity calibration, and the reviewer machinery shift with the source.
 
-The skill produces the write-up as a markdown artifact in `templates/default-output.md` shape and a structured record conforming to `schemas/issue.schema.json`. The artifact is a draft until a named reviewer attests; severity assignment always carries human review.
+The write-up is the deliverable; the format is whatever the engagement and audience need. An audit-committee read or regulator-response file is memo-natural and lands as Word; an internal remediation tracker may want formatted markdown that ports cleanly into a GRC platform. The skill drafts against `templates/default-output.md` and emits the structured record at `schemas/issue.schema.json`. The artifact is a draft until a named reviewer signs off; severity assignment always carries independent attestation.
 
 ## Ask first
 
@@ -73,25 +71,35 @@ The same CCCE spine carries different criteria sources, different severity calib
 
 Privacy and climate cross-cutting overlays follow the same pattern; this skill ships cyber and conduct as the v1 cross-cutting files because they are the most frequent cross-cutting triggers for issue write-ups. Where firm policy or taxonomy applies (issue rating ladders specific to the firm, named committee gates, GRC-platform-specific status enums), it lives in `references/firm-overlay.md` and is consumed when present.
 
-## What's load-bearing and what flexes
+## Quality bar
 
-A handful of things do not flex:
+The condition is dated, scoped, and observable. A condition that reads as a conclusion or as commentary is not yet a condition; the write-up does not proceed until the condition is stated as the observable state.
 
-- The condition is dated, scoped, and observable. A condition that reads as a conclusion or as commentary is not yet a condition; the write-up does not proceed until the condition is stated as the observable state.
-- Criteria is a named source with a section. Generic policy references without citation are not criteria. The reviewer must be able to read the criterion in `references/source-anchors.md`, in a loaded overlay, or in the firm-overlay.
-- Cause names the control attribute that failed. "Human error", "training gap", and "system limitation" are surface labels; the cause field reads as the design or operation weakness underneath.
-- Severity is paired with rationale referencing materiality, frequency, customer impact, regulatory exposure, and compensating controls. Severity assignment always carries human review.
-- Closure evidence is the artifact, not the verb. The reviewer can name the system, the report, or the sign-off log they will inspect to confirm closure.
-- Owners are named roles with accountability. Where the role taxonomy is firm-specific, it comes from `references/firm-overlay.md`.
-- Issues sourced from examiner letters carry the MRA / MRIA classification field populated.
-- Material claims cite a source. `[evidence needed]` flags route to the engagement issue log.
-- The artifact is a draft until the named reviewer attests. The skill stops at draft.
+Criteria is a named source with a section. Generic policy references without citation are not criteria. The reviewer must be able to read the criterion in `references/source-anchors.md`, in a loaded overlay, or in the firm-overlay.
 
-Everything else adapts to context. Audience drives compression: an audit-committee read pulls severity, recommendation, and target date to the front; a regulator-response read leads with criteria and condition; an internal remediation tracker pulls owner and closure evidence forward. Source posture drives what the body can carry. Sector and cross-cutting overlays load from the engagement scope. The CCCE order itself can rearrange in the surface artifact (a regulator response often opens with criteria; an internal pack often opens with severity and recommendation), but the structured record preserves the CCCE fields distinctly.
+Cause names the control attribute that failed. "Human error," "training gap," and "system limitation" are surface labels; the cause field reads as the design or operation weakness underneath.
+
+Severity is paired with rationale referencing materiality, frequency, customer impact, regulatory exposure, and compensating controls. Severity assignment always carries independent attestation.
+
+Closure evidence is the artifact, not the verb. The reviewer can name the system, the report, or the sign-off log they will inspect to confirm closure.
+
+Owners are named roles with accountability. Where the role taxonomy is firm-specific, it comes from `references/firm-overlay.md`.
+
+Issues sourced from examiner letters carry the MRA / MRIA classification field populated.
+
+Material claims cite a source. `[evidence needed]` flags route to the engagement issue log; the seams between source evidence, management assertion, public-source obligation, and inference stay visible. RFP narrative is not evidence. `[verify section]` markers belong in source-anchors verification, not the write-up body.
+
+No named institutions in narrative unless they are public defendants in a finalised enforcement action with a published consent order. The artifact stops at recommendation; it is a draft until the named reviewer signs off.
+
+## Adaptation
+
+Audience drives compression: an audit-committee read pulls severity, recommendation, and target date to the front; a regulator-response read leads with criteria and condition; an internal remediation tracker pulls owner and closure evidence forward. Source posture drives what the body can carry. Sector and cross-cutting overlays load from the engagement scope. The CCCE order itself can rearrange in the surface artifact (a regulator response often opens with criteria; an internal pack often opens with severity and recommendation), but the structured record preserves the CCCE fields distinctly.
 
 ## Output
 
-The write-up in `templates/default-output.md` shape and the structured record conforming to `schemas/issue.schema.json`. Downstream consumers: the exception-analysis chain reads `issue_id`, `severity`, `linked_control_ids`, and `linked_evidence_ids` to ladder exceptions into the testing program; audit findings reference `issue_id` as the matter under audit; regulator-response files cite `issue_id` and the criteria block when responding to an examiner letter; the issue log keys off `issue_id`, `status`, `target_date`, and `owner`; `risk-committee-pack` aggregates `severity`, `mra_mria_classification`, and `evidence_gap` for the open-issues section; `control-matrix` reads `linked_control_ids` to surface open issues against rows. The schema is the cross-skill contract; additive changes only, never silent renames. Breaking changes ship as a versioned migration with downstream skills told in advance.
+Default to drafting against `templates/default-output.md`. The write-up is memo-natural in practice; render the deliverable as Word via the `docx` skill in the `document-skills` plugin, or as formatted markdown that ports into a GRC platform. PowerPoint for an audit-committee summary slide, Excel for the structured row when the firm's issue log is spreadsheet-driven. Render to whatever the audience and workflow ask for. Produce the structured record at `schemas/issue.schema.json` when downstream automation or a registered consumer needs it.
+
+Downstream consumers: the exception-analysis chain reads `issue_id`, `severity`, `linked_control_ids`, and `linked_evidence_ids` to ladder exceptions into the testing program; audit findings reference `issue_id` as the matter under audit; regulator-response files cite `issue_id` and the criteria block when responding to an examiner letter; the issue log keys off `issue_id`, `status`, `target_date`, and `owner`; `risk-committee-pack` aggregates `severity`, `mra_mria_classification`, and `evidence_gap` for the open-issues section; `control-matrix` reads `linked_control_ids` to surface open issues against rows. The schema is the cross-skill contract; additive changes only, never silent renames. Breaking changes ship as a versioned migration with downstream skills told in advance.
 
 ## Pointers
 

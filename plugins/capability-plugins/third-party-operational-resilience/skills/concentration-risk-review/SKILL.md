@@ -16,8 +16,6 @@ description: |
   - The question is single-arrangement exit posture (use `exit-plan`).
   - The question is single-arrangement contract clause coverage (use `contract-gap-review`).
   - The question is whether one arrangement is critical-or-important (use `criticality-assessment`).
-
-  Anchored to: US interagency third-party risk management guidance (June 2023) on concentration considerations in planning and ongoing monitoring; the EU Digital Operational Resilience Act preliminary assessment of ICT concentration risk and the proportionality limb of the same Article; the European Banking Authority Guidelines on outsourcing arrangements concentration limb in the risk-assessment guideline; the FFIEC IT Examination Handbook concentration considerations; the joint US federal banking agencies inter-agency cloud statement; and the Basel Committee Principles for Operational Resilience on interconnections and interdependencies. Citations and uncertainty markers live in `references/source-anchors.md`.
 argument-hint: "[portfolio scope: entities, register source, cycle (annual / pre-contract / supervisor-request / stress-event), criticality cutoff]"
 ---
 
@@ -73,7 +71,7 @@ A list of concentrations without a substitutability test is descriptive, not use
 
 Concentrations that warrant committee attention surface as findings with severity, dimension, affected functions, and the substitutability read. Recommended actions name the action, the owner role (head of TPRM, head of operational resilience, CRO office, ICT-asset owner, business owner SVP), the rationale, and the dependency on other skills (a `contract-gap-review` re-run, an `exit-plan` refresh, a `resilience-testing-pack` scenario test). The skill drafts the recommendations; the named forum decides.
 
-Reviewer questions tie to the decision and cluster for the forum that decides: operational-resilience committee for portfolio findings, TPRM forum for vendor-by-vendor follow-ups, risk committee for findings that change the firm's risk-appetite read, board for findings that move concentration above board-level thresholds. The named review gates the artifact must clear (scope, evidence, authority, impact, decision) are listed.
+Reviewer questions tie to the decision and cluster for the forum that decides: operational-resilience committee for portfolio findings, TPRM forum for vendor-by-vendor follow-ups, risk committee for findings that change the firm's risk-appetite read, board for findings that move concentration above board-level thresholds. Name the decision checkpoints the artifact must clear (scope, evidence, authority, impact, decision) and the conditions attached to each.
 
 ### Sector and cross-cutting overlay loading
 
@@ -81,9 +79,9 @@ When the engagement scope names a sector, load the matching `references/sector-o
 
 The cyber cross-cutting overlay (`references/cross-cutting/cyber.md`) loads when the technology-stack and sub-contractor-chain dimensions surface cyber-risk material to the supervisory read (a single cyber-incident that removes multiple critical arrangements, a shared-utility incident that propagates across the firm and its peers). Privacy considerations are read through the geographic-and-jurisdictional dimension (cross-border data flows, data-residency posture); the deeper privacy treatment lives with `vendor-diligence` and the privacy-overlay file there. Load only the overlays the engagement scope names.
 
-## What's load-bearing and what flexes
+## Quality bar
 
-Load-bearing across every review:
+Holds across every review regardless of cycle type, audience, or render format.
 
 - **The register feeds the analysis; the skill does not invent the portfolio.** Where the register is incomplete, the analysis is scoped to the usable subset and the limitation is a data-quality caveat. Filling gaps with inferred entries is a defect, not a workaround.
 - **Criticality is consumed, not set.** The concentration review reads the criticality tier set elsewhere. A register where critical-or-important is not yet classified is not yet usable.
@@ -92,15 +90,18 @@ Load-bearing across every review:
 - **Spend is not the metric.** Criticality-weighted count, transaction or operational-volume share where available, function dependency, and time-to-substitute are the metrics.
 - **Multi-region is not multi-resilience by default.** Two regions of the same hyperscaler share control plane, identity layer, and billing operation; the substitutability read names what fails together.
 - **Source trace.** Every material claim cites `references/source-anchors.md` (or a loaded overlay) by path. Section references that cannot be confirmed get `[verify section]` rather than fabricated. Unsupported items go to the engagement issue log, not silently into the artifact.
-- **The skill stops at the recommendation.** The artifact carries reviewer questions, named review gates, and recommended actions. The operational-resilience committee, the head of TPRM, the head of operational resilience, and the CRO office decide. Where the cycle is the EU pre-contract preliminary assessment, the legal artifact is the firm's signed assessment; this skill is the draft input and requires legal and compliance sign-off before becoming the legal record.
+- **The skill stops at the recommendation.** The artifact carries reviewer questions, named decision checkpoints, and recommended actions. The operational-resilience committee, the head of TPRM, the head of operational resilience, and the CRO office decide. Where the cycle is the EU pre-contract preliminary assessment, the legal artifact is the firm's signed assessment; this skill is the draft input and requires legal and compliance sign-off before becoming the legal record.
 - **No named institutions in narrative unless they are public defendants in a finalised enforcement action with a published consent order.** Sector pattern claims are abstracted from public-source-derived examples in `examples/`.
 
-Flexes to the engagement:
+## Adaptation
+
+Flexes by engagement.
 
 - **Review depth scales to cycle type and audience.** Annual portfolio cycle runs broad with all dimensions. Pre-contract preliminary assessment runs narrow against the proposed arrangement and the portfolio it joins; the dimensions that the proposed arrangement materially moves are read in depth, the others are summarised. Supervisor-information-request runs to the question. Stress-event readiness leads with single-points-of-failure and the substitutability read under stressed conditions.
 - **Audience drives shape.** A pack for the operational-resilience committee reads operational. A pack for the CRO office leads with the residual concentration posture and the risk-appetite implications. A pack for board reads as a justification of the firm's own concentration tolerance. A pack supporting a supervisor dialogue reads as a justification of the firm's posture before the supervisor asks.
 - **Sector overlay loading follows engagement scope.** Dual-registrant or BaaS arrangements load two.
 - **Source posture drives the evidence ask** and the confidence label on the artifact.
+- **Render format follows the workflow.** Default to the markdown narrative; render as Word, Excel, or PowerPoint when the audience or workflow asks for it (an annual board pack often wants a deck; a portfolio cut often wants a workbook).
 - **Firm-specific concentration tolerances, named owners, internal-to-supervisory threshold mapping, and policy thresholds** sit in `references/firm-overlay.md`, consumed when present, never in the artifact directly.
 
 ## Output

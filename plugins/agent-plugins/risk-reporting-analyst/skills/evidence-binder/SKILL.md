@@ -16,8 +16,6 @@ description: |
   - The work is drafting a finding from missing evidence (use `issue-writeup`).
   - The work is the committee narrative itself (use `risk-reporting/skills/risk-committee-pack`); this skill produces the evidence index the narrative cites.
   - The work is reviewing a vendor's published evidence pack against a deployment context (use `ai-governance-model-risk/skills/llm-vendor-evidence-review`).
-
-  Anchored to: BCBS 239 (January 2013), AICPA AU-C 500 and AU-C 230, IIA Global Internal Audit Standards (effective January 2025), FFIEC IT Examination Handbook Audit booklet, SR 11-7 / OCC Bulletin 2026-13, the Interagency Third-Party Risk Management guidance (June 2023), and the recordkeeping floors that bear on the binder (Bank Service Company Act, BSA recordkeeping, SEC Rule 17a-4 / FINRA 4511). Citations and excerpts live in `references/source-anchors.md`.
 argument-hint: "[binder purpose: exam, audit, validation, vendor, committee, issue. Plus the request list or evidence inventory if you have it.]"
 ---
 
@@ -27,7 +25,7 @@ The binder is what a senior reviewer reaches for when they want to know whether 
 
 The discipline is sufficiency, not form. A screenshot is not evidence; the system-of-record link is. A management memo is an assertion, not testimony. A folder of artifacts without a request-list reconciliation is unauditable. The binder shows the seams between source evidence, management assertion, public-source obligation, and inference, because the reviewer's job is to credit each class differently.
 
-This skill produces the binder as a markdown artifact (`templates/default-output.md` shape) and a structured record conforming to `schemas/evidence-binder.schema.json` that downstream skills consume. The skill stops at the draft; the named reviewer signs.
+The binder is the deliverable; the format is whatever the engagement and audience need. A model-validation pack is binder-natural and lands as Word with attachments or as a shared-drive folder structure with a Word index. An audit fieldwork binder runs Excel-natural for the row-by-row index plus Word for the cover narrative. The skill drafts against `templates/default-output.md` and emits the structured record at `schemas/evidence-binder.schema.json` for downstream consumers. The skill stops at the draft; the named reviewer signs.
 
 ## Ask first
 
@@ -74,11 +72,17 @@ The skill does not block on missing input. If the engagement has a request list 
 
 A binder with named gaps and a remediation plan is stronger than a binder with hidden gaps. Reviewers credit honesty about gaps and discount binders that claim completeness and do not survive scrutiny.
 
-## What's load-bearing and what flexes
+## Quality bar
 
-Load-bearing across every binder: every material claim cites a source from `references/source-anchors.md` (or a loaded overlay) by path; unsupported claims are marked `[evidence needed]` and route to the engagement issue log; the seams between source evidence, management assertion, public-source obligation, and inference stay visible in the `evidence_class` column; no fabricated regulatory facts; no named institutions in narrative unless they are public defendants in a finalised enforcement action with a published consent order; the binder stops at the draft, signed by the named reviewer.
+Every material claim cites a source from `references/source-anchors.md` (or a loaded overlay) by path. Unsupported claims are marked `[evidence needed]` and route to the engagement issue log. The seams between source evidence, management assertion, public-source obligation, and inference stay visible in the `evidence_class` column; RFP narrative is not evidence and management memos are assertions, not testimony.
 
-Flexes to the engagement: depth and length scale to purpose and audience. A vendor-review binder for a non-critical SaaS may run to ten rows and fit on a page; a regulator-exam binder reconciled against a 60-item RFI runs long, with the sufficiency log and gap section in full. A committee binder leads with the headline sufficiency and pushes row-level detail into an appendix; an audit fieldwork binder leads with row-level detail because the auditor will read every row. A model-validation binder groups rows by SR 11-7 §V activity (conceptual soundness, ongoing monitoring, outcomes analysis, benchmarking); a vendor-review binder groups rows by lifecycle phase (planning, due diligence, contract, ongoing monitoring, termination) per the 2023 interagency third-party guidance. The sector overlay set drives which `references/sector-overlays/<sector>.md` is loaded. The cross-cutting overlay set follows engagement scope, with the rule that `references/cross-cutting/privacy.md` loads whenever the binder may carry NPI, PHI, PCI, or other regulated personal data, regardless of how the engagement-scope reads.
+No fabricated regulatory facts. No named institutions in narrative unless they are public defendants in a finalised enforcement action with a published consent order.
+
+`[verify section]` markers belong in source-anchors verification, not the binder body. The binder stops at recommendation; the artifact is a draft until the named reviewer signs.
+
+## Adaptation
+
+Depth and length scale to purpose and audience. A vendor-review binder for a non-critical SaaS may run to ten rows and fit on a page; a regulator-exam binder reconciled against a 60-item RFI runs long, with the sufficiency log and gap section in full. A committee binder leads with the headline sufficiency and pushes row-level detail into an appendix; an audit fieldwork binder leads with row-level detail because the auditor will read every row. A model-validation binder groups rows by validation activity (conceptual soundness, ongoing monitoring, outcomes analysis, benchmarking); a vendor-review binder groups rows by lifecycle phase (planning, due diligence, contract, ongoing monitoring, termination) per the 2023 interagency third-party guidance. The sector overlay set drives which `references/sector-overlays/<sector>.md` is loaded. The cross-cutting overlay set follows engagement scope, with the rule that `references/cross-cutting/privacy.md` loads whenever the binder may carry NPI, PHI, PCI, or other regulated personal data, regardless of how the engagement-scope reads.
 
 ## Pointers
 
@@ -93,4 +97,6 @@ Flexes to the engagement: depth and length scale to purpose and audience. A vend
 
 ## Output
 
-The skill emits the binder in `templates/default-output.md` shape and the structured record per `schemas/evidence-binder.schema.json`. Downstream consumers: `issue-writeup` reads `evidence_gaps` and `provenance_concerns` for findings rooted in evidence weakness; `risk-reporting/skills/risk-committee-pack` reads the binder summary and confidence label; `regulatory-reporting/skills/exam-response-pack` reads the request-list reconciliation and the linked-evidence trail; the firm's audit and exam workpaper systems read the structured record for the workpaper of record. The schema is the cross-skill contract; additive changes only. Add fields, do not rename or repurpose them. A breaking change is a versioned migration with the consumers told in advance.
+Default to drafting against `templates/default-output.md`. The binder is binder-natural in practice; render the deliverable as Word with linked attachments via the `docx` skill in the `document-skills` plugin, or as a shared-drive folder structure with a Word index, or as Excel for the row-by-row index plus Word for the cover narrative when the auditor or examiner expects a workpaper-style index. PowerPoint for a committee distillation, markdown for a developer-touched artifact. Render to whatever the engagement and audience ask for. Produce the structured record at `schemas/evidence-binder.schema.json` when downstream automation or a registered consumer needs it.
+
+Downstream consumers: `issue-writeup` reads `evidence_gaps` and `provenance_concerns` for findings rooted in evidence weakness; `risk-reporting/skills/risk-committee-pack` reads the binder summary and confidence label; `regulatory-reporting/skills/exam-response-pack` reads the request-list reconciliation and the linked-evidence trail; the firm's audit and exam workpaper systems read the structured record for the workpaper of record. The schema is the cross-skill contract; additive changes only. Add fields, do not rename or repurpose them. A breaking change is a versioned migration with the consumers told in advance.

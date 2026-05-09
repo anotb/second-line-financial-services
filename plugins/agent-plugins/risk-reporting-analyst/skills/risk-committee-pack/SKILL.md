@@ -15,8 +15,6 @@ description: |
   - The work is an SEC cyber Item 1.05 trigger analysis or 8-K disclosure decision (use `cyber-disclosure-readiness`).
   - The work is a management response to an MRA, MRIA, or audit finding (use `management-response`; this skill consumes its status into the issues section).
   - The data lineage feeding the pack is not yet fit for purpose (run `bcbs239-gap-assessment` first; this skill assumes BCBS 239 data quality is established and surfaces the residual limitations in the appendix).
-
-  Anchored to: BCBS 239, COSO ERM 2017, OCC Heightened Standards (12 CFR Part 30 Appendix D), FRB SR 12-17 and SR 19-3, Dodd-Frank Section 165(b) and Regulation YY, NAIC ORSA Model #505, TCFD where climate is in scope. Citations and excerpts live in `references/source-anchors.md`.
 argument-hint: "[committee name and meeting date, KRI feed pointer, issue log pointer, RAS register pointer, prior-period pack, or scope statement]"
 ---
 
@@ -78,9 +76,7 @@ Load only the overlay the engagement scope names. Banking covered-bank packs car
 
 The sector overlay is content that lands in the pack, not background reading. An insurance overlay loaded but no ORSA mapping in the pack is the failure mode the troubleshooting file calls out.
 
-## What's load-bearing and what flexes
-
-A handful of things do not flex:
+## Quality bar
 
 - Every material claim cites a source. Unsupported items carry `[evidence needed]` and route to the engagement issue log, not silently into the pack.
 - Evidence is separated from inference. The source-trace appendix shows the seam.
@@ -90,11 +86,13 @@ A handful of things do not flex:
 - The data confidence label is BCBS 239-anchored. A "high" label with a non-empty BCBS 239 known-limitations list fails the schema; medium at best where limitations are present.
 - The pack is a draft until the CRO and the head of risk reporting attest. The skill does not assert sign-off, distribute, file, or post to the committee folder.
 
-Everything else adapts to context. Audience drives tone (board chair is challenge-shaped; ERM committee is wider on management metrics; regulator-attended meeting tightens the source trace). Depth flexes with firm tier (Heightened Standards covered bank deepest; mid-cap regional and adviser firm lighter). Sector and cross-cutting overlays load from the engagement scope. Where firm-specific taxonomy, RAS structure, or governance machinery applies, it lives in `references/firm-overlay.md` (consumed when present) and never in the pack directly.
+## Adaptation
+
+Audience drives tone (board chair is challenge-shaped; ERM committee is wider on management metrics; regulator-attended meeting tightens the source trace). Depth flexes with firm tier (Heightened Standards covered bank deepest; mid-cap regional and adviser firm lighter). Sector and cross-cutting overlays load from the engagement scope. Where firm-specific taxonomy, RAS structure, or governance machinery applies, it lives in `references/firm-overlay.md` (consumed when present) and never in the pack directly.
 
 ## Output
 
-Two artifacts: the pack per `templates/default-output.md`, and the structured object per `schemas/risk-committee-pack.schema.json`. The reviewer attestation block is filled by the CRO and the head of risk reporting; the pack is distributed only after.
+Default to drafting against `templates/default-output.md`. Render as Word, Excel, PowerPoint, or Markdown when the audience or workflow asks for it; for a board risk committee, PowerPoint is often the live deliverable, with a Word memo for the CRO summary and Excel for the KRI and RAS appendices. Produce the structured record at `schemas/risk-committee-pack.schema.json` when downstream automation or a registered consumer needs it. The reviewer attestation block is filled by the CRO and the head of risk reporting; the pack is distributed only after.
 
 Downstream consumers: the structured object feeds the firm's committee minutes system and the regulator response file when supervisors ask for the pack as part of a horizontal review or examination request. The KRI section is populated from `kri-commentary` outputs; the issues section consumes `management-response` outputs; the cyber heat-map cell consumes a brief from `cyber-disclosure-readiness` when elevated. The schema is the cross-skill contract; additive changes only, never silent renames. Breaking changes ship as a versioned migration with the consumers told in advance.
 

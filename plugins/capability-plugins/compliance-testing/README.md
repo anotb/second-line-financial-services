@@ -28,7 +28,7 @@ The supporting skills compose into the test plan and workpaper:
 ## Components
 
 - `skills/` — invocable Claude Code skills. New plugins use skills, not legacy `commands/`.
-- `references/` — public-source map, policy-control library, review gates, and output templates copied into this plugin so it is self-contained after installation.
+- `references/` — public-source map, policy-control library, decision checkpoints, and output templates copied into this plugin so it is self-contained after installation.
 - `schemas/` — JSON schemas for test plans, controls, obligations, issues, and adjacent artifacts. Several schemas are borrowed from `risk-compliance-core` and will be reorganised as part of v1 cleanup.
 
 ## Source posture

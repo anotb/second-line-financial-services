@@ -1,6 +1,6 @@
 # Example: annual revalidation plan for an in-house consumer credit-scoring model
 
-Public-source-derived. No named institution. Framing patterns drawn from SR 11-7 §V validation pillars, OCC Bulletin 2026-13 (revised interagency model risk management guidance, 2026), CFPB Circular 2022-03 on adverse action notification with complex algorithms, and the public ECOA / Reg B fair-lending exam record. No firm-specific facts asserted.
+Public-source-derived. No named institution. Framing patterns drawn from the joint interagency Revised Guidance on Model Risk Management (OCC 2026-13 / FRB SR 26-2 / FDIC FIL-15-2026, April 17 2026; supersedes SR 11-7 and SR 21-8) for the validation-pillar framing on a traditional non-generative ML model, CFPB Circular 2022-03 on adverse action notification with complex algorithms, and the public ECOA / Reg B fair-lending exam record. No firm-specific facts asserted.
 
 ## Input description
 

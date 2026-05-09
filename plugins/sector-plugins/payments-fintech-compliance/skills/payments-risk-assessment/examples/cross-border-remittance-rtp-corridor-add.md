@@ -75,7 +75,7 @@ The assessment stops at the recommendation. The BSA officer and the head of paym
 - NACHA Operating Rules (current edition; paywalled; conceptual citation).
 - The Clearing House RTP Operating Rules (current; verify version date and section).
 - FedNow Service Operating Procedures (current; verify version date) — applicable on receive-side disbursement where FedNow is enabled.
-- FinCEN MSB rules at 31 CFR Part 1022; FinCEN MSB registration at 31 CFR §1010.380; FinCEN Travel Rule at 31 CFR §1010.410(f); FinCEN CVC guidance FIN-2013-G001, FIN-2019-G001 (verify currency).
+- FinCEN MSB rules at 31 CFR Part 1022; FinCEN MSB registration at 31 CFR §1022.380; FinCEN Travel Rule at 31 CFR §1010.410(f); FinCEN CVC guidance FIN-2013-G001, FIN-2019-G001 (verify currency).
 - OFAC 31 CFR Part 501; OFAC Compliance Commitments (May 2, 2019); OFAC SDN list and 50-Percent-Rule guidance.
 - FFIEC BSA/AML Examination Manual.
 - State Money Transmitter Modernization Act adoption status via NMLS (state-by-state; verify on the analysis date); CSBS Multistate MSB Licensing Agreement Program coverage.

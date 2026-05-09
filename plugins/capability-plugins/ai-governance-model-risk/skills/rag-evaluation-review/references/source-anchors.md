@@ -11,14 +11,14 @@ A practitioner note before the list. RAG evaluation sits at a particular interse
 - Citation: Board of Governors of the Federal Reserve System, SR 11-7 / OCC Bulletin 2011-12, "Guidance on Model Risk Management" (April 4, 2011), §V "Model Validation" with focus on the data-review and outcomes-analysis pillars applied to retrieval corpora and grounding outputs.
 - Excerpt-paraphrase: SR 11-7 sets the federal supervisory expectation on model validation including independent review, conceptual soundness assessment, ongoing monitoring, and outcomes analysis. The data-review pillar applied to a RAG system covers the retrieval corpus: source quality, fitness for the intended use, freshness, coverage, and provenance. The outcomes-analysis pillar applied to a RAG system covers the grounding outputs: how well the system's outputs match the intended-purpose target, with attention to both Type-I and Type-II error patterns. SR 11-7 does not name "RAG" or "grounding evaluation" as terms; the connection is made by interpreting the validation expectations against the RAG architecture.
 - Link: https://www.federalreserve.gov/supervisionreg/srletters/sr1107.htm — §V Model Validation
-- Notes: Binding on federally regulated banks. The applicability of SR 11-7 to GenAI is a firm-by-firm interpretation; many firms now treat in-scope GenAI use cases as models for the purposes of the model risk program. The 2026 interagency revision (anchor 2) refreshes this for AI/ML and GenAI explicitly.
+- Notes: Superseded for binding purposes by OCC 2026-13 / FRB SR 26-2 / FDIC FIL-15-2026 as of April 17 2026 (anchor 2). The substantive applicability to RAG systems is by analogy at firm policy level; the 2026 bulletin text excludes GenAI from scope.
 
-### 2. OCC Bulletin 2026-13 — Revised Interagency Model Risk Management Guidance
+### 2. Joint Interagency Revised Guidance on Model Risk Management — OCC 2026-13 / FRB SR 26-2 / FDIC FIL-15-2026
 
-- Citation: OCC Bulletin 2026-13, "Revised Interagency Guidance on Model Risk Management" (issued 2026 by OCC; FDIC and Federal Reserve parallel issuances expected) [verify section on AI/ML and GenAI scope, and on data-review and outcomes-analysis expectations as applied to retrieval-augmented generation].
-- Excerpt-paraphrase: The revised guidance refreshes SR 11-7 documentation and validation expectations to incorporate AI/ML and generative-AI use cases, including foundation-model dependence, retrieval-augmented generation, tool use, and agentic configurations. Data-review and outcomes-analysis expectations apply to retrieval corpora and grounding outputs.
-- Link: https://www.occ.gov/news-issuances/bulletins/2026/bulletin-2026-13.html — Bulletin 2026-13 [verify section]
-- Notes: Confirm published bulletin section numbering at SKILL.md write time. Until verified, the SKILL.md and review memo do not over-claim binding language on retrieval-corpus or grounding-output expectations from this bulletin.
+- Citation: Joint Interagency Revised Guidance on Model Risk Management, OCC Bulletin 2026-13 / FRB SR 26-2 / FDIC FIL-15-2026, dated April 17, 2026. The three issuances are the same joint document; supersedes SR 11-7 (2011) and SR 21-8 (2021).
+- Excerpt-paraphrase (footnote 3, verbatim): "Generative AI and agentic AI models are novel and rapidly evolving. As such, they are not within the scope of this guidance. ... However, the principles described in this guidance apply to traditional statistical and quantitative models and non-generative, non-agentic AI models." Most relevant to banking organizations with over $30 billion in total assets; non-binding.
+- Link: https://occ.gov/news-issuances/bulletins/2026/bulletin-2026-13a.pdf — guidance text PDF
+- Notes: A RAG system is generative AI and is not within this bulletin's scope. Cite the bulletin only for traditional-model framing (e.g., a non-generative classifier in a routing layer). For the substantive RAG-evaluation anchors, see NIST AI 600-1 (anchor 3), ISO/IEC 42001 (anchor 4), and the sector and cross-cutting overlays.
 
 ### 3. NIST AI RMF — Generative AI Profile (NIST AI 600-1)
 
@@ -105,8 +105,7 @@ A practitioner note before the list. RAG evaluation sits at a particular interse
 
 The following items carry `[verify section]` or `[verify ...]` flags and must be confirmed at SKILL.md write time and at memo-write time:
 
-- OCC Bulletin 2026-13 — confirm published section numbering on AI/ML and GenAI scope and on data-review and outcomes-analysis expectations as applied to retrieval-augmented generation.
-- FDIC and Federal Reserve parallel issuances to OCC Bulletin 2026-13 — confirm number and section.
+- OCC 2026-13 / FRB SR 26-2 / FDIC FIL-15-2026 — verbatim GenAI/agentic scope exclusion confirmed against the OCC PDF (footnote 3). The three issuances are the same joint document, not parallels. RAG systems are generative AI and out of scope of this bulletin; for binding RAG-evaluation expectations there is no current US bank-supervisory anchor — anchor to NIST AI 600-1, ISO/IEC 42001, and overlays.
 - NIST AI 600-1 — confirm exact subcategory numbering for Measure 2.9 (information integrity), Measure 1.1 (hallucination/confabulation), Manage 4.1 (deployment monitoring), and Govern 6.1 (third-party considerations).
 - ISO/IEC 42001:2023 — confirm Annex A control IDs relevant to data quality, performance monitoring, and risk treatment.
 - FFIEC IT Examination Handbook — confirm section reference for data-integrity guidance applicable to retrieval-corpus controls.
@@ -116,7 +115,7 @@ Where verification is incomplete, the SKILL.md cites with the `[verify section]`
 
 ## Industry-practice framing reminder
 
-The RAGAS-style metric families (faithfulness, answer relevance, context precision, context recall, citation precision when defined as supports-the-claim, refusal rate on a labelled out-of-scope set) are the practitioner-standard vocabulary for grounding evaluation. They are **not specified in any US financial-services regulator's published guidance**. Any equivalent named framework or in-house equivalent is acceptable provided the metric semantics are documented. The skill does not over-claim binding regulator language for these metrics; the binding language sits with the underlying validation expectations (SR 11-7 §V, OCC Bulletin 2026-13 [verify section]) and with the management-system expectations (ISO/IEC 42001 §8.1 / §9.1) applied to RAG by analogy.
+The RAGAS-style metric families (faithfulness, answer relevance, context precision, context recall, citation precision when defined as supports-the-claim, refusal rate on a labelled out-of-scope set) are the practitioner-standard vocabulary for grounding evaluation. They are **not specified in any US financial-services regulator's published guidance**. Any equivalent named framework or in-house equivalent is acceptable provided the metric semantics are documented. The skill does not over-claim binding regulator language for these metrics; the substantive anchors are the AI-specific frameworks (NIST AI 600-1 Measure 2.9 information integrity and Measure 1.1 confabulation, ISO/IEC 42001 §8.1 / §9.1) applied to RAG by analogy. The bank model-risk bulletin (OCC 2026-13 / FRB SR 26-2 / FDIC FIL-15-2026) excludes generative AI from scope and is not the binding hook for RAG evaluation.
 
 ## Firm overlay placeholder
 

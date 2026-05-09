@@ -16,8 +16,6 @@ description: |
   - The artifact required is a single use-case model card (use `model-card-builder`; this pack consumes its sign-off questions).
   - The work is a single AI vendor diligence file (use `third-party-operational-resilience/skills/vendor-diligence` in AI-vendor mode; this pack consumes its outputs as concentration evidence).
   - The work is the EU AI Act Annex IV technical documentation file (provider-side; use `ai-act-triage` to scope deltas).
-
-  Anchored to: NIST AI RMF Govern function, NIST AI 600-1 Generative AI Profile, OCC Bulletin 2026-13, SR 11-7, ISO/IEC 42001:2023, NAIC Model Bulletin on the Use of AI Systems by Insurers (December 2023), NYDFS Industry Letter on Cybersecurity Risks Arising from AI (October 2024), EU AI Act Articles 9 and 26 where applicable, BCBS 239. Citations and excerpts live in `references/source-anchors.md`.
 argument-hint: "[committee name and meeting date, AI inventory pointer, incident log pointer, vendor exposure pointer, prior pack, or scope statement]"
 ---
 
@@ -77,7 +75,7 @@ The appendices carry the data confidence label (with the BCBS 239 posture for fi
 
 When the engagement scope names a sector, load the matching `references/sector-overlays/<sector>.md`. The overlay's named fields and committee-specific framing land in the pack; treating the overlay as background reading is the failure mode the troubleshooting file calls out.
 
-- Banking covered-bank packs carry the OCC Heightened Standards framing on board AI oversight, SR 11-7 §II governance posture, BCBS 239 data confidence framing on the AI inventory aggregation, and the FRB CCAR governance reporting cadence linkage.
+- Banking covered-bank packs carry the OCC Heightened Standards framing on board AI oversight, the joint interagency model-risk guidance (OCC 2026-13 / FRB SR 26-2 / FDIC FIL-15-2026, April 17 2026, which supersedes SR 11-7 and SR 21-8) for traditional models with the explicit GenAI/agentic scope exclusion noted, BCBS 239 data confidence framing on the AI inventory aggregation, and the FRB CCAR governance reporting cadence linkage.
 - Insurance packs carry the NAIC Model Bulletin AIS Program elements as the spine of the governance maturity section, ORSA cadence linkage, NYDFS January 2024 Insurance Circular Letter framing for NY life-insurance writers, Colorado SB 21-169 framing for CO writers, and the state-DOI inquiry inventory.
 - Capital-markets packs (broker-dealer or investment adviser) carry the SEC Rule 206(4)-7 annual review linkage, the Marketing Rule scope statement on AI-generated client communications, surveillance and execution AI framing, and FINRA AI guidance cross-references.
 - Payments-fintech packs carry sponsor-bank governance reporting alignment, BaaS partner AI exposure, and program-management committee linkage.
@@ -86,9 +84,9 @@ Cross-cutting overlays load on the same pattern. Cyber covers the NYDFS October 
 
 Load only the overlays the engagement scope names. Gold-plating with overlays the engagement does not implicate adds noise without challenge value.
 
-## What's load-bearing and what flexes
+## Quality bar
 
-A handful of things do not flex:
+The pack is only credible when these hold:
 
 - Every material claim cites a source. Unsupported items carry `[evidence needed]` and route to the engagement issue log, not silently into the pack.
 - Evidence is separated from inference. The source-trace appendix shows the seam.
@@ -97,13 +95,16 @@ A handful of things do not flex:
 - Foundation-model and vendor concentration is named, not buried. Top-three concentration ratio is the standing line.
 - Decisions requested entries have options and a recommended motion. "Note the report" is not a decision.
 - Inventory-state count by tier and period-over-period change are reconciled to the inventory of record. Reconciliation status is reported in the data confidence label.
-- The pack is a draft until the AI Governance Lead and the head of model risk attest. The skill does not assert sign-off, distribute, file, or post to the committee folder.
+- No named institutions outside finalised public enforcement actions; examples are anonymised and public-source-derived.
+- The pack is a draft until the AI Governance Lead and the head of model risk attest. The skill does not distribute, file, or post to the committee folder.
 
-Everything else adapts to context. Audience drives tone (committee chair is challenge-shaped; board-level AI section is condensed and decision-loaded; regulator-attended meeting tightens the source trace; annual program review goes deepest on maturity). Depth flexes with firm posture (Heightened Standards bank deeper on governance section; insurer deeper on AIS Program elements; adviser deeper on Rule 206(4)-7 linkage). Sector and cross-cutting overlays load from the engagement scope. Where firm-specific policy, taxonomy, named owners, or threshold values apply, they live in `references/firm-overlay.md` (consumed when present) and never in the pack directly.
+## Adaptation
+
+Audience drives tone (committee chair is challenge-shaped; board-level AI section is condensed and decision-loaded; regulator-attended meeting tightens the source trace; annual program review goes deepest on maturity). Depth flexes with firm posture (Heightened Standards bank deeper on governance section; insurer deeper on AIS Program elements; adviser deeper on Rule 206(4)-7 linkage). Sector and cross-cutting overlays load from the engagement scope. Where firm-specific policy, taxonomy, named owners, or threshold values apply, they live in `references/firm-overlay.md` (consumed when present) and never in the pack directly.
 
 ## Output
 
-Two artifacts: the pack per `templates/default-output.md`, and the structured object per `schemas/board-ai-risk-pack.schema.json`. The reviewer attestation block is filled by the AI Governance Lead and the head of model risk; the pack is distributed only after.
+Default to drafting the pack against `templates/default-output.md`. Render as PowerPoint for the committee meeting (the standard distribution format for a committee pre-read), or Word where the audience expects a memo, or another format the audience asks for. Produce the structured record at `schemas/board-ai-risk-pack.schema.json` when downstream consumers (the enterprise risk committee pack, the regulator response file, the firm's committee-minutes system) need it. The reviewer attestation block is filled by the AI Governance Lead and the head of model risk; the pack is distributed only after.
 
 Downstream consumers: the structured object feeds the firm's committee minutes system and the regulator response file when supervisors ask for the pack as part of an AI-themed examination or supervisory letter response. The enterprise risk committee pack (`risk-reporting/skills/risk-committee-pack`) consumes a brief for the AI heat-map cell and any AI-driven top-risks entry rather than re-anchoring the AI sources. `model-card-builder` outputs feed the in-flight reviews and the model performance trends sections. `ai-risk-tiering` outputs feed the inventory-state counts. `agentic-ai-controls` outputs feed the GenAI program status and the agentic deployments line. Vendor exposure consumes outputs from `third-party-operational-resilience/skills/vendor-diligence` in AI-vendor mode. The schema is the cross-skill contract; additive changes only, never silent renames. Breaking changes ship as a versioned migration with the consumers told in advance.
 

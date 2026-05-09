@@ -24,7 +24,7 @@ The matrix must identify the counterparty's role on each rail and across the pro
 
 ## Money transmission and MSB
 
-- **FinCEN MSB rules at 31 CFR Part 1022** and registration requirements at 31 CFR §1010.380 [verify §]. The agent-of-MSB and Third-Party-Relationship contract has specific content expectations: AML-program responsibilities, monitoring, registration evidence, termination triggers tied to regulatory action.
+- **FinCEN MSB rules at 31 CFR Part 1022** and registration requirements at 31 CFR §1022.380 (initial registration within 180 days; renewal every two years). The agent-of-MSB and Third-Party-Relationship contract has specific content expectations: AML-program responsibilities, monitoring, registration evidence, termination triggers tied to regulatory action. Note: 31 CFR §1010.380 is the separate BOI / Corporate Transparency Act reporting rule, not the MSB-registration cite.
 - **State money-transmission licences**: the contract for a vendor that touches funds-flow may need to reflect per-state licensing posture, consumer-protection bond evidence, and complaint-handling chain.
 
 ## Larger-participant rule

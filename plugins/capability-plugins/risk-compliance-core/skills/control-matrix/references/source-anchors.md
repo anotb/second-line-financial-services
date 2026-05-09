@@ -1,6 +1,6 @@
 # Source anchors: control-matrix
 
-This file holds the named, dated regulatory and professional-standard sources the control-matrix skill anchors to. The SKILL.md file does not restate these citations beyond the activation-tuned description's "Anchored to:" line. Firm-specific anchors belong in `references/firm-overlay.md`.
+This file holds the named, dated regulatory and professional-standard sources the control-matrix skill anchors to. SKILL.md cites this file by path; the named anchors are not restated inline. Firm-specific anchors belong in `references/firm-overlay.md`.
 
 `[verify section]` placeholders mark anchors where the precise section reference still needs verification against the current edition of the source. They are deliberate, not omissions. Phase 2 carries verification load; phase 3 grinds it down. Fabricating a section reference is worse than leaving the placeholder.
 
@@ -34,13 +34,13 @@ What this skill relies on: that model-risk control matrices distinguish developm
 
 Link: https://www.federalreserve.gov/supervisionreg/srletters/sr1107.htm
 
-### OCC Bulletin 2026-13 — Revised Interagency Model Risk Management Guidance (2026)
+### Joint Interagency Revised Guidance on Model Risk Management — OCC Bulletin 2026-13 / FRB SR 26-2 / FDIC FIL-15-2026 (April 17, 2026)
 
-Anchor: §III.A (control environment refresh), §III.B (third-party model controls), AI-system extensions. [verify section labels against the published bulletin.]
+Anchor: Section II (scope and definitions), Section III (control environment, third-party model controls). The April 2026 joint guidance supersedes SR 11-7 (2011) and SR 21-8 (BSA/AML model risk, 2021). Most relevant to banking organizations with total assets over $30 billion; non-binding (does not set forth enforceable standards). Generative AI and agentic AI are explicitly out of scope (footnote 3); the principles cover traditional statistical and quantitative models and non-generative, non-agentic AI models.
 
-What this skill relies on: refreshed control-environment language layered onto SR 11-7, third-party-model control coverage where the model is vendor-developed or vendor-hosted, and AI-system control patterns inside the model-risk frame.
+What this skill relies on: refreshed control-environment language for traditional statistical / quantitative models, third-party-model control coverage where the model is vendor-developed or vendor-hosted, and the developer-validator segregation expectations in the joint guidance. For GenAI, agentic AI, or other AI-system scope outside the bulletin, the matrix anchors on NIST AI RMF 1.0, NIST AI 600-1, ISO/IEC 42001, the EU AI Act, and the firm's AI governance policy rather than this bulletin.
 
-Link: https://www.occ.gov/news-issuances/bulletins/
+Link: https://www.occ.gov/news-issuances/bulletins/2026/bulletin-2026-13.html (parallels: https://www.federalreserve.gov/supervisionreg/srletters/SR2602.htm, https://www.fdic.gov/news/financial-institution-letters/2026/agencies-revise-interagency-model-risk-management-guidance)
 
 ## Information-security and IT controls
 

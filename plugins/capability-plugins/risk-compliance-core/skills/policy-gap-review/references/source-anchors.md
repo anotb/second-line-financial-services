@@ -1,6 +1,6 @@
 # Source anchors: policy-gap-review
 
-This file holds the named, dated regulatory and professional-standard sources the policy-gap-review skill anchors to. The SKILL.md file does not restate these citations beyond the activation-tuned description's "Anchored to:" line. Firm-specific anchors (firm-specific severity ladders, named committee gates, firm-specific role titles, firm-specific section numbering) belong in `references/firm-overlay.md`.
+This file holds the named, dated regulatory and professional-standard sources the policy-gap-review skill anchors to. SKILL.md cites this file by path; the named anchors are not restated inline. Firm-specific anchors (firm-specific severity ladders, named committee sign-offs, firm-specific role titles, firm-specific section numbering) belong in `references/firm-overlay.md`.
 
 `[verify section]` placeholders mark anchors where the precise section reference still needs verification against the current edition of the source. They are deliberate, not omissions. Phase 2 carries verification load; phase 3 grinds it down. Fabricating a section reference is worse than leaving the placeholder.
 
@@ -60,21 +60,19 @@ Link: https://www.bis.org/publ/bcbs239.htm
 
 ## Model-risk policy expectations
 
-### SR 11-7 / OCC Bulletin 2011-12 — Supervisory Guidance on Model Risk Management (Federal Reserve and OCC, April 4, 2011)
+### SR 11-7 / OCC Bulletin 2011-12 — Supervisory Guidance on Model Risk Management (Federal Reserve and OCC, April 4, 2011, superseded April 17, 2026)
 
-Anchor: §VI (governance, policies, and controls). The section sets the policy expectations for the firm's model-risk-management framework: policy approval at the level the firm's framework requires, model inventory expectations, role definitions for development / validation / use, and the segregation expectations. [verify section labels; the interagency text uses Roman-numeral sections.]
-
-What this skill relies on: the SR 11-7 expectation that the MRM policy is itself an examinable artefact, that gaps between policy and SR 11-7 §VI are findings most exam teams will probe, and that the matrix can map MRM-policy sections to §VI requirements row by row.
+Anchor: §VI (governance, policies, and controls). The section set the policy expectations for the firm's model-risk-management framework: policy approval at the level the firm's framework requires, model inventory expectations, role definitions for development / validation / use, and segregation expectations. Superseded by the joint April 2026 guidance below; retained as historical anchor for policies that pre-date the refresh, where the matrix's `outdated` classification fires on policies still anchored only to SR 11-7.
 
 Link: https://www.federalreserve.gov/supervisionreg/srletters/sr1107.htm
 
-### OCC Bulletin 2026-13 — Revised Interagency Model Risk Management Guidance (2026)
+### Joint Interagency Revised Guidance on Model Risk Management — OCC Bulletin 2026-13 / FRB SR 26-2 / FDIC FIL-15-2026 (April 17, 2026)
 
-Anchor: §III.A (control environment refresh), §III.B (third-party model controls), AI-system extensions. [verify section labels against the published bulletin.]
+Anchor: Section II (scope and definitions), Section III (control environment, third-party model controls). The April 2026 joint guidance supersedes SR 11-7 (2011) and SR 21-8 (BSA/AML model risk, 2021). Most relevant to banking organizations with total assets over $30 billion; non-binding (does not set forth enforceable standards). Generative AI and agentic AI are explicitly out of scope (footnote 3): "Generative AI and agentic AI models are novel and rapidly evolving. As such, they are not within the scope of this guidance... However, the principles described in this guidance apply to traditional statistical and quantitative models and non-generative, non-agentic AI models." The bulletin contains zero references to NIST AI RMF, NIST AI 600-1, or any other NIST publication.
 
-What this skill relies on: the AI-system extensions in OCC Bulletin 2026-13 that legacy SR 11-7-anchored policies typically miss (definitions for AI systems vs. statistical models, GenAI-specific governance, agentic-AI control expectations, third-party AI model handling). The matrix's `outdated` classification fires most often on policies anchored only to SR 11-7 with no acknowledgement of the 2026-13 refresh.
+What this skill relies on: the refreshed model-risk policy expectations for traditional statistical and quantitative models and non-generative, non-agentic AI models. The matrix's `outdated` classification fires on MRM policies anchored only to SR 11-7 with no acknowledgement of the 2026-13 refresh, where the policy in scope governs traditional models. For GenAI, agentic AI, or other AI-system policy scope, the matrix benchmarks against NIST AI RMF 1.0, NIST AI 600-1 (Generative AI Profile), ISO/IEC 42001, the EU AI Act, and the firm's own AI governance framework rather than this bulletin; gaps in those AI-policy domains route to a separate workstream.
 
-Link: https://www.occ.gov/news-issuances/bulletins/
+Link: https://www.occ.gov/news-issuances/bulletins/2026/bulletin-2026-13.html (parallels: https://www.federalreserve.gov/supervisionreg/srletters/SR2602.htm, https://www.fdic.gov/news/financial-institution-letters/2026/agencies-revise-interagency-model-risk-management-guidance)
 
 ## Third-party-risk policy expectations
 

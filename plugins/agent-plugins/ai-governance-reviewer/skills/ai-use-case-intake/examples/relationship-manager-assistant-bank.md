@@ -1,6 +1,6 @@
 # Example: intake for a foundation-model-based RM assistant at a regional bank
 
-Public-source-derived. No named institution. Patterns drawn from NIST AI 600-1 Generative AI Profile (Govern 1.6, Map 1.1), public model and system card precedents from frontier labs as a documentation form factor, and the SR 11-7 / OCC Bulletin 2026-13 model definition and inventory framing.
+Public-source-derived. No named institution. Patterns drawn from NIST AI 600-1 Generative AI Profile (Govern 1.6, Map 1.1), public model and system card precedents from frontier labs as a documentation form factor, and the joint interagency Revised Guidance on Model Risk Management (OCC 2026-13 / FRB SR 26-2 / FDIC FIL-15-2026; supersedes SR 11-7) for traditional-model inventory framing, with the bulletin's GenAI/agentic scope exclusion (footnote 3) noted.
 
 ## Input description
 
@@ -44,7 +44,7 @@ The assistant produces structured client-meeting prep notes from internal CRM no
 |---|---|---|
 | Customer impact | Low | Internal-use only; RM is the user and the editor; no customer-binding decision |
 | Financial impact | Low | Productivity tool; no balance-sheet, capital, or fee impact |
-| Regulatory impact | Medium | SR 11-7 / OCC 2026-13 inventory entry required; GLBA Safeguards reach via CRM data; NYDFS Part 500 reach for NY-footprint commercial portfolio |
+| Regulatory impact | Medium | Firm AI inventory entry under joint interagency Revised Guidance for traditional components and NIST AI RMF Govern for the GenAI use case (the 2026 bulletin excludes GenAI per footnote 3); GLBA Safeguards reach via CRM data; NYDFS Part 500 reach for NY-footprint commercial portfolio |
 | Operational impact | Low | Failure of the assistant degrades RM productivity but does not break a critical process |
 
 ### 5. Autonomy level
@@ -128,7 +128,7 @@ The assistant produces structured client-meeting prep notes from internal CRM no
 
 - Sector overlay applied: banking
 - Cross-cutting overlays applied: cyber, privacy
-- Overlay-specific notes: banking overlay flags SR 11-7 / OCC 2026-13 inventory and CFPB authority on consumer-NPI handling; cyber overlay flags NYDFS Part 500 covered-entity status and the foundation-model supply-chain surface; privacy overlay flags GLBA Safeguards reach and the field-level NPI tagging requirement on the CRM corpus.
+- Overlay-specific notes: banking overlay flags the firm AI inventory entry under the joint interagency Revised Guidance for traditional components and NIST AI RMF for the GenAI use case (the bulletin excludes GenAI per footnote 3), plus CFPB authority on consumer-NPI handling; cyber overlay flags NYDFS Part 500 covered-entity status and the foundation-model supply-chain surface; privacy overlay flags GLBA Safeguards reach and the field-level NPI tagging requirement on the CRM corpus.
 
 ### 15. AI Act overlap
 

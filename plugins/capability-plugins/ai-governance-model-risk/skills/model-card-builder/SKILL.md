@@ -13,8 +13,6 @@ description: |
   - The use case has not been intaked yet (use ai-use-case-intake first).
   - Validation testing has not run and there are no performance results to summarise (use validation-plan; the card consumes its outputs).
   - The artifact required is the EU AI Act Annex IV technical documentation. That is the provider-side file; the firm-side card sits alongside it. Use ai-act-triage to scope Annex IV deltas.
-
-  Anchored to: SR 11-7, OCC Bulletin 2026-13, NIST AI RMF, NIST AI 600-1 (Generative AI Profile), ISO/IEC 42001, EU AI Act Article 11 and Annex IV. Citations and excerpts live in `references/source-anchors.md`.
 argument-hint: "[use-case ID, intake record, validation report, monitoring evidence, vendor system card, or scope statement]"
 ---
 
@@ -24,7 +22,7 @@ A model card is the firm-side governance artifact for an AI or model use case: i
 
 The card serves both lenses. A 1.5-line model owner uses the skill to consolidate the work as it stands today; a 2-line reviewer uses the same skill to challenge what was drafted. The seam between the two is the source-trace block and the sign-off questions.
 
-The card is a draft until a human reviewer attests. Sign-off is the gate; this skill stops short.
+The card is a draft until a human reviewer attests. The skill stops short of filing or approving it.
 
 ## Ask first
 
@@ -65,7 +63,7 @@ Tier drives depth, so consume the tier output before deciding how much weight an
 
 **Change management** lists the re-validation triggers: feature change, training-window shift, performance breach for N consecutive periods. For GenAI: foundation-model swap, RAG corpus scope change, tool addition, autonomy-level change. The card is a living document; foundation-model version monitoring is not optional once a vendor LLM is in the loop.
 
-**Sign-off questions** are tagged to sections, answerable from the card itself, and specific to this card. "Is this fit for purpose" applies to every card and challenges nothing. "The agent-review gate is the only preventive control between the assistant output and the customer; what is the off-switch criterion if agent-edit rate falls below threshold for two consecutive months" applies to one card and one model.
+**Sign-off questions** are tagged to sections, answerable from the card itself, and specific to this card. "Is this fit for purpose" applies to every card and challenges nothing. "The agent review of assistant output is the only preventive control between the model and the customer; what is the off-switch criterion if agent-edit rate falls below threshold for two consecutive months" applies to one card and one model.
 
 **Source trace and confidence** records every material claim, its source, the evidence pointer, and a confidence label. Vendor system cards and vendor evaluations carry vendor-self-attestation confidence (typically low to medium); firm-independent evaluation carries higher confidence. Do not collapse vendor and firm evidence into one line. Items without evidence carry `[evidence needed]` and route to the engagement issue log.
 
@@ -88,23 +86,26 @@ When the engagement scope names a sector (banking, insurance, capital markets, p
 
 Load only the overlays the engagement scope names. Gold-plating a card with overlays the engagement does not implicate adds noise without challenge value.
 
-## What's load-bearing and what flexes
+## Quality bar
 
-A handful of things do not flex:
+The card is only credible when these hold:
 
 - Every material claim cites a source. Unsupported items carry `[evidence needed]` and go to the engagement issue log, not silently into the card.
 - Evidence is separated from inference. Vendor self-attestation is not the same line as firm-independent evaluation.
 - No fabricated regulatory facts. Unknown section references carry `[verify section]` in the source-anchors file (not in the card body).
 - The GenAI overlay fires when triggered. No skipping it on a card that has a foundation model, a RAG corpus, or tool use.
-- The card is a draft until the human reviewer attests. The skill does not assert sign-off, file the card, post to the inventory of record, or respond to a regulator request.
+- No named institutions outside finalised public enforcement actions; examples are anonymised and public-source-derived.
+- The card is a draft until the human reviewer attests. The skill does not file, sign off, post to the inventory of record, or respond to a regulator request.
 
-Everything else adapts to context. Tier drives depth. Lifecycle stage drives which sections lean heavy. Audience drives tone (working group is plain, committee is structured, examiner response is formal, board is distilled). Persona drives the review-gate machinery. Sector and cross-cutting overlays are loaded from the engagement scope. Where firm-specific policy or taxonomy applies, it lives in `references/firm-overlay.md` (consumed when present) and never in the card directly.
+## Adaptation
+
+Tier drives depth. Lifecycle stage drives which sections lean heavy. Audience drives tone (working group is plain, committee is structured, examiner response is formal, board is distilled). Persona sets the review path and the named decision owners. Sector and cross-cutting overlays load from the engagement scope. Source posture sets what the card can assert at high confidence and what carries `[evidence needed]`. Where firm-specific policy or taxonomy applies, it lives in `references/firm-overlay.md` (consumed when present) and never in the card directly.
 
 ## Output
 
-Two artifacts: the card per `templates/default-output.md`, and the structured object per `schemas/model-card.schema.json`. The reviewer attestation block is filled by the human reviewer; the card is filed only after.
+Default to drafting the card against `templates/default-output.md`. Render as Word, Markdown, or another format as the audience asks for it; a model risk committee usually wants a Word memo, an inventory-of-record extract is a structured object, an examiner response is often Word with the source-trace block in a tidy table. Produce the structured record at `schemas/model-card.schema.json` when downstream automation, the model inventory of record, or a registered consumer needs it. The reviewer attestation block is filled by the human reviewer; the card is filed only after.
 
-Downstream consumers: `board-ai-risk-pack` pulls metadata, tier, intended use, performance and limitations summary, and material sign-off questions. `validation-plan` pulls architecture and data sections to scope validation work. The `ai-governance-reviewer` agent pulls the structured object for second-line challenge. The model inventory of record pulls the structured object for the central registry. The card itself is what an examiner is handed. The schema is the input contract for those consumers; additive changes only, never silent renames. Breaking changes ship as a versioned migration with the consumers told in advance.
+Downstream consumers: `board-ai-risk-pack` pulls metadata, tier, intended use, performance and limitations summary, and material sign-off questions. `validation-plan` pulls architecture and data sections to scope validation work. The `ai-governance-reviewer` agent pulls the structured object for second-line challenge. The model inventory of record pulls the structured object for the central registry. The card itself is what an examiner is handed. The schema is the input contract for those consumers; additive changes only, never silent renames. Breaking changes ship as a versioned migration with the consumers given notice.
 
 ## Pointers
 

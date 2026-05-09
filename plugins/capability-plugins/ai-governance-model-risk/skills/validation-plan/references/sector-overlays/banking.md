@@ -8,11 +8,11 @@ Cited and section-referenced anchors live in `references/source-anchors.md`.
 
 ## What changes for banking validation plans
 
-### 1. SR 11-7 is the binding frame; OCC Bulletin 2026-13 refreshes it
+### 1. The joint interagency revised guidance is the current binding frame
 
-For federally regulated banks, SR 11-7 §IV (model validation) is binding, refreshed by OCC Bulletin 2026-13 and parallel FRB/FDIC issuances. The plan's three-pillar structure (conceptual soundness, ongoing monitoring, outcomes analysis) is the SR 11-7 §IV structure; the plan does not invent an alternative.
+For federally regulated banks, the binding frame is the joint interagency Revised Guidance on Model Risk Management (OCC 2026-13 / FRB SR 26-2 / FDIC FIL-15-2026, April 17 2026; supersedes SR 11-7 and SR 21-8). The three-pillar structure (conceptual soundness, ongoing monitoring, outcomes analysis) carries forward from SR 11-7 §IV; the plan does not invent an alternative. The bulletin expressly excludes generative AI and agentic AI from its scope (footnote 3); for GenAI use cases the plan's GenAI-overlay validation scope anchors to NIST AI 600-1, ISO/IEC 42001, EU AI Act Article 9 and Article 15 where applicable, and the cyber overlay rather than the bulletin.
 
-For non-bank entities under the same parent (e.g., a sister broker-dealer or asset manager subsidiary), SR 11-7 reaches by extension only when the bank inherits model risk through transactions, services, or balance-sheet exposure. Plan-writer should not over-claim SR 11-7 reach to non-bank entities; the substantive validation expectations are similar but the regulator constellation differs.
+For non-bank entities under the same parent (e.g., a sister broker-dealer or asset manager subsidiary), the bulletin reaches by extension only when the bank inherits model risk through transactions, services, or balance-sheet exposure. Plan-writer should not over-claim reach to non-bank entities; the substantive validation expectations are similar but the regulator constellation differs.
 
 ### 2. OCC Heightened Standards (12 CFR Part 30 Appendix D) — independence demand on tier-1
 

@@ -12,8 +12,6 @@ description: |
   - The use case has not been intaked yet. Route to `ai-use-case-intake` first; the tier decision is decided against an intake record version.
   - The question is whether the use case is high-risk under the EU AI Act specifically. Route to `ai-act-triage`; the AI Act has a regulation-driven classification, not a firm-defined rubric. This skill flags Annex III overlap as a routing trigger, not a determination.
   - The question is the validation plan itself. Route to `validation-plan`; this skill sets the depth, the next skill scopes the work.
-
-  Anchored to: SR 11-7, OCC Bulletin 2026-13, NIST AI RMF, NIST AI 600-1 (Generative AI Profile), ISO/IEC 42001, EU AI Act.
 argument-hint: "[use-case ID, intake record, engagement-scope record, or scenario]"
 ---
 
@@ -23,7 +21,7 @@ The tier is the load-bearing decision in model risk. Validation depth, monitorin
 
 This skill produces a tier (tier-1, tier-2, tier-3, tier-4) with reasoning that an AI risk committee secretary or a model risk lead reads and an examiner can challenge. The output is short on purpose. Tiering is judgment, not artifact-padding; the spine is the named factors, the regulator constellation, and the dissent record where the second line disagreed with the sponsor.
 
-The tier is a draft until the named decider attests. Sign-off is the gate; this skill stops short.
+The tier is a draft until the named decider attests. The skill stops short of filing the decision.
 
 ## Ask first
 
@@ -78,7 +76,7 @@ Tier drives the gates. The default mapping is the firm's to set; the skill carri
 | tier-3 | targeted | semi-annual | model risk team |
 | tier-4 | light-touch or monitor-only | annual | model owner with second-line concurrence |
 
-Each gate carries an owner (a function, never a named individual), a frequency, and a stop condition. A gate without a stop condition is a meeting, not a control.
+Each decision checkpoint carries an owner (a function, never a named individual), a frequency, and a stop condition. A decision checkpoint without a stop condition is a meeting, not a control.
 
 Re-tiering triggers are named events with monitoring owners. Dates do not earn a row; "annual review" is a refresh cadence, not a re-tiering trigger. Autonomy-level change, customer-base expansion, scope expansion, vendor swap, RAG corpus scope change, data-sensitivity expansion, regulatory change, performance breach for N consecutive periods, supervisory-letter event ... each names what to watch and who watches.
 
@@ -88,23 +86,26 @@ When the engagement scope names a sector, load the matching `references/sector-o
 
 Load only the overlays the engagement scope names. Gold-plating a tier with overlays the engagement does not implicate adds noise without challenge value.
 
-## What's load-bearing and what flexes
+## Quality bar
 
-A handful of things do not flex:
+The tier decision is only credible when these hold:
 
 - Every named factor is scored or marked `n/a` with a reason. An empty factor or an unjustified `n/a` is a defect.
-- Tier-1 is reserved. Tier-1 for everything customer-facing makes tier-1 meaningless. Reserve tier-1 for customer-binding decisions, material financial exposure, or named appetite-statement reach; require justification against a named threshold.
+- Tier-1 is reserved. Tier-1 for everything customer-facing makes tier-1 meaningless. Reserve tier-1 for customer-binding decisions, material financial exposure, or named appetite-statement reach; the rationale points at a named threshold.
 - The GenAI factor block fires when triggered. Skipping it on a use case with a foundation model, RAG corpus, or tool use is the failure mode a second-line reviewer flags first.
 - Dissent is recorded when the tier disagrees with the sponsor. The dissent field names the reviewer role, the position, and the basis. At tier-1 and tier-2, the AI risk committee secretary signs the dissent line; at tier-3 and tier-4, the second-line reviewer signs.
 - Re-tiering triggers carry events and owners, not just dates. The use case grows beyond its tier between annual reviews; the trigger is what catches it.
 - AI Act overlap is flagged and routed, not classified. The formal call belongs to `ai-act-triage`.
+- No named institutions outside finalised public enforcement actions; examples are anonymised and public-source-derived.
 - The tier is a draft until the decider attests. The skill does not file the tier, post to the inventory, route to validation, or schedule committee.
 
-Everything else adapts to context. Tier names and cutoffs are firm policy. Lifecycle stage drives which evidence weighs heaviest. Source posture sets what the tier can assert at high confidence and what carries `[evidence needed]`. Where firm-specific policy or taxonomy applies, it lives in `references/firm-overlay.md` (consumed when present) and never in the tier record directly.
+## Adaptation
+
+Tier names and cutoffs are firm policy. Lifecycle stage drives which evidence weighs heaviest. Source posture sets what the tier can assert at high confidence and what carries `[evidence needed]`. Where firm-specific policy or taxonomy applies, it lives in `references/firm-overlay.md` (consumed when present) and never in the tier record directly.
 
 ## Output
 
-Two artifacts: the tier record per `templates/default-output.md`, and the structured object per `schemas/risk-tier.schema.json`. The decider attestation block is filled by the named decider; the record is filed only after.
+Default to drafting the tier record against `templates/default-output.md`. Render as Word for committee review or another format the audience asks for. Produce the structured record at `schemas/risk-tier.schema.json` when downstream skills (`model-card-builder`, `validation-plan`, `agentic-ai-controls`, `genai-pre-prod-review`, `board-ai-risk-pack`, `ai-act-triage`) need it. The decider attestation block is filled by the named decider; the record is filed only after.
 
 Downstream consumers: `model-card-builder` pulls the tier and overlay flags to set card depth and section weights. `validation-plan` pulls the tier, validation depth, and factor justifications to scope conceptual-soundness, data-quality, benchmarking, outcomes-analysis, and monitoring work. `agentic-ai-controls` pulls the tier and the autonomy-level factor to scope tool-boundary controls and human-in-the-loop machinery. `genai-pre-prod-review` pulls the tier and GenAI-specific factor to scope the gate. `board-ai-risk-pack` pulls the tier distribution across the inventory. `ai-act-triage` consumes the AI Act overlap flag for the formal classification. The schema is the input contract for those consumers; additive changes only, never silent renames. Breaking changes ship as a versioned migration with the consumers told in advance.
 

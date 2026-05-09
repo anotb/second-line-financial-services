@@ -2,7 +2,7 @@
 
 Cited sources this skill anchors to. Each entry names the source, the section reference (or `[verify section]` flag), a one-paragraph excerpt or paraphrase of the relevant content, and the link. The skill cites these by file path; SKILL.md does not restate excerpts.
 
-A practitioner note before the list: prompt injection sits across two regulator perspectives. The cyber framings (NYDFS, SEC cyber disclosure, FFIEC) carry binding supervisory expectation in their respective scopes. The AI-specific framings (NIST AI 600-1, OWASP LLM Top 10, MITRE ATLAS, NCSC AI guidance) are leading-practice references; they are not, in themselves, binding regulation. The model-risk framing (SR 11-7, OCC 2026-13) applies to GenAI as model-risk extension where the bank's own model risk program treats the GenAI use case as in scope. Be explicit about which regulator scope is in play in any individual review.
+A practitioner note before the list: prompt injection sits across two regulator perspectives. The cyber framings (NYDFS, SEC cyber disclosure, FFIEC) carry binding supervisory expectation in their respective scopes. The AI-specific framings (NIST AI 600-1, OWASP LLM Top 10, MITRE ATLAS, NCSC AI guidance) are leading-practice references; they are not, in themselves, binding regulation. The bank model-risk framing (the joint interagency Revised Guidance, OCC 2026-13 / FRB SR 26-2 / FDIC FIL-15-2026 issued April 2026) expressly excludes generative AI from its scope (footnote 3); where the firm's model risk programme treats the GenAI use case as a model by analogy, the principles inform but the binding hook is firm policy, not the bulletin. Be explicit about which regulator scope is in play in any individual review.
 
 ## Primary anchors
 
@@ -41,19 +41,19 @@ A practitioner note before the list: prompt injection sits across two regulator 
 - Link: https://www.ncsc.gov.uk/collection/guidelines-secure-ai-system-development — NCSC and CISA joint guidelines (November 2023) [verify exact section reference for prompt-injection guidance]
 - Notes: Industry-practice reference. The guidelines are not binding; they carry weight because they are signed by US, UK, EU, and Asia-Pacific cybersecurity agencies and represent a converged international view.
 
-### 6. Federal Reserve SR 11-7 / OCC Bulletin 2011-12 — Model Risk Management (applied to GenAI)
+### 6. Federal Reserve SR 11-7 / OCC Bulletin 2011-12 — Model Risk Management (superseded; cited for historical framing only)
 
 - Citation: Board of Governors of the Federal Reserve System, SR 11-7 / OCC Bulletin 2011-12, "Guidance on Model Risk Management" (April 4, 2011), §IV "Model Validation" and §V "Model Documentation".
-- Excerpt-paraphrase: Where the firm's model risk program treats a GenAI use case as a model in scope of SR 11-7, the validation expectations apply: independent review, conceptual soundness, ongoing monitoring, and outcomes analysis. The prompt-injection review is the model-risk-side surfacing of the adversarial robustness component of validation. SR 11-7 does not name prompt injection by term; the connection is made by interpreting the validation expectations against the GenAI threat surface.
+- Excerpt-paraphrase: SR 11-7 set the framework for bank model-risk management for over a decade and remains the conceptual reference firms point at when treating a GenAI system as a model by analogy. SR 11-7 does not name prompt injection by term. As of April 17, 2026 it is superseded by the joint interagency Revised Guidance on Model Risk Management (anchor 7) for federally regulated banks; SR 21-8 is also superseded.
 - Link: https://www.federalreserve.gov/supervisionreg/srletters/sr1107.htm — §IV Model Validation
-- Notes: Binding on federally regulated banks. The applicability of SR 11-7 to GenAI is a firm-by-firm interpretation; many firms now treat in-scope GenAI use cases as models for the purposes of the model risk program. The 2026 interagency revision (OCC Bulletin 2026-13, see anchor 7) refreshes this for AI/ML and GenAI explicitly.
+- Notes: Superseded for binding purposes by OCC 2026-13 / FRB SR 26-2 / FDIC FIL-15-2026 as of April 17 2026.
 
-### 7. OCC Bulletin 2026-13 — Revised Interagency Model Risk Management Guidance
+### 7. Joint Interagency Revised Guidance on Model Risk Management — OCC 2026-13 / FRB SR 26-2 / FDIC FIL-15-2026
 
-- Citation: OCC Bulletin 2026-13, "Revised Interagency Guidance on Model Risk Management" (issued 2026 by OCC; FDIC and Federal Reserve parallel issuances expected) [verify section on adversarial robustness and AI/ML scope].
-- Excerpt-paraphrase: The revised guidance refreshes SR 11-7 documentation and validation expectations to incorporate AI/ML and generative-AI use cases, including foundation-model dependence, retrieval-augmented generation, tool use, and agentic configurations. Adversarial robustness (including prompt injection for GenAI) sits within the validation expectations.
-- Link: https://www.occ.gov/news-issuances/bulletins/2026/bulletin-2026-13.html — Bulletin 2026-13 [verify section]
-- Notes: Confirm published bulletin section numbering at SKILL.md write time. Until verified, the SKILL.md and review memo do not over-claim binding language on adversarial robustness from this bulletin.
+- Citation: Joint Interagency Revised Guidance on Model Risk Management, OCC Bulletin 2026-13 / FRB SR 26-2 / FDIC FIL-15-2026, dated April 17, 2026. The three issuances are the same joint document; supersedes SR 11-7 (2011) and SR 21-8 (2021).
+- Excerpt-paraphrase (footnote 3, verbatim): "Generative AI and agentic AI models are novel and rapidly evolving. As such, they are not within the scope of this guidance. ... However, the principles described in this guidance apply to traditional statistical and quantitative models and non-generative, non-agentic AI models." Most relevant to banking organizations with over $30 billion in total assets; non-binding.
+- Link: https://occ.gov/news-issuances/bulletins/2026/bulletin-2026-13a.pdf — guidance text PDF
+- Notes: Prompt injection is a generative-AI threat class and is not within this bulletin's scope. For the binding cyber framing of prompt injection, see NYDFS Part 500, the NYDFS October 2024 Industry Letter, the SEC cyber-disclosure rules, and the 36-hour banking computer-security incident notification rule. For the AI-specific practitioner framing, see NIST AI 600-1, OWASP LLM Top 10, MITRE ATLAS, and the NCSC/CISA secure-AI guidelines.
 
 ### 8. SEC Cybersecurity Disclosure Rules — 8-K Item 1.05 and Reg S-K Item 106
 
@@ -129,8 +129,7 @@ The following items carry `[verify section]` or `[verify ...]` flags and must be
 - OWASP Top 10 for LLM Applications — confirm current edition (v1.1 vs v2.0 etc.) at write time.
 - MITRE ATLAS — confirm exact technique IDs for the prompt-injection-relevant entries.
 - NCSC Guidelines for Secure AI System Development — confirm exact section reference for the prompt-injection guidance.
-- OCC Bulletin 2026-13 — confirm published section numbering on adversarial robustness and AI/ML scope.
-- FDIC and Federal Reserve parallel issuances to OCC Bulletin 2026-13 — confirm number and section.
+- OCC 2026-13 / FRB SR 26-2 / FDIC FIL-15-2026 — verbatim GenAI scope exclusion confirmed against the OCC PDF (footnote 3). The three issuances are the same joint document, not parallels. Prompt injection (a generative-AI threat class) is not within this bulletin's scope.
 - ISO/IEC 42001:2023 — confirm Annex A control IDs relevant to the prompt-injection mitigation set.
 - FFIEC IT Examination Handbook — confirm section reference for AI-system-specific guidance where it exists.
 

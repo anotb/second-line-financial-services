@@ -14,8 +14,6 @@ description: |
   - The work is the full diligence pack rather than the contract layer (use `vendor-diligence`).
   - The work is exit and termination logistics rather than clause coverage (use `exit-plan`).
   - The work is portfolio-level concentration across many contracts (use `concentration-risk-review`).
-
-  Anchored to: U.S. interagency third-party risk-management guidance (June 2023) contract-negotiation section, the predecessor U.S. banking bulletin, the U.S. federal financial-institutions IT examination handbook outsourcing booklet, the EU digital-operational-resilience-act key-contractual-provisions article, the European banking authority outsourcing-arrangements guidelines, the New York State financial-services third-party-security regulation, the U.S. financial-institutions cloud joint statement, the U.S. statutory examiner-access right over bank service providers, the U.S. consumer-financial-information safeguards rule service-provider clause, and the U.S. health-information business-associate-agreement frame. Citations and excerpts live in `references/source-anchors.md`.
 argument-hint: "[contract or MSA: vendor name, criticality tier, sector, AI-vendor flag]"
 ---
 
@@ -32,7 +30,7 @@ Before drafting, get plain answers to four things. Most engagements answer them 
 - **What tier is the arrangement.** Sourced from `criticality-assessment`. Do not re-set it here. Tier drives clause depth and which mandatory-clause overlay loads. A non-critical arrangement gets a lighter pass on operational-resilience and exit clauses; a critical arrangement gets the full set with reviewer questions clustered for the forum that decides.
 - **Is the arrangement in scope of the EU digital-operational-resilience act as a critical-or-important-function ICT service.** Treat as a boolean. The mandatory-clause overlay is a real branch, not a side-note: when on, the gap matrix surfaces the enhanced clause set (termination triggers tied to supervisory recommendation, full description of services, locations of data processing, sub-outsourcing notification timing, exit-strategy and transitional support, audit-and-access for the firm and the competent authority).
 - **What is the firm's regulatory profile.** Institution type and primary regulators determine which sector overlay loads. Banking is not insurance is not capital markets is not payments-fintech. A dual-registrant or a sponsor-bank-program contract may need two sector overlays; flag the choice.
-- **What is the review type.** Pre-signature, renewal, assignment or change-of-control, material amendment, exit-triggered re-review, post-incident re-review, regulatory-change-driven re-review. Each has a different evidence-ask and review-gate set.
+- **What is the review type.** Pre-signature, renewal, assignment or change-of-control, material amendment, exit-triggered re-review, post-incident re-review, regulatory-change-driven re-review. Each carries a different evidence-ask and a different decision-forum context.
 
 When `engagement-scope` is supplied, the skill consumes it (institution type, sector overlay set, cross-cutting overlay set, persona, source posture). When it is not supplied, ask the four questions and default to public posture if the practitioner declines. Note in the artifact that scope was not formalised; do not silently apply a default sector overlay.
 
@@ -56,18 +54,20 @@ The matrix closes with the legal-review triggers, the open questions for the con
 
 The skill is downstream of `criticality-assessment` (consumes the tier) and `vendor-diligence` (the diligence pack's `contract_gap_summary` carries a one-paragraph headline plus a pointer to the record produced here). It chains upstream to `exit-plan` (the termination, exit, and transitional-support clauses produced here are read by the exit-plan workflow) and to `dora-register-builder` (the mandatory-clause coverage flags feed the register entries where the arrangement is in scope). Where the diligence pack is being built in parallel, the contract record's `contract_gap_record_id` is the link the diligence pack writes back into `contract_gap_summary`.
 
-## What's load-bearing and what flexes
+## Quality bar
 
-Load-bearing across every gap matrix: every material clause finding cites a source from `references/source-anchors.md` (or a loaded overlay) by path; unsupported findings are marked `[evidence needed]`; section references that cannot be confirmed get `[verify section]` rather than fabricated; source criterion, contract excerpt, generated inference, and open legal question stay distinguishable in the matrix; no named institutions appear in narrative unless they are public defendants in a finalised enforcement action with a published consent order; the skill stops at the gap matrix and the legal-review triggers. Counsel drafts language; the approver decides.
+Holds across every gap matrix regardless of contract type, audience, or render format. Every material clause finding cites a source from `references/source-anchors.md` (or a loaded overlay) by path. Unsupported findings are marked `[evidence needed]`. Section references that cannot be confirmed get `[verify section]` rather than fabricated. Source criterion, contract excerpt, generated inference, and open legal question stay distinguishable in the matrix. No named institutions in narrative unless they are public defendants in a finalised enforcement action with a published consent order. The skill stops at the gap matrix and the legal-review triggers. Counsel drafts language; the approver decides. RFP narrative is not evidence, anywhere.
 
-Flexes to the engagement: matrix depth and length scale to criticality and review type. Audience drives shape. A TPRM-forum matrix reads short and operational. A risk-committee matrix for a critical vendor reads longer with reviewer questions clustered for the forum. A general-counsel-facing matrix reads as a redline-readiness brief. The sector overlay set drives which `references/sector-overlays/<sector>.md` is loaded; a dual-registrant or sponsor-bank-program arrangement may load two. Cross-cutting overlay loading follows engagement-scope plus the rule that cyber and privacy default-on for AI vendors and for any contract touching NPI, PHI, PCI, or important-business-service controls. The mandatory-clause overlay loads only when the digital-operational-resilience-act in-scope flag is true.
+## Adaptation
+
+Flexes by engagement. Matrix depth and length scale to criticality and review type. Audience drives shape: a TPRM-forum matrix reads short and operational; a risk-committee matrix for a critical vendor reads longer with reviewer questions clustered for the forum; a general-counsel-facing matrix reads as a redline-readiness brief. The sector overlay set drives which `references/sector-overlays/<sector>.md` is loaded; a dual-registrant or sponsor-bank-program arrangement may load two. Cross-cutting overlay loading follows engagement-scope plus the rule that cyber and privacy default-on for AI vendors and for any contract touching NPI, PHI, PCI, or important-business-service controls. The mandatory-clause overlay loads only when the digital-operational-resilience-act in-scope flag is true. Render format (Word, Excel, PowerPoint, Markdown) follows the workflow.
 
 ## Pointers
 
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
 - `references/sector-overlays/banking.md`, `insurance.md`, `capital-markets.md`, `payments-fintech.md` — sector-specific clause expectations loaded per engagement-scope.
 - `references/cross-cutting/cyber.md`, `privacy.md` — cross-cutting clause clusters; default-on for AI vendors and for any contract touching regulated data or IBS controls.
-- `references/firm-overlay.md` — firm-installed contract policy, paper standards, named legal-review gates beyond the regulatory baseline; consumed when present.
+- `references/firm-overlay.md` — firm-installed contract policy, paper standards, named legal-review forums beyond the regulatory baseline; consumed when present.
 - `templates/default-output.md` — gap matrix template.
 - `schemas/contract-gap-review.schema.json` — structured-output contract for downstream consumption.
 - `examples/` — cloud IaaS contract for a regional U.S. bank; digital-operational-resilience-act-in-scope SaaS contract for an EU subsidiary's collections platform.
@@ -77,4 +77,8 @@ The plugin-level shared references (`references/source-map.md`, `references/poli
 
 ## Output
 
-The skill emits a contract gap matrix in `templates/default-output.md` shape and a structured record conforming to `schemas/contract-gap-review.schema.json`. Downstream consumers: `vendor-diligence` reads the record summary into `contract_gap_summary` and `contract_gap_record_id`; `exit-plan` reads the termination, transitional-support, and data-return clause findings; `dora-register-builder` reads the mandatory-clause coverage flags for the ICT-third-party register entries where the act applies; `concentration-risk-review` reads the sub-contracting and change-of-control findings where the portfolio analysis needs them. The schema is the cross-skill contract; additive changes only. Add fields, do not rename or repurpose them. A breaking change is a versioned migration with the downstream skills told in advance.
+The deliverable is the contract gap matrix. Default to drafting against `templates/default-output.md`. Render as Word, Excel, PowerPoint, or Markdown when the audience or workflow asks for it (a redline-readiness brief for counsel may want Word; a clause-by-clause portfolio cut may want a workbook; a critical-vendor risk-committee read may want a deck). Produce the structured record at `schemas/contract-gap-review.schema.json` when downstream automation or a registered consumer needs it.
+
+Downstream consumers: `vendor-diligence` reads the record summary into `contract_gap_summary` and `contract_gap_record_id`; `exit-plan` reads the termination, transitional-support, and data-return clause findings; `dora-register-builder` reads the mandatory-clause coverage flags for the ICT-third-party register entries where the act applies; `concentration-risk-review` reads the sub-contracting and change-of-control findings where the portfolio analysis needs them.
+
+When the structured record is produced, treat the schema as a downstream contract: additive changes only. Add fields, do not rename or repurpose them. A breaking change is a versioned migration with the downstream skills told in advance.

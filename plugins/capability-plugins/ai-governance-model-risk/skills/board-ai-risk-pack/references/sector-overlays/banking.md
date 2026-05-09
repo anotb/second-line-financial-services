@@ -4,7 +4,7 @@ Loaded when the engagement scope names banking. The overlay carries content that
 
 ## Framing
 
-The pack at a banking holding company aligns to the board's standing oversight of the risk-governance framework. For OCC Heightened Standards covered banks, the AI risk committee (or the AI section of the board risk committee) sits inside that framework. The pack carries the SR 11-7 §II and §III governance posture for AI/ML use cases in scope of model risk, the OCC Bulletin 2026-13 refresh where final, and BCBS 239 data confidence framing on the AI inventory aggregation where the firm is a G-SIB or D-SIB.
+The pack at a banking holding company aligns to the board's standing oversight of the risk-governance framework. For OCC Heightened Standards covered banks, the AI risk committee (or the AI section of the board risk committee) sits inside that framework. The pack carries the joint interagency Revised Guidance on Model Risk Management (OCC 2026-13 / FRB SR 26-2 / FDIC FIL-15-2026, April 17 2026; supersedes SR 11-7 and SR 21-8) for traditional models in scope, with the GenAI/agentic scope exclusion (footnote 3) noted. For GenAI and agentic use cases the substantive anchor is NIST AI RMF and ISO/IEC 42001. BCBS 239 data confidence framing applies to the AI inventory aggregation where the firm is a G-SIB or D-SIB.
 
 Standalone AI risk committees are common at the larger bank holding companies; mid-cap regionals more often run AI as a section of the board risk committee. The pack's depth and the cadence flex accordingly.
 

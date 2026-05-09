@@ -1,7 +1,7 @@
 ---
 name: cdd-risk-review
 description: |
-  Quality-reviews a customer due diligence file (new account, periodic refresh, or event-driven refresh) against the four CDD pillars and named CDD examination expectations. Reads customer identification, beneficial ownership identification and verification, the nature-and-purpose / expected-activity profile, the customer risk rating and its drivers, and the ongoing-monitoring trigger set; produces a second-line review memo with material gaps, evidence-needed items, EDD-trigger posture, and recommended human-review gates. Does not approve onboarding, set or change the customer risk rating, file a SAR, or close or exit the relationship.
+  Quality-reviews a customer due diligence file (new account, periodic refresh, or event-driven refresh) against the four CDD pillars and named CDD examination expectations. Reads customer identification, beneficial ownership identification and verification, the nature-and-purpose / expected-activity profile, the customer risk rating and its drivers, and the ongoing-monitoring trigger set; produces a second-line review memo with material gaps, evidence-needed items, EDD-trigger posture, and recommended decision checkpoints with named owners. Does not approve onboarding, set or change the customer risk rating, file a SAR, or close or exit the relationship.
 
   Best for:
   - Second-line QA over a sample of new-account CDD files at a bank, broker-dealer, MSB, fintech (sponsor-bank or licensed), or covered-product life insurer.
@@ -14,8 +14,6 @@ description: |
   - The work is sanctions screening match disposition rather than customer due diligence; use `sanctions-screening-qa`.
   - The work is alert-disposition or SAR-decision QA rather than the underlying CDD posture; use `sar-decision-qa`.
   - The decision being asked for is final onboarding approval, a rating change, or a relationship exit. The skill produces review artifacts; humans rate, file, exit.
-
-  Anchored to: FFIEC BSA/AML Examination Manual, FinCEN Customer Due Diligence Final Rule, FinCEN Beneficial Ownership Rule, FinCEN Customer Identification Program rules, FinCEN Beneficial Ownership Information Reporting Rule (CTA implementing rule), FinCEN final AML rule for investment advisers, OCC / FRB / FDIC / NCUA Joint Statement on Risk-Focused BSA/AML Supervision, and FinCEN correspondent and private-banking due diligence rules.
 argument-hint: "[CDD file: customer record, CIP evidence, beneficial-ownership certification, risk rating and drivers, expected-activity profile, monitoring trigger set, refresh history]"
 ---
 
@@ -65,7 +63,7 @@ The **material gaps and evidence-needed items** list each gap with the pillar or
 
 The **reviewer findings** are tagged to a named criterion (FFIEC CDD section, the operative CIP/CDD rule, `§1010.230`, the institution's CDD program, the institution's risk-rating model), a severity, and an evidence pointer back into the file. The criterion is named, not implied.
 
-The **recommended human-review gates and owner actions** name what the file goes to next: accept the CDD as is, return to first line for evidence on a named gap, escalate to EDD via `edd-escalation-pack`, refresh the customer risk rating per the firm's process, recalibrate refresh-cycle interval, or schedule a monitoring threshold tuning review at a named horizon. A recommendation to onboard, decline, exit, or change the customer's rating directly is not within scope; the QA frames the issue as a routing recommendation to the named decisionmaker (BSA officer, customer-onboarding compliance lead, EDD committee where applicable).
+The **recommended decision checkpoints and owner actions** name what the file goes to next: accept the CDD as is, return to first line for evidence on a named gap, escalate to EDD via `edd-escalation-pack`, refresh the customer risk rating per the firm's process, recalibrate refresh-cycle interval, or schedule a monitoring threshold tuning review at a named horizon. A recommendation to onboard, decline, exit, or change the customer's rating directly is not within scope; the QA frames the issue as a routing recommendation to the named decisionmaker (BSA officer, customer-onboarding compliance lead, EDD committee where applicable).
 
 The **source trace and confidence** records every material claim in the memo, its source (file evidence, sector overlay, source-anchors file, firm overlay where present), and a confidence label. Customer self-attestation in the file (especially on a beneficial-ownership certification or expected-activity statement) carries lower confidence than corroborated evidence; do not collapse them.
 
@@ -77,9 +75,9 @@ Sector overlays are loaded from the engagement scope or the institution type. **
 
 No cross-cutting overlay is shipped at v1 for this skill. PEP, high-risk customer, and conduct intersections sit harder against `edd-escalation-pack` than against baseline CDD review; cyber and privacy intersections (NPI handling) sit at the program level rather than at the CDD-file artifact level. If a firm reads the cross-cutting lens at the CDD-file level, that is a `references/firm-overlay.md` decision.
 
-## What's load-bearing and what flexes
+## Quality bar
 
-A short list does not flex:
+The memo is only credible when these hold:
 
 - The skill produces review artifacts, not onboarding decisions, rating changes, SAR filings, or relationship exits. Any reviewer recommendation that proposes the rating change, the onboarding approval, the SAR filing, or the exit is itself a finding to remove.
 - The four CDD pillars are read separately. CIP completeness alone is not CDD completeness. The QA names which pillar a finding bears on.
@@ -89,7 +87,9 @@ A short list does not flex:
 - No fabricated regulatory facts. Unknown section references carry `[verify section]` in the source-anchors file, never in the memo body.
 - No named institutions in narrative unless they are public defendants in a finalised enforcement action with a published consent order.
 
-Everything else adapts. Sample size, lookback window, sector overlay, audience, depth, and the structure of rolled-up findings flex to the engagement. Where firm-specific policy (sample-selection method, customer-segmentation taxonomy, risk-rating model, refresh-cycle intervals, named systems and owners, EDD trigger set) applies, it lives in `references/firm-overlay.md` (consumed when present) and never in the memo directly.
+## Adaptation
+
+Sample size, lookback window, sector overlay, audience, depth, and the structure of rolled-up findings flex to the engagement. Where firm-specific policy (sample-selection method, customer-segmentation taxonomy, risk-rating model, refresh-cycle intervals, named systems and owners, EDD trigger set) applies, it lives in `references/firm-overlay.md` (consumed when present) and never in the memo directly.
 
 ## Output
 

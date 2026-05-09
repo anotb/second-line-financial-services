@@ -16,7 +16,6 @@ description: |
   - The question is the delta between the firm's existing policy text and the new rule; run `policy-diff` after this skill produces the obligation list.
   - The work is sequencing remediation milestones across functions; run `implementation-plan` after this skill.
 
-  Anchored to: Federal Register publication conventions (effective vs compliance dates; FR cite as `__ FR __`); CFR citation conventions (Title.Part.Section, e.g., 12 CFR 1002.107); SEC adopting-release structure (rule text in operative sections, commentary in preamble); EU regulation structure (recitals are interpretive; articles are binding); FCA Handbook block structure (sourcebook, chapter, paragraph); NAIC Model Law adoption tracking (model number plus state-by-state adoption status); supervisory-letter format conventions across OCC bulletins, FRB SR letters, FDIC FILs, CFPB circulars, and NCUA letters to credit unions. Citations and excerpts live in `references/source-anchors.md`.
 argument-hint: "[discrete piece of new rule text: regulator, instrument type, citation]"
 ---
 
@@ -84,9 +83,7 @@ Cross-cutting overlays load when the rule is anchored to a cross-cutting topic:
 
 Loading an overlay the rule does not implicate adds noise without challenge value. Loading none when one applies is the more common failure mode.
 
-## What's load-bearing and what flexes
-
-A handful of things do not flex.
+## Quality bar
 
 The source pin carries section, paragraph, and subsection where the rule provides them. A bare URL is not a pin. Where the section is genuinely unknown, the row carries `[verify section]` and the open-extraction-questions section picks it up; fabricating a section reference fails the quality bar.
 
@@ -102,7 +99,9 @@ The register is firm-agnostic. The actor is whoever the rule names. The evidence
 
 Material claims cite a source from the source list. `[evidence needed]` flags items needing follow-up and routes to the open-extraction-questions section. The register is a draft until a named reviewer attests; the skill stops at draft.
 
-Everything else adapts. Audience drives shape: a regulatory-change-committee pre-read clusters open questions to the front; a policy-owner working file pulls cross-references forward; a downstream-handoff package sequences rows by section to match the rule's reading order. Sector and cross-cutting overlays load from the engagement scope. Confidence labels track by row, not as a single overall label, because most extractions have high-confidence rows (codified-section anchors) and lower-confidence rows (preamble-only, contested interpretation) side by side.
+## Adaptation
+
+Audience drives shape: a regulatory-change-committee pre-read clusters open questions to the front; a policy-owner working file pulls cross-references forward; a downstream-handoff package sequences rows by section to match the rule's reading order. Sector and cross-cutting overlays load from the engagement scope. Confidence labels track by row, not as a single overall label, because most extractions have high-confidence rows (codified-section anchors) and lower-confidence rows (preamble-only, contested interpretation) side by side.
 
 ## Output
 

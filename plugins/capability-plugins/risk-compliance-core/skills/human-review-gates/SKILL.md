@@ -13,8 +13,6 @@ description: |
   - The work is a control matrix for a process (use `control-matrix`; gates are a subset of controls but reviewed differently because the gate decision is itself the control).
   - The work is the underlying artifact being gated (use `issue-writeup`, `model-card-builder`, `vendor-diligence`, etc.).
   - The work is committee-meeting administration (agenda, minutes, action tracking) — that is a secretariat function, not a gate-architecture skill.
-
-  Anchored to: SR 11-7 / OCC Bulletin 2011-12 (Supervisory Guidance on Model Risk Management, April 2011), OCC Bulletin 2026-13 (revised interagency model-risk guidance, 2026), NIST AI Risk Management Framework 1.0 (January 2023), EU AI Act (Regulation (EU) 2024/1689), ISO/IEC 42001:2023, IIA International Professional Practices Framework Standards 2330 and 2410, COSO Internal Control Integrated Framework (2013), and 12 CFR Part 30 Appendix D (OCC Heightened Standards). Citations and excerpts live in `references/source-anchors.md`.
 argument-hint: "[workflow or artifact in scope; e.g., 'AI use-case lifecycle for tier-1 retail credit', 'critical-vendor onboarding', 'issue-rating committee charter refresh']"
 ---
 
@@ -75,19 +73,25 @@ The same gate spine carries different decision authorities, different independen
 
 Privacy and climate cross-cutting overlays follow the same pattern; this skill ships cyber and conduct as the v1 cross-cutting files because they are the most frequent triggers for gate work. Where firm policy or taxonomy applies (named committees specific to the firm, GRC-platform-specific decision-record fields, internal escalation ladders), it lives in `references/firm-overlay.md` and is consumed when present. The matrix carries the source label from `references/source-anchors.md` and the firm's labelling from the overlay, distinct columns.
 
-## What's load-bearing and what flexes
+## Quality bar
 
-A handful of things do not flex:
+Independence is named per reviewer. A gate where the artifact's producer is also the gate's decider is not a gate; the producer's review is self-attestation. Where the source guidance demands independence (SR 11-7 validation independence, interagency TPRM line-1 / line-2 separation, EU AI Act Article 14 oversight by competent persons), the `independence_required` field is true and the matrix names the independence boundary.
 
-- Independence is named per reviewer. A gate where the artifact's producer is also the gate's decider is not a gate; the producer's review is self-attestation. Where the source guidance demands independence (SR 11-7 validation independence, interagency TPRM line-1 / line-2 separation, EU AI Act Article 14 oversight by competent persons), the `independence_required` field is true and the matrix names the independence boundary.
-- Stop conditions are declarative and binary. "Should be reviewed", "consider whether", and "as appropriate" are not stop conditions; "no pass if any open critical issue" is.
-- Each gate names required inputs by artifact ID. A gate that reviews "what is available" is unauditable; the inputs list is the contract between upstream artifact-builders and the gate.
-- Decision criteria are named and traceable to source. A criterion without a source anchor is policy commentary, not a gate criterion.
-- Documentation requirement names the record (decision, rationale, attesters, date, system of record). The gate's existence is evidenced by what the system of record holds; an unrecorded gate decision is not a gate decision.
-- Material claims cite a source. `[evidence needed]` flags route to the engagement issue log.
-- The matrix is a draft until a named reviewer attests. Gate architecture is committee-adopted; the skill stops at draft.
+Stop conditions are declarative and binary. "Should be reviewed," "consider whether," and "as appropriate" are not stop conditions; "no pass if any open critical issue" is.
 
-Everything else adapts to context. Audience drives shape: a committee-adoption pack pulls the one-page narrative and the recommended charter language to the front; an audit-readiness review leads with the gap section and the recommended actions; an examiner-readiness file leads with the source-anchor trace. Source posture drives what the body can carry; public-only matrices sit at named-role and decision-criteria description, mixed and firm-policy-overlay let named committees, system-of-record names, and policy-version section references land. Sector and cross-cutting overlays load from the engagement scope. Frequency, escalation cadence, and dissent-path mechanics track the firm's governance taxonomy where one exists.
+Each gate names required inputs by artifact ID. A gate that reviews "what is available" is unauditable; the inputs list is the contract between upstream artifact-builders and the gate.
+
+Decision criteria are named and traceable to source. A criterion without a source anchor is policy commentary, not a gate criterion.
+
+Documentation requirement names the record (decision, rationale, attesters, date, system of record). The gate's existence is evidenced by what the system of record holds; an unrecorded gate decision is not a gate decision.
+
+Material claims cite a source. `[evidence needed]` flags route to the engagement issue log; the seams between source evidence, management assertion, public-source obligation, and inference stay visible. RFP narrative is not evidence. `[verify section]` markers belong in source-anchors verification, not the matrix body.
+
+No named institutions in narrative unless they are public defendants in a finalised enforcement action with a published consent order. The matrix stops at recommendation; gate architecture is committee-adopted, and the skill stops at draft.
+
+## Adaptation
+
+Audience drives shape: a committee-adoption pack pulls the one-page narrative and the recommended charter language to the front; an audit-readiness review leads with the gap section and the recommended actions; an examiner-readiness file leads with the source-anchor trace. Source posture drives what the body can carry; public-only matrices sit at named-role and decision-criteria description, mixed and firm-policy-overlay let named committees, system-of-record names, and policy-version section references land. Sector and cross-cutting overlays load from the engagement scope. Frequency, escalation cadence, and dissent-path mechanics track the firm's governance taxonomy where one exists.
 
 ## Output
 

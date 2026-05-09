@@ -15,8 +15,6 @@ description: |
   - The work is comparing two versions of the same policy. Use `regulatory-change-management/skills/policy-diff` (version-to-version), not this skill (policy-to-obligation).
   - The work is drafting a finding from a single policy gap that has already been confirmed. Use `issue-writeup`.
   - The work is the policy rewrite itself. The skill ends at the gap list and the recommended edit fragments; the redline lives elsewhere.
-
-  Anchored to: COSO ERM 2017 (governance and culture, strategy and objective-setting components), FFIEC IT Examination Handbook (Management booklet on policy framework expectations), CFPB Compliance Management System guidance (policies and procedures pillar), OCC Bulletin 2014-39 governance expectations on policy frameworks, BCBS 239 traceability principles (Principles 1, 2, 11), SR 11-7 §VI policy expectations for model risk, OCC Bulletin 2026-13 §III policy expectations for AI-system extensions, the June 2023 Interagency Guidance on Third-Party Relationships, FFIEC BSA/AML Examination Manual policy expectations, CFPB UDAAP exam manual, and NIST AI Risk Management Framework 1.0 Govern function. Citations and excerpts live in `references/source-anchors.md`.
 argument-hint: "[policy under review and benchmark source: policy doc plus rule, guidance, or obligation-register]"
 ---
 
@@ -28,7 +26,7 @@ The skill is one of the foundational primitives in this plugin. It runs against 
 
 The boundary with `regulatory-change-management/policy-diff` is sharp. That skill compares two versions of the same policy (v3.4 vs v4.0). This skill compares one policy to an external benchmark (the policy vs the rule, the guidance, or the obligation register). The two skills feed different downstream work; an agent should not invoke both for the same job.
 
-The skill produces the matrix as a markdown artifact in `templates/default-output.md` shape and a structured record conforming to `schemas/policy-gap-matrix.schema.json`. The artifact is a draft until a named reviewer attests; severity assignment always carries human review.
+The matrix is the deliverable; the format is whatever the engagement and audience need. A gap matrix is matrix-natural — the rows want a register layout — so most engagements render Excel for the matrix plus a Word narrative for the cover summary, recommended edits, and out-of-scope rationale. The skill drafts against `templates/default-output.md` and emits the structured record at `schemas/policy-gap-matrix.schema.json`. The artifact is a draft until a named reviewer signs off; severity assignment always carries independent attestation.
 
 ## Ask first
 
@@ -89,13 +87,11 @@ The same row spine carries different benchmark sources and different severity ca
 
 Climate cross-cutting follows the same pattern; this skill ships cyber, privacy, and conduct as the v1 cross-cutting files because they are the most frequent triggers for policy gap reviews. Where firm policy or taxonomy applies (firm-specific severity ladders, named committee gates, firm-specific role titles), it lives in `references/firm-overlay.md` and is consumed when present.
 
-## What's load-bearing and what flexes
-
-A handful of things do not flex.
+## Quality bar
 
 The matrix has at least one named, dated benchmark source with section references. Reviewing a policy against itself or against generic guidance fragments without anchored sources is internal-consistency editing, not a gap review. The skill refuses to proceed without `benchmark_sources` populated.
 
-Severity is paired with rationale referencing materiality, supervisory exposure, customer impact, operational risk, and compensating practice. Severity without rationale is opinion; severity assignment always carries human review.
+Severity is paired with rationale referencing materiality, supervisory exposure, customer impact, operational risk, and compensating practice. Severity without rationale is opinion; severity assignment always carries independent attestation.
 
 Gap classification picks one of the five values and the row carries the value that fits. Conflating `missing` with `partial` is a common defect; the skill prompts when a row's policy-text field reads "silent" but the classification is `partial` rather than `missing`.
 
@@ -109,20 +105,24 @@ Owners are named roles with accountability. Where the role taxonomy is firm-spec
 
 Cross-policy interactions are surfaced when the gap interacts with another firm policy. Burying the interaction in commentary or assuming the other-policy owner will figure it out is how policy refreshes break the firm's overall governance architecture.
 
-Material claims cite a source. `[evidence needed]` flags route to the engagement issue log. The matrix is a draft until the named reviewer attests; the skill stops at draft.
+Material claims cite a source. `[evidence needed]` flags route to the engagement issue log; the seams between source evidence, management assertion, public-source obligation, and inference stay visible. RFP narrative is not evidence. `[verify section]` markers belong in source-anchors verification, not the matrix body. No named institutions in narrative unless they are public defendants in a finalised enforcement action with a published consent order. The matrix stops at recommendation; it is a draft until the named reviewer signs off.
 
-Everything else adapts to context. Audience drives compression: a policy-owner pre-read reads operational; a compliance-committee read pulls severity and recommended edits to the front; an internal-audit read leans on coverage summary and out-of-scope rationale. Source posture drives what the body can carry. Sector and cross-cutting overlays load from the engagement scope. The order of gap rows in the surface artifact can sequence by severity, by policy section, or by benchmark source depending on audience; the structured record preserves the columns distinctly.
+## Adaptation
+
+Audience drives compression: a policy-owner pre-read reads operational; a compliance-committee read pulls severity and recommended edits to the front; an internal-audit read leans on coverage summary and out-of-scope rationale. Source posture drives what the body can carry. Sector and cross-cutting overlays load from the engagement scope. The order of gap rows in the surface artifact can sequence by severity, by policy section, or by benchmark source depending on audience; the structured record preserves the columns distinctly.
 
 ## Output
 
-The matrix in `templates/default-output.md` shape and the structured record per `schemas/policy-gap-matrix.schema.json`. Downstream consumers: `issue-writeup` consumes `gaps[]` rows whose severity warrants tracking as findings, lifting `gap_id`, `benchmark_requirement`, `severity`, and `recommended_edit` into the CCCE structure; `obligation-mapping` consumes gap rows whose `linked_obligation_ids` is empty (the gap implies an obligation the register did not yet carry) and reopens the register for that section; `control-matrix` consumes gap rows whose `linked_control_ids` is populated and re-tests the operational-effectiveness rating in light of the policy fix; `evidence-binder` reads `evidence_needed` to scope its evidence asks for the operational dimension. The schema is the cross-skill contract; additive changes only, never silent renames. Breaking changes ship as a versioned migration with downstream skills told in advance.
+Default to drafting against `templates/default-output.md`. The artifact is gap-matrix-natural — render Excel for the matrix itself via the `xlsx` skill in the `document-skills` plugin, with Word for the narrative cover summary, recommended-edit fragments, and out-of-scope rationale via the `docx` skill. PowerPoint for a compliance-committee tabling, markdown for a developer-touched artifact. Render to whatever the engagement and audience ask for. Produce the structured record at `schemas/policy-gap-matrix.schema.json` when downstream automation or a registered consumer needs it.
+
+Downstream consumers: `issue-writeup` consumes `gaps[]` rows whose severity warrants tracking as findings, lifting `gap_id`, `benchmark_requirement`, `severity`, and `recommended_edit` into the CCCE structure; `obligation-mapping` consumes gap rows whose `linked_obligation_ids` is empty (the gap implies an obligation the register did not yet carry) and reopens the register for that section; `control-matrix` consumes gap rows whose `linked_control_ids` is populated and re-tests the operational-effectiveness rating in light of the policy fix; `evidence-binder` reads `evidence_needed` to scope its evidence asks for the operational dimension. The schema is the cross-skill contract; additive changes only, never silent renames. Breaking changes ship as a versioned migration with downstream skills told in advance.
 
 ## Pointers
 
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
 - `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md` — sector overlays loaded from engagement scope.
 - `references/cross-cutting/{cyber,privacy,conduct}.md` — cross-cutting overlays loaded from engagement scope.
-- `references/firm-overlay.md` — firm-installed taxonomy, named role labels, severity-rating ladder, named committee gates, firm-specific section labels; consumed when present.
+- `references/firm-overlay.md` — firm-installed taxonomy, named role labels, severity-rating ladder, named committee sign-offs, firm-specific section labels; consumed when present.
 - `templates/default-output.md` — gap-matrix template.
 - `schemas/policy-gap-matrix.schema.json` — structured-output contract.
 - `examples/` — legacy SR 11-7-aligned MRM policy benchmarked against OCC Bulletin 2026-13; pre-2023 vendor-management policy benchmarked against the June 2023 interagency TPRM guidance.

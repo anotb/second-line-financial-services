@@ -145,7 +145,8 @@
 
 - **Recommended posture**: [redline-and-sign | redline-and-defer-decision | escalate-to-counsel | escalate-to-approver | decline].
 - **Conditions**: [bulleted, specific, verifiable].
-- **Legal-review gates this matrix must clear**: [scope, evidence, authority, impact, decision].
+- **Decision checkpoints this matrix must clear**: scope, evidence, authority, impact, decision (counsel redline at scope and authority; approver sign-off at decision).
+- **Decision forum and attestation block**: [counsel | TPRM forum | risk committee | AI risk committee | fund board]; owner (role) and approver (role) named.
 - **Next-review trigger**: [renewal date, scope-change trigger, regulatory-change-driven trigger, model-version-change for AI vendors].
 - The matrix does not approve the contract. Counsel drafts language; the named approver decides.
 

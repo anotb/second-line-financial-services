@@ -11,14 +11,14 @@ The skill cites these by file path. SKILL.md does not restate excerpts.
 - Citation: Board of Governors of the Federal Reserve System, Supervision and Regulation Letter SR 11-7 / OCC Bulletin 2011-12, "Guidance on Model Risk Management" (April 4, 2011), §III "Overview of Model Risk Management" and §IV "Model Development, Implementation, and Use" — the materiality and risk-rating framing.
 - Excerpt-paraphrase: §III sets the risk-based principle: "the rigor and sophistication of validation should be commensurate with the bank's overall use of models, the complexity and materiality of its models, and the size and complexity of the bank's operations." §IV reinforces that materiality factors (model purpose, decision influence, financial exposure, complexity, uncertainty, vendor dependence) drive the depth of model risk management practice. The tier produced by this skill is the firm-side artefact that operationalises that risk-based principle.
 - Link: https://www.federalreserve.gov/supervisionreg/srletters/sr1107.htm — §III and §IV
-- Notes: SR 11-7 is the OCC/FRB joint guidance; binding on federally regulated banks. Materiality factors listed in the guidance are the spine of the rubric in this skill, not invented thresholds. Specific tier names (tier-1 through tier-4) and quantitative cutoffs are firm policy, not SR 11-7; the skill does not claim otherwise.
+- Notes: SR 11-7 was the OCC/FRB joint guidance binding on federally regulated banks for over a decade. As of April 17, 2026 it is superseded by the joint interagency Revised Guidance on Model Risk Management (anchor 2). Materiality factors listed in SR 11-7 remain the spine of the rubric in this skill. Specific tier names (tier-1 through tier-4) and quantitative cutoffs are firm policy, not SR 11-7.
 
-### 2. OCC Bulletin 2026-13 — Revised Interagency Model Risk Management Guidance (2026)
+### 2. Joint Interagency Revised Guidance on Model Risk Management — OCC 2026-13 / FRB SR 26-2 / FDIC FIL-15-2026
 
-- Citation: OCC Bulletin 2026-13, "Revised Interagency Guidance on Model Risk Management" (issued 2026 by OCC; FDIC parallel FIL and Federal Reserve parallel SR letter expected) [verify section on risk rating and tiering].
-- Excerpt-paraphrase: The revised guidance refreshes SR 11-7 to incorporate AI and machine learning, including foundation-model dependence, retrieval-augmented generation, tool use, and agentic configurations. Risk-rating expectations carry forward with explicit recognition that AI and GenAI factors (autonomy, vendor dependence on a foundation-model provider, prompt and retrieval surfaces) feed materiality. Validation depth, monitoring frequency, and committee path are tier-driven.
-- Link: https://www.occ.gov/news-issuances/bulletins/2026/bulletin-2026-13.html — Bulletin 2026-13 [verify section on risk rating]
-- Notes: Confirm published section numbering at decision-write time. The phase-1 spec sheet records `[verify section]` and the SKILL.md does not over-claim binding language until verified. FDIC FIL and FRB SR letter parallel issuances also carry `[verify number and section]` until confirmed.
+- Citation: Joint Interagency Revised Guidance on Model Risk Management, OCC Bulletin 2026-13 / FRB SR 26-2 / FDIC FIL-15-2026, dated April 17, 2026. The three issuances are the same joint document; supersedes SR 11-7 (2011) and SR 21-8 (2021).
+- Excerpt-paraphrase (footnote 3, verbatim): "Generative AI and agentic AI models are novel and rapidly evolving. As such, they are not within the scope of this guidance. ... However, the principles described in this guidance apply to traditional statistical and quantitative models and non-generative, non-agentic AI models." Most relevant to banking organizations with over $30 billion in total assets; non-binding. The bulletin contains no references to NIST publications.
+- Link: https://occ.gov/news-issuances/bulletins/2026/bulletin-2026-13a.pdf — guidance text PDF
+- Notes: For traditional models in the firm's tiering rubric, this bulletin carries materiality and proportionality framing forward from SR 11-7 for federally regulated banks. For GenAI and agentic use cases the bulletin is out of scope; the GenAI-specific factor in the rubric anchors to NIST AI 600-1, ISO/IEC 42001, and the cyber and conduct overlays. Tier names and quantitative cutoffs remain firm policy.
 
 ### 3. NIST AI Risk Management Framework 1.0 — Map function
 
@@ -152,9 +152,7 @@ The skill cites these by file path. SKILL.md does not restate excerpts.
 
 The following items carry `[verify section]` or `[verify ...]` flags and must be confirmed at decision-write time:
 
-- OCC Bulletin 2026-13 — confirm published section numbering on risk rating and AI/ML inclusion.
-- FDIC FIL parallel issuance to OCC Bulletin 2026-13 — confirm number and section.
-- FRB SR letter parallel issuance to OCC Bulletin 2026-13 — confirm number and section.
+- OCC 2026-13 / FRB SR 26-2 / FDIC FIL-15-2026 — verbatim GenAI/agentic scope exclusion confirmed against the OCC PDF (footnote 3). The three issuances are the same joint document, not parallels. SR 11-7 and SR 21-8 are confirmed superseded as of April 17 2026.
 - NIST AI 600-1 — confirm exact Measure subcategory numbering for the GenAI elements cited.
 - NYDFS Insurance Circular Letter (January 2024) — confirm section reference.
 - Colorado Division of Insurance regulation implementing SB 21-169 — confirm regulation number and effective date.

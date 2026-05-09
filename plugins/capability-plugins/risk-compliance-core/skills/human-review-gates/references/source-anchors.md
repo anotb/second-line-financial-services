@@ -1,12 +1,12 @@
 # Source anchors: human-review-gates
 
-This file holds the named, dated regulatory and professional-standard sources the human-review-gates skill anchors to. The SKILL.md file does not restate these citations beyond the activation-tuned description's "Anchored to:" line. Firm-specific anchors (named committees, GRC-platform decision-record fields, escalation ladders) belong in `references/firm-overlay.md`.
+This file holds the named, dated regulatory and professional-standard sources the human-review-gates skill anchors to. SKILL.md cites this file by path; the named anchors are not restated inline. Firm-specific anchors (named committees, GRC-platform decision-record fields, escalation ladders) belong in `references/firm-overlay.md`.
 
 `[verify section]` placeholders mark anchors where the precise section reference still needs verification against the current edition of the source. They are deliberate, not omissions. Phase 2 carries verification load; phase 3 grinds it down. Fabricating a section reference is worse than leaving the placeholder.
 
 ## Model-risk effective challenge
 
-### SR 11-7 / OCC Bulletin 2011-12 — Supervisory Guidance on Model Risk Management (Federal Reserve and OCC, April 4, 2011)
+### SR 11-7 / OCC Bulletin 2011-12 — Supervisory Guidance on Model Risk Management (Federal Reserve and OCC, April 4, 2011, superseded April 17, 2026 by the joint guidance below)
 
 Anchor: §V (validation, including the principle that validation is performed by staff with the authority and competence to challenge developers and is independent of the development function); §VI (governance, policies, and controls — board and senior management oversight, model risk management framework, internal audit). [verify section labels against the published letter; the interagency text uses Roman-numeral sections.]
 
@@ -15,13 +15,13 @@ What this skill relies on: that validation independence is a per-reviewer attrib
 - §V — Model validation; independence of validators from developers. https://www.federalreserve.gov/supervisionreg/srletters/sr1107.htm
 - §VI — Governance, policies, and controls. https://www.federalreserve.gov/supervisionreg/srletters/sr1107.htm
 
-### OCC Bulletin 2026-13 — Revised Interagency Model Risk Management Guidance (2026)
+### Joint Interagency Revised Guidance on Model Risk Management — OCC Bulletin 2026-13 / FRB SR 26-2 / FDIC FIL-15-2026 (April 17, 2026)
 
-Anchor: §III.E (independent challenge — refreshed effective-challenge expectations); §III.F (human oversight, including human-in-the-loop and human-on-the-loop posture for AI-extended models); §III.G (third-party model gate expectations). [verify section labels against the published bulletin.]
+Anchor: Section II (scope and definitions), Section III (control environment, third-party model controls, independent challenge). The April 2026 joint guidance supersedes SR 11-7 (2011) and SR 21-8 (BSA/AML model risk, 2021). Most relevant to banking organizations with total assets over $30 billion; non-binding (does not set forth enforceable standards). Generative AI and agentic AI are explicitly out of scope (footnote 3); the principles cover traditional statistical and quantitative models and non-generative, non-agentic AI models. The bulletin contains zero references to NIST AI RMF, NIST AI 600-1, or any other NIST publication.
 
-What this skill relies on: refreshed effective-challenge gate language layered onto SR 11-7; explicit human-oversight expectations for AI-extended models; third-party model gate framing where the model is vendor-developed or vendor-hosted, which feeds the vendor-onboarding gate matrix.
+What this skill relies on: refreshed effective-challenge gate language for traditional and non-generative-AI models, third-party model gate framing where the model is vendor-developed or vendor-hosted, and the developer-validator separation expectations the joint guidance carries forward. For GenAI or agentic-AI gate architecture (human-in-the-loop, human-on-the-loop posture, prompt-injection escalation, agent-tool-action approval), the matrix anchors on NIST AI RMF 1.0, NIST AI 600-1, ISO/IEC 42001, the EU AI Act Article 14 human-oversight expectations, and the firm's AI governance policy rather than this bulletin.
 
-- §III.E, §III.F, §III.G — independent challenge, human oversight, third-party model gates. [verify section labels] https://www.occ.gov/news-issuances/bulletins/
+Link: https://www.occ.gov/news-issuances/bulletins/2026/bulletin-2026-13.html (parallels: https://www.federalreserve.gov/supervisionreg/srletters/SR2602.htm, https://www.fdic.gov/news/financial-institution-letters/2026/agencies-revise-interagency-model-risk-management-guidance)
 
 ## AI governance scaffolding
 
@@ -137,7 +137,7 @@ The sector-overlay files (`references/sector-overlays/<sector>.md`) enumerate se
 
 ## Cross-plugin overlays (referenced when in scope)
 
-- Model-risk gates cite SR 11-7 and OCC 2026-13 directly (anchors above).
+- Model-risk gates cite SR 11-7 (historical) and the April 2026 joint guidance (current; OCC 2026-13 / SR 26-2 / FIL-15-2026) directly (anchors above).
 - AI-system gates cite the NIST AI RMF, NIST AI 600-1, EU AI Act, and ISO/IEC 42001 (anchors above), plus sector-specific AI guidance via the relevant sector overlay (NAIC AI Bulletin, NYDFS AI Industry Letter).
 - Third-party gates cite the Interagency Guidance and DORA Article 28 (the EU equivalent for ICT third-party relationships) where the firm's footprint is EU-touching; DORA anchors live with the third-party-operational-resilience plugin's source-anchors when present.
 - Issue-rating gates cite the issue-writeup primitive's source anchors (FRB SR 13-13, OCC Bulletin 2014-39, IIA Standards) plus this skill's IIA and COSO anchors for the rating-decision-as-gate framing.

@@ -14,7 +14,7 @@ The threshold question for a payments-fintech SAR-decision QA is which entity ow
 
 - **31 CFR §1022.320** — MSB SAR rule (MSB own filing) [verify section].
 - **31 CFR §1020.320** — bank SAR rule (sponsor-bank filing on behalf of activity in bank's accounts) [verify section].
-- **31 CFR §1010.380** — MSB registration with FinCEN [verify section]. Adjacent program-element check.
+- **31 CFR §1022.380** — MSB registration with FinCEN. Initial registration within 180 days of becoming an MSB; renewal every two years. Adjacent program-element check; not the BOI / CTA reporting rule at §1010.380, which is a separate obligation with its own legal status.
 
 ## Fintech-specific typology population the QA encounters most
 

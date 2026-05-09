@@ -15,8 +15,6 @@ description: |
   - The artifact is a single control test workpaper (use `compliance-testing/skills/control-test-workpaper`).
   - The artifact is a management response to a regulator finding (use `management-response`).
   - The work is the executive certification under the relevant securities-law sections; this skill produces the process-owner and function-head sub-certifications that ladder to the executive certification, which is securities-counsel-led and out of scope.
-
-  Anchored to: COSO Internal Control — Integrated Framework, Sarbanes-Oxley Sections 302 and 404, PCAOB AS 2201, AICPA SSAE 18 (SOC 1 and SOC 2), BCBS 239, U.S. interagency third-party risk management guidance, OCC Heightened Standards. Sector- and cross-cutting-anchored sources (NAIC Model Audit Rule, SEC Rule 17a-5, NYDFS Part 500, GLBA Safeguards Rule, NIST CSF, PCI DSS) load via the matching overlay reference. Citations and excerpts live in `references/source-anchors.md`.
 argument-hint: "[attestation type, attesting role, period, upstream control matrix pointer, prior-period pack, or scope statement]"
 ---
 
@@ -74,9 +72,7 @@ The sector overlay is content that lands in the pack, not background reading. An
 
 Cyber overlay loads when cyber-control attestation is in scope (annual CISO certifications, NIST CSF-aligned program attestations, PCI DSS AOC, NAIC Model #668 for state-licensed insurers in adopting jurisdictions). Privacy overlay loads when the scoped process touches consumer financial information (GLBA Safeguards Rule annual report; state-privacy-law attestation linkages). Conduct overlay loads at firms with consumer-facing businesses (FINRA 3130 CEO certification, Reg BI attestation, fair-lending self-assessment, sales-practices and suitability attestations, UDAAP-program attestations). Each overlay names content that lands in the pack as control-inventory rows, evidence categories, exception types, and assertion-text elements.
 
-## What's load-bearing and what flexes
-
-A handful of things do not flex:
+## Quality bar
 
 - Every material claim cites a source. Unsupported claims carry `[evidence needed]` and route to the engagement issue log, not silently into the pack.
 - Evidence is separated from inference. The source-trace appendix shows the seam.
@@ -87,11 +83,13 @@ A handful of things do not flex:
 - The confidence label reflects evidence-base strength, not control posture; `high` requires complete evidence coverage.
 - The pack is a draft until the attesting officer signs and the named reviewer reviews. The skill does not assert sign-off, distribute, or post to the certification system.
 
-Everything else adapts. Attestation type drives the assertion-language register, the sub-certification ladder, and the named reviewer set. Audience drives tone (process-owner sub-certification is technical; function-head sub-certification is wider; executive-facing material is challenge-shaped). Sector and cross-cutting overlays load from the engagement scope. Where firm-specific certification framework, sub-certification ladder, named officer roles, assertion-language register, or policy-evidence taxonomy applies, it lives in `references/firm-overlay.md` (consumed when present) and never in the pack directly.
+## Adaptation
+
+Attestation type drives the assertion-language register, the sub-certification ladder, and the named reviewer set. Audience drives tone (process-owner sub-certification is technical; function-head sub-certification is wider; executive-facing material is challenge-shaped). Sector and cross-cutting overlays load from the engagement scope. Where firm-specific certification framework, sub-certification ladder, named officer roles, assertion-language register, or policy-evidence taxonomy applies, it lives in `references/firm-overlay.md` (consumed when present) and never in the pack directly.
 
 ## Output
 
-Two artifacts: the pack per `templates/default-output.md` and the structured object per `schemas/attestation-pack.schema.json`. The structured object reuses `control.schema.json` (from `risk-compliance-core`) for control-inventory rows and `issue.schema.json` (from `risk-compliance-core`) for exception linkage; this skill owns the wrapper.
+Default to drafting against `templates/default-output.md`. Render as Word, Excel, PowerPoint, or Markdown when the audience or workflow asks for it; the typical attestation pack rides as a Word memo with the control inventory in Excel for SOX, SSAE, or sub-certification cycles. Produce the structured record at `schemas/attestation-pack.schema.json` when downstream automation or a registered consumer needs it. The structured object reuses `control.schema.json` (from `risk-compliance-core`) for control-inventory rows and `issue.schema.json` (from `risk-compliance-core`) for exception linkage; this skill owns the wrapper.
 
 Downstream consumers: the structured object feeds the firm's certification system of record, the external auditor work file, the `risk-committee-pack` issues section (where the attestation surfaces a material exception), and the `management-response` chain (where the attestation supports a sub-certification consumed by a response to a regulator finding). The schema is the cross-skill contract; additive changes only, never silent renames. Breaking changes ship as a versioned migration with the consumers told in advance.
 

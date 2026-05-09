@@ -15,8 +15,6 @@ description: |
   - The artifact is a one-off issue write-up where the KRI breach is the symptom (use `risk-compliance-core/skills/issue-writeup` for the issue; use this skill for the commentary on the KRI itself).
   - The artifact is the data-quality root cause for the KRI (use `bcbs239-gap-assessment` if the breach is driven by upstream data lineage).
   - The work is defining the KRI itself (KRI design and threshold setting is risk-appetite work, out of scope here).
-
-  Anchored to: BCBS risk data aggregation and risk reporting principles, COSO ERM, US prudential regulator heightened standards on the risk appetite statement, Basel principles on the sound management of operational risk, FSB principles on the risk appetite framework, IIA three-lines model, and (where loaded by overlay) NIST cybersecurity framework, NYDFS Part 500, SEC cyber disclosure framework, TCFD, and ISSB IFRS S2. Citations and excerpts live in `references/source-anchors.md`.
 argument-hint: "[KRI feed pointer, threshold structure, prior-period commentary, RAS metric IDs, issue log pointer, material-event log pointer, or scope statement]"
 ---
 
@@ -73,7 +71,7 @@ Aggregate work. Across all blocks for the period, the wrapper carries aggregate 
 When the `engagement-scope` record is supplied:
 
 - `institution.type` and `institution.primary_regulators` set tone, citation focus, and which sector overlay loads.
-- `persona.role` sets the artifact audience and the review gate.
+- `persona.role` sets the artifact audience and the named sign-off owner.
 - `risk_lens` constrains which KRI populations are in scope for the wrapper.
 - `sector_overlay_set` loads the matching `references/sector-overlays/<sector>.md`.
 - `cross_cutting_overlay_set` loads matching `references/cross-cutting/<topic>.md`. The cyber overlay carries the disclosure-controls leading-indicator referral protocol; the climate overlay upgrades the data-confidence note from optional to required.
@@ -81,9 +79,7 @@ When the `engagement-scope` record is supplied:
 
 When the record is not supplied, the skill asks: what is the firm type, who is the primary regulator constellation, what is the persona consuming the block, and what is the source posture. Defaults to public posture if the practitioner declines, and the wrapper carries a note that scope was not formalized.
 
-## What's load-bearing and what flexes
-
-A handful of things do not flex:
+## Quality bar
 
 - Every material claim cites a source. Unsupported items carry `[evidence needed]` and route to the issue log.
 - Named root cause is required for RED and for AMBER where breach age exceeds one period. "Investigation ongoing" is not credible after period one.
@@ -93,11 +89,13 @@ A handful of things do not flex:
 - The block stops at draft. The second-line lead and the head of risk reporting review before the block flows into the committee pack or any other consumer.
 - Confidence label "high" is not available where the metric is on the firm's data-aggregation known-limitations list.
 
-Everything else adapts to context. Audience drives tone. Depth flexes with the audience and the risk type (a RED operational-loss block carries deeper material than an AMBER cyber-awareness block). Sector and cross-cutting overlays load from the engagement scope. Where firm-specific RAS structure, taxonomy, or escalation machinery applies, it lives in `references/firm-overlay.md` (consumed when present) and never in the block directly.
+## Adaptation
+
+Audience drives tone. Depth flexes with the audience and the risk type (a RED operational-loss block carries deeper material than an AMBER cyber-awareness block). Sector and cross-cutting overlays load from the engagement scope. Where firm-specific RAS structure, taxonomy, or escalation machinery applies, it lives in `references/firm-overlay.md` (consumed when present) and never in the block directly.
 
 ## Output
 
-Two artifacts: the per-KRI block(s) per `templates/default-output.md`, and the structured wrapper per `schemas/kri-commentary.schema.json`. The reviewer attestation (second-line lead and head of risk reporting) is filled before the wrapper flows downstream.
+Default to drafting against `templates/default-output.md`. Render as Word, Excel, PowerPoint, or Markdown when the audience or workflow asks for it; KRI commentary blocks typically slot into the parent committee deck as PowerPoint, with longer-form RED commentary as Word memos. Produce the structured record at `schemas/kri-commentary.schema.json` when downstream automation or a registered consumer needs it. The reviewer attestation (second-line lead and head of risk reporting) is filled before the wrapper flows downstream.
 
 Downstream consumers: the structured wrapper feeds `risk-committee-pack` (the KRI section). The same blocks may feed a regulator response file, a board memo on a specific KRI, or (where the cyber overlay loads) the firm's annual CISO report. The schema is the cross-skill contract; additive changes only, never silent renames. Breaking changes ship as a versioned migration with the consumers told in advance.
 

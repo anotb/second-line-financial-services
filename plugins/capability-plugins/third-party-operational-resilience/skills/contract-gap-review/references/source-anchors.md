@@ -58,7 +58,7 @@ The named, dated regulatory sources this skill anchors to. SKILL.md cites this f
 
 - **Card-network operating rules (Visa, Mastercard, Amex, Discover)**. Required terms in issuer-processor and acquirer-merchant contracts; chargeback rules; PCI compliance representations; data-handling. Paywalled; cite as "current edition" and pin against the firm's licensed copy.
 
-- **FinCEN MSB rules at 31 CFR Part 1022** and registration requirements at 31 CFR §1010.380 [verify §]. Third-party-relationship and agent-of-MSB arrangements have specific contract-content expectations. https://www.ecfr.gov/current/title-31/subtitle-B/chapter-X/part-1022 .
+- **FinCEN MSB rules at 31 CFR Part 1022** and registration requirements at 31 CFR §1022.380 (initial registration within 180 days of becoming an MSB; renewal every two years). Third-party-relationship and agent-of-MSB arrangements have specific contract-content expectations. https://www.ecfr.gov/current/title-31/subtitle-B/chapter-X/part-1022 . FinCEN's MSB-registration page confirms §1022.380 as the operative section (https://www.fincen.gov/resources/money-services-business-msb-registration). Note: 31 CFR §1010.380 is the BOI / Corporate Transparency Act beneficial-ownership rule, a different obligation.
 
 - **Reg E (12 CFR Part 1005)** §1005.6, §1005.11, §1005.18 — error-resolution and customer-liability allocation that the contract must support for the firm to meet its consumer-protection obligations. https://www.ecfr.gov/current/title-12/chapter-X/part-1005 .
 

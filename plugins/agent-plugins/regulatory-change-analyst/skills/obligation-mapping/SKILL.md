@@ -14,8 +14,6 @@ description: |
   - The mapping is from obligation to control (use `control-matrix`; this skill ends at the obligation, that skill begins from it).
   - The work is a gap analysis between firm policy and obligations (use `policy-gap-review`).
   - The work is drafting a finding (use `issue-writeup`).
-
-  Anchored to: BCBS 239, FFIEC IT Examination Handbook, Interagency Guidance on Third-Party Relationships (June 2023), CFPB Compliance Management System guidance, COSO ERM, SR 11-7 / OCC Bulletin 2026-13, FFIEC BSA/AML Examination Manual, CFPB Section 1071 (12 CFR 1002.107), DORA, NYDFS 23 NYCRR Part 500, and the EU AI Act. Citations and excerpts live in `references/source-anchors.md`.
 argument-hint: "[obligation source: rule text, exam request, policy, SLA, supervisory letter]"
 ---
 
@@ -104,7 +102,7 @@ The register in `templates/default-output.md` shape and the structured record pe
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
 - `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md` — sector overlays loaded from engagement scope.
 - `references/cross-cutting/{cyber,privacy,conduct}.md` — cross-cutting overlays loaded from engagement scope.
-- `references/firm-overlay.md` — firm-installed taxonomy, named role labels, system-of-record names, internal policy pointers, review gates beyond the regulatory baseline; consumed when present.
+- `references/firm-overlay.md` — firm-installed taxonomy, named role labels, system-of-record names, internal policy pointers, decision forums and sign-off conditions beyond the regulatory baseline; consumed when present.
 - `templates/default-output.md` — register template.
 - `schemas/obligation-register.schema.json` — structured-output contract.
 - `examples/` — CFPB Section 1071 obligation register for a community bank; FFIEC BSA/AML CDD obligation register for a payments fintech bank-sponsor partnership.

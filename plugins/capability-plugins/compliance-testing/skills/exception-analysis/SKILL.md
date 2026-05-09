@@ -14,8 +14,6 @@ description: |
   - The exception has already been classified and the work is drafting the issue. Use `risk-compliance-core/skills/issue-writeup`; this skill produces the input that issue-writeup consumes via `source_exception_id`.
   - The work is drafting the workpaper end to end. Use `workpaper-drafter`; that skill consumes the exception register this skill produces via `exception_register_id`.
   - The work is QA on a completed workpaper. That is `qa-workpaper`.
-
-  Anchored to: IIA International Professional Practices Framework (root-cause analysis and communication-of-results standards), AICPA AU-C 530 (audit sampling, evaluating sample results), AICPA AU-C 265 (communicating internal control matters), Federal Reserve supervisory letters on issue identification within compliance risk management programs, OCC compliance management guidance, CFPB Compliance Management System Review Procedures, COSO 2013 Internal Control Integrated Framework Principle 17, and FFIEC IT Examination Handbook (Audit booklet). Citations and excerpts live in `references/source-anchors.md`.
 argument-hint: "[test plan ID, workpaper ID, raw deviation list, or pointer to completed sample testing]"
 ---
 
@@ -23,7 +21,7 @@ argument-hint: "[test plan ID, workpaper ID, raw deviation list, or pointer to c
 
 A control test produces deviations. Not every deviation is a finding. Some are evidence gaps the system did the right thing, the file did not record it. Some are anomalies a one-off mistake with positive evidence it does not recur. Some are design gaps the form, the workflow, the rule did not require what the criterion expects. Some are operating failures the design was sound, the operation missed. Some are data-integrity issues the system of record disagrees with the source feed. Some are scope disagreements the tester and the control owner read the criterion differently.
 
-This skill takes the raw deviation list out of fieldwork, classifies each one, ranks severity with rationale, names a root-cause hypothesis, sets a disposition, and builds the handoff package the downstream issue write-up consumes. It produces an exception register as a markdown artifact in `templates/default-output.md` shape and a structured record conforming to `schemas/exception.schema.json`. The workpaper drafter consumes that record by ID; the issue write-up consumes the per-exception handoff package via `source_exception_id`. The skill stops at preparer sign-off; the named reviewer signs separately and severity always carries human review.
+This skill takes the raw deviation list out of fieldwork, classifies each one, ranks severity with rationale, names a root-cause hypothesis, sets a disposition, and builds the handoff package the downstream issue write-up consumes. It drafts the exception register against `templates/default-output.md` and emits a structured record conforming to `schemas/exception.schema.json`. The workpaper drafter consumes that record by ID; the issue write-up consumes the per-exception handoff package via `source_exception_id`. The skill stops at preparer sign-off; the named reviewer signs separately and severity always carries human review.
 
 ## Ask first
 
@@ -35,7 +33,7 @@ Before classifying, get plain answers. Most cycles answer them in the test plan 
 - **Is there a prior cycle with similar deviations.** A repeat-issue flag changes severity calibration and the issue-writeup handoff. Check the issue log for the same control or population before classifying; do not let "looks new" pass when the prior issue is still open.
 - **What does the firm's tolerable deviation rate say.** Pulled from the test plan. Aggregation reads against tolerable, not against the preparer's intuition. If the rate is unset, that is a test-plan defect to flag back, not a number to invent here.
 
-When `engagement-scope` (per `risk-compliance-core/engagement-scoping`) is supplied, consume it: `institution.type` and `institution.primary_regulators` set the supervisory framing for severity rationale and dispositional language, `sector_overlay_set` selects which `references/sector-overlays/<sector>.md` loads, `cross_cutting_overlay_set` selects the `references/cross-cutting/<topic>.md` files, `persona.role` sets which review gate the register passes through, `source_posture` constrains what the body can carry. When it is not supplied, draft against what the test plan and workpaper carry, default to the testing program's standing posture, and note in the register that scope was not formalised separately.
+When `engagement-scope` (per `risk-compliance-core/engagement-scoping`) is supplied, consume it: `institution.type` and `institution.primary_regulators` set the supervisory framing for severity rationale and dispositional language, `sector_overlay_set` selects which `references/sector-overlays/<sector>.md` loads, `cross_cutting_overlay_set` selects the `references/cross-cutting/<topic>.md` files, `persona.role` sets which decision forum the register passes through, `source_posture` constrains what the body can carry. When it is not supplied, draft against what the test plan and workpaper carry, default to the testing program's standing posture, and note in the register that scope was not formalised separately.
 
 ## How the register gets built
 
@@ -81,9 +79,9 @@ The same classification spine carries different criteria sources, different seve
 
 Privacy and climate cross-cutting overlays follow the same pattern; this skill ships cyber and conduct as the v1 cross-cutting files because they are the most frequent triggers for exception classification. Where firm policy or taxonomy applies (severity ladder specific to the firm, named committee gates, policy-floor severity overrides for privileged access or critical data), it lives in `references/firm-overlay.md` and is consumed when present.
 
-## What's load-bearing and what flexes
+## Quality bar
 
-A handful of things do not flex:
+Holds across every register:
 
 - Every material claim cites a source. Mark unsupported items `[evidence needed]`. The register is the audit trail; absence of citation is a defect.
 - Source evidence, management assertions, public-source obligations, generated inferences, and open legal or compliance questions stay distinguishable in the register. The artifact shows the seams.
@@ -94,7 +92,9 @@ A handful of things do not flex:
 - The skill stops at preparer sign-off. The named reviewer signs separately. The handoff to issue write-up is a draft until the reviewer attests and the issue is opened.
 - No named institutions in the register unless they are public defendants in a finalised enforcement action.
 
-Everything else adapts to context. Register depth and length scale to deviation volume and severity range. A clean cycle with two evidence-gap exceptions reads short; a cycle with classified exceptions across multiple severities and root-cause categories reads longer with the disposition summary clustered for the audience that decides next steps. Sector overlay loading follows engagement-scope plus the rule that the regulator the test was designed for drives the sector overlay. Cross-cutting overlay loading: cyber overlay is default-on for any control test touching IAM, data-protection, or supervisory-rule-mandated security areas; conduct overlay is default-on for any consumer-facing test where customer-harm framing matters separately from technical control conclusion.
+## Adaptation
+
+Register depth and length scale to deviation volume and severity range. A clean cycle with two evidence-gap exceptions reads short; a cycle with classified exceptions across multiple severities and root-cause categories reads longer with the disposition summary clustered for the audience that decides next steps. Sector overlay loading follows engagement-scope plus the rule that the regulator the test was designed for drives the sector overlay. Cross-cutting overlay loading: cyber overlay is default-on for any control test touching IAM, data-protection, or supervisory-rule-mandated security areas; conduct overlay is default-on for any consumer-facing test where customer-harm framing matters separately from technical control conclusion.
 
 ## Pointers
 
@@ -111,4 +111,6 @@ The plugin-level shared references (`references/source-map.md`, `references/poli
 
 ## Output
 
-The skill emits an exception register in `templates/default-output.md` shape and a structured record conforming to `schemas/exception.schema.json`. Downstream consumers: `workpaper-drafter` reads `exception_register_id` and pulls the classification summary into the workpaper's exceptions-identified section; `risk-compliance-core/skills/issue-writeup` keys off `source_exception_id` and consumes the per-exception handoff package (criterion, condition, cause, effect, recommendation seed) without re-discovering context; `qa-workpaper` reads the full record when reviewing exception treatment for sufficiency. The schema is the cross-skill contract; additive changes only. Add fields, do not rename or repurpose them. A breaking change is a versioned migration with the downstream skills told in advance.
+Default to drafting against `templates/default-output.md`. Render as Word, Excel, PowerPoint, or Markdown when the audience or workflow asks for it. Produce the structured record at `schemas/exception.schema.json` when downstream automation or a registered consumer needs it. Exception work is exception-log-natural: the real deliverable is an Excel root-cause matrix (one row per deviation with classification, severity, rationale, root-cause hypothesis, disposition, and handoff fields) paired with a Word findings memo carrying the disposition summary and the elevated-issue handoffs.
+
+Downstream consumers: `workpaper-drafter` reads `exception_register_id` and pulls the classification summary into the workpaper's exceptions-identified section; `risk-compliance-core/skills/issue-writeup` keys off `source_exception_id` and consumes the per-exception handoff package (criterion, condition, cause, effect, recommendation seed) without re-discovering context; `qa-workpaper` reads the full record when reviewing exception treatment for sufficiency. The schema is the cross-skill contract; additive changes only. Add fields, do not rename or repurpose them. A breaking change is a versioned migration with the downstream skills told in advance.

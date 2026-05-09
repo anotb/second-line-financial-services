@@ -71,7 +71,7 @@ Also consult, when present in the plugin:
 
 - `references/source-map.md` — plugin-wide named-source map.
 - `references/policy-control-library.md` — plugin-wide policy-and-control library, including the data-collection control, the firewall control, and the regulatory-reporting control.
-- `references/review-gates.md` — named human-review gates and confidence-label definitions.
+- `references/review-gates.md` — named decision checkpoints and confidence-label definitions.
 
 ## Firm overlays
 

@@ -94,10 +94,10 @@ The skill cites these by file path. SKILL.md does not restate excerpts.
 
 ### 13. SR 11-7 — Guidance on Model Risk Management
 
-- Citation: Federal Reserve SR 11-7 / OCC Bulletin 2011-12, "Guidance on Model Risk Management" (April 4, 2011), §V (Model Documentation) and §VI (Third-Party Models). The OCC 2026 model risk refresh (OCC Bulletin 2026-13) carries forward and extends these expectations [verify exact bulletin number and date].
-- Excerpt-paraphrase: SR 11-7 sets supervisory expectations for model risk management at federally regulated banks; documentation, validation, and explainability expectations are the structural anchor for any model that drives adverse-action decisions. Where the model is AI / ML, the model-card, validation-plan, and adverse-action-reason-generation evidence form a single governance fabric.
+- Citation: Federal Reserve SR 11-7 / OCC Bulletin 2011-12, "Guidance on Model Risk Management" (April 4, 2011), §V (Model Documentation) and §VI (Third-Party Models). OCC Bulletin 2026-13 refreshes the model risk framework for traditional models but does not extend it to generative AI, retrieval-augmented generation, tool use, or agentic AI.
+- Excerpt-paraphrase: SR 11-7 sets supervisory expectations for model risk management at federally regulated banks; documentation, validation, and explainability expectations are the structural anchor for any model that drives adverse-action decisions. Where the model is AI / ML, the model-card, validation-plan, and adverse-action-reason-generation evidence form a single governance fabric. For GenAI / RAG / tool-use / agentic-AI scope, anchor to NIST AI RMF (1.0, January 2023), NIST AI 600-1 (Generative AI Profile, July 2024), and the EU AI Act (Regulation (EU) 2024/1689) where extraterritorial reach applies.
 - Link: https://www.federalreserve.gov/supervisionreg/srletters/sr1107.htm — §V documentation, §VI third-party.
-- Notes: Banking sector overlay anchor; relevant where the adverse-action review consumes model documentation produced under the bank's MRM program.
+- Notes: Banking sector overlay anchor; relevant where the adverse-action review consumes model documentation produced under the bank's MRM program. The 2026-13 carrying-forward language earlier in this file overstated reach and has been corrected.
 
 ### 14. GLBA Safeguards Rule — 16 CFR Part 314
 
@@ -126,7 +126,7 @@ The following items carry `[verify ...]` flags and must be confirmed at SKILL.md
 
 - CFPB Circular 2023-03 — confirm exact section title within the circular.
 - CFPB BNPL Interpretive Rule — confirm Federal Register citation and operative section reference.
-- OCC Bulletin 2026-13 — confirm bulletin number and date for the model-risk refresh as referenced from this skill.
+- OCC Bulletin 2026-13 — confirm bulletin number and date for the model-risk refresh; the bulletin scope does not include GenAI / RAG / tool use / agentic AI, which anchor to NIST AI RMF, NIST AI 600-1, and the EU AI Act.
 - NAIC Model #880 — confirm current model edition and unfair-discrimination section reference.
 
 Where verification is incomplete, the SKILL.md cites with the `[verify section]` flag carried forward; do not invent.
