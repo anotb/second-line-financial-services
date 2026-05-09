@@ -27,7 +27,7 @@ The plugin contributes overlay reference content into seven capability skills:
 - `risk-reporting/risk-committee-pack` — ORSA Summary Report mapping (Model #505) and CGAD support (Model #305 [verify]).
 - `consumer-compliance-fair-lending/fair-lending-test-plan` — Model #880 unfair-discrimination overlay (different statutory frame from ECOA / Reg B).
 
-Outlines for these overlays live in `internal/specs/insurance-risk-compliance/overlay-snippets.md`. The two AI overlays carry the substance previously carved out as standalone `insurance-ai-act-triage` and `claims-ai-controls` skills, now absorbed into the cross-industry skills via the insurance overlay.
+The two AI overlays carry the substance previously carved out as standalone `insurance-ai-act-triage` and `claims-ai-controls` skills, now absorbed into the cross-industry skills via the insurance overlay.
 
 ## Components
 

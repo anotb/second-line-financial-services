@@ -1,6 +1,0 @@
-metric,threshold,current_value,prior_value,status,owner,source_anchor
-AI high-risk use cases without validation plan,0,3,1,red,AI governance owner,NIST AI RMF and OCC 2026 MRM
-Critical ICT providers without tested exit plan,0,4,4,red,Third-party risk owner,EBA DORA register and interagency TPRM
-Risk report manual adjustments without evidence,0,7,9,amber,Risk reporting owner,BCBS 239
-Cyber incident materiality assessments pending over policy SLA,0,1,0,amber,Disclosure governance owner,SEC cyber disclosure guidance
-CDD high-risk refreshes past due,0,12,10,red,Financial crime compliance owner,FFIEC BSA AML CDD manual

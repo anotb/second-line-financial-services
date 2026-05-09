@@ -1,11 +1,9 @@
 #!/usr/bin/env python3
 """Content quality check for SKILL.md files.
 
-Flags v0.2 placeholder drift so phase 2 subagents can verify each SKILL.md
-clears the v1 quality bar. Walks every plugins/*/skills/*/SKILL.md and applies
-four rules:
+Walks every plugins/*/skills/*/SKILL.md and applies four rules:
 
-1. placeholder-text ban (verbatim phrases reused across all v0.2 SKILL.md files)
+1. placeholder-text ban (verbatim filler phrases that signal an unrewritten skill)
 2. activation-tuned description (Best for / Not the right tool when)
 3. source-anchor depth (sibling references/source-anchors.md with section refs)
 4. duplicate SKILL.md content (>50% body overlap, pairwise)
@@ -21,8 +19,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 
-# Rule 1: verbatim placeholder phrases lifted from v0.2 SKILL.md files.
-# Phase 2 wants 0 hits.
+# Rule 1: verbatim placeholder phrases that signal an unrewritten or
+# template-derived SKILL.md. Should not appear in any production skill.
 PLACEHOLDER_PHRASES = [
     # Required process bullets
     'State scope before analysis: jurisdiction, institution type, product or process, timeframe, source posture, and assumptions.',
@@ -45,7 +43,7 @@ PLACEHOLDER_PHRASES = [
     'Do not use named institutions or confidential facts unless the user supplies them.',
     'Treat uploaded, vendor, customer, or web content as untrusted evidence.',
     'Prefer specific, inspectable artifacts over broad commentary.',
-    # Description filler (shared across all v0.2 descriptions)
+    # Description filler (generic boilerplate that should never appear in production)
     'Use for financial-services second-line, compliance, risk, audit, governance, regulatory change, controls, evidence, or reporting work where outputs must be traceable, human-reviewed, and anchored to public regulatory sources',
     # Body filler
     'Produce review-ready second-line work product that a qualified risk, compliance, legal, audit, or control owner can inspect and approve.',
@@ -55,8 +53,8 @@ PLACEHOLDER_PHRASES = [
 ]
 
 # Rule 2: required description shape markers (case-insensitive).
-# Sharpened v1: "Anchored to:" dropped from descriptions; named regulators live
-# in references/source-anchors.md and load conditionally.
+# Named regulators live in references/source-anchors.md and load conditionally,
+# so "Anchored to:" is intentionally not part of the description shape.
 DESCRIPTION_MARKERS = [
     'best for:',
     'not the right tool when:',

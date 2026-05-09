@@ -1,6 +1,6 @@
 # Contributing
 
-Thanks for thinking about contributing. The repo is set up so a senior practitioner can drop in a new skill, sector overlay, or example without too much ceremony. Read [STATUS.md](STATUS.md) for what's locked and what's still open before starting larger work.
+Thanks for thinking about contributing. The repo is set up so a senior practitioner can drop in a new skill, sector overlay, or example without too much ceremony. See [ROADMAP.md](ROADMAP.md) for the planned shape of upcoming work.
 
 ## Add a new capability skill
 
@@ -11,24 +11,15 @@ Thanks for thinking about contributing. The repo is set up so a senior practitio
 5. Add `references/sector-overlays/<sector>.md` for any sector that adds material nuance, and `references/cross-cutting/<topic>.md` (cyber, privacy, conduct, climate) where the work touches it.
 6. Add `examples/<scenario>.md` derived from public regulatory or enforcement material. No named institutions unless they are public defendants in a finalized enforcement action with a published consent order.
 7. Optional: `schemas/<skill>.schema.json` if a downstream skill or automated consumer benefits from a structured record. Schemas are not required and should not be added for their own sake.
-8. If a standalone agent should bundle the skill, add the source path to that agent's `skills.bundle.json`.
-9. Run `python3 scripts/sync-agent-skills.py` to copy source skills into agent-plugin bundles.
-10. Run `python3 scripts/check.py` and `python3 scripts/check-skill-content.py` to validate.
+8. Run `python3 scripts/check.py` and `python3 scripts/check-skill-content.py` to validate.
 
 ## Add a new sector overlay
 
-Sector flavor for an existing capability skill goes inside that skill at `references/sector-overlays/<sector>.md`. Sector plugins ship sector-unique skills only; do not duplicate a capability skill into a sector plugin. See [STATUS.md](STATUS.md) for the strict-overlay rule.
+Sector flavor for an existing capability skill goes inside that skill at `references/sector-overlays/<sector>.md`. Sector plugins ship sector-unique skills only; do not duplicate a capability skill into a sector plugin.
 
-## Add a new standalone agent plugin
+## Standalone agent plugins
 
-1. Create `plugins/agent-plugins/<agent-name>/`.
-2. Add `.claude-plugin/plugin.json`.
-3. Add `agents/<agent-name>.md` as the primary workflow agent.
-4. Add at least three focused subagents under `agents/` (the reader / critic / writer pattern).
-5. Add `skills.bundle.json` listing the capability and sector skills the agent bundles.
-6. Run `scripts/sync-agent-skills.py`.
-7. Add the plugin to `.claude-plugin/marketplace.json`.
-8. Run validation.
+Agent plugins are not in the current release. The next iteration adds a primary-plus-critic two-agent shape with genuine context-isolated subagent forking and plugin manifest dependencies in place of bundled-skill copies. See [ROADMAP.md](ROADMAP.md) for the target design.
 
 ## Voice and editorial bar
 

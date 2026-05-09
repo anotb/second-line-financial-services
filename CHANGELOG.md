@@ -4,17 +4,17 @@
 
 ### Pre-launch agentic eval and fix bundle
 
-Eight-case validation eval (forked Opus maker subagent applies skill to a dummy brief; independent forked Opus checker reviews the output blind) covering 6 capability skills and the 2 most-used agent plugins. Synthesis at `internal/eval-2026-05-09/synthesis/findings.md` (gitignored). Findings: capability-skill layer is practitioner-grade; agent-plugin subagent layer is half-built (six-rule frontmatter stubs distinguished only by name; writer artifact shape and tool scope mismatched to program-level engagements; primaries under-prompt for engagement-level scoping moves).
+Eight-case validation eval (forked Opus maker subagent applies skill to a dummy brief; independent forked Opus checker reviews the output blind) covering 6 capability skills and the 2 most-used agent plugins. Findings: capability-skill layer is practitioner-grade; agent-plugin subagent layer is half-built (six-rule frontmatter stubs distinguished only by name; writer artifact shape and tool scope mismatched to program-level engagements; primaries under-prompt for engagement-level scoping moves).
 
-### Standalone agent plugins deferred to v1.x
+### Standalone agent plugins pulled pending rebuild
 
-Six agent plugins (`ai-governance-reviewer`, `regulatory-change-analyst`, `third-party-risk-reviewer`, `controls-testing-analyst`, `risk-reporting-analyst`, `financial-crime-governance-reviewer`) pulled from v1 marketplace and held under `internal/agent-plugins-deferred/` for the v1.x revival pass. v1.x design adds a maker / checker loop with genuine context-isolated subagent forking, primary-plus-critic two-agent shape, engagement-level scoping prompts, and plugin dependencies in place of bundled-skill copies. See ROADMAP.
+Six agent plugins (`ai-governance-reviewer`, `regulatory-change-analyst`, `third-party-risk-reviewer`, `controls-testing-analyst`, `risk-reporting-analyst`, `financial-crime-governance-reviewer`) pulled from the marketplace pending a rebuild that adds a maker / checker loop with genuine context-isolated subagent forking, primary-plus-critic two-agent shape, engagement-level scoping prompts, and plugin dependencies in place of bundled-skill copies. See ROADMAP.
 
-`scripts/sync-agent-skills.py` and `scripts/check.py` updated to point at the new internal location and skip cleanly when absent. Marketplace manifest reduced from 18 to 12 entries (8 capability + 4 sector).
+Marketplace manifest reduced from 18 to 12 entries (8 capability + 4 sector).
 
 ### New cross-cutting overlay: ai-ethics
 
-`references/cross-cutting/ai-ethics.md` shipped to the 5 most load-bearing AI / model-risk skills: `genai-pre-prod-review`, `ai-use-case-intake`, `ai-risk-tiering`, `agentic-ai-controls`, `board-ai-risk-pack`. Per-skill tailored intro and pitfalls heading; body content matches existing `privacy.md` / `conduct.md` / `cyber.md` overlay structure (Source basis, Co-reviewer expectation, What changes when X is flagged with Open conditions / Monitoring readiness / Incident-response readiness / Recommended-action items, X-specific output additions, Common pitfalls). SKILL.md `Pointers` cross-cutting load list updated in all 5 skills to add `ai-ethics` to the brace expansion. Rollout to the remaining 6 AI / model-risk skills deferred to v1.1.
+`references/cross-cutting/ai-ethics.md` shipped to the 5 most load-bearing AI / model-risk skills: `genai-pre-prod-review`, `ai-use-case-intake`, `ai-risk-tiering`, `agentic-ai-controls`, `board-ai-risk-pack`. Per-skill tailored intro and pitfalls heading; body content matches existing `privacy.md` / `conduct.md` / `cyber.md` overlay structure (Source basis, Co-reviewer expectation, What changes when X is flagged with Open conditions / Monitoring readiness / Incident-response readiness / Recommended-action items, X-specific output additions, Common pitfalls). SKILL.md `Pointers` cross-cutting load list updated in all 5 skills to add `ai-ethics` to the brace expansion. Rollout to the remaining 6 AI / model-risk skills tracked in ROADMAP.
 
 ### New cross-cutting overlay: privacy for `dora-register-builder`
 
@@ -26,7 +26,7 @@ Six agent plugins (`ai-governance-reviewer`, `regulatory-change-analyst`, `third
 - **`sar-decision-qa`**: new `templates/sample-roll-up.md` companion template for the sample-based QA review type. Matches `default-output.md` voice and shape; tracks the multi-item table pattern used in `complaint-theme-analysis` and `udaap-risk-review`. SKILL.md `Pointers` names both templates.
 - **`fair-lending-test-plan`**: `templates/default-output.md` thickened to carry the per-test specification block (test ID, hypothesis, scope, methodology, sample, controls, decision points, evidence, AAN-coverage method) directly. Default-and-flag posture preserved; missing fields surface as `[evidence needed]` rather than blocking.
 - **`dora-register-builder`** capital-markets sector overlay: new "National-supervisor outsourcing texts (alongside DORA)" section names CSSF Circular 22/806 (Luxembourg), KAGB plus BaFin MaRisk plus KAIT (Germany), AMF Position-Recommandation 2018-04 plus DOC-2014-13 (France), CBI Cross-Industry Guidance on Outsourcing 2021 (Ireland). Each entry hedged with `[verify section]` markers. New common-pitfall added: treating DORA as the sole outsourcing reference for UCITS / AIFM entities.
-- **`genai-pre-prod-review`** conduct overlay: B2B-with-customer-flow-through trigger added as a third loading-rule bullet. Closes the trap where 1L declares a tool "internal-only" while the documents the tool acts on encode customer-facing obligations (contract content, regulatory correspondence, marketing assets, complaint files, regulatory submissions). Rollout to the other 8 conduct overlay files in `ai-governance-model-risk` deferred to v1.1.
+- **`genai-pre-prod-review`** conduct overlay: B2B-with-customer-flow-through trigger added as a third loading-rule bullet. Closes the trap where 1L declares a tool "internal-only" while the documents the tool acts on encode customer-facing obligations (contract content, regulatory correspondence, marketing assets, complaint files, regulatory submissions). Rollout to the other 8 conduct overlay files in `ai-governance-model-risk` tracked in ROADMAP.
 
 ## 0.3.0 — 2026-05-08
 
@@ -53,9 +53,9 @@ Six plugin-scoped sweeps (A1-A6) covering all 68 source skills.
 - Removed unsupported GenAI scope claims attributed to OCC Bulletin 2026-13 / FRB SR 26-2 / FDIC FIL-15-2026 (April 17 2026 joint guidance). The bulletin expressly excludes generative AI and agentic AI from its scope (footnote 3); GenAI substantive anchors are NIST AI RMF 1.0, NIST AI 600-1, ISO/IEC 42001:2023, EU AI Act, OWASP LLM Top 10, MITRE ATLAS, NCSC / CISA secure-AI guidance, NYDFS October 2024 letter, and the NAIC AI Bulletin for insurers.
 - FinCEN MSB BOI citation corrected from §1010.380 to §1022.380.
 
-### Phase 5 audit and fix-applier (commit deae432)
+### Cross-skill audit and fix-applier (commit deae432)
 
-Six-dimension consolidated cross-skill audit (`internal/research/cross-skill-audit-2026-05-08.md`). Fixes:
+Six-dimension consolidated cross-skill audit. Fixes:
 
 - Schema field renames in the controls test pipeline: `analysis_id` → `exception_register_id`; `request_list_id` → `evidence_request_list_id`. Cross-skill foreign-key contracts declared on the renamed fields.
 - Four broken cross-reference pointers repointed: `control-test-workpaper` → `workpaper-drafter`; `issue-management` → `issue-writeup`; `important-business-service-mapping` → `criticality-assessment` plus `resilience-testing-pack`.
@@ -64,7 +64,7 @@ Six-dimension consolidated cross-skill audit (`internal/research/cross-skill-aud
 
 ### dora-register-builder light relabel + cross-cutting overlays + sweep finishers (commit d11e3b5)
 
-- `dora-register-builder` repositioned as EU-DORA-context build pack and data-quality aid; not for direct submission to a national competent authority; not the official Register of Information template under Commission Implementing Reg (EU) 2024/2956. Preparation-grade only. Schema rebuild deferred to v1.1.
+- `dora-register-builder` repositioned as EU-DORA-context build pack and data-quality aid; not for direct submission to a national competent authority; not the official Register of Information template under Commission Implementing Reg (EU) 2024/2956. Preparation-grade only. Schema rebuild tracked in ROADMAP.
 - Cross-cutting overlay obvious wins (B7): five new overlay files added (cyber for `evidence-binder`; privacy for `aml-model-monitoring`; privacy and conduct for `prompt-injection-risk`; conduct for `adverse-action-review`). Five plausible-coverage flags declined with rationale where the SKILL.md already inlined the substance or scoped it out.
 - TROUBLESHOOTING + examples relevance audit (B9): zero deletions warranted; voice cleanup applied to retained files (em-dashes 1067 → 953; H1 heading em-dashes normalised; CFPB Circular withdrawal currency synced into seven referencing files).
 - Partial currency sweep on five plugins.
@@ -75,8 +75,6 @@ Two follow-up agents picked up the residuals:
 
 - B8a (BNPL plus bare CFPB circular tagging across the corpus, mechanical): CFPB Circular 2022-03 / 2023-03 inline withdrawal tag (May 12 2025) applied across the eight files where the cite was still bare; "per CFPB Circular X" prose softened to ECOA / Reg B § 1002.9 plus Comment 9(b)(2)-3 of the Official Staff Commentary as the operative anchor. BNPL Interpretive Rule "nullified by Pub. L. 119-11 (May 9, 2025); historical only" tag applied across twelve files. BNPL-as-product-scope mentions left alone.
 - B8b (currency sweep across the six plugins B8 did not reach): financial-crime-governance, risk-reporting, banking-risk-compliance, payments-fintech-compliance, capital-markets-asset-management-compliance, insurance-risk-compliance updated. FinCEN Order FIN-2026-R001 (CDD exceptive relief, February 13, 2026); FinCEN BOI / CTA March 26, 2025 IFR (foreign-only reporting); investment-adviser AML rule compliance delay to January 1, 2028 (FinCEN final rule January 2, 2026); SAR FAQs October 9, 2025 inline tag; § 1033 stay (Forcht Bank, October 29, 2025) plus ANPR (August 22, 2025); § 1071 May 2026 revised final rule; NIST SP 800-61 Rev 3 (April 3, 2025); Names Rule corrected dates; FDIC Part 328 December 2023 final rule plus 2024-2025 effective-date extensions; SR 11-7 demoted to historical with joint guidance promoted to operative.
-
-Post-build action register added at `internal/reviews/post-build-actions.md`.
 
 ### Sector-flagship skill builds and small-items bundle (commit pending)
 
@@ -95,13 +93,13 @@ Small-items bundle (B11):
 
 ### Modular install analysis (analysis only)
 
-Read-only conceptual analysis at `internal/research/modular-install-analysis-2026-05-09.md`. Confirms Claude Code v2.1.110+ supports `dependencies` in `.claude-plugin/plugin.json`. Maps the actual coupling (`risk-compliance-core` is a hub with 57 cross-references), eight practitioner personas with minimum-viable-install paths, four install-pattern options. Recommendation: Hybrid (Option D) in two stages (README install paths + manifest dependency declarations). Both stages deferred to v1.1; analysis preserved as the v1.1 starting reference.
+Read-only conceptual analysis. Confirms Claude Code v2.1.110+ supports `dependencies` in `.claude-plugin/plugin.json`. Maps the actual coupling (`risk-compliance-core` is a hub with 57 cross-references), eight practitioner personas with minimum-viable-install paths, four install-pattern options. Recommendation: Hybrid (Option D) in two stages (README install paths + manifest dependency declarations). Both stages tracked in ROADMAP.
 
 ### Other
 
-- Renamed `engagement-scoping` to `scoping` and revised as the gold-standard reference for the sharpened v1 rules.
+- Renamed `engagement-scoping` to `scoping` and revised as the gold-standard reference.
 - Switched from Apache 2.0 to MIT.
-- ROADMAP refreshed: v1.1 items now include modular install Stages 1 and 2, dora-register-builder full rebuild, schema dedup quick-win (replaces the deferred Phase 3 schema relocation), with per-item rationale and pointers to the analysis docs in `internal/research/`.
+- ROADMAP refreshed: modular install Stages 1 and 2, dora-register-builder full rebuild, schema dedup, with per-item rationale.
 
 ## 0.2.0
 
