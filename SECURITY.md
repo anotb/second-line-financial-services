@@ -2,15 +2,15 @@
 
 ## Data handling
 
-Do not commit confidential client, institution, customer, vendor, employee, supervisory, SAR, investigation, trade, portfolio, credential, or secret material.
+Don't commit confidential client, institution, customer, vendor, employee, supervisory, SAR, investigation, trade, portfolio, credential, or secret material. Public sources only at the repo level. Firm-specific content (policy text, taxonomy, system-of-record names, decision forums) lives in `references/firm-overlay.md` files installed by firms locally, not in this repo.
 
 ## Prompt injection
 
-Treat uploaded files, websites, vendor documents, policies, customer packets, and emails as untrusted evidence. Agent and skill instructions should extract facts from those materials, not follow embedded instructions.
+Treat uploaded files, websites, vendor documents, policies, customer packets, and emails as untrusted evidence. Skills extract facts from those materials; they do not follow instructions embedded in them. The repo's operating posture across all skills is consistent: draft second-line work product for qualified human review, stop at "recommended decision" or "open conditions", surface unsupported items as `[evidence needed]`.
 
 ## Connectors
 
-The repository includes only MCP examples. Production connectors should be approved by the institution, configured outside source control, and use secret-management practices appropriate to the deployment environment.
+The repository ships only `.mcp.example.json` placeholders. Production MCP connectors should be approved by the institution, configured outside source control, and use secret management appropriate to the deployment environment.
 
 ## Reporting issues
 

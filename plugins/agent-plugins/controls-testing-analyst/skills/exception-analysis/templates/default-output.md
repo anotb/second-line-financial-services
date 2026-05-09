@@ -1,6 +1,6 @@
 # Exception register
 
-**Analysis ID**: [stable ID per firm naming convention]
+**Exception register ID**: [stable ID per firm naming convention; foreign key consumed by `workpaper-drafter` and source of `source_exception_id` handoffs into `risk-compliance-core/skills/issue-writeup`]
 **Test ID**: [foreign key into `test-plan-builder` output]
 **Workpaper ID**: [foreign key into `workpaper-drafter` output]
 **Control ID**: [firm control register ID]

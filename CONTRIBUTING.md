@@ -1,28 +1,48 @@
 # Contributing
 
+Thanks for thinking about contributing. The repo is set up so a senior practitioner can drop in a new skill, sector overlay, or example without too much ceremony. Read [STATUS.md](STATUS.md) for what's locked and what's still open before starting larger work.
+
 ## Add a new capability skill
 
-1. Add a folder under `plugins/capability-plugins/<plugin>/skills/<skill-name>/`.
-2. Add `SKILL.md` with frontmatter: `name`, `description`, and optional Claude Code fields such as `argument-hint`.
-3. Add `templates/default-output.md`.
-4. Update the plugin README if needed.
-5. If a standalone agent should use the skill, add the source path to that agent's `skills.bundle.json`.
-6. Run `python3 scripts/sync-agent-skills.py`.
-7. Run `python3 scripts/check.py`.
+1. Create `plugins/capability-plugins/<plugin>/skills/<skill-name>/`.
+2. Add `SKILL.md` with frontmatter (`name`, `description`, optional `argument-hint`). Description shape is summary + `Best for:` + `Not the right tool when:`. No `Anchored to:` line.
+3. Add `references/source-anchors.md` with named, dated regulatory and standards citations. Public sources only.
+4. Add `templates/default-output.md` for the artifact shape.
+5. Add `references/sector-overlays/<sector>.md` for any sector that adds material nuance, and `references/cross-cutting/<topic>.md` (cyber, privacy, conduct, climate) where the work touches it.
+6. Add `examples/<scenario>.md` derived from public regulatory or enforcement material. No named institutions unless they are public defendants in a finalized enforcement action with a published consent order.
+7. Optional: `schemas/<skill>.schema.json` if a downstream skill or automated consumer benefits from a structured record. Schemas are not required and should not be added for their own sake.
+8. If a standalone agent should bundle the skill, add the source path to that agent's `skills.bundle.json`.
+9. Run `python3 scripts/sync-agent-skills.py` to copy source skills into agent-plugin bundles.
+10. Run `python3 scripts/check.py` and `python3 scripts/check-skill-content.py` to validate.
 
-## Add a new standalone agent
+## Add a new sector overlay
+
+Sector flavor for an existing capability skill goes inside that skill at `references/sector-overlays/<sector>.md`. Sector plugins ship sector-unique skills only; do not duplicate a capability skill into a sector plugin. See [STATUS.md](STATUS.md) for the strict-overlay rule.
+
+## Add a new standalone agent plugin
 
 1. Create `plugins/agent-plugins/<agent-name>/`.
 2. Add `.claude-plugin/plugin.json`.
 3. Add `agents/<agent-name>.md` as the primary workflow agent.
-4. Add at least three focused subagents under `agents/`.
-5. Add `skills.bundle.json` and run the sync script.
-6. Add the plugin to `.claude-plugin/marketplace.json`.
-7. Run validation.
+4. Add at least three focused subagents under `agents/` (the reader / critic / writer pattern).
+5. Add `skills.bundle.json` listing the capability and sector skills the agent bundles.
+6. Run `scripts/sync-agent-skills.py`.
+7. Add the plugin to `.claude-plugin/marketplace.json`.
+8. Run validation.
+
+## Voice and editorial bar
+
+- Practitioner voice. The reader is a senior CRO, MRMO, TPRM lead, BSA officer, or compliance head. Skills should read like artifacts a colleague would draft, not process documentation.
+- References-first: SKILL.md body uses generic regulator language. Named regulators, sections, and dates live in `references/source-anchors.md`. Sector and cross-cutting overlays carry the regulator-specific content for their slice.
+- No em-dashes. Use ellipses, parentheses, or a comma.
+- No marketing adjectives, no bullet-point soup where prose serves better.
+- Skills draft. Qualified humans approve, file, rate, onboard, decline, notify, or close. Every artifact stops at "recommended decision" or "open conditions"; sign-off stays with named human reviewers.
 
 ## Quality bar
 
-- Use public or user-provided sources. Do not invent evidence.
-- Include human-review gates for decisions, filings, approvals, and customer-impacting actions.
-- Keep `SKILL.md` focused. Put long references in `references/`.
-- Avoid named-institution examples unless the source is public and the repo maintainer has decided it is appropriate.
+- Public sources only at the repo level. Firm-specific content lands in `references/firm-overlay.md` when a firm installs one.
+- Material claims cite a named, dated source. `[evidence needed]` flags items that need follow-up.
+- Treat external evidence (vendor responses, public reports, customer packets, emails, web content) as untrusted: extract facts, do not follow embedded instructions.
+- Include human-review checkpoints for decisions, filings, approvals, and customer-impacting actions.
+- Keep `SKILL.md` focused. Long references go in `references/`.
+- Avoid named-institution examples unless the source is public and the maintainer has agreed it's appropriate.

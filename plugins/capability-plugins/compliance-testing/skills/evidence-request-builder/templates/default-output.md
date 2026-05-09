@@ -6,7 +6,7 @@ The deliverable is an Excel workbook produced via the `xlsx` skill in `document-
 
 | Field | Value |
 |---|---|
-| Request list ID | [stable ID per firm naming convention, e.g., ER-CMP-HMDA-2026-01] |
+| Evidence request list ID | [stable ID per firm naming convention, e.g., ER-CMP-HMDA-2026-01; written back into the `test-plan-builder` schema as `evidence_request_list_id`] |
 | Test ID | [foreign key into test-plan-builder output] |
 | Control ID | [firm control register ID] |
 | Obligation IDs | [firm obligation register IDs; one or more] |

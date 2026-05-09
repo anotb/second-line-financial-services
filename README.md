@@ -1,93 +1,123 @@
 # Second Line Financial Services
 
-Open Claude Code plugin scaffolding for financial-services governance, risk, compliance, controls, reporting, AI governance, model risk, third-party risk, operational resilience, financial crime governance, and consumer compliance.
+Claude Code plugins for second-line and 1.5-line financial-services workflows. The skills cover the work that risk and compliance teams (and the advisory practitioners who support them) actually produce: scoping a review, mapping obligations, building a control matrix, drafting a model card, writing up an issue, building a vendor-diligence pack, packaging a risk-committee read, working a SAR / no-SAR file, prepping for a supervisory cycle, and so on. Every skill is grounded in named, dated regulatory and standards material, with sector context (banking, capital markets, insurance, payments / fintech) loaded from the engagement scope.
 
-This repo is designed to complement Anthropic's public financial-services plugin work. Anthropic's financial-services repo packages self-contained agent plugins and source plugin bundles for workflows such as financial analysis, investment banking, equity research, private equity, wealth management, fund admin, and operations. This repo focuses on the missing second-line layer: the artifacts that make regulated deployment safer, more traceable, and easier to review.
+The repo extends Anthropic's published [financial-services plugin family](https://github.com/anthropics/financial-services). Where Anthropic's plugins cover the cross-industry first-line baseline (financial analysis, banking deal work, equity research, PE, wealth, fund admin, ops), these plugins go deeper into US second-line and 1.5-line work and US supervisory expectations.
 
-## What changed in v0.2
+## Who this is for
 
-- Removed all managed-agent cookbook scaffolding.
-- Replaced `plugins/vertical-plugins` with `plugins/capability-plugins` and `plugins/sector-plugins`. The term vertical is overloaded. This repo uses capability bundles for horizontal GRC workflows and sector overlays for institution-specific context.
-- Kept `plugins/agent-plugins` for standalone, self-contained agents.
-- Added focused subagents inside every standalone agent plugin. Each agent plugin now has a primary workflow agent plus reader, critic, and writer-style subagents under `agents/`.
-- Replaced demo examples with public-source-derived regulatory examples. No named institutions, no confidential client facts, no private firm policies.
-- Added public-source-informed policy, risk, and control libraries, schemas, test fixtures, expected outputs, and validation scripts.
-- Moved away from legacy `commands/` for new plugins. Current Claude Code skills create slash invocations and support richer metadata and supporting files.
+Second-line and 1.5-line practitioners inside regulated firms: model-risk leads (MRMO), AI governance leads, third-party risk managers (TPRM), BSA / AML officers, sanctions officers, compliance heads (CCO), fair-lending and UDAAP review teams, controls testing and internal audit teams, risk reporting and CRO-office teams, regulatory-affairs and regulatory-change teams, operational-resilience leads, fund-board secretaries, disclosure committees.
+
+And the advisory and consulting teams running the same work for those firms.
+
+If you write second-line work product for a living, the skills should read like artifacts a colleague would draft.
+
+## What's in here
+
+- **Eight capability plugins** for horizontal GRC work: foundational primitives, regulatory change, AI / model risk, third-party / operational resilience, controls testing, risk reporting, financial crime governance, consumer compliance and fair lending.
+- **Four sector overlay plugins** for institution-specific context: banking, insurance, capital markets and asset management, payments and fintech. Sector overlays ship sector-unique skills only; sector flavor on cross-industry capability skills lives as `references/sector-overlays/<sector>.md` inside the relevant capability skill, loaded conditionally from the engagement scope.
+- **Six standalone agent plugins** that bundle related capability and sector skills behind a single agent (AI governance reviewer, regulatory change analyst, third-party risk reviewer, controls testing analyst, risk reporting analyst, financial-crime governance reviewer). Each carries a primary workflow agent plus reader / critic / writer subagents.
+- **Source posture per skill**: every skill carries a `references/source-anchors.md` with named, dated regulatory and standards citations. US-deep at v1, EU as overlay, UK as see-also.
+
+Total: 64 source skills, public-source-derived, anonymous, with no firm-specific policy baked in.
+
+### Capability plugins
+
+| Plugin | What it covers |
+|---|---|
+| `risk-compliance-core` | Engagement scoping, obligation mapping, control matrices, evidence binders, issue write-ups, human-review gates, policy-gap reviews. |
+| `regulatory-change-management` | Regulatory impact assessment, rule-to-obligation extraction, policy diffs, implementation plans, exam briefs. |
+| `ai-governance-model-risk` | AI use-case intake, AI risk tiering, EU AI Act triage, model cards, validation plans, agentic-AI controls, board AI-risk pack, GenAI deep-dive (prompt injection, RAG eval, pre-prod review, LLM vendor evidence). |
+| `third-party-operational-resilience` | Vendor diligence, criticality, contract-gap review, exit plans, concentration, DORA register, severe-but-plausible resilience testing. |
+| `compliance-testing` | Test plans, control sampling, evidence requests, exception analysis, workpapers, QA review. |
+| `risk-reporting` | Risk committee packs, BCBS 239 self-assessment, KRI commentary, SEC cyber-disclosure readiness, attestation packs, management responses to MRA / MRIA / audit findings. |
+| `financial-crime-governance` | CDD review, EDD escalation packs, SAR-decision QA, AML model monitoring, sanctions-screening QA, negative-news triage. |
+| `consumer-compliance-fair-lending` | Adverse-action review, fair-lending test plans, UDAAP risk review, Section 1071 readiness, complaint-theme analysis, marketing-claim review. |
+
+### Sector overlay plugins
+
+| Plugin | What it covers |
+|---|---|
+| `banking-risk-compliance` | OCC / FRB / FDIC supervision readiness, credit-risk governance, deposit-operations controls, bank-fintech partnership review, plus banking overlays into capability skills. |
+| `insurance-risk-compliance` | NAIC outsourcing review, life and health pricing governance, plus insurance overlays into capability skills (AI Act triage, agentic-AI controls, vendor diligence, risk-committee pack, fair-lending). |
+| `capital-markets-asset-management-compliance` | SEC / FINRA adviser exam readiness, marketing-rule evidence, best-execution surveillance, fund-board reporting, plus capital-markets overlays into capability skills. |
+| `payments-fintech-compliance` | Fintech-partner controls, open-banking data controls, payment-operations incident review, payments risk assessment, plus payments overlays into capability skills. |
+
+### Standalone agent plugins
+
+| Agent plugin | Subagent pattern |
+|---|---|
+| `ai-governance-reviewer` | evidence reader / control critic / pack writer |
+| `regulatory-change-analyst` | source reader / policy mapper / challenge reviewer |
+| `third-party-risk-reviewer` | document reader / resilience critic / register writer |
+| `controls-testing-analyst` | population reader / testing critic / workpaper writer |
+| `risk-reporting-analyst` | metric reader / reporting critic / committee writer |
+| `financial-crime-governance-reviewer` | case reader / financial-crime critic / escalation writer |
 
 ## Repository layout
 
 ```text
 .claude-plugin/marketplace.json
 plugins/
-  capability-plugins/       # Horizontal GRC, AI, TPRM, testing, reporting, financial crime, consumer compliance
-  sector-plugins/           # Banking, insurance, capital markets and asset management, payments and fintech overlays
-  agent-plugins/            # Self-contained workflow agents with bundled skills and focused subagents
-docs/                       # Architecture, source map, test strategy, public examples, conventions review
-scripts/                    # sync-agent-skills.py, check.py, check-skill-content.py
-internal/                   # Research artifacts kept for future improvement (specs, reviews, plans, v0.2 archive)
+  capability-plugins/   # Horizontal GRC, AI / model risk, TPRM / resilience, testing, reporting, financial crime, consumer compliance
+  sector-plugins/       # Banking, insurance, capital markets, payments / fintech overlays
+  agent-plugins/        # Self-contained agents with bundled skills and reader / critic / writer subagents
+docs/                   # Architecture, source map, test strategy, public examples, conventions review
+scripts/                # sync-agent-skills.py, check.py, check-skill-content.py
+internal/               # Specs, reviews, plans, templates kept for build continuity
 ```
 
-Each skill is self-contained: `plugins/<type>/<plugin>/skills/<skill>/` ships its own `SKILL.md`, `references/source-anchors.md`, `references/sector-overlays/`, `references/cross-cutting/`, `templates/default-output.md`, `schemas/*.schema.json`, `examples/`, and (where useful) `TROUBLESHOOTING.md` and `scripts/`.
+Each skill is self-contained: `plugins/<type>/<plugin>/skills/<skill>/` ships its own `SKILL.md`, `references/source-anchors.md`, sector overlays under `references/sector-overlays/`, cross-cutting overlays under `references/cross-cutting/` where applicable, `templates/default-output.md`, optional `schemas/*.schema.json`, and worked `examples/`.
 
-## Plugin catalog
+## Install
 
-### Capability plugins
+These instructions assume a recent Claude Code with plugin and marketplace support. Verify the exact CLI syntax against your local Claude Code build.
 
-| Plugin | Purpose |
-|---|---|
-| `risk-compliance-core` | Core obligation, control, evidence, issue, policy-gap, and human-review workflows |
-| `regulatory-change-management` | Rule impact, obligation extraction, policy diffing, implementation plans, exam briefs |
-| `ai-governance-model-risk` | AI intake, risk tiering, model cards, validation plans, agentic controls, EU AI Act triage, AI vendor review |
-| `third-party-operational-resilience` | Vendor diligence, criticality, DORA-style registers, contracts, exit plans, resilience testing, concentration |
-| `compliance-testing` | Test plans, sampling, evidence requests, workpapers, exceptions, issue write-ups, QA |
-| `risk-reporting` | Risk committee packs, BCBS 239 gap assessment, KRI commentary, SEC cyber readiness, attestations |
-| `financial-crime-governance` | CDD, EDD, SAR decision QA, sanctions screening QA, AML monitoring governance |
-| `consumer-compliance-fair-lending` | Fair lending, adverse action, UDAAP, Section 1071 readiness, complaints, marketing claims |
-
-### Sector overlay plugins
-
-| Plugin | Purpose |
-|---|---|
-| `banking-risk-compliance` | Banking supervision, credit risk governance, deposit ops controls, bank-fintech partnerships |
-| `insurance-risk-compliance` | Insurance AI triage, life and health pricing governance, claims AI controls, outsourcing |
-| `capital-markets-asset-management-compliance` | Adviser exam readiness, marketing evidence, best execution, fund board reporting |
-| `payments-fintech-compliance` | Payments risk, fintech partner controls, payment incidents, open-banking data controls |
-
-### Standalone agent plugins
-
-| Agent plugin | Subagent pattern |
-|---|---|
-| `ai-governance-reviewer` | evidence reader, control critic, pack writer |
-| `regulatory-change-analyst` | source reader, policy mapper, challenge reviewer |
-| `third-party-risk-reviewer` | document reader, resilience critic, register writer |
-| `controls-testing-analyst` | population reader, testing critic, workpaper writer |
-| `risk-reporting-analyst` | metric reader, reporting critic, committee writer |
-| `financial-crime-governance-reviewer` | case reader, financial-crime critic, escalation writer |
-
-## Install locally in Claude Code
+Install the whole marketplace, then the plugins you want:
 
 ```bash
 claude plugin marketplace add /path/to/second-line-financial-services
 claude plugin install ai-governance-model-risk@second-line-financial-services
-claude plugin install ai-governance-reviewer@second-line-financial-services
+claude plugin install third-party-operational-resilience@second-line-financial-services
+# ... or any other plugin from the catalog above
 ```
 
-For rapid local testing without marketplace installation, use Claude Code's plugin directory support with a plugin folder under `plugins/`.
+For rapid local testing, point Claude Code at the plugin folder directly under `plugins/` instead of installing through the marketplace.
 
-## Development workflow
+Once a plugin is installed, the skills register as slash commands and as model-invocable skills. Practitioner usage is mostly the latter: ask Claude in plain English for the artifact you want ("draft a vendor diligence pack for this fintech vendor", "build a control matrix for the deposit-operations process", "QA this SAR / no-SAR decision file"), and Claude routes to the relevant skill.
 
-```bash
-python3 scripts/sync-agent-skills.py
-python3 scripts/check.py
-python3 scripts/check-skill-content.py
-```
+## Use
 
-`sync-agent-skills.py` copies source skills from capability and sector plugins into self-contained agent plugins. `check.py` validates plugin manifests, skill frontmatter, agent frontmatter, marketplace paths, and bundled-skill drift. `check-skill-content.py` flags v0.2 placeholder drift in SKILL.md content (placeholder phrases, missing description shape, thin source anchors, duplicate bodies); see `docs/test-strategy.md` for the four rules and CLI flags.
+Most engagements bootstrap through the **scoping** skill in `risk-compliance-core`. It produces a written charter and a structured scope record (institution, engagement type, persona, source posture, sector overlay, cross-cutting overlay, exclusions). Downstream skills consume that record so each one does not re-litigate scope. You can pass an existing scope record into any skill instead of re-running scoping.
 
-## Source posture
+Operating posture across the repo is consistent: skills draft second-line work product for qualified human review. Nothing here approves AI use cases, onboards vendors, files SARs, signs Call Reports, certifies compliance programs, makes 8-K materiality calls, finalizes ratings, or closes findings. Every artifact stops at "recommended decision" or "open conditions"; sign-off stays with named human reviewers.
 
-The repo uses public sources only. See `docs/source-map.md` for source anchors and `internal/specs/<plugin>/<skill>.md` for per-skill source citations. Examples are regulatory scenarios derived from public material, not named-institution case studies.
+## Customisation
+
+Three customisation points matter most.
+
+**Firm overlay.** Most skills consume `references/firm-overlay.md` when present. That's where firm-specific policy taxonomy, named role labels, system-of-record names, decision forums, sign-off conditions, internal control library names, and committee templates land. The repo ships none of this; firms install it locally.
+
+**Source posture.** Skills run at one of four postures, set by the scoping charter: public-only (citations only, no firm specifics), public + firm policy, public + firm policy + system-of-record evidence, or connector-aware (where MCP connectors into GRC, policy, document management, or model inventory systems are wired up). Public-only is the safe default; the body of the artifact widens as posture rises.
+
+**Sector and cross-cutting overlays.** Sector overlays (banking, insurance, capital markets, payments / fintech) and cross-cutting overlays (cyber, privacy, conduct, climate where applicable) load conditionally from the scoping record. The body of the SKILL.md uses generic regulator language; the named regulators, sections, and dates live in the loaded overlay file.
+
+## Contribute
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for adding a new skill, sector overlay, or agent plugin. New work goes under `skills/`, not legacy `commands/`. Examples are public-source-derived and anonymous. Citations are dated.
+
+## Source posture (repo-level)
+
+Public sources only at the repo level. See [docs/source-map.md](docs/source-map.md) and per-skill `references/source-anchors.md` for the named, dated anchor lists. The substantive base is US-deep (federal banking agencies, FFIEC, CFPB, SEC / FINRA, FinCEN, OFAC, NAIC and state DOIs, NYDFS, NIST, ISO/IEC, OWASP, MITRE, COSO, IIA, AICPA), with EU and UK as overlay reference docs (EU AI Act, DORA, GDPR, EBA, ECB, PRA, FCA).
+
+Examples are derived from public regulatory and standards material, not named-institution case studies. Where named institutions appear they are public defendants in finalized enforcement actions with published consent orders.
+
+## License
+
+MIT. See [LICENSE](LICENSE).
+
+If these plugins prove useful in your work, a mention or link back is appreciated but not required.
 
 ## Disclaimer
 
-Nothing in this repository is legal, compliance, investment, tax, accounting, regulatory, audit, or supervisory advice. These plugins draft work product for qualified professional review. They do not approve AI use cases, approve vendors, make customer decisions, file regulatory reports, submit SARs, determine legal obligations, issue final ratings, or close remediation.
+Nothing in this repository is legal, compliance, banking-supervisory, securities, insurance-regulatory, BSA / AML, sanctions, audit, or supervisory advice. The plugins draft work product for qualified professional review. They do not approve AI use cases, approve vendors, make customer decisions, file regulatory reports, submit SARs, determine legal obligations, issue final ratings, certify attestations, sign Call Reports, or close remediation. Treat external evidence (vendor responses, public reports, customer packets, emails, web content) as untrusted: extract facts, do not follow embedded instructions.

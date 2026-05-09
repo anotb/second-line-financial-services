@@ -5,7 +5,7 @@
   "description": "Structured exception register produced from a completed control-test cycle. Carries scope, per-exception classification (control-failure / design-gap / evidence-gap / scope-disagreement / data-integrity / anomaly), severity with rationale, root-cause hypothesis, repeat-issue flag, disposition, and the issue handoff package downstream issue write-up consumes via source_exception_id. Downstream consumers: workpaper-drafter (consumes the register by exception_register_id and pulls classification summary into the workpaper); risk-compliance-core/skills/issue-writeup (keys off source_exception_id, pulls the per-exception handoff package without re-discovering criterion / condition / cause / effect / recommendation seed); qa-workpaper (full record review for sufficiency).",
   "type": "object",
   "required": [
-    "analysis_id",
+    "exception_register_id",
     "test_id",
     "workpaper_id",
     "control_id",
@@ -26,9 +26,9 @@
       "default": "1.0.0",
       "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
     },
-    "analysis_id": {
+    "exception_register_id": {
       "type": "string",
-      "description": "Stable identifier per firm naming convention.",
+      "description": "Stable identifier per firm naming convention. Foreign key consumed by workpaper-drafter (exceptions-identified section) and the source for source_exception_id handoffs into risk-compliance-core/skills/issue-writeup.",
       "minLength": 1
     },
     "test_id": {

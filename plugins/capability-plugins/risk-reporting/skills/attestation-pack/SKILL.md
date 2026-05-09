@@ -12,7 +12,7 @@ description: |
   Not the right tool when:
   - The artifact is the underlying risk-control matrix (use `risk-compliance-core/skills/control-matrix`; this skill consumes it).
   - The artifact is the issue write-up for an exception identified during attestation (use `risk-compliance-core/skills/issue-writeup`).
-  - The artifact is a single control test workpaper (use `compliance-testing/skills/control-test-workpaper`).
+  - The artifact is a single control test workpaper (use `compliance-testing/skills/workpaper-drafter`).
   - The artifact is a management response to a regulator finding (use `management-response`).
   - The work is the executive certification under the relevant securities-law sections; this skill produces the process-owner and function-head sub-certifications that ladder to the executive certification, which is securities-counsel-led and out of scope.
 argument-hint: "[attestation type, attesting role, period, upstream control matrix pointer, prior-period pack, or scope statement]"

@@ -39,7 +39,7 @@ When `scope` (per `risk-compliance-core/scoping`) is supplied, consume it: `inst
 
 The register has the same spine across control types. A senior preparer fills it in roughly in the order deviations surfaced, not in lockstep.
 
-The header pins the register to its test cycle: analysis ID, test ID (foreign key into `test-plan-builder` output), workpaper ID (foreign key into `workpaper-drafter` output), control ID, obligation IDs, period under test, business unit, jurisdiction, source posture, preparer role and date, reviewer role and date placeholder. Reviewer separation is structural, not advisory: the same role cannot both classify and review classification. The header is the audit trail when classification is later contested in QA, in steering, or with a regulator.
+The header pins the register to its test cycle: exception register ID, test ID (foreign key into `test-plan-builder` output), workpaper ID (foreign key into `workpaper-drafter` output), control ID, obligation IDs, period under test, business unit, jurisdiction, source posture, preparer role and date, reviewer role and date placeholder. Reviewer separation is structural, not advisory: the same role cannot both classify and review classification. The header is the audit trail when classification is later contested in QA, in steering, or with a regulator.
 
 Scope and source posture restates the test plan's scope in two or three sentences. The pointer to the workpaper goes here. If the workpaper noted scope changes from the plan, those carry forward into the classification context.
 

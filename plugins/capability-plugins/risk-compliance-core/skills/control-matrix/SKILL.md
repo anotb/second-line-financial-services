@@ -10,7 +10,7 @@ description: |
 
   Not the right tool when:
   - The obligations have not been extracted yet. Run `obligation-mapping` first; the matrix consumes its output.
-  - The work is a single-control workpaper for an audit sample (use compliance-testing's control-test-workpaper).
+  - The work is a single-control workpaper for an audit sample (use compliance-testing's `workpaper-drafter`).
   - The work is drafting a finding (use `issue-writeup`).
   - The work is portfolio-level coverage commentary across many matrices (the risk-committee pack, not this).
 argument-hint: "[process or product in scope, plus pointer to obligation set or extract]"

@@ -61,7 +61,7 @@ FRB and OCC findings are typically communicated in or alongside the annual revie
 - Standing committee pack carrying the finding ageing across the open population: `risk-reporting/skills/risk-committee-pack` (issues-and-remediation-status section).
 - BCBS 239 self-assessment for data-quality findings: `risk-reporting/skills/bcbs239-gap-assessment`.
 - Third-party remediation: `third-party-operational-resilience/skills/contract-gap-review` and `third-party-operational-resilience/skills/concentration-risk-review`.
-- Operational-resilience remediation: `third-party-operational-resilience/skills/important-business-service-mapping`.
+- Operational-resilience remediation: `third-party-operational-resilience/skills/criticality-assessment` (important-business-service mapping) and `third-party-operational-resilience/skills/resilience-testing-pack`.
 
 ## Banking-specific output additions
 

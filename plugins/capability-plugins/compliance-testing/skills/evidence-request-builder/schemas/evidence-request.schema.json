@@ -5,7 +5,7 @@
   "description": "Provided-by-client (PBC) evidence request list for a single control test cycle. One row per evidence ask, with control-objective tie, criterion source, artifact description, format requested, system of record, owner role, due date, population reference, reliance classification, and status. Produced before fieldwork begins; tracked through fieldwork; closed when all rows resolve to received-or-not-applicable. Downstream consumers: workpaper-drafter (reads request_id per evidence row in the workpaper's evidence-inspected table); evidence-binder (reads the closed list as the index of what was produced for this cycle). The list is the operational ask; conclusions live in the workpaper.",
   "type": "object",
   "required": [
-    "request_list_id",
+    "evidence_request_list_id",
     "test_id",
     "control_id",
     "period_start",
@@ -24,9 +24,9 @@
       "default": "1.0.0",
       "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
     },
-    "request_list_id": {
+    "evidence_request_list_id": {
       "type": "string",
-      "description": "Stable identifier per firm naming convention.",
+      "description": "Stable identifier per firm naming convention. Foreign key written back into test-plan-builder output (test-plan.schema.json#evidence_request_list_id) and consumed by evidence-binder once the list closes.",
       "minLength": 1
     },
     "test_id": {

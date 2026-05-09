@@ -20,7 +20,7 @@ This is the canonical cyber-control-testing use of exception-analysis. It exerci
 ## Output sketch
 
 ```yaml
-analysis_id: EX-2026-Q1-IAM-Recert-02
+exception_register_id: EX-2026-Q1-IAM-Recert-02
 test_id: TP-2026-Q1-IAM-Recert-02
 workpaper_id: WP-2026-Q1-IAM-Recert-02
 control_id: CTL-IAM-RECERT-Q
@@ -283,7 +283,7 @@ human_review_required: true
 
 ## Why the register shape matters downstream
 
-- `workpaper-drafter` reads this register by `analysis_id` and pulls the disposition summary, the design-gap projection commentary (100% of packets), and the privileged-access policy-floor classification into the workpaper's conclusion section.
+- `workpaper-drafter` reads this register by `exception_register_id` and pulls the disposition summary, the design-gap projection commentary (100% of packets), and the privileged-access policy-floor classification into the workpaper's conclusion section.
 - `risk-compliance-core/skills/issue-writeup` keys off `source_exception_id` for X1, X2, X3, and X4. The writer for X3 inherits the repeat-issue flag and the prior-issue link automatically; the matter-requiring-attention / matter-requiring-immediate-attention classification field on the issue schema reads "n/a" because the source is internal testing, not an examiner letter.
 - The cyber overlay's evidence-gap-versus-control-failure disambiguation drove X3's classification: the IAM system showing the entitlement still active is corroborating evidence that the control did not operate, so it cannot be an evidence-gap.
 - The firm policy floor on privileged access overrode what the underlying severity calibration would have produced; the severity rationale field carries the override explicitly.

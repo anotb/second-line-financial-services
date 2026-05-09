@@ -14,7 +14,7 @@ description: |
   - Policy gaps have not been identified. Use `policy-diff` to surface the gaps; combine with control-gap output from compliance-testing where available.
   - The artifact is for an active examination engagement. Use `exam-brief` for the engagement-side scaffolding; this skill chains downstream from exam-brief when an MRA, MRIA, or supervisory letter is issued.
   - The objective is to assess whether the firm should comply at all. That is a legal determination and is out of scope for the second line.
-  - The trigger is a single low-risk issue suited to issue-management lifecycle (use `risk-compliance-core/issue-management`); this skill is for programme-level remediation.
+  - The trigger is a single low-risk issue suited to the routine issue-management lifecycle (use `risk-compliance-core/skills/issue-writeup`); this skill is for programme-level remediation.
 
 argument-hint: "[obligation list, policy-diff output, control-gap input, trigger artifact (rule, MRA, MRIA, consent order), effective date, scope]"
 ---

@@ -19,7 +19,7 @@ This is the canonical consumer-compliance use of exception-analysis. It exercise
 ## Output sketch
 
 ```yaml
-analysis_id: EX-2026-Q1-RegE-04
+exception_register_id: EX-2026-Q1-RegE-04
 test_id: TP-2026-Q1-RegE-04
 workpaper_id: WP-2026-Q1-RegE-04
 control_id: CTL-RegE-PROVCRED-01
@@ -236,7 +236,7 @@ human_review_required: true
 
 ## Why the register shape matters downstream
 
-- `workpaper-drafter` reads this register by `analysis_id` and pulls the disposition summary into the workpaper's exceptions-identified section without re-classifying.
+- `workpaper-drafter` reads this register by `exception_register_id` and pulls the disposition summary into the workpaper's exceptions-identified section without re-classifying.
 - `risk-compliance-core/skills/issue-writeup` keys off `source_exception_id` for X1 and X4 and consumes the populated handoff packages directly; the writer refines the recommendation seed but does not re-discover criterion, condition, cause, or effect.
 - The conduct cross-cutting overlay shaped X1's severity calibration (consumer-harm read pushed severity from medium to high on the timing pattern).
 - The repeat-issue flag on X1 routes to the issue log to link to the prior open issue, so the issue writer can decide whether to extend the existing issue or open a fresh one with linkage.

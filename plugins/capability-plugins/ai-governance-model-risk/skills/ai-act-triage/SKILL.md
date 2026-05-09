@@ -35,7 +35,7 @@ A handful of facts decide most of the work. If they are not on the table, draft 
 - Where is the use case in lifecycle. Pre-build triage scopes obligations early. Pre-prod triage gates the deployment. Post-market triage updates the classification when the system, the data, or the law changes (foundation-model swap, Annex III amendment, Article 113 date landing).
 - What is the scope record saying. Sector and cross-cutting overlays load from the scope. The skill does not guess sector.
 
-When the scope record is supplied, the skill consumes it for institution profile, persona, source posture, sector overlays (banking, insurance, capital-markets, payments-fintech), and cross-cutting overlays (cyber, privacy, conduct). Without a scope record the skill asks the practitioner the few facts it needs and proceeds against partial input.
+When the scope record is supplied, the skill consumes it for institution profile, persona, source posture, sector overlays (banking, insurance, capital-markets, payments-fintech), and the conduct cross-cutting overlay shipped with this skill; cyber and privacy framing live inline in the body (Article 15 / NIS2 / DORA seam; Article 27 / GDPR Article 35 reconciliation) rather than as separate domain files. Without a scope record the skill asks the practitioner the few facts it needs and proceeds against partial input.
 
 ## How the triage walks
 
@@ -93,7 +93,7 @@ Downstream consumers: `model-card-builder` pulls the Annex IV documentation delt
 
 - `references/source-anchors.md` — citations and section-referenced excerpts for every primary anchor.
 - `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md` — sector overlays loaded from scope. The insurance overlay carries the substance of the deprecated `insurance-ai-act-triage` skill.
-- `references/cross-cutting/conduct.md` — conduct overlay (cyber and privacy cross-cutting overlays sit in the broader plugin reference set; load when the scope names them).
+- `references/cross-cutting/conduct.md` — conduct overlay loaded when scope names it. Cyber and privacy framings are inline in the body above (Article 15 robustness × NIS2 / DORA Articles 5 to 14; Article 27 FRIA × GDPR Article 35 DPIA reconciliation); this skill does not ship separate cyber or privacy cross-cutting files because the substance lives at Article level rather than as a parallel domain overlay.
 - `references/firm-overlay.md` — firm policy, taxonomy, named legal/compliance owners (consumed when present).
 - `templates/default-output.md` — triage record template.
 - `schemas/ai-act-triage.schema.json` — structured-output contract.

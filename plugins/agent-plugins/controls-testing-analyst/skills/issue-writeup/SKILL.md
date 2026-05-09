@@ -9,7 +9,7 @@ description: |
   - Re-papering a legacy issue whose criteria, cause, or closure evidence does not stand up to current review.
 
   Not the right tool when:
-  - The work is the test that produced the exception. Use `compliance-testing/skills/control-test-workpaper`; the issue is downstream.
+  - The work is the test that produced the exception. Use `compliance-testing/skills/workpaper-drafter`; the issue is downstream.
   - The work is a multi-issue summary or committee narrative. Assemble several issue-writeup outputs and use `risk-reporting/skills/risk-committee-pack`.
   - The condition is unconfirmed (an observation, not a finding). Issues require a confirmed condition; observations belong in the engagement notes until confirmed.
   - The work is policy-level gap analysis upstream of any specific exception. Use `policy-gap-review`.

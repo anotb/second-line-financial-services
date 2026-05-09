@@ -41,7 +41,7 @@ When `scope` is supplied, consume it: `institution.type` and `institution.primar
 
 The list has the same spine across control types. A senior preparer fills it in roughly in the order a reviewer expects to read it.
 
-The header pins the list to its test cycle: request list ID, test ID (foreign key into `test-plan-builder` output), control ID, obligation IDs, period under test, business unit, jurisdiction, source posture, preparer role and date, reviewer role and date placeholder, escalation path. The header is the audit trail when the cycle is later reopened. Reviewer separation is structural: the same role cannot both prepare and review. The reviewer signs the list before fielding.
+The header pins the list to its test cycle: evidence request list ID, test ID (foreign key into `test-plan-builder` output), control ID, obligation IDs, period under test, business unit, jurisdiction, source posture, preparer role and date, reviewer role and date placeholder, escalation path. The header is the audit trail when the cycle is later reopened. Reviewer separation is structural: the same role cannot both prepare and review. The reviewer signs the list before fielding.
 
 The scope statement restates the test plan's scope in two or three sentences and confirms the source posture the requests operate under. The pointer to the test plan goes here. Where the request list addresses a subset of the test plan's procedures (the design-effectiveness procedures only, or the operating-effectiveness procedures only because design was tested in the prior cycle), the scope statement names the subset.
 

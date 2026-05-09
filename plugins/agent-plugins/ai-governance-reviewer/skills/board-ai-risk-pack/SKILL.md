@@ -6,8 +6,8 @@ description: |
   Best for:
   - Standing AI risk committee meeting (often quarterly) where the AI Governance Lead, CRO, and head of model risk need a curated view of AI posture rather than the full inventory dump.
   - The AI section of a board risk committee at firms without a standalone AI committee, when the board wants AI-specific framing rather than a heat-map row inside the enterprise pack.
-  - Board education session on AI governance — tier mix, top risks, foundation-model exposure, GenAI program status, and the decisions in flight.
-  - Regulator pre-meet pack for an AI-themed exam request, supervisory letter response, or NYDFS / NAIC information request — the committee pack travels as the firm's documented oversight posture.
+  - Board education session on AI governance: tier mix, top risks, foundation-model exposure, GenAI program status, and the decisions in flight.
+  - Regulator pre-meet pack for an AI-themed exam request, supervisory letter response, or NYDFS / NAIC information request; the committee pack travels as the firm's documented oversight posture.
   - Annual AI program review at an insurer aligning to the NAIC Model Bulletin AIS Program elements; same pack, deeper.
 
   Not the right tool when:
