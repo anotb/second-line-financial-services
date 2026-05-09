@@ -25,10 +25,55 @@ Six plugin-scoped sweeps (A1-A6) covering all 68 source skills.
 - Removed unsupported GenAI scope claims attributed to OCC Bulletin 2026-13 / FRB SR 26-2 / FDIC FIL-15-2026 (April 17 2026 joint guidance). The bulletin expressly excludes generative AI and agentic AI from its scope (footnote 3); GenAI substantive anchors are NIST AI RMF 1.0, NIST AI 600-1, ISO/IEC 42001:2023, EU AI Act, OWASP LLM Top 10, MITRE ATLAS, NCSC / CISA secure-AI guidance, NYDFS October 2024 letter, and the NAIC AI Bulletin for insurers.
 - FinCEN MSB BOI citation corrected from §1010.380 to §1022.380.
 
+### Phase 5 audit and fix-applier (commit deae432)
+
+Six-dimension consolidated cross-skill audit (`internal/research/cross-skill-audit-2026-05-08.md`). Fixes:
+
+- Schema field renames in the controls test pipeline: `analysis_id` → `exception_register_id`; `request_list_id` → `evidence_request_list_id`. Cross-skill foreign-key contracts declared on the renamed fields.
+- Four broken cross-reference pointers repointed: `control-test-workpaper` → `workpaper-drafter`; `issue-management` → `issue-writeup`; `important-business-service-mapping` → `criticality-assessment` plus `resilience-testing-pack`.
+- `ai-act-triage` cross-cutting overlay refs corrected: removed pointers to non-existent files (the cyber and privacy substance lives at Article level inside the body).
+- Four prose em-dashes replaced.
+
+### dora-register-builder light relabel + cross-cutting overlays + sweep finishers (commit d11e3b5)
+
+- `dora-register-builder` repositioned as EU-DORA-context build pack and data-quality aid; not for direct submission to a national competent authority; not the official Register of Information template under Commission Implementing Reg (EU) 2024/2956. Preparation-grade only. Schema rebuild deferred to v1.1.
+- Cross-cutting overlay obvious wins (B7): five new overlay files added (cyber for `evidence-binder`; privacy for `aml-model-monitoring`; privacy and conduct for `prompt-injection-risk`; conduct for `adverse-action-review`). Five plausible-coverage flags declined with rationale where the SKILL.md already inlined the substance or scoped it out.
+- TROUBLESHOOTING + examples relevance audit (B9): zero deletions warranted; voice cleanup applied to retained files (em-dashes 1067 → 953; H1 heading em-dashes normalised; CFPB Circular withdrawal currency synced into seven referencing files).
+- Partial currency sweep on five plugins.
+
+### CFPB / BNPL / FDIC / SAR-FAQ / FinCEN / NIST / SEC currency sweep finishers (commit 12e8020)
+
+Two follow-up agents picked up the residuals:
+
+- B8a (BNPL plus bare CFPB circular tagging across the corpus, mechanical): CFPB Circular 2022-03 / 2023-03 inline withdrawal tag (May 12 2025) applied across the eight files where the cite was still bare; "per CFPB Circular X" prose softened to ECOA / Reg B § 1002.9 plus Comment 9(b)(2)-3 of the Official Staff Commentary as the operative anchor. BNPL Interpretive Rule "nullified by Pub. L. 119-11 (May 9, 2025); historical only" tag applied across twelve files. BNPL-as-product-scope mentions left alone.
+- B8b (currency sweep across the six plugins B8 did not reach): financial-crime-governance, risk-reporting, banking-risk-compliance, payments-fintech-compliance, capital-markets-asset-management-compliance, insurance-risk-compliance updated. FinCEN Order FIN-2026-R001 (CDD exceptive relief, February 13, 2026); FinCEN BOI / CTA March 26, 2025 IFR (foreign-only reporting); investment-adviser AML rule compliance delay to January 1, 2028 (FinCEN final rule January 2, 2026); SAR FAQs October 9, 2025 inline tag; § 1033 stay (Forcht Bank, October 29, 2025) plus ANPR (August 22, 2025); § 1071 May 2026 revised final rule; NIST SP 800-61 Rev 3 (April 3, 2025); Names Rule corrected dates; FDIC Part 328 December 2023 final rule plus 2024-2025 effective-date extensions; SR 11-7 demoted to historical with joint guidance promoted to operative.
+
+Post-build action register added at `internal/reviews/post-build-actions.md`.
+
+### Sector-flagship skill builds and small-items bundle (commit pending)
+
+Three sector-flagship skills with no TROUBLESHOOTING and no example shipped (build queue closure gap, B9 flagged):
+
+- `bank-fintech-partnership-review`: TROUBLESHOOTING (9 failure modes) plus a community-bank-BaaS-with-mid-sized-fintech example.
+- `adviser-exam-readiness`: TROUBLESHOOTING (7 failure modes) plus a mid-sized IA pre-exam command-center example.
+- `fintech-partner-controls`: TROUBLESHOOTING (8 failure modes) plus a payment-app-mid-sized-fintech sponsor-bank-side review example.
+
+Small-items bundle (B11):
+
+- Pack-schema field canonicalisation: `decision_items` → `decisions_requested` in risk-committee-pack schema. Practitioner framing: what does the audience need to decide.
+- Reg E § 1005.11 timing rewrite in `deposit-operations-controls/references/cross-cutting/conduct.md`: 10 business days investigation; 45 calendar days extension with provisional credit; 90 calendar days extension for new accounts / POS / foreign-initiated transfers; 3 business days post-investigation notification.
+- `banking-supervision-readiness` TROUBLESHOOTING (7 failure modes covering CSI access-population breach, MRA / MRIA conflation, CAMELS-component scope drift, Reg YY mis-attribution, Heightened Standards at non-OCC sponsor, LFI rating framework applied below threshold, closure-readiness without sustained evidence).
+- `fund-board-reporting` second example: sub-adviser approval at a multi-manager fund under the trust's manager-of-managers exemptive relief (off-cycle, new-relationship, exemptive-order conditions).
+
+### Modular install analysis (analysis only)
+
+Read-only conceptual analysis at `internal/research/modular-install-analysis-2026-05-09.md`. Confirms Claude Code v2.1.110+ supports `dependencies` in `.claude-plugin/plugin.json`. Maps the actual coupling (`risk-compliance-core` is a hub with 57 cross-references), eight practitioner personas with minimum-viable-install paths, four install-pattern options. Recommendation: Hybrid (Option D) in two stages (README install paths + manifest dependency declarations). Both stages deferred to v1.1; analysis preserved as the v1.1 starting reference.
+
 ### Other
 
 - Renamed `engagement-scoping` to `scoping` and revised as the gold-standard reference for the sharpened v1 rules.
 - Switched from Apache 2.0 to MIT.
+- ROADMAP refreshed: v1.1 items now include modular install Stages 1 and 2, dora-register-builder full rebuild, schema dedup quick-win (replaces the deferred Phase 3 schema relocation), with per-item rationale and pointers to the analysis docs in `internal/research/`.
 
 ## 0.2.0
 

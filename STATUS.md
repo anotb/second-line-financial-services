@@ -1,6 +1,6 @@
 # Status
 
-Last updated: 2026-05-08, post Phase 2 editorial review.
+Last updated: 2026-05-09, post Phase 5 audit + currency sweep + sector-flagship gap fills.
 
 ## Build state
 
@@ -13,12 +13,20 @@ Last updated: 2026-05-08, post Phase 2 editorial review.
 | Sync to agent-plugin bundles | done |
 | Phase 1 cross-cutting cleanup (6 sweeps) | done (commit 22dc202) |
 | Phase 2 editorial review (B1-B6) | done (commit 5fd4cf6) |
-| `engagement-scoping` to `scoping` rename | done |
-| License switch to MIT | done |
-| `dora-register-builder` relabel | open |
-| Phase 5 audit findings | open |
-| Phase 3 schema relocation | open |
+| `engagement-scoping` to `scoping` rename | done (commit aa4500c) |
+| License switch to MIT | done (commit aa4500c) |
+| Phase 5 audit + fix-applier | done (commit deae432) |
+| `dora-register-builder` light relabel | done (commit d11e3b5) |
+| Cross-cutting overlay obvious wins (B7) | done (commit d11e3b5) |
+| TROUBLESHOOTING + examples relevance audit (B9) | done (commit d11e3b5) |
+| CFPB / BNPL / FDIC / SAR-FAQ / FinCEN / NIST / SEC currency sweep | done (commit 12e8020) |
+| Sector-flagship skill build candidates (B10a-c) | done |
+| Pack-schema field canonicalisation + small-items bundle (B11) | done |
+| Modular install analysis | done (deferred to v1.1) |
 | Live `claude plugin validate` from this environment | not run |
+| `dora-register-builder` full schema rebuild against EU 2024/2956 | deferred to v1.1 |
+| Modular install Stage 1 (README paths) + Stage 2 (manifest deps) | deferred to v1.1 |
+| Schema dedup quick-win (replaces Phase 3 schema relocation) | deferred to v1.1 |
 
 ## Quality progression across batches
 
