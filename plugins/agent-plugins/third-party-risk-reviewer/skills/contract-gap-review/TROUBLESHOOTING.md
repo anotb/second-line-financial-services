@@ -1,4 +1,4 @@
-# Troubleshooting — contract-gap-review
+# Troubleshooting: contract-gap-review
 
 Recurring pitfalls. Read before producing the gap matrix and again before sign-off.
 

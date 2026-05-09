@@ -64,7 +64,7 @@ Symptom: forward-looking section reads "emerging risks include cyber, AI, and cl
 
 Why it happens: forward-looking gets drafted last when builder fatigue is highest; the section is treated as a hedge.
 
-Fix: each forward-looking item is named, dated, and regulator-anchored. "FRB stress test 2026 hypothetical scenario published February 2026 — projected capital impact on the commercial real-estate book to be reported next cycle" is named, dated, and actionable. "Emerging risks include cyber" is filler; cut it.
+Fix: each forward-looking item is named, dated, and regulator-anchored. "FRB stress test 2026 hypothetical scenario published February 2026: projected capital impact on the commercial real-estate book to be reported next cycle" is named, dated, and actionable. "Emerging risks include cyber" is filler; cut it.
 
 ## Heat map with no quantified exposure on elevated cells
 

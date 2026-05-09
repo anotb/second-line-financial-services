@@ -1,4 +1,4 @@
-# Troubleshooting — resilience-testing-pack
+# Troubleshooting: resilience-testing-pack
 
 Recurring pitfalls. Read before producing the pack and again before sign-off.
 
@@ -16,7 +16,7 @@ A multi-cloud or active-active diagram is not evidence that failover holds withi
 
 ### Skipping severe-but-plausible scenarios for "low likelihood"
 
-Severe-but-plausible is the supervisory frame, not a probability judgement. Scenarios that have happened in adjacent firms are plausible by definition. A hyperscaler-region failure, an identity-provider outage, a payments-rails disruption, a major fraud-decision vendor outage — each has a public record in adjacent institutions.
+Severe-but-plausible is the supervisory frame, not a probability judgement. Scenarios that have happened in adjacent firms are plausible by definition. A hyperscaler-region failure, an identity-provider outage, a payments-rails disruption, a major fraud-decision vendor outage: each has a public record in adjacent institutions.
 
 ### Designing scenarios only against the primary path
 
@@ -24,7 +24,7 @@ The primary path is the easy test. Scenarios should also stress secondary paths,
 
 ### Ignoring AI-specific scenarios on an AI-in-scope chain
 
-Vendor model regression, eval drift on the deployed system, vendor model deprecation mid-cycle, prompt-injection on the deployed agent, training-data incident at the vendor — none of these collapse into generic vendor-outage language. The model-risk function belongs in the room when these scenarios run.
+Vendor model regression, eval drift on the deployed system, vendor model deprecation mid-cycle, prompt-injection on the deployed agent, training-data incident at the vendor: none of these collapse into generic vendor-outage language. The model-risk function belongs in the room when these scenarios run.
 
 ## Method mix
 

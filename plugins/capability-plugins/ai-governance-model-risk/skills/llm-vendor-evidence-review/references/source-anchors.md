@@ -113,12 +113,12 @@ A practitioner note before the list: foundation-model vendor evidence-pack revie
 - Link: https://www.ecfr.gov/current/title-17/chapter-II/part-275/section-275.206(4)-1 — 17 CFR §275.206(4)-1; https://www.ecfr.gov/current/title-17/chapter-II/part-275/section-275.204-2 — 17 CFR §275.204-2
 - Notes: Capital-markets sector overlay anchor.
 
-### 16. CFPB Circular on AI-driven adverse-action notices
+### 16. ECOA / Reg B §1002.9 — Adverse-action notification (regulatory text; supersedes withdrawn CFPB Circulars 2022-03 / 2023-03)
 
-- Citation: Consumer Financial Protection Bureau, Circular on the use of complex algorithms in adverse-action notices [verify circular number and date as of SKILL.md write time], addressing the use of AI and complex algorithms in credit and other consumer-financial-services decisioning.
-- Excerpt-paraphrase: The CFPB has stated that the use of AI or complex algorithms does not relieve consumer-financial-services entities of the obligation to provide accurate, specific reason codes in adverse-action notices under ECOA / Regulation B. Vendor evidence on output-explanation-depth and refusal-around-determinative-statements supports the firm's adverse-action-notice compliance assessment.
-- Link: https://www.consumerfinance.gov/compliance/circulars/ — CFPB Circulars index, AI/algorithm-relevant circular section [verify section]
-- Notes: Conduct cross-cutting overlay anchor for CFPB-scope entities.
+- Citation: 15 USC §1691(d); 12 CFR §1002.9 (Notifications) and Comment 9(b)(2)-3 of the Official Staff Commentary. CFPB Circulars 2022-03 (May 26, 2022) and 2023-03 (September 19, 2023) on adverse-action notices with complex algorithms are **withdrawn May 12, 2025; historical only**.
+- Excerpt-paraphrase: Reg B §1002.9 requires creditors to provide a statement of specific principal reasons for adverse action; Comment 9(b)(2)-3 requires the cited reasons to relate to and accurately describe the factors actually considered or scored. The use of AI or complex algorithms does not displace the regulatory obligation. Vendor evidence on output-explanation-depth and refusal-around-determinative-statements supports the firm's adverse-action-notice compliance assessment.
+- Link: https://www.ecfr.gov/current/title-12/chapter-X/part-1002/section-1002.9 — 12 CFR §1002.9
+- Notes: Conduct cross-cutting overlay anchor for CFPB-scope entities and any creditor under ECOA. The regulatory text continues to apply; the withdrawn circulars do not.
 
 ### 17. NIST SP 800-53 Rev. 5 (referenced for cyber-side control mapping)
 
@@ -145,7 +145,7 @@ The following items carry `[verify section]` or `[verify ...]` flags and must be
 - NYDFS Industry Letter on AI cybersecurity (October 2024) — confirm exact section reference for the third-party-AI passages.
 - SOC 2 Trust Services Criteria — confirm current edition.
 - FFIEC IT Examination Handbook — confirm section reference for AI-system-specific guidance where it exists.
-- CFPB Circular on AI-driven adverse-action notices — confirm exact circular number and date.
+- Reg B §1002.9 — adverse-action anchor (replaces the withdrawn CFPB Circulars 2022-03 / 2023-03 reference).
 - DORA Article 28 — confirm exact article and paragraph references applicable to AI-vendor arrangements.
 
 Where verification is incomplete, the SKILL.md cites with the `[verify section]` flag carried forward; do not invent.

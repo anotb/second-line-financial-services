@@ -1,6 +1,6 @@
 # Example: annual revalidation plan for an in-house consumer credit-scoring model
 
-Public-source-derived. No named institution. Framing patterns drawn from the joint interagency Revised Guidance on Model Risk Management (OCC 2026-13 / FRB SR 26-2 / FDIC FIL-15-2026, April 17 2026; supersedes SR 11-7 and SR 21-8) for the validation-pillar framing on a traditional non-generative ML model, CFPB Circular 2022-03 on adverse action notification with complex algorithms, and the public ECOA / Reg B fair-lending exam record. No firm-specific facts asserted.
+Public-source-derived. No named institution. Framing patterns drawn from the joint interagency Revised Guidance on Model Risk Management (OCC 2026-13 / FRB SR 26-2 / FDIC FIL-15-2026, April 17 2026; supersedes SR 11-7 and SR 21-8) for the validation-pillar framing on a traditional non-generative ML model, Reg B §1002.9 on adverse action notification, and the public ECOA / Reg B fair-lending exam record. CFPB Circular 2022-03 informed earlier framing but was **withdrawn May 12, 2025; historical only**. No firm-specific facts asserted.
 
 ## Input description
 
@@ -30,7 +30,7 @@ Plan sections produced (abbreviated):
 
 - **Robustness scope** — out-of-time backtest on the 12 months since prior validation; recession-scenario backtest using the firm's internal stress framework; segment robustness on the two added states (sample size flagged as a constraint).
 
-- **Fairness, explainability, transparency scope** — ECOA / Reg B disparity testing across protected classes per the firm's fair-lending test plan; disparity ratios calculated; SHAP-based adverse action reason generation reviewed for accuracy against a sample of recent declines; CFPB Circular 2022-03 and 2023-03 expectations on specific-and-accurate adverse action reasons read into the explainability success criterion.
+- **Fairness, explainability, transparency scope** — ECOA / Reg B disparity testing across protected classes per the firm's fair-lending test plan; disparity ratios calculated; SHAP-based adverse action reason generation reviewed for accuracy against a sample of recent declines; Reg B §1002.9 specific-principal-reasons requirement and Comment 9(b)(2)-3 of the Official Staff Commentary (cited reasons must accurately describe factors actually considered or scored) read into the explainability success criterion. CFPB Circulars 2022-03 / 2023-03 are **withdrawn May 12, 2025; historical only**.
 
 - **Ongoing monitoring scope** — review of PSI thresholds on top input features (monthly), score drift (KS on score distribution), decisioning-rate drift (state-level and dealer-level), complaint-rate drift (CFPB complaint database plus internal feed). Each monitoring entry declares whether breach triggers re-validation; the validator's view and the model owner's monitoring view are aligned but distinct (operational alerts versus revalidation triggers).
 

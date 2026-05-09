@@ -1,4 +1,4 @@
-# Troubleshooting — sanctions-screening-qa
+# Troubleshooting: sanctions-screening-qa
 
 Recurring pitfalls. Read before producing the QA artifact and again before sign-off.
 

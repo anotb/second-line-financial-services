@@ -1,4 +1,4 @@
-# Example: GenAI vendor — foundation-model API for FNOL triage at a P&C insurer
+# Example: GenAI vendor (foundation-model API for FNOL triage at a P&C insurer)
 
 Public-source-derived. No named vendor. The shape mirrors a common diligence pattern at a mid-sized property-and-casualty insurer evaluating a foundation-model API to triage first-notice-of-loss narratives into severity and routing tiers.
 

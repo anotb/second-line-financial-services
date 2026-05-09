@@ -23,12 +23,13 @@ For OCC-supervised large banks, the Heightened Standards add a board-level risk-
 - The tier decision references the firm's risk-appetite-statement classification where the bank is in scope.
 - Tier-1 cards in scope of an in-scope bank trigger AI risk committee approval at minimum; firm policy may stack additional approvals.
 
-### 3. ECOA / Reg B and CFPB Circulars on adverse action
+### 3. ECOA / Reg B adverse-action surface
 
 Where the AI use case influences a credit decision (origination, pricing, line management, collections triggers, fraud-driven adverse action), the tier rubric reads the conduct factor as high and the regulatory factor as high. Specifically:
 
-- CFPB Circular 2022-03: complex algorithms do not excuse the specific-reasons requirement under ECOA / Reg B; the tier decision flags adverse-action notice generation as a triggered control gate.
-- CFPB Circular 2023-03: reasons given in the adverse-action notice must be the actual principal reasons; the tier decision flags adverse-action notice quality sampling as a monitoring gate.
+- Reg B §1002.9: a creditor must provide specific principal reasons for adverse action; the tier decision flags adverse-action notice generation as a triggered control gate.
+- Comment 9(b)(2)-3 of the Official Staff Commentary: the cited reasons must relate to and accurately describe the factors actually considered or scored; the tier decision flags adverse-action notice quality sampling as a monitoring gate.
+- CFPB Circulars 2022-03 (complex algorithms do not excuse the specific-reasons requirement) and 2023-03 (reasons must be actual principal reasons) are **withdrawn May 12, 2025; historical only**. The conduct and regulatory factor scoring stands on Reg B and the Official Staff Commentary; the tier decision does not depend on the withdrawn circulars.
 
 Default sign-off questions added at tier-1 for credit-decisioning use cases:
 

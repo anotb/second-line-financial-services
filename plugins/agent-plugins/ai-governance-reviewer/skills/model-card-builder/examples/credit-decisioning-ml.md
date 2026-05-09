@@ -1,6 +1,6 @@
 # Example: model card refresh for an in-house consumer auto-loan decisioning model
 
-Public-source-derived. No named institution. Framing patterns drawn from CFPB Circular 2022-03 (adverse action notification requirements when using AI or complex algorithms) and the public CFPB statements on algorithmic discrimination in credit. No firm-specific facts asserted.
+Public-source-derived. No named institution. Framing patterns drawn from Reg B §1002.9 (specific reasons for adverse action) and the underlying ECOA / Reg B regulatory text. CFPB Circulars 2022-03 and 2023-03 informed the original framing but were **withdrawn May 12, 2025; historical only**. No firm-specific facts asserted.
 
 ## Input description
 

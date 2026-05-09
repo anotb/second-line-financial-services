@@ -2,17 +2,13 @@
 
 ## Input
 
-The CFPB's final rule on Small Business Lending under the Equal Credit Opportunity Act (Regulation B), 88 FR 35150 (May 31 2023), codified at 12 CFR 1002.101 through 12 CFR 1002.114 (Subpart B of Regulation B). Effective date August 29 2023. Tier-based compliance dates [verify post-litigation revised dates, as the originally noticed dates were adjusted following Texas Bankers Association v. CFPB and subsequent extensions]:
+The CFPB's final rule on Small Business Lending under the Equal Credit Opportunity Act (Regulation B), 88 FR 35150 (May 31 2023), codified at 12 CFR 1002.101 through 12 CFR 1002.114 (Subpart B of Regulation B), as **revised by the May 1, 2026 final rule**. Under the revised rule the threshold is a single 1,000-covered-transactions trigger; the rule is effective June 30, 2026 and the compliance date is January 1, 2028. The 2023 tiered compliance schedule (Tier 1 / 2 / 3 at 2,500 / 500 / 100 origination thresholds with staged dates of October 1 2024 / April 1 2025 / January 1 2026) is superseded.
 
-- Tier 1 covered FIs (2,500 or more covered originations in each of the two preceding calendar years): originally October 1 2024.
-- Tier 2 (500 to 2,499): originally April 1 2025.
-- Tier 3 (100 to 499): originally January 1 2026.
-
-A community bank's regulatory-change committee has the rule on the agenda. The bank originated 320 covered originations in each of 2024 and 2025; it sits in Tier 3. The bank's compliance-and-fair-lending officer needs the atomic obligation list before the bank's lending-product team scopes data-collection workflow changes, before legal opens the question of how the firewall obligation interacts with the bank's existing two-loan-officer underwriting model, and before the data-and-analytics team scopes the FFIEC submission process.
+A community bank's regulatory-change committee has the rule on the agenda. The bank originated 1,150 covered originations in each of 2024 and 2025; it crosses the revised 1,000 threshold and is a covered FI. The bank's compliance-and-fair-lending officer needs the atomic obligation list before the bank's lending-product team scopes data-collection workflow changes, before legal opens the question of how the firewall obligation interacts with the bank's existing two-loan-officer underwriting model, and before the data-and-analytics team scopes the FFIEC submission process.
 
 ## Why this scenario matters
 
-The 1071 rule is well-suited to demonstrate the atomic-obligation discipline because it combines a tier-and-threshold-driven scope determination, a multi-element data-collection obligation (20+ data points per covered application), a firewall obligation with a notice-based exception, recordkeeping, reporting, and a multi-tier compliance-date staging that has been adjusted post-publication. Compressing the data-collection elements into a single "the bank must collect Section 1071 data" obligation loses the granularity needed for the bank's product team to scope the workflow changes; the rule actually decomposes into separate obligations for covered-FI determination, each data-point category, the firewall, the firewall-exception notice, recordkeeping, and reporting.
+The 1071 rule is well-suited to demonstrate the atomic-obligation discipline because it combines a threshold-driven scope determination, a multi-element data-collection obligation (20+ data points per covered application), a firewall obligation with a notice-based exception, recordkeeping, reporting, and an effective-date / compliance-date pair that has shifted recently (the May 2026 revised final rule replaces the 2023 tiered schedule with a single 1,000-transaction threshold and a January 1, 2028 compliance date). Compressing the data-collection elements into a single "the bank must collect Section 1071 data" obligation loses the granularity needed for the bank's product team to scope the workflow changes; the rule actually decomposes into separate obligations for covered-FI determination, each data-point category, the firewall, the firewall-exception notice, recordkeeping, and reporting.
 
 ## Output sketch
 
@@ -27,15 +23,12 @@ source_citation:
   citation: 88 FR 35150; 12 CFR 1002.101 — 1002.114
   section_reference: 12 CFR Part 1002 Subpart B
   publication_date: 2023-05-31
-  effective_date: 2023-08-29
+  revised_publication_date: 2026-05-01  # §1071 revised final rule supersedes the 2023 tiered schedule
+  effective_date: 2026-06-30
   compliance_dates:
-    - date: 2024-10-01
-      tier_or_topic: Tier 1 covered FIs (2,500+ covered originations in each of the two preceding calendar years) — originally noticed date
-    - date: 2025-04-01
-      tier_or_topic: Tier 2 (500 to 2,499) — originally noticed date
-    - date: 2026-01-01
-      tier_or_topic: Tier 3 (100 to 499) — originally noticed date
-  transition_period: tier-based; subject to post-publication adjustments
+    - date: 2028-01-01
+      tier_or_topic: All covered FIs (single 1,000-covered-transactions threshold under the May 2026 revised final rule)
+  transition_period: single compliance date under the May 2026 revised final rule (the 2023 Tier 1 / 2 / 3 schedule of October 1 2024 / April 1 2025 / January 1 2026 is superseded)
   url: https://www.consumerfinance.gov/rules-policy/final-rules/small-business-lending-under-the-equal-credit-opportunity-act-regulation-b/
 
 extraction_summary:
@@ -58,7 +51,7 @@ obligations:
       section: 12 CFR 1002.105(b)
     action_verb: must determine
     party_obligated: financial institution (broadly defined to include depositories and non-depositories engaging in financial activity; see §1002.106 for the full definition)
-    requirement_statement: Each financial institution must determine whether it is a covered financial institution by determining whether it originated at least 100 covered originations in each of the two preceding calendar years.
+    requirement_statement: Each financial institution must determine whether it is a covered financial institution by determining whether it originated at least 1,000 covered transactions in each of the two preceding calendar years (May 2026 revised final rule; supersedes the 2023 100-origination threshold).
     condition_or_trigger: each calendar year, looking back at the prior two calendar years
     deadline: prior to the start of each calendar year
     frequency: periodic
@@ -223,7 +216,7 @@ cross_references:
 
 defined_terms:
   - term: covered financial institution
-    definition: A financial institution that originated at least 100 covered originations in each of the two preceding calendar years.
+    definition: A financial institution that originated at least 1,000 covered transactions in each of the two preceding calendar years (under the May 2026 revised final rule; supersedes the 2023 100-origination threshold).
     source_section: 12 CFR 1002.105(b)
     obligation_ids_using_term: [OBL-001, OBL-002, OBL-003, OBL-004, OBL-005, OBL-006, OBL-007, OBL-008]
   - term: covered application
@@ -256,17 +249,14 @@ transition_table:
     date: 2023-08-29
     applicable_obligation_ids: [OBL-001]
     description: Rule joins 12 CFR; covered-FI determination obligation begins for the look-back assessment.
-  - stage: tier-1 compliance — original
-    date: 2024-10-01
+  - stage: rule effective date (May 2026 revised final rule)
+    date: 2026-06-30
+    applicable_obligation_ids: [OBL-001]
+    description: §1071 revised final rule effective; covered-FI determination obligation begins to run.
+  - stage: compliance date (May 2026 revised final rule)
+    date: 2028-01-01
     applicable_obligation_ids: [OBL-002, OBL-003, OBL-004, OBL-005, OBL-006, OBL-007, OBL-008]
-    description: Tier 1 (2,500+ covered originations); subject to post-litigation adjustment
-  - stage: tier-2 compliance — original
-    date: 2025-04-01
-    applicable_obligation_ids: [OBL-002, OBL-003, OBL-004, OBL-005, OBL-006, OBL-007, OBL-008]
-  - stage: tier-3 compliance — original
-    date: 2026-01-01
-    applicable_obligation_ids: [OBL-002, OBL-003, OBL-004, OBL-005, OBL-006, OBL-007, OBL-008]
-    description: Tier 3 (100 to 499 covered originations); the bank in this scenario sits here.
+    description: Single compliance date under the May 2026 revised final rule; supersedes the 2023 Tier 1 / 2 / 3 schedule.
 
 open_extraction_questions:
   - obligation_ids: [OBL-005]
@@ -275,8 +265,8 @@ open_extraction_questions:
     reviewer: legal
     blocker_for: obligation-mapping
   - obligation_ids: [OBL-001, OBL-002, OBL-003, OBL-004, OBL-005, OBL-006, OBL-007, OBL-008]
-    question: Confirm the post-litigation revised compliance dates for each tier as of the extraction date.
-    section_reference: compliance-dates discussion in 88 FR 35150 plus subsequent CFPB statements
+    question: Confirm the May 1, 2026 revised final rule text against the published Federal Register version, including the single 1,000-transaction threshold and the June 30 2026 / January 1 2028 effective and compliance dates.
+    section_reference: §1071 revised final rule (May 2026); §1002.105 (revised); §1002.114 (revised)
     reviewer: regulatory-change-lead
     blocker_for: implementation-plan
 
@@ -289,10 +279,10 @@ reviewer:
   review_status: pending
 
 source_trace:
-  - claim: Covered-FI threshold is 100 covered originations in each of the two preceding calendar years
-    source: 88 FR 35150
-    section: 12 CFR 1002.105(b)
-    date: 2023-05-31
+  - claim: Covered-FI threshold is 1,000 covered transactions in each of the two preceding calendar years (May 2026 revised final rule; supersedes the 2023 100-origination threshold)
+    source: §1071 revised final rule (May 1, 2026)
+    section: 12 CFR 1002.105(b) (revised)
+    date: 2026-05-01
     url: https://www.consumerfinance.gov/rules-policy/final-rules/small-business-lending-under-the-equal-credit-opportunity-act-regulation-b/
   - claim: Demographic-data request must be made; applicant is not required to provide
     source: 88 FR 35150

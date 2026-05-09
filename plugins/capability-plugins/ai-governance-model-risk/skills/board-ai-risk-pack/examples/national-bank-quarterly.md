@@ -1,6 +1,6 @@
 # Example: quarterly AI risk committee pack at a US national bank
 
-Public-source-derived. No named institution. Framing patterns from SR 11-7, OCC Heightened Standards (12 CFR Part 30 Appendix D), the joint interagency third-party guidance (OCC Bulletin 2023-17), CFPB Circular 2022-03, and NYDFS October 2024 Industry Letter on AI cybersecurity. No firm-specific facts asserted.
+Public-source-derived. No named institution. Framing patterns from SR 11-7, OCC Heightened Standards (12 CFR Part 30 Appendix D), the joint interagency third-party guidance (OCC Bulletin 2023-17), Reg B §1002.9 (adverse-action notification), and NYDFS October 2024 Industry Letter on AI cybersecurity. CFPB Circular 2022-03 informed earlier framing but was **withdrawn May 12, 2025; historical only**. No firm-specific facts asserted.
 
 ## Input
 
@@ -49,7 +49,7 @@ The pack stops at draft. The AI Governance Lead and the head of model risk revie
 - 12 CFR Part 30 Appendix D Section II and Section III.
 - OCC Bulletin 2023-17 Risk Management Life Cycle.
 - BCBS 239 Principles 3, 7-11.
-- CFPB Circular 2022-03.
+- CFPB Circular 2022-03 [withdrawn May 12, 2025; historical only — anchor to Reg B §1002.9].
 - NYDFS Industry Letter (October 2024) [verify section].
 
 See `references/source-anchors.md` for full citations and verification flags.

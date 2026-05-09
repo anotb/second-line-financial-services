@@ -89,6 +89,7 @@ Depth and length scale to purpose and audience. A vendor-review binder for a non
 - `references/source-anchors.md` — citations and excerpts for the named anchors (BCBS 239, AU-C 500, AU-C 230, IIA Standards, FFIEC IT Audit booklet, SR 11-7, OCC 2026-13, the 2023 interagency third-party guidance, recordkeeping floors).
 - `references/sector-overlays/banking.md`, `insurance.md`, `capital-markets.md`, `payments-fintech.md` — sector-specific supervisory frame loaded per scope.
 - `references/cross-cutting/privacy.md` — loaded whenever the binder may carry regulated personal data; default-on for any binder touching NPI, PHI, PCI, or important-business-service controls.
+- `references/cross-cutting/cyber.md` — loaded when the scope flags cyber or whenever the binder carries cyber-program evidence (NYDFS Part 500 attestations, IR workpapers, vulnerability-scan extracts, SOC 2 evidence, vendor cyber assessments, §500.17 / 36-hour banking notice / 8-K Item 1.05 filings).
 - `references/firm-overlay.md` — firm-installed policy, taxonomy, named owners, system-of-record naming map (consumed when present).
 - `templates/default-output.md` — binder template.
 - `schemas/evidence-binder.schema.json` — structured-output contract.

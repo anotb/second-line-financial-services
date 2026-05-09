@@ -1,4 +1,4 @@
-# Example — mid-tier data-provider fintech preparing developer-interface and authorisation stack ahead of its implementation-tier date
+# Example: mid-tier data-provider fintech preparing developer-interface and authorisation stack ahead of its implementation-tier date
 
 ## Input description
 

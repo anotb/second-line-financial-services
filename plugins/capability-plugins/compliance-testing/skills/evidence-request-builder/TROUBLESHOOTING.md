@@ -1,4 +1,4 @@
-# Troubleshooting — evidence-request-builder
+# Troubleshooting: evidence-request-builder
 
 Recurring pitfalls. Read before drafting the request list and again before pre-fielding sign-off.
 
@@ -66,7 +66,7 @@ Reperformance procedures against production controls (demographic firewall, IAM 
 
 ### Requests without a population reference
 
-A request without a sample-ID set or a full-population pointer is not testable. The workpaper later cannot reconcile what was tested against what was asked. The schema does not require `population_reference` (some requests are population-level by design — the SoD exception log for the period, the IAM-system change log for the period — and reference the period only), but the field is the workpaper's bridge from request to sample-level evidence inspection, so populate it where the request is sample-driven.
+A request without a sample-ID set or a full-population pointer is not testable. The workpaper later cannot reconcile what was tested against what was asked. The schema does not require `population_reference` (some requests are population-level by design (the SoD exception log for the period, the IAM-system change log for the period) and reference the period only), but the field is the workpaper's bridge from request to sample-level evidence inspection, so populate it where the request is sample-driven.
 
 ### Asking for the full population when the procedure tests a sample
 
@@ -92,7 +92,7 @@ The request list is the operational ask at fieldwork start. The closure binder (
 
 ### Forgetting the not-applicable section
 
-Without the not-applicable section, the next year's reviewer re-asks for items that were intentionally out of scope and wastes the owner's time. Items out of period, items in another cycle's scope, items at a separate population stratum, items at restricted-access posture — name them with the rationale and the covering test ID where applicable. Closing the loop on what was not asked is as load-bearing as closing the loop on what was asked.
+Without the not-applicable section, the next year's reviewer re-asks for items that were intentionally out of scope and wastes the owner's time. Items out of period, items in another cycle's scope, items at a separate population stratum, items at restricted-access posture: name them with the rationale and the covering test ID where applicable. Closing the loop on what was not asked is as load-bearing as closing the loop on what was asked.
 
 ### Inviting the first-line owner to draft the request list
 

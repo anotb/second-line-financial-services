@@ -100,9 +100,9 @@ What this skill relies on: that beneficial-owner obligations are extracted at th
 
 ### CFPB Section 1071 Final Rule — Small Business Lending Data Collection (12 CFR 1002.107)
 
-Anchor: §1002.107(a) covered application identification, §1002.107(b) covered originations threshold, §1002.105 covered financial institution definition, Subpart B firewall provisions [verify subsection], §1002.110 reporting and §1002.111 recordkeeping.
+Anchor: §1002.107(a) covered application identification, §1002.107(b) covered originations threshold, §1002.105 covered financial institution definition, Subpart B firewall provisions [verify subsection], §1002.110 reporting and §1002.111 recordkeeping. **§1071 revised final rule, May 1, 2026; 1,000 covered transactions; effective June 30, 2026; compliance January 1, 2028** — supersedes the 2023 tiered schedule.
 
-What this skill relies on: that 1071 obligations are extracted at the lifecycle stage (application identification, data-point collection, firewall, recordkeeping, reporting, error correction) with the relevant CFR subsection on each row; that the tier-by-tier compliance-date schedule (high-volume, moderate-volume, low-volume) is captured as effective-date phase-in; that the firewall obligation is treated as a design obligation requiring legal review where loan officers act in dual roles.
+What this skill relies on: that 1071 obligations are extracted at the lifecycle stage (application identification, data-point collection, firewall, recordkeeping, reporting, error correction) with the relevant CFR subsection on each row; that the single 1,000-transaction threshold and the June 30, 2026 effective / January 1, 2028 compliance dates from the May 2026 revised final rule are used (the 2023 tiered high-volume / moderate-volume / low-volume schedule is superseded); that the firewall obligation is treated as a design obligation requiring legal review where loan officers act in dual roles.
 
 - Link with section: https://www.ecfr.gov/current/title-12/chapter-X/part-1002/subpart-B — §1002.107, §1002.110, §1002.111.
 

@@ -31,7 +31,7 @@ Where the model influences a credit decision (origination, pricing, line managem
 Plan-side implications:
 
 - Fairness scope includes ECOA / Reg B disparity testing across protected classes per the firm's fair-lending test plan; the plan cites the fair-lending test plan as a dependency.
-- Adverse-action notice generation method (typically SHAP-based or reason-code-mapped) is a controls-section validation item, not a fairness-section item; the validator reviews the method and its sampling QC against CFPB Circular 2022-03 (specific-and-accurate reasons) and CFPB Circular 2023-03 (actual principal reasons).
+- Adverse-action notice generation method (typically SHAP-based or reason-code-mapped) is a controls-section validation item, not a fairness-section item; the validator reviews the method and its sampling QC against Reg B §1002.9 (specific principal reasons) and Comment 9(b)(2)-3 of the Official Staff Commentary (cited reasons must accurately describe factors actually considered or scored). CFPB Circulars 2022-03 / 2023-03 are **withdrawn May 12, 2025; historical only**.
 - Effective challenge questions probe the proxy-variable post-deployment process (CFPB and OCC fair-lending exam practice probe this seam).
 
 ### 4. CCAR / DFAST overlap for stress-eligible banks

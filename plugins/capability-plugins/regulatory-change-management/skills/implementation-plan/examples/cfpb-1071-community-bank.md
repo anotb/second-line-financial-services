@@ -2,11 +2,11 @@
 
 ## Input
 
-A community national bank originated approximately 800 covered small business credit transactions in each of the last two calendar years, placing it in the second compliance tier under the CFPB's small business lending data rule (12 CFR Part 1002 Subpart B, Section 1071, March 2023 final rule, with subsequent amendments and the post-litigation tiered effective dates). The rule-to-obligation-extraction output identifies 47 atomic obligations across data collection, firewall, recordkeeping, reporting, and consumer-notice domains. The policy-diff against the bank's current Regulation B written program produces 23 gaps. The bank's regulatory change PMO needs an implementation plan that lands the bank in compliance ahead of its tier-2 effective date with milestones, owners by role, governance cadence, and a regulator-readiness rehearsal.
+A community national bank originated approximately 1,200 covered small business credit transactions in each of the last two calendar years, putting it above the **§1071 revised final rule (May 1, 2026)** single 1,000-covered-transactions threshold (which supersedes the 2023 tiered schedule). Under the revised rule the bank is a covered FI; the rule is effective June 30, 2026 and the compliance date is January 1, 2028. The rule-to-obligation-extraction output identifies 47 atomic obligations across data collection, firewall, recordkeeping, reporting, and consumer-notice domains. The policy-diff against the bank's current Regulation B written program produces 23 gaps. The bank's regulatory change PMO needs an implementation plan that lands the bank in compliance by the January 1, 2028 compliance date with milestones, owners by role, governance cadence, and a regulator-readiness rehearsal.
 
 ## Why this scenario matters
 
-The 1071 rule is the canonical mid-criticality regulatory change for a smaller bank. Tiered effective dates, demonstration of a privacy firewall between underwriters and demographic data, LOS or origination-platform changes, recordkeeping with strict retention, an annual Filing Instructions Guide submission to the CFPB, and a consumer-facing notice. The plan tests several boundaries the implementation-plan skill is built for: tiered compliance dates, evidence-based acceptance criteria for a firewall control, a mock submission as a regulator-readiness checkpoint, a second-line review gate before the firewall goes live, and a BAU handoff that lands the obligation in the firm's obligation inventory with ongoing monitoring.
+The 1071 rule is the canonical mid-criticality regulatory change for a smaller bank. The May 2026 revised final rule replaces the 2023 tiered schedule with a single 1,000-transaction threshold and a January 1, 2028 compliance date; the implementation programme reads against the revised rule. Demonstration of a privacy firewall between underwriters and demographic data, LOS or origination-platform changes, recordkeeping with strict retention, an annual Filing Instructions Guide submission to the CFPB, and a consumer-facing notice. The plan tests several boundaries the implementation-plan skill is built for: a long compliance-date runway, evidence-based acceptance criteria for a firewall control, a mock submission as a regulator-readiness checkpoint, a second-line review gate before the firewall goes live, and a BAU handoff that lands the obligation in the firm's obligation inventory with ongoing monitoring.
 
 ## Output sketch
 
@@ -17,15 +17,15 @@ as_of_date: 2026-05-06
 
 trigger:
   trigger_type: final-rule
-  source_citation: CFPB final rule, Small Business Lending Under the Equal Credit Opportunity Act (Regulation B), 12 CFR Part 1002 Subpart B Section 1071, March 30 2023, as amended (post-Texas-litigation tiered dates)
+  source_citation: CFPB final rule, Small Business Lending Under the Equal Credit Opportunity Act (Regulation B), 12 CFR Part 1002 Subpart B Section 1071, March 30 2023; revised by the §1071 revised final rule, May 1, 2026 (single 1,000-transaction threshold; effective June 30, 2026; compliance January 1, 2028)
   trigger_id: REG-CFPB-1071
-  trigger_date: 2023-03-30
+  trigger_date: 2026-05-01
 
-effective_date: 2026-04-01
-tiered_compliance_dates:
-  - tier: 'Tier 2 (annual originations 500-2,499)'
-    date: 2026-04-01
-    rationale: 'Bank originated approximately 800 covered transactions in each of the last two calendar years; tier 2 applies.'
+effective_date: 2026-06-30
+compliance_dates:
+  - description: 'All covered FIs (single 1,000-covered-transactions threshold under the May 2026 revised final rule; supersedes the 2023 Tier 1 / 2 / 3 schedule)'
+    date: 2028-01-01
+    rationale: 'Bank originated approximately 1,200 covered transactions in each of the last two calendar years; covered FI under the revised rule.'
 
 obligations_in_scope:
   - OBL-1071-01  # data collection scope
@@ -318,8 +318,8 @@ regulator_readiness_checkpoints:
 
 effective_date_posture:
   posture: on-time
-  rationale: tier-2 effective date provides adequate runway given the gap inventory; early-adopt does not earn supervisory credit and adds risk; late-with-contingency carries enforcement risk under CFPB supervision.
-  contingency_plan: if MS-03-01 or MS-06-01 slips past 2026-03-15, manual data capture for first reporting cycle; deputy CCO engages CFPB Office of Supervision Policy via the bank's CFPB primary contact.
+  rationale: January 1, 2028 compliance date under the May 2026 revised final rule provides adequate runway given the gap inventory; early-adopt does not earn supervisory credit and adds risk; late-with-contingency carries enforcement risk under CFPB supervision.
+  contingency_plan: if material milestones slip inside the final 60 days before compliance date, manual data capture for first reporting cycle; deputy CCO engages CFPB Office of Supervision Policy via the bank's CFPB primary contact.
 
 open_questions:
   - question: Does the firewall design require physical-and-logical separation, or is logical separation alone sufficient given the branch footprint?
@@ -350,9 +350,9 @@ review_gates: [scope, evidence, authority, impact, decision]
 confidence_label: medium
 
 source_trace:
-  - claim: 1071 final rule effective dates were tiered post-litigation; the bank's tier-2 effective date applies based on its origination volume.
-    source: CFPB final rule, Small Business Lending Under the Equal Credit Opportunity Act (Regulation B), 12 CFR Part 1002 Subpart B, with subsequent amendments
-    section: §1002.114 effective date and small filer compliance dates
+  - claim: 1071 single 1,000-covered-transactions threshold and January 1, 2028 compliance date apply (May 2026 revised final rule supersedes the 2023 tiered schedule).
+    source: §1071 revised final rule (May 1, 2026)
+    section: §1002.105 (revised threshold); §1002.114 (revised effective and compliance dates)
     url: https://www.consumerfinance.gov/rules-policy/final-rules/small-business-lending-under-the-equal-credit-opportunity-act-regulation-b/
   - claim: The rule's firewall requirement applies to underwriters' access to demographic information.
     source: 12 CFR Part 1002 Subpart B

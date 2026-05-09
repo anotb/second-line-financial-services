@@ -149,7 +149,7 @@ principles:
         owner: Head of Risk Data (CDO)
         target_date: 2026-12-31
 
-  # Principles 4, 5, 7-14 omitted from sketch for brevity — full assessment carries all 14.
+  # Principles 4, 5, 7-14 omitted from sketch for brevity; full assessment carries all 14.
 
 aggregate_rating_per_group:
   - group: overarching

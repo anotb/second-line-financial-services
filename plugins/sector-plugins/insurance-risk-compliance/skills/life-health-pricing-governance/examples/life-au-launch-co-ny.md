@@ -1,4 +1,4 @@
-# Example — life carrier launching accelerated underwriting using ECDIS in Colorado and New York
+# Example: life carrier launching accelerated underwriting using ECDIS in Colorado and New York
 
 **Public-source-derived. No named institutions.**
 
@@ -30,7 +30,7 @@ CO regulation: the proxy-variable risk for the public-records-derived flag surfa
 
 NY DFS Circular Letter: consumer-recourse channel is named (a dedicated AU-decline line with a 10-business-day SLA and manual-underwriting-fallback path) but the disclosure timing for adverse-information is `[evidence-needed]` against the Circular Letter's expectation.
 
-### AI / ML governance — AIS Program cross-walk
+### AI / ML governance: AIS Program cross-walk
 
 Six AIS Program elements `in-place`, two `partial`, one `gap`. The gap is third-party-AI accountability for the vendor: the contractual clauses are present but the monitoring evidence is not yet flowing.
 

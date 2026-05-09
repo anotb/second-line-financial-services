@@ -78,7 +78,7 @@ The change log feeds the policy committee, training, control owners, and change 
 **Resolution**:
 - `effective_date` on each row defaults to the policy's overall effective date but takes the section-specific date where the policy phases sections in.
 - The phase-in field captures the specific binding date and the rationale for the staggered date.
-- Phased rows are common in policy diffs that reflect a transition period — vendor-contract refreshes happen at renewal, training applies after rollout, system changes apply after release. The change log captures the cadence so change-management can sequence.
+- Phased rows are common in policy diffs that reflect a transition period: vendor-contract refreshes happen at renewal, training applies after rollout, system changes apply after release. The change log captures the cadence so change-management can sequence.
 
 ## 8. The diff treats no-change sections as skipped rather than inspected
 

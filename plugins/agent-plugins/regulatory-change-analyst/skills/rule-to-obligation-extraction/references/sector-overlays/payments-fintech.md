@@ -10,32 +10,28 @@ Load this overlay when the rule under extraction is a CFPB rule under the consum
 - **Reg P** — Privacy of Consumer Financial Information, 12 CFR Part 1016. GLBA privacy notices; opt-out rights; sharing-with-affiliates limitations.
 - **Reg V** — Fair Credit Reporting Act, 12 CFR Part 1022. Identity-theft red-flag rules; risk-based-pricing notices; furnisher rules.
 - **Reg X** — RESPA, 12 CFR Part 1024. Mortgage-servicer obligations; loss-mitigation procedures.
-- **Reg B** — Equal Credit Opportunity Act, 12 CFR Part 1002. Includes Subpart B (Section 1071 small-business-lending data, 12 CFR 1002.101 through 12 CFR 1002.114).
-- **Section 1033** — Personal financial-data rights, 12 CFR Part 1033 (final rule 89 FR 90838, November 18 2024 [verify final FR cite]).
-- **UDAAP** — 12 USC §5531 (Dodd-Frank Section 1031); not a rule with codified subsections, but the operative supervisory and enforcement standard. UDAAP-anchored extractions pin to CFPB circulars, supervisory highlights, and consent-order articles for the operative standard.
+- **Reg B** — Equal Credit Opportunity Act, 12 CFR Part 1002. Includes Subpart B (Section 1071 small-business-lending data, 12 CFR 1002.101 through 12 CFR 1002.114, **as revised by the May 1, 2026 final rule**).
+- **Section 1033** — Personal financial-data rights, 12 CFR Part 1033 (final rule 89 FR 90838, November 18 2024 [verify final FR cite]). **Compliance dates stayed as of October 29, 2025; CFPB-initiated reconsideration with ANPR.**
+- **UDAAP** — 12 USC §5531 (Dodd-Frank Section 1031); not a rule with codified subsections, but the operative supervisory and enforcement standard. UDAAP-anchored extractions pin to the regulatory text, Supervisory Highlights, and consent-order articles for the operative standard. (Many CFPB Circulars on UDAAP topics were **withdrawn May 12, 2025; historical only**.)
 
 ## CFPB Section 1071 — worked pattern
 
-12 CFR 1002.101 through 12 CFR 1002.114 (Subpart B of Reg B), 88 FR 35150 (May 31 2023). Effective date August 29 2023. Tier-based compliance dates [verify post-litigation revised dates, as the rule's compliance dates have been adjusted post-publication]:
-
-- Tier 1 covered FIs (2,500 or more covered originations in each of the two preceding calendar years): originally October 1 2024.
-- Tier 2 (500 to 2,499): originally April 1 2025.
-- Tier 3 (100 to 499): originally January 1 2026.
+12 CFR 1002.101 through 12 CFR 1002.114 (Subpart B of Reg B), 88 FR 35150 (May 31 2023), as **revised by the May 1, 2026 final rule**. Under the revised rule the threshold is a single 1,000-covered-transactions trigger; the rule is effective June 30, 2026 and the compliance date is January 1, 2028. The 2023 tiered (2,500 / 500 / 100) compliance schedule is superseded; capture it only as historical context if at all.
 
 Extraction decomposes into atomic obligations:
 
-- **Covered-financial-institution determination** (12 CFR 1002.105(b)). Trigger: each calendar year, the institution determines whether it meets the covered-FI threshold for the preceding two years.
+- **Covered-financial-institution determination** (12 CFR 1002.105(b), as revised). Trigger: each calendar year, the institution determines whether it originated 1,000 or more covered transactions in each of the two preceding years.
 - **Covered-application-data-points obligation** (12 CFR 1002.107(a)). On each covered application: collect 20+ data points enumerated in §1002.107(a). Each data point is an obligation row in the extraction (or a single row with the data-point list as evidence_expected, depending on the granularity required by the consumer).
 - **Firewall obligation** (12 CFR 1002.108). The covered FI must maintain procedures to limit the access of the underwriter to demographic data collected under §1002.107(a)(18)-(a)(20) where feasible. The exception (where a firewall is not feasible, the covered FI must provide a notice to the applicant) is its own row.
 - **Recordkeeping obligation** (12 CFR 1002.111). Retain covered-application records for at least three years.
-- **Reporting obligation** (12 CFR 1002.109). Submit the covered-application data to the CFPB by June 1 of each year covering the preceding calendar year. First-report due dates are tier-staged.
-- **Effective-date-and-transition row**. Tier-by-tier compliance dates as the rule provides; capture each tier as its own row in the transition table.
+- **Reporting obligation** (12 CFR 1002.109). Submit the covered-application data to the CFPB by June 1 of each year covering the preceding calendar year. First-report due date follows the January 1, 2028 compliance date under the revised rule.
+- **Effective-date-and-transition row**. Single compliance date (January 1, 2028) under the revised rule; rule effective June 30, 2026.
 
 The defined terms section captures: "covered application"; "covered credit transaction"; "covered financial institution"; "covered originations"; "minority-owned business"; "women-owned business"; "LGBTQI+-owned business"; "small business"; "applicant".
 
 ## CFPB Section 1033 — worked pattern
 
-12 CFR Part 1033, 89 FR 90838 (November 18 2024) [verify final FR cite]. Tier-based compliance dates by data-provider size [verify post-publication revised dates]. Extraction decomposes into:
+12 CFR Part 1033, 89 FR 90838 (November 18 2024) [verify final FR cite]. **Compliance dates stayed as of October 29, 2025; CFPB-initiated reconsideration with ANPR** — verify current docket status before transcribing tier-based compliance dates into the register. Extraction decomposes into:
 
 - **Data-provider obligations**: make available to consumers and authorised third parties electronic-format data on covered consumer financial accounts.
 - **Authorised-third-party obligations**: collect, use, and retain data only for the purposes authorised by the consumer; deletion-on-request obligation.

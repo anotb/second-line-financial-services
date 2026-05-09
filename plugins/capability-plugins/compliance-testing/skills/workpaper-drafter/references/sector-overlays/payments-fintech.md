@@ -16,7 +16,7 @@ Payments and fintech testing workpapers carry conventions that bank consumer-com
 - **Reg E — 12 CFR Part 1005**, especially §1005.6 (consumer liability), §1005.7 (initial disclosures), §1005.8 (change-in-terms), §1005.10 (preauthorized transfers), §1005.11 (error resolution), §1005.18 (prepaid accounts) [verify subsection labels]. https://www.ecfr.gov/current/title-12/chapter-X/part-1005 .
 - **NACHA Operating Rules (current edition)** Third-Party Sender risk-management rules and ODFI obligations [verify rule citations against the firm's licensed copy]. https://www.nacha.org/ .
 - **FinCEN MSB rules at 31 CFR Part 1022** and registration requirements at 31 CFR §1010.380 [verify subsection labels]. https://www.ecfr.gov/current/title-31/subtitle-B/chapter-X/part-1022 .
-- **CFPB final rule defining larger participants of a market for general-use digital consumer payment applications** (December 2024) [verify Federal Register citation and current state including any litigation or congressional review]. https://www.consumerfinance.gov/compliance/supervisory-guidance/ [verify URL].
+- **CFPB final rule defining larger participants of a market for general-use digital consumer payment applications** (November 21, 2024) — subject to post-publication challenge and CFPB reconsideration since 2025; verify current operative status before relying on designation. https://www.consumerfinance.gov/compliance/supervisory-guidance/ .
 - **State money-transmitter rules** (state by state) — testing workpapers carry the state-adopted statute citation, not the Money Transmission Modernization Act text [verify state citations].
 - **OCC Bulletin 2008-12 — Risk Management Guidance on Payment Processors** [verify exact bulletin number] for bank-side processor-relationship testing.
 
@@ -42,7 +42,7 @@ Payments and fintech testing workpapers carry conventions that bank consumer-com
 
 ### Larger-participant CFPB scope (where applicable)
 
-- Workpaper conventions: where the firm is a CFPB larger participant for digital consumer payment applications, CMS-aligned testing applies. The workpaper cites the larger-participant rule [verify Federal Register citation] alongside the substantive rule under test.
+- Workpaper conventions: where the firm is a CFPB larger participant for digital consumer payment applications, CMS-aligned testing applies (verify operative status of the November 2024 designation rule on the engagement date). The workpaper cites the larger-participant rule alongside the substantive rule under test.
 
 ## Audience and tone
 

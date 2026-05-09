@@ -1,12 +1,12 @@
-# Example: CFPB Circular on adverse-action notices using AI/ML credit decisioning — mid-size consumer bank
+# Example: CFPB Circular on adverse-action notices using AI/ML credit decisioning (mid-size consumer bank)
 
 ## Input
 
-A mid-size consumer bank ($25B in assets, OCC-supervised national bank, with a meaningful unsecured personal-lending and credit-card business) is reading the CFPB Circular on adverse-action notices using AI/ML credit decisioning [verify exact circular number, publication date, and section]. The circular addresses ECOA / Reg B §1002.9 reason-code requirements when the firm uses AI/ML in credit underwriting. The bank's model risk officer flags it; the head of regulatory affairs commissions the impact assessment. Engagement scope is supplied: institution = national bank, primary regulators = OCC and CFPB (CFPB direct supervision applies above $10B), persona = head of regulatory affairs and head of consumer compliance, source posture = public-plus-firm-policy, sector overlay = banking, cross-cutting overlays = conduct (fair-lending implication) and AI-governance (model-risk implication). Time pressure: 14-day read for the regulatory-change-committee; finalised assessment by 21 days.
+A mid-size consumer bank ($25B in assets, OCC-supervised national bank, with a meaningful unsecured personal-lending and credit-card business) is reading the **May 12, 2025 CFPB withdrawal of a broad set of circulars including Circular 2022-03 and Circular 2023-03 on adverse-action notices using AI/ML credit decisioning**. Reg B §1002.9 and Comment 9(b)(2)-3 of the Official Staff Commentary continue to apply on their own terms; the withdrawal removes the bureau's interpretive layer but does not change what the regulation requires. The bank's model risk officer flags the withdrawal; the head of regulatory affairs commissions the impact assessment to confirm that the bank's adverse-action reason-code generation pipeline still meets the regulatory text without depending on the withdrawn circular. Engagement scope is supplied: institution = national bank, primary regulators = OCC and CFPB (CFPB direct supervision applies above $10B), persona = head of regulatory affairs and head of consumer compliance, source posture = public-plus-firm-policy, sector overlay = banking, cross-cutting overlays = conduct (fair-lending implication) and AI-governance (model-risk implication). Time pressure: 14-day read for the regulatory-change-committee; finalised assessment by 21 days.
 
 ## Why this scenario matters
 
-This is the canonical impact-assessment use of the skill on a circular: the source is short and pointed, the implementation lens hits multiple obligation domains (fair-lending, model-risk, consumer-disclosure), and the strategy lens is rich (industry-association coordination on circular interpretation, examiner-posture signal from CFPB Supervisory Highlights, fair-lending model-risk handoff between MRM and the fair-lending officer). The cross-cutting overlay set (conduct + AI-governance) is operative; loading only the banking sector overlay misses the fair-lending and model-risk specifics. The bank does not run the overlay set in autopilot; it loads the conduct overlay because the circular is fair-lending, and the AI-governance read because the circular is AI/ML-anchored.
+This is the canonical impact-assessment use of the skill on a regulatory withdrawal: the source is a bureau action that removes interpretive guidance without amending the underlying rule. The implementation lens hits multiple obligation domains (fair-lending, model-risk, consumer-disclosure) on the strength of Reg B §1002.9 and the Official Staff Commentary, not the withdrawn circulars. The strategy lens reads against the broader May 2025 CFPB guidance withdrawal pattern, state-AG and prudential-regulator continuity on the same fact patterns, and examiner-posture signal from OCC and FRB enforcement. The cross-cutting overlay set (conduct + AI-governance) is operative; loading only the banking sector overlay misses the fair-lending and model-risk specifics.
 
 ## Output sketch
 
@@ -15,22 +15,22 @@ assessment_id: RIA-2026-CFPB-AAN-AIML-01
 engagement_id: ENG-2026-RCM-CFPB-AAN
 as_of_date: 2026-05-06
 
-decision_required: ingest the CFPB Circular into the regulatory-change inventory; kick off rule-to-obligation-extraction; commission policy-diff against the fair-lending-and-credit-decisioning policy and the model-risk-management policy; sign onto the trade-association coordination letter.
-recommended_posture: implementation lens — refresh the adverse-action reason-code generation pipeline for AI/ML-driven decisions, refresh the fair-lending model-risk review programme, and tighten reason-code documentation; strategy lens — neutral with operational concerns, sign onto the trade-association coordination letter, no firm-direct comment because the circular is interpretive.
+decision_required: log the CFPB withdrawal of Circulars 2022-03 / 2023-03 in the regulatory-change inventory as a status change rather than a new obligation; reconfirm that the bank's adverse-action reason-code pipeline meets Reg B §1002.9 and Comment 9(b)(2)-3 on the regulatory text alone; refresh the fair-lending-and-credit-decisioning policy and the model-risk-management policy to remove citations that depend on the withdrawn circulars; do not relax the operating standard.
+recommended_posture: implementation lens — confirm the adverse-action reason-code generation pipeline still supports specific principal reasons, refresh policy citations to anchor on Reg B and the Official Staff Commentary, retain the existing operating bar; strategy lens — track state-AG and prudential-regulator posture on the same fact patterns, watch for examiner pivot to OCC and FRB enforcement, no relaxation of internal standards.
 
 source_citation:
   regulator: CFPB
-  regulator_office: CFPB Office of Supervision Policy
-  instrument_type: circular
-  citation: CFPB Circular [verify circular number and date]
-  section: applicability section on AI/ML adverse-action notices
-  publication_date: [verify]
-  effective_date: n/a — interpretive circular, applies as of publication
-  url: https://www.consumerfinance.gov/compliance/circulars/[verify]
+  regulator_office: CFPB Office of the Director
+  instrument_type: guidance withdrawal
+  citation: CFPB withdrawal of broad set of circulars and policy statements (May 12, 2025), including Circular 2022-03 and Circular 2023-03 on adverse-action notices using complex algorithms / AI
+  section: bureau-wide withdrawal action
+  publication_date: 2025-05-12
+  effective_date: 2025-05-12 (withdrawals took effect on publication)
+  url: https://www.consumerfinance.gov/compliance/circulars/
   related_instruments:
-    - ECOA Reg B §1002.9 [verify subsection]
-    - CFPB Bulletin on adverse-action notices [verify if applicable]
-    - CFPB Supervisory Highlights edition referencing AI/ML credit decisioning [verify edition]
+    - ECOA Reg B §1002.9 (operative regulatory text — not affected by withdrawal)
+    - Reg B Official Staff Commentary, Comment 9(b)(2)-3 (operative — not affected)
+    - CFPB Circulars 2022-03 and 2023-03 [historical only after May 12, 2025]
 
 in_scope: true
 in_scope_rationale: |
@@ -120,9 +120,9 @@ cost_to_comply:
     - adverse-action-notice template refresh
     - training for credit-policy and adverse-action-notice teams
   agency_estimate_reference:
-    agency_estimate_summary: the CFPB Circular itself does not include a cost estimate (interpretive circulars generally do not); the underlying ECOA / Reg B reason-code rule predates the AI/ML interpretive question
-    firm_divergence_note: the firm's read on cost is bottom-up from the credit-decisioning-platform refresh and the testing-methodology refresh
-    source_pin: CFPB Circular [verify]; firm's prior credit-decisioning-platform refresh project record
+    agency_estimate_summary: the CFPB withdrawal action does not include a cost estimate; the underlying Reg B §1002.9 and Comment 9(b)(2)-3 obligations are unchanged, so cost-of-compliance does not increase from the withdrawal itself. Cost in this read is policy-citation refresh and confirmatory testing rather than control rebuild.
+    firm_divergence_note: the firm's read is that the operative bar is unchanged and that the cost-to-comply is the cost of policy-citation refresh plus confirmatory testing of the existing pipeline.
+    source_pin: CFPB withdrawal action May 12, 2025; firm's existing credit-decisioning-platform documentation
 
 regulatory_strategy:
   firm_position: neutral-with-operational-concerns
@@ -181,11 +181,11 @@ source_trace:
     section: §1002.9(a)(2) and (b)(2) [verify subsection]
     url: https://www.ecfr.gov/current/title-12/chapter-X/part-1002
     section_confidence: high
-  - claim: the CFPB has interpreted the principal-reasons requirement as applying to AI/ML model decisions with specificity
-    source: CFPB Circular [verify circular number]
-    section: applicability section on AI/ML adverse-action notices
-    url: https://www.consumerfinance.gov/compliance/circulars/[verify]
-    section_confidence: medium
+  - claim: the CFPB had previously interpreted the principal-reasons requirement as applying to AI/ML model decisions with specificity (Circulars 2022-03 / 2023-03); that interpretive layer was withdrawn May 12, 2025. The underlying obligation under Reg B §1002.9 and Comment 9(b)(2)-3 is unchanged.
+    source: CFPB Circulars 2022-03 (May 26, 2022) and 2023-03 (September 19, 2023) — withdrawn May 12, 2025
+    section: applicability section on AI/ML adverse-action notices [historical reference]
+    url: https://www.consumerfinance.gov/compliance/circulars/
+    section_confidence: high (withdrawal status); historical only on substantive interpretation
   - claim: CFPB direct supervision applies for depository institutions with $10B+ in total assets
     source: 12 USC §5515
     section: §5515(a) [verify subsection]

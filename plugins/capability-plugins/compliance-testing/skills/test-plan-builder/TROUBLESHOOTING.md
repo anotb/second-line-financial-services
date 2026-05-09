@@ -1,4 +1,4 @@
-# Troubleshooting — test-plan-builder
+# Troubleshooting: test-plan-builder
 
 Recurring pitfalls. Read before drafting the plan and again before pre-fieldwork sign-off.
 

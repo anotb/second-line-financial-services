@@ -1,4 +1,4 @@
-# Example — FRB consent-order quarterly remediation update at a state-member bank with eight articles spanning BSA / AML, third-party risk, and IT
+# Example: FRB consent-order quarterly remediation update at a state-member bank with eight articles spanning BSA / AML, third-party risk, and IT
 
 Public-source-derived. No named institution. Roles only. Consent order referenced by docket convention only.
 
@@ -41,7 +41,7 @@ A state-member bank (asset size band 10B-50B, approximately $15B in total consol
 - Reviewer question whether earlier validation (under the bank's 12-month sustained-operation policy) is acceptable to the FRB given the consent-order context.
 - Overall confidence medium.
 
-## Part A — CAMELS preparation by component (concise, with consent-order context)
+## Part A: CAMELS preparation by component (concise, with consent-order context)
 
 For a consent-order quarterly remediation update, the CAMELS section is condensed; the spine of the pack is Parts B and C. The Management component carries the consent-order remediation cadence narrative.
 
@@ -52,7 +52,7 @@ For a consent-order quarterly remediation update, the CAMELS section is condense
 - **L — Liquidity.** Stable; not directly implicated. Confidence: high.
 - **S — Sensitivity to market risk.** Stable. Confidence: high.
 
-## Part B — Examiner-letter response readiness (eight-row table)
+## Part B: Examiner-letter response readiness (eight-row table)
 
 | Item ID | Source | Category | Component / topical link | Action plan summary | Owner role | Closure status | Aging | Escalation risk |
 |---|---|---|---|---|---|---|---|---|
@@ -65,7 +65,7 @@ For a consent-order quarterly remediation update, the CAMELS section is condense
 | CO-ART-7 | FRB consent order, Article 7 | consent-order-article | IT (FFIEC IT Handbook Management booklet) | IT-governance enhancement; CIO charter and IT-steering-committee mandate refreshed | CIO | action-plan | within target | medium |
 | CO-ART-8 | FRB consent order, Article 8 | consent-order-article | IT (FFIEC IT Handbook Outsourcing Technology Services booklet) | Outsourced-technology oversight enhancement | CIO | action-plan | within target | high |
 
-## Part C — MRA / MRIA closure cross-walk (sample rows)
+## Part C: MRA / MRIA closure cross-walk (sample rows)
 
 | Finding ID | Regulator | Date issued | Action taken | Evidence type | Sustained-operation months | Closure readiness | Owner role |
 |---|---|---|---|---|---|---|---|
@@ -81,7 +81,7 @@ For a consent-order quarterly remediation update, the CAMELS section is condense
 
 Not applicable at current asset size band ($15B; threshold $50B under 12 CFR Part 30 Appendix D). Reviewer note that the FRB applies enhanced expectations under the consent order regardless of asset size; the M-component evidence for the consent-order period reads to the same risk-governance-framework expectations.
 
-### Topical readiness slice — BSA / AML, IT, third-party risk
+### Topical readiness slice: BSA / AML, IT, third-party risk
 
 - **BSA / AML.** FFIEC BSA/AML Examination Manual (current edition) [verify section] is the primary anchor for the three BSA articles. Independent-testing report dated within the consent-order period; BSA-officer attestation refreshed quarterly.
 - **IT.** FFIEC IT Examination Handbook (Information Security, Management, Outsourcing Technology Services booklets, current editions) [verify edition] is the anchor for the three IT articles. Most recent IT audit and penetration test (dated; carried in the firm-overlay).

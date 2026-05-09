@@ -1,4 +1,4 @@
-# Troubleshooting — edd-escalation-pack
+# Troubleshooting: edd-escalation-pack
 
 Recurring pitfalls. Read before producing the EDD pack and again before sign-off.
 

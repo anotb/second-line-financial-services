@@ -1,4 +1,4 @@
-# Example — Midsize national bank quarterly Reg O review with director-related credit transactions
+# Example: Midsize national bank quarterly Reg O review with director-related credit transactions
 
 Public-source-derived. No named institution. Roles only.
 
@@ -34,7 +34,7 @@ A midsize national bank (asset size band 10B-50B, approximately $18B in total co
 - Heightened Standards not applicable; asset size below $50B.
 - Overall confidence medium; high on Reg O scope (clean recordkeeping and reporting), medium on related-interest determination depth.
 
-## Section 6 — Reg O and Reg W applicability (the focus section this cycle)
+## Section 6: Reg O and Reg W applicability (the focus section this cycle)
 
 ### Reg O
 
@@ -52,11 +52,11 @@ A midsize national bank (asset size band 10B-50B, approximately $18B in total co
 
 Not applicable this quarter. No affiliate transactions. Affiliate inventory current as of the quarter-end refresh.
 
-## Section 7 — Second-line challenge
+## Section 7: Second-line challenge
 
 Sample-based challenge of all three insider transactions confirms documentation completeness against the §215.4 arms-length-terms framework. One observation: the related-interest determination memo for the $8M transaction is light on the §215.2(n) related-interest analysis (corporate ownership chain not traced through the intermediate holding entity). Action item for the Reg O officer: refresh the related-interest determination memo before audit committee.
 
-## Sections 1 through 5 — posture confirmation only
+## Sections 1 through 5: posture confirmation only
 
 This is a quarterly Reg O cycle, not a full credit-administration review. Sections 1 through 5 run as a one-line posture confirmation:
 
@@ -66,11 +66,11 @@ This is a quarterly Reg O cycle, not a full credit-administration review. Sectio
 - **Concentration governance.** No material change in concentration position from insider transactions; insider exposure remains a small fraction of total credit exposure.
 - **Allowance methodology oversight.** No material change in ACL attributable to insider transactions; methodology unchanged.
 
-## Section 8 — Heightened Standards posture
+## Section 8: Heightened Standards posture
 
 Not applicable; asset size $18B is below the $50B threshold under 12 CFR Part 30 Appendix D.
 
-## Tail — Recommended owner actions
+## Tail: Recommended owner actions
 
 | Action | Owner role | Target |
 |---|---|---|

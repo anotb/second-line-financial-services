@@ -1,4 +1,4 @@
-# Troubleshooting — section1071-readiness
+# Troubleshooting: section1071-readiness
 
 Recurring pitfalls in §1071 readiness work, with the corrective posture for each. Sources are in `references/source-anchors.md`. Sector-specific pitfalls live in the corresponding overlay files.
 

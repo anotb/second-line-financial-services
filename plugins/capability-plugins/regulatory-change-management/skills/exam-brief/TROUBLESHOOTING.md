@@ -1,4 +1,4 @@
-# Troubleshooting — exam-brief
+# Troubleshooting: exam-brief
 
 The exam-brief is the engagement playbook the regulatory affairs lead and head of compliance run during an active examination. It sits next to the substantive readiness pack (which lives in the sector skills `banking-supervision-readiness` and `adviser-exam-readiness`); confusion between the two is the most common defect this skill produces. Other recurring defects below.
 

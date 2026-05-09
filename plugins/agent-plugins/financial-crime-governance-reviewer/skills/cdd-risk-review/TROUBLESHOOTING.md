@@ -1,4 +1,4 @@
-# Troubleshooting — cdd-risk-review
+# Troubleshooting: cdd-risk-review
 
 Recurring pitfalls. Read before producing the review memo and again before sign-off.
 

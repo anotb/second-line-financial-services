@@ -1,4 +1,4 @@
-# Example — OCC full-scope safety-and-soundness exam, midsize national bank approaching the Heightened Standards threshold
+# Example: OCC full-scope safety-and-soundness exam, midsize national bank approaching the Heightened Standards threshold
 
 Public-source-derived. No named institution. Roles only.
 
@@ -41,7 +41,7 @@ A midsize national bank (asset size band 10B-50B, approximately $35B in total co
 - Heightened Standards forward-looking readiness section included given the bank is approaching the $50B threshold; OCC examiners will probe in advance.
 - Overall confidence medium; high on Capital and Earnings, medium on Asset Quality, Management, and Liquidity, low on Sensitivity (one open IRR-model validation finding).
 
-## Part A — CAMELS preparation by component (component-by-component summary)
+## Part A: CAMELS preparation by component (component-by-component summary)
 
 - **C — Capital adequacy.** CET1 ratio above well-capitalised threshold under 12 CFR Part 6 [verify subpart]; capital-action history clean for the review period; capital-planning document updated within the last 12 months. Reviewer question on capital-planning maturity given threshold proximity. Public criteria: OCC Comptroller's Handbook Capital and Dividends booklet (current edition) [verify edition]; well-capitalised threshold under 12 CFR Part 6 [verify subpart]. Confidence: high.
 - **A — Asset quality.** CRE concentration ratio at 280% of total capital, below the 300% interagency screen under the December 2006 Interagency CRE Concentration Guidance and the 2015 Interagency Statement, but trending up over the review period. Classified-asset trend stable. CECL methodology back-testing scheduled inside the fieldwork window. Reviewer question on whether the concentration-risk management framework satisfies the Interagency Guidance §III.B [verify section] for a bank approaching the screen. Public criteria: OCC Comptroller's Handbook Asset Quality booklets (current editions) [verify edition dates]; Interagency CRE Concentration Guidance (December 12, 2006); 2015 Interagency Statement on Prudent Risk Management for CRE Lending. Confidence: medium.
@@ -50,7 +50,7 @@ A midsize national bank (asset size band 10B-50B, approximately $35B in total co
 - **L — Liquidity.** LCR not applicable at current asset band [verify part by charter]; brokered-deposit reliance below internal cap; CFP last tabletop-tested 14 months ago, against the bank's internal target of 12 months. Recommended owner action to schedule a CFP tabletop within 30 days. Public criteria: OCC Comptroller's Handbook Liquidity booklet (current edition) [verify edition]; Interagency Policy Statement on Funding and Liquidity Risk Management (March 17, 2010, OCC OCC-2010-13). Confidence: medium.
 - **S — Sensitivity to market risk.** IRR exposure within board-approved limits; one open model-validation finding on the EVE model (a traditional model) dating from the most recent MRM annual review. Reviewer question on model-validation closure cadence. Public criteria: OCC Comptroller's Handbook Interest Rate Risk booklet (current edition) [verify edition]; OCC Bulletin 2026-13 model-risk expectations for traditional models [verify final 2026 bulletin number and date]. Confidence: low.
 
-## Part B — Examiner-letter response readiness (sample rows)
+## Part B: Examiner-letter response readiness (sample rows)
 
 | Item ID | Source | Category | Component link | Action plan summary | Owner role | Closure status | Aging vs target | Escalation risk |
 |---|---|---|---|---|---|---|---|---|
@@ -58,7 +58,7 @@ A midsize national bank (asset size band 10B-50B, approximately $35B in total co
 | MRA-2025-002 | OCC, prior-cycle supervisory letter | MRA | M | Vendor-management-program enhancement in remediation; 60-day milestone in flight | head of TPRM | in-remediation | within target | medium |
 | FIND-IRR-MODEL-001 | internal MRM annual review | supervisory-recommendation (internal-elevated, not yet examiner-issued) | S | EVE model validation finding; remediation underway | head of model risk | in-remediation | within target | medium |
 
-## Part C — MRA / MRIA closure cross-walk (sample rows)
+## Part C: MRA / MRIA closure cross-walk (sample rows)
 
 | Finding ID | Regulator | Date issued | Action taken | Evidence type | Sustained-operation months | Closure readiness | Owner role |
 |---|---|---|---|---|---|---|---|

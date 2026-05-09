@@ -78,11 +78,11 @@ The skill cites these by file path. SKILL.md does not restate excerpts.
 - Link: https://www.dfs.ny.gov/industry-guidance/industry-letters — Industry Letter October 2024 [verify section]
 - Notes: Cyber cross-cutting overlay anchor; cited from `references/cross-cutting/cyber.md`.
 
-### 11. CFPB Circular 2022-03 — Adverse action notification when using complex algorithms
+### 11. CFPB Circular 2022-03 — Adverse action notification when using complex algorithms (withdrawn May 12, 2025; historical only)
 
-- Citation: CFPB Circular 2022-03 (May 26, 2022), "Adverse action notification requirements in connection with credit decisions based on complex algorithms".
-- Excerpt-paraphrase: Creditors using complex algorithms must still provide a statement of specific reasons to applicants against whom adverse action is taken; the complexity of the model is not a defence to the specificity requirement under ECOA / Regulation B (15 USC §1691; 12 CFR §1002.9). The tier rubric reads any consumer-credit decisioning AI as customer-binding for tiering purposes; the conduct factor scores high.
-- Link: https://www.consumerfinance.gov/compliance/circulars/circular-2022-03-adverse-action-notification-requirements-in-connection-with-credit-decisions-based-on-complex-algorithms/ — Circular section "Required Information" referencing 15 USC §1691 and 12 CFR §1002.9
+- Citation: CFPB Circular 2022-03 (May 26, 2022), "Adverse action notification requirements in connection with credit decisions based on complex algorithms". **Withdrawn May 12, 2025; historical only.** Reg B §1002.9 continues to apply on its own terms.
+- Excerpt-paraphrase: Creditors using complex algorithms must still provide a statement of specific reasons to applicants against whom adverse action is taken; the complexity of the model is not a defence to the specificity requirement under ECOA / Regulation B (15 USC §1691; 12 CFR §1002.9). The tier rubric reads any consumer-credit decisioning AI as customer-binding for tiering purposes; the conduct factor scores high on the strength of Reg B itself, not the withdrawn circular.
+- Link: https://www.consumerfinance.gov/compliance/circulars/circular-2022-03-adverse-action-notification-requirements-in-connection-with-credit-decisions-based-on-complex-algorithms/ — Circular section "Required Information" referencing 15 USC §1691 and 12 CFR §1002.9 [historical reference]
 - Notes: Banking and consumer-compliance overlay anchor; cited from the conduct cross-cutting overlay where present, and from the banking sector overlay.
 
 ### 12. OCC Heightened Standards (12 CFR Part 30 Appendix D)

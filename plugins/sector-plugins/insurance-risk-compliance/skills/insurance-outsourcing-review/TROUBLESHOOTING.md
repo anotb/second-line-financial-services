@@ -1,4 +1,4 @@
-# Troubleshooting — insurance-outsourcing-review
+# Troubleshooting: insurance-outsourcing-review
 
 Recurring defects in outsourcing-review packs and how to read past them.
 

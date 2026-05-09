@@ -1,4 +1,4 @@
-# Troubleshooting — regulatory-impact-assessment
+# Troubleshooting: regulatory-impact-assessment
 
 The impact assessment is the second line's first read on a regulatory item; mistakes at this stage shape every downstream skill (rule-to-obligation-extraction, policy-diff, implementation-plan, exam-brief). The defects below recur across teams and across regulators.
 

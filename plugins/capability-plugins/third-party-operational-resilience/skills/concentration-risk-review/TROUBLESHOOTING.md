@@ -1,4 +1,4 @@
-# Troubleshooting — concentration-risk-review
+# Troubleshooting: concentration-risk-review
 
 Recurring pitfalls. Read before producing the artifact and again before sign-off.
 
@@ -48,7 +48,7 @@ Criticality is consumed from `criticality-assessment`, not set here. A register 
 
 ## Loading the wrong sector overlay
 
-Institution type and primary regulator constellation determine the sector overlay set. A dual-registrant or a fintech with a sponsor-bank arrangement may load two. Do not collapse to one. Do not load all four "to be safe" — gold-plating the overlay set adds noise without supervisory value.
+Institution type and primary regulator constellation determine the sector overlay set. A dual-registrant or a fintech with a sponsor-bank arrangement may load two. Do not collapse to one. Do not load all four "to be safe"; gold-plating the overlay set adds noise without supervisory value.
 
 ## Reading the cyber-overlay rows as a duplicate of vendor-diligence
 

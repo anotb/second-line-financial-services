@@ -40,7 +40,7 @@ Fix: `incident_response_readiness.last_drilled` records the date and `drill_scop
 
 ## Single-name sign-off block on a tier-1 or tier-2 use case
 
-A sign-off block with one name reads to the committee as broader sign-off than exists. The cyber lens, the privacy lens, the consumer-compliance lens, the BSA lens, the actuarial lens, the legal lens — each has its own seam and its own residual-risk concerns. One name signs for one of those.
+A sign-off block with one name reads to the committee as broader sign-off than exists. The cyber lens, the privacy lens, the consumer-compliance lens, the BSA lens, the actuarial lens, the legal lens: each has its own seam and its own residual-risk concerns. One name signs for one of those.
 
 Fix: the `signoff[]` array requires named reviewers across the relevant functions per the loaded overlays. For a banking customer-facing GenAI use case the standard set is AI Governance Lead, model risk lead, CISO function, consumer compliance, Privacy Officer, BSA officer if AML touch, legal. For an insurance use case substitute chief actuarial officer and add state-level compliance. Dissent is recorded explicitly with a basis; the gate decision proceeds with the dissent visible.
 

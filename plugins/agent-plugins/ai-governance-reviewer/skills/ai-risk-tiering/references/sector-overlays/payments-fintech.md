@@ -57,7 +57,7 @@ The use-case categories below are the most-frequent shapes; tier values remain f
 ### Underwriting and pricing AI for non-bank consumer finance
 
 - Where the use case influences credit-limit, APR, or approval/decline decisions outside a sponsor-bank context, the consumer-protection authority sits with the CFPB plus state regulators.
-- ECOA / Reg B applies to the credit decision; CFPB Circular 2022-03 reads on the adverse-action notice; conduct factor scores high.
+- ECOA / Reg B applies to the credit decision; Reg B §1002.9 and Comment 9(b)(2)-3 read directly on the adverse-action notice (CFPB Circulars 2022-03 / 2023-03 **withdrawn May 12, 2025; historical only**); conduct factor scores high.
 - Default tier elevation: tier-1.
 
 ## Cross-cutting tier modifiers
@@ -65,7 +65,7 @@ The use-case categories below are the most-frequent shapes; tier values remain f
 - **Sponsor-bank arrangement**: where the AI sits in the program operator's stack but the regulated activity sits at the sponsor bank, the tier decision names the sponsor bank's federal banking regulator and the bank-side committee path. Vendor-dependence and concentration factors elevate. The bank-fintech contract allocates model-risk responsibility but the bank inherits the model risk under the June 2023 interagency guidance.
 - **State money-transmitter footprint**: state-by-state MTL exam expectations elevate the regulatory factor; the strictest state in the footprint sets the floor for licensure-tied gates.
 - **NYDFS Part 504 covered entity**: senior-officer certification posture for TM models is a triggered gate; the regulatory factor scores high for any TM, sanctions-screening, or KYC use case.
-- **CFPB Larger-Participant Rule applicability** (Digital Wallets and Payment Apps, December 2024) [verify status]: where in scope, the entity is under direct CFPB supervisory authority and the regulatory factor elevates for any consumer-facing AI.
+- **CFPB larger-participant rule for digital consumer payment applications** (12 CFR Part 1090, finalized November 21, 2024) — verify current operative status on the engagement date (CFPB has been reconsidering and litigating multiple late-2024 final rules); where in scope and operative, the entity is under direct CFPB supervisory authority and the regulatory factor elevates for any consumer-facing AI.
 - **Concentration risk on sponsor-bank, processor, BIN sponsor**: three distinct concentration axes; each fails differently. The concentration factor scores against the dominant axis for the use case.
 - **Faster-payments rails (FedNow, RTP, Same Day ACH inbound)**: irrevocability shifts the fraud-control playbook; the conduct factor reads against request-for-return-of-funds dynamics rather than chargeback paths.
 
@@ -78,7 +78,7 @@ In addition to the capability rubric:
 - NYDFS Part 504 senior-officer certification posture → regulatory factor high.
 - CFPB Larger-Participant Rule in scope → regulatory factor elevated for consumer-facing AI.
 - Reg E reach on consumer-facing AI that intakes claims or affects transactions → conduct factor at minimum medium.
-- FDIC misrepresentation rule (12 CFR Part 328 Subpart B) [verify exact citation]: any "FDIC-insured" framing on a fintech surface elevates the conduct factor and triggers a customer-disclosure control gate.
+- FDIC misrepresentation rule (12 CFR Part 328 Subpart B; **2023 final rule with 2024-2025 effective-date extensions** — verify current effective date for the engagement): any "FDIC-insured" framing on a fintech surface elevates the conduct factor and triggers a customer-disclosure control gate.
 
 ## Payments-fintech-specific re-tiering triggers
 

@@ -1,4 +1,4 @@
-# Example — consumer-EFT error-resolution control refresh after an internal-audit finding
+# Example: consumer-EFT error-resolution control refresh after an internal-audit finding
 
 Scenario type: anonymised, public-source-derived; no named institution; the fact pattern reflects recurring CFPB Supervisory Highlights themes and prudential-regulator MRA patterns on dispute-timing breaches.
 

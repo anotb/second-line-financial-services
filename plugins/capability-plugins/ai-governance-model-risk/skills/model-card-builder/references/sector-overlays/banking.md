@@ -33,8 +33,7 @@ Where the model influences a credit decision (origination, pricing, line managem
 
 Specifically reference:
 
-- The CFPB Circular 2022-03 expectation that adverse action reasons must be specific and accurate even when the model is complex (the so-called black-box defence is rejected).
-- The CFPB Circular 2023-03 expectation that creditors cannot rely on illegitimate reasons such as the algorithm not surfacing a permitted reason; reasons given must be the actual principal reasons.
+- The Reg B §1002.9 specific-reasons requirement and Comment 9(b)(2)-3 of the Official Staff Commentary, which require the cited reasons to relate to and accurately describe the factors actually considered or scored. CFPB Circulars 2022-03 (specific-and-accurate reasons even when the model is complex) and 2023-03 (reasons given must be the actual principal reasons, not sample-form artefacts) **were withdrawn May 12, 2025; historical only**. The regulatory text continues to apply on its own terms.
 - The firm's adverse action notice generation method (typically SHAP-based or reason-code-mapped) and any sampling/quality control for notice accuracy.
 
 Sign-off questions (banking, credit-decisioning):

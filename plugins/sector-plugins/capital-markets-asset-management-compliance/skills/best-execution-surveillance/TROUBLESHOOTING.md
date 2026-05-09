@@ -1,4 +1,4 @@
-# Troubleshooting — best-execution-surveillance
+# Troubleshooting: best-execution-surveillance
 
 Recurring defects in best-execution surveillance artifacts. Each is a finding pattern an examiner or independent reviewer is likely to surface; the skill is structured to make each visible rather than letting it pass.
 
@@ -22,7 +22,7 @@ Fix: the 605 / 606 reconciliation sheet is a cross-check on operational data qua
 
 ## Skipping the conflict-as-input step
 
-PFOF, principal trades, agency crosses, affiliated brokerage, soft dollars, commission-sharing arrangements — each must be weighed in the best-execution determination, not just disclosed alongside it. An artifact that lists conflicts in a disclosure block but does not show how the conflict factored into routing or execution decisions misses the substantive review.
+PFOF, principal trades, agency crosses, affiliated brokerage, soft dollars, commission-sharing arrangements: each must be weighed in the best-execution determination, not just disclosed alongside it. An artifact that lists conflicts in a disclosure block but does not show how the conflict factored into routing or execution decisions misses the substantive review.
 
 Fix: the conflict-review sheet's `weighed_in_determination` column is required for every present conflict, with reference to the committee minutes that captured the weighing. The disclosure-consistency check is a separate column; disclosure does not cure conflict if the underlying conduct does not match.
 
@@ -52,7 +52,7 @@ Fix: the fund-adviser variant's `fund_15c_attestation` block is per-fund per-per
 
 ## Committee minutes with no dissents, no questions, no follow-ups across multiple periods
 
-The conduct overlay reads committee minutes for substantive challenge. A multi-period run of meetings where the minutes record only attendance, materials reviewed, and a generic approval — with no dissents recorded, no questions noted, no follow-ups assigned — is itself a culture finding even if every individual meeting passed.
+The conduct overlay reads committee minutes for substantive challenge. A multi-period run of meetings where the minutes record only attendance, materials reviewed, and a generic approval (no dissents recorded, no questions noted, no follow-ups assigned) is itself a culture finding even if every individual meeting passed.
 
 Fix: the committee_pack block's `dissents_recorded` field carries an explicit "no dissents recorded" string when none occurred, so the field is not silently empty. The follow-ups field carries the prior-period follow-up status, so an examiner can read the rolling action discipline. The memo's Section 9 surfaces the absence of substantive challenge as a culture observation if the pattern persists.
 
@@ -64,6 +64,6 @@ Fix: the aggregate_metrics rows record `threshold` and `breach_flag` explicitly;
 
 ## Crypto and FX scope claimed without honest evidence framework
 
-For asset classes lacking a consolidated tape (FX, crypto, fixed income) the surveillance can only rely on the evidence framework that asset class supports — competitive-quote logs for fixed income; price-versus-mid-at-execution and last-look reads for FX; venue-by-venue execution data with the limitations explicitly named for crypto. Claiming NBBO-style coverage in these asset classes overstates the surveillance.
+For asset classes lacking a consolidated tape (FX, crypto, fixed income) the surveillance can only rely on the evidence framework that asset class supports: competitive-quote logs for fixed income; price-versus-mid-at-execution and last-look reads for FX; venue-by-venue execution data with the limitations explicitly named for crypto. Claiming NBBO-style coverage in these asset classes overstates the surveillance.
 
 Fix: the asset-class flavour in the capital-markets sector overlay sets the evidence framework per class; the surveillance documents the limitations rather than claiming a coverage it cannot support.

@@ -16,7 +16,7 @@ Per-plugin editorial layer (B1-B6) over Phase 1's mechanical cleanup. Voice prin
 
 ### Phase 1 cross-cutting cleanup (commit 22dc202)
 
-Six plugin-scoped sweeps (A1-A6) covering all 64 source skills.
+Six plugin-scoped sweeps (A1-A6) covering all 68 source skills.
 
 - Removed `Anchored to:` paragraph from SKILL.md description blocks. Citations live in `references/source-anchors.md` rather than duplicated in the description.
 - Split "What's load-bearing and what flexes" sections into a `Quality bar` block (invariants across every artifact) plus an `Adaptation` block (what flexes by engagement). Editorial folding pass deferred to Phase 2.

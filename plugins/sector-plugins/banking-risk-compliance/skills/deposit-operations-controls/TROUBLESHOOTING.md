@@ -1,4 +1,4 @@
-# TROUBLESHOOTING — deposit-operations-controls
+# Troubleshooting: deposit-operations-controls
 
 Recurring defects in deposit-operations control matrices and how to fix them. Read against `SKILL.md` and `templates/default-output.md`.
 
@@ -16,7 +16,7 @@ Advertising controls split into ad-content review (the message), APY-accuracy re
 
 ## Skipping pass-through deposit-insurance recordkeeping on FBO accounts
 
-12 CFR Part 330 §330.5 [verify section] establishes the recordkeeping conditions for pass-through coverage on fiduciary and custodial accounts. Without compliant recordkeeping, the FBO depositors lose pass-through coverage — and the bank's reputational and operational-risk exposure spikes. The matrix must include a §330 row when the scope includes a sponsor-bank program. Status field with values `documented` / `partial` / `not-applicable` / `gap`.
+12 CFR Part 330 §330.5 [verify section] establishes the recordkeeping conditions for pass-through coverage on fiduciary and custodial accounts. Without compliant recordkeeping, the FBO depositors lose pass-through coverage, and the bank's reputational and operational-risk exposure spikes. The matrix must include a §330 row when the scope includes a sponsor-bank program. Status field with values `documented` / `partial` / `not-applicable` / `gap`.
 
 ## Treating the deposit-insurance misrepresentation row as a one-place row
 

@@ -4,12 +4,12 @@ Last updated: 2026-05-08, post Phase 2 editorial review.
 
 ## Build state
 
-64 source skills across 8 capability plugins and 4 sector overlay plugins, plus 6 standalone agent plugins that bundle subsets of those skills.
+68 source skills across 8 capability plugins and 4 sector overlay plugins, plus 6 standalone agent plugins that bundle subsets of those skills.
 
 | Stage | Status |
 |---|---|
 | v1 plugin map locked | done |
-| 64 source skills built | done (batch 2D-2 closed the build queue) |
+| 68 source skills built | done (batch 2D-2 closed the build queue) |
 | Sync to agent-plugin bundles | done |
 | Phase 1 cross-cutting cleanup (6 sweeps) | done (commit 22dc202) |
 | Phase 2 editorial review (B1-B6) | done (commit 5fd4cf6) |

@@ -1,4 +1,4 @@
-# Example — small-group health refile with a new geographic-area factor and a vendor-supplied ML risk-adjustment input
+# Example: small-group health refile with a new geographic-area factor and a vendor-supplied ML risk-adjustment input
 
 **Public-source-derived. No named institutions.**
 
@@ -28,7 +28,7 @@ Per-factor under #880 plus a rating-plan-as-a-whole assessment. All factors carr
 
 State guidance limited in the three states in scope; no CO, NY, or CA presence in this filing. Standard #880 monitoring expectation only.
 
-### AI / ML governance — AIS Program cross-walk
+### AI / ML governance: AIS Program cross-walk
 
 Vendor ML input pulls third-party-AI-accountability obligations under the NAIC Bulletin December 2023. Six AIS Program elements `in-place`, three `partial`. The carrier-level monitoring against the vendor's input is the key open item.
 

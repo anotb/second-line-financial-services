@@ -27,7 +27,7 @@ obligation_ids: [OBL-RegE-1005.11, OBL-firm-DepositOps-DisputePolicy-v6.2]
 engagement_id: ENG-2026-CMS-RegE-Q1
 period_start: 2026-01-01
 period_end: 2026-03-31
-business_unit: Deposit Operations — Disputes
+business_unit: Deposit Operations: Disputes
 jurisdictions: [US-federal, multi-state]
 source_posture: public-plus-firm-policy-plus-evidence
 scope_statement: >

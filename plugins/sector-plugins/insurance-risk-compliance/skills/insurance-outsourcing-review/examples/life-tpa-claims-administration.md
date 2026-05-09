@@ -1,4 +1,4 @@
-# Example — life carrier renewing a TPA for closed-block claims administration
+# Example: life carrier renewing a TPA for closed-block claims administration
 
 ## Input
 

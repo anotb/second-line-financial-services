@@ -6,7 +6,7 @@ When the scope flags payments or fintech and the rule touches non-bank consumer-
 
 Payments and fintech impact assessments turn on legal-entity type, activity, partnership structure, and licensing footprint:
 
-- **Non-bank consumer-finance providers** (mortgage servicers, debt collectors, payday lenders, BNPL providers, larger participants in consumer-financial-product markets) under CFPB direct supervision per the larger-participant rule [verify Part 1090 subsection].
+- **Non-bank consumer-finance providers** (mortgage servicers, debt collectors, payday lenders, BNPL providers, larger participants in consumer-financial-product markets) under CFPB direct supervision per the larger-participant rule (12 CFR Part 1090; the November 2024 final rule designating larger participants of digital consumer payment applications has been the subject of post-publication challenge and CFPB reconsideration since 2025 — verify current operative status). The CFPB BNPL interpretive rule (May 2024) was **nullified by Pub. L. 119-11 (May 9, 2025); historical only**.
 - **State-licensed money transmitters** under state money-transmitter statutes (state-by-state). The Conference of State Bank Supervisors (CSBS) Money Transmitter Modernization Act / Money Services Business Model Act is the harmonisation vehicle, with state-by-state adoption variance.
 - **Federally registered MSBs** under FinCEN registration (31 CFR 1022) [verify subsection].
 - **Sponsor-bank-arrangement fintechs**: a non-bank fintech offering a banking-like product (deposit account, debit card, payments capability) under a sponsor-bank's charter. The sponsor-bank carries the regulatory exposure; the fintech operates under contract.
@@ -20,7 +20,7 @@ Payments and fintech impact assessments turn on legal-entity type, activity, par
 
 The assessment's threshold determination reads against payments-and-fintech tier mechanics:
 
-- **CFPB larger-participant thresholds**: the CFPB's larger-participant rule (12 CFR Part 1090) [verify subpart and section] sets activity-volume thresholds that bring non-bank firms under direct CFPB supervision (e.g., consumer reporting, debt collection, student loan servicing, automobile financing, international money transmission, BNPL where applicable; verify the most-recent larger-participant rule scope).
+- **CFPB larger-participant thresholds**: the CFPB's larger-participant rule (12 CFR Part 1090) [verify subpart and section] sets activity-volume thresholds that bring non-bank firms under direct CFPB supervision (e.g., consumer reporting, debt collection, student loan servicing, automobile financing, international money transmission, and digital consumer payment applications under the November 2024 final rule — verify current operative status given post-2024 challenge and CFPB reconsideration). BNPL is currently outside the named larger-participant markets; the CFPB BNPL interpretive rule was **nullified by Pub. L. 119-11 (May 9, 2025); historical only**.
 - **State money-transmitter licensing thresholds**: state-by-state money-transmitter statutes set activity-volume and net-worth thresholds for licensure.
 - **FinCEN MSB registration thresholds**: 31 CFR 1010.100(ff) [verify subsection] sets the MSB definition; firms meeting the definition register with FinCEN.
 - **Sponsor-bank tier**: sponsor-bank capital, asset size, and primary regulator drive the bank-side regulatory exposure that flows to the fintech under the partnership.
@@ -33,7 +33,7 @@ Payments-and-fintech impact assessments routinely touch the named-policy areas b
 - **BSA-AML Programme** for the firm's MSB or money-transmitter scope under FinCEN rules (31 CFR 1022) and state requirements.
 - **OFAC Sanctions Programme** for the firm's payments and customer-onboarding scope.
 - **Reg E Programme** for consumer-error-resolution, provisional-credit, and unauthorised-EFT handling under 12 CFR Part 1005.
-- **Reg Z Programme** for credit-card, BNPL-where-applicable, and lending disclosures under 12 CFR Part 1026.
+- **Reg Z Programme** for credit-card, BNPL-where-applicable, and lending disclosures under 12 CFR Part 1026. (Reg Z applicability to Pay-in-Four BNPL is now an open question on the regulatory text; the CFPB BNPL interpretive rule was **nullified by Pub. L. 119-11 (May 9, 2025); historical only**.)
 - **TILA-RESPA Integrated Disclosure (TRID) Programme** for mortgage lenders.
 - **FCRA Programme** for adverse-action, credit-reporting, and dispute handling.
 - **FDCPA Programme** for collection activities (where applicable).
@@ -43,7 +43,7 @@ Payments-and-fintech impact assessments routinely touch the named-policy areas b
 - **Cybersecurity Programme** anchored on PCI DSS, NYDFS Part 500 for NYDFS-licensed entities, and FFIEC IT Handbook expectations flowed down through sponsor-bank contracts.
 - **Privacy Programme** anchored on the GLBA Privacy Rule, the GLBA Safeguards Rule, state privacy laws (CCPA / CPRA), and CFPB consumer-financial-data rules.
 - **Dispute-Handling and Complaint-Management Programme** anchored on Reg E, Reg Z, CFPB complaint-tracking expectations, and card-network dispute rules.
-- **Open Banking and Data Sharing Programme** under CFPB Section 1033 (12 CFR Part 1033) [verify final-rule citation, subsection, and effective date].
+- **Open Banking and Data Sharing Programme** under CFPB Section 1033 (12 CFR Part 1033). **§1033 compliance dates stayed as of October 29, 2025; CFPB-initiated reconsideration with ANPR** — verify current docket status before sequencing the programme against tier-based compliance dates.
 
 The assessment's policy-impact section names the policy area, the expected change type, and the rationale; the skill does not draft policy language.
 
@@ -56,7 +56,7 @@ Payments-and-fintech reporting touches:
 - **CFPB complaint-database reporting**: CFPB-supervised firms respond to consumer complaints in the CFPB consumer complaint database with response timing and documentation expectations.
 - **Card-network operator reports**: chargeback ratios, fraud ratios, dispute-volume reports under network rules.
 - **Prepaid card disclosures** under 12 CFR Part 1005 [verify subsection].
-- **Section 1033 data-access reporting** under the CFPB open-banking rule [verify final-rule reporting requirements].
+- **Section 1033 data-access reporting** under the CFPB open-banking rule (**compliance dates stayed October 29, 2025; CFPB reconsideration with ANPR** — verify before relying on rule-text reporting cadences).
 - **Sponsor-bank-issued reports**: the sponsor-bank's regulatory reports cover the bank-fintech-partnership program-level data; the fintech's contributions feed those reports.
 
 ## Sponsor-bank partnership posture

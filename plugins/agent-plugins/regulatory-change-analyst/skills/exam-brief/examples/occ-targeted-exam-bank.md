@@ -1,4 +1,4 @@
-# Example: OCC targeted exam at a regional bank — third-party risk and cyber
+# Example: OCC targeted exam at a regional bank (third-party risk and cyber)
 
 ## Input
 

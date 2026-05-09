@@ -1,4 +1,4 @@
-# Troubleshooting — payment-operations-incident-review
+# Troubleshooting: payment-operations-incident-review
 
 Recurring pitfalls. Read before drafting if the engagement looks unfamiliar; consult after drafting if the artifact does not feel right to a senior payments-compliance reviewer or to a sponsor-bank operating-committee reader.
 

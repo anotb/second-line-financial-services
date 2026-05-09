@@ -1,4 +1,4 @@
-# Troubleshooting — dora-register-builder
+# Troubleshooting: dora-register-builder
 
 Recurring pitfalls in DORA Register of Information builds, with the corrective posture for each. Sources are in `references/source-anchors.md`.
 

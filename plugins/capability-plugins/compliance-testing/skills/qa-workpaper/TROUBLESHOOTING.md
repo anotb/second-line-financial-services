@@ -16,7 +16,7 @@ Symptom: the QA reviewer role and the workpaper reviewer role are the same on th
 
 Why it goes wrong: same problem as preparer-reviewer overlap on the workpaper. The QA reviewer must be independent of the original review; otherwise the QA is a self-review and adds no independence.
 
-Catch it: the QA review note's header has three distinct role names (preparer, workpaper reviewer, QA reviewer). Where the testing function is small and the same person fills two roles, the separation is on role label and on review responsibility, not on body — but the QA review note's audit trail records the separate sign-offs explicitly. Where genuine independence is not achievable, the QA scope is `targeted-re-review` by a different role and the limitation is documented in the QA review note.
+Catch it: the QA review note's header has three distinct role names (preparer, workpaper reviewer, QA reviewer). Where the testing function is small and the same person fills two roles, the separation is on role label and on review responsibility, not on body, but the QA review note's audit trail records the separate sign-offs explicitly. Where genuine independence is not achievable, the QA scope is `targeted-re-review` by a different role and the limitation is documented in the QA review note.
 
 ## 3. Severity inflation in QA notes
 

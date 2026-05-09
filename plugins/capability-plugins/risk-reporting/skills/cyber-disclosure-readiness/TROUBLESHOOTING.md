@@ -56,7 +56,7 @@ Symptom: `year_over_year_diff` is empty or all rationales = "no change". The dis
 
 Why it happens: Item 106 disclosure is annual and stable in its bones; refreshing it feels like make-work in the absence of changes.
 
-Fix: year-over-year diff and rationale are required. Underlying facts (board cadence, management positions, third-party engagements, material effects) change. Even where no substantive change exists, "no substantive change — refreshed for currency" is a documented rationale, not a default. Rolled-forward-unchanged Item 106 is a frequent finding.
+Fix: year-over-year diff and rationale are required. Underlying facts (board cadence, management positions, third-party engagements, material effects) change. Even where no substantive change exists, "no substantive change, refreshed for currency" is a documented rationale, not a default. Rolled-forward-unchanged Item 106 is a frequent finding.
 
 ## Item 106(c) board-oversight or management-role disclosure reads as boilerplate
 

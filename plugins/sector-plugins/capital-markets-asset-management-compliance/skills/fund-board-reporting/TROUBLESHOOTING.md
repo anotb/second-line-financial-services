@@ -20,7 +20,7 @@ Fix: Rule 38a-1 expects the parent CCO to reasonably believe the sub-adviser's p
 
 ## §15(c) profitability without methodology
 
-Symptom: the §15(c) renewal pack carries a profitability number for the adviser's relationship with the fund. Methodology — direct expense allocation, indirect cost basis, capital usage — is not described.
+Symptom: the §15(c) renewal pack carries a profitability number for the adviser's relationship with the fund. Methodology (direct expense allocation, indirect cost basis, capital usage) is not described.
 
 Why it happens: the adviser provides the number; the pack carries it forward.
 

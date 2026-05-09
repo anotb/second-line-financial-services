@@ -1,4 +1,4 @@
-# Example — FedNow instant-payout outage at a payroll-on-demand fintech
+# Example: FedNow instant-payout outage at a payroll-on-demand fintech
 
 ## Input description
 

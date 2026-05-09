@@ -1,4 +1,4 @@
-# Troubleshooting — life-health-pricing-governance
+# Troubleshooting: life-health-pricing-governance
 
 Recurring defects in the artifact. Each is a real failure mode observed across draft pricing-governance files; each has a fix and a check the second-line reviewer can run before sign-off.
 

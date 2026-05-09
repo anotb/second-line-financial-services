@@ -9,7 +9,7 @@ Payments and fintech test plans carry conventions that bank consumer-compliance 
 - **Sponsor-bank arrangements load two sector overlays.** The fintech program tests against payments-fintech rules; the sponsor-bank arrangement tests against banking rules (Bank Service Company Act, the 2024 Joint Statement on bank-third-party deposit programs, end-customer reconciliation, deposit-insurance representation). Both overlays load and the plan names which controls sit on which side.
 - **Reg E error-resolution case files are the operating-procedure unit.** The case file the firm produces in the ordinary course is the testing artifact under §1005.11. Compliance test plans for Reg E error-resolution sample case files for adherence to the procedure and the procedural clock.
 - **NACHA Operating Rules are paywalled.** Cite as "current edition; specific sections to be confirmed against the firm's licensed copy" rather than restating rule text in the plan. The criteria section names the rule citation; the firm's licensed copy is the source of truth at fieldwork.
-- **Larger-participant CFPB scope changes the criteria base.** Where the firm is a CFPB larger participant for digital consumer payment applications, CMS-aligned planning applies; the plan cites the larger-participant rule alongside the substantive rule under test.
+- **Larger-participant CFPB scope changes the criteria base.** Where the firm is a CFPB larger participant for digital consumer payment applications, CMS-aligned planning applies; the plan cites the larger-participant rule alongside the substantive rule under test. (The November 2024 final rule has been the subject of post-publication challenge and CFPB reconsideration since 2025 — verify current operative status before treating designation as firm.)
 
 ## Payments-fintech-supervisory anchors (load by reference; do not restate)
 
@@ -17,7 +17,7 @@ Payments and fintech test plans carry conventions that bank consumer-compliance 
 - **Reg E — 12 CFR Part 1005**, especially §1005.6 (consumer liability), §1005.7 (initial disclosures), §1005.8 (change-in-terms), §1005.10 (preauthorized transfers), §1005.11 (error resolution), §1005.18 (prepaid accounts) [verify subsection labels]. https://www.ecfr.gov/current/title-12/chapter-X/part-1005 .
 - **NACHA Operating Rules (current edition)** Third-Party Sender risk-management rules and ODFI obligations [verify rule citations against the firm's licensed copy]. https://www.nacha.org/ .
 - **FinCEN MSB rules at 31 CFR Part 1022** and registration requirements at 31 CFR §1010.380 [verify subsection labels]. https://www.ecfr.gov/current/title-31/subtitle-B/chapter-X/part-1022 .
-- **CFPB final rule defining larger participants of a market for general-use digital consumer payment applications** (December 2024) [verify Federal Register citation and current state including any litigation or congressional review]. https://www.consumerfinance.gov/compliance/supervisory-guidance/ [verify URL].
+- **CFPB final rule defining larger participants of a market for general-use digital consumer payment applications** (November 21, 2024) — the rule has been the subject of post-publication challenge and CFPB reconsideration since 2025; verify current operative status before relying on designation. https://www.consumerfinance.gov/compliance/supervisory-guidance/ .
 - **State money-transmitter rules** (state by state) — test plans cite the state-adopted statute citation, not the Money Transmission Modernization Act text [verify state citations].
 - **Interagency Guidance on Third-Party Relationships: Risk Management** (FDIC / OCC / FRB, June 6, 2023) [verify section labels]. https://www.federalreserve.gov/supervisionreg/srletters/SR2304.htm .
 
@@ -44,7 +44,7 @@ Payments and fintech test plans carry conventions that bank consumer-compliance 
 
 ### Larger-participant CFPB scope (where applicable)
 
-- Test-plan conventions: where the firm is a CFPB larger participant for digital consumer payment applications, CMS-aligned testing applies. The plan cites the larger-participant rule [verify Federal Register citation] alongside the substantive rule under test.
+- Test-plan conventions: where the firm is a CFPB larger participant for digital consumer payment applications, CMS-aligned testing applies (verify operative status of the November 2024 designation rule on the engagement date). The plan cites the larger-participant rule alongside the substantive rule under test.
 
 ## Audience and tone
 

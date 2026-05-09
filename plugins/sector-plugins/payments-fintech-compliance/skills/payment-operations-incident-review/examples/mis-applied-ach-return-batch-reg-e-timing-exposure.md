@@ -1,4 +1,4 @@
-# Example — mis-applied ACH return batch causing consumer-EFT timing exposure at a BaaS-supported neobank
+# Example: mis-applied ACH return batch causing consumer-EFT timing exposure at a BaaS-supported neobank
 
 ## Input description
 
@@ -8,7 +8,7 @@ The engagement was scoped at public-plus-firm-policy-plus-system-of-record postu
 
 ## Output sketch
 
-The pack opens with an **incident summary** naming the rail (ACH, consumer-account, with the unauthorised-return-code subset implicated), the affected population (~120 consumers; preliminary dollar magnitude pending reconciliation closure), the contained status, the sponsor-bank notification clock posture (sent day three, against a 24-hour contractual clock — overdue), and the consumer-EFT clock posture (multiple claims at day eight or nine of the named investigation window).
+The pack opens with an **incident summary** naming the rail (ACH, consumer-account, with the unauthorised-return-code subset implicated), the affected population (~120 consumers; preliminary dollar magnitude pending reconciliation closure), the contained status, the sponsor-bank notification clock posture (sent day three, against a 24-hour contractual clock (overdue)), and the consumer-EFT clock posture (multiple claims at day eight or nine of the named investigation window).
 
 The **chronology** runs from the processor's mis-application of the return batch through the firm's first detection signal (ops-team queue-volume alert), the queue investigation, the customer-impact reconciliation, the sponsor-bank notification, and the customer-facing remediation. Each row names the actor by role; the processor is named at the steps where it sits in the chain.
 

@@ -1,10 +1,10 @@
-# Troubleshooting — aml-model-monitoring
+# Troubleshooting: aml-model-monitoring
 
 Common defects in monitoring-review work product. Use this list to catch the recurring failure modes before sponsor sign-off.
 
 ## "AML monitoring is rules, not a model"
 
-The most common failure mode. The memo reads the system as a rules engine, applies BSA/AML examination expectations only, and skips model-risk discipline (development, implementation, use, validation, governance, ongoing monitoring, effective challenge). The named US model-risk supervisory guidance treats AML transaction monitoring as a model when it applies statistical, economic, financial, or mathematical theory to inputs — scenarios, thresholds, segmentation, and tuning all qualify. The program review at section one of the memo states the model frame explicitly. If the memo body does not read against the model-risk discipline, redraft.
+The most common failure mode. The memo reads the system as a rules engine, applies BSA/AML examination expectations only, and skips model-risk discipline (development, implementation, use, validation, governance, ongoing monitoring, effective challenge). The named US model-risk supervisory guidance treats AML transaction monitoring as a model when it applies statistical, economic, financial, or mathematical theory to inputs (scenarios, thresholds, segmentation, and tuning all qualify). The program review at section one of the memo states the model frame explicitly. If the memo body does not read against the model-risk discipline, redraft.
 
 ## Productivity figures without denominator definitions
 
@@ -44,7 +44,7 @@ Reading a payments-fintech monitoring system through a deposit-bank lens (or a b
 
 ## Cyber overlay not loaded when the typology surface implicates it
 
-Customer base shows VASP transaction patterns, the firm has experienced ATO loss, BEC payouts have appeared in prior SAR filings — but the cyber cross-cutting overlay is not loaded and the scenario inventory carries no ATO, BEC, or VASP-conversion scenarios. The QA loads the cyber overlay (`references/cross-cutting/cyber.md`) when the typology evidence is on file, even if the scope did not explicitly flag it; the memo notes the load.
+Customer base shows VASP transaction patterns, the firm has experienced ATO loss, BEC payouts have appeared in prior SAR filings, but the cyber cross-cutting overlay is not loaded and the scenario inventory carries no ATO, BEC, or VASP-conversion scenarios. The QA loads the cyber overlay (`references/cross-cutting/cyber.md`) when the typology evidence is on file, even if the scope did not explicitly flag it; the memo notes the load.
 
 ## Source-anchor citations in the memo body
 

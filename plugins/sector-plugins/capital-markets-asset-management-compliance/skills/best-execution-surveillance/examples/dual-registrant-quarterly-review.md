@@ -34,7 +34,7 @@ Executive summary: aggregate execution-quality posture within firm appetite this
 
 ## Why this scenario matters
 
-It tests three things at once: the dual-registrant's parallel-rule-lattice obligation (the artifact carries both the §206 fiduciary factor analysis and the Rule 5310 .01 factor analysis on the trade-exception sheet); the PFOF conflict-as-input framing under the conduct overlay (disclosure is consistent but the surveillance still surfaces a finding because the committee-minute did not capture the weighing); and the §206(3) per-transaction consent operational lapse — a recurring finding pattern in dual-registrant exams that the surveillance catches because the sample stratifies to over-represent principal trades.
+It tests three things at once: the dual-registrant's parallel-rule-lattice obligation (the artifact carries both the §206 fiduciary factor analysis and the Rule 5310 .01 factor analysis on the trade-exception sheet); the PFOF conflict-as-input framing under the conduct overlay (disclosure is consistent but the surveillance still surfaces a finding because the committee-minute did not capture the weighing); and the §206(3) per-transaction consent operational lapse, a recurring finding pattern in dual-registrant exams that the surveillance catches because the sample stratifies to over-represent principal trades.
 
 ## Pattern derived from
 

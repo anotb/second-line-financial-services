@@ -2,11 +2,11 @@
 
 ## Input
 
-A community bank subject to the CFPB Section 1071 small-business lending data collection rule is mapping its obligations from the rule and the final-rule preamble. The bank originates roughly 150 covered small-business credit transactions per year, placing it in the moderate-volume tier under the rule's compliance-date schedule. Source posture is public-only: 12 CFR 1002.107, 12 CFR 1002.105 (covered financial institution), 12 CFR 1002.110 (reporting), 12 CFR 1002.111 (recordkeeping), and the CFPB final-rule preamble. The bank's CCO is the engagement sponsor; legal counsel reviews open questions.
+A community bank subject to the CFPB Section 1071 small-business lending data collection rule is mapping its obligations from the rule and the final-rule preamble. The bank originates roughly 1,200 covered small-business credit transactions per year, putting it above the **§1071 revised final rule (May 1, 2026)** single 1,000-transaction threshold (which supersedes the 2023 tiered schedule of 2,500 / 500 / 100). Source posture is public-only: 12 CFR 1002.107, 12 CFR 1002.105 (covered financial institution), 12 CFR 1002.110 (reporting), 12 CFR 1002.111 (recordkeeping), the May 2026 revised final rule, and the original CFPB final-rule preamble. The bank's CCO is the engagement sponsor; legal counsel reviews open questions.
 
 ## Why this scenario matters
 
-Section 1071 is the canonical mid-complexity register a community bank stands up: the rule has lifecycle-stage obligations, tier-by-tier compliance dates, an applicability threshold that needs explicit reasoning, and at least one design obligation (the firewall) that requires legal review. The register has to be honest about the threshold tier the bank sits in, has to phase the effective dates correctly, and has to push the firewall obligation to legal in `open-question` status rather than guessing. It tests the skill's discipline on threshold reasoning, phase-in capture, and routing of design obligations.
+Section 1071 is the canonical mid-complexity register a community bank stands up: the rule has lifecycle-stage obligations, an applicability threshold that needs explicit reasoning, and at least one design obligation (the firewall) that requires legal review. Under the May 2026 revised final rule, the threshold is a single 1,000-covered-transactions trigger (effective June 30, 2026; compliance January 1, 2028) and the older tier-by-tier compliance-date schedule is gone. The register has to be honest about the threshold and effective-date posture under the revised rule, and has to push the firewall obligation to legal in `open-question` status rather than guessing. It tests the skill's discipline on threshold reasoning, effective-date capture under a recently-amended rule, and routing of design obligations.
 
 ## Output sketch
 
@@ -25,16 +25,17 @@ scope:
 source_posture: public-only
 
 sources:
-  - source_name: CFPB Section 1071 Final Rule
+  - source_name: CFPB Section 1071 Revised Final Rule
+    issuer: CFPB
+    edition: Revised final rule, May 1, 2026 (1,000-transaction threshold; effective June 30, 2026; compliance January 1, 2028)
+    date: 2026-05-01
+    url: https://www.consumerfinance.gov/rules-policy/final-rules/small-business-lending-under-the-equal-credit-opportunity-act-regulation-b/
+    source_type: rule-text
+  - source_name: CFPB Section 1071 Final Rule (2023, as codified — superseded compliance-date schedule)
     issuer: CFPB
     edition: Final, March 30, 2023, as codified
     date: 2023-03-30
     url: https://www.ecfr.gov/current/title-12/chapter-X/part-1002/subpart-B
-    source_type: rule-text
-  - source_name: CFPB Section 1071 Final Rule preamble
-    issuer: CFPB
-    date: 2023-03-30
-    url: https://www.consumerfinance.gov/rules-policy/final-rules/small-business-lending-under-the-equal-credit-opportunity-act-regulation-b/
     source_type: rule-text
 
 obligations:
@@ -44,20 +45,21 @@ obligations:
     source_url: https://www.ecfr.gov/current/title-12/chapter-X/part-1002/subpart-B/section-1002.105
     regulator: CFPB
     requirement_summary: >
-      A covered financial institution that originated at least 100 covered originations
+      A covered financial institution that originated at least 1,000 covered originations
       in each of the two preceding calendar years must comply with the data-collection,
-      reporting, and recordkeeping requirements of Subpart B.
+      reporting, and recordkeeping requirements of Subpart B (§1002.105(b) under the
+      May 2026 revised final rule; supersedes the 2023 100-origination threshold).
     applicability: >
-      Community bank originating roughly 150 covered small-business credit transactions
-      per year; meets the §1002.105(b) threshold; moderate-volume tier under the
-      compliance-date schedule.
+      Community bank originating roughly 1,200 covered small-business credit transactions
+      per year; meets the §1002.105(b) revised 1,000-transaction threshold.
     applicability_thresholds:
-      covered_origination_threshold: 100
-      notes: bank originated 150 covered transactions in each of 2024 and 2025
-    effective_date: 2026-04-01 [verify date for moderate-volume tier per CFPB compliance-date guidance]
+      covered_origination_threshold: 1000
+      notes: bank originated ~1,200 covered transactions in each of 2024 and 2025
+    effective_date: 2026-06-30
     effective_date_phase_in: >
-      Tier-2 (moderate-volume) compliance date applies; high-volume tier already in effect,
-      low-volume tier follows. [verify exact dates against current CFPB compliance-date table.]
+      §1071 revised final rule (May 1, 2026): rule effective June 30, 2026; compliance
+      date January 1, 2028. The 2023 tiered (high / moderate / low volume) schedule is
+      superseded.
     impacted_process: small-business credit application intake
     control_objective: >
       The bank correctly identifies itself as a covered financial institution under §1002.105
@@ -81,8 +83,9 @@ obligations:
       action taken, and the demographic data points listed in §1002.107(a).
     applicability: >
       Community bank, all covered applications from small businesses (as defined in
-      §1002.106(b)) within the moderate-volume tier window.
-    effective_date: 2026-04-01 [verify date for moderate-volume tier]
+      §1002.106(b)); compliance begins on §1002.114 compliance date under the May 2026
+      revised final rule.
+    effective_date: 2028-01-01 [compliance date; rule effective 2026-06-30]
     impacted_process: application intake and underwriting
     control_objective: >
       Every covered application produces a complete §1002.107(a) data record before the
@@ -109,7 +112,7 @@ obligations:
     applicability: >
       Covered financial institution; design obligation on the firewall between intake
       capture of demographic data and underwriting decisioning.
-    effective_date: 2026-04-01 [verify date]
+    effective_date: 2028-01-01 [compliance date under May 2026 revised final rule]
     impacted_process: application intake and underwriting
     control_objective: >
       Demographic responses captured at intake are not accessible to underwriting
@@ -157,10 +160,11 @@ open_question_summary:
     target_resolution_date: 2026-06-15
 
 applicability_notes: >
-  Bank originated 150 covered transactions in each of 2024 and 2025, meeting the
-  §1002.105(b) threshold; moderate-volume tier compliance date applies. Threshold
-  reasoning sits in OBL-001's applicability column; open-question on prequalification
-  inquiries depends on the §1002.103 covered-application interpretation.
+  Bank originated ~1,200 covered transactions in each of 2024 and 2025, meeting the
+  §1002.105(b) 1,000-transaction threshold under the May 2026 revised final rule; rule
+  effective June 30, 2026 with January 1, 2028 compliance date. Threshold reasoning sits
+  in OBL-001's applicability column; open-question on prequalification inquiries depends
+  on the §1002.103 covered-application interpretation.
 
 confidence_label: mixed
 human_review_required: true

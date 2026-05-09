@@ -1,4 +1,4 @@
-# Troubleshooting — control-sampling
+# Troubleshooting: control-sampling
 
 Recurring pitfalls. Read before drafting the sampling memo and again before reviewer sign-off.
 

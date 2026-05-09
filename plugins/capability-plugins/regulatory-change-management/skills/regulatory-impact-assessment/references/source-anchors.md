@@ -24,7 +24,7 @@ The named, dated regulatory sources this skill anchors to. Sector and cross-cutt
 
 ## CFPB — circulars, bulletins, advisory opinions
 
-- **CFPB Circulars** indexed at https://www.consumerfinance.gov/compliance/circulars/ . Circulars are the CFPB's policy guidance vehicle for supervisory and enforcement positions. Each circular carries a circular number (e.g., Circular 2022-03 on adverse-action notices using algorithms) [verify exact circular number, publication date, and section]; the assessment cites the circular by its number, not just by topic.
+- **CFPB Circulars** indexed at https://www.consumerfinance.gov/compliance/circulars/ . Circulars were the CFPB's policy guidance vehicle for supervisory and enforcement positions. **A broad set of CFPB Circulars (UDAAP, overdraft / NSF, adverse-action with complex algorithms, account reopening, BNPL-related interpretive material) was withdrawn by the Bureau on May 12, 2025; treat as historical only.** Each circular still carries a circular number (e.g., Circular 2022-03 on adverse-action notices using algorithms — withdrawn May 12, 2025); the assessment cites the circular by its number with the withdrawal flag, and anchors the operative position to the underlying regulatory text.
 
 - **CFPB Bulletins** indexed at https://www.consumerfinance.gov/compliance/supervisory-guidance/ [verify section in specific bulletin]. Bulletins predate the circular format and remain operative for supervisory-guidance pre-circular.
 
@@ -32,7 +32,7 @@ The named, dated regulatory sources this skill anchors to. Sector and cross-cutt
 
 - **12 CFR 1002 (Regulation B) §1002.9 — Adverse Action Notices**. The substantive adverse-action notice rule that anchors the AI/ML adverse-action circular. https://www.ecfr.gov/current/title-12/chapter-X/part-1002 .
 
-- **12 CFR 1002.107 — Small Business Lending (Section 1071)** [verify subsection labels]. The 1071 small-business-lending data-collection rule; phase-in compliance dates by origination tier. https://www.consumerfinance.gov/rules-policy/final-rules/small-business-lending-under-the-equal-credit-opportunity-act-regulation-b/ .
+- **12 CFR 1002.107 — Small Business Lending (Section 1071)** [verify subsection labels]. The 1071 small-business-lending data-collection rule. **§1071 revised final rule, May 1, 2026: single 1,000-covered-transactions threshold; effective June 30, 2026; compliance January 1, 2028 — supersedes the 2023 tiered phase-in schedule.** https://www.consumerfinance.gov/rules-policy/final-rules/small-business-lending-under-the-equal-credit-opportunity-act-regulation-b/ .
 
 ## SEC and FINRA — final rules, adopting releases, examination priorities
 

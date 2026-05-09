@@ -79,9 +79,9 @@ Article 27(1) reaches deployers that are public bodies (Article 27(1)(a)), priva
 
 The triage records the FRIA-vs-DPIA reconciliation; the GDPR DPIA does not satisfy Article 27 on the fundamental-rights, mitigation, governance, and complaints-handling elements.
 
-### 9. CFPB Circulars analogue and adverse-action posture
+### 9. US-side adverse-action analogue
 
-For US-side consumer-credit reach, CFPB Circulars on adverse-action notification (2022-03 and 2023-03) reach the US-side adverse-action workflow; the AI Act does not directly impose a CFPB-style obligation on the EU side, but Articles 13 (transparency to deployers) and 14 (human oversight) plus GDPR Article 22 reach the EU side of the same surface. The triage records the parallel obligations on a side-by-side block where the firm's footprint includes both jurisdictions.
+For US-side consumer-credit reach, Reg B §1002.9 (specific principal reasons) and Comment 9(b)(2)-3 of the Official Staff Commentary reach the US-side adverse-action workflow. CFPB Circulars 2022-03 / 2023-03 are **withdrawn May 12, 2025; historical only**; the regulatory text continues to apply on its own terms. The AI Act does not directly impose a US-style obligation on the EU side, but Articles 13 (transparency to deployers) and 14 (human oversight) plus GDPR Article 22 reach the EU side of the same surface. The triage records the parallel obligations on a side-by-side block where the firm's footprint includes both jurisdictions.
 
 ### 10. Payments-and-fintech-AI use-case categories the triage explicitly recognises
 

@@ -1,8 +1,10 @@
 # Second Line Financial Services
 
-Claude Code plugins for second-line and 1.5-line financial-services workflows. The skills cover the work that risk and compliance teams (and the advisory practitioners who support them) actually produce: scoping a review, mapping obligations, building a control matrix, drafting a model card, writing up an issue, building a vendor-diligence pack, packaging a risk-committee read, working a SAR / no-SAR file, prepping for a supervisory cycle, and so on. Every skill is grounded in named, dated regulatory and standards material, with sector context (banking, capital markets, insurance, payments / fintech) loaded from the engagement scope.
+Plugins for second-line and 1.5-line financial-services work. Skills cover what risk and compliance teams (and the advisory practitioners who support them) actually produce: scoping a review, mapping obligations, building a control matrix, drafting a model card, writing up an issue, building a vendor-diligence pack, packaging a risk-committee read, working a SAR / no-SAR file, prepping for a supervisory cycle, and so on. Skills are grounded in regulatory and standards material, with sector context (banking, capital markets, insurance, payments / fintech) loaded conditionally from the scoping record.
 
-The repo extends Anthropic's published [financial-services plugin family](https://github.com/anthropics/financial-services). Where Anthropic's plugins cover the cross-industry first-line baseline (financial analysis, banking deal work, equity research, PE, wealth, fund admin, ops), these plugins go deeper into US second-line and 1.5-line work and US supervisory expectations.
+Built primarily for Claude (and Claude Code), but the skill files follow the open SKILL.md format and can be loaded into other agentic systems that support it: GPT, Gemini, in-house open-weights deployments, or anything else that reads agent skills. The skills are markdown plus optional schemas; the format is the standard, the work product is what travels.
+
+The repo extends Anthropic's published [financial-services plugin family](https://github.com/anthropics/financial-services). Where Anthropic's plugins cover the cross-industry first-line baseline (financial analysis, banking deal work, equity research, PE, wealth, fund admin, ops), these go deeper into US second-line and 1.5-line work and US supervisory expectations.
 
 ## Who this is for
 
@@ -10,16 +12,16 @@ Second-line and 1.5-line practitioners inside regulated firms: model-risk leads 
 
 And the advisory and consulting teams running the same work for those firms.
 
-If you write second-line work product for a living, the skills should read like artifacts a colleague would draft.
+If you work in 1.5L, 2L, or adjacent functions, the skills let Claude (or other agentic systems supporting the SKILL.md format) draft alongside you, like a colleague who knows the work and defers to your judgement on the call.
 
 ## What's in here
 
-- **Eight capability plugins** for horizontal GRC work: foundational primitives, regulatory change, AI / model risk, third-party / operational resilience, controls testing, risk reporting, financial crime governance, consumer compliance and fair lending.
-- **Four sector overlay plugins** for institution-specific context: banking, insurance, capital markets and asset management, payments and fintech. Sector overlays ship sector-unique skills only; sector flavor on cross-industry capability skills lives as `references/sector-overlays/<sector>.md` inside the relevant capability skill, loaded conditionally from the engagement scope.
-- **Six standalone agent plugins** that bundle related capability and sector skills behind a single agent (AI governance reviewer, regulatory change analyst, third-party risk reviewer, controls testing analyst, risk reporting analyst, financial-crime governance reviewer). Each carries a primary workflow agent plus reader / critic / writer subagents.
-- **Source posture per skill**: every skill carries a `references/source-anchors.md` with named, dated regulatory and standards citations. US-deep at v1, EU as overlay, UK as see-also.
+- **Capability plugins** for horizontal GRC work: foundational primitives, regulatory change, AI / model risk, third-party / operational resilience, controls testing, risk reporting, financial crime governance, consumer compliance and fair lending.
+- **Sector overlay plugins** for institution-specific context: banking, insurance, capital markets and asset management, payments and fintech. Sector overlays ship sector-unique skills only; sector flavour on cross-industry capability skills lives as `references/sector-overlays/<sector>.md` inside the relevant capability skill, loaded conditionally from the scoping record.
+- **Standalone agent plugins** that bundle related capability and sector skills behind a single agent (AI governance reviewer, regulatory change analyst, third-party risk reviewer, controls testing analyst, risk reporting analyst, financial-crime governance reviewer). Each carries a primary workflow agent plus reader / critic / writer subagents.
+- **Source posture per skill.** Skills ship a `references/source-anchors.md` with the regulatory and standards citations they lean on. US-deep at v1, EU as overlay, UK as see-also.
 
-Total: 64 source skills, public-source-derived, anonymous, with no firm-specific policy baked in.
+The skill set is public-source-derived and anonymous, with no firm-specific policy baked in.
 
 ### Capability plugins
 
@@ -88,9 +90,9 @@ Once a plugin is installed, the skills register as slash commands and as model-i
 
 ## Use
 
-Most engagements bootstrap through the **scoping** skill in `risk-compliance-core`. It produces a written charter and a structured scope record (institution, engagement type, persona, source posture, sector overlay, cross-cutting overlay, exclusions). Downstream skills consume that record so each one does not re-litigate scope. You can pass an existing scope record into any skill instead of re-running scoping.
+Most reviews start from the **scoping** skill in `risk-compliance-core`. It produces a written charter and a structured scope record (institution, review type, persona, source posture, sector overlay, cross-cutting overlay, exclusions). Downstream skills read that record so they don't re-litigate scope. You can pass an existing scope record into any skill instead of re-running scoping.
 
-Operating posture across the repo is consistent: skills draft second-line work product for qualified human review. Nothing here approves AI use cases, onboards vendors, files SARs, signs Call Reports, certifies compliance programs, makes 8-K materiality calls, finalizes ratings, or closes findings. Every artifact stops at "recommended decision" or "open conditions"; sign-off stays with named human reviewers.
+Operating posture across the repo: skills draft second-line work product for qualified human review. Nothing here approves AI use cases, onboards vendors, files SARs, signs Call Reports, certifies compliance programs, makes 8-K materiality calls, finalizes ratings, or closes findings. Artifacts stop at "recommended decision" or "open conditions"; sign-off stays with named human reviewers.
 
 ## Customisation
 

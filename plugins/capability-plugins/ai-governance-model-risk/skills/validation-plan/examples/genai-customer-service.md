@@ -1,6 +1,6 @@
 # Example: initial validation plan for a vendor-hosted GenAI customer-support assistant
 
-Public-source-derived. No named institution. Patterns drawn from the joint interagency Revised Guidance on Model Risk Management (OCC 2026-13 / FRB SR 26-2 / FDIC FIL-15-2026, April 17 2026; supersedes SR 11-7 and SR 21-8) for traditional-model framing — the bulletin expressly excludes GenAI and agentic AI from scope (footnote 3); NIST AI 600-1 (Generative AI Profile) Measure subcategories on hallucination, prompt injection, and information integrity for the GenAI substantive anchors; NYDFS October 2024 industry letter on GenAI cyber risks; and public model and system card precedents from frontier labs as a documentation form factor only. No firm-specific facts asserted.
+Public-source-derived. No named institution. Patterns drawn from the joint interagency Revised Guidance on Model Risk Management (OCC 2026-13 / FRB SR 26-2 / FDIC FIL-15-2026, April 17 2026; supersedes SR 11-7 and SR 21-8) for traditional-model framing (the bulletin expressly excludes GenAI and agentic AI from scope, footnote 3); NIST AI 600-1 (Generative AI Profile) Measure subcategories on hallucination, prompt injection, and information integrity for the GenAI substantive anchors; NYDFS October 2024 industry letter on GenAI cyber risks; and public model and system card precedents from frontier labs as a documentation form factor only. No firm-specific facts asserted.
 
 ## Input description
 

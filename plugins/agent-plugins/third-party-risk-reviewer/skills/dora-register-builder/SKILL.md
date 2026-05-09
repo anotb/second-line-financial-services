@@ -1,27 +1,29 @@
 ---
 name: dora-register-builder
 description: |
-  Drafts a financial entity's Register of Information for ICT third-party arrangements in the structure set by the Commission Implementing Regulation under DORA Article 28(9). Produces the per-arrangement records the firm submits, with the relational links across contractual arrangement, ICT third-party, ICT service, function, sub-contractor chain, and the entities of the group signing or making use. Heaviest structured-output skill in the plugin: the structured record is the artifact, the markdown narrative is the build pack the named approver reads.
+  EU-DORA-context build pack and data-quality aid for firms preparing Register of Information entries for ICT third-party arrangements. Helps a US-deep practice with EU-touching engagements populate register fields, surface data-quality gaps, and structure a build-pack narrative for the named approver before the firm's regulatory-reporting pipeline takes over. The skill's local B-table convention is preparation-grade. It is not the official EBA Register of Information template and not submission-grade against the Commission Implementing Regulation (EU) 2024/2956 taxonomy.
 
   Best for:
-  - An EU-nexus financial entity preparing the Register of Information for the first reporting cycle, or for the annual refresh.
-  - An EU subsidiary of a non-EU group where the parent needs visibility into EU register data quality before submission, and the subsidiary files individually to its national competent authority.
-  - A second-line review of an existing register where data quality, relational integrity, and ICT-service-type taxonomy mapping need a structured check against the ITS schema before the accountable executive signs off.
-  - An off-cycle update following a material onboarding, termination, restructuring, or criticality re-classification.
+  - An EU-nexus financial entity scoping the first-cycle register build, where a structured data-quality view and a reviewer-ready build pack matter before the firm's submission tooling formats the official template.
+  - An EU subsidiary of a non-EU group where the parent needs visibility into EU register data quality before the subsidiary files individually to its national competent authority.
+  - A second-line review of an existing register where data-quality, relational integrity, and the firm's internal-to-ITS service-type taxonomy mapping need a structured check before the accountable executive signs off.
+  - An off-cycle preparation pass following a material onboarding, termination, restructuring, or criticality re-classification.
 
   Not the right tool when:
+  - The output is intended for direct submission to a national competent authority. The skill helps populate fields and surface data-quality gaps; it is not the official Register of Information template.
+  - The firm needs the official EBA RoI taxonomy / Implementing Reg (EU) 2024/2956 structure verbatim. The skill's local B-table convention is preparation-grade, not submission-grade.
   - The firm has no DORA nexus. Use the firm's own TPRM register and skip this skill.
   - The criticality flag has not been set (run `criticality-assessment` first; the register consumes the determination).
   - The job is per-arrangement diligence (use `vendor-diligence`), contract clause coverage (use `contract-gap-review`), portfolio-level concentration (use `concentration-risk-review`), or exit posture for a specific arrangement (use `exit-plan`).
-  - The submission is governed by an NCA-specific technical filing rule that diverges from the ITS templates. The skill drafts to the ITS schema; the firm's regulatory-reporting pipeline applies the NCA-specific channel and validation overlay.
+  - The submission is governed by an NCA-specific technical filing rule that diverges from the ITS templates. The skill drafts to a preparation-grade structure; the firm's regulatory-reporting pipeline applies the NCA-specific channel, validation overlay, and the official ITS template.
 argument-hint: "[arrangement set, prior-year register, criticality outputs, vendor-diligence pack, TPRM register export, contract repository pointers, scope statement]"
 ---
 
-# DORA Register of Information builder
+# DORA Register of Information build pack
 
 A Register of Information is the relational, identifier-driven file the financial entity maintains under DORA Article 28(3) and reports annually under Article 28(7). Supervisors read it for sub-contractor-chain visibility, cross-border data-flow posture, and ICT-third-party concentration. The Critical ICT Third-Party Service Provider designation pipeline under Article 31 reads it. The firm's own concentration analysis and exit-readiness review read it. So the register is not a procurement export. It is the firm's structured supervisory artifact for ICT third-party risk.
 
-This skill drafts that artifact. It produces a structured record (`schemas/dora-register-entry.schema.json`) that mirrors the ITS B-table structure, plus a markdown build pack (`templates/default-output.md` shape) the named approver reads before signing off. The submission itself is filed by the firm's regulatory-reporting pipeline through the NCA-specified channel; this skill stops at the build, before sign-off.
+This skill produces a preparation-grade artifact, not the submission. The structured record (`schemas/dora-register-entry.schema.json`) follows a local B-table convention that approximates the ITS shape closely enough to drive field population, relational-integrity checks, and data-quality findings; the official EBA Register of Information template under Commission Implementing Regulation (EU) 2024/2956 is what the firm's regulatory-reporting pipeline actually files, and the schema mapping from this skill's structure to the official template is the firm's responsibility (and a known gap pending a future schema rebuild). The markdown build pack (`templates/default-output.md` shape) is what the named approver reads before signing off on the firm's data-quality posture. The skill stops at the build pack and the data-quality findings; it does not file, and it is not a substitute for the official ITS template.
 
 ## Ask first
 
@@ -46,7 +48,7 @@ Open by naming the in-scope legal entities with LEI, country, and consolidation 
 
 ### B.01 to B.07: the table chain
 
-The table identifiers below follow the EBA preparation-materials convention. Confirm the exact column codes and table labels against the adopted Commission Implementing Regulation each cycle (the ITS Annexes set the column codes; the joint ESA Final Report on the draft ITS is the explanatory record). Where ITS column codes are uncertain, mark them in the structured output per the verification posture in `references/source-anchors.md`; the build-pack body does not carry verification markers.
+The table identifiers below follow a local B-table convention adapted from the EBA preparation materials. They are preparation-grade: useful for populating fields, walking the relational chain, and surfacing data-quality findings, but not aligned column-for-column to the official ITS taxonomy under Commission Implementing Regulation (EU) 2024/2956. Confirm the exact column codes and table labels against the adopted Implementing Regulation and its Annexes each cycle, and treat the firm's submission tooling — not this skill — as the source of the official template. Where ITS column codes are uncertain, mark them in the structured output per the verification posture in `references/source-anchors.md`; the build-pack body does not carry verification markers.
 
 **B.01 Contractual arrangements (general information).** One record per contractual arrangement. Reference number, type (single, complex, master and addenda, framework agreement), date of last update, start date, end date or perpetual indicator, notice period, governing law country, jurisdiction of dispute resolution, contract value for the reporting period and currency. Where a master agreement and a chain of addenda sit together, the relational chain goes in `linked_arrangement_references`. The arrangement reference number is firm-internal and stable across cycles; preserve the history when restructurings happen.
 
@@ -82,34 +84,34 @@ The cyber cross-cutting overlay (`references/cross-cutting/cyber.md`) loads when
 
 ## Quality bar
 
-Holds across every build regardless of firm type, audience, or render format.
+Holds across every build regardless of firm type, audience, or render format. The bar is preparation-grade: this skill produces a draft and a data-quality artifact, not a final submission. The official Register of Information template under Commission Implementing Regulation (EU) 2024/2956 is the firm's submission tooling's responsibility.
 
 - **Identifier integrity.** The register is identifier-driven. Missing LEI or other identifiers break relational integrity and the supervisory pipeline. Best available identifier with `identifier_type` set, plus a finding. Never invented.
-- **Relational integrity across the table chain.** B.01 references resolve to B.02 which resolves to B.03, B.05, and B.04. B.06 chains hang off B.05 and B.03. B.07 links group entities to B.01. A record that does not resolve is a defect.
-- **ITS taxonomy compliance for `b_05.ict_service_type_code`.** The ITS Annex sets the taxonomy. The firm's internal taxonomy is mapped to it; the mapping decisions sit in the source trace.
+- **Relational integrity across the table chain.** The local B.01 references resolve to B.02 which resolves to B.03, B.05, and B.04. B.06 chains hang off B.05 and B.03. B.07 links group entities to B.01. A record that does not resolve is a defect at the preparation stage and will be a defect again when the firm's tooling maps to the official template.
+- **ITS taxonomy mapping for `b_05.ict_service_type_code`.** The Implementing Regulation's Annex sets the taxonomy the submission must use. The firm's internal taxonomy is mapped to it via the firm-overlay; the mapping decisions sit in the source trace. The skill's local field is a holding place for the mapped value, not the official code list.
 - **Criticality evidence backing.** `b_04_functions.criticality = critical-or-important` requires `criticality_evidence_record_id`. No exceptions.
 - **Sub-contractor visibility for critical-or-important services.** B.06 entries to the depth the chain reveals; opacity is a finding, not an absence.
-- **Data-quality findings section is part of the build, not a separate document.** A register without findings reads wrong.
+- **Data-quality findings section is part of the build, not a separate document.** A draft register without findings reads wrong, especially when the next step is mapping into the official ITS template.
 - **Source trace.** Every material claim cites `references/source-anchors.md` (or a loaded overlay) by path. Uncertain ITS column codes are marked in the structured record only, per the verification posture in `references/source-anchors.md`; the build-pack body does not carry verification markers. Unsupported items go to the engagement issue log, not silently into the build.
-- **The skill does not file.** The build pack carries reviewer questions and named decision checkpoints. The named accountable executive signs off via the attestation block. Submission goes through the firm's regulatory-reporting pipeline.
+- **The skill does not file, and the structured output is not the submission template.** The build pack carries reviewer questions and named decision checkpoints. The named accountable executive signs off on the firm's data-quality posture via the attestation block. The firm's regulatory-reporting pipeline maps the prepared records into the official ITS template under Commission Implementing Regulation (EU) 2024/2956 and routes the submission through the NCA-specified channel.
 
 ## Adaptation
 
-Flexes by engagement.
+Flexes by engagement. In every shape, the deliverable is a draft and a data-quality artifact, not a final submission.
 
-- **Build depth scales to scope and review type.** First-cycle builds run long. Annual refreshes lead with the year-on-year delta. Quality-review-only runs skip the table records and concentrate on findings and reconciliations. Off-cycle updates concentrate on the changed records and the relational impact.
-- **Audience drives shape.** A pack for the DORA programme lead reads operational. A pack for the accountable executive leads with the residual data-quality posture and the sign-off question. A pack for the host-state NCA dialogue reads as a justification of the firm's own quality posture before the supervisor asks.
+- **Build depth scales to scope and review type.** First-cycle preparation runs long. Annual refresh preparation leads with the year-on-year delta. Quality-review-only runs skip the table records and concentrate on findings and reconciliations. Off-cycle preparation concentrates on the changed records and the relational impact.
+- **Audience drives shape.** A pack for the DORA programme lead reads operational. A pack for the accountable executive leads with the residual data-quality posture and the sign-off question on the firm's own quality view (not on the submission, which the regulatory-reporting pipeline owns). A pack for the host-state NCA dialogue reads as a justification of the firm's own quality posture before the supervisor asks.
 - **Sector overlay loading follows the scope.** Dual-registrant or BaaS arrangements load two.
 - **Source posture (public-only, public-plus-firm-policy, public-plus-firm-policy-plus-system-of-record-evidence, connector-aware) drives the evidence ask** and the confidence label on the build.
-- **Firm-specific policy, taxonomy, named owners, internal-to-ITS service-type mapping table** sit in `references/firm-overlay.md`, consumed when present, never in the build directly.
+- **Firm-specific policy, taxonomy, named owners, internal-to-ITS service-type mapping table** sit in `references/firm-overlay.md`, consumed when present, never in the build directly. The internal-to-ITS mapping is where the bridge from this skill's preparation-grade structure to the official template is documented.
 
 ## Output
 
-Two artifacts: the structured record per `schemas/dora-register-entry.schema.json`, and the build pack per `templates/default-output.md`. The structured record is the cross-skill contract; the build pack is what the named approver reads before sign-off.
+Two artifacts: the structured record per `schemas/dora-register-entry.schema.json` (preparation-grade, not the official ITS template), and the build pack per `templates/default-output.md`. The structured record is the cross-skill contract; the build pack is what the named approver reads before sign-off on data-quality posture.
 
-Downstream consumers: `concentration-risk-review` reads the B.03 ICT third-party records and the B.06 sub-contractor chain for the portfolio analysis. `exit-plan` reads the B.04 critical-or-important function records and confirms each carries a current exit plan; the absence is itself a finding routed back here. The firm's regulatory-reporting pipeline consumes the per-table records for the NCA submission. Where a record sits inside an Article 31 oversight perimeter, the joint ESA data-collection cycle for CTPP designation reads the relevant records.
+Downstream consumers: `concentration-risk-review` reads the B.03 ICT third-party records and the B.06 sub-contractor chain for the portfolio analysis. `exit-plan` reads the B.04 critical-or-important function records and confirms each carries a current exit plan; the absence is itself a finding routed back here. The firm's regulatory-reporting pipeline consumes the per-table records as preparation input and maps them into the official Register of Information template under Commission Implementing Regulation (EU) 2024/2956 for the NCA submission. Where a record sits inside an Article 31 oversight perimeter, the joint ESA data-collection cycle for CTPP designation reads from the official template, not from this skill's local structure.
 
-The schema is additive only. Add fields, do not rename or repurpose them. A breaking change is a versioned migration with the downstream skills told in advance. Fields whose ITS column codes resolve at firm onboarding follow the verification posture in `references/source-anchors.md` until pinned; the firm-overlay file is where the pin lives once known.
+The schema is additive only. Add fields, do not rename or repurpose them. A breaking change is a versioned migration with the downstream skills told in advance. The eventual rebuild to the official ITS taxonomy under Commission Implementing Regulation (EU) 2024/2956 is a deferred Phase that supersedes this advice; until then, fields whose ITS column codes resolve at firm onboarding follow the verification posture in `references/source-anchors.md`, and the firm-overlay file is where the internal-to-ITS mapping lives.
 
 ## Pointers
 

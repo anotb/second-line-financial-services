@@ -25,7 +25,7 @@ source_list:
   - {source_type: supervisory-letter, label: "SR 11-7 (interagency model risk management guidance, 2011)", section_reference: "§IV development, §V validation, §VI governance and controls"}
   - {source_type: interagency-guidance, label: "OCC Bulletin 2026-13 (revised interagency model risk management guidance, 2026)", section_reference: "§III.A control environment, §III.B third-party model controls"}
   - {source_type: rule, label: "Regulation B (12 CFR Part 1002)", section_reference: "§1002.9 adverse action notice"}
-  - {source_type: examination-manual, label: "CFPB Circular 2022-03 (adverse action notice using AI/algorithms)"}
+  - {source_type: examination-manual, label: "CFPB Circular 2022-03 (adverse action notice using AI/algorithms; withdrawn May 12, 2025; historical only)"}
   - {source_type: internal-policy, label: "Firm Model Risk Policy v6.1"}
   - {source_type: internal-standard, label: "Adverse Action Notice Standard v3.0"}
 
@@ -90,7 +90,7 @@ controls:
 
   - control_id: C-MRM-201
     obligation_id: OBL-RegB-1002.9
-    control_objective: "Adverse action notices generated on declines from this model state the specific, accurate principal reasons for the credit decision, consistent with Regulation B §1002.9 and CFPB Circular 2022-03."
+    control_objective: "Adverse action notices generated on declines from this model state the specific, accurate principal reasons for the credit decision, consistent with Regulation B §1002.9 (CFPB Circular 2022-03, which restated this point, was withdrawn May 12, 2025; the obligation survives on the regulation)."
     control_activity: "Reason-code mapping from model output to the firm's adverse-action reason library is maintained by the Adverse Action Standard owner; monthly sampling of adverse-action notices by Consumer Compliance to confirm specificity and accuracy."
     control_type: detective
     frequency: monthly
@@ -169,4 +169,4 @@ revisions:
 - `compliance-testing` consumes the matrix to scope SR 11-7 compliance test work; the C-MRM-201 sampling cadence informs the test scope on Reg B notice quality.
 - `issue-writeup` consumes ISS-2026-MRM-09 to ensure the open PSI-breach issue is properly papered with rating, owner, and remediation plan.
 - `exam-brief` for an OCC safety-and-soundness or CFPB exam pulls this matrix as evidence of the firm's model-risk control framework for retail credit decisioning.
-- The banking sector overlay (`references/sector-overlays/banking.md`) drives the inclusion of the Reg B / CFPB Circular 2022-03 obligation row; without the overlay, the matrix would be SR 11-7-only and would miss the consumer-compliance surface that an exam will probe.
+- The banking sector overlay (`references/sector-overlays/banking.md`) drives the inclusion of the Reg B obligation row (CFPB Circular 2022-03 was withdrawn May 12, 2025; historical only); without the overlay, the matrix would be SR 11-7-only and would miss the consumer-compliance surface that an exam will probe.

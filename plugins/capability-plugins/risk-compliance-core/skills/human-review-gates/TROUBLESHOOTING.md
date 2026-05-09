@@ -96,7 +96,7 @@ Symptom: the matrix runs to many pages of process detail (how the gate fires ope
 
 Why it happens: the matrix builder is documenting the gate as a process rather than as a decision architecture.
 
-Fix: the matrix is the gate-decision architecture. The runbook is downstream — the operational documentation that names how the gate fires day-to-day. The matrix names the gate, the trigger, the reviewers, the criteria, the stop conditions, the escalation, the documentation, the frequency, the source. The runbook (or the firm's GRC platform workflow) carries the operational detail. Cross-reference the runbook in the firm-overlay; do not pull the runbook into the matrix.
+Fix: the matrix is the gate-decision architecture. The runbook is downstream, the operational documentation that names how the gate fires day-to-day. The matrix names the gate, the trigger, the reviewers, the criteria, the stop conditions, the escalation, the documentation, the frequency, the source. The runbook (or the firm's GRC platform workflow) carries the operational detail. Cross-reference the runbook in the firm-overlay; do not pull the runbook into the matrix.
 
 ## 13. The matrix stops too late
 

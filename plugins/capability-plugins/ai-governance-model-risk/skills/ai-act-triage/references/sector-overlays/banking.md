@@ -53,9 +53,9 @@ Article 27(1)(b) names credit institutions as deployers in scope of the FRIA obl
 
 For non-credit-institution banking entities (e.g., a US bank operating in the EU through a branch that is not itself a credit institution under EU classification), the Article 27(1)(b) reach is on the facts; the triage routes to legal.
 
-### 6. Adverse-action and explainability reach (CFPB Circulars analogue)
+### 6. Adverse-action and explainability reach (US-side analogue)
 
-Where the firm has US-side consumer-credit reach (US parent or US subsidiary), the CFPB Circulars on adverse-action notification (2022-03 and 2023-03) reach the US-side adverse-action workflow. The EU AI Act does not directly impose a CFPB-style adverse-action obligation, but Articles 13 (transparency to deployers) and 14 (human oversight) plus the GDPR Article 22 (automated decision-making affecting the data subject) reach the EU side of the same surface.
+Where the firm has US-side consumer-credit reach (US parent or US subsidiary), Reg B §1002.9 (specific principal reasons for adverse action) and Comment 9(b)(2)-3 of the Official Staff Commentary reach the US-side adverse-action workflow. CFPB Circulars 2022-03 / 2023-03 are **withdrawn May 12, 2025; historical only**; the regulatory text continues to apply on its own terms. The EU AI Act does not directly impose a US-style adverse-action obligation, but Articles 13 (transparency to deployers) and 14 (human oversight) plus the GDPR Article 22 (automated decision-making affecting the data subject) reach the EU side of the same surface.
 
 The triage records the parallel obligations on a side-by-side block where the firm's footprint includes both jurisdictions; the artifact does not collapse the two analyses.
 
@@ -99,7 +99,7 @@ The triage artifact adds the following blocks when this overlay loads:
 - A use-case category line at the top (origination credit decisioning / SME credit / behavioural scoring / fraud / AML / customer chatbot / internal productivity / marketing personalisation / IRB credit-risk).
 - An EU-entity operator-role table (which EU entity, which role) for cross-border banking groups.
 - A CRR/CRD internal-models overlap line for IRB use cases.
-- A US-side / EU-side parallel-regime reconciliation block where the firm's footprint spans both (joint interagency model-risk bulletin and AI-specific frameworks to Article 11 / Annex IV mapping; CFPB Circulars to GDPR Article 22 mapping).
+- A US-side / EU-side parallel-regime reconciliation block where the firm's footprint spans both (joint interagency model-risk bulletin and AI-specific frameworks to Article 11 / Annex IV mapping; Reg B §1002.9 adverse-action analogue to GDPR Article 22 mapping; CFPB Circulars 2022-03 / 2023-03 are **withdrawn May 12, 2025; historical only**).
 - An NCA-and-prudential-supervisor coordination line when designation is split or unclear.
 - A FRIA-vs-DPIA reconciliation note for any (5)(b) or other Article 27 trigger.
 - An AML-regime routing note where the use case is AML-adjacent and (5)(b) does not apply.

@@ -1,4 +1,4 @@
-# Example — FBO-account ledgering control overlay for a sponsor-bank deposit program
+# Example: FBO-account ledgering control overlay for a sponsor-bank deposit program
 
 Scenario type: anonymised, public-source-derived; no named institution; the fact pattern reflects recurring themes in the 2024 Joint Statement on Banks' Arrangements with Third Parties to Deliver Bank Deposit Products and Services and in published consent orders against sponsor banks for FBO-reconciliation failures.
 
@@ -30,7 +30,7 @@ Trigger: the board's audit committee requested a second-line control-matrix over
 
 **Daily reconciliation variance threshold**: bank reconciles total FBO balance at the bank's level to total of fintech-reported end-user ledger daily; firm-wide variance threshold is $1k. Reviewer question on whether the variance threshold is risk-based per program. For Partner A ($300M deposits), the $1k threshold may be too tight (noise from rounding, settlement-cutover edge cases) and trigger reconciliation alerts that desensitise the team. For Partner C ($20M deposits), the $1k threshold is plausibly calibrated but would benefit from an aging analysis. Recommended action: risk officer to refresh variance thresholds on a risk-based basis per program within 60 days.
 
-**End-user ledger governance**: each fintech provides weekly attestations on ledger accuracy. Reviewer question on whether attestations are signed by an officer with adequate authority and independence at the fintech. Partner A's CFO satisfies; Partner B's operations lead — unclear authority at the fintech to bind on ledger accuracy beyond operational scope. Recommended action: head of vendor management to confirm Partner B's attestation signatory has adequate authority within 45 days.
+**End-user ledger governance**: each fintech provides weekly attestations on ledger accuracy. Reviewer question on whether attestations are signed by an officer with adequate authority and independence at the fintech. Partner A's CFO satisfies; Partner B's operations lead has unclear authority at the fintech to bind on ledger accuracy beyond operational scope. Recommended action: head of vendor management to confirm Partner B's attestation signatory has adequate authority within 45 days.
 
 **Customer-facing deposit-insurance representation (Partner C)**: gap — no marketing-claim review on file against 12 CFR Part 328 Subpart B. The fintech surfaces refer to "FDIC insurance" without the pass-through caveats. Severity: critical. Recommended action: marketing-and-compliance team to complete the review within 30 days; periodic re-attestation cadence to be set at quarterly (sits in exception-handling process area).
 
@@ -38,11 +38,11 @@ Trigger: the board's audit committee requested a second-line control-matrix over
 
 ### Cross-cutting findings
 
-**Cyber overlay** (loaded): each fintech partner falls under the bank's third-party-cyber program. SOC 2 Type II reports received and reviewed within last 12 months for each partner; Partner B's SOC 2 carries an exception on logical-access reviews — issue-writeup linked. Sponsor-bank cyber-notification chain (12 CFR Part 304 Subpart E for FDIC) requires the bank to determine within 36 hours of a notification incident; the contractual notification clock on each fintech is 24 hours. Operational capability to meet the 24-hour clock confirmed for Partner A; not yet confirmed for Partners B and C.
+**Cyber overlay** (loaded): each fintech partner falls under the bank's third-party-cyber program. SOC 2 Type II reports received and reviewed within last 12 months for each partner; Partner B's SOC 2 carries an exception on logical-access reviews; issue-writeup linked. Sponsor-bank cyber-notification chain (12 CFR Part 304 Subpart E for FDIC) requires the bank to determine within 36 hours of a notification incident; the contractual notification clock on each fintech is 24 hours. Operational capability to meet the 24-hour clock confirmed for Partner A; not yet confirmed for Partners B and C.
 
-**Privacy overlay** (loaded): GLBA Reg P notice integration with each fintech. Reviewer question on whether the privacy notice issued to consumers correctly identifies the bank as the financial institution. Partner A's privacy notice — confirmed; Partners B and C — pending review.
+**Privacy overlay** (loaded): GLBA Reg P notice integration with each fintech. Reviewer question on whether the privacy notice issued to consumers correctly identifies the bank as the financial institution. Partner A's privacy notice confirmed; Partners B and C pending review.
 
-**Conduct overlay** (loaded): account-closure and account-hold theme — the bank has received CFPB Consumer Complaint Database hits attributable to Partner A on hold-release-without-notice. Internal complaint data shows higher hold-release latency on Partner A than on Partners B and C. Recommended action: deposit-operations director to refresh the hold-release SLA for Partner A and to review the customer-recourse channel, within 60 days.
+**Conduct overlay** (loaded): account-closure and account-hold theme: the bank has received CFPB Consumer Complaint Database hits attributable to Partner A on hold-release-without-notice. Internal complaint data shows higher hold-release latency on Partner A than on Partners B and C. Recommended action: deposit-operations director to refresh the hold-release SLA for Partner A and to review the customer-recourse channel, within 60 days.
 
 ### Coverage gaps
 

@@ -1,4 +1,4 @@
-# Troubleshooting — rule-to-obligation-extraction
+# Troubleshooting: rule-to-obligation-extraction
 
 The extraction skill produces the atomic obligation list a discrete piece of net-new regulatory rule text imposes. The recurring defects below cause the register to lose substance, lose portability across firms, or lose alignment with the downstream `obligation-mapping` skill that consumes it.
 

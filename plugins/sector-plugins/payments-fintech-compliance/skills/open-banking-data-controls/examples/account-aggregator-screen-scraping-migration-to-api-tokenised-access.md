@@ -1,4 +1,4 @@
-# Example — account aggregator (data recipient) migrating screen-scraping integrations to API-tokenised access
+# Example: account aggregator (data recipient) migrating screen-scraping integrations to API-tokenised access
 
 ## Input description
 
@@ -49,7 +49,7 @@ The **privacy controls** block fires the largest finding set, because the firm i
 
 The **vendor and fourth-party register** carries the credential-vault vendor (legacy), the authorisation-server vendor (current), the consent-management vendor, the identity vendor, the fraud-decision vendor, and the data-provider integrations as upstream relationships with criticality flags.
 
-The **gaps** block elevates three to issue level: deletion-on-revocation operational path on legacy integrations (critical), consumer-facing scope description vs actual flow on three legacy integrations (high), and the credential-vault retirement timeline (high — the 12-month roadmap is reasonable, but the interim posture is the issue).
+The **gaps** block elevates three to issue level: deletion-on-revocation operational path on legacy integrations (critical), consumer-facing scope description vs actual flow on three legacy integrations (high), and the credential-vault retirement timeline (high; the 12-month roadmap is reasonable, but the interim posture is the issue).
 
 The **recommended disposition** is `remediate_then_re_review`. The conditions block names the three issues that must close before re-review.
 

@@ -28,7 +28,7 @@ When the policy in scope governs a consumer-facing payment, deposit, prepaid, or
 - **Reg Z** — 12 CFR Part 1026, Truth in Lending, including credit-card provisions.
 - **Reg DD** — 12 CFR Part 1030, Truth in Savings.
 - **CFPB UDAAP exam manual** — for any consumer-facing policy.
-- **CFPB Section 1033 (open banking)** — 12 CFR Part 1033, the personal financial data rights rule (final October 2024). Phase-in compliance dates apply by tier; the matrix benchmarks against the rule and the firm's tier.
+- **CFPB Section 1033 (open banking)** — 12 CFR Part 1033, the personal financial data rights rule (final October 2024). **Compliance dates stayed as of October 29, 2025; CFPB-initiated reconsideration with ANPR** — verify current docket status before treating phased compliance dates as firm. The matrix benchmarks against the rule text and the firm's data-provider posture.
 
 The Reg E provisional-credit obligations on dispute timing are a frequent gap site for fintech policies that adopted abbreviated timing windows that do not meet the rule.
 

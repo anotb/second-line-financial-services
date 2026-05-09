@@ -1,4 +1,4 @@
-# Example: principal-level civil fraud — commercial customer at a mid-size US bank
+# Example: principal-level civil fraud (commercial customer at a mid-size US bank)
 
 Public-source-derived. No named institution. The shape mirrors a recurring pattern at mid-size US banks: a periodic adverse-media re-scan on a commercial customer (legal entity) returns a populous hit set dominated by common-name false matches, with a small material subset surfacing principal-level adverse media.
 

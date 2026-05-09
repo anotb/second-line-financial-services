@@ -71,7 +71,7 @@ CFPB Supervisory Highlights and consent orders (2023-26) have signalled on finte
 - Reg E error-resolution timing failures presented as UDAAP rather than as Reg E findings.
 - Fee disclosure failures (junk-fee themes, surprise-fee patterns).
 - Marketing-claim review for FDIC-insurance representation (post-Synapse-era).
-- BNPL UDAAP themes.
+- BNPL UDAAP themes (the CFPB BNPL interpretive rule was **nullified by Pub. L. 119-11 (May 9, 2025); historical only**, but BNPL conduct under UDAAP §1031 and Reg B §1002.9 still reaches the same fact patterns).
 - Dark-pattern risk in onboarding and product-selection flows.
 
 For any AI use case that touches these themes, intake captures the regulatory flag and routes to `udaap-risk-review`.
@@ -94,4 +94,4 @@ In addition to the capability intake spine, the following payments-fintech-speci
 - Missing the rail-specific Reg E §1005.11 clock on consumer-facing error-resolution AI; the clock does not stop because the AI is making the call.
 - Missing the Money Transmitter Modernization Act state adoption check on a multi-state money-transmitter use case.
 - Missing the larger-participant rule applicability on a digital-wallet or payment-app use case at scale; the rule changes the supervisory posture from indirect-via-sponsor to direct-CFPB.
-- Treating FDIC-insurance representation framing as marketing detail rather than as a UDAAP and FDIC misrepresentation rule (12 CFR Part 328 Subpart B, May 2022) [verify exact citation] flag.
+- Treating FDIC-insurance representation framing as marketing detail rather than as a UDAAP and FDIC misrepresentation rule (12 CFR Part 328 Subpart B, **2023 final rule with 2024-2025 effective-date extensions** — verify current effective date for the engagement) flag.

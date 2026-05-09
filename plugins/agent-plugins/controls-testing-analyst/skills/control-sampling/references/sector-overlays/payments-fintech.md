@@ -19,7 +19,7 @@ Payments and fintech testing populations carry conventions that bank consumer-co
 - **Reg Z — 12 CFR Part 1026** billing-error procedures (§1026.13 for open-end credit) [verify subsection labels]. https://www.ecfr.gov/current/title-12/chapter-X/part-1026 .
 - **NACHA Operating Rules (current edition)** Third-Party Sender risk-management rules and ODFI obligations [verify rule citations against the firm's licensed copy]. https://www.nacha.org/ .
 - **FinCEN MSB rules at 31 CFR Part 1022** and registration requirements at 31 CFR §1010.380 [verify subsection labels]. https://www.ecfr.gov/current/title-31/subtitle-B/chapter-X/part-1022 .
-- **CFPB final rule defining larger participants of a market for general-use digital consumer payment applications** (December 2024) [verify Federal Register citation and current state including any litigation or congressional review]. https://www.consumerfinance.gov/compliance/supervisory-guidance/ [verify URL].
+- **CFPB final rule defining larger participants of a market for general-use digital consumer payment applications** (November 21, 2024) — subject to post-publication challenge and CFPB reconsideration since 2025; verify current operative status before relying on designation. https://www.consumerfinance.gov/compliance/supervisory-guidance/ .
 - **State money-transmitter rules** (state by state) — sampling memos carry the state-adopted statute citation, not the Money Transmission Modernization Act text [verify state citations].
 
 ## Payments-fintech-control-area sampling notes
@@ -47,7 +47,7 @@ Payments and fintech testing populations carry conventions that bank consumer-co
 
 ### Larger-participant CFPB scope (where applicable)
 
-- Sampling conventions: where the firm is a CFPB larger participant for digital consumer payment applications, CMS-aligned testing applies. Sampling memos cite the larger-participant rule [verify Federal Register citation] alongside the substantive rule under test, and the population definitions follow the digital-payment-application transaction set.
+- Sampling conventions: where the firm is a CFPB larger participant for digital consumer payment applications, CMS-aligned testing applies (verify operative status of the November 2024 designation rule on the engagement date). Sampling memos cite the larger-participant rule alongside the substantive rule under test, and the population definitions follow the digital-payment-application transaction set.
 
 ## Audience and tone
 

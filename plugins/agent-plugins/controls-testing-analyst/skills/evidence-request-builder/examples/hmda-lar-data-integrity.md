@@ -28,7 +28,7 @@ The skill produces a PBC evidence request list. Headlines:
   - Additional rows (R009-R012) cover preapproval-program disclosures, lien-position evidence on selected samples, loan-officer credentials per sample, and the AUS findings export per sample.
 - **Not-applicable items**:
   - Pre-period LAR records — out of period; the LAR is calendar-year scoped.
-  - Small-business loans — out of scope under HMDA; covered separately under the Section 1071 testing cycle (12 CFR Part 1002 Subpart B [verify subsection]) under test plan `TP-CMP-1071-2026-01`.
+  - Small-business loans — out of scope under HMDA; covered separately under the Section 1071 testing cycle (12 CFR Part 1002 Subpart B; **§1071 revised final rule, May 1, 2026: 1,000 covered transactions; effective June 30, 2026; compliance January 1, 2028** — supersedes the 2023 tiered schedule) under test plan `TP-CMP-1071-2026-01`.
   - SAR content for any sampled customer — restricted access; the LAR data-integrity test does not inspect SAR content. SAR-decision testing is a separate cycle with its own access-control posture.
 - **Limitations** — the request list addresses the calendar year only; demographic-firewall evidence is point-in-time at the testing date and does not cover the prior period; reliance on vendor AUS configuration evidence carries a separate completeness check via R003.
 - **Reviewer questions** — one reviewer question for pre-fielding sign-off: whether the demographic-firewall entitlement extract (R005) should also pull the test environment for comparison, given that the firm's demographic-firewall control has historically been tested only against production. Routed to the testing manager.

@@ -15,7 +15,7 @@ This library gives reusable policy sections, risks, controls, and evidence expec
 | Risk reporting | Data ownership, aggregation controls, completeness and accuracy checks, timeliness, adaptability, KRI threshold governance, board and committee commentary | BCBS 239 |
 | Cyber disclosure readiness | Incident intake, materiality assessment workflow, disclosure committee involvement, evidence log, legal review, board notification, non-technical executive summary | SEC cybersecurity disclosure guide |
 | CDD and suspicious activity governance | Customer risk profile, ongoing monitoring, beneficial ownership, enhanced due diligence, SAR decision documentation, confidentiality | FFIEC BSA/AML manual, 31 CFR 1010.230 |
-| Small business lending data controls | Covered application identification, data-point completeness, protected demographic information firewall, recordkeeping, submission readiness | CFPB Section 1071 and Regulation B section 1002.107 |
+| Small business lending data controls | Covered application identification, data-point completeness, protected demographic information firewall, recordkeeping, submission readiness | CFPB Section 1071 and Regulation B section 1002.107 (**§1071 revised final rule, May 1, 2026; 1,000 covered transactions; effective June 30, 2026; compliance January 1, 2028** — supersedes the 2023 tiered schedule) |
 
 ## Baseline risk taxonomy
 

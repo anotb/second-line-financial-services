@@ -1,4 +1,4 @@
-# Example — binding-authority MGA renewal across 12 states
+# Example: binding-authority MGA renewal across 12 states
 
 ## Input
 

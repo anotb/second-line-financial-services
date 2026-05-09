@@ -1,4 +1,4 @@
-# Troubleshooting — workpaper-drafter
+# Troubleshooting: workpaper-drafter
 
 Recurring pitfalls. Read before producing the workpaper and again before preparer sign-off.
 
@@ -62,7 +62,7 @@ A clean SOC 1 or SOC 2 opinion covers the auditor's selected criteria over the a
 
 ### Population-extract integrity not checked
 
-A LAR extract, an IAM entitlement extract, a transaction extract, a complaint-management extract — each carries an extract date and is validated against an independent count for completeness. The reliance test note records the extract date and the completeness check. Without the extract-integrity step, every sample-level conclusion sits on an unconfirmed population.
+A LAR extract, an IAM entitlement extract, a transaction extract, a complaint-management extract: each carries an extract date and is validated against an independent count for completeness. The reliance test note records the extract date and the completeness check. Without the extract-integrity step, every sample-level conclusion sits on an unconfirmed population.
 
 ## Sample-design and projection discipline
 

@@ -1,4 +1,4 @@
-# Troubleshooting — criticality-assessment
+# Troubleshooting: criticality-assessment
 
 Recurring pitfalls. Read before producing the assessment and again before sign-off.
 

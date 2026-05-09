@@ -1,4 +1,4 @@
-# Example: cash-intensive LLC — new account at a community bank
+# Example: cash-intensive LLC (new account at a community bank)
 
 Public-source-derived. No named institution. The shape mirrors a standing pattern at small and mid-sized community banks: a new-account opening for a single-member LLC operating a cash-intensive convenience-store business, with a CDD file that looks complete on the CIP and beneficial-ownership pillars but thin on expected activity and rating-driver evidence.
 

@@ -1,6 +1,6 @@
 # Example: tiering decision for an in-house consumer credit-decisioning ML model
 
-Public-source-derived. No named institution. Patterns drawn from CFPB Circular 2022-03 (adverse action notification requirements when using AI or complex algorithms), CFPB Circular 2023-03, and SR 11-7 §IV materiality framing.
+Public-source-derived. No named institution. Patterns drawn from Reg B §1002.9 (adverse action specificity; CFPB Circulars 2022-03 and 2023-03 informed earlier framing but were withdrawn May 12, 2025; the obligation survives on the regulation and Staff Commentary) and SR 11-7 §IV materiality framing.
 
 ## Input description
 

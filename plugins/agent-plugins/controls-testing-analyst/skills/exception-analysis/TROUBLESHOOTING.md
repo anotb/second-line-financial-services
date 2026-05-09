@@ -78,7 +78,7 @@ Symptom: preparer and reviewer roles are the same; or the reviewer signs off wit
 
 Why it goes wrong: reviewer separation is structural, not advisory. The same role cannot both classify and review classification.
 
-Catch it: `preparer.role` and `reviewer.role` differ. Where the testing function is small and the same person fills two roles, the separation is on role label and on review responsibility, not on body — but the register's audit trail records the separate sign-off explicitly.
+Catch it: `preparer.role` and `reviewer.role` differ. Where the testing function is small and the same person fills two roles, the separation is on role label and on review responsibility, not on body, but the register's audit trail records the separate sign-off explicitly.
 
 ## 10. Repeat-issue flag false-negative
 

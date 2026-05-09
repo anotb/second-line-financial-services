@@ -45,19 +45,19 @@ A practitioner note before the list: the model-risk anchors and the AI-specific 
 
 ## Secondary anchors (sector and cross-cutting)
 
-### 7. CFPB Circular 2022-03 — Adverse action notification requirements when using AI or complex algorithms
+### 7. CFPB Circular 2022-03 — Adverse action notification requirements when using AI or complex algorithms (withdrawn May 12, 2025; historical only)
 
-- Citation: CFPB Circular 2022-03 (May 26, 2022), "Adverse action notification requirements in connection with credit decisions based on complex algorithms".
+- Citation: CFPB Circular 2022-03 (May 26, 2022), "Adverse action notification requirements in connection with credit decisions based on complex algorithms". **Withdrawn May 12, 2025; historical only.** ECOA / Regulation B §1002.9 continues to apply on its own terms.
 - Excerpt-paraphrase: Creditors using complex algorithms must still provide a statement of specific reasons to applicants against whom adverse action is taken; the complexity of the model is not a defence to the specificity requirement under ECOA / Regulation B (15 USC §1691; 12 CFR §1002.9).
-- Link: https://www.consumerfinance.gov/compliance/circulars/circular-2022-03-adverse-action-notification-requirements-in-connection-with-credit-decisions-based-on-complex-algorithms/ — Circular §1 and §2
-- Notes: Banking sector overlay anchor; consumer-credit decisioning model cards must address adverse action notice generation in controls and sign-off questions.
+- Link: https://www.consumerfinance.gov/compliance/circulars/circular-2022-03-adverse-action-notification-requirements-in-connection-with-credit-decisions-based-on-complex-algorithms/ — Circular §1 and §2 [historical reference]
+- Notes: Banking sector overlay anchor; consumer-credit decisioning model cards must address adverse action notice generation in controls and sign-off questions on the strength of Reg B itself, not the withdrawn circular.
 
-### 8. CFPB Circular 2023-03 — Adverse action notices and the use of sample reason codes
+### 8. CFPB Circular 2023-03 — Adverse action notices and the use of sample reason codes (withdrawn May 12, 2025; historical only)
 
-- Citation: CFPB Circular 2023-03 (September 19, 2023), "Adverse action notification requirements and the proper use of the CFPB's sample forms".
+- Citation: CFPB Circular 2023-03 (September 19, 2023), "Adverse action notification requirements and the proper use of the CFPB's sample forms". **Withdrawn May 12, 2025; historical only.** Reg B §1002.9 and Comment 9(b)(2)-3 of the Official Staff Commentary continue to apply on their own terms.
 - Excerpt-paraphrase: Creditors cannot rely on illegitimate reasons, including reasons not actually relied upon in the adverse decision. Reasons given in the adverse action notice must be the actual principal reasons for the adverse action, even when sample reason codes are used. Applies under ECOA / Regulation B §1002.9.
-- Link: https://www.consumerfinance.gov/compliance/circulars/circular-2023-03-adverse-action-notification-requirements-and-the-proper-use-of-the-cfpbs-sample-forms-provided-in-regulation-b/ — Circular section "Required Information"
-- Notes: Banking sector overlay anchor; complements Circular 2022-03.
+- Link: https://www.consumerfinance.gov/compliance/circulars/circular-2023-03-adverse-action-notification-requirements-and-the-proper-use-of-the-cfpbs-sample-forms-provided-in-regulation-b/ — Circular section "Required Information" [historical reference]
+- Notes: Banking sector overlay anchor; complements (now-withdrawn) Circular 2022-03.
 
 ### 9. NAIC Model Bulletin on the Use of Artificial Intelligence Systems by Insurers (December 2023)
 

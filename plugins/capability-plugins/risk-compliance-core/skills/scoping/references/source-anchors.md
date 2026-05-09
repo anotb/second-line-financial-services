@@ -135,6 +135,6 @@ When the engagement carries cyber, privacy, climate, or conduct risk lens, the c
 - Cyber: NYDFS 23 NYCRR Part 500 [verify current section labels]; SEC Item 1.05 of Form 8-K cyber disclosure [verify rule citation]; Reg S-P [verify section labels].
 - Privacy: GLBA Safeguards Rule (16 CFR Part 314) [verify section labels]; CCPA / CPRA, VCDPA, CTDPA, and similar state laws as applicable.
 - Climate: SEC climate-related disclosure rule [verify current rulemaking status]; TCFD-aligned disclosure conventions.
-- Conduct: FCA SMCR for UK-licensed entities [verify section labels]; US enforcement themes via CFPB Circulars and OCC enforcement actions.
+- Conduct: FCA SMCR for UK-licensed entities [verify section labels]; US enforcement themes via OCC enforcement actions, state-AG actions, and the regulatory text underlying UDAAP §1031 / Reg B §1002.9. (Note: many CFPB Circulars on UDAAP, overdraft, NSF, and adverse-action with complex algorithms were **withdrawn May 12, 2025**; treat as historical interpretive context, not current bureau posture.)
 
 These overlays load when the scope's `cross_cutting_overlay_set` includes the corresponding entry.

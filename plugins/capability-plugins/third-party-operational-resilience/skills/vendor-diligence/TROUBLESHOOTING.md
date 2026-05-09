@@ -1,4 +1,4 @@
-# Troubleshooting — vendor-diligence
+# Troubleshooting: vendor-diligence
 
 Recurring pitfalls. Read before producing the pack and again before sign-off.
 

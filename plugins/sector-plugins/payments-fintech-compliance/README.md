@@ -35,8 +35,8 @@ Public anchors only. Named anchors include:
 - NACHA Operating Rules (current edition; paywalled, conceptual citation; specific sections to be confirmed against the firm's licensed copy).
 - Card-network rules: Visa Core Rules, Visa Product and Service Rules, Mastercard Rules (current edition; paywalled, conceptual citation).
 - FedNow Service Operating Procedures and RTP Operating Rules (current versions).
-- State Money Transmitter laws under the Money Transmitter Modernization Act framework as adopted state-by-state via NMLS [verify state-by-state adoption status as of each engagement date]; Multistate MSB Licensing Agreement.
-- CFPB Personal Financial Data Rights Final Rule under §1033 (October 2024) [verify Federal Register citation, effective date, implementation tiers, and current litigation status as of each engagement date].
+- State Money Transmitter laws under the Money Transmitter Modernization Act framework as adopted state-by-state via NMLS [verify state-by-state adoption status as of each review date]; Multistate MSB Licensing Agreement.
+- CFPB Personal Financial Data Rights Final Rule under §1033 (October 2024) [verify Federal Register citation, effective date, implementation tiers, and current litigation status as of each review date].
 - CFPB larger-participant rule for digital wallets and payment apps (December 2024) [verify Federal Register citation and current state including any litigation or congressional review].
 - Interagency Guidance on Third-Party Relationships (OCC / FRB / FDIC, June 6 2023).
 - OCC / FRB / FDIC Joint Statement on Banks' Arrangements with Third Parties to Deliver Bank Deposit Products and Services (July 25 2024) [verify exact date].

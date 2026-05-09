@@ -20,7 +20,7 @@ Banking-specific risk vocabulary lands here:
 
 - Consumer-credit decisioning fairness exposure (ECOA / Reg B), with the conduct cross-cutting overlay providing the depth.
 - BSA/AML transaction-monitoring model performance and threshold-tuning posture (FFIEC BSA/AML examination expectation).
-- Fair-lending posture on AI-touched products (CFPB Circular 2022-03 / 2023-03 adverse action posture).
+- Fair-lending posture on AI-touched products (Reg B §1002.9 adverse-action posture; CFPB Circulars 2022-03 / 2023-03 are **withdrawn May 12, 2025; historical only**).
 - Vendor concentration on foundation-model providers, where the firm's GenAI bets are concentrated.
 - Cyber surface from AI-enabled threats, where the cyber cross-cutting overlay carries the NYDFS October 2024 framing for NY-footprint firms.
 

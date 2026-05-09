@@ -1,4 +1,6 @@
-# DORA Register of Information — build pack
+# DORA Register of Information — preparation build pack
+
+This pack is preparation-grade. It supports the firm's data-quality posture and the named approver's sign-off on that posture. It is not the official Register of Information template under Commission Implementing Regulation (EU) 2024/2956; the firm's regulatory-reporting pipeline maps the prepared records into the official template before submission.
 
 **Register ID**: [firm-defined, e.g., `<group-LEI>-<reporting-year>`]
 **Reporting reference date**: [YYYY-MM-DD]
@@ -31,9 +33,9 @@ Which firm systems and registers were used as input to the build, and the data-q
 - EBA outsourcing register (EBA/GL/2019/02) used as input: [yes / no — pointer; mapping note].
 - Data-quality caveats: [bulleted; e.g., contract repository missing 2 amendments executed in Q4; criticality outputs not yet refreshed for 6 arrangements].
 
-## Register entries by ITS table
+## Register entries by table (preparation-grade)
 
-Table identifiers below follow the EBA preparation-materials convention (B.01 to B.07). Confirm the exact table codes from the adopted Commission Implementing Regulation against `references/source-anchors.md` at firm onboarding.
+Table identifiers below follow a local B-table convention adapted from the EBA preparation materials. They are preparation-grade — not aligned column-for-column to the official ITS taxonomy under Commission Implementing Regulation (EU) 2024/2956. Confirm the exact table and column codes from the adopted Implementing Regulation against `references/source-anchors.md` at firm onboarding, and rely on the firm's regulatory-reporting pipeline to format the official template before submission.
 
 ### B.01 — Contractual arrangements (general information)
 
@@ -100,7 +102,7 @@ Cite `references/source-anchors.md` for the canonical citations. Use `[verify IT
 ## Review-gate posture
 
 - Review gates this build must clear: [scope, evidence, authority, impact, decision].
-- The build does not file. The named accountable executive signs off. Submission goes through the firm's regulatory-reporting pipeline.
+- The build does not file and is not the official template. The named accountable executive signs off on the firm's data-quality posture. The firm's regulatory-reporting pipeline maps the prepared records into the official Register of Information template under Commission Implementing Regulation (EU) 2024/2956 and submits via the NCA-specified channel.
 - Next review trigger: [next reporting reference date | scope-change trigger | criticality re-classification | ICT-third-party restructure].
 
 ---

@@ -96,9 +96,9 @@ A practitioner note before the list. RAG evaluation sits at a particular interse
 
 ### 13. CFPB UDAAP framework
 
-- Citation: Dodd-Frank Wall Street Reform and Consumer Protection Act, §1031 (prohibition on unfair, deceptive, or abusive acts or practices) and §1036 (CFPB enforcement authority); CFPB Consumer Financial Protection Circulars on UDAAP including circulars on chatbots and AI in consumer finance.
-- Excerpt-paraphrase: The CFPB enforces the UDAAP framework for consumer-facing financial services. Inaccurate AI-generated communications (deception by inaccurate statement) are within UDAAP scope. The grounding-quality outputs and the residual risk on grounding failures are inputs to the firm's UDAAP exposure posture for any customer-facing use case.
-- Link: https://www.consumerfinance.gov/compliance/circulars/ — CFPB Circulars index section, including circulars on chatbot supervision in consumer finance
+- Citation: Dodd-Frank Wall Street Reform and Consumer Protection Act, §1031 (prohibition on unfair, deceptive, or abusive acts or practices) and §1036 (CFPB enforcement authority). CFPB Circulars on chatbots and AI in consumer finance are among the items **withdrawn May 12, 2025; historical only** — anchor the UDAAP exposure to §1031 itself, not the withdrawn circular layer.
+- Excerpt-paraphrase: The CFPB enforces the UDAAP framework for consumer-facing financial services. Inaccurate AI-generated communications (deception by inaccurate statement) are within UDAAP scope on the strength of §1031. The grounding-quality outputs and the residual risk on grounding failures are inputs to the firm's UDAAP exposure posture for any customer-facing use case. State AGs and prudential regulators continue to reach the same fact patterns under their own authority.
+- Link: https://www.consumerfinance.gov/compliance/circulars/ — CFPB Circulars index [withdrawn items remain published as historical reference]
 - Notes: Conduct cross-cutting overlay anchor.
 
 ## Verification flags

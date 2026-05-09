@@ -1,4 +1,4 @@
-# Example — post-tuning review of a structuring-scenario threshold change
+# Example: post-tuning review of a structuring-scenario threshold change
 
 ## Scenario
 

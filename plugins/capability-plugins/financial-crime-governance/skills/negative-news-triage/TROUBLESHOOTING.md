@@ -1,4 +1,4 @@
-# Troubleshooting — negative-news-triage
+# Troubleshooting: negative-news-triage
 
 Recurring defects in adverse-media triage memos and in the upstream hit sets, and how the skill handles them.
 

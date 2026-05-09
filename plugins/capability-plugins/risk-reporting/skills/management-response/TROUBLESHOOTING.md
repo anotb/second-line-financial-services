@@ -72,7 +72,7 @@ Symptom: an MRIA response carries the same reporting cadence, the same firm-leve
 
 Why it happens: builder treats severity as a finding-text concern rather than as a workflow-defaults concern.
 
-Fix: the banking sector overlay applies tier-specific defaults — MRIA carries monthly written progress reports, a senior firm-level signatory (typically CEO or General Counsel), board-level attention, a tighter action-plan envelope, and an evidence-of-effectiveness method that typically includes a supervisor walk-through. MRA defaults are quarterly cadence, CRO or process-owner signatory, risk-committee notification rather than board-level attention. The skill applies the defaults; the responding role can adjust where the supervisor's specification differs.
+Fix: the banking sector overlay applies tier-specific defaults; MRIA carries monthly written progress reports, a senior firm-level signatory (typically CEO or General Counsel), board-level attention, a tighter action-plan envelope, and an evidence-of-effectiveness method that typically includes a supervisor walk-through. MRA defaults are quarterly cadence, CRO or process-owner signatory, risk-committee notification rather than board-level attention. The skill applies the defaults; the responding role can adjust where the supervisor's specification differs.
 
 ## Personal names in the addressee or signatory blocks
 

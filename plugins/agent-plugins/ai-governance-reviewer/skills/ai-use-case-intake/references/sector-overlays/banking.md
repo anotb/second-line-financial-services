@@ -20,11 +20,11 @@ For federally regulated banks, the intake record is the entry the use case takes
 
 For non-bank entities under the same parent, SR 11-7 reach is by extension only when the bank inherits model risk through transactions, services, or balance-sheet exposure. Intake should not over-claim SR 11-7 reach to non-bank entities.
 
-### 2. ECOA / Reg B and CFPB Circulars on adverse action
+### 2. ECOA / Reg B adverse-action surface
 
 Where the AI use case influences a credit decision (origination, pricing, line management, collections triggers, fraud-driven adverse action), the intake captures:
 
-- `regulatory_flags`: `CFPB_Circular_2022_03` (specific reasons under ECOA for complex algorithms) and `CFPB_Circular_2023_03` (actual principal reasons) where the use case drives adverse-action notice generation. Routing destinations: `ai-risk-tiering` and `validation-plan`.
+- `regulatory_flags`: `Reg_B_1002_9` (specific principal reasons for adverse action) and `Reg_B_OSC_9_b_2_3` (cited reasons must accurately describe factors actually considered or scored) where the use case drives adverse-action notice generation. CFPB Circulars 2022-03 and 2023-03 informed prior intake postures but were **withdrawn May 12, 2025; historical only**. Routing destinations: `ai-risk-tiering` and `validation-plan`.
 - `decision_impact.customer_impact`: scored high; basis names the credit-decision touch.
 - `decision_impact.regulatory_impact`: scored at least medium with CFPB and prudential reach noted.
 - An open question for `validation-plan`: how is the adverse-action reason generation method validated and sampled.

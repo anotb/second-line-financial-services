@@ -1,4 +1,4 @@
-# Troubleshooting — exit-plan
+# Troubleshooting: exit-plan
 
 Recurring pitfalls. Read before producing the plan and again before sign-off.
 
@@ -54,7 +54,7 @@ Lawful retention by the vendor (regulatory archive, fraud investigation, legal h
 
 ### Forgetting fourth-party dependencies
 
-The vendor's own subcontractors are often the bottleneck on transition. Hyperscaler region, BIN-sponsor processor, KYC vendor, fund-accountant subcontractor, foundation-model upstream — any of these can determine the realistic transition window.
+The vendor's own subcontractors are often the bottleneck on transition. Hyperscaler region, BIN-sponsor processor, KYC vendor, fund-accountant subcontractor, foundation-model upstream: any of these can determine the realistic transition window.
 
 ### Treating subcontractor flow-down as visibility
 
@@ -64,7 +64,7 @@ Flow-down clauses do not equal visibility. The exit plan must reflect what the f
 
 ### Missing the regulator-notification posture
 
-Exit events for critical or important functions usually require supervisory notification — DORA Article 28 register-of-information update, bank-regulator material-vendor-change notification, Form ADV brochure update, Form N-CEN service-provider change, NAIC ORSA update, NYDFS event-reporting. The plan must include the notification clock and the supervisory-engagement posture, not be a surprise on the day.
+Exit events for critical or important functions usually require supervisory notification: DORA Article 28 register-of-information update, bank-regulator material-vendor-change notification, Form ADV brochure update, Form N-CEN service-provider change, NAIC ORSA update, NYDFS event-reporting. The plan must include the notification clock and the supervisory-engagement posture, not be a surprise on the day.
 
 ### Setting the customer-notice clock to the easiest one
 
@@ -88,7 +88,7 @@ Where a planned safety-and-soundness, conduct-of-business, or thematic examinati
 
 ### Skipping the test
 
-A plan that has never been tested has unknown viability. Document the testing cadence and the last-test outcome — even if "no test yet" — and surface it as a reviewer question. A plan without a test history is paper, not posture.
+A plan that has never been tested has unknown viability. Document the testing cadence and the last-test outcome (even if "no test yet"), and surface it as a reviewer question. A plan without a test history is paper, not posture.
 
 ### Treating tabletop as sufficient for a critical arrangement
 

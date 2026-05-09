@@ -23,7 +23,7 @@ The register here often runs across two parties: a sponsor bank with the regulat
   - §1026.7 (periodic statements for open-end credit).
   - §1026.13 (billing-error resolution).
   - §1026.40 (HELOCs); subpart G (credit cards).
-  - Use for: TILA obligations on credit products, including BNPL where structured as open-end or closed-end credit under the rule.
+  - Use for: TILA obligations on credit products, including BNPL where structured as open-end or closed-end credit under the rule. The CFPB BNPL interpretive rule (May 2024) was **nullified by Pub. L. 119-11 (May 9, 2025); historical only**; Reg Z applicability to BNPL is now an open question on the regulatory text.
   - Link: https://www.ecfr.gov/current/title-12/chapter-X/part-1026
 
 - Regulation DD — 12 CFR Part 1030 (Truth in Savings Act implementation).
@@ -43,7 +43,7 @@ The register here often runs across two parties: a sponsor bank with the regulat
 
 ### Open banking
 
-- CFPB Section 1033 (Personal Financial Data Rights) Final Rule, 12 CFR 1033 [verify subpart and section numbers against the published Final Rule].
+- CFPB Section 1033 (Personal Financial Data Rights) Final Rule, 12 CFR 1033 [verify subpart and section numbers against the published Final Rule]. **§1033 compliance dates stayed as of October 29, 2025; CFPB-initiated reconsideration with ANPR** — verify current docket status before treating phased compliance dates as firm.
   - Use for: data-provider obligations to make covered data available to consumer-authorized third parties; cross-load with privacy overlay.
   - Link: https://www.consumerfinance.gov/rules-policy/final-rules/
 

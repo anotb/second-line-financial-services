@@ -28,7 +28,7 @@ This repository intentionally uses public, regulator, standards-body, and offici
 | Third-party risk | U.S. interagency third-party risk management guidance, FDIC release | https://www.fdic.gov/news/press-releases/2023/pr23047.html |
 | Risk data and reporting | BCBS 239 principles for effective risk data aggregation and risk reporting | https://www.bis.org/publ/bcbs239.htm |
 | Cyber reporting | SEC cybersecurity risk management, strategy, governance, and incident disclosure guide | https://www.sec.gov/corpfin/secg-cybersecurity |
-| Small business lending and fair lending | CFPB Section 1071 small business lending final rule page | https://www.consumerfinance.gov/rules-policy/final-rules/small-business-lending-under-the-equal-credit-opportunity-act-regulation-b/ |
+| Small business lending and fair lending | CFPB Section 1071 small business lending final rule page (**§1071 revised final rule, May 1, 2026; 1,000 covered transactions; effective June 30, 2026; compliance January 1, 2028** — supersedes the 2023 tiered schedule) | https://www.consumerfinance.gov/rules-policy/final-rules/small-business-lending-under-the-equal-credit-opportunity-act-regulation-b/ |
 | Small business lending data | CFPB Regulation B section 1002.107 data compilation rule text | https://www.consumerfinance.gov/rules-policy/regulations/1002/107 |
 | Financial crime governance | FFIEC BSA/AML CDD manual | https://bsaaml.ffiec.gov/manual/AssessingComplianceWithBSARegulatoryRequirements/02 |
 | Financial crime governance | FFIEC BSA/AML SAR manual | https://bsaaml.ffiec.gov/manual/AssessingComplianceWithBSARegulatoryRequirements/04 |

@@ -20,7 +20,7 @@ Recurring defects in the adverse-action notice review and in the artifact this s
 
 ## Content-compliance defects
 
-**Sample-form reason selected because it was closest, not because it was the principal reason.** This is the CFPB Circular 2023-03 defect. Fix: per-decision evidence that the cited reason is the principal reason actually relied upon — feature contribution score, model output, or named scoring rule.
+**Sample-form reason selected because it was closest, not because it was the principal reason.** This is the §1002.9 specificity defect (formerly captured in CFPB Circular 2023-03, withdrawn May 12, 2025; the obligation flows from the regulation and the Staff Commentary, not the withdrawn circular). Fix: per-decision evidence that the cited reason is the principal reason actually relied upon (feature contribution score, model output, or named scoring rule).
 
 **Generic statement substituted for specific reason.** "You did not meet our credit standards" or "credit application incomplete" (when the application was complete) are recurring generic-reason-only defects. Fix: per-decision specificity test against the Staff Commentary; generic statements are content failures regardless of whether sample-form reasons are also cited.
 
@@ -30,7 +30,7 @@ Recurring defects in the adverse-action notice review and in the artifact this s
 
 ## Model-supported reasons defects
 
-**"The model is a black box" treated as a defense.** CFPB Circular 2022-03 forecloses this position. Fix: every AI / complex-model decision must produce a per-decision feature contribution artifact (SHAP, LIME, leave-one-out, monotonic constraint trace, or the firm's named explainability method). Where the artifact is absent, the row carries `[evidence needed]` and routes to model risk for the explainability ask.
+**"The model is a black box" treated as a defense.** Reg B §1002.9 forecloses this position on its own terms (CFPB Circular 2022-03, which restated the point, was withdrawn May 12, 2025; the obligation survives the withdrawal). Fix: every AI / complex-model decision must produce a per-decision feature contribution artifact (SHAP, LIME, leave-one-out, monotonic constraint trace, or the firm's named explainability method). Where the artifact is absent, the row carries `[evidence needed]` and routes to model risk for the explainability ask.
 
 **Vendor-of-record reason coding accepted as the creditor's compliance evidence.** Vendor returns a numeric score and a reason flag from a fixed dictionary; the creditor must demonstrate the cited reason reflects the actual principal feature contribution. Fix: vendor explainability artifact tested against the cited reason per decision; absent evidence is a finding, not a routing question.
 

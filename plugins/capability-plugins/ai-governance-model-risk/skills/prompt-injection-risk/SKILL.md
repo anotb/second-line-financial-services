@@ -108,6 +108,8 @@ Downstream consumers: `genai-pre-prod-review` consumes the structured object for
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
 - `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md` — sector overlays loaded from scope.
 - `references/cross-cutting/cyber.md` — cyber overlay, the default cross-cutting overlay for v1 GenAI reviews.
+- `references/cross-cutting/privacy.md` — privacy overlay loaded when the scope flags privacy (default for any use case touching NPI, PHI, PCI, biometric data, or customer prompts that may carry regulated personal data inadvertently); covers training-data extraction, retrieval exfiltration, and tool-driven personal-data egress paths.
+- `references/cross-cutting/conduct.md` — conduct overlay loaded when the scope flags conduct or when the use case generates customer-facing communications, distribution materials, marketing assets, or recommendation surfaces; covers UDAAP, Marketing Rule, FINRA 2210 / 2111, Reg BI, NAIC Models #880 / #900 exposure on injection-driven outcomes.
 - `references/firm-overlay.md` — firm policy, taxonomy, named owners (consumed when present).
 - `templates/default-output.md` — memo template.
 - `schemas/prompt-injection-review.schema.json` — structured-output contract.

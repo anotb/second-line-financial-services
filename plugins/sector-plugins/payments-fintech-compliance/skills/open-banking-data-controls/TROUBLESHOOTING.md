@@ -1,4 +1,4 @@
-# Troubleshooting — open-banking-data-controls
+# Troubleshooting: open-banking-data-controls
 
 Recurring pitfalls. Read before drafting if the engagement looks unfamiliar; consult after drafting if the artifact does not feel right to a senior payments-compliance reviewer or to a sponsor-bank programme-management reader.
 

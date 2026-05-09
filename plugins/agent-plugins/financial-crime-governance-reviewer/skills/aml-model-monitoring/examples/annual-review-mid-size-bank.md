@@ -1,4 +1,4 @@
-# Example — annual second-line monitoring memo, mid-size US bank
+# Example: annual second-line monitoring memo, mid-size US bank
 
 ## Scenario
 
@@ -8,7 +8,7 @@ Engagement scope flags banking sector overlay. Cyber cross-cutting overlay is no
 
 ## Output sketch
 
-The memo opens with program review framing — the system is in scope as a model under the named model-risk supervisory guidance, and the review is read against that frame, not as a "rules" review. Material findings:
+The memo opens with program review framing: the system is in scope as a model under the named model-risk supervisory guidance, and the review is read against that frame, not as a "rules" review. Material findings:
 
 - **Segmentation refresh overdue.** Last refresh was fourteen months ago against firm policy of twelve-month maximum cadence. Two retail and one small-business segment are affected. Recommendation routes to the AML governance committee for tuning-cycle sequencing decision; the next tuning cycle should not run on a stale segmentation base.
 - **BTL testing coverage gap.** Below-the-line testing was performed for two of seven scenarios in the window; the five untested scenarios include rapid-movement-of-funds and structuring, both of which carry material productivity exposure. No documented rationale for the coverage gap. Recommendation routes to the head of model risk for BTL coverage planning before the next validation cycle.

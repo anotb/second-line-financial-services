@@ -1,4 +1,4 @@
-# Example: NYDFS October 2024 Industry Letter on cybersecurity risks arising from GenAI — state-chartered bank using GenAI for customer service
+# Example: NYDFS October 2024 Industry Letter on cybersecurity risks arising from GenAI (state-chartered bank using GenAI for customer service)
 
 ## Input
 

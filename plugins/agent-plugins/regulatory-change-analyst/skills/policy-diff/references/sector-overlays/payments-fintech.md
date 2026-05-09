@@ -16,7 +16,7 @@ Payments and fintech firms typically operate either as money transmitters under 
 - Reg E (12 CFR Part 1005) — electronic fund transfers.
 - Reg Z (12 CFR Part 1026) — truth in lending.
 - Reg DD (12 CFR Part 1030) — truth in savings.
-- CFPB Section 1033 — open banking, where applicable.
+- CFPB Section 1033 — open banking, where applicable (**compliance dates stayed as of October 29, 2025; CFPB-initiated reconsideration with ANPR** — verify current docket status before benchmarking against tier-based compliance dates).
 - State money-transmitter laws (cite the state's enacted law).
 - FinCEN regulations under 31 CFR Chapter X — BSA/AML for MSBs.
 - CFPB CMS guidance — Supervision and Examination Manual.

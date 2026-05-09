@@ -1,4 +1,4 @@
-# Troubleshooting — credit-risk-governance
+# Troubleshooting: credit-risk-governance
 
 Recurring defects in credit-risk-governance packs. Read the corresponding section of `SKILL.md` and `references/source-anchors.md` first; the guidance here is for cases where the pack reads off-tone or fails on review.
 

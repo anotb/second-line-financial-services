@@ -1,4 +1,4 @@
-# Troubleshooting — payments-risk-assessment
+# Troubleshooting: payments-risk-assessment
 
 Recurring pitfalls. Read before drafting if the engagement looks unfamiliar; consult after drafting if the artifact does not feel right to a senior payments compliance reviewer.
 
