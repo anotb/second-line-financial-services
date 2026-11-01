@@ -87,3 +87,9 @@ The non-negotiables: every material claim cites a source from the file, the sect
 ## Output
 
 The deliverable is a Word memo. Render via the `docx` skill in the `document-skills` plugin using the named sections from `templates/default-output.md`. The opening program review section is prose; the evidence sections are structured tables (data quality, segmentation drift indicators, scenario inventory, threshold-change log, alert and productivity trends, validation evidence, findings, recommended decision checkpoints, source trace). The AML governance committee, the BSA officer, and the head of model risk are the typical reviewers; routing of checkpoints flows to the named owners. Findings tagged to expected-activity-versus-monitoring-scope mismatch route back to `cdd-risk-review` for upstream context; findings touching SAR-decision quality route to `sar-decision-qa`; findings indicating re-tiering or re-validation need route to the model-risk plugin.
+
+## Human review and AI disclosure
+
+Open the deliverable with this line, and remove it only after the review below: `AI-assisted draft. Requires review by a qualified person before use.`
+
+A qualified person with authority to change the output reviews it before it is delivered or relied on, and stays accountable for it. Where the output supports advice to an individual or a decision about an individual (credit, insurance underwriting, pricing or claims, employment, legal rights, or similar), that individual must be told AI was used to produce it. This skill does not make final decisions, file with a regulator, notify customers, execute transactions, or move money or other financial assets.

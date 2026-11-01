@@ -11,6 +11,12 @@ Second-line and internal-audit control testing skills for financial-services fir
 - `test-plan-builder` — Pre-fieldwork test plan (objective, criteria, walkthrough, design and operating procedures, sampling reference, evidence reference, pass/fail criteria).
 - `workpaper-drafter` — Standard testing workpaper from completed fieldwork (criteria, evidence inspected, procedures performed, sample-level results, exceptions, conclusion, issues elevated).
 
+## Try it
+
+- Build a test plan for quarterly privileged-access reviews on a wire-transfer system.
+- Recommend a sample size and selection method for testing a population of 12,000 ACH exception items.
+- Analyze these results and draft the workpaper conclusion: 3 of 25 sampled access reviews had no approver evidence.
+
 ## Sequencing
 
 The three workpaper-lifecycle skills are sequential, not redundant:
@@ -29,7 +35,7 @@ The supporting skills compose into the test plan and workpaper:
 
 - `skills/` — invocable Claude Code skills. New plugins use skills, not legacy `commands/`.
 - `references/` — public-source map, policy-control library, decision checkpoints, and output templates copied into this plugin so it is self-contained after installation.
-- `schemas/` — JSON schemas for test plans, controls, obligations, issues, and adjacent artifacts. Several schemas are borrowed from `risk-compliance-core`; schema dedup is tracked in [ROADMAP.md](../../../ROADMAP.md).
+- `schemas/` — JSON schemas for test plans, controls, obligations, issues, and adjacent artifacts. Several schemas are borrowed from `risk-compliance-core`; schema dedup is tracked in [ROADMAP.md](https://github.com/anotb/second-line-financial-services/blob/main/ROADMAP.md).
 
 ## Source posture
 
@@ -48,3 +54,21 @@ Sector overlays (banking, insurance, capital markets, payments and fintech) and 
 ## Operating posture
 
 This plugin drafts second-line work product for qualified review. It does not approve, file, rate, onboard, decline, notify, or close items. Every artifact carries a confidence label and an explicit reviewer sign-off block. Public examples in this repository are derived from public regulatory and standards material; real implementation requires firm policy overlays, jurisdiction-specific legal review, and system-of-record evidence.
+
+## Install
+
+In Claude Code:
+
+```
+/plugin install compliance-testing --marketplace anotb/second-line-financial-services
+```
+
+This plugin works on its own. Mentions of `risk-compliance-core` in the skills are optional hand-offs. Add that plugin for the shared `scoping`, `control-matrix`, and `issue-writeup` skills; installing from the GitHub marketplace adds it automatically.
+
+## Data and behavior
+
+The plugin is Markdown and JSON only: skills, references, schemas, and templates. It has no hooks, scripts, or MCP servers, and it does not send or store data itself. `.mcp.example.json` is an inactive template that Claude does not load, and it connects to nothing until a firm replaces it with an approved server. Documents you share are handled by Claude under your account's terms, so apply your firm's rules for confidential supervisory information, suspicious-activity material, and personal data before sharing them.
+
+## Human review and AI disclosure
+
+Intended for second-line and compliance professionals. Outputs are AI-assisted drafts. A qualified person with authority to change an output must review it before it is delivered or used in a decision, and stays accountable for it. Where an output supports advice to an individual or a decision about an individual, such as credit, insurance, employment, or legal rights, tell that individual AI was used to produce it. The plugin does not make credit, underwriting, claims, filing, or other final decisions, gives no personalized investment advice, and does not execute transactions or move money. It is not legal or regulatory advice.

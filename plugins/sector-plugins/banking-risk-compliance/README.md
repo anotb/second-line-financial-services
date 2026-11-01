@@ -17,6 +17,12 @@ This is a strict sector-overlay plugin. It ships skills that are genuinely banki
 | `credit-risk-governance` | Second-line credit-governance memo: credit-policy alignment to Comptroller's Handbook expectations, underwriting framework, risk-rating discipline, concentration governance (including the 2006 CRE 100% / 300% triggers), ACL / CECL methodology oversight, Reg O and Reg W applicability, and second-line challenge of first-line lending decisions. |
 | `deposit-operations-controls` | Deposit-operations control matrix: account opening and CIP (31 CFR §1020.220), beneficial-ownership collection (31 CFR §1010.230), Reg DD account disclosures and advertising, Reg E EFT and ATM operations, Reg CC funds availability, reconciliation and ledgering (including FBO-account governance for sponsor-bank programs), exception handling, access controls, and evidence retention. |
 
+## Try it
+
+- Prepare a supervision-readiness pack for an upcoming OCC exam at a fictional $20B regional bank.
+- Review the controls for a bank-fintech partnership offering sponsored deposit accounts.
+- Draft a credit-risk governance pack for a commercial real estate concentration.
+
 ## Banking overlays into capability skills
 
 The plugin contributes banking overlay content into capability skills where banking adds material nuance:
@@ -49,15 +55,26 @@ The bank-fintech regulatory pipeline has moved repeatedly post-2023 (Interagency
 - `references/` — plugin-level shared references: banking source map, policy-control library rows, named decision forums.
 - `schemas/` — banking-specific artifacts.
 
+## Operating posture
+
+The skills draft second-line work product for qualified review by the firm's CRO, CCO, Chief Credit Officer, Head of TPRM, Examination Coordinator, BSA Officer, General Counsel, Chief Audit Executive, or external counsel. They do not approve transactions, file regulatory reports, certify Heightened Standards compliance, sign Call Reports, close MRAs / MRIAs, onboard fintech partners, approve credit, or close issues. Every output is staged for human sign-off.
+
 ## Install
 
-```bash
-claude plugin marketplace add /path/to/second-line-financial-services
-claude plugin install banking-risk-compliance@second-line-financial-services
+In Claude Code:
+
+```
+/plugin install banking-risk-compliance --marketplace anotb/second-line-financial-services
 ```
 
 Pair with `regulatory-change-management`, `risk-compliance-core`, `risk-reporting`, `compliance-testing`, `third-party-operational-resilience`, `financial-crime-governance`, and `ai-governance-model-risk` for the full second-line stack.
 
-## Operating posture
+This plugin works on its own. Mentions of `risk-compliance-core` in the skills are optional hand-offs. Add that plugin for the shared `scoping`, `control-matrix`, and `issue-writeup` skills; installing from the GitHub marketplace adds it automatically.
 
-The skills draft second-line work product for qualified review by the firm's CRO, CCO, Chief Credit Officer, Head of TPRM, Examination Coordinator, BSA Officer, General Counsel, Chief Audit Executive, or external counsel. They do not approve transactions, file regulatory reports, certify Heightened Standards compliance, sign Call Reports, close MRAs / MRIAs, onboard fintech partners, approve credit, or close issues. Every output is staged for human sign-off.
+## Data and behavior
+
+The plugin is Markdown and JSON only: skills, references, schemas, and templates. It has no hooks, scripts, or MCP servers, and it does not send or store data itself. `.mcp.example.json` is an inactive template that Claude does not load, and it connects to nothing until a firm replaces it with an approved server. Documents you share are handled by Claude under your account's terms, so apply your firm's rules for confidential supervisory information, suspicious-activity material, and personal data before sharing them.
+
+## Human review and AI disclosure
+
+Intended for second-line and compliance professionals. Outputs are AI-assisted drafts. A qualified person with authority to change an output must review it before it is delivered or used in a decision, and stays accountable for it. Where an output supports advice to an individual or a decision about an individual, such as credit, insurance, employment, or legal rights, tell that individual AI was used to produce it. The plugin does not make credit, underwriting, claims, filing, or other final decisions, gives no personalized investment advice, and does not execute transactions or move money. It is not legal or regulatory advice.

@@ -118,3 +118,9 @@ Downstream consumers: `risk-compliance-core/obligation-mapping` reads `obligatio
 - `schemas/rule-to-obligation-extraction.schema.json` — structured-output contract.
 - `examples/` — SEC cybersecurity disclosure final rule (Item 1.05; Reg S-K Item 106) decomposed into atomic obligations; CFPB Section 1071 small-business-lending data rule (12 CFR 1002.107) decomposed into atomic obligations.
 - `TROUBLESHOOTING.md` — recurring defects in rule-to-obligation extractions.
+
+## Human review and AI disclosure
+
+Open the deliverable with this line, and remove it only after the review below: `AI-assisted draft. Requires review by a qualified person before use.`
+
+A qualified person with authority to change the output reviews it before it is delivered or relied on, and stays accountable for it. Where the output supports advice to an individual or a decision about an individual (credit, insurance underwriting, pricing or claims, employment, legal rights, or similar), that individual must be told AI was used to produce it. This skill does not make final decisions, file with a regulator, notify customers, execute transactions, or move money or other financial assets.

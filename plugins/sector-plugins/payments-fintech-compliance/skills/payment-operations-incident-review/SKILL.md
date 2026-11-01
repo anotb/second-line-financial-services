@@ -111,3 +111,9 @@ The plugin-level shared references (`references/source-map.md`, `references/poli
 Default to drafting against `templates/default-output.md`. Render as Word, Excel, PowerPoint, or Markdown when the audience or workflow asks for it; the typical deliverable is a Word memo via the `docx` skill in the `document-skills` plugin, with rail-by-rail population tables that can lift to Excel for sponsor-bank reconciliation. The plugin README names `document-skills` as a companion plugin.
 
 Downstream consumers — `payments-risk-assessment` (to update the rail / segment / geography baseline after the incident), `fintech-partner-controls` (to update the program-agreement-mapped controls inventory after the lessons-learned block lands), `risk-reporting/cyber-disclosure-readiness` (where the cyber leg has public-disclosure reach) — read the named blocks directly. The named-section structure is the cross-skill contract.
+
+## Human review and AI disclosure
+
+Open the deliverable with this line, and remove it only after the review below: `AI-assisted draft. Requires review by a qualified person before use.`
+
+A qualified person with authority to change the output reviews it before it is delivered or relied on, and stays accountable for it. Where the output supports advice to an individual or a decision about an individual (credit, insurance underwriting, pricing or claims, employment, legal rights, or similar), that individual must be told AI was used to produce it. This skill does not make final decisions, file with a regulator, notify customers, execute transactions, or move money or other financial assets.

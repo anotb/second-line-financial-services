@@ -17,6 +17,12 @@ Audience: Chief Risk Officer office, head of risk reporting, head of operational
 | `attestation-pack` | Management attestation pack: scope, control inventory, evidence index, exceptions, compensating controls, prior-period remediation, assertion language, sign-off. |
 | `management-response` | Management response to a regulator MRA / MRIA, audit finding, or external assessor finding: acceptance posture, root cause, action plan with milestones, evidence-of-effectiveness plan, reporting cadence. |
 
+## Try it
+
+- Draft KRI commentary for a fictional fraud-loss KRI that has been RED for three consecutive periods.
+- Outline a BCBS 239 self-assessment for a mid-size bank, organized by principle.
+- Draft a management response to a fictional MRA on stale customer-risk ratings, with milestones and an effectiveness plan.
+
 ## How this chains
 
 `risk-committee-pack` aggregates upstream artifacts from across the repo: KRI commentary from `kri-commentary`, issue write-ups from `risk-compliance-core/issue-writeup`, AI risk roll-up from `ai-governance-model-risk/board-ai-risk-pack`, third-party risk roll-up from `third-party-operational-resilience/concentration-risk-review`, financial-crime themes from `financial-crime-governance`. `cyber-disclosure-readiness` and `attestation-pack` are public-company / large-bank artifacts that intersect with `compliance-testing` evidence pulls and the firm's disclosure-committee process. `management-response` is the formal response-side companion to issue write-ups produced anywhere in the repo.
@@ -50,14 +56,26 @@ All four sectors apply. Banking overlay carries Heightened Standards integration
 
 - `skills/` — the six skills above. Each ships its own `SKILL.md`, `references/source-anchors.md`, sector overlays, `templates/default-output.md`, and (where useful) `schemas/` and `examples/`.
 - `references/` — plugin-level shared references: source map, policy and control library, named decision forums and confidence labels.
-- `schemas/` — `risk-report.schema.json` (canonical), `bcbs239-assessment.schema.json`, `attestation-pack.schema.json`, `cyber-incident-disclosure.schema.json`, `item-106-disclosure.schema.json`, `dcp-readiness.schema.json`, `management-response.schema.json`. Schema dedup (drop schemas a plugin's skills don't actually use) is tracked in [ROADMAP.md](../../../ROADMAP.md).
-
-## Install
-
-```bash
-claude plugin install risk-reporting@second-line-financial-services
-```
+- `schemas/` — `risk-report.schema.json` (canonical), `bcbs239-assessment.schema.json`, `attestation-pack.schema.json`, `cyber-incident-disclosure.schema.json`, `item-106-disclosure.schema.json`, `dcp-readiness.schema.json`, `management-response.schema.json`. Schema dedup (drop schemas a plugin's skills don't actually use) is tracked in [ROADMAP.md](https://github.com/anotb/second-line-financial-services/blob/main/ROADMAP.md).
 
 ## Operating posture
 
 Drafts second-line risk-reporting artifacts for qualified review. Does not provide legal advice, regulatory interpretation, or filing decisions. Materiality determinations, 8-K and 10-K disclosure decisions, attestations, and responses to supervisory findings remain the responsibility of the firm's named officers and counsel. Public regulatory and standards sources cited here are anchors, not legal interpretations.
+
+## Install
+
+In Claude Code:
+
+```
+/plugin install risk-reporting --marketplace anotb/second-line-financial-services
+```
+
+This plugin works on its own. Mentions of `risk-compliance-core` in the skills are optional hand-offs. Add that plugin for the shared `scoping`, `control-matrix`, and `issue-writeup` skills; installing from the GitHub marketplace adds it automatically.
+
+## Data and behavior
+
+The plugin is Markdown and JSON only: skills, references, schemas, and templates. It has no hooks, scripts, or MCP servers, and it does not send or store data itself. `.mcp.example.json` is an inactive template that Claude does not load, and it connects to nothing until a firm replaces it with an approved server. Documents you share are handled by Claude under your account's terms, so apply your firm's rules for confidential supervisory information, suspicious-activity material, and personal data before sharing them.
+
+## Human review and AI disclosure
+
+Intended for second-line and compliance professionals. Outputs are AI-assisted drafts. A qualified person with authority to change an output must review it before it is delivered or used in a decision, and stays accountable for it. Where an output supports advice to an individual or a decision about an individual, such as credit, insurance, employment, or legal rights, tell that individual AI was used to produce it. The plugin does not make credit, underwriting, claims, filing, or other final decisions, gives no personalized investment advice, and does not execute transactions or move money. It is not legal or regulatory advice.

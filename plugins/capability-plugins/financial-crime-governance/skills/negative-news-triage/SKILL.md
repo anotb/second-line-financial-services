@@ -92,3 +92,9 @@ The plugin-level shared references (`references/source-map.md`, `references/poli
 The deliverable is a Word memo. Render it via the `docx` skill (in the `document-skills` plugin) using the named sections from `templates/default-output.md`. The structured triage record emits alongside the memo for downstream consumption; it is descriptive (no rigid enums forced across skills) and is the input contract for the downstream artifacts the routing names.
 
 Downstream consumers: `cdd-risk-review` reads the triage record on event-driven CDD refresh; `edd-escalation-pack` reads it where the routing recommends an EDD pack; `sar-decision-qa` reads it as evidence input on alert decisions for the same customer; `sanctions-screening-qa` reads it where the hit overlaps a sanctions screening match. The CDD reviewer, the EDD analyst, the BSA officer, or the SAR review committee owns the decision the routing points to.
+
+## Human review and AI disclosure
+
+Open the deliverable with this line, and remove it only after the review below: `AI-assisted draft. Requires review by a qualified person before use.`
+
+A qualified person with authority to change the output reviews it before it is delivered or relied on, and stays accountable for it. Where the output supports advice to an individual or a decision about an individual (credit, insurance underwriting, pricing or claims, employment, legal rights, or similar), that individual must be told AI was used to produce it. This skill does not make final decisions, file with a regulator, notify customers, execute transactions, or move money or other financial assets.

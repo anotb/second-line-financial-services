@@ -73,3 +73,9 @@ The plugin-level shared references (`references/source-map.md`, `references/poli
 ## Output
 
 Default to drafting against `templates/default-output.md`. Render as Word, Excel, PowerPoint, or Markdown when the audience or workflow asks for it; the typical deliverable is a Word memo via the `docx` skill in the `document-skills` plugin. Downstream consumers: `risk-reporting/risk-committee-pack` reads the disposition and the ORSA-fit line where the function is enterprise-material; `ai-governance-model-risk/llm-vendor-evidence-review` reads the linked record where vendor-AI is chained.
+
+## Human review and AI disclosure
+
+Open the deliverable with this line, and remove it only after the review below: `AI-assisted draft. Requires review by a qualified person before use.`
+
+A qualified person with authority to change the output reviews it before it is delivered or relied on, and stays accountable for it. Where the output supports advice to an individual or a decision about an individual (credit, insurance underwriting, pricing or claims, employment, legal rights, or similar), that individual must be told AI was used to produce it. This skill does not make final decisions, file with a regulator, notify customers, execute transactions, or move money or other financial assets.

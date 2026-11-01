@@ -1,13 +1,15 @@
 {
   "name": "compliance-testing",
-  "version": "0.2.0",
+  "displayName": "Second Line Compliance Testing",
+  "version": "0.5.0",
   "description": "Compliance and controls testing skills for test plans, sampling, evidence requests, workpapers, exception analysis, issue drafting, and QA review.",
+  "icon": "./assets/icon.png",
   "author": {
-    "name": "anot"
+    "name": "anot",
+    "url": "https://unsol.dev"
   },
   "license": "MIT",
   "homepage": "https://github.com/anotb/second-line-financial-services",
   "repository": "https://github.com/anotb/second-line-financial-services",
-  "keywords": ["claude-code", "compliance-testing", "controls-testing", "internal-audit", "iia", "aicpa", "coso", "test-plan", "control-sampling", "workpaper", "exception-analysis", "qa-review", "audit-evidence", "second-line"],
-  "dependencies": ["risk-compliance-core"]
+  "keywords": ["claude-code", "compliance-testing", "controls-testing", "internal-audit", "iia", "aicpa", "coso", "test-plan", "control-sampling", "workpaper", "exception-analysis", "qa-review", "audit-evidence", "second-line"]
 }

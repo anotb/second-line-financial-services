@@ -118,3 +118,9 @@ Adaptation: audience and depth flex. A working-group memo reads short; a fair-le
 ## Output
 
 The deliverable is a Word memo. Render via the `docx` skill in the `document-skills` plugin using the named sections from `templates/default-output.md`. The memo is a draft for human decision; the consumer compliance lead, fair-lending lead, model risk lead (where AI / complex models are in scope), CRA officer (where redlining red flags inside the assessment area), and counsel sign before any notice re-issuance, model release, or customer-facing action. This skill does not approve loans, deny adverse-action notices, finalize fair-lending determinations, or take any customer-facing action; it surfaces red flags and recommends action for human decision by qualified compliance, fair-lending, model risk, and legal reviewers.
+
+## Human review and AI disclosure
+
+Open the deliverable with this line, and remove it only after the review below: `AI-assisted draft. Requires review by a qualified person before use.`
+
+A qualified person with authority to change the output reviews it before it is delivered or relied on, and stays accountable for it. Where the output supports advice to an individual or a decision about an individual (credit, insurance underwriting, pricing or claims, employment, legal rights, or similar), that individual must be told AI was used to produce it. This skill does not make final decisions, file with a regulator, notify customers, execute transactions, or move money or other financial assets.

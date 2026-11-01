@@ -79,3 +79,9 @@ Across the pack, every material claim cites a source. Unsupported claims carry `
 Default to drafting against `templates/default-output.md`. The typical pair is a board-presentation deck (rendered via the `pptx` skill) plus a Word annex (rendered via the `docx` skill, both in the `document-skills` plugin); render as Excel or Markdown where the audience or workflow asks for it. The annex carries the §15(c) factor analysis at length, the Rule 38a-1 written report at length, the per-service-provider compliance program assessment, and the source trace.
 
 Downstream consumers: the fund-board minutes consume the annex content for the documented determinations on Rule 17e-1 quarterly procedure adequacy, Rule 38a-1 annual program approval, §15(c) advisory contract renewal, Rule 22e-4 program approval, and any in-period prompt-notification or breach response. Material compliance matters at the §38a-1(e)(2) threshold may be written up separately via `risk-compliance-core/issue-writeup`. Adviser exam-readiness work in advance of an SEC EXAMS engagement consumes the most recent §38a-1 written report and the §15(c) renewal pack via `adviser-exam-readiness` in this plugin.
+
+## Human review and AI disclosure
+
+Open the deliverable with this line, and remove it only after the review below: `AI-assisted draft. Requires review by a qualified person before use.`
+
+A qualified person with authority to change the output reviews it before it is delivered or relied on, and stays accountable for it. Where the output supports advice to an individual or a decision about an individual (credit, insurance underwriting, pricing or claims, employment, legal rights, or similar), that individual must be told AI was used to produce it. This skill does not make final decisions, file with a regulator, notify customers, execute transactions, or move money or other financial assets.

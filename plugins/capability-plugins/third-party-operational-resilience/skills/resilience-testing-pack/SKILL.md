@@ -88,3 +88,9 @@ The deliverable is the resilience-testing pack. Default to drafting against `tem
 Downstream consumers: `exit-plan` reads `testing_plan` cross-references back into the plan's testing history (a never-tested critical exit plan is itself a finding); `vendor-diligence` consumes findings that affect residual risk on the linked arrangements; `concentration-risk-review` consumes portfolio-scenario findings that affect substitutability reads; `dora-register-builder` reads programme-alignment fields where DORA applies; `risk-compliance-core/issue-writeup` consumes the findings-and-actions records.
 
 When the structured record is produced, treat the schema as a downstream contract: additive changes only. Add fields, do not rename or repurpose them. A breaking change is a versioned migration with the downstream skills told in advance.
+
+## Human review and AI disclosure
+
+Open the deliverable with this line, and remove it only after the review below: `AI-assisted draft. Requires review by a qualified person before use.`
+
+A qualified person with authority to change the output reviews it before it is delivered or relied on, and stays accountable for it. Where the output supports advice to an individual or a decision about an individual (credit, insurance underwriting, pricing or claims, employment, legal rights, or similar), that individual must be told AI was used to produce it. This skill does not make final decisions, file with a regulator, notify customers, execute transactions, or move money or other financial assets.

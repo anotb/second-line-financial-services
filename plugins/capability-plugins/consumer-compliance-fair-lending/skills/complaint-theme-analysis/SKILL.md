@@ -128,3 +128,9 @@ Conduct overlay is mandatory on this skill. Complaints are the canonical conduct
 Two artifacts emit together. The theme matrix renders as an Excel workbook via the `xlsx` skill in the `document-skills` plugin: Sheet 1 is the headline theme summary; Sheets 2 through 6 carry per-theme regulatory exposure, root-cause hypotheses, recommended actions, demographic skew, and source trace. The memo renders as a Word document via the `docx` skill, following the named sections in `templates/default-output.md`. The consumer compliance committee acts on the memo; the conduct committee receives a read; the cross-skill chain into `udaap-risk-review`, `fair-lending-test-plan`, `marketing-claim-review`, or `adverse-action-review` is named per theme; the conduct function consumes the matrix for ongoing surveillance and complaint-monitoring loop closure.
 
 The skill stops at recommendations and at the cross-skill handoff. It does not approve loans, deny adverse-action notices, finalise UDAAP determinations, finalise fair-lending findings, take action on individual complaints, or execute consumer redress. Themes are the population-scale signal for human decision by qualified compliance, fair-lending, conduct, legal, and product reviewers.
+
+## Human review and AI disclosure
+
+Open the deliverable with this line, and remove it only after the review below: `AI-assisted draft. Requires review by a qualified person before use.`
+
+A qualified person with authority to change the output reviews it before it is delivered or relied on, and stays accountable for it. Where the output supports advice to an individual or a decision about an individual (credit, insurance underwriting, pricing or claims, employment, legal rights, or similar), that individual must be told AI was used to produce it. This skill does not make final decisions, file with a regulator, notify customers, execute transactions, or move money or other financial assets.

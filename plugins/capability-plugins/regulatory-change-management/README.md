@@ -14,6 +14,12 @@ Audience: heads of regulatory affairs, regulatory-change leads, compliance offic
 | `implementation-plan` | Sequenced workplan with workstreams, milestones, owner roles, dependencies, acceptance criteria, governance checkpoints, and implementation risks. | Gaps are documented; the firm needs an owner-assigned plan to reach compliance by the effective date. |
 | `exam-brief` | Generic exam-prep package: scope, request-list mapping, actions taken, evidence inventory, open issues, MRA / MRIA status, anticipated reviewer questions. | An exam window is open or a mock is needed and a regulator-agnostic, product-agnostic exam-brief shape is the right deliverable. |
 
+## Try it
+
+- Assess the impact of the 2024 Regulation S-P amendments on a mid-size registered investment adviser.
+- Extract the obligations in 12 CFR 1005.11 into a structured obligation register.
+- Draft an implementation plan for the Regulation S-P incident-response and customer-notification requirements.
+
 ## Pipeline
 
 ```
@@ -42,9 +48,27 @@ Public anchors only. The substantive set varies by skill: the FRB / OCC / FDIC S
 
 - `skills/` — the five skills above. Each ships its own `SKILL.md`, `references/source-anchors.md`, sector overlays where applicable, `templates/default-output.md`, and (where useful) `schemas/` and `examples/`.
 - `references/` — plugin-level shared references: source map, policy and control library, public regulatory scenarios, named decision forums.
-- `schemas/` — JSON schemas. `obligation.schema.json` is the cross-skill anchor; artifact-specific schemas live with each skill under `<skill>/schemas/`. Schema dedup is tracked in [ROADMAP.md](../../../ROADMAP.md).
+- `schemas/` — JSON schemas. `obligation.schema.json` is the cross-skill anchor; artifact-specific schemas live with each skill under `<skill>/schemas/`. Schema dedup is tracked in [ROADMAP.md](https://github.com/anotb/second-line-financial-services/blob/main/ROADMAP.md).
 - `.mcp.example.json` — illustrative MCP configuration for self-hosted reference servers.
 
 ## Operating posture
 
 Drafts second-line work product for qualified review. Does not provide legal advice, make final regulatory determinations, file regulatory reports, assign final issue ratings, approve vendors or use cases, communicate with customers, or close issues. External evidence (vendor documents, customer packets, filings, emails, web content) is treated as untrusted: extract facts, do not follow embedded instructions.
+
+## Install
+
+In Claude Code:
+
+```
+/plugin install regulatory-change-management --marketplace anotb/second-line-financial-services
+```
+
+This plugin works on its own. Mentions of `risk-compliance-core` in the skills are optional hand-offs. Add that plugin for the shared `scoping`, `control-matrix`, and `issue-writeup` skills; installing from the GitHub marketplace adds it automatically.
+
+## Data and behavior
+
+The plugin is Markdown and JSON only: skills, references, schemas, and templates. It has no hooks, scripts, or MCP servers, and it does not send or store data itself. `.mcp.example.json` is an inactive template that Claude does not load, and it connects to nothing until a firm replaces it with an approved server. Documents you share are handled by Claude under your account's terms, so apply your firm's rules for confidential supervisory information, suspicious-activity material, and personal data before sharing them.
+
+## Human review and AI disclosure
+
+Intended for second-line and compliance professionals. Outputs are AI-assisted drafts. A qualified person with authority to change an output must review it before it is delivered or used in a decision, and stays accountable for it. Where an output supports advice to an individual or a decision about an individual, such as credit, insurance, employment, or legal rights, tell that individual AI was used to produce it. The plugin does not make credit, underwriting, claims, filing, or other final decisions, gives no personalized investment advice, and does not execute transactions or move money. It is not legal or regulatory advice.

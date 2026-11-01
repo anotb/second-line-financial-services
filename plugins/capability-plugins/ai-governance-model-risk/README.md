@@ -38,6 +38,12 @@ GenAI deep-dive:
 - `genai-pre-prod-review`
 - `llm-vendor-evidence-review`
 
+## Try it
+
+- Tier the risk of an internal GenAI assistant that summarizes commercial loan files for credit analysts.
+- Draft a validation plan for a gradient-boosted credit-line-increase model at a US bank.
+- Review prompt-injection risk for a RAG support chatbot that reads product FAQs and opens service tickets.
+
 ## Components
 
 - `skills/` — user-invocable and model-invocable Claude Code skills. This repo does not use legacy `commands/` for new plugins because current Claude Code skills create slash invocations and support supporting files.
@@ -61,4 +67,22 @@ Cyber, privacy, and conduct land as embedded reference content inside the skills
 
 ## Companion to anthropics/financial-services
 
-This is a second-line companion repo. The Anthropic financial-services repo handles first-line workflows (analysis, banking, equity research, PE). This plugin sits over those workflows when an AI or model component is in scope and second-line review is needed.
+This is an independent second-line companion project, not affiliated with or endorsed by Anthropic. The Anthropic financial-services repo handles first-line workflows (analysis, banking, equity research, PE). This plugin sits over those workflows when an AI or model component is in scope and second-line review is needed.
+
+## Install
+
+In Claude Code:
+
+```
+/plugin install ai-governance-model-risk --marketplace anotb/second-line-financial-services
+```
+
+This plugin works on its own. Mentions of `risk-compliance-core` in the skills are optional hand-offs. Add that plugin for the shared `scoping`, `control-matrix`, and `issue-writeup` skills; installing from the GitHub marketplace adds it automatically.
+
+## Data and behavior
+
+The plugin is Markdown and JSON only: skills, references, schemas, and templates. It has no hooks, scripts, or MCP servers, and it does not send or store data itself. `.mcp.example.json` is an inactive template that Claude does not load, and it connects to nothing until a firm replaces it with an approved server. Documents you share are handled by Claude under your account's terms, so apply your firm's rules for confidential supervisory information, suspicious-activity material, and personal data before sharing them.
+
+## Human review and AI disclosure
+
+Intended for second-line and compliance professionals. Outputs are AI-assisted drafts. A qualified person with authority to change an output must review it before it is delivered or used in a decision, and stays accountable for it. Where an output supports advice to an individual or a decision about an individual, such as credit, insurance, employment, or legal rights, tell that individual AI was used to produce it. The plugin does not make credit, underwriting, claims, filing, or other final decisions, gives no personalized investment advice, and does not execute transactions or move money. It is not legal or regulatory advice.

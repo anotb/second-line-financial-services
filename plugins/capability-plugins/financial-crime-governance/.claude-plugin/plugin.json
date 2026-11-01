@@ -1,13 +1,15 @@
 {
   "name": "financial-crime-governance",
-  "version": "0.2.0",
+  "displayName": "Second Line Financial Crime Governance",
+  "version": "0.5.0",
   "description": "Financial crime governance skills for CDD, SAR decision QA, AML monitoring model governance, sanctions screening QA, EDD escalation, and negative-news triage.",
+  "icon": "./assets/icon.png",
   "author": {
-    "name": "anot"
+    "name": "anot",
+    "url": "https://unsol.dev"
   },
   "license": "MIT",
   "homepage": "https://github.com/anotb/second-line-financial-services",
   "repository": "https://github.com/anotb/second-line-financial-services",
-  "keywords": ["claude-code", "financial-crime", "bsa-aml", "fincen", "ofac", "sanctions", "cdd", "edd", "kyc", "sar", "aml-monitoring", "ffiec-bsa-aml", "beneficial-ownership", "negative-news", "second-line"],
-  "dependencies": ["risk-compliance-core"]
+  "keywords": ["claude-code", "financial-crime", "bsa-aml", "fincen", "ofac", "sanctions", "cdd", "edd", "kyc", "sar", "aml-monitoring", "ffiec-bsa-aml", "beneficial-ownership", "negative-news", "second-line"]
 }

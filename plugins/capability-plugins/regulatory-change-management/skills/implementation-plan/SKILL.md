@@ -104,3 +104,9 @@ Plan depth scales to criticality and audience: a high-criticality MRIA-driven pl
 Two artifacts: the plan per `templates/default-output.md`, and the structured record per `schemas/implementation-plan.schema.json`. The named programme sponsor and the second-line oversight role attest; the plan is a draft until that step.
 
 Downstream consumers: BAU obligation inventory ingests the closure evidence pack and the BAU monitoring cadence. `compliance-testing` picks up the BAU control as a recurring test scope. `exam-brief` reads the open milestones and inherits them as supervisory-history entries when the next exam window opens. The schema is the cross-skill contract; additive changes only, never silent renames. Breaking changes ship as a versioned migration with downstream skills told in advance.
+
+## Human review and AI disclosure
+
+Open the deliverable with this line, and remove it only after the review below: `AI-assisted draft. Requires review by a qualified person before use.`
+
+A qualified person with authority to change the output reviews it before it is delivered or relied on, and stays accountable for it. Where the output supports advice to an individual or a decision about an individual (credit, insurance underwriting, pricing or claims, employment, legal rights, or similar), that individual must be told AI was used to produce it. This skill does not make final decisions, file with a regulator, notify customers, execute transactions, or move money or other financial assets.

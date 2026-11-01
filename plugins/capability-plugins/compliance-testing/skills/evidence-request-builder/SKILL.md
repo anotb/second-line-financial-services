@@ -94,3 +94,9 @@ The skill emits the request list per `templates/default-output.md` shape and a s
 The structured record is the cross-skill contract: `workpaper-drafter` reads `requests[].request_id` to populate the workpaper's evidence-inspected table per evidence row; `evidence-binder` reads the closed list as the index of what was produced. The schema is additive only — add fields, do not rename or repurpose them. A breaking change is a versioned migration with the downstream skills told in advance.
 
 The skill stops at preparer sign-off; the reviewer signs separately, before fielding.
+
+## Human review and AI disclosure
+
+Open the deliverable with this line, and remove it only after the review below: `AI-assisted draft. Requires review by a qualified person before use.`
+
+A qualified person with authority to change the output reviews it before it is delivered or relied on, and stays accountable for it. Where the output supports advice to an individual or a decision about an individual (credit, insurance underwriting, pricing or claims, employment, legal rights, or similar), that individual must be told AI was used to produce it. This skill does not make final decisions, file with a regulator, notify customers, execute transactions, or move money or other financial assets.

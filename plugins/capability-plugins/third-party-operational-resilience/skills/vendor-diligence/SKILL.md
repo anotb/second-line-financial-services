@@ -78,3 +78,9 @@ The deliverable is the vendor diligence pack. Default to drafting against `templ
 The downstream chain stays the same regardless of render format. `contract-gap-review` reads the contract-coverage findings via `contract_gap_summary`. `exit-plan` reads `criticality`, `subcontractors`, `data_access`, and the residual-risk read. `concentration-risk-review` reads the `concentration_flag` and the sub-contractor footprint. `dora-register-builder` reads the structured fields for ICT-third-party register entries where DORA applies. `llm-vendor-evidence-review` reads the linked record where `eval_evidence_status = deferred-to-evidence-review`.
 
 When the structured record is produced, treat the schema as a downstream contract: additive changes only. Add fields, do not rename or repurpose them. A breaking change is a versioned migration with the downstream skills told in advance.
+
+## Human review and AI disclosure
+
+Open the deliverable with this line, and remove it only after the review below: `AI-assisted draft. Requires review by a qualified person before use.`
+
+A qualified person with authority to change the output reviews it before it is delivered or relied on, and stays accountable for it. Where the output supports advice to an individual or a decision about an individual (credit, insurance underwriting, pricing or claims, employment, legal rights, or similar), that individual must be told AI was used to produce it. This skill does not make final decisions, file with a regulator, notify customers, execute transactions, or move money or other financial assets.

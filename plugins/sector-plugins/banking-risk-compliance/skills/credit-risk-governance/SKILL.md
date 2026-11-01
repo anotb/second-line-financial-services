@@ -98,3 +98,9 @@ Pack depth scales to the trigger: a quarterly Reg O cycle reads short, organised
 Default to drafting against `templates/default-output.md`. Render as Word, Excel, PowerPoint, or Markdown when the audience or workflow asks for it; the typical deliverable is a Word memo via the `docx` skill in the `document-skills` plugin, with concentration tables that lift to Excel for the credit risk committee. Produce the structured record at `schemas/credit-risk-governance.schema.json` when downstream automation or a registered consumer needs it. The named lead (chief credit officer or chief risk officer) attests; the memo is a draft until that step.
 
 Downstream consumers: `banking-supervision-readiness` reads the credit-governance posture into the asset-quality CAMELS-component preparation. `issue-writeup` consumes the open-issue rows for individual MRA or MRIA write-ups. `risk-committee-pack` consumes the credit-risk-committee headline plus the open-action list for the standing credit section. The pack itself is firm-confidential by convention; CSI references constrain what the pack can carry forward across access populations.
+
+## Human review and AI disclosure
+
+Open the deliverable with this line, and remove it only after the review below: `AI-assisted draft. Requires review by a qualified person before use.`
+
+A qualified person with authority to change the output reviews it before it is delivered or relied on, and stays accountable for it. Where the output supports advice to an individual or a decision about an individual (credit, insurance underwriting, pricing or claims, employment, legal rights, or similar), that individual must be told AI was used to produce it. This skill does not make final decisions, file with a regulator, notify customers, execute transactions, or move money or other financial assets.
