@@ -428,7 +428,7 @@
         },
         "last_test_outcome": {
           "type": "string",
-          "description": "Pass / pass-with-findings / fail; summarise findings. 'Never tested' is honest and gets surfaced."
+          "description": "Pass or pass-with-findings / fail; summarise findings. 'Never tested' is honest and gets surfaced."
         },
         "next_test_due": {
           "type": "string",

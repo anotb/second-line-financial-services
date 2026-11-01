@@ -8,7 +8,7 @@ Second-line and internal-audit control testing skills for financial-services fir
 - `evidence-request-builder` — Numbered, traceable evidence request list per control test or examination ask.
 - `exception-analysis` — Classifies sampled deviations (control-failure / design-gap / evidence-gap / scope-disagreement / data-integrity / anomaly), severity-rates them, and produces a handoff package to `issue-writeup` for elevated items.
 - `qa-workpaper` — QA review of a completed workpaper against firm methodology and IIA / AU-C standards. Decision: accept / return for rework / conditional accept.
-- `test-plan-builder` — Pre-fieldwork test plan (objective, criteria, walkthrough, design and operating procedures, sampling reference, evidence reference, pass/fail criteria).
+- `test-plan-builder` — Pre-fieldwork test plan (objective, criteria, walkthrough, design and operating procedures, sampling reference, evidence reference, pass or fail criteria).
 - `workpaper-drafter` — Standard testing workpaper from completed fieldwork (criteria, evidence inspected, procedures performed, sample-level results, exceptions, conclusion, issues elevated).
 
 ## Sequencing

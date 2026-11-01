@@ -76,7 +76,7 @@ Fix: schema requires `outcomes_analysis[].success_criterion` and `robustness_tes
 
 ## Plan stops at draft, but the draft wraps the validation report
 
-Symptom: the plan reads as if it has executed the validation rather than scoped it. Performance numbers, test pass/fail conclusions, recommendations.
+Symptom: the plan reads as if it has executed the validation rather than scoped it. Performance numbers, test pass or fail conclusions, recommendations.
 
 Why it happens: the planner conflates the plan with the report; or the planner is repurposing the prior cycle's report into a new plan.
 

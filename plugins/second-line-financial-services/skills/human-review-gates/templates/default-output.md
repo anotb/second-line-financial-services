@@ -19,7 +19,7 @@ Confidence: <high | medium | low | unknown>
 
 | Field | Value |
 |---|---|
-| Primary committee | <named body that pass/fails the gates> |
+| Primary committee | <named body that pass or fails the gates> |
 | Escalation committee | <where a no-pass routes> |
 | Dissent path | <how an individual reviewer's challenge gets recorded and adjudicated> |
 | Board oversight | <board body and reporting cadence, when in scope of Heightened Standards / Reg YY / NAIC ORSA> |

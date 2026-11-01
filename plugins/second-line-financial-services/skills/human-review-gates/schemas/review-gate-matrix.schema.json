@@ -50,7 +50,7 @@
       "properties": {
         "primary_committee": {
           "type": "string",
-          "description": "The body that pass/fails the gates in this matrix. Named role or named committee (e.g., 'AI Governance Committee', 'Vendor Risk Committee', 'Issue Review Committee')."
+          "description": "The body that pass or fails the gates in this matrix. Named role or named committee (e.g., 'AI Governance Committee', 'Vendor Risk Committee', 'Issue Review Committee')."
         },
         "escalation_committee": {
           "type": "string",

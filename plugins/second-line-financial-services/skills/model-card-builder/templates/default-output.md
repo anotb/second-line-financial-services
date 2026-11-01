@@ -73,7 +73,7 @@ For each test:
 
 | Test | Method | Result | Owner | Date |
 |---|---|---|---|---|
-| [test name] | [method, e.g. out-of-time, stress scenario, adversarial, prompt injection, RAG poisoning, jailbreak] | [pass / fail / specific result] | [function] | [YYYY-MM-DD] |
+| [test name] | [method, e.g. out-of-time, stress scenario, adversarial, prompt injection, RAG poisoning, jailbreak] | [pass or fail / specific result] | [function] | [YYYY-MM-DD] |
 
 For GenAI use cases the typical baseline is prompt injection, jailbreak, RAG poisoning, and the vendor-supplied test set. Add tests proportionate to the threat surface identified by `prompt-injection-risk` and `rag-evaluation-review`.
 
@@ -85,7 +85,7 @@ Fairness:
 
 | Dimension | Metric | Value | Disparity assessment | Method limitations |
 |---|---|---|---|---|
-| [protected or policy-relevant dimension] | [metric, e.g. AIR, AUC by segment, agent-edit-rate by segment] | [value] | [pass / monitor / breach against firm policy] | [method limitation] |
+| [protected or policy-relevant dimension] | [metric, e.g. AIR, AUC by segment, agent-edit-rate by segment] | [value] | [pass or monitor / breach against firm policy] | [method limitation] |
 
 Explainability:
 

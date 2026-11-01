@@ -168,7 +168,7 @@ A plan never tested has unknown viability. Document the test posture honestly.
 - **Cadence**: [tabletop / walkthrough / partial-simulation / full-live; aligned to criticality tier and the firm's policy].
 - **Methods planned**: [tabletop, walkthrough, partial-simulation, full-live-exercise, data-extraction-rehearsal, shadow-cutover].
 - **Last test date**: [date or "never tested"].
-- **Last test outcome**: [pass / pass-with-findings / fail; summarise findings; "never tested" gets surfaced as a reviewer question].
+- **Last test outcome**: [pass or pass-with-findings / fail; summarise findings; "never tested" gets surfaced as a reviewer question].
 - **Next test due**: [date].
 - **resilience-testing-pack record**: [ID where the exit rehearsal sits in the integrated test programme].
 

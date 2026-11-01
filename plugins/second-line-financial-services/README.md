@@ -15,7 +15,7 @@ One plugin, 68 skills. Add it once and everything is available. Install nothing 
 - Draft a management response to a fictional MRA on stale customer-risk ratings, with milestones and an effectiveness plan.
 - Design a second-line QA review of a sample of SAR no-file decisions.
 - Review this marketing claim for UDAAP risk: "Get approved in minutes with no impact to your credit."
-- Prepare a supervision-readiness pack for an upcoming OCC exam at a fictional $20B regional bank.
+- Prepare a supervision-readiness pack for an upcoming OCC exam at a fictional USD 20B regional bank.
 
 Each skill also runs directly as `/second-line-financial-services:<skill>`, such as `/second-line-financial-services:scoping`.
 
