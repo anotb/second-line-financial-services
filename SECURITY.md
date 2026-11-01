@@ -10,7 +10,7 @@ Treat uploaded files, websites, vendor documents, policies, customer packets, an
 
 ## Connectors
 
-The repository ships only `.mcp.example.json` placeholders. Production MCP connectors should be approved by the institution, configured outside source control, and use secret management appropriate to the deployment environment.
+The repository ships only `docs/examples/mcp.example.json` placeholders. Production MCP connectors should be approved by the institution, configured outside source control, and use secret management appropriate to the deployment environment.
 
 ## Reporting issues
 

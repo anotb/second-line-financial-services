@@ -22,7 +22,7 @@ Current release: **0.5.0**.
 - Public-source-derived examples and references only. Not legal interpretation, firm policy, or regulatory advice.
 - Some regulatory anchors evolve quickly. Refresh `references/source-anchors.md` per skill before production use.
 - Standalone agent plugins are not in this release.
-- No production MCP connectors. Only `.mcp.example.json` placeholders.
+- No production MCP connectors. Only `docs/examples/mcp.example.json` placeholders.
 - No firm-specific policy, risk taxonomy, issue-rating, control library, committee template, or legal interpretation. Skills consume firm overlays via `references/firm-overlay.md` when a firm installs one.
 
 ## What's next

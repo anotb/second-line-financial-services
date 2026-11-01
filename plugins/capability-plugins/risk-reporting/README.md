@@ -74,7 +74,7 @@ This plugin works on its own. Mentions of `risk-compliance-core` in the skills a
 
 ## Data and behavior
 
-The plugin is Markdown and JSON only: skills, references, schemas, and templates. It has no hooks, scripts, or MCP servers, and it does not send or store data itself. `.mcp.example.json` is an inactive template that Claude does not load, and it connects to nothing until a firm replaces it with an approved server. Documents you share are handled by Claude under your account's terms, so apply your firm's rules for confidential supervisory information, suspicious-activity material, and personal data before sharing them.
+The plugin is Markdown and JSON only: skills, references, schemas, and templates. It has no hooks, scripts, or MCP servers, and it does not send or store data itself. Documents you share are handled by Claude under your account's terms, so apply your firm's rules for confidential supervisory information, suspicious-activity material, and personal data before sharing them.
 
 ## Human review and AI disclosure
 
