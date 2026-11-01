@@ -4,7 +4,7 @@
 
 ### Dead references removed
 
-Seven skills pointed at cross-cutting overlays that were never written. They now state the guidance directly or say no overlay exists. The scenario library's "Included example" paths, which were never in the plugin, now name the related skill.
+Five skills pointed at cross-cutting overlays that were never written. They now state the guidance directly or say no overlay exists. The scenario library's "Included example" paths, which were never in the plugin, now name the related skill.
 
 ## 1.0.1 — 2026-10-31
 
