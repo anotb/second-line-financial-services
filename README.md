@@ -52,7 +52,7 @@ Earlier releases split this into 12 plugins. If you installed any of them, unins
 
 ## Releasing
 
-Merge to `main` with a raised `version` in `plugins/second-line-financial-services/.claude-plugin/plugin.json`. The directory listing follows `main`, scans each new commit, and publishes it according to the listing's publish setting.
+See [docs/releasing.md](docs/releasing.md). In short: raise `version`, pass the checks, and merge to `main`. The directory listing follows `main` and scans each new commit.
 
 ## Use
 

@@ -17,9 +17,13 @@ Thanks for thinking about contributing. The repo is set up so a senior practitio
 
 Sector flavor for an existing capability skill goes inside that skill, as a `## <sector>` section in `references/sector-overlays.md`. Sector skills cover sector-unique work only; do not duplicate a capability skill into a sector plugin.
 
-## Standalone agent plugins
+## Releasing
 
-Agent plugins are not in the current release. The next iteration adds a primary-plus-critic two-agent shape with genuine context-isolated subagent forking and plugin manifest dependencies in place of bundled-skill copies. See [ROADMAP.md](ROADMAP.md) for the target design.
+Follow [docs/releasing.md](docs/releasing.md) before pushing. Every commit on `main` becomes a version the directory scans, and `scripts/check.py` enforces the rules that keep that scan clean.
+
+## Standalone agents
+
+Agent plugins are not in the current release. The next iteration adds a primary-plus-critic two-agent shape with genuine context-isolated subagent forking and agents that ship inside the one plugin and call its skills. See [ROADMAP.md](ROADMAP.md) for the target design.
 
 ## Voice and editorial bar
 

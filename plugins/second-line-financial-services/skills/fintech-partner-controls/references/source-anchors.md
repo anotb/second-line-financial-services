@@ -54,7 +54,7 @@ The lens here is fintech-side self-evidence for production to a sponsor bank's t
 
 - **FinCEN administrative rulings on convertible virtual currency** — FIN-2013-G001 (March 18, 2013) and FIN-2019-G001 (May 9, 2019) [verify section currency against any subsequent FinCEN releases]. https://www.fincen.gov/resources/statutes-regulations/guidance .
 
-- **FinCEN administrative-ruling library**. Configuration-specific MSB-status determinations sit here; categorical assertions in the controls pack are wrong. https://www.fincen.gov/resources/administrative-rulings .
+- **FinCEN administrative-ruling library**. Configuration-specific MSB-status determinations sit here; categorical assertions in the controls pack are wrong. https://www.fincen.gov/resources/administrative-rulings . `[verify section]`
 
 - **FFIEC BSA/AML Examination Manual (current edition)** [verify section and which chapters were last revised on the analysis date]. CDD chapter; SAR chapter; CIP chapter; MSB-specific chapter where applicable; correspondent-account chapter; OFAC chapter. The sponsor bank's BSA officer reads against this manual. https://bsaaml.ffiec.gov/manual .
 
@@ -72,7 +72,7 @@ The lens here is fintech-side self-evidence for production to a sponsor bank's t
 
 - **CFPB Circular series** [verify section and which circulars are current and which numbers and dates apply]. https://www.consumerfinance.gov/compliance/circulars/ .
 
-- **CFPB enforcement actions and consent orders** [verify which are current and finalised as of the analysis date]. Use only public defendants in finalised actions for fact-pattern citation. https://www.consumerfinance.gov/enforcement/actions/ .
+- **CFPB enforcement actions and consent orders** [verify which are current and finalised as of the analysis date]. Use only public defendants in finalised actions for fact-pattern citation. https://www.consumerfinance.gov/enforcement/actions/ . `[verify section]`
 
 ## State licensing — the parallel track
 

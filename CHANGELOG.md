@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.0.3 — 2026-10-31
+
+### Directory warnings cleared
+
+Removes `icon`, `documentationUrl`, `supportUrl`, `privacyPolicyUrl`, and `termsOfServiceUrl` from `plugin.json`. The directory warned on them in every scan, and its listing recorded them at submission. `scripts/check.py` now fails if they return, or if the plugin uses phrases the scanner misreads.
+
+### Docs for future releases
+
+Adds `docs/releasing.md`, the release runbook for people and agents, and `AGENTS.md`. Stale references to the old 12-plugin layout are gone from the repo docs. `scripts/check-skill-content.py` Rule 3 now accepts a `Link:` bullet whose citation block has a section reference, as the roadmap called for.
+
 ## 1.0.2 — 2026-10-31
 
 ### Dead references removed

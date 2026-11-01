@@ -78,7 +78,7 @@ A firm using this skill in production adds firm-specific detail in plugin-level 
 
 The skill marks three classes of citation with `[verify]`:
 
-- **`[verify Federal Register citation]`** — the May 2026 revised final rule's exact Federal Register page citation; pin from `https://www.federalregister.gov` at drafting time. The compliance date (January 1, 2028) and effective date (June 30, 2026) are stable per the revised rule.
+- **`[verify Federal Register citation]`** — the May 2026 revised final rule's exact Federal Register page citation; pin from `https://www.federalregister.gov` at drafting time. The compliance date (January 1, 2028) and effective date (June 30, 2026) are stable per the revised rule. `[verify section]`
 - **`[verify current edition]`** — the FIG edition (updated alongside the revised rule), the Sample Data Collection Form version (revised-rule edition), the FFIEC Interagency Fair Lending Examination Procedures edition.
 - **`[verify state-specific scope]`** — state privacy-law applicability to the demographic-data collection (lives primarily in `references/cross-cutting.md#privacy`).
 - **`[verify subsection]`** — exact 1002.107 subsection labels for individual data points where the revised rule amended labels; the skill's structured output carries the current label or `[verify subsection]` if uncertain, never an invented label.

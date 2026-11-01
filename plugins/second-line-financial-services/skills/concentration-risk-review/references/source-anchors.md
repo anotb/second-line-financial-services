@@ -22,7 +22,7 @@ The named, dated regulatory and standard-setting sources this skill anchors to. 
 
 - **FSB papers on third-party dependencies in financial services and on cloud-services concentration** [verify exact paper title, section, and date]. Background framing for sector-wide concentration questions; cite where the question is sector-wide rather than firm-specific. https://www.fsb.org/ .
 
-- **UK PRA SS2/21 (Outsourcing and third-party risk management, March 2021)** and **SS1/21 (Operational resilience: impact tolerances, March 2021; updated March 2022)**. UK overlay where the firm has a UK nexus; the substantive concentration framing aligns with the EBA outsourcing guideline. PS7/26 with SS1/26 introduces a UK material-third-party-arrangement reporting framework and updates SS2/21; verify current version on engagement date. https://www.bankofengland.co.uk/prudential-regulation/publication/2021/march/outsourcing-and-third-party-risk-management-ss .
+- **UK PRA SS2/21 (Outsourcing and third-party risk management, March 2021)** and **SS1/21 (Operational resilience: impact tolerances, March 2021; updated March 2022)**. UK overlay where the firm has a UK nexus; the substantive concentration framing aligns with the EBA outsourcing guideline. PS7/26 with SS1/26 introduces a UK material-third-party-arrangement reporting framework and updates SS2/21; verify current version on engagement date. https://www.bankofengland.co.uk/prudential-regulation/publication/2021/march/outsourcing-and-third-party-risk-management-ss . `[verify section]`
 
 ## Cloud-specific framing
 
