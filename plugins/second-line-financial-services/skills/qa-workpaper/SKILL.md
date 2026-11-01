@@ -102,8 +102,8 @@ QA depth and length scale to the workpaper depth and the QA scope. A targeted re
 `references/sector-overlays.md` and `references/cross-cutting.md` hold one section per sector or topic, and `examples.md` one per example. Find the heading and read only that section.
 
 - `references/source-anchors.md` — citations and excerpts for the named anchors (AICPA AU-C 220 / 230 / 265 / 530, IIA Standard 1300 and 2340, FFIEC IT Audit booklet, SR 08-8, OCC PPM 5310-3, COSO 2013 Principle 17, PCAOB QC 1000, sector-specific anchors).
-- `references/sector-overlays.md#banking`, `insurance.md`, `capital-markets.md`, `payments-fintech.md` — sector-specific QA conventions loaded per scope. Banking is the heaviest overlay.
-- `references/cross-cutting.md#cyber`, `conduct.md` — cross-cutting flavour. Cyber default-on for IAM, data-protection, and Part 500-mandated controls; conduct default-on for consumer-facing populations.
+- `references/sector-overlays.md#banking`, `references/sector-overlays.md#insurance`, `references/sector-overlays.md#capital-markets`, `references/sector-overlays.md#payments-fintech` — sector-specific QA conventions loaded per scope. Banking is the heaviest overlay.
+- `references/cross-cutting.md#cyber`, `references/cross-cutting.md#conduct` — cross-cutting flavour. Cyber default-on for IAM, data-protection, and Part 500-mandated controls; conduct default-on for consumer-facing populations.
 - `references/firm-overlay.md` — firm-installed QA methodology, severity floors, named QA-committee gates, escalation paths, and template variants beyond the regulatory baseline; consumed when present.
 - `templates/default-output.md` — content spec for both artifacts (Excel QA markup tabs, Word QA memo summary).
 - `examples.md` — Reg E error-resolution QA at a regional bank; examiner-prep TPRM sweep at a mid-size bank holding company.

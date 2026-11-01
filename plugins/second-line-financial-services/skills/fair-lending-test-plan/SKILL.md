@@ -114,7 +114,7 @@ Plan depth and length scale to the trigger and the in-scope inventory. An annual
 `references/sector-overlays.md` and `references/cross-cutting.md` hold one section per sector or topic, and `examples.md` one per example. Find the heading and read only that section.
 
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
-- `references/sector-overlays.md#banking`, `insurance.md`, `capital-markets.md`, `payments-fintech.md` — sector-specific framing loaded per scope.
+- `references/sector-overlays.md#banking`, `references/sector-overlays.md#insurance`, `references/sector-overlays.md#capital-markets`, `references/sector-overlays.md#payments-fintech` — sector-specific framing loaded per scope.
 - `references/cross-cutting.md#conduct` — UDAAP overlap, loaded where marketing distribution, steering, or dark-pattern themes are in scope.
 - `references/firm-overlay.md` — firm-installed taxonomy, named committees, fair-lending statistician roster, system-of-record paths (consumed when present).
 - `templates/default-output.md` — plan template.

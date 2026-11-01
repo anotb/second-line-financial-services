@@ -77,7 +77,7 @@ Assessment depth and length scale to the trigger and the audience. A sponsor-ban
 
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
 - `references/sector-overlays.md#payments-fintech` — payments-fintech sector flavour (this is the sector flagship; the overlay carries the rail-specific, sponsor-bank-specific, money-transmitter-specific detail and the §1033 status note).
-- `references/cross-cutting.md#cyber`, `conduct.md`, `privacy.md` — cross-cutting flavour. Conduct is default-on for any consumer-facing program; cyber is default-on for any program with processor / ledger / fraud-decision vendor exposure (substantively all of them); privacy is default-on where customer-data flows for fraud and AML monitoring extend beyond baseline.
+- `references/cross-cutting.md#cyber`, `references/cross-cutting.md#conduct`, `references/cross-cutting.md#privacy` — cross-cutting flavour. Conduct is default-on for any consumer-facing program; cyber is default-on for any program with processor / ledger / fraud-decision vendor exposure (substantively all of them); privacy is default-on where customer-data flows for fraud and AML monitoring extend beyond baseline.
 - `references/firm-overlay.md` — firm-installed policy, taxonomy, decision forums and sign-off owners, risk-appetite thresholds beyond the regulatory baseline; consumed when present.
 - `templates/default-output.md` — assessment template.
 - `schemas/payments-risk-assessment.schema.json` — structured-output contract for downstream consumption.

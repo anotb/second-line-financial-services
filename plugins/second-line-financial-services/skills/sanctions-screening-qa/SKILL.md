@@ -85,7 +85,7 @@ The cross-cutting cyber overlay loads when the scope flags cyber, when the progr
 `references/sector-overlays.md` and `references/cross-cutting.md` hold one section per sector or topic, and `examples.md` one per example. Find the heading and read only that section.
 
 - `references/source-anchors.md` — citations and excerpts for the named anchors (OFAC Framework May 2, 2019; OFAC 50 Percent Rule guidance August 13, 2014; OFAC SDN, SSI, FSE and other lists; OFAC General Licenses and FAQs; 31 CFR Chapter V; FFIEC OFAC section; joint interagency Revised Guidance on Model Risk Management at OCC Bulletin 2026-13 / FRB SR 26-2 / FDIC FIL-15-2026 (April 17, 2026), which superseded SR 11-7 and SR 21-8 for screening-engine model-risk treatment; OCC/FRB/FDIC joint statements).
-- `references/sector-overlays.md#banking`, `payments-fintech.md`, `capital-markets.md`, `insurance.md` — sector-specific reads loaded per scope.
+- `references/sector-overlays.md#banking`, `references/sector-overlays.md#payments-fintech`, `references/sector-overlays.md#capital-markets`, `references/sector-overlays.md#insurance` — sector-specific reads loaded per scope.
 - `references/cross-cutting.md#cyber` — sanctions-evasion-via-tech overlay loaded when cyber is flagged or when the program touches virtual currency, ransomware-payment paths, or cyber-enabled identity exposure.
 - `references/firm-overlay.md` — firm policy, sanctions-officer escalation chain, exclusion-list register, vendor inventory, named systems and owners (consumed when present).
 - `templates/default-output.md` — memo template with the alert-by-alert disposition table.

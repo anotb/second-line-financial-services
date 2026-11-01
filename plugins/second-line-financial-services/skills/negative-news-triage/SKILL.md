@@ -83,7 +83,7 @@ Cyber overlap (account-takeover-adjacent adverse media, ransomware-exposure repo
 `references/sector-overlays.md` and `references/cross-cutting.md` hold one section per sector or topic, and `examples.md` one per example. Find the heading and read only that section.
 
 - `references/source-anchors.md` — citations and excerpts for the named anchors (FFIEC CDD section, FinCEN CDD Final Rule, joint statements, named FinCEN advisories on typologies, Wolfsberg adverse-media guidance as public industry reference).
-- `references/sector-overlays.md#banking`, `payments-fintech.md`, `capital-markets.md`, `insurance.md` — sector-specific adverse-media frames loaded per scope.
+- `references/sector-overlays.md#banking`, `references/sector-overlays.md#payments-fintech`, `references/sector-overlays.md#capital-markets`, `references/sector-overlays.md#insurance` — sector-specific adverse-media frames loaded per scope.
 - `references/cross-cutting.md#conduct` — conduct dimension on customer-harm-pattern adverse media; loaded when the engagement names conduct.
 - `references/firm-overlay.md` — firm policy, vendor-tier mapping, typology library extensions, named systems and owners (consumed when present).
 - `templates/default-output.md` — memo template (named sections, fields).

@@ -84,7 +84,7 @@ Brief depth scales to engagement type and stakes: a horizontal review brief read
 
 ## Pointers
 
-`references/sector-overlays.md` and `references/cross-cutting.md` hold one section per sector or topic, and `examples.md` one per example. Find the heading and read only that section.
+`references/sector-overlays.md` holds one section per sector, and `examples.md` one per example. Find the heading and read only that section.
 
 - `references/source-anchors.md` — citations and excerpts for the named anchors (federal banking, CFPB, SEC and FINRA, NYDFS and state DOIs, privilege and CSI, MRA/MRIA/consent-order convention, AI-and-cyber-targeted anchors).
 - `references/sector-overlays.md` — sector overlays loaded from scope.

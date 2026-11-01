@@ -67,10 +67,10 @@ Flexes by engagement. Assessment depth and length scale to the proposed tier and
 
 ## Pointers
 
-`references/sector-overlays.md` and `references/cross-cutting.md` hold one section per sector or topic, and `examples.md` one per example. Find the heading and read only that section.
+`references/sector-overlays.md` holds one section per sector, and `examples.md` one per example. Find the heading and read only that section.
 
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
-- `references/sector-overlays.md#banking`, `insurance.md`, `capital-markets.md`, `payments-fintech.md` — sector-specific criticality criteria loaded per scope.
+- `references/sector-overlays.md#banking`, `references/sector-overlays.md#insurance`, `references/sector-overlays.md#capital-markets`, `references/sector-overlays.md#payments-fintech` — sector-specific criticality criteria loaded per scope.
 - `references/firm-overlay.md` — firm-installed IBS map, impact-tolerance taxonomy, criticality-policy thresholds, and decision forums beyond the regulatory baseline; consumed when present.
 - `templates/default-output.md` — assessment template.
 - `schemas/criticality-assessment.schema.json` — structured-output contract for downstream consumption.

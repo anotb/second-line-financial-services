@@ -121,7 +121,7 @@ Conduct overlay is mandatory on this skill. Complaints are the canonical conduct
 `references/sector-overlays.md` and `references/cross-cutting.md` hold one section per sector or topic, and `examples.md` one per example. Find the heading and read only that section.
 
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
-- `references/sector-overlays.md#banking`, `payments-fintech.md`, `capital-markets.md`, `insurance.md` — sector-specific framing loaded per scope.
+- `references/sector-overlays.md#banking`, `references/sector-overlays.md#payments-fintech`, `references/sector-overlays.md#capital-markets`, `references/sector-overlays.md#insurance` — sector-specific framing loaded per scope.
 - `references/cross-cutting.md#conduct` — conduct overlay (mandatory on this skill).
 - `references/firm-overlay.md` — firm-installed taxonomy (active themes, coding rules, taxonomy version), named committees, conduct-event taxonomy, complaint-system path, denominator data sources (consumed when present).
 - `templates/default-output.md` — content spec for the theme matrix (Excel) and the narrative memo (Word).

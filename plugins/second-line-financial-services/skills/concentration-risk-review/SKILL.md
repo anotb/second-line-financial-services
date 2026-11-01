@@ -78,7 +78,7 @@ Reviewer questions tie to the decision and cluster for the forum that decides: o
 
 ### Sector and cross-cutting overlay loading
 
-When the scope names a sector, load the matching `references/sector-overlays.md#<sector>`: `banking.md` for the hyperscaler-on-bank, sponsor-bank-on-fintech, and large-bank-cloud-concentration framings; `insurance.md` for policy-administration-system, reinsurance, and claims-TPA concentration; `capital-markets.md` for market-data-vendor, exchange-feed, central-counterparty, and post-trade-processor concentration; `payments-fintech.md` for sponsor-bank, BIN-sponsor, BaaS, and rails-access concentration. A dual-registrant or BaaS arrangement may load two.
+When the scope names a sector, load the matching `references/sector-overlays.md#<sector>`: `references/sector-overlays.md#banking` for the hyperscaler-on-bank, sponsor-bank-on-fintech, and large-bank-cloud-concentration framings; `references/sector-overlays.md#insurance` for policy-administration-system, reinsurance, and claims-TPA concentration; `references/sector-overlays.md#capital-markets` for market-data-vendor, exchange-feed, central-counterparty, and post-trade-processor concentration; `references/sector-overlays.md#payments-fintech` for sponsor-bank, BIN-sponsor, BaaS, and rails-access concentration. A dual-registrant or BaaS arrangement may load two.
 
 The cyber cross-cutting overlay (`references/cross-cutting.md#cyber`) loads when the technology-stack and sub-contractor-chain dimensions surface cyber-risk material to the supervisory read (a single cyber-incident that removes multiple critical arrangements, a shared-utility incident that propagates across the firm and its peers). Privacy considerations are read through the geographic-and-jurisdictional dimension (cross-border data flows, data-residency posture); the deeper privacy treatment lives with `vendor-diligence` and the privacy-overlay file there. Load only the overlays the scope names.
 
@@ -120,7 +120,7 @@ The schema is additive only. Add fields, do not rename or repurpose them. A brea
 `references/sector-overlays.md` and `references/cross-cutting.md` hold one section per sector or topic, and `examples.md` one per example. Find the heading and read only that section.
 
 - `references/source-anchors.md` ... citations and verification posture for the named anchors.
-- `references/sector-overlays.md#banking`, `insurance.md`, `capital-markets.md`, `payments-fintech.md` ... sector-specific concentration framings loaded per scope.
+- `references/sector-overlays.md#banking`, `references/sector-overlays.md#insurance`, `references/sector-overlays.md#capital-markets`, `references/sector-overlays.md#payments-fintech` ... sector-specific concentration framings loaded per scope.
 - `references/cross-cutting.md#cyber` ... cyber cross-cutting frame loaded where the technology-stack and sub-contractor-chain dimensions surface cyber-risk material to the supervisory read.
 - `references/firm-overlay.md` ... firm policy, named owners, concentration tolerances, internal-to-supervisory threshold mapping (consumed when present).
 - `templates/default-output.md` ... committee narrative template.

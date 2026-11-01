@@ -106,7 +106,7 @@ Downstream consumers: a sample-level QA roll-up reads the structured record acro
 `references/sector-overlays.md` and `references/cross-cutting.md` hold one section per sector or topic, and `examples.md` one per example. Find the heading and read only that section.
 
 - `references/source-anchors.md` — citations and excerpts for the named anchors (FFIEC SAR section, 31 CFR SAR rules, 31 USC 5318(g), FinCEN form and instructions, applicable advisories, joint statements).
-- `references/sector-overlays.md#banking`, `payments-fintech.md`, `capital-markets.md`, `insurance.md` — sector-specific SAR rule reads loaded per scope.
+- `references/sector-overlays.md#banking`, `references/sector-overlays.md#payments-fintech`, `references/sector-overlays.md#capital-markets`, `references/sector-overlays.md#insurance` — sector-specific SAR rule reads loaded per scope.
 - `references/cross-cutting.md#cyber` — cyber-event SAR considerations loaded when the alert is cyber-related.
 - `references/firm-overlay.md` — firm policy, typology library, named systems, owners, and review machinery (consumed when present).
 - `templates/default-output.md` — single-decision memo template.

@@ -80,7 +80,7 @@ Depth flexes with trigger and customer profile. A correspondent-bank EDD pack re
 `references/sector-overlays.md` and `references/cross-cutting.md` hold one section per sector or topic, and `examples.md` one per example. Find the heading and read only that section.
 
 - `references/source-anchors.md` — citations and excerpts for the named anchors (FFIEC PEP / private-banking / correspondent / CDD sections; CDD Final Rule; `§1010.230`; `§1010.620`; `§1010.610`; 31 USC §5318(i) and §5318A; `§1010.380` BOI rule; FinCEN PEP advisory and the 2020 joint statement; OCC/FRB/FDIC/NCUA risk-focused supervision joint statement; Wolfsberg PEP / SoW / CBDDQ as public industry standard).
-- `references/sector-overlays.md#banking`, `payments-fintech.md`, `capital-markets.md`, `insurance.md` — sector overlays loaded per scope.
+- `references/sector-overlays.md#banking`, `references/sector-overlays.md#payments-fintech`, `references/sector-overlays.md#capital-markets`, `references/sector-overlays.md#insurance` — sector overlays loaded per scope.
 - `references/cross-cutting.md#conduct` — conduct overlay loaded per scope or per customer-profile materiality.
 - `references/firm-overlay.md` — firm policy, EDD trigger set, named systems and owners, decision-machinery composition (consumed when present).
 - `templates/default-output.md` — pack template (named sections, fields).

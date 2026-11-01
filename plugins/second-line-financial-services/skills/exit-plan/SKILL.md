@@ -79,8 +79,8 @@ Flexes by engagement. Plan depth and length scale to criticality and DORA-in-sco
 `references/sector-overlays.md` and `references/cross-cutting.md` hold one section per sector or topic, and `examples.md` one per example. Find the heading and read only that section.
 
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
-- `references/sector-overlays.md#banking`, `insurance.md`, `capital-markets.md`, `payments-fintech.md` — sector-specific transition mechanics loaded per scope. Capital-markets carries the substantive fund service-provider transition mechanics under ICA §15 and Rule 38a-1.
-- `references/cross-cutting.md#cyber`, `privacy.md` — cross-cutting flavour for transition; default-on for AI vendors and for any vendor holding regulated data or IBS controls at termination.
+- `references/sector-overlays.md#banking`, `references/sector-overlays.md#insurance`, `references/sector-overlays.md#capital-markets`, `references/sector-overlays.md#payments-fintech` — sector-specific transition mechanics loaded per scope. Capital-markets carries the substantive fund service-provider transition mechanics under ICA §15 and Rule 38a-1.
+- `references/cross-cutting.md#cyber`, `references/cross-cutting.md#privacy` — cross-cutting flavour for transition; default-on for AI vendors and for any vendor holding regulated data or IBS controls at termination.
 - `references/firm-overlay.md` — firm-installed policy, taxonomy, decision forums, and IBS map pointers beyond the regulatory baseline; consumed when present.
 - `templates/default-output.md` — plan template.
 - `schemas/exit-plan.schema.json` — structured-output contract for downstream consumption.

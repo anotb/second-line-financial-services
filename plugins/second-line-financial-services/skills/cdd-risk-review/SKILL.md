@@ -102,10 +102,10 @@ Downstream consumers: a sample-level QA roll-up reads the structured record acro
 
 ## Pointers
 
-`references/sector-overlays.md` and `references/cross-cutting.md` hold one section per sector or topic, and `examples.md` one per example. Find the heading and read only that section.
+`references/sector-overlays.md` holds one section per sector, and `examples.md` one per example. Find the heading and read only that section.
 
 - `references/source-anchors.md` — citations and excerpts for the named anchors (FFIEC CDD section, FinCEN CDD Final Rule, `§1010.230`, CIP rules, `§1010.380` BOI reporting rule, `§1010.610` / `§1010.620` correspondent and private-banking EDD, FinCEN investment-adviser rule, joint statements).
-- `references/sector-overlays.md#banking`, `payments-fintech.md`, `capital-markets.md`, `insurance.md` — sector-specific CDD reads loaded per scope.
+- `references/sector-overlays.md#banking`, `references/sector-overlays.md#payments-fintech`, `references/sector-overlays.md#capital-markets`, `references/sector-overlays.md#insurance` — sector-specific CDD reads loaded per scope.
 - `references/firm-overlay.md` — firm policy, customer-segmentation taxonomy, risk-rating model, refresh intervals, named systems and owners (consumed when present).
 - `templates/default-output.md` — memo template.
 - `schemas/cdd-file.schema.json` — structured-output contract.

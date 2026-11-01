@@ -93,7 +93,7 @@ Each gap rolls up to a separate gap-list row with severity (`blocking` / `high` 
 
 ### Sector and cross-cutting overlay loading
 
-When the scope names a sector, load the matching `references/sector-overlays.md#<sector>`: `banking.md` for depository institutions (the heaviest overlay), `payments-fintech.md` for fintech small-business lenders and sponsor-bank arrangements. `capital-markets.md` and `insurance.md` carry out-of-scope flags so reviewers do not over-extend. Cross-cutting overlays: `privacy.md` for the GLBA Safeguards posture on customer demographic data and the CFPB modified-data publication and re-identification considerations; `conduct.md` for the lender-conduct dimension where 1071 readiness gaps surface conduct themes (data-collection misrepresentation to applicants, firewall failures, vendor mismanagement). Load only the overlays the scope names.
+When the scope names a sector, load the matching `references/sector-overlays.md#<sector>`: `references/sector-overlays.md#banking` for depository institutions (the heaviest overlay), `references/sector-overlays.md#payments-fintech` for fintech small-business lenders and sponsor-bank arrangements. `references/sector-overlays.md#capital-markets` and `references/sector-overlays.md#insurance` carry out-of-scope flags so reviewers do not over-extend. Cross-cutting overlays: `privacy.md` for the GLBA Safeguards posture on customer demographic data and the CFPB modified-data publication and re-identification considerations; `conduct.md` for the lender-conduct dimension where 1071 readiness gaps surface conduct themes (data-collection misrepresentation to applicants, firewall failures, vendor mismanagement). Load only the overlays the scope names.
 
 ## Quality bar
 

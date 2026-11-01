@@ -104,8 +104,8 @@ Register depth and length scale to deviation volume and severity range. A clean 
 `references/sector-overlays.md` and `references/cross-cutting.md` hold one section per sector or topic, and `examples.md` one per example. Find the heading and read only that section.
 
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
-- `references/sector-overlays.md#banking`, `insurance.md`, `capital-markets.md`, `payments-fintech.md` — sector-specific exception conventions loaded per scope.
-- `references/cross-cutting.md#cyber`, `conduct.md` — cross-cutting flavour; cyber default-on for IAM, data-protection, and security-rule-mandated controls; conduct default-on for consumer-facing populations.
+- `references/sector-overlays.md#banking`, `references/sector-overlays.md#insurance`, `references/sector-overlays.md#capital-markets`, `references/sector-overlays.md#payments-fintech` — sector-specific exception conventions loaded per scope.
+- `references/cross-cutting.md#cyber`, `references/cross-cutting.md#conduct` — cross-cutting flavour; cyber default-on for IAM, data-protection, and security-rule-mandated controls; conduct default-on for consumer-facing populations.
 - `references/firm-overlay.md` — firm-installed methodology, taxonomy, severity ladder, named committee gates, and policy-floor overrides beyond the regulatory baseline; consumed when present.
 - `templates/default-output.md` — exception register template.
 - `schemas/exception.schema.json` — structured-output contract for downstream consumption.

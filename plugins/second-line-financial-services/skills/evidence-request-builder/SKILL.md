@@ -81,7 +81,7 @@ When the work is asking for evidence ahead of fieldwork, this skill is the right
 `references/sector-overlays.md` and `references/cross-cutting.md` hold one section per sector or topic, and `examples.md` one per example. Find the heading and read only that section.
 
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
-- `references/sector-overlays.md#banking`, `insurance.md`, `capital-markets.md`, `payments-fintech.md` — sector-specific request-list conventions loaded per scope.
+- `references/sector-overlays.md#banking`, `references/sector-overlays.md#insurance`, `references/sector-overlays.md#capital-markets`, `references/sector-overlays.md#payments-fintech` — sector-specific request-list conventions loaded per scope.
 - `references/cross-cutting.md#cyber` — cross-cutting flavour; cyber default-on for IAM, data-protection, and Part 500 controls.
 - `references/cross-cutting.md#privacy` — cross-cutting flavour; privacy default-on whenever the request list pulls artifacts containing NPI, PHI, PCI, or other regulated personal data.
 - `references/firm-overlay.md` — firm-installed PBC-template variants, system-of-record naming map, escalation paths, owner-role conventions; consumed when present.

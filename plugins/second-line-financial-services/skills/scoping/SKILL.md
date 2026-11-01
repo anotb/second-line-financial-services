@@ -63,7 +63,7 @@ The revision log is append-only. The first row is the initial scope, every mater
 
 ## Pointers
 
-`references/sector-overlays.md` and `references/cross-cutting.md` hold one section per sector or topic, and `examples.md` one per example. Find the heading and read only that section.
+`examples.md` holds one section per example. Find the heading and read only that section.
 
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
 - `references/firm-overlay.md` — firm-installed taxonomy, machinery, and policy pointers; consumed when present.

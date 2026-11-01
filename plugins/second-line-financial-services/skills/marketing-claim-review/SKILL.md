@@ -102,7 +102,7 @@ Conduct overlap with UDAAP is in `references/cross-cutting.md#conduct` and loads
 `references/sector-overlays.md` and `references/cross-cutting.md` hold one section per sector or topic, and `examples.md` one per example. Find the heading and read only that section.
 
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
-- `references/sector-overlays.md#banking`, `payments-fintech.md`, `capital-markets.md`, `insurance.md` — sector-specific framing loaded per scope.
+- `references/sector-overlays.md#banking`, `references/sector-overlays.md#payments-fintech`, `references/sector-overlays.md#capital-markets`, `references/sector-overlays.md#insurance` — sector-specific framing loaded per scope.
 - `references/cross-cutting.md#conduct` — UDAAP overlap with the asset-level finding; `references/cross-cutting.md#privacy` — privacy-claim substantiation, AdChoices, dark-pattern privacy, and state-privacy-law interaction.
 - `references/firm-overlay.md` — firm-installed marketing taxonomy, named MAP, marketing-compliance committee, AI-personalisation governance, system-of-record paths (consumed when present).
 - `templates/default-output.md` — memo template (named sections, asset-level fields).

@@ -92,7 +92,7 @@ Depth and length scale to purpose and audience. A vendor-review binder for a non
 `references/sector-overlays.md` and `references/cross-cutting.md` hold one section per sector or topic, and `examples.md` one per example. Find the heading and read only that section.
 
 - `references/source-anchors.md` — citations and excerpts for the named anchors (BCBS 239, AU-C 500, AU-C 230, IIA Standards, FFIEC IT Audit booklet, SR 11-7, OCC 2026-13, the 2023 interagency third-party guidance, recordkeeping floors).
-- `references/sector-overlays.md#banking`, `insurance.md`, `capital-markets.md`, `payments-fintech.md` — sector-specific supervisory frame loaded per scope.
+- `references/sector-overlays.md#banking`, `references/sector-overlays.md#insurance`, `references/sector-overlays.md#capital-markets`, `references/sector-overlays.md#payments-fintech` — sector-specific supervisory frame loaded per scope.
 - `references/cross-cutting.md#privacy` — loaded whenever the binder may carry regulated personal data; default-on for any binder touching NPI, PHI, PCI, or important-business-service controls.
 - `references/cross-cutting.md#cyber` — loaded when the scope flags cyber or whenever the binder carries cyber-program evidence (NYDFS Part 500 attestations, IR workpapers, vulnerability-scan extracts, SOC 2 evidence, vendor cyber assessments, §500.17 / 36-hour banking notice / 8-K Item 1.05 filings).
 - `references/firm-overlay.md` — firm-installed policy, taxonomy, named owners, system-of-record naming map (consumed when present).

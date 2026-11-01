@@ -116,7 +116,7 @@ Memo depth and length scale to the trigger and the in-scope inventory. A pre-lau
 `references/sector-overlays.md` and `references/cross-cutting.md` hold one section per sector or topic, and `examples.md` one per example. Find the heading and read only that section.
 
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
-- `references/sector-overlays.md#banking`, `payments-fintech.md`, `capital-markets.md`, `insurance.md` — sector-specific framing loaded per scope.
+- `references/sector-overlays.md#banking`, `references/sector-overlays.md#payments-fintech`, `references/sector-overlays.md#capital-markets`, `references/sector-overlays.md#insurance` — sector-specific framing loaded per scope.
 - `references/cross-cutting.md#conduct` — UDAAP-conduct intersection (mandatory on this skill); `references/cross-cutting.md#privacy` — secondary, loaded where the in-scope flow raises a privacy-meets-UDAAP angle.
 - `references/firm-overlay.md` — firm-installed taxonomy, named committees, conduct-event taxonomy, system-of-record paths (consumed when present).
 - `templates/default-output.md` — memo template.

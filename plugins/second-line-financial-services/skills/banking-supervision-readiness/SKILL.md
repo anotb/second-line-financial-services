@@ -114,7 +114,7 @@ Pack depth scales to cycle type and stakes: a targeted IT exam pack reads short,
 
 ## Pointers
 
-`references/sector-overlays.md` and `references/cross-cutting.md` hold one section per sector or topic, and `examples.md` one per example. Find the heading and read only that section.
+`examples.md` holds one section per example. Find the heading and read only that section.
 
 - `references/source-anchors.md` — citations and excerpts for the named anchors (federal banking supervisory framework, CAMELS and BHC rated framework, MRA / MRIA framework, Heightened Standards, topical examination manuals, CSI regimes, threshold triggers).
 - `references/firm-overlay.md` — firm-installed supervisory-history, named examination-coordinator role, internal CSI-handling SOP, response-letter style guide, sustained-operation policy threshold; consumed when present.

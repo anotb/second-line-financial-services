@@ -76,8 +76,8 @@ Flexes by engagement. Pack depth and length scale to subject criticality, progra
 `references/sector-overlays.md` and `references/cross-cutting.md` hold one section per sector or topic, and `examples.md` one per example. Find the heading and read only that section.
 
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
-- `references/sector-overlays.md#banking`, `insurance.md`, `capital-markets.md`, `payments-fintech.md` — sector-specific testing-programme nuance loaded per scope.
-- `references/cross-cutting.md#cyber`, `privacy.md` — cross-cutting flavour for testing; cyber default-on for any chain reaching firm controls; privacy default-on for any chain reaching personal data.
+- `references/sector-overlays.md#banking`, `references/sector-overlays.md#insurance`, `references/sector-overlays.md#capital-markets`, `references/sector-overlays.md#payments-fintech` — sector-specific testing-programme nuance loaded per scope.
+- `references/cross-cutting.md#cyber`, `references/cross-cutting.md#privacy` — cross-cutting flavour for testing; cyber default-on for any chain reaching firm controls; privacy default-on for any chain reaching personal data.
 - `references/firm-overlay.md` — firm-installed policy, taxonomy, decision forums, IBS map pointers, and programme-document pointers beyond the regulatory baseline; consumed when present.
 - `templates/default-output.md` — pack template.
 - `schemas/resilience-testing-pack.schema.json` — structured-output contract for downstream consumption.

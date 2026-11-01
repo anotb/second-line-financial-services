@@ -81,8 +81,8 @@ Workpaper depth and length scale to control complexity, sample size, and excepti
 `references/sector-overlays.md` and `references/cross-cutting.md` hold one section per sector or topic, and `examples.md` one per example. Find the heading and read only that section.
 
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
-- `references/sector-overlays.md#banking`, `insurance.md`, `capital-markets.md`, `payments-fintech.md` — sector-specific workpaper conventions loaded per scope.
-- `references/cross-cutting.md#cyber`, `conduct.md` — cross-cutting flavour; cyber default-on for IAM and Part 500 controls, conduct default-on for consumer-facing tests.
+- `references/sector-overlays.md#banking`, `references/sector-overlays.md#insurance`, `references/sector-overlays.md#capital-markets`, `references/sector-overlays.md#payments-fintech` — sector-specific workpaper conventions loaded per scope.
+- `references/cross-cutting.md#cyber`, `references/cross-cutting.md#conduct` — cross-cutting flavour; cyber default-on for IAM and Part 500 controls, conduct default-on for consumer-facing tests.
 - `references/firm-overlay.md` — firm-installed methodology, taxonomy, decision checkpoints, and template variants beyond the regulatory baseline; consumed when present.
 - `templates/default-output.md` — workpaper template.
 - `schemas/workpaper.schema.json` — structured-output contract for downstream consumption.

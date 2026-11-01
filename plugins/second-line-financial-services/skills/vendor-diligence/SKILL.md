@@ -66,8 +66,8 @@ Flexes by engagement. Pack depth and length scale to criticality and review type
 `references/sector-overlays.md` and `references/cross-cutting.md` hold one section per sector or topic, and `examples.md` one per example. Find the heading and read only that section.
 
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
-- `references/sector-overlays.md#banking`, `insurance.md`, `capital-markets.md`, `payments-fintech.md` — sector-specific supervisory frame loaded per scope.
-- `references/cross-cutting.md#cyber`, `privacy.md` — cross-cutting flavour; default-on for AI vendors and for any vendor touching regulated data or IBS controls.
+- `references/sector-overlays.md#banking`, `references/sector-overlays.md#insurance`, `references/sector-overlays.md#capital-markets`, `references/sector-overlays.md#payments-fintech` — sector-specific supervisory frame loaded per scope.
+- `references/cross-cutting.md#cyber`, `references/cross-cutting.md#privacy` — cross-cutting flavour; default-on for AI vendors and for any vendor touching regulated data or IBS controls.
 - `references/firm-overlay.md` — firm-installed policy, taxonomy, decision forums and reviewer roles beyond the regulatory baseline; consumed when present.
 - `templates/default-output.md` — pack template.
 - `schemas/vendor-diligence.schema.json` — structured-output contract for downstream consumption.

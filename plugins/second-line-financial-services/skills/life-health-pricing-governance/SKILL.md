@@ -86,7 +86,7 @@ This skill is insurance-only. The sector overlay (`references/sector-overlays.md
 
 - `references/source-anchors.md` — citations for the named anchors (Model #880, NAIC AI Bulletin December 2023, NY DFS Circular Letter January 2024, Colorado SB 21-169 implementing regulation, ACA pricing rules at 45 CFR Part 147, Model #582 illustrations, Model #275 suitability in annuity transactions, HIPAA Privacy Rule, Model #505 ORSA, SR 11-7 / OCC 2026-13 as analogous model-risk language, Solvency II as see-also for EU overlay).
 - `references/sector-overlays.md#insurance` — the workflow itself: rating-factor permission posture, AU-and-ML governance under the NAIC AI Bulletin, the AIS Program cross-walk, the ECDIS provenance check, state-by-state bulletin variation.
-- `references/cross-cutting.md#privacy`, `conduct.md` — cross-cutting flavour.
+- `references/cross-cutting.md#privacy`, `references/cross-cutting.md#conduct` — cross-cutting flavour.
 - `templates/default-output.md` — Word-memo content spec (named sections).
 - `examples.md` — public-source-derived: a life carrier launching AU with ECDIS in CO and NY; a small-group health refile with a vendor ML risk-adjustment input.
 - `examples.md#troubleshooting` — recurring pitfalls (treating Model #880 as ECOA; letting the actuarial memo stand in for governance; skipping ECDIS provenance; missing ACA bright-lines on individual / small-group health; collapsing illustrations into rate filing).

@@ -70,8 +70,8 @@ Flexes by engagement. Matrix depth and length scale to criticality and review ty
 `references/sector-overlays.md` and `references/cross-cutting.md` hold one section per sector or topic, and `examples.md` one per example. Find the heading and read only that section.
 
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
-- `references/sector-overlays.md#banking`, `insurance.md`, `capital-markets.md`, `payments-fintech.md` — sector-specific clause expectations loaded per scope.
-- `references/cross-cutting.md#cyber`, `privacy.md` — cross-cutting clause clusters; default-on for AI vendors and for any contract touching regulated data or IBS controls.
+- `references/sector-overlays.md#banking`, `references/sector-overlays.md#insurance`, `references/sector-overlays.md#capital-markets`, `references/sector-overlays.md#payments-fintech` — sector-specific clause expectations loaded per scope.
+- `references/cross-cutting.md#cyber`, `references/cross-cutting.md#privacy` — cross-cutting clause clusters; default-on for AI vendors and for any contract touching regulated data or IBS controls.
 - `references/firm-overlay.md` — firm-installed contract policy, paper standards, named legal-review forums beyond the regulatory baseline; consumed when present.
 - `templates/default-output.md` — gap matrix template.
 - `schemas/contract-gap-review.schema.json` — structured-output contract for downstream consumption.

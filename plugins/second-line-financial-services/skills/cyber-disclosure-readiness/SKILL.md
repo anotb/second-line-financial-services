@@ -135,7 +135,7 @@ Downstream consumers: the structured objects feed the firm's disclosure-committe
 
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
 - `references/sector-overlays.md` — sector overlays loaded from scope.
-- `references/cross-cutting.md` — cross-cutting overlays. `cyber.md` is the core anchor set for this skill kept in references so SKILL.md remains a workflow rather than a regulatory primer; `climate.md` is required because the disclosure machinery overlaps; `privacy.md` loads when customer financial information is implicated.
+- `references/cross-cutting.md` — cross-cutting overlays. `references/cross-cutting.md#cyber` is the core anchor set for this skill kept in references so SKILL.md remains a workflow rather than a regulatory primer; `references/cross-cutting.md#climate` is required because the disclosure machinery overlaps; `references/cross-cutting.md#privacy` loads when customer financial information is implicated.
 - `references/firm-overlay.md` — firm-installed DCP, board-committee structure, disclosure policy, named officers (consumed when present).
 - `templates/default-output.md` — pack template with the named sections for all three artifacts.
 - `schemas/cyber-incident-disclosure.schema.json` — Artifact A structured-output contract.

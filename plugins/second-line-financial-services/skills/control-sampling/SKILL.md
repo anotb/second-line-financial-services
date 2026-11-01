@@ -83,8 +83,8 @@ Memo depth scales to control complexity, population size, and the regulator the 
 `references/sector-overlays.md` and `references/cross-cutting.md` hold one section per sector or topic, and `examples.md` one per example. Find the heading and read only that section.
 
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
-- `references/sector-overlays.md#banking`, `insurance.md`, `capital-markets.md`, `payments-fintech.md` — sector-specific population, stratification, and tolerable-rate conventions loaded per scope.
-- `references/cross-cutting.md#cyber`, `conduct.md`, `privacy.md` — cross-cutting flavour; cyber default-on for IAM and covered-entity-cybersecurity controls, conduct default-on for consumer-facing tests, privacy when safeguards regimes apply.
+- `references/sector-overlays.md#banking`, `references/sector-overlays.md#insurance`, `references/sector-overlays.md#capital-markets`, `references/sector-overlays.md#payments-fintech` — sector-specific population, stratification, and tolerable-rate conventions loaded per scope.
+- `references/cross-cutting.md#cyber`, `references/cross-cutting.md#conduct`, `references/cross-cutting.md#privacy` — cross-cutting flavour; cyber default-on for IAM and covered-entity-cybersecurity controls, conduct default-on for consumer-facing tests, privacy when safeguards regimes apply.
 - `references/firm-overlay.md` — firm-installed methodology, sample-size tables, tolerable-rate floors, and template variants beyond the regulatory baseline; consumed when present.
 - `templates/default-output.md` — sampling-memo template.
 - `schemas/sampling.schema.json` — structured-output contract for downstream consumption.
