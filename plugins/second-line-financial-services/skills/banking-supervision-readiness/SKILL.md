@@ -84,7 +84,7 @@ The tail also carries recommended owner actions before entry meeting (concrete, 
 
 ## Sector and cross-cutting overlays
 
-This skill is banking-sector-only. There is no `references/sector-overlays.md` directory because the entire skill is the banking sector overlay. Cross-cutting overlays load when the cycle scope implicates them.
+This skill is banking-sector-only. There is no `references/sector-overlays.md` file because the entire skill is the banking sector overlay. Cross-cutting overlays load when the cycle scope implicates them.
 
 - `cross-cutting.md#cyber` loads when the cycle includes IT examination scope, when the FFIEC IT Examination Handbook drives the request list, or when a cyber incident in the review period shapes the Management or Sensitivity component. Anchors: FFIEC IT Examination Handbook (Information Security booklet, current edition [verify edition]), 23 NYCRR Part 500 for state-chartered banks supervised by NYDFS, the SEC cyber-disclosure framework for the BHC where the BHC is a public registrant.
 - `cross-cutting.md#conduct` loads when the cycle includes consumer-compliance scope. Anchors: CFPB Supervision and Examination Manual (current edition [verify section]), FDIC Compliance Examination Manual, OCC consumer-compliance handbook, UDAAP examiner expectations.
