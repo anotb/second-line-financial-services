@@ -1,0 +1,347 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://second-line-financial-services/plugins/second-line-financial-services/skills/best-execution-surveillance/schemas/best-execution-review.schema.json",
+  "title": "best-execution-review",
+  "description": "Structured second-line best-execution surveillance record. Tabular by nature: review identification, scope, venue inventory, aggregate execution-quality metrics, Rule 605 / 606 reconciliation, trade-by-trade exception sample, conflict review, committee record, fund-board attestation (fund-adviser variant), findings, and KRI trends. Downstream consumers: the next-quarter surveillance reads prior-period exceptions, conflicts, findings, and KRIs to populate prior-period columns and roll findings forward; fund-board-reporting reads the fund-by-fund §15(c) attestation block; adviser-exam-readiness reads the surveillance summary into the EXAMS document-request response file.",
+  "type": "object",
+  "required": [
+    "review_id",
+    "firm_registration",
+    "review_period",
+    "asset_class_scope",
+    "sample_basis",
+    "venues",
+    "exceptions",
+    "conflict_review",
+    "findings",
+    "committee_pack",
+    "confidence_label"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "description": "Semver of this schema. Default 1.0.0.",
+      "default": "1.0.0",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "review_id": {
+      "type": "string",
+      "description": "Stable identifier for the surveillance review. Reused across periods so the next-quarter review can pull prior-period rows for trend tracking.",
+      "minLength": 1
+    },
+    "engagement_id": {
+      "type": "string",
+      "description": "Optional pointer to the scope record under which this review was produced. Empty string if scope was not formalised."
+    },
+    "firm_registration": {
+      "type": "string",
+      "enum": ["IA", "BD", "IA_and_BD", "fund_adviser"],
+      "description": "Registration class. Drives which rule lattice loads (§206 fiduciary; FINRA Rule 5310 .09; both for dual; the IA limb plus §15(c) and §17(e) / §28(e) blocks for fund advisers)."
+    },
+    "firm_identifier": {
+      "type": "object",
+      "description": "Firm identification.",
+      "properties": {
+        "legal_entity": {"type": "string"},
+        "crd_number": {"type": "string"},
+        "sec_file_number": {"type": "string"}
+      },
+      "additionalProperties": false
+    },
+    "review_period": {
+      "type": "object",
+      "required": ["start_date", "end_date"],
+      "properties": {
+        "start_date": {"type": "string", "format": "date"},
+        "end_date": {"type": "string", "format": "date"}
+      },
+      "additionalProperties": false
+    },
+    "cadence": {
+      "type": "string",
+      "description": "Review cadence label. Descriptive string such as 'quarterly', 'monthly+quarterly+annual', 'quarterly-into-fund-board', 'annual'."
+    },
+    "asset_class_scope": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["equities", "options", "fixed_income", "etfs", "mutual_funds", "derivatives", "fx", "crypto", "other"]
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "audience": {
+      "type": "string",
+      "description": "Primary audience for the surveillance read-out. Descriptive string."
+    },
+    "owner_role": {
+      "type": "string",
+      "description": "Role responsible for producing the surveillance. Role, not person."
+    },
+    "approver_role": {
+      "type": "string",
+      "description": "Role that signs off the surveillance disposition. Role, not person."
+    },
+    "sample_basis": {
+      "type": "object",
+      "required": ["method", "size", "period_coverage"],
+      "properties": {
+        "method": {"type": "string", "description": "Sample method narrative (stratified by asset class and order type, random, risk-based, 100% off-NBBO, etc.). Names the strata over-represented in the tail (block trades, illiquid securities, after-hours, conflicted-routing flow)."},
+        "size": {"type": "integer", "minimum": 0},
+        "population_size": {"type": "integer", "minimum": 0},
+        "period_coverage": {"type": "string"},
+        "exclusions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["exclusion", "rationale"],
+            "properties": {
+              "exclusion": {"type": "string"},
+              "rationale": {"type": "string"}
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "data_sources": {
+      "type": "object",
+      "description": "Data feeds underpinning the review.",
+      "properties": {
+        "tca_vendor": {"type": "string"},
+        "tca_methodology": {"type": "string"},
+        "feeds": {"type": "array", "items": {"type": "string"}}
+      },
+      "additionalProperties": false
+    },
+    "venues": {
+      "type": "array",
+      "description": "Venue inventory and changes during the period.",
+      "items": {
+        "type": "object",
+        "required": ["venue_id", "venue_type", "status"],
+        "properties": {
+          "venue_id": {"type": "string"},
+          "venue_type": {"type": "string", "description": "lit-exchange, dark-ATS, wholesaler, single-dealer, dealer-network, etc."},
+          "status": {"type": "string", "description": "active, added, removed, on-watchlist."},
+          "watchlist_flag": {"type": "boolean"},
+          "period_share_pct": {"type": "number"},
+          "period_prior_share_pct": {"type": "number"},
+          "change_reason": {"type": "string"}
+        },
+        "additionalProperties": false
+      }
+    },
+    "aggregate_metrics": {
+      "type": "array",
+      "description": "Aggregate execution-quality metrics, one row per (venue × asset_class × metric).",
+      "items": {
+        "type": "object",
+        "required": ["venue_id", "asset_class", "metric", "period_value"],
+        "properties": {
+          "venue_id": {"type": "string"},
+          "asset_class": {"type": "string"},
+          "metric": {"type": "string", "description": "Effective-over-quoted ratio, price improvement per share, at-or-better fill rate, average effective spread (bps), market-on-close fill rate, large-block slippage vs arrival mid (bps), distance from competitive quote (bps for fixed income), net liquidity capture (options), etc."},
+          "period_value": {"type": "number"},
+          "period_prior_value": {"type": "number"},
+          "threshold": {"type": "number"},
+          "breach_flag": {"type": "boolean"},
+          "source": {"type": "string", "description": "TCA vendor name, internal report identifier, venue 605 file reference."}
+        },
+        "additionalProperties": false
+      }
+    },
+    "rule_605_606_reconciliation": {
+      "type": "object",
+      "description": "Rule 605 and 606 reconciliation block. Applicable where the firm is a BD subject to those rules or uses BDs whose 605 disclosures form part of the evidence.",
+      "properties": {
+        "applicable": {"type": "boolean"},
+        "release_34_99679_compliance_status": {"type": "string", "description": "For periods governed by the March 2024 amendments — operative compliance status for this firm and period."},
+        "items": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["item", "source", "period_value"],
+            "properties": {
+              "item": {"type": "string"},
+              "source": {"type": "string"},
+              "period_value": {"type": ["number", "string"]},
+              "reconciliation_status": {"type": "string", "description": "match / divergence Y%; investigation status; remediation note."}
+            },
+            "additionalProperties": false
+          }
+        },
+        "material_anomalies": {"type": "array", "items": {"type": "string"}}
+      },
+      "additionalProperties": false
+    },
+    "exceptions": {
+      "type": "array",
+      "description": "Trade-by-trade exception sample.",
+      "items": {
+        "type": "object",
+        "required": ["trade_id", "miss_type", "factor_analysis"],
+        "properties": {
+          "trade_id": {"type": "string"},
+          "trade_timestamp_utc": {"type": "string", "format": "date-time"},
+          "asset_class": {"type": "string"},
+          "side": {"type": "string", "description": "buy, sell, buy-to-cover, sell-short, etc."},
+          "symbol_or_cusip": {"type": "string"},
+          "order_type": {"type": "string", "description": "market, marketable-limit, non-marketable-limit, midpoint-pegged, retail-improvement, etc."},
+          "order_size": {"type": "number"},
+          "routed_venue": {"type": "string"},
+          "executed_price": {"type": "number"},
+          "nbbo_bid_at_execution": {"type": "number"},
+          "nbbo_ask_at_execution": {"type": "number"},
+          "arrival_mid": {"type": "number"},
+          "miss_type": {"type": "string", "description": "off-NBBO fill; price-improvement miss vs alternative venue; large-block routing decision; principal-trade pricing; agency-cross unfavourable to one side; soft-dollar-eligible flow routed to PFOF venue with weaker price improvement; other (describe)."},
+          "factor_analysis": {"type": "string", "description": "Factor walk under the applicable rule lattice. For BD reviews: Rule 5310 .01 factors (character of market, size and type of transaction, number of markets checked, accessibility of quotation, terms and conditions). For IA reviews: IA fiduciary factors (price, speed, likelihood, size, market impact, accessibility, total transaction costs, customer instructions). Dual registrants walk both."},
+          "root_cause": {"type": "string"},
+          "remediation": {"type": "string"},
+          "owner_role": {"type": "string"},
+          "due_date": {"type": "string", "format": "date"}
+        },
+        "additionalProperties": false
+      }
+    },
+    "conflict_review": {
+      "type": "array",
+      "description": "Conflict-as-input review, one row per conflict type in scope.",
+      "items": {
+        "type": "object",
+        "required": ["conflict_type", "present"],
+        "properties": {
+          "conflict_type": {"type": "string", "description": "PFOF; principal_trades_206_3; agency_cross_206_3; affiliated_brokerage_17e; soft_dollars_28e; commission_sharing_arrangement; other_inducement."},
+          "present": {"type": "boolean"},
+          "magnitude": {"type": "string", "description": "Period magnitude — dollar value received for PFOF; count and notional for principal trades and agency crosses; share of fund commissions for affiliated brokerage; commission dollars for soft dollars; accumulated and disbursed for CSAs."},
+          "weighed_in_determination": {"type": "string", "description": "How the conflict was factored into the best-execution determination, with reference to the committee minutes that captured the weighing."},
+          "evidence": {"type": "string"},
+          "residual_conflict": {"type": "string"},
+          "disclosure_consistency_check": {"type": "string", "description": "Match against Form CRS, Form ADV item 12, Rule 606 disclosure as applicable."}
+        },
+        "additionalProperties": false
+      }
+    },
+    "committee_pack": {
+      "type": "object",
+      "required": ["meeting_date", "members_present", "decisions"],
+      "properties": {
+        "meeting_date": {"type": "string", "format": "date"},
+        "members_present": {"type": "array", "items": {"type": "string"}, "description": "Roles, not persons."},
+        "members_absent": {"type": "array", "items": {"type": "string"}},
+        "materials_reviewed": {"type": "array", "items": {"type": "string"}},
+        "decisions": {"type": "array", "items": {"type": "string"}},
+        "dissents_recorded": {"type": "string", "description": "Description of dissents, or explicit 'no dissents recorded'."},
+        "follow_ups": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["item", "owner_role", "due_date"],
+            "properties": {
+              "item": {"type": "string"},
+              "owner_role": {"type": "string"},
+              "due_date": {"type": "string", "format": "date"},
+              "status": {"type": "string"}
+            },
+            "additionalProperties": false
+          }
+        },
+        "prior_period_follow_up_status": {"type": "array", "items": {"type": "string"}}
+      },
+      "additionalProperties": false
+    },
+    "fund_15c_attestation": {
+      "type": "array",
+      "description": "Fund-adviser variant only. One row per fund the surveillance covers, feeding the §15(c) board materials.",
+      "items": {
+        "type": "object",
+        "required": ["fund_id", "attestation_status"],
+        "properties": {
+          "fund_id": {"type": "string"},
+          "attestation_status": {"type": "string"},
+          "soft_dollar_summary": {"type": "string"},
+          "affiliated_brokerage_summary": {"type": "string"},
+          "comparable_rate_evidence_pin": {"type": "string", "description": "Reference to the §17(e)(1) comparable-rate evidence file or workpaper."},
+          "escalation_to_board": {"type": "string"}
+        },
+        "additionalProperties": false
+      }
+    },
+    "findings": {
+      "type": "array",
+      "description": "Findings aggregated across the workbook.",
+      "items": {
+        "type": "object",
+        "required": ["finding_id", "description", "control_owner_role"],
+        "properties": {
+          "finding_id": {"type": "string"},
+          "severity": {"type": "string", "description": "Descriptive severity calibrated to firm norms; not a forced enum."},
+          "description": {"type": "string"},
+          "source_sheet_ref": {"type": "string"},
+          "control_owner_role": {"type": "string"},
+          "target_date": {"type": "string", "format": "date"},
+          "status": {"type": "string"}
+        },
+        "additionalProperties": false
+      }
+    },
+    "kris": {
+      "type": "array",
+      "description": "Headline KRIs trended across at least four prior periods where available.",
+      "items": {
+        "type": "object",
+        "required": ["kri", "definition", "period_value"],
+        "properties": {
+          "kri": {"type": "string"},
+          "definition": {"type": "string"},
+          "period_value": {"type": "number"},
+          "period_prior_values": {
+            "type": "array",
+            "items": {"type": "number"},
+            "description": "Up to four prior-period values, oldest first."
+          },
+          "threshold": {"type": "number"},
+          "breach_flag": {"type": "boolean"},
+          "trend_direction": {"type": "string", "description": "Descriptive: improving, stable, deteriorating, n/a (insufficient history)."}
+        },
+        "additionalProperties": false
+      }
+    },
+    "open_questions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["question"],
+        "properties": {
+          "question": {"type": "string"},
+          "blocker_for": {"type": "string"}
+        },
+        "additionalProperties": false
+      }
+    },
+    "recommended_disposition": {
+      "type": "string",
+      "enum": ["accepted", "accept-with-conditions", "re-baseline-after-remediation", "escalate"]
+    },
+    "source_citations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["source", "date"],
+        "properties": {
+          "source": {"type": "string"},
+          "date": {"type": "string"},
+          "section_ref": {"type": "string"},
+          "url": {"type": "string"}
+        },
+        "additionalProperties": false
+      }
+    },
+    "confidence_label": {
+      "type": "string",
+      "enum": ["high", "medium", "low", "unknown"]
+    }
+  }
+}

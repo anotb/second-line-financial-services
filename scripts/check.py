@@ -124,22 +124,18 @@ def check_marketplace():
 
 def check_no_removed_patterns():
     # Legacy locations that must not reappear at the public root.
-    banned_paths = ['managed-agent-cookbooks', 'plugins/vertical-plugins']
+    banned_paths = ['managed-agent-cookbooks', 'plugins/vertical-plugins', 'plugins/capability-plugins', 'plugins/sector-plugins']
     for rel in banned_paths:
         if (ROOT / rel).exists():
             err(f'removed path still exists: {rel}')
 
-for base in [ROOT / 'plugins' / 'capability-plugins', ROOT / 'plugins' / 'sector-plugins']:
-    if not base.exists():
-        err(f'missing {base}')
-        continue
-    for plugin_dir in sorted(p for p in base.iterdir() if p.is_dir()):
-        check_manifest(plugin_dir)
-        skills_dir = plugin_dir / 'skills'
-        if skills_dir.exists():
-            for skill_dir in sorted(p for p in skills_dir.iterdir() if p.is_dir()):
-                check_skill(skill_dir)
-        check_agents(plugin_dir)
+for plugin_dir in sorted(p for p in (ROOT / 'plugins').iterdir() if p.is_dir()):
+    check_manifest(plugin_dir)
+    skills_dir = plugin_dir / 'skills'
+    if skills_dir.exists():
+        for skill_dir in sorted(p for p in skills_dir.iterdir() if p.is_dir()):
+            check_skill(skill_dir)
+    check_agents(plugin_dir)
 
 check_marketplace()
 check_no_removed_patterns()

@@ -1,0 +1,427 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://second-line-financial-services/plugins/second-line-financial-services/skills/test-plan-builder/schemas/test-plan.schema.json",
+  "title": "test-plan",
+  "description": "Pre-fieldwork test plan record produced for a single control test cycle. Carries scope, test objective, source criteria, population, sampling reference, walkthrough plan, design and operating procedures, evidence-request reference, pass and fail criteria, limitations, downstream consumers, and the reviewer sign-off block. Downstream consumers: control-sampling (writes back sampling_id), evidence-request-builder (writes back evidence_request_list_id), workpaper-drafter (consumes the full plan as the contract for the workpaper), qa-workpaper (reads plan and workpaper together for sufficiency).",
+  "type": "object",
+  "required": [
+    "test_id",
+    "control_id",
+    "period_start",
+    "period_end",
+    "preparer",
+    "source_posture",
+    "test_objective",
+    "criteria",
+    "population",
+    "design_procedures",
+    "operating_procedures",
+    "pass_criteria",
+    "fail_criteria",
+    "human_review_required",
+    "confidence_label"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "description": "Semver of this schema. Default 1.0.0.",
+      "default": "1.0.0",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "test_id": {
+      "type": "string",
+      "description": "Stable identifier per firm naming convention.",
+      "minLength": 1
+    },
+    "control_id": {
+      "type": "string",
+      "description": "Firm control register ID for the control under test. The test plan does not invent control IDs; it consumes the firm's control inventory.",
+      "minLength": 1
+    },
+    "obligation_ids": {
+      "type": "array",
+      "description": "Firm obligation register IDs the control addresses. May be one or more.",
+      "items": { "type": "string" }
+    },
+    "engagement_id": {
+      "type": "string",
+      "description": "Optional pointer to the scope record under which this test plan was produced."
+    },
+    "prior_period_test_id": {
+      "type": "string",
+      "description": "Test ID of the prior-cycle plan this cycle builds on (where applicable)."
+    },
+    "trigger": {
+      "type": "string",
+      "enum": [
+        "annual-program-coverage",
+        "regulatory-change",
+        "examiner-request",
+        "prior-finding-followup",
+        "control-owner-request",
+        "incident-driven",
+        "other"
+      ],
+      "description": "What triggered this test cycle."
+    },
+    "trigger_other_label": { "type": "string" },
+    "period_start": {
+      "type": "string",
+      "format": "date",
+      "description": "First day of the period under test."
+    },
+    "period_end": {
+      "type": "string",
+      "format": "date",
+      "description": "Last day of the period under test."
+    },
+    "business_unit": {
+      "type": "string",
+      "description": "Name of the business unit owning the control. Role-level, not individual-level."
+    },
+    "jurisdiction": {
+      "type": "string",
+      "description": "Primary jurisdiction the test addresses. Multi-jurisdiction tests should list primary here and add secondary in scope_notes."
+    },
+    "scope_statement": {
+      "type": "string",
+      "description": "Two to three sentences. What is in scope, what is out of scope, what triggered the cycle."
+    },
+    "source_posture": {
+      "type": "string",
+      "enum": [
+        "public-only",
+        "public-plus-firm-policy",
+        "public-plus-firm-policy-plus-evidence",
+        "connector-aware"
+      ],
+      "description": "Source posture the testing will operate under."
+    },
+    "preparer": {
+      "type": "object",
+      "required": ["role", "date_prepared"],
+      "additionalProperties": false,
+      "properties": {
+        "role": {
+          "type": "string",
+          "description": "Preparer role, not individual name. Examples: compliance-testing analyst, internal-audit senior, controls-testing pod lead."
+        },
+        "date_prepared": {
+          "type": "string",
+          "format": "date"
+        }
+      }
+    },
+    "reviewer": {
+      "type": "object",
+      "required": ["role"],
+      "additionalProperties": false,
+      "description": "Reviewer must be a separate role from preparer. date_reviewed and sign_off_status are filled at the pre-fieldwork sign-off gate.",
+      "properties": {
+        "role": {
+          "type": "string",
+          "description": "Reviewer role. Examples: compliance-testing manager, internal-audit director."
+        },
+        "date_reviewed": {
+          "type": "string",
+          "format": "date"
+        },
+        "sign_off_status": {
+          "type": "string",
+          "enum": [
+            "draft",
+            "signed-pre-fieldwork",
+            "returned-for-rework"
+          ]
+        }
+      }
+    },
+    "test_objective": {
+      "type": "object",
+      "required": ["read", "statement"],
+      "additionalProperties": false,
+      "properties": {
+        "read": {
+          "type": "string",
+          "enum": [
+            "design-effectiveness-only",
+            "operating-effectiveness-only",
+            "design-and-operating-combined"
+          ]
+        },
+        "statement": {
+          "type": "string",
+          "description": "Single statement of what the test concludes on."
+        }
+      }
+    },
+    "criteria": {
+      "type": "array",
+      "description": "Source criteria the test will evaluate evidence against.",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["criterion_id", "source"],
+        "additionalProperties": false,
+        "properties": {
+          "criterion_id": { "type": "string" },
+          "source": {
+            "type": "string",
+            "description": "Regulator and instrument (e.g., 'CFPB Reg E', 'FFIEC BSA/AML Examination Manual')."
+          },
+          "section": {
+            "type": "string",
+            "description": "Section reference. Use [verify section] if unknown; do not invent."
+          },
+          "text": {
+            "type": "string",
+            "description": "Verbatim excerpt or paraphrase tight enough that the criterion is unambiguous."
+          },
+          "applicability_note": {
+            "type": "string",
+            "description": "Why this criterion applies to the population under test."
+          }
+        }
+      }
+    },
+    "population": {
+      "type": "object",
+      "required": ["description", "source_of_truth"],
+      "additionalProperties": false,
+      "properties": {
+        "description": {
+          "type": "string",
+          "description": "What the population is (originations during period, accounts open during period, packets due in period)."
+        },
+        "source_of_truth": {
+          "type": "string",
+          "description": "System or report from which the population extract is taken."
+        },
+        "period_boundaries": {
+          "type": "string",
+          "description": "How the period defines inclusion (open during period, executed during period, action-taken during period)."
+        },
+        "stratification": {
+          "type": "string",
+          "description": "Planned stratification for the sample (privilege tier, action-taken type, customer risk tier)."
+        },
+        "extract_integrity_check_planned": {
+          "type": "string",
+          "description": "What the workpaper will reconcile the extract against for completeness."
+        }
+      }
+    },
+    "sampling_id": {
+      "type": "string",
+      "description": "Foreign key into control-sampling output. Written back by control-sampling when the sampling memo is produced separately."
+    },
+    "inline_sample_design": {
+      "type": "object",
+      "description": "Used when the test is small enough that sample design sits inline in the plan rather than in a separate sampling memo.",
+      "additionalProperties": false,
+      "properties": {
+        "method": {
+          "type": "string",
+          "enum": [
+            "random",
+            "systematic",
+            "stratified",
+            "judgmental",
+            "100-percent",
+            "haphazard"
+          ]
+        },
+        "size": { "type": "integer", "minimum": 1 },
+        "size_rationale": { "type": "string" },
+        "tolerable_deviation_rate": {
+          "type": "string",
+          "description": "Format as percentage or rate, e.g., '3%' or '0% for privileged-access subset'."
+        }
+      }
+    },
+    "walkthrough_plan": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "scope": {
+          "type": "string",
+          "description": "Full walkthrough, refresher walkthrough on system changes only, or skipped (with rationale and prior workpaper ID)."
+        },
+        "roles_to_interview": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Role names, not individual names."
+        },
+        "processes_to_observe": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "screens_to_inspect": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "System-of-record names, configuration screens, report runs."
+        },
+        "evidence_to_capture": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "design_procedures": {
+      "type": "array",
+      "description": "Numbered procedures evaluating whether the control as designed addresses the criterion. Walkthrough-and-inspection methodology, not sample-based reperformance.",
+      "items": {
+        "type": "object",
+        "required": ["procedure_id", "description", "expected_evidence", "expected_observable_condition"],
+        "additionalProperties": false,
+        "properties": {
+          "procedure_id": { "type": "string" },
+          "description": { "type": "string" },
+          "expected_evidence": {
+            "type": "string",
+            "description": "Evidence type the procedure produces (configuration screen, policy excerpt, attestation form template, training record)."
+          },
+          "expected_observable_condition": {
+            "type": "string",
+            "description": "What the preparer expects to observe to support a met or not-met read."
+          },
+          "criteria_addressed": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "Criterion IDs this procedure addresses."
+          }
+        }
+      }
+    },
+    "operating_procedures": {
+      "type": "array",
+      "description": "Numbered procedures testing whether the control operated as designed during the period. Methodology per procedure.",
+      "items": {
+        "type": "object",
+        "required": ["procedure_id", "description", "methodology", "expected_evidence_per_sample", "expected_observable_condition"],
+        "additionalProperties": false,
+        "properties": {
+          "procedure_id": { "type": "string" },
+          "description": { "type": "string" },
+          "methodology": {
+            "type": "string",
+            "enum": ["reperformance", "observation", "inquiry", "confirmation", "inspection", "recalculation", "analytical-procedure"]
+          },
+          "expected_evidence_per_sample": {
+            "type": "string",
+            "description": "Evidence type expected per sampled item (case file, system extract, attestation packet, reconciliation)."
+          },
+          "expected_observable_condition": {
+            "type": "string",
+            "description": "What the preparer expects to observe per sample to support a pass or exception read."
+          },
+          "criteria_addressed": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        }
+      }
+    },
+    "evidence_request_list_id": {
+      "type": "string",
+      "description": "Foreign key into evidence-request-builder output. Written back by evidence-request-builder when the request list is produced separately."
+    },
+    "inline_evidence_requests": {
+      "type": "array",
+      "description": "Used when the test is small enough that the evidence request list sits inline in the plan.",
+      "items": {
+        "type": "object",
+        "required": ["request_id", "description"],
+        "additionalProperties": false,
+        "properties": {
+          "request_id": { "type": "string" },
+          "description": { "type": "string" },
+          "owner_role": { "type": "string" },
+          "due_date": { "type": "string", "format": "date" }
+        }
+      }
+    },
+    "pass_criteria": {
+      "type": "string",
+      "description": "Observable condition that supports an effective read. Calibrated in second-line vocabulary (control effectiveness, not legal compliance)."
+    },
+    "fail_criteria": {
+      "type": "string",
+      "description": "Observable condition that supports a not-effective read. Calibrated in second-line vocabulary."
+    },
+    "tolerable_deviation_rate_reference": {
+      "type": "string",
+      "description": "Pointer into the sampling memo or the inline_sample_design.tolerable_deviation_rate. Zero-tolerable populations named explicitly."
+    },
+    "limitations": {
+      "type": "array",
+      "description": "Period coverage, scope exclusions, dependencies on other in-flight reviews, reliance on prior testing.",
+      "items": { "type": "string" }
+    },
+    "reliance_on_prior_testing": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "prior_workpaper_ids": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "rationale": { "type": "string" },
+        "reviewer_pre_signoff_reference": { "type": "string" }
+      }
+    },
+    "downstream_consumers": {
+      "type": "array",
+      "description": "Skills the plan hands off to. Naming the consumers makes the cycle's lifecycle visible at planning time.",
+      "items": {
+        "type": "string",
+        "enum": [
+          "workpaper-drafter",
+          "qa-workpaper",
+          "exception-analysis",
+          "issue-writeup"
+        ]
+      }
+    },
+    "reviewer_questions": {
+      "type": "array",
+      "description": "Questions for the named reviewer to consider before pre-fieldwork sign-off.",
+      "items": { "type": "string" }
+    },
+    "confidence_label": {
+      "type": "string",
+      "enum": ["high", "medium", "low", "unknown"],
+      "description": "Reflects source posture, firm-policy maturity for the control area, and any open question on the criteria. Per references/review-gates.md."
+    },
+    "human_review_required": {
+      "type": "boolean",
+      "const": true,
+      "description": "Always true. Pre-fieldwork sign-off is a hard gate; evidence pulls happen after sign-off, not before."
+    },
+    "review_gates": {
+      "type": "array",
+      "description": "Named human-review gates this plan must clear. Drawn from references/review-gates.md.",
+      "items": {
+        "type": "string",
+        "enum": ["scope", "evidence", "authority", "impact", "decision"]
+      }
+    },
+    "source_trace": {
+      "type": "array",
+      "description": "Citations supporting material claims in the plan.",
+      "items": {
+        "type": "object",
+        "required": ["claim", "source"],
+        "additionalProperties": false,
+        "properties": {
+          "claim": { "type": "string" },
+          "source": { "type": "string" },
+          "section": { "type": "string" },
+          "date": { "type": "string", "format": "date" },
+          "url": { "type": "string", "format": "uri" }
+        }
+      }
+    }
+  }
+}

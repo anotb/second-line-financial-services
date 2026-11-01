@@ -1,0 +1,482 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://second-line-financial-services/plugins/second-line-financial-services/skills/workpaper-drafter/schemas/workpaper.schema.json",
+  "title": "workpaper",
+  "description": "Structured testing workpaper record produced from completed control-test fieldwork. Carries scope, source criteria, walkthrough, evidence inspected, procedures performed, sample-level results, exception aggregation, design and operating effectiveness conclusions, issues elevated, reviewer questions, limitations, and sign-off block. Downstream consumers: qa-workpaper (full record review), issue-writeup (issues_elevated and handoff packages), internal audit reliance scoping. The workpaper does not classify exceptions; it consumes the exception register from exception-analysis via exception_register_id.",
+  "type": "object",
+  "required": [
+    "workpaper_id",
+    "test_id",
+    "control_id",
+    "period_start",
+    "period_end",
+    "preparer",
+    "source_posture",
+    "criteria",
+    "evidence_inspected",
+    "procedures_performed",
+    "conclusion",
+    "human_review_required",
+    "confidence_label"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "description": "Semver of this schema. Default 1.0.0.",
+      "default": "1.0.0",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "workpaper_id": {
+      "type": "string",
+      "description": "Stable identifier per firm naming convention.",
+      "minLength": 1
+    },
+    "test_id": {
+      "type": "string",
+      "description": "Foreign key into test-plan-builder output. Identifies the test plan this workpaper executes.",
+      "minLength": 1
+    },
+    "control_id": {
+      "type": "string",
+      "description": "Firm control register ID for the control under test.",
+      "minLength": 1
+    },
+    "obligation_ids": {
+      "type": "array",
+      "description": "Firm obligation register IDs the control addresses. May be one or more.",
+      "items": { "type": "string" }
+    },
+    "engagement_id": {
+      "type": "string",
+      "description": "Optional pointer to the scope record under which this workpaper was produced."
+    },
+    "period_start": {
+      "type": "string",
+      "format": "date",
+      "description": "First day of the period under test."
+    },
+    "period_end": {
+      "type": "string",
+      "format": "date",
+      "description": "Last day of the period under test."
+    },
+    "business_unit": {
+      "type": "string",
+      "description": "Name of the business unit owning the control. Role-level, not individual-level."
+    },
+    "jurisdiction": {
+      "type": "string",
+      "description": "Primary jurisdiction the test addresses. Multi-jurisdiction tests should list primary here and add secondary in scope_notes."
+    },
+    "scope_statement": {
+      "type": "string",
+      "description": "Two to three sentences restating the test plan's scope: population, timeframe, in-scope and out-of-scope."
+    },
+    "scope_changes_from_plan": {
+      "type": "array",
+      "description": "Named scope changes from the test plan with pre-fieldwork sign-off references. Silent drift is a QA finding.",
+      "items": {
+        "type": "object",
+        "required": ["change", "sign_off_reference"],
+        "additionalProperties": false,
+        "properties": {
+          "change": { "type": "string" },
+          "sign_off_reference": { "type": "string" },
+          "rationale": { "type": "string" }
+        }
+      }
+    },
+    "source_posture": {
+      "type": "string",
+      "enum": [
+        "public-only",
+        "public-plus-firm-policy",
+        "public-plus-firm-policy-plus-evidence",
+        "connector-aware"
+      ],
+      "description": "Source posture the testing operated under."
+    },
+    "preparer": {
+      "type": "object",
+      "required": ["role", "date_prepared"],
+      "additionalProperties": false,
+      "properties": {
+        "role": {
+          "type": "string",
+          "description": "Preparer role, not individual name. Examples: compliance-testing analyst, internal-audit senior, controls-testing pod lead."
+        },
+        "date_prepared": {
+          "type": "string",
+          "format": "date"
+        }
+      }
+    },
+    "reviewer": {
+      "type": "object",
+      "required": ["role"],
+      "additionalProperties": false,
+      "description": "Reviewer must be a separate role from preparer. date_reviewed and sign_off_status are filled at sign-off.",
+      "properties": {
+        "role": {
+          "type": "string",
+          "description": "Reviewer role. Examples: compliance-testing manager, internal-audit director."
+        },
+        "date_reviewed": {
+          "type": "string",
+          "format": "date"
+        },
+        "sign_off_status": {
+          "type": "string",
+          "enum": ["draft", "signed", "returned-for-rework"]
+        }
+      }
+    },
+    "qa_reviewer_placeholder": {
+      "type": "object",
+      "description": "Placeholder for QA reviewer; filled by qa-workpaper, not here.",
+      "additionalProperties": false,
+      "properties": {
+        "role": { "type": "string" },
+        "date_reviewed": { "type": "string", "format": "date" },
+        "qa_record_id": { "type": "string" }
+      }
+    },
+    "criteria": {
+      "type": "array",
+      "description": "Source criteria the test was designed to evaluate.",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["criterion_id", "source"],
+        "additionalProperties": false,
+        "properties": {
+          "criterion_id": { "type": "string" },
+          "source": {
+            "type": "string",
+            "description": "Regulator and instrument (e.g., 'CFPB Reg C', 'NYDFS 23 NYCRR Part 500')."
+          },
+          "section": {
+            "type": "string",
+            "description": "Section reference. Use [verify section] if unknown; do not invent."
+          },
+          "text": {
+            "type": "string",
+            "description": "Verbatim excerpt or paraphrase tight enough that the criterion is unambiguous."
+          },
+          "applicability_note": {
+            "type": "string",
+            "description": "Why this criterion applies to the population under test."
+          }
+        }
+      }
+    },
+    "walkthrough_summary": {
+      "type": "object",
+      "description": "Walkthrough as the design-effectiveness signal. Not the test itself.",
+      "additionalProperties": false,
+      "properties": {
+        "date": { "type": "string", "format": "date" },
+        "roles_interviewed": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Role names, not individual names."
+        },
+        "processes_observed": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "screens_inspected": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "System-of-record names, configuration screens, report runs."
+        },
+        "design_conclusion_signal": {
+          "type": "string",
+          "enum": [
+            "design-appears-effective",
+            "design-gap-surfaced",
+            "design-observation-noted-not-conclusive"
+          ]
+        }
+      }
+    },
+    "evidence_inspected": {
+      "type": "array",
+      "description": "Every evidence item with reliance classification and reconciliation to evidence-request-builder output.",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["evidence_id", "description", "reliance_classification"],
+        "additionalProperties": false,
+        "properties": {
+          "evidence_id": { "type": "string" },
+          "description": { "type": "string" },
+          "system_of_record": { "type": "string" },
+          "reliance_classification": {
+            "type": "string",
+            "enum": [
+              "system-of-record-extract",
+              "system-generated-report",
+              "management-prepared-schedule",
+              "vendor-supplied",
+              "third-party-assurance",
+              "external-confirmation",
+              "publicly-available"
+            ]
+          },
+          "request_id": {
+            "type": "string",
+            "description": "Foreign key into evidence-request-builder output."
+          },
+          "reliance_test_note": {
+            "type": "string",
+            "description": "Completeness check, accuracy check, CUEC posture for SOC reliance, prior workpaper ID for cross-period reliance."
+          }
+        }
+      }
+    },
+    "procedures_performed": {
+      "type": "array",
+      "description": "Each procedure from the test plan with execution notes and procedure-level conclusion. Procedures added or substituted in fieldwork carry pre-fieldwork sign-off references.",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["procedure_id", "description", "procedure_conclusion"],
+        "additionalProperties": false,
+        "properties": {
+          "procedure_id": { "type": "string" },
+          "description": { "type": "string" },
+          "execution_notes": {
+            "type": "string",
+            "description": "What the preparer actually did, not what the plan said to do."
+          },
+          "procedure_conclusion": {
+            "type": "string",
+            "enum": ["met", "partially-met", "not-met", "not-applicable-in-fieldwork"]
+          },
+          "added_or_substituted": {
+            "type": "boolean",
+            "description": "True if this procedure was added or substituted in fieldwork."
+          },
+          "sign_off_reference_for_change": {
+            "type": "string",
+            "description": "Required when added_or_substituted is true. Pre-fieldwork reviewer sign-off reference."
+          }
+        }
+      }
+    },
+    "sample_results": {
+      "type": "array",
+      "description": "One row per sample item. Exceptions are surfaced here; classification lives in the exception register.",
+      "items": {
+        "type": "object",
+        "required": ["sample_id", "exception_flag"],
+        "additionalProperties": false,
+        "properties": {
+          "sample_id": { "type": "string" },
+          "evidence_reviewed": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "Evidence IDs reviewed for this sample."
+          },
+          "procedure_outcomes": {
+            "type": "object",
+            "description": "Object keyed by procedure_id with values 'pass' | 'exception' | 'not-applicable'.",
+            "additionalProperties": {
+              "type": "string",
+              "enum": ["pass", "exception", "not-applicable"]
+            }
+          },
+          "exception_flag": { "type": "boolean" },
+          "exception_id": {
+            "type": "string",
+            "description": "Reference into the exception register when exception_flag is true."
+          }
+        }
+      }
+    },
+    "exception_register_id": {
+      "type": "string",
+      "description": "Foreign key into exception-analysis output. The workpaper consumes; it does not classify."
+    },
+    "exception_summary_by_classification": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "design": { "type": "integer", "minimum": 0 },
+        "operating": { "type": "integer", "minimum": 0 },
+        "documentation": { "type": "integer", "minimum": 0 },
+        "data_integrity": { "type": "integer", "minimum": 0 },
+        "not_an_exception_on_review": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "exception_summary_by_severity": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "critical": { "type": "integer", "minimum": 0 },
+        "high": { "type": "integer", "minimum": 0 },
+        "medium": { "type": "integer", "minimum": 0 },
+        "low": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "repeat_issue_references": {
+      "type": "array",
+      "description": "Prior issue IDs that observed exceptions are repeats of.",
+      "items": { "type": "string" }
+    },
+    "aggregation": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "tolerable_deviation_rate": {
+          "type": "string",
+          "description": "From the test plan. Format as percentage or rate, e.g., '3%' or '0% for privileged access'."
+        },
+        "observed_deviation_rate": {
+          "type": "string",
+          "description": "Calculated against sample size. Procedure-level breakouts allowed where the test plan set procedure-level tolerable rates."
+        },
+        "anomaly_versus_systemic": {
+          "type": "string",
+          "enum": ["anomaly", "systemic", "mixed"]
+        },
+        "concentration_commentary": { "type": "string" },
+        "sample_design_implication": { "type": "string" },
+        "projection_commentary": {
+          "type": "string",
+          "description": "Whether projection from sample to population is appropriate, and why or why not."
+        }
+      }
+    },
+    "conclusion": {
+      "type": "object",
+      "required": ["design_effectiveness", "operating_effectiveness"],
+      "additionalProperties": false,
+      "properties": {
+        "design_effectiveness": {
+          "type": "string",
+          "enum": ["effective", "partially-effective", "not-effective", "inconclusive"]
+        },
+        "design_rationale": { "type": "string" },
+        "operating_effectiveness": {
+          "type": "string",
+          "enum": ["effective", "partially-effective", "not-effective", "inconclusive"]
+        },
+        "operating_rationale": { "type": "string" },
+        "combined": {
+          "type": "string",
+          "enum": ["effective", "partially-effective", "not-effective", "inconclusive"],
+          "description": "Optional combined conclusion when the test plan calls for one."
+        },
+        "combined_rationale": { "type": "string" }
+      }
+    },
+    "issues_elevated": {
+      "type": "array",
+      "description": "Issues handed to issue-writeup. The workpaper does not draft the issue; it elevates and points.",
+      "items": {
+        "type": "object",
+        "required": ["issue_handoff_id", "severity"],
+        "additionalProperties": false,
+        "properties": {
+          "issue_handoff_id": { "type": "string" },
+          "severity": {
+            "type": "string",
+            "enum": ["critical", "high", "medium", "low"]
+          },
+          "source_exception_ids": {
+            "type": "array",
+            "items": { "type": "string" }
+          },
+          "brief_description": { "type": "string" }
+        }
+      }
+    },
+    "reviewer_questions": {
+      "type": "array",
+      "description": "Questions for the named reviewer. Each question names the decision it supports.",
+      "items": { "type": "string" }
+    },
+    "limitations": {
+      "type": "array",
+      "description": "What the workpaper does not conclude on. Reviewer's protection paragraph in list form.",
+      "items": { "type": "string" }
+    },
+    "reliance": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "prior_testing_workpaper_ids": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "prior_testing_rationale": { "type": "string" },
+        "vendor_assurance_relied_on": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["evidence_id", "cuec_posture"],
+            "additionalProperties": false,
+            "properties": {
+              "evidence_id": { "type": "string" },
+              "cuec_posture": {
+                "type": "string",
+                "enum": ["all-cuecs-addressed", "some-cuecs-not-addressed", "cuec-list-not-reviewed"]
+              },
+              "unaddressed_cuec_notes": { "type": "string" }
+            }
+          }
+        },
+        "management_prepared_evidence": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["evidence_id"],
+            "additionalProperties": false,
+            "properties": {
+              "evidence_id": { "type": "string" },
+              "completeness_check": { "type": "string" },
+              "accuracy_check": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "confidence_label": {
+      "type": "string",
+      "enum": ["high", "medium", "low", "unknown"],
+      "description": "Reflects evidence sufficiency, sample size, source posture, and any reliance on second-hand evidence. Per references/review-gates.md."
+    },
+    "human_review_required": {
+      "type": "boolean",
+      "const": true,
+      "description": "Always true. The workpaper stops at preparer sign-off; the reviewer signs separately and QA is downstream."
+    },
+    "review_gates": {
+      "type": "array",
+      "description": "Named human-review gates this workpaper must clear. Drawn from references/review-gates.md.",
+      "items": {
+        "type": "string",
+        "enum": ["scope", "evidence", "authority", "impact", "decision"]
+      }
+    },
+    "source_trace": {
+      "type": "array",
+      "description": "Citations supporting material claims. Every conclusion sentence ties to a procedure result that ties to an evidence item.",
+      "items": {
+        "type": "object",
+        "required": ["claim", "source"],
+        "additionalProperties": false,
+        "properties": {
+          "claim": { "type": "string" },
+          "source": { "type": "string" },
+          "section": { "type": "string" },
+          "date": { "type": "string", "format": "date" },
+          "url": { "type": "string", "format": "uri" }
+        }
+      }
+    }
+  }
+}

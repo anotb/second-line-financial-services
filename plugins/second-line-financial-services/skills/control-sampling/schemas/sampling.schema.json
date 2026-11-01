@@ -1,0 +1,341 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://second-line-financial-services/plugins/second-line-financial-services/skills/control-sampling/schemas/sampling.schema.json",
+  "title": "sampling",
+  "description": "Structured sampling memo produced before fieldwork. Carries scope, population definition with completeness basis, risk-based stratification, sample method, sample size rationale, selection method, tolerable deviation rate with criterion source, sample drawn with control-total reconciliation, limitations, reviewer questions, and sign-off block. Downstream consumers: test-plan-builder references by sampling_id; workpaper-drafter consumes population definition, tolerable rate, and sample IDs; qa-workpaper reads the rationale during sufficiency review; exception-analysis reads the sample list and tolerable rate when classifying observed deviations.",
+  "type": "object",
+  "required": [
+    "sampling_id",
+    "control_id",
+    "period_start",
+    "period_end",
+    "source_posture",
+    "preparer",
+    "population",
+    "sample_method",
+    "tolerable_deviation_rate",
+    "selection_method",
+    "human_review_required",
+    "confidence_label"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "description": "Semver of this schema. Default 1.0.0.",
+      "default": "1.0.0",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "sampling_id": {
+      "type": "string",
+      "description": "Stable identifier per firm naming convention.",
+      "minLength": 1
+    },
+    "test_id": {
+      "type": "string",
+      "description": "Optional foreign key into test-plan-builder output. Absent when the sampling memo precedes the test plan."
+    },
+    "control_id": {
+      "type": "string",
+      "description": "Firm control register ID for the control under test.",
+      "minLength": 1
+    },
+    "obligation_ids": {
+      "type": "array",
+      "description": "Firm obligation register IDs the control addresses. May be one or more.",
+      "items": { "type": "string" }
+    },
+    "engagement_id": {
+      "type": "string",
+      "description": "Optional pointer to the scope record under which this memo was produced."
+    },
+    "period_start": {
+      "type": "string",
+      "format": "date",
+      "description": "First day of the period the sample addresses."
+    },
+    "period_end": {
+      "type": "string",
+      "format": "date",
+      "description": "Last day of the period the sample addresses."
+    },
+    "business_unit": {
+      "type": "string",
+      "description": "Name of the business unit owning the control. Role-level, not individual-level."
+    },
+    "jurisdiction": {
+      "type": "string",
+      "description": "Primary jurisdiction the test addresses. Multi-jurisdiction tests should list primary here."
+    },
+    "scope_statement": {
+      "type": "string",
+      "description": "Two to three sentences naming the population, the timeframe, and the test objective."
+    },
+    "test_objective": {
+      "type": "string",
+      "enum": ["design-effectiveness", "operating-effectiveness", "combined"],
+      "description": "Drives sample design. A combined test may need two samples (judgmental design plus statistical operating)."
+    },
+    "source_posture": {
+      "type": "string",
+      "enum": [
+        "public-only",
+        "public-plus-firm-policy",
+        "public-plus-firm-policy-plus-evidence",
+        "connector-aware"
+      ],
+      "description": "Source posture under which the memo was produced."
+    },
+    "preparer": {
+      "type": "object",
+      "required": ["role", "date_prepared"],
+      "additionalProperties": false,
+      "properties": {
+        "role": {
+          "type": "string",
+          "description": "Preparer role, not individual name."
+        },
+        "date_prepared": {
+          "type": "string",
+          "format": "date"
+        }
+      }
+    },
+    "reviewer": {
+      "type": "object",
+      "required": ["role"],
+      "additionalProperties": false,
+      "description": "Reviewer must be a separate role from preparer. date_reviewed and sign_off_status are filled at sign-off.",
+      "properties": {
+        "role": { "type": "string" },
+        "date_reviewed": { "type": "string", "format": "date" },
+        "sign_off_status": {
+          "type": "string",
+          "enum": ["draft", "signed", "returned-for-rework"]
+        }
+      }
+    },
+    "population": {
+      "type": "object",
+      "required": ["description", "completeness_basis", "size"],
+      "additionalProperties": false,
+      "description": "Population stated in items the sample can draw from, with a named completeness basis. A population without a completeness basis is a methodology defect.",
+      "properties": {
+        "description": {
+          "type": "string",
+          "description": "Population in items, not in source tables. Examples: 'account-opening packets opened in period'; 'error-resolution case files closed in period'; 'recertification packets generated in period'."
+        },
+        "source_of_truth": {
+          "type": "string",
+          "description": "System, report, or query identifier with run date and run-by role."
+        },
+        "completeness_basis": {
+          "type": "string",
+          "description": "How completeness is supported: reconciliation to control total, dual-extract comparison, system-of-record cut-off attestation. Names the reconciliation result."
+        },
+        "size": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Population size after exclusions."
+        },
+        "exclusions": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["criterion", "rationale"],
+            "additionalProperties": false,
+            "properties": {
+              "criterion": { "type": "string" },
+              "rationale": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "stratification": {
+      "type": "array",
+      "description": "Empty array allowed when the population is uniform on dimensions the test cares about; that no-stratification choice is documented in stratification_rationale.",
+      "items": {
+        "type": "object",
+        "required": ["factor", "bucket", "bucket_size"],
+        "additionalProperties": false,
+        "properties": {
+          "factor": {
+            "type": "string",
+            "description": "Stratification factor (transaction value, customer risk tier, privilege tier, etc.)."
+          },
+          "bucket": { "type": "string" },
+          "bucket_size": { "type": "integer", "minimum": 0 }
+        }
+      }
+    },
+    "stratification_rationale": {
+      "type": "string",
+      "description": "Why these factors and not others. Include the no-stratification rationale when applicable."
+    },
+    "sample_method": {
+      "type": "string",
+      "enum": [
+        "statistical-attribute",
+        "monetary-unit",
+        "judgmental",
+        "haphazard",
+        "full-population"
+      ],
+      "description": "haphazard is rarely defensible; flag for reviewer challenge and recommend a documented alternative."
+    },
+    "sample_method_rationale": {
+      "type": "string",
+      "description": "Two to three sentences tying method choice to test objective, population behaviour, and source posture."
+    },
+    "confidence_level": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1,
+      "description": "Confidence level for statistical samples, expressed as a decimal (0.95 = 95%)."
+    },
+    "tolerable_deviation_rate": {
+      "type": "object",
+      "required": ["value", "criterion_source"],
+      "additionalProperties": false,
+      "description": "Tolerable deviation rate as a number plus its criterion source. The number alone does not pass.",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": "Format as percentage, decimal, or '0% for [segment]'. Procedure-level or segment-level breakouts allowed."
+        },
+        "criterion_source": {
+          "type": "string",
+          "description": "Firm methodology / professional standard / regulator expectation / population-specific zero-tolerable convention."
+        },
+        "procedure_level_breakouts": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "Data-point-level versus record-level rates; segment-specific rates."
+        }
+      }
+    },
+    "expected_deviation_rate": {
+      "type": "string",
+      "description": "Expected rate of deviation used in sample sizing. Source the prior-cycle observed rate or firm methodology default."
+    },
+    "sample_size": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Resulting sample size. For full-population, equals population size."
+    },
+    "sample_size_rationale": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "method_or_table_reference": {
+          "type": "string",
+          "description": "Firm methodology / AICPA AU-C 530-derived tables / named statistical package, when statistical."
+        },
+        "qualitative_basis": {
+          "type": "string",
+          "description": "Factors and weights, named target categories, when judgmental."
+        },
+        "floor_or_ceiling_reference": {
+          "type": "string",
+          "description": "Firm methodology floor / regulator-handbook appendix conventions / prior-cycle benchmark, when judgmental."
+        },
+        "full_population_justification": {
+          "type": "string",
+          "description": "Population size; zero-tolerable scope; all items reachable in available time, when full-population."
+        }
+      }
+    },
+    "selection_method": {
+      "type": "object",
+      "required": ["technique"],
+      "additionalProperties": false,
+      "properties": {
+        "technique": {
+          "type": "string",
+          "enum": ["prng", "mus", "judgmental-criteria", "haphazard"]
+        },
+        "seed_or_interval": {
+          "type": "string",
+          "description": "PRNG seed for prng; interval and starting point for mus."
+        },
+        "criteria_description": {
+          "type": "string",
+          "description": "For judgmental-criteria: highest-dollar, highest-risk, longest-aged, most-recent, etc."
+        },
+        "sort_key": {
+          "type": "string",
+          "description": "Field used to order the population list before drawing. Reproducibility note."
+        }
+      }
+    },
+    "sample_ids": {
+      "type": "array",
+      "description": "Sample IDs drawn. Use sample_list_pointer for very large samples.",
+      "items": { "type": "string" }
+    },
+    "sample_list_pointer": {
+      "type": "string",
+      "description": "Optional pointer to an external sample list when sample_ids is impractical to inline."
+    },
+    "draw_metadata": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "draw_date": { "type": "string", "format": "date" },
+        "drawer_role": {
+          "type": "string",
+          "description": "Drawer role; separate from sample-evaluator role where firm policy requires draw-and-evaluate separation."
+        },
+        "control_total_reconciliation": {
+          "type": "string",
+          "description": "Sample-draw output reconciled to population; named result."
+        }
+      }
+    },
+    "limitations": {
+      "type": "array",
+      "description": "What the sample cannot conclude on. Reviewer's protection paragraph in list form.",
+      "items": { "type": "string" }
+    },
+    "reviewer_questions": {
+      "type": "array",
+      "description": "Questions for the named reviewer. Each question names the decision it supports.",
+      "items": { "type": "string" }
+    },
+    "confidence_label": {
+      "type": "string",
+      "enum": ["high", "medium", "low", "unknown"],
+      "description": "Reflects evidence sufficiency for the population assertion, the criterion source for the tolerable rate, and the source posture under which the memo was produced. Per references/review-gates.md."
+    },
+    "human_review_required": {
+      "type": "boolean",
+      "const": true,
+      "description": "Always true. Sampling memo requires reviewer sign-off before fieldwork begins."
+    },
+    "review_gates": {
+      "type": "array",
+      "description": "Named human-review gates this memo must clear. Drawn from references/review-gates.md.",
+      "items": {
+        "type": "string",
+        "enum": ["scope", "evidence", "authority", "impact", "decision"]
+      }
+    },
+    "source_trace": {
+      "type": "array",
+      "description": "Citations supporting material claims. Every methodology assertion ties to a source with a section reference.",
+      "items": {
+        "type": "object",
+        "required": ["claim", "source"],
+        "additionalProperties": false,
+        "properties": {
+          "claim": { "type": "string" },
+          "source": { "type": "string" },
+          "section": { "type": "string" },
+          "date": { "type": "string", "format": "date" },
+          "url": { "type": "string", "format": "uri" }
+        }
+      }
+    }
+  }
+}

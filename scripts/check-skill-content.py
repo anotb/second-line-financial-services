@@ -4,7 +4,7 @@
 Walks every plugins/*/skills/*/SKILL.md and applies four rules:
 
 1. placeholder-text ban (verbatim filler phrases that signal an unrewritten skill)
-2. activation-tuned description (Best for / Not the right tool when)
+2. short listing description, with Best for / Not the right tool when in the body
 3. source-anchor depth (sibling references/source-anchors.md with section refs)
 4. duplicate SKILL.md content (>50% body overlap, pairwise)
 
@@ -55,6 +55,7 @@ PLACEHOLDER_PHRASES = [
 # Rule 2: required description shape markers (case-insensitive).
 # Named regulators live in references/source-anchors.md and load conditionally,
 # so "Anchored to:" is intentionally not part of the description shape.
+MAX_DESCRIPTION_CHARS = 120
 DESCRIPTION_MARKERS = [
     'best for:',
     'not the right tool when:',
@@ -112,19 +113,16 @@ def iter_skill_files(plugin_filter=None):
     base = ROOT / 'plugins'
     if not base.exists():
         return
-    for plugin_root in sorted(base.iterdir()):
-        if not plugin_root.is_dir():
+    for plugin_dir in sorted(p for p in base.iterdir() if p.is_dir()):
+        if plugin_filter and plugin_dir.name != plugin_filter:
             continue
-        for plugin_dir in sorted(p for p in plugin_root.iterdir() if p.is_dir()):
-            if plugin_filter and plugin_dir.name != plugin_filter:
-                continue
-            skills_dir = plugin_dir / 'skills'
-            if not skills_dir.exists():
-                continue
-            for skill_dir in sorted(p for p in skills_dir.iterdir() if p.is_dir()):
-                md = skill_dir / 'SKILL.md'
-                if md.exists():
-                    yield plugin_dir, skill_dir, md
+        skills_dir = plugin_dir / 'skills'
+        if not skills_dir.exists():
+            continue
+        for skill_dir in sorted(p for p in skills_dir.iterdir() if p.is_dir()):
+            md = skill_dir / 'SKILL.md'
+            if md.exists():
+                yield plugin_dir, skill_dir, md
 
 
 # ----- rule 1: placeholder ban -----
@@ -139,7 +137,7 @@ def check_rule_1(skill_md, text, violations):
 
 # ----- rule 2: description shape -----
 
-def check_rule_2(skill_md, frontmatter, violations):
+def check_rule_2(skill_md, frontmatter, body, violations):
     if frontmatter is None:
         err(violations, 2, skill_md, 'missing frontmatter; cannot read description')
         return
@@ -147,11 +145,14 @@ def check_rule_2(skill_md, frontmatter, violations):
     if not desc:
         err(violations, 2, skill_md, 'description is empty')
         return
-    desc_lower = desc.lower()
-    missing = [m for m in DESCRIPTION_MARKERS if m not in desc_lower]
+    if len(desc) > MAX_DESCRIPTION_CHARS:
+        err(violations, 2, skill_md,
+            f'description over {MAX_DESCRIPTION_CHARS} chars; every skill shares the listing budget')
+    body_lower = body.lower()
+    missing = [m for m in DESCRIPTION_MARKERS if m not in body_lower]
     if missing:
         err(violations, 2, skill_md,
-            f"description missing activation markers: {', '.join(missing)}")
+            f"body missing activation markers: {', '.join(missing)}")
 
 
 # ----- rule 3: source-anchor depth -----
@@ -259,9 +260,9 @@ def print_text(violations, total_scanned, rules_run):
     grouped = {}
     for v in violations:
         parts = v['path'].split('/')
-        # plugins/<bucket>/<plugin>/skills/<skill>/...
-        plugin_key = '/'.join(parts[:3]) if len(parts) >= 3 else v['path']
-        skill_key = '/'.join(parts[:5]) if len(parts) >= 5 else v['path']
+        # plugins/<plugin>/skills/<skill>/...
+        plugin_key = '/'.join(parts[:2]) if len(parts) >= 2 else v['path']
+        skill_key = '/'.join(parts[:4]) if len(parts) >= 4 else v['path']
         grouped.setdefault(plugin_key, {}).setdefault(skill_key, []).append(v)
     for plugin_key in sorted(grouped):
         print(f'{plugin_key}/')
@@ -303,7 +304,7 @@ def main():
         if args.rule in (None, 1):
             check_rule_1(md, text, violations)
         if args.rule in (None, 2):
-            check_rule_2(md, frontmatter, violations)
+            check_rule_2(md, frontmatter, body, violations)
         if args.rule in (None, 3):
             check_rule_3(skill_dir, violations)
         if args.rule in (None, 4):

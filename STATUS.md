@@ -1,10 +1,10 @@
 # Status
 
-Current release: **0.5.0**.
+Current release: **1.0.0**.
 
 ## What ships
 
-- 8 capability plugins, 4 sector overlay plugins, 68 skills.
+- One plugin with 68 skills: 8 capability groups and 4 sector groups.
 - Each skill is self-contained: `SKILL.md`, source-anchors, sector and cross-cutting overlays, default template, optional schema, worked examples.
 - US-deep at this release; EU as overlay; UK as see-also.
 - MIT licensed.
