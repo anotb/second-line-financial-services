@@ -97,3 +97,9 @@ The deliverable is a Word memo per `templates/default-output.md`, rendered via t
 The sanctions officer (with the BSA officer in the chain, and sanctions counsel where the program structure routes through counsel) reviews the memo and decides on the recommendations. The memo is the input, not the decision.
 
 Downstream consumers: a sample-level QA roll-up reads the structured record across program reviews for pattern detection, recurring-finding rates, and training-feedback themes. The board / audit-committee BSA-and-sanctions reporting cycle pulls aggregated findings as a governance signal. `aml-model-monitoring` consumes any finding tagged to match-logic, threshold calibration, or BTL testing (which is its scope, not this skill's). `cdd-risk-review` consumes any finding tagged to beneficial-ownership evidence underpinning a 50 Percent Rule aggregation read. `sar-decision-qa` reads the screening-disposition record as context when a sanctions-adjacent alert escalates to a SAR. The schema is the cross-skill contract; additive changes only, never silent renames. Breaking changes ship as a versioned migration with consumers told in advance.
+
+## Human review and AI disclosure
+
+Open the deliverable with this line, and remove it only after the review below: `AI-assisted draft. Requires review by a qualified person before use.`
+
+A qualified person with authority to change the output reviews it before it is delivered or relied on, and stays accountable for it. Where the output supports advice to an individual or a decision about an individual (credit, insurance underwriting, pricing or claims, employment, legal rights, or similar), that individual must be told AI was used to produce it. This skill does not make final decisions, file with a regulator, notify customers, execute transactions, or move money or other financial assets.

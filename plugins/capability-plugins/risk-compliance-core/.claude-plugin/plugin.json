@@ -1,9 +1,12 @@
 {
   "name": "risk-compliance-core",
-  "version": "0.2.0",
+  "displayName": "Second Line Risk & Compliance Core",
+  "version": "0.5.0",
   "description": "Core GRC workflow skills for obligation mapping, control matrices, evidence binders, issue write-ups, human-review gates, and policy gap reviews.",
+  "icon": "./assets/icon.png",
   "author": {
-    "name": "Second Line Financial Services contributors"
+    "name": "anot",
+    "url": "https://unsol.dev"
   },
   "license": "MIT",
   "homepage": "https://github.com/anotb/second-line-financial-services",

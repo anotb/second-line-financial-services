@@ -70,3 +70,9 @@ The revision log is append-only. The first row is the initial scope, every mater
 ## Output
 
 Two artifacts. The charter is the human-readable memo against the named sections in `templates/default-output.md`; render it Word-natural for advisory engagements that want a signed deliverable, markdown for internal use, or whatever the sponsor expects. The `docx` skill in the `document-skills` plugin handles Word rendering when called for. The structured scope record conforms to `schemas/scope.schema.json`; this is the cross-skill contract every other skill in the second-line repo consumes, and it is the canonical case where a schema genuinely helps downstream automation. Both emit together; the sponsor signs the charter and the structured record flows to whichever skill the engagement calls next.
+
+## Human review and AI disclosure
+
+Open the deliverable with this line, and remove it only after the review below: `AI-assisted draft. Requires review by a qualified person before use.`
+
+A qualified person with authority to change the output reviews it before it is delivered or relied on, and stays accountable for it. Where the output supports advice to an individual or a decision about an individual (credit, insurance underwriting, pricing or claims, employment, legal rights, or similar), that individual must be told AI was used to produce it. This skill does not make final decisions, file with a regulator, notify customers, execute transactions, or move money or other financial assets.

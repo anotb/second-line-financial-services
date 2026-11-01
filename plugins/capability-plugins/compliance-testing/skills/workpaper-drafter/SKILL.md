@@ -91,3 +91,9 @@ The plugin-level shared references (`references/source-map.md`, `references/poli
 Default to drafting against `templates/default-output.md`. Render as Word, Excel, PowerPoint, or Markdown when the audience or workflow asks for it. Produce the structured record at `schemas/workpaper.schema.json` when downstream automation or a registered consumer needs it. The standard real-world deliverable in most engagements is a Word workpaper with the named sections, often paired with an Excel sample-results tab when the sample is large.
 
 Downstream consumers: `qa-workpaper` reads the full record for sufficiency review; `risk-compliance-core/skills/issue-writeup` reads `issues_elevated` and pulls the handoff packages built from the exception register; internal audit consumes the workpaper as supporting documentation when scoping reliance on second-line testing. The schema is the cross-skill contract; additive changes only. Add fields, do not rename or repurpose them. A breaking change is a versioned migration with the downstream skills told in advance.
+
+## Human review and AI disclosure
+
+Open the deliverable with this line, and remove it only after the review below: `AI-assisted draft. Requires review by a qualified person before use.`
+
+A qualified person with authority to change the output reviews it before it is delivered or relied on, and stays accountable for it. Where the output supports advice to an individual or a decision about an individual (credit, insurance underwriting, pricing or claims, employment, legal rights, or similar), that individual must be told AI was used to produce it. This skill does not make final decisions, file with a regulator, notify customers, execute transactions, or move money or other financial assets.

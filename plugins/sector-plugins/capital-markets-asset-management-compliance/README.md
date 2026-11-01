@@ -17,6 +17,12 @@ This is a strict sector-overlay plugin. It ships skills that are genuinely capit
 | `fund-board-reporting` | §15(c) and §38a-1 fund-board materials: adviser approval / renewal package, CCO 38a-1 annual review report, compliance and risk reporting cadence, soft-dollar / brokerage / valuation disclosures. |
 | `marketing-rule-evidence` | Rule 206(4)-1 marketing-claim evidence and substantiation: testimonial / endorsement compliance, hypothetical-performance treatment, third-party-rating substantiation, books-and-records evidence trail. |
 
+## Try it
+
+- Prepare an SEC exam-readiness pack for a fictional mid-size registered investment adviser.
+- Design best-execution surveillance for an adviser's equity order flow.
+- List the substantiation evidence needed for a hypothetical performance claim under Marketing Rule 206(4)-1.
+
 ## Capital-markets overlays into capability skills
 
 The plugin contributes capital-markets overlay content into capability skills where the SEC / FINRA frame adds material nuance:
@@ -38,15 +44,26 @@ Public anchors only. Named anchors include the IA Act, the ICA, the Exchange Act
 - `references/` — plugin-level shared references: capital-markets source map, named decision forums.
 - `schemas/` — capital-markets-specific artifacts.
 
+## Operating posture
+
+The skills draft second-line work product for qualified review by the firm's CCO, General Counsel, head of Compliance, head of Risk, fund-board secretary, or external counsel. They do not approve filings, certify FINRA 3130 / 38a-1 reports, sign Form ADV brochures, file Form PF, or close issues. Every output is staged for human sign-off.
+
 ## Install
 
-```bash
-claude plugin marketplace add /path/to/second-line-financial-services
-claude plugin install capital-markets-asset-management-compliance@second-line-financial-services
+In Claude Code:
+
+```
+/plugin install capital-markets-asset-management-compliance --marketplace anotb/second-line-financial-services
 ```
 
 Pair with `regulatory-change-management`, `risk-compliance-core`, `risk-reporting`, `compliance-testing`, `ai-governance-model-risk`, and `third-party-operational-resilience` for the full second-line stack.
 
-## Operating posture
+This plugin works on its own. Mentions of `risk-compliance-core` in the skills are optional hand-offs. Add that plugin for the shared `scoping`, `control-matrix`, and `issue-writeup` skills; installing from the GitHub marketplace adds it automatically.
 
-The skills draft second-line work product for qualified review by the firm's CCO, General Counsel, head of Compliance, head of Risk, fund-board secretary, or external counsel. They do not approve filings, certify FINRA 3130 / 38a-1 reports, sign Form ADV brochures, file Form PF, or close issues. Every output is staged for human sign-off.
+## Data and behavior
+
+The plugin is Markdown and JSON only: skills, references, schemas, and templates. It has no hooks, scripts, or MCP servers, and it does not send or store data itself. `.mcp.example.json` is an inactive template that Claude does not load, and it connects to nothing until a firm replaces it with an approved server. Documents you share are handled by Claude under your account's terms, so apply your firm's rules for confidential supervisory information, suspicious-activity material, and personal data before sharing them.
+
+## Human review and AI disclosure
+
+Intended for second-line and compliance professionals. Outputs are AI-assisted drafts. A qualified person with authority to change an output must review it before it is delivered or used in a decision, and stays accountable for it. Where an output supports advice to an individual or a decision about an individual, such as credit, insurance, employment, or legal rights, tell that individual AI was used to produce it. The plugin does not make credit, underwriting, claims, filing, or other final decisions, gives no personalized investment advice, and does not execute transactions or move money. It is not legal or regulatory advice.

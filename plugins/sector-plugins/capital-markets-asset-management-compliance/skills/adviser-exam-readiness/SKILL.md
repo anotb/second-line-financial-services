@@ -81,3 +81,9 @@ This skill is capital-markets-only. The registration-class branching (IA / BD / 
 Default to drafting against `templates/default-output.md`. Render as Word, Excel, PowerPoint, or Markdown when the audience or workflow asks for it; the typical pair is a Word memo via the `docx` skill plus the gap-and-evidence matrix as an Excel workbook via the `xlsx` skill (both in the `document-skills` plugin). The CCO and the named lead attest; the pack is a draft until that step.
 
 Downstream consumers: `exam-brief` reads the engagement context and the document-request matrix to set the engagement-side scaffolding (request-list mapping, document-handling, interview-prep). `marketing-rule-evidence` reads the Marketing Rule lane gaps to refresh the substantive evidence pack. `best-execution-surveillance` reads the trading-and-execution evidence asks. `fund-board-reporting` reads the Rule 38a-1 lane for the fund-board cycle. `risk-committee-pack` reads the gap-and-remediation list and the open-finding posture for the standing committee section.
+
+## Human review and AI disclosure
+
+Open the deliverable with this line, and remove it only after the review below: `AI-assisted draft. Requires review by a qualified person before use.`
+
+A qualified person with authority to change the output reviews it before it is delivered or relied on, and stays accountable for it. Where the output supports advice to an individual or a decision about an individual (credit, insurance underwriting, pricing or claims, employment, legal rights, or similar), that individual must be told AI was used to produce it. This skill does not make final decisions, file with a regulator, notify customers, execute transactions, or move money or other financial assets.

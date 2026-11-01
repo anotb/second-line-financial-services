@@ -15,6 +15,12 @@ Two skills, both genuinely insurance-only (NAIC outsourcing model law, NAIC unfa
 
 Insurance AI Act triage and claims-AI control substance now live as the insurance overlay inside `ai-governance-model-risk/ai-act-triage` and `ai-governance-model-risk/agentic-ai-controls` rather than as standalone insurance skills here.
 
+## Try it
+
+- Review the outsourcing of life-claims administration to a third-party administrator at a fictional US insurer.
+- Draft governance expectations for algorithmic life-insurance pricing under Colorado SB 21-169.
+- List the evidence second-line should request from an MGA before renewing delegated underwriting authority.
+
 ## Capability-skill insurance overlays (cross-link)
 
 The plugin contributes overlay reference content into seven capability skills:
@@ -37,8 +43,26 @@ The two AI overlays carry the substance previously carved out as standalone `ins
 
 ## Source posture
 
-US-deep first. EU Solvency II is tracked in [ROADMAP.md](../../../ROADMAP.md) for inclusion as a see-also reference inside `risk-committee-pack/references/sector-overlays/insurance.md`. Public sources only: NAIC Model Laws and Regulations, NAIC Bulletins, state DOI bulletins, federal statutes (HIPAA, ACA), and SEC where applicable for publicly-listed carriers.
+US-deep first. EU Solvency II is tracked in [ROADMAP.md](https://github.com/anotb/second-line-financial-services/blob/main/ROADMAP.md) for inclusion as a see-also reference inside `risk-committee-pack/references/sector-overlays/insurance.md`. Public sources only: NAIC Model Laws and Regulations, NAIC Bulletins, state DOI bulletins, federal statutes (HIPAA, ACA), and SEC where applicable for publicly-listed carriers.
 
 ## Operating posture
 
 The plugin drafts second-line work product for qualified review. It does not approve, file, rate, onboard, decline, notify, or close items. Every external source is treated as an anchor, not a substitute for legal interpretation. Every citation is dated.
+
+## Install
+
+In Claude Code:
+
+```
+/plugin install insurance-risk-compliance --marketplace anotb/second-line-financial-services
+```
+
+This plugin works on its own. Mentions of `risk-compliance-core` in the skills are optional hand-offs. Add that plugin for the shared `scoping`, `control-matrix`, and `issue-writeup` skills; installing from the GitHub marketplace adds it automatically.
+
+## Data and behavior
+
+The plugin is Markdown and JSON only: skills, references, schemas, and templates. It has no hooks, scripts, or MCP servers, and it does not send or store data itself. `.mcp.example.json` is an inactive template that Claude does not load, and it connects to nothing until a firm replaces it with an approved server. Documents you share are handled by Claude under your account's terms, so apply your firm's rules for confidential supervisory information, suspicious-activity material, and personal data before sharing them.
+
+## Human review and AI disclosure
+
+Intended for second-line and compliance professionals. Outputs are AI-assisted drafts. A qualified person with authority to change an output must review it before it is delivered or used in a decision, and stays accountable for it. Where an output supports advice to an individual or a decision about an individual, such as credit, insurance, employment, or legal rights, tell that individual AI was used to produce it. The plugin does not make credit, underwriting, claims, filing, or other final decisions, gives no personalized investment advice, and does not execute transactions or move money. It is not legal or regulatory advice.

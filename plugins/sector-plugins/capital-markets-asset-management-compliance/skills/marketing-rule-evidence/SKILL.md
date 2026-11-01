@@ -88,3 +88,9 @@ Conduct overlay loads where the substantiation gap, the testimonial framing, or 
 ## Output
 
 Default to drafting against `templates/default-output.md`. Render as Word, Excel, PowerPoint, or Markdown when the audience or workflow asks for it; the typical deliverable is a Word memo via the `docx` skill in the `document-skills` plugin, with the substantiation-file and required-disclosures matrix lifting cleanly to Excel for the books-and-records evidence index. The CCO or designated reviewer acts on the pack; counsel sets privilege posture. Downstream consumers: `adviser-exam-readiness` reads the pack where EXAMS has requested marketing materials and the substantiation file; `risk-compliance-core/policy-gap-review` reads the recurring substantiation or recordkeeping gaps where the annual Rule 206(4)-7 review needs them.
+
+## Human review and AI disclosure
+
+Open the deliverable with this line, and remove it only after the review below: `AI-assisted draft. Requires review by a qualified person before use.`
+
+A qualified person with authority to change the output reviews it before it is delivered or relied on, and stays accountable for it. Where the output supports advice to an individual or a decision about an individual (credit, insurance underwriting, pricing or claims, employment, legal rights, or similar), that individual must be told AI was used to produce it. This skill does not make final decisions, file with a regulator, notify customers, execute transactions, or move money or other financial assets.

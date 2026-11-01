@@ -93,3 +93,9 @@ The plugin-level shared references (`references/source-map.md`, `references/poli
 Default to drafting against `templates/default-output.md`. Render as Word, Excel, PowerPoint, or Markdown when the audience or workflow asks for it; the typical pair is a Word memo via the `docx` skill plus the rating-factor map as an Excel workbook via the `xlsx` skill (both in the `document-skills` plugin). The memo carries the narrative and analysis; the workbook carries the line-by-line factor map a DOI rate analyst will read.
 
 Downstream consumers: `insurance-outsourcing-review` reads the vendor-AI accountability findings for any vendor in the pricing chain; `ai-governance-model-risk/ai-act-triage` (with the insurance overlay) reads the AU / ML triage lens; `risk-reporting/risk-committee-pack` (with the insurance overlay) reads the AIS Program status and the disposition row for the ORSA Summary Report build-out. The named approver — chief pricing actuary, CRO, head of compliance, or the rate-filing committee — decides; the file is a draft until that step.
+
+## Human review and AI disclosure
+
+Open the deliverable with this line, and remove it only after the review below: `AI-assisted draft. Requires review by a qualified person before use.`
+
+A qualified person with authority to change the output reviews it before it is delivered or relied on, and stays accountable for it. Where the output supports advice to an individual or a decision about an individual (credit, insurance underwriting, pricing or claims, employment, legal rights, or similar), that individual must be told AI was used to produce it. This skill does not make final decisions, file with a regulator, notify customers, execute transactions, or move money or other financial assets.

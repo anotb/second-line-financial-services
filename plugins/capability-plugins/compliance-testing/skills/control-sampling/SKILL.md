@@ -93,3 +93,9 @@ The plugin-level shared references (`references/source-map.md`, `references/poli
 Default to drafting against `templates/default-output.md`. Render as Word, Excel, PowerPoint, or Markdown when the audience or workflow asks for it. Produce the structured record at `schemas/sampling.schema.json` when downstream automation or a registered consumer needs it. Sampling work is sampling-plan-natural: the real deliverable in most engagements is an Excel sampling matrix (population, strata, draw IDs, status) paired with a Word memo carrying the rationale, the tolerable rate criterion source, and the limitations.
 
 Downstream consumers: `test-plan-builder` references the memo by `sampling_id`; `workpaper-drafter` consumes the population definition, the tolerable deviation rate, and the sample IDs; `qa-workpaper` reads the rationale when it tests the workpaper for sufficiency; `exception-analysis` reads the sample list and the tolerable rate when it classifies observed deviations. The schema is the cross-skill contract; additive changes only. Add fields, do not rename or repurpose them. A breaking change is a versioned migration with the downstream skills told in advance.
+
+## Human review and AI disclosure
+
+Open the deliverable with this line, and remove it only after the review below: `AI-assisted draft. Requires review by a qualified person before use.`
+
+A qualified person with authority to change the output reviews it before it is delivered or relied on, and stays accountable for it. Where the output supports advice to an individual or a decision about an individual (credit, insurance underwriting, pricing or claims, employment, legal rights, or similar), that individual must be told AI was used to produce it. This skill does not make final decisions, file with a regulator, notify customers, execute transactions, or move money or other financial assets.

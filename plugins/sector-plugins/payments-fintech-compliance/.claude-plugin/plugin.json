@@ -1,13 +1,15 @@
 {
   "name": "payments-fintech-compliance",
-  "version": "0.2.0",
+  "displayName": "Second Line Payments & Fintech",
+  "version": "0.5.0",
   "description": "Payments and fintech overlays for payments risk assessment, fintech partner controls, payment operations incidents, and open-banking data controls.",
+  "icon": "./assets/icon.png",
   "author": {
-    "name": "Second Line Financial Services contributors"
+    "name": "anot",
+    "url": "https://unsol.dev"
   },
   "license": "MIT",
   "homepage": "https://github.com/anotb/second-line-financial-services",
   "repository": "https://github.com/anotb/second-line-financial-services",
-  "keywords": ["claude-code", "payments", "fintech", "open-banking", "section-1033", "msb", "money-transmitter", "fednow", "rtp", "ach", "card-networks", "fintech-partner", "baas", "sponsor-bank", "second-line"],
-  "dependencies": ["risk-compliance-core"]
+  "keywords": ["claude-code", "payments", "fintech", "open-banking", "section-1033", "msb", "money-transmitter", "fednow", "rtp", "ach", "card-networks", "fintech-partner", "baas", "sponsor-bank", "second-line"]
 }

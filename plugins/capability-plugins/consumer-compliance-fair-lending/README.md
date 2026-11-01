@@ -15,6 +15,12 @@ Consumer compliance officers, fair-lending and fair-housing leads, UDAAP review 
 5. `section1071-readiness` — Draft a Section 1071 small-business lending data readiness assessment against 12 CFR 1002.103-114, with data-point inventory aligned to 1002.107, firewall design under 1002.108, and reporting / FIG conformance.
 6. `udaap-risk-review` — Review a product, feature, fee, disclosure flow, servicing process, or marketing motion for UDAAP risk under Dodd-Frank §1031 / §1036, element by element (deception, unfairness, abusiveness), with consumer-harm hypothesis and remediation.
 
+## Try it
+
+- Draft a fair-lending test plan for a US auto lender's dealer-markup program.
+- Review this marketing claim for UDAAP risk: "Get approved in minutes with no impact to your credit."
+- Build a Section 1071 readiness assessment for a mid-size small-business lender.
+
 ## Source posture
 
 Public-source anchored. Named regulatory sources, dated, with section references. Worked examples are derived from public CFPB / DOJ / FTC enforcement themes and consent orders; no named institutions unless they are public defendants in a finalized enforcement action with a published consent order. State-privacy citations are flagged with `[verify state-specific scope]` because state privacy law varies and is evolving.
@@ -32,7 +38,7 @@ AI-related cross-cutting is implicit on `adverse-action-review` and `fair-lendin
 
 - `skills/` — the six skills. Skills supersede legacy `commands/` for new content per current Claude Code guidance.
 - `references/` — plugin-level shared references: source map (scoped to consumer-compliance / fair-lending), policy-control library, decision checkpoints.
-- `schemas/` — plugin-level schemas for cross-skill artifacts. Per-skill schemas live under `<skill>/schemas/`. Schema dedup (drop schemas a plugin's skills don't actually use) is tracked in [ROADMAP.md](../../../ROADMAP.md).
+- `schemas/` — plugin-level schemas for cross-skill artifacts. Per-skill schemas live under `<skill>/schemas/`. Schema dedup (drop schemas a plugin's skills don't actually use) is tracked in [ROADMAP.md](https://github.com/anotb/second-line-financial-services/blob/main/ROADMAP.md).
 
 Per-skill anatomy (mirrors the Anthropic per-skill layout):
 
@@ -56,3 +62,21 @@ Per-skill anatomy (mirrors the Anthropic per-skill layout):
 - Separates source evidence, management assertion, public-source obligation, and inference.
 - Marks unsupported items as `[evidence needed]`.
 - Stops before any final approval, adverse action notification, customer communication, marketing launch, 1071 filing, or issue closure.
+
+## Install
+
+In Claude Code:
+
+```
+/plugin install consumer-compliance-fair-lending --marketplace anotb/second-line-financial-services
+```
+
+This plugin works on its own. Mentions of `risk-compliance-core` in the skills are optional hand-offs. Add that plugin for the shared `scoping`, `control-matrix`, and `issue-writeup` skills; installing from the GitHub marketplace adds it automatically.
+
+## Data and behavior
+
+The plugin is Markdown and JSON only: skills, references, schemas, and templates. It has no hooks, scripts, or MCP servers, and it does not send or store data itself. `.mcp.example.json` is an inactive template that Claude does not load, and it connects to nothing until a firm replaces it with an approved server. Documents you share are handled by Claude under your account's terms, so apply your firm's rules for confidential supervisory information, suspicious-activity material, and personal data before sharing them.
+
+## Human review and AI disclosure
+
+Intended for second-line and compliance professionals. Outputs are AI-assisted drafts. A qualified person with authority to change an output must review it before it is delivered or used in a decision, and stays accountable for it. Where an output supports advice to an individual or a decision about an individual, such as credit, insurance, employment, or legal rights, tell that individual AI was used to produce it. The plugin does not make credit, underwriting, claims, filing, or other final decisions, gives no personalized investment advice, and does not execute transactions or move money. It is not legal or regulatory advice.

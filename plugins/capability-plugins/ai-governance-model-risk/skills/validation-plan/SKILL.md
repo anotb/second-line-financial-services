@@ -105,7 +105,7 @@ Tier and validation type drive depth per pillar. Architecture drives the attack-
 
 Default to drafting the plan against `templates/default-output.md`. Render as Word for committee approval, or another format the audience asks for; a model risk committee usually wants a Word memo to file with the meeting record. Produce the structured record at `schemas/validation-plan.schema.json` when downstream consumers (the validation report, `model-card-builder`, `ai-governance-reviewer`) need it. The reviewer attestation block is filled by the human reviewer; the plan is filed only after.
 
-Downstream consumers: the validation report skill (planned in `ai-validation-and-monitoring`; see [ROADMAP.md](../../../../ROADMAP.md)) consumes this plan as its scope contract; `model-card-builder` consumes the outcomes-analysis and monitoring blocks for the firm-side card refresh; the `ai-governance-reviewer` agent consumes the structured object for second-line challenge; the model risk committee approves it before testing executes. The schema is the input contract for those consumers; additive changes only, never silent renames. Breaking changes ship as a versioned migration with the consumers told in advance.
+Downstream consumers: the validation report skill (planned in `ai-validation-and-monitoring`; see [ROADMAP.md](https://github.com/anotb/second-line-financial-services/blob/main/ROADMAP.md)) consumes this plan as its scope contract; `model-card-builder` consumes the outcomes-analysis and monitoring blocks for the firm-side card refresh; the `ai-governance-reviewer` agent consumes the structured object for second-line challenge; the model risk committee approves it before testing executes. The schema is the input contract for those consumers; additive changes only, never silent renames. Breaking changes ship as a versioned migration with the consumers told in advance.
 
 ## Pointers
 
@@ -117,3 +117,9 @@ Downstream consumers: the validation report skill (planned in `ai-validation-and
 - `schemas/validation-plan.schema.json` — structured-output contract.
 - `examples/` — credit-scoring ML annual revalidation; vendor-hosted GenAI customer-service initial validation.
 - `TROUBLESHOOTING.md` — recurring defects.
+
+## Human review and AI disclosure
+
+Open the deliverable with this line, and remove it only after the review below: `AI-assisted draft. Requires review by a qualified person before use.`
+
+A qualified person with authority to change the output reviews it before it is delivered or relied on, and stays accountable for it. Where the output supports advice to an individual or a decision about an individual (credit, insurance underwriting, pricing or claims, employment, legal rights, or similar), that individual must be told AI was used to produce it. This skill does not make final decisions, file with a regulator, notify customers, execute transactions, or move money or other financial assets.

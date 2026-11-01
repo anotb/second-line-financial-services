@@ -90,3 +90,9 @@ The plugin-level shared references (`references/source-map.md`, `references/poli
 Default to drafting against `templates/default-output.md`. Render as Word, Excel, or Markdown when the audience or workflow asks for it. Produce the structured record at `schemas/test-plan.schema.json` when downstream automation or a registered consumer needs it.
 
 Downstream consumers: `control-sampling` reads `control_id` and `population` to build the sampling memo and write back `sampling_id`; `evidence-request-builder` reads `criteria` and `procedures` to draft the evidence request list and write back `evidence_request_list_id`; `workpaper-drafter` reads the full plan as the contract for the workpaper; `qa-workpaper` reads the plan and the workpaper together to assess sufficiency. The schema is the cross-skill contract; additive changes only. Add fields, do not rename or repurpose them. A breaking change is a versioned migration with the downstream skills told in advance.
+
+## Human review and AI disclosure
+
+Open the deliverable with this line, and remove it only after the review below: `AI-assisted draft. Requires review by a qualified person before use.`
+
+A qualified person with authority to change the output reviews it before it is delivered or relied on, and stays accountable for it. Where the output supports advice to an individual or a decision about an individual (credit, insurance underwriting, pricing or claims, employment, legal rights, or similar), that individual must be told AI was used to produce it. This skill does not make final decisions, file with a regulator, notify customers, execute transactions, or move money or other financial assets.

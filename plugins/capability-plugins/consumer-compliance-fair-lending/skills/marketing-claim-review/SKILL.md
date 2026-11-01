@@ -107,3 +107,9 @@ Conduct overlap with UDAAP is in `references/cross-cutting/conduct.md` and loads
 ## Output
 
 The deliverable is a Word memo. The skill defines the artifact substance (named sections, per-asset fields, populated content per `templates/default-output.md`) and delegates rendering to the `docx` skill in the `document-skills` plugin. The marketing-compliance committee, the head of marketing review, the CCO, or counsel acts on the memo; counsel sets privilege posture. Downstream consumers: `udaap-risk-review` reads the memo where the asset-level finding chains to a product-level UDAAP read; `fair-lending-test-plan` reads the distribution and targeting findings where the parallel ECOA / FHA theory needs a disparity test; `complaint-theme-analysis` reads the privacy and disclosure findings where the asset-level pattern feeds a complaint cluster.
+
+## Human review and AI disclosure
+
+Open the deliverable with this line, and remove it only after the review below: `AI-assisted draft. Requires review by a qualified person before use.`
+
+A qualified person with authority to change the output reviews it before it is delivered or relied on, and stays accountable for it. Where the output supports advice to an individual or a decision about an individual (credit, insurance underwriting, pricing or claims, employment, legal rights, or similar), that individual must be told AI was used to produce it. This skill does not make final decisions, file with a regulator, notify customers, execute transactions, or move money or other financial assets.

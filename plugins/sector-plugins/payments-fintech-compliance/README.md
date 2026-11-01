@@ -17,6 +17,12 @@ This is a strict sector-overlay plugin. It ships skills that are genuinely payme
 | `payment-operations-incident-review` | Payments-incident review pack: chronology, customer-impact population, rail-by-rail Reg E / NACHA / card-network / FedNow / RTP notification triggers, sponsor-bank reporting log, root cause, remediation, and forward-control feed back to `fintech-partner-controls` and `payments-risk-assessment`. |
 | `payments-risk-assessment` | Matrix-shaped risk assessment denominated by rail, customer segment, and geography: fraud, AML / sanctions, operational resilience, third-party / sponsor-bank dependence, customer-harm / UDAAP exposure, and reporting controls. Suitable for sponsor-bank annual review, state MTL exam preparation, internal audit kickoff, or enterprise risk committee read-out. |
 
+## Try it
+
+- Assess the risks of a fintech adding instant-payment send capability through a sponsor bank.
+- Review a fictional payment-operations incident in which a duplicate ACH file was released.
+- Review the controls for an open-banking data-sharing program under Section 1033.
+
 ## Payments overlays into capability skills
 
 - `third-party-operational-resilience/vendor-diligence` — Interagency TPRM (June 2023), 2024 OCC / FRB / FDIC Joint Statement on Bank-Fintech Arrangements, NACHA Third-Party Sender posture, MSB / state MTL diligence, BIN-sponsor diligence, payments-specific fourth-party register.
@@ -57,15 +63,26 @@ The payments-fintech regulatory pipeline has been unusually active in 2023-2026 
 - `references/` — plugin-level shared references: payments source map, policy-control library rows, named decision forums.
 - `schemas/` — payments-specific artifacts.
 
+## Operating posture
+
+The skills draft second-line work product for qualified review by the firm's Head of Compliance, BSA Officer, Head of TPRM at the sponsor bank, Head of Payment Operations, Head of Risk, General Counsel, or external counsel. They do not approve filings, file SARs, file regulatory reports, certify compliance programs, sign customer-facing notices, certify FBO subledger reconciliations, close issues, decline counterparties, or produce filed work product. Categorical money-transmitter-status assertions are out of scope; the right answer is configuration-specific against the FinCEN administrative-ruling library and the state-by-state MTL footprint, and a qualified human reviewer must make that call. Every output is staged for human sign-off.
+
 ## Install
 
-```bash
-claude plugin marketplace add /path/to/second-line-financial-services
-claude plugin install payments-fintech-compliance@second-line-financial-services
+In Claude Code:
+
+```
+/plugin install payments-fintech-compliance --marketplace anotb/second-line-financial-services
 ```
 
 Pair with `regulatory-change-management`, `risk-compliance-core`, `risk-reporting`, `compliance-testing`, `financial-crime-governance`, `consumer-compliance-fair-lending`, `third-party-operational-resilience`, and `ai-governance-model-risk` for the full second-line stack.
 
-## Operating posture
+This plugin works on its own. Mentions of `risk-compliance-core` in the skills are optional hand-offs. Add that plugin for the shared `scoping`, `control-matrix`, and `issue-writeup` skills; installing from the GitHub marketplace adds it automatically.
 
-The skills draft second-line work product for qualified review by the firm's Head of Compliance, BSA Officer, Head of TPRM at the sponsor bank, Head of Payment Operations, Head of Risk, General Counsel, or external counsel. They do not approve filings, file SARs, file regulatory reports, certify compliance programs, sign customer-facing notices, certify FBO subledger reconciliations, close issues, decline counterparties, or produce filed work product. Categorical money-transmitter-status assertions are out of scope; the right answer is configuration-specific against the FinCEN administrative-ruling library and the state-by-state MTL footprint, and a qualified human reviewer must make that call. Every output is staged for human sign-off.
+## Data and behavior
+
+The plugin is Markdown and JSON only: skills, references, schemas, and templates. It has no hooks, scripts, or MCP servers, and it does not send or store data itself. `.mcp.example.json` is an inactive template that Claude does not load, and it connects to nothing until a firm replaces it with an approved server. Documents you share are handled by Claude under your account's terms, so apply your firm's rules for confidential supervisory information, suspicious-activity material, and personal data before sharing them.
+
+## Human review and AI disclosure
+
+Intended for second-line and compliance professionals. Outputs are AI-assisted drafts. A qualified person with authority to change an output must review it before it is delivered or used in a decision, and stays accountable for it. Where an output supports advice to an individual or a decision about an individual, such as credit, insurance, employment, or legal rights, tell that individual AI was used to produce it. The plugin does not make credit, underwriting, claims, filing, or other final decisions, gives no personalized investment advice, and does not execute transactions or move money. It is not legal or regulatory advice.

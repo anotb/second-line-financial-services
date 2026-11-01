@@ -89,3 +89,9 @@ The plugin-level shared references (`references/source-map.md`, `references/poli
 The deliverable is a Word memo. Render it via the `docx` skill (in the `document-skills` plugin) using the named sections from `templates/default-output.md`. The pack has a structured spine (background and trigger; beneficial ownership; derogatory information; PEP / sanctions / jurisdiction; SoW / SoF; rationale and activity; sanctions screening; conduct; monitoring plan; open issues; gates and decision options; sign-off and source trace) and is built for human review by the EDD committee or designated approver.
 
 Downstream consumers: a relationship-exit deliberation memo (where the firm has one) consumes the pack as its basis; `aml-model-monitoring` consumes any tuning implication flagged here; `sar-decision-qa` reads the EDD posture as context where a downstream alert closes against the same customer; the firm's program-level BSA reporting reads patterns across packs over time.
+
+## Human review and AI disclosure
+
+Open the deliverable with this line, and remove it only after the review below: `AI-assisted draft. Requires review by a qualified person before use.`
+
+A qualified person with authority to change the output reviews it before it is delivered or relied on, and stays accountable for it. Where the output supports advice to an individual or a decision about an individual (credit, insurance underwriting, pricing or claims, employment, legal rights, or similar), that individual must be told AI was used to produce it. This skill does not make final decisions, file with a regulator, notify customers, execute transactions, or move money or other financial assets.

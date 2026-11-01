@@ -1,13 +1,15 @@
 {
   "name": "consumer-compliance-fair-lending",
-  "version": "0.2.0",
+  "displayName": "Second Line Consumer Compliance",
+  "version": "0.5.0",
   "description": "Consumer compliance and fair lending skills for fair-lending testing, adverse action review, UDAAP risk review, Section 1071 readiness, complaint themes, and marketing claim review.",
+  "icon": "./assets/icon.png",
   "author": {
-    "name": "Second Line Financial Services contributors"
+    "name": "anot",
+    "url": "https://unsol.dev"
   },
   "license": "MIT",
   "homepage": "https://github.com/anotb/second-line-financial-services",
   "repository": "https://github.com/anotb/second-line-financial-services",
-  "keywords": ["claude-code", "consumer-compliance", "fair-lending", "ecoa", "regulation-b", "adverse-action", "udaap", "cfpb", "section-1071", "marketing-review", "complaint-management", "hmda", "reg-z", "second-line"],
-  "dependencies": ["risk-compliance-core"]
+  "keywords": ["claude-code", "consumer-compliance", "fair-lending", "ecoa", "regulation-b", "adverse-action", "udaap", "cfpb", "section-1071", "marketing-review", "complaint-management", "hmda", "reg-z", "second-line"]
 }

@@ -1,13 +1,15 @@
 {
   "name": "third-party-operational-resilience",
-  "version": "0.2.0",
+  "displayName": "Second Line Third-Party & Resilience",
+  "version": "0.5.0",
   "description": "Third-party risk and operational resilience skills for vendor diligence, criticality assessment, DORA registers, contract gaps, exit plans, resilience testing, and concentration risk.",
+  "icon": "./assets/icon.png",
   "author": {
-    "name": "Second Line Financial Services contributors"
+    "name": "anot",
+    "url": "https://unsol.dev"
   },
   "license": "MIT",
   "homepage": "https://github.com/anotb/second-line-financial-services",
   "repository": "https://github.com/anotb/second-line-financial-services",
-  "keywords": ["claude-code", "third-party-risk", "tprm", "vendor-diligence", "operational-resilience", "dora", "occ-2023-17", "ffiec", "criticality-assessment", "exit-plan", "concentration-risk", "ict-risk", "fintech-partner", "bank-fintech", "second-line"],
-  "dependencies": ["risk-compliance-core"]
+  "keywords": ["claude-code", "third-party-risk", "tprm", "vendor-diligence", "operational-resilience", "dora", "occ-2023-17", "ffiec", "criticality-assessment", "exit-plan", "concentration-risk", "ict-risk", "fintech-partner", "bank-fintech", "second-line"]
 }

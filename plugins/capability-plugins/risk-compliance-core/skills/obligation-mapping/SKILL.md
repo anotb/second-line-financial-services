@@ -107,3 +107,9 @@ The register in `templates/default-output.md` shape and the structured record pe
 - `schemas/obligation-register.schema.json` — structured-output contract.
 - `examples/` — CFPB Section 1071 obligation register for a community bank; FFIEC BSA/AML CDD obligation register for a payments fintech bank-sponsor partnership.
 - `TROUBLESHOOTING.md` — recurring defects in obligation registers.
+
+## Human review and AI disclosure
+
+Open the deliverable with this line, and remove it only after the review below: `AI-assisted draft. Requires review by a qualified person before use.`
+
+A qualified person with authority to change the output reviews it before it is delivered or relied on, and stays accountable for it. Where the output supports advice to an individual or a decision about an individual (credit, insurance underwriting, pricing or claims, employment, legal rights, or similar), that individual must be told AI was used to produce it. This skill does not make final decisions, file with a regulator, notify customers, execute transactions, or move money or other financial assets.

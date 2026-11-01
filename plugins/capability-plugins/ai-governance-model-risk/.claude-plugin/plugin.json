@@ -1,13 +1,15 @@
 {
   "name": "ai-governance-model-risk",
-  "version": "0.2.0",
+  "displayName": "Second Line AI Governance & Model Risk",
+  "version": "0.5.0",
   "description": "AI governance and model risk skills for AI intake, risk tiering, model cards, validation planning, agentic controls, EU AI Act triage, AI vendor review, and board risk packs.",
+  "icon": "./assets/icon.png",
   "author": {
-    "name": "Second Line Financial Services contributors"
+    "name": "anot",
+    "url": "https://unsol.dev"
   },
   "license": "MIT",
   "homepage": "https://github.com/anotb/second-line-financial-services",
   "repository": "https://github.com/anotb/second-line-financial-services",
-  "keywords": ["claude-code", "ai-governance", "model-risk", "mrm", "sr-11-7", "occ-2026-13", "nist-ai-rmf", "iso-42001", "eu-ai-act", "model-card", "validation-plan", "agentic-ai", "genai", "rag", "llm-vendor-evidence", "prompt-injection", "naic-ai-bulletin", "nydfs-ai", "second-line"],
-  "dependencies": ["risk-compliance-core"]
+  "keywords": ["claude-code", "ai-governance", "model-risk", "mrm", "sr-11-7", "occ-2026-13", "nist-ai-rmf", "iso-42001", "eu-ai-act", "model-card", "validation-plan", "agentic-ai", "genai", "rag", "llm-vendor-evidence", "prompt-injection", "naic-ai-bulletin", "nydfs-ai", "second-line"]
 }

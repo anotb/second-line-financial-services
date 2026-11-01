@@ -2,7 +2,7 @@
   "name": "second-line-financial-services",
   "description": "Plugins for second-line and 1.5-line financial-services work: GRC primitives, regulatory change, AI / model risk, third-party / operational resilience, controls testing, risk reporting, financial crime, consumer compliance and fair lending, plus banking, insurance, capital markets, and payments / fintech sector overlays.",
   "owner": {
-    "name": "Second Line Financial Services contributors"
+    "name": "anot"
   },
   "plugins": [
     {
@@ -19,6 +19,7 @@
     {
       "name": "regulatory-change-management",
       "source": "./plugins/capability-plugins/regulatory-change-management",
+      "dependencies": ["risk-compliance-core"],
       "description": "Regulatory change management skills for impact assessment, obligation extraction, policy diffing, implementation planning, and exam brief preparation.",
       "license": "MIT",
       "homepage": "https://github.com/anotb/second-line-financial-services",
@@ -30,6 +31,7 @@
     {
       "name": "ai-governance-model-risk",
       "source": "./plugins/capability-plugins/ai-governance-model-risk",
+      "dependencies": ["risk-compliance-core"],
       "description": "AI governance and model risk skills for AI intake, risk tiering, model cards, validation planning, agentic controls, EU AI Act triage, AI vendor review, and board risk packs.",
       "license": "MIT",
       "homepage": "https://github.com/anotb/second-line-financial-services",
@@ -41,6 +43,7 @@
     {
       "name": "third-party-operational-resilience",
       "source": "./plugins/capability-plugins/third-party-operational-resilience",
+      "dependencies": ["risk-compliance-core"],
       "description": "Third-party risk and operational resilience skills for vendor diligence, criticality assessment, DORA registers, contract gaps, exit plans, resilience testing, and concentration risk.",
       "license": "MIT",
       "homepage": "https://github.com/anotb/second-line-financial-services",
@@ -52,6 +55,7 @@
     {
       "name": "compliance-testing",
       "source": "./plugins/capability-plugins/compliance-testing",
+      "dependencies": ["risk-compliance-core"],
       "description": "Compliance and controls testing skills for test plans, sampling, evidence requests, workpapers, exception analysis, issue drafting, and QA review.",
       "license": "MIT",
       "homepage": "https://github.com/anotb/second-line-financial-services",
@@ -63,6 +67,7 @@
     {
       "name": "risk-reporting",
       "source": "./plugins/capability-plugins/risk-reporting",
+      "dependencies": ["risk-compliance-core"],
       "description": "Risk and regulatory reporting skills for risk committee packs, BCBS 239 gap assessment, KRI commentary, SEC cyber disclosure readiness, attestations, and management responses.",
       "license": "MIT",
       "homepage": "https://github.com/anotb/second-line-financial-services",
@@ -74,6 +79,7 @@
     {
       "name": "financial-crime-governance",
       "source": "./plugins/capability-plugins/financial-crime-governance",
+      "dependencies": ["risk-compliance-core"],
       "description": "Financial crime governance skills for CDD, SAR decision QA, AML monitoring model governance, sanctions screening QA, EDD escalation, and negative-news triage.",
       "license": "MIT",
       "homepage": "https://github.com/anotb/second-line-financial-services",
@@ -85,6 +91,7 @@
     {
       "name": "consumer-compliance-fair-lending",
       "source": "./plugins/capability-plugins/consumer-compliance-fair-lending",
+      "dependencies": ["risk-compliance-core"],
       "description": "Consumer compliance and fair lending skills for fair-lending testing, adverse action review, UDAAP risk review, Section 1071 readiness, complaint themes, and marketing claim review.",
       "license": "MIT",
       "homepage": "https://github.com/anotb/second-line-financial-services",
@@ -96,6 +103,7 @@
     {
       "name": "banking-risk-compliance",
       "source": "./plugins/sector-plugins/banking-risk-compliance",
+      "dependencies": ["risk-compliance-core"],
       "description": "Banking-sector overlays for supervision readiness, credit risk governance, deposit operations controls, and bank-fintech partnership review.",
       "license": "MIT",
       "homepage": "https://github.com/anotb/second-line-financial-services",
@@ -107,6 +115,7 @@
     {
       "name": "insurance-risk-compliance",
       "source": "./plugins/sector-plugins/insurance-risk-compliance",
+      "dependencies": ["risk-compliance-core"],
       "description": "Insurance-sector overlays for AI triage, life and health pricing governance, claims AI controls, and outsourcing resilience.",
       "license": "MIT",
       "homepage": "https://github.com/anotb/second-line-financial-services",
@@ -118,6 +127,7 @@
     {
       "name": "capital-markets-asset-management-compliance",
       "source": "./plugins/sector-plugins/capital-markets-asset-management-compliance",
+      "dependencies": ["risk-compliance-core"],
       "description": "Capital markets and asset-management overlays for adviser exam readiness, marketing evidence, best-execution surveillance, and fund board reporting.",
       "license": "MIT",
       "homepage": "https://github.com/anotb/second-line-financial-services",
@@ -129,6 +139,7 @@
     {
       "name": "payments-fintech-compliance",
       "source": "./plugins/sector-plugins/payments-fintech-compliance",
+      "dependencies": ["risk-compliance-core"],
       "description": "Payments and fintech overlays for payments risk assessment, fintech partner controls, payment operations incidents, and open-banking data controls.",
       "license": "MIT",
       "homepage": "https://github.com/anotb/second-line-financial-services",

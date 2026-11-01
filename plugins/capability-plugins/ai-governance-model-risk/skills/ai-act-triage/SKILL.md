@@ -99,3 +99,9 @@ Downstream consumers: `model-card-builder` pulls the Annex IV documentation delt
 - `schemas/ai-act-triage.schema.json` — structured-output contract.
 - `examples/` — public-source-derived anonymised scenarios (insurance pricing high-risk path; internal tool minimal-risk path).
 - `TROUBLESHOOTING.md` — recurring defects in triage records.
+
+## Human review and AI disclosure
+
+Open the deliverable with this line, and remove it only after the review below: `AI-assisted draft. Requires review by a qualified person before use.`
+
+A qualified person with authority to change the output reviews it before it is delivered or relied on, and stays accountable for it. Where the output supports advice to an individual or a decision about an individual (credit, insurance underwriting, pricing or claims, employment, legal rights, or similar), that individual must be told AI was used to produce it. This skill does not make final decisions, file with a regulator, notify customers, execute transactions, or move money or other financial assets.

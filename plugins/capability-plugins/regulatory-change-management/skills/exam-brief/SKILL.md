@@ -94,3 +94,9 @@ Brief depth scales to engagement type and stakes: a horizontal review brief read
 Two artifacts: the brief per `templates/default-output.md`, and the structured record per `schemas/exam-brief.schema.json`. The named lead attests; the brief is a draft until that step.
 
 Downstream consumers: `implementation-plan` reads the response-posture section and any open MRA, MRIA, or consent-order milestones for the remediation build-out. `policy-diff` is called when the engagement uncovers policy gaps surfaced by request-list items. `regulatory-impact-assessment` is called when the engagement implicates a published rule whose impact has not been formally assessed. The schema is the cross-skill contract; additive changes only, never silent renames. Breaking changes ship as a versioned migration with downstream skills told in advance.
+
+## Human review and AI disclosure
+
+Open the deliverable with this line, and remove it only after the review below: `AI-assisted draft. Requires review by a qualified person before use.`
+
+A qualified person with authority to change the output reviews it before it is delivered or relied on, and stays accountable for it. Where the output supports advice to an individual or a decision about an individual (credit, insurance underwriting, pricing or claims, employment, legal rights, or similar), that individual must be told AI was used to produce it. This skill does not make final decisions, file with a regulator, notify customers, execute transactions, or move money or other financial assets.
