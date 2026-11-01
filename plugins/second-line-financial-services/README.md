@@ -191,7 +191,7 @@ If you installed one of the earlier separate plugins, such as `risk-reporting`, 
 
 ## Data and behavior
 
-The plugin is Markdown and JSON only: skills, references, schemas, and templates. It has no hooks, scripts, or MCP servers, and it does not send or store data itself. Documents you share are handled by Claude under your account's terms, so apply your firm's rules for confidential supervisory information, suspicious-activity material, and personal data before sharing them.
+The plugin is Markdown and JSON only: skills, references, schemas, and templates. It has no hooks, scripts, or MCP servers, and it does not send or store data itself. Documents you share are handled by Claude under your account's terms, so apply your firm's rules for confidential supervisory information, suspicious-activity material, and personal data before sharing them. See [PRIVACY.md](PRIVACY.md) and [TERMS.md](TERMS.md).
 
 ## Human review and AI disclosure
 
