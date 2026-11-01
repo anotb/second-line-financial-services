@@ -61,9 +61,9 @@ The pack has six named body sections plus a tail. Walk them in the order the con
 This skill is banking-sector-only; `references/sector-overlays.md#banking` is loaded automatically and carries the bank-side lens differentiators. Cross-cutting overlays load when the scope flags them.
 
 - `references/cross-cutting.md#cyber` is the load-bearing companion for BaaS sponsor-program and embedded-lending relationships, for any fintech that holds customer NPI or sits in the authentication or fraud-decision path, and for any fintech whose serving environment is examined under FFIEC IT Handbook expectations. The CISO function co-reviews on cyber-flagged partnerships and co-decides on residual-risk acceptance.
-- `references/cross-cutting.md#privacy` loads when the fintech receives consumer financial information from the bank or shares it with the bank. Reg P and the GLBA Safeguards Rule flow down contractually; state privacy laws (CCPA / CPRA, Texas, Virginia, Colorado) reach the partnership where the fintech operates in those footprints.
-- `references/cross-cutting.md#conduct` loads when the fintech is customer-facing on a deposit, payments, or credit product. The CFPB UDAAP examination procedures, the FDIC Compliance Examination Manual deposit-program sections, and the OCC consumer-compliance handbook drive the customer-facing-controls section's depth.
-- `references/cross-cutting.md#climate` does not load.
+- Privacy applies when the fintech receives consumer financial information from the bank or shares it with the bank. Reg P and the GLBA Safeguards Rule flow down contractually; state privacy laws (CCPA / CPRA, Texas, Virginia, Colorado) reach the partnership where the fintech operates in those footprints.
+- Conduct applies when the fintech is customer-facing on a deposit, payments, or credit product. The CFPB UDAAP examination procedures, the FDIC Compliance Examination Manual deposit-program sections, and the OCC consumer-compliance handbook drive the customer-facing-controls section's depth.
+- Climate does not apply.
 
 Loading an overlay the engagement does not implicate adds noise without challenge value. Loading none when one applies is the more common failure mode.
 

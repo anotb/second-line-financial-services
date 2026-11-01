@@ -80,8 +80,7 @@ What does not flex: every material claim cites a source from `references/source-
 
 - `references/source-anchors.md` — citations and excerpts for the named anchors (federal consumer-EFT regime, truth-in-savings regime, funds-availability regime, CIP rule, beneficial-ownership rule, FBO-account guidance, deposit-insurance regulation, misrepresentation rule, IT-handbook retail payment systems booklet, deposits booklet).
 - `references/cross-cutting.md#conduct` — UDAAP themes on overdraft, NSF, junk-fee enforcement, deposit-insurance misrepresentation, dispute-timing failures presented as both consumer-EFT and UDAAP findings.
-- `references/cross-cutting.md#cyber` — ATM-network, online-banking authentication, ACH-origination cyber exposure (loaded conditionally — payments-fintech-style overlay, where present).
-- `references/cross-cutting.md#privacy` — consumer-financial-information handling under the federal privacy regime (loaded conditionally).
+- Cyber and privacy have no overlay here. Where in scope, cover ATM-network, online-banking authentication, and ACH-origination cyber exposure, and consumer-financial-information handling under the federal privacy regime.
 - `references/sector-overlays.md#banking` — banking-only flavour; sector-overlay loading is fixed for this skill.
 - `references/firm-overlay.md` — firm-installed taxonomy, named systems-of-record, fee-policy thresholds beyond the regulatory baseline; consumed when present.
 - `templates/default-output.md` — matrix template denominated by the thirteen process areas with the FBO overlay as a sub-section.

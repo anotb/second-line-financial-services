@@ -99,7 +99,7 @@ The four group ratings roll up from the principle ratings within each group; the
 
 ### Sector and cross-cutting overlays
 
-Sector overlays (`references/sector-overlays.md#banking` is the primary; `references/sector-overlays.md#insurance`, `references/sector-overlays.md#capital-markets`, `references/sector-overlays.md#payments-fintech` are light overlays for cases where a non-bank entity adopts BCBS 239 voluntarily or where a broker-dealer subsidiary inherits the parent's posture) load when the scope names the sector. Cross-cutting overlays (`references/cross-cutting.md#cyber`, `climate.md`) load when the scope flags the topic. The overlay's named criteria land inside the principle blocks they apply to (climate-data lineage inside Principle 3 and 6; cyber-control failures affecting risk-data infrastructure inside Principle 1 and 2). Loading overlays the engagement does not implicate adds noise without challenge value.
+Sector overlays (`references/sector-overlays.md#banking` is the primary; `references/sector-overlays.md#insurance`, `references/sector-overlays.md#capital-markets`, `references/sector-overlays.md#payments-fintech` are light overlays for cases where a non-bank entity adopts BCBS 239 voluntarily or where a broker-dealer subsidiary inherits the parent's posture) load when the scope names the sector. This skill has no cross-cutting overlay file. When the scope flags climate or cyber, place climate-data lineage inside Principle 3 and 6, and cyber-control failures affecting risk-data infrastructure inside Principle 1 and 2. Loading overlays the engagement does not implicate adds noise without challenge value.
 
 ## Quality bar
 
@@ -121,7 +121,6 @@ The reviewer attestation is filled by the human reviewer, not the skill. The ass
 
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
 - `references/sector-overlays.md` — sector overlays loaded from scope.
-- `references/cross-cutting.md` — cross-cutting overlays loaded from scope.
 - `references/firm-overlay.md` — firm policy, taxonomy, named owners, named systems, internal data-quality KPI set (consumed when present; never committed in this repo).
 - `templates/default-output.md` — assessment template.
 - `schemas/bcbs239-gap-assessment.schema.json` — structured-output contract.
