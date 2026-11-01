@@ -10,6 +10,8 @@ Prepares each plugin folder to be submitted on its own to Anthropic's plugin dir
 - Every README: `Try it` example prompts, a one-step install line, `Data and behavior`, and `Human review and AI disclosure`. `ROADMAP.md` links are now absolute because installs receive only the plugin folder.
 - Every skill: a `Human review and AI disclosure` section that labels the deliverable as an AI-assisted draft, requires review by a qualified person, and requires telling an affected individual that AI was used.
 
+- The inactive `.mcp.example.json` template moves out of every plugin folder to `docs/examples/mcp.example.json`, so installs carry no MCP configuration of any kind.
+
 ### `risk-compliance-core` dependency moved to the marketplace
 
 `dependencies` moves from each `plugin.json` to its entry in `marketplace.json`. Installs from this marketplace still auto-pull `risk-compliance-core`. Directory copies no longer declare it: Claude Code keeps a plugin disabled when a declared dependency is missing, chat and Cowork ignore dependencies, and the skills only reference `risk-compliance-core` as an optional hand-off.

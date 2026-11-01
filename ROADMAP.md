@@ -58,7 +58,7 @@ Drop schemas a plugin's skills don't actually use, so each plugin only ships the
 ### Other
 
 - Firm-overlay starter: a worked example `references/firm-overlay.md` showing how a firm threads policy taxonomy, role labels, system-of-record names, decision forums, and committee templates into the skills.
-- Approved MCP connectors for GRC, policy, document management, ticketing, data lineage, model inventory, vendor inventory, and incident management systems. Today the repo ships only `.mcp.example.json` placeholders.
+- Approved MCP connectors for GRC, policy, document management, ticketing, data lineage, model inventory, vendor inventory, and incident management systems. Today the repo ships only `docs/examples/mcp.example.json` placeholders.
 - EU overlay expansion across sector skills. UK still see-also.
 - Cookbook layer for upstream PR candidates to `anthropics/financial-services` (initial candidates align with the agent rebuild above once the agents land).
 

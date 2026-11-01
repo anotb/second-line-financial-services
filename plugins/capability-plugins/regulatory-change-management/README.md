@@ -49,7 +49,6 @@ Public anchors only. The substantive set varies by skill: the FRB / OCC / FDIC S
 - `skills/` — the five skills above. Each ships its own `SKILL.md`, `references/source-anchors.md`, sector overlays where applicable, `templates/default-output.md`, and (where useful) `schemas/` and `examples/`.
 - `references/` — plugin-level shared references: source map, policy and control library, public regulatory scenarios, named decision forums.
 - `schemas/` — JSON schemas. `obligation.schema.json` is the cross-skill anchor; artifact-specific schemas live with each skill under `<skill>/schemas/`. Schema dedup is tracked in [ROADMAP.md](https://github.com/anotb/second-line-financial-services/blob/main/ROADMAP.md).
-- `.mcp.example.json` — illustrative MCP configuration for self-hosted reference servers.
 
 ## Operating posture
 
@@ -67,7 +66,7 @@ This plugin works on its own. Mentions of `risk-compliance-core` in the skills a
 
 ## Data and behavior
 
-The plugin is Markdown and JSON only: skills, references, schemas, and templates. It has no hooks, scripts, or MCP servers, and it does not send or store data itself. `.mcp.example.json` is an inactive template that Claude does not load, and it connects to nothing until a firm replaces it with an approved server. Documents you share are handled by Claude under your account's terms, so apply your firm's rules for confidential supervisory information, suspicious-activity material, and personal data before sharing them.
+The plugin is Markdown and JSON only: skills, references, schemas, and templates. It has no hooks, scripts, or MCP servers, and it does not send or store data itself. Documents you share are handled by Claude under your account's terms, so apply your firm's rules for confidential supervisory information, suspicious-activity material, and personal data before sharing them.
 
 ## Human review and AI disclosure
 
