@@ -18,14 +18,16 @@ This repo deliberately does not use `plugins/vertical-plugins`. The word vertica
 
 The resulting taxonomy is:
 
-- `plugins/capability-plugins/` for reusable second-line functions.
-- `plugins/sector-plugins/` for banking, insurance, capital markets and asset management, and payments or fintech overlays.
+- Capability skill groups for reusable second-line functions.
+- Sector skill groups for banking, insurance, capital markets and asset management, and payments or fintech overlays.
 
-Agent plugins (planned for a later release): self-contained workflow agents that orchestrate capability and sector skills. See [ROADMAP.md](../ROADMAP.md) for the rebuild target.
+All of them live in one plugin, `plugins/second-line-financial-services/`. The repo originally held 12 plugins, one per group. It merged them because one install and one directory listing are simpler for users and maintainers, and because Anthropic's directory takes one submission per folder.
+
+Agents (planned for a later release): workflow agents in the same plugin that orchestrate its skills. See [ROADMAP.md](../ROADMAP.md) for the rebuild target.
 
 ## Subagent convention
 
-When agent plugins ship, each will include a primary workflow agent and focused worker subagents, following Claude Code's plugin agent pattern, where agents are specialized Markdown files under `agents/` with frontmatter for name, description, model, effort, max turns, and tool scoping.
+When agents ship, each will include a primary workflow agent and focused worker subagents, following Claude Code's plugin agent pattern, where agents are specialized Markdown files under `agents/` with frontmatter for name, description, model, effort, max turns, and tool scoping.
 
 ## Commands convention
 

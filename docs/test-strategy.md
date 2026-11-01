@@ -11,6 +11,7 @@
 - Skill frontmatter and default output templates.
 - Agent frontmatter and subagent count for standalone agents.
 - Removed legacy paths and terms.
+- The directory's rules: the 512-file limit, listing-only manifest fields, and phrases its scanner misreads. See [releasing.md](releasing.md).
 
 ## SKILL.md content quality check
 
@@ -18,7 +19,7 @@
 
 - Rule 1, placeholder-text ban. Maintains a verbatim list of filler phrases (seven-step Required process, six-bullet Output format, five-bullet Guardrails block, generic description filler). Any hit means the skill has not been rewritten yet.
 - Rule 2, short listing description. Requires `description` to be 120 characters or fewer, and requires `Best for:` and `Not the right tool when:` (case-insensitive) in the skill body's `When to use` section.
-- Rule 3, source-anchor depth. Requires a sibling `references/source-anchors.md`. Every bullet in that file that contains a URL must also carry a section reference (one of `§`, `Section`, `Bulletin`, `Article`, `Item`, `Principle`, `Rule N`, `Para`, `¶`, `CFR`, `SR`, `FIL`, `FAQ`, or `[verify section]`). URL-only citations fail.
+- Rule 3, source-anchor depth. Requires a sibling `references/source-anchors.md`. Every bullet in that file that contains a URL must carry a section reference, except a `Link:` bullet whose citation block already has one (one of `§`, `Section`, `Bulletin`, `Article`, `Item`, `Principle`, `Rule N`, `Para`, `¶`, `CFR`, `SR`, `FIL`, `FAQ`, or `[verify section]`). URL-only citations fail.
 - Rule 4, duplicate SKILL.md content. Computes pairwise Jaccard similarity over word trigrams of the body text (frontmatter stripped). Flags pairs with more than 50% overlap.
 
 Run after writing or editing a skill. A clean exit is the precondition for declaring the skill done.
@@ -36,11 +37,12 @@ CLI flags:
 ```bash
 python3 scripts/check.py
 python3 scripts/check-skill-content.py
+claude plugin validate plugins/second-line-financial-services --strict --profile directory
+claude plugin validate . --strict
 ```
 
 ## Next tests
 
-- Run `claude plugin validate` on every plugin.
 - Add generated-output golden files from live Claude Code sessions.
 - Validate sample outputs against JSON schemas.
 - Add source-trace coverage checks for generated artifacts.

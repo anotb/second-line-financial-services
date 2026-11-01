@@ -36,15 +36,15 @@ Named, dated regulatory sources this skill anchors to. SKILL.md cites this file 
 
 ## Deposit operations supervisory anchors
 
-- **Comptroller's Handbook — Deposit-Related Credit booklet** [verify current edition and date]. OCC. Process expectations on overdraft programs, hold-policy administration, and consumer-deposit-related credit. https://www.occ.gov/publications-and-resources/publications/comptrollers-handbook/index-comptrollers-handbook.html .
+- **Comptroller's Handbook — Deposit-Related Credit booklet** [verify current edition and date]. OCC. Process expectations on overdraft programs, hold-policy administration, and consumer-deposit-related credit. https://www.occ.gov/publications-and-resources/publications/comptrollers-handbook/index-comptrollers-handbook.html . `[verify section]`
 
-- **Comptroller's Handbook — Bank Operations booklet** [verify current edition and date]. OCC. Deposit-operations process expectations, segregation of duties, reconciliation, and exception handling. https://www.occ.gov/publications-and-resources/publications/comptrollers-handbook/index-comptrollers-handbook.html .
+- **Comptroller's Handbook — Bank Operations booklet** [verify current edition and date]. OCC. Deposit-operations process expectations, segregation of duties, reconciliation, and exception handling. https://www.occ.gov/publications-and-resources/publications/comptrollers-handbook/index-comptrollers-handbook.html . `[verify section]`
 
-- **Comptroller's Handbook — Internal Control booklet** [verify current edition and date]. OCC. Control framework expectations applicable to deposit operations. https://www.occ.gov/publications-and-resources/publications/comptrollers-handbook/index-comptrollers-handbook.html .
+- **Comptroller's Handbook — Internal Control booklet** [verify current edition and date]. OCC. Control framework expectations applicable to deposit operations. https://www.occ.gov/publications-and-resources/publications/comptrollers-handbook/index-comptrollers-handbook.html . `[verify section]`
 
 - **FDIC Risk Management Manual of Examination Policies §3.7 (Other Operational Risks)** [verify current section labels and edition date]. FDIC. Deposit-operations operational-risk expectations. https://www.fdic.gov/regulations/safety/manual/ .
 
-- **FFIEC IT Examination Handbook — Retail Payment Systems booklet** [verify current edition and date]. Interagency. ATM, EFT, and ACH operational and IT-control expectations including deposit-channel controls. https://ithandbook.ffiec.gov/ .
+- **FFIEC IT Examination Handbook — Retail Payment Systems booklet** [verify current edition and date]. Interagency. ATM, EFT, and ACH operational and IT-control expectations including deposit-channel controls. https://ithandbook.ffiec.gov/ . `[verify section]`
 
 ## Garnishments, levies, and federal-benefit-payment protection
 
@@ -54,7 +54,7 @@ Named, dated regulatory sources this skill anchors to. SKILL.md cites this file 
 
 ## Escheatment and dormant accounts
 
-- **State unclaimed-property statutes** — state-by-state. Most states adopt some version of the Revised Uniform Unclaimed Property Act (RUUPA, 2016) or earlier Uniform Unclaimed Property Act (1995) [verify state-by-state adoption]. Dormancy classification triggers (typically 3 to 5 years of customer inactivity), customer-contact attempt cadence, and state escheatment-filing schedules vary by state. https://www.uniformlaws.org/committees/community-home?CommunityKey=4b7c796a-f158-47bc-b5b1-f3f9a6e404fa .
+- **State unclaimed-property statutes** — state-by-state. Most states adopt some version of the Revised Uniform Unclaimed Property Act (RUUPA, 2016) or earlier Uniform Unclaimed Property Act (1995) [verify state-by-state adoption]. Dormancy classification triggers (typically 3 to 5 years of customer inactivity), customer-contact attempt cadence, and state escheatment-filing schedules vary by state. https://www.uniformlaws.org/committees/community-home?CommunityKey=4b7c796a-f158-47bc-b5b1-f3f9a6e404fa . `[verify section]`
 
 ## Privacy and information security (cross-cutting; carry the underlying regulation here)
 
@@ -76,9 +76,9 @@ Named, dated regulatory sources this skill anchors to. SKILL.md cites this file 
 
 - **CFPB Supervisory Highlights (current cycles)** [verify which issues are current as of the analysis date]. Recurring deposit-operations themes: representment fees, surprise overdraft fees, authorised-positive-settled-negative pattern, Reg E §1005.11 dispute-timing failures presented as both Reg E and UDAAP, FDIC-insurance misrepresentation on fintech surfaces, junk-fee themes. https://www.consumerfinance.gov/data-research/research-reports/supervisory-highlights/ .
 
-- **CFPB Circular series** [verify which circulars are current as of the analysis date and which numbers / dates apply]. Examples include Circular 2022-06 on unanticipated overdraft fees [verify current state]. https://www.consumerfinance.gov/compliance/circulars/ .
+- **CFPB Circular series** [verify which circulars are current as of the analysis date and which numbers / dates apply]. Examples include Circular 2022-06 on unanticipated overdraft fees [verify current state]. https://www.consumerfinance.gov/compliance/circulars/ . `[verify section]`
 
-- **CFPB enforcement actions and consent orders** [verify which are current and finalised as of the analysis date]. Use only public defendants in finalised actions for fact-pattern citation. https://www.consumerfinance.gov/enforcement/actions/ .
+- **CFPB enforcement actions and consent orders** [verify which are current and finalised as of the analysis date]. Use only public defendants in finalised actions for fact-pattern citation. https://www.consumerfinance.gov/enforcement/actions/ . `[verify section]`
 
 ## Plugin-level shared references
 

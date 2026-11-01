@@ -6,6 +6,9 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 MAX_PLUGIN_FILES = 512
+LISTING_ONLY_FIELDS = ('icon', 'documentationUrl', 'supportUrl', 'privacyPolicyUrl', 'termsOfServiceUrl')
+SCANNER_PASSWORD_RE = re.compile(r'\b[Pp]ass\b(?! ?-) +(?!through)[A-Za-z/]\S*')
+SCANNER_COMMAND_RE = re.compile(r'\$\d')
 NAME_RE = re.compile(r'^[a-z0-9][a-z0-9-]*[a-z0-9]$|^[a-z0-9]$')
 errors = []
 
@@ -139,11 +142,24 @@ for plugin_dir in sorted(p for p in (ROOT / 'plugins').iterdir() if p.is_dir()):
     check_agents(plugin_dir)
 
 def check_directory_limits():
-    # The plugin directory holds a plugin with more files than this for review.
+    # See docs/releasing.md for what each of these does in the directory's scan.
     for plugin_dir in sorted(p for p in (ROOT / 'plugins').iterdir() if p.is_dir()):
-        count = sum(1 for p in plugin_dir.rglob('*') if p.is_file())
-        if count > MAX_PLUGIN_FILES:
-            err(f'{plugin_dir}: {count} files, over the directory limit of {MAX_PLUGIN_FILES}')
+        files = [p for p in plugin_dir.rglob('*') if p.is_file()]
+        if len(files) > MAX_PLUGIN_FILES:
+            err(f'{plugin_dir}: {len(files)} files, over the directory limit of {MAX_PLUGIN_FILES}')
+        manifest = load_json(plugin_dir / '.claude-plugin' / 'plugin.json')
+        for key in LISTING_ONLY_FIELDS:
+            if key in manifest:
+                err(f'{plugin_dir}: remove {key} from plugin.json; the directory warns on it and the listing already has it')
+        for f in files:
+            if f.suffix not in ('.md', '.json'):
+                continue
+            text = f.read_text(encoding='utf-8')
+            hit = SCANNER_PASSWORD_RE.search(text)
+            if hit:
+                err(f'{f}: "{hit.group(0)}" reads as a password to the directory scanner; reword it')
+            if f.name in ('SKILL.md', 'README.md') and SCANNER_COMMAND_RE.search(text):
+                err(f'{f}: a dollar amount reads as a command to the directory scanner; write USD 50B')
 
 check_marketplace()
 check_no_removed_patterns()

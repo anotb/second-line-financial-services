@@ -20,7 +20,7 @@ Anchor: The OCC Comptroller's Handbook framing on policies, procedures, and writ
 
 What this skill relies on: that the OCC reads written-guidance lifecycle as a supervisory-relevant control under the Heightened Standards framework; that the diff is a lifecycle artifact; that the materiality call, the approver routing, and the training-impact field map to the lifecycle expectations the framework names.
 
-- Comptroller's Handbook index: https://www.occ.gov/publications-and-resources/publications/comptrollers-handbook/index-comptrollers-handbook.html .
+- Comptroller's Handbook index: https://www.occ.gov/publications-and-resources/publications/comptrollers-handbook/index-comptrollers-handbook.html . `[verify section]`
 
 ## Internal-control framing for policy-as-control
 
@@ -60,14 +60,14 @@ Caveats:
 
 Retained as citation anchors only because legacy version-A policies, prior-cycle audit reports, and pre-April-17-2026 examination evidence frequently reference these documents by name. Cite as superseded when reading historical evidence; the operative current standard is the joint interagency revised guidance above.
 
-- https://www.federalreserve.gov/supervisionreg/srletters/sr1107.htm
-- https://www.federalreserve.gov/supervisionreg/srletters/SR2108.htm
+- https://www.federalreserve.gov/supervisionreg/srletters/sr1107.htm `[verify section]`
+- https://www.federalreserve.gov/supervisionreg/srletters/SR2108.htm `[verify section]`
 
 Links to operative joint guidance:
 
-- https://occ.gov/news-issuances/bulletins/2026/bulletin-2026-13a.pdf
-- https://www.federalreserve.gov/supervisionreg/srletters/SR2602.htm
-- https://www.fdic.gov/news/financial-institution-letters/2026/agencies-revise-interagency-model-risk-management-guidance
+- https://occ.gov/news-issuances/bulletins/2026/bulletin-2026-13a.pdf `[verify section]`
+- https://www.federalreserve.gov/supervisionreg/srletters/SR2602.htm `[verify section]`
+- https://www.fdic.gov/news/financial-institution-letters/2026/agencies-revise-interagency-model-risk-management-guidance `[verify section]`
 
 ## Compliance-program written-policy lifecycle
 

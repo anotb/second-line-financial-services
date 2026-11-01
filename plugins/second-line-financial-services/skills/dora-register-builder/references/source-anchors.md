@@ -20,7 +20,7 @@ The named, dated regulatory sources this skill anchors to. SKILL.md cites this f
 
 ## Sub-outsourcing RTS
 
-- **Commission Delegated Regulation (EU) 2025/532 of 24 March 2025** (OJ 2 July 2025, applicable from 22 July 2025) — RTS on sub-contracting of ICT services supporting critical or important functions under DORA. Specifies due diligence, risk assessment, sub-contracting conditions, and contractual-arrangement requirements for the chain supporting a critical or important function. The register's sub-contractor-chain table (`b_06_sub_contractors_chain` in the schema mapping) is the structured artifact the RTS reads back into. https://eur-lex.europa.eu/eli/reg_del/2025/532/oj/eng .
+- **Commission Delegated Regulation (EU) 2025/532 of 24 March 2025** (OJ 2 July 2025, applicable from 22 July 2025) — RTS on sub-contracting of ICT services supporting critical or important functions under DORA. Specifies due diligence, risk assessment, sub-contracting conditions, and contractual-arrangement requirements for the chain supporting a critical or important function. The register's sub-contractor-chain table (`b_06_sub_contractors_chain` in the schema mapping) is the structured artifact the RTS reads back into. https://eur-lex.europa.eu/eli/reg_del/2025/532/oj/eng . `[verify section]`
 
 ## EBA outsourcing register (predecessor and parallel artifact)
 

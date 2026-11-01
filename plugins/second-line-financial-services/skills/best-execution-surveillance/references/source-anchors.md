@@ -15,7 +15,7 @@ Citations and excerpts for the named regulatory anchors this skill relies on. Lo
 - **Citation**: SEC Release No. IA-5248 (June 5, 2019), "Commission Interpretation Regarding Standard of Conduct for Investment Advisers."
 - **What it carries**: Commission's restatement of the fiduciary duty an adviser owes its clients, including the duty of care components (suitability, monitoring, best execution).
 - **Operative for this skill**: The release articulates best execution as a core component of duty of care. Cite this for the doctrinal anchor on the IA side; pair with the older 1986 IM Guidance position when historical context is in scope.
-- **Link**: https://www.sec.gov/rules/interp/2019/ia-5248.pdf
+- **Link**: https://www.sec.gov/rules/interp/2019/ia-5248.pdf `[verify section]`
 - **Section reference**: Section II.A "Duty of Care" — best-execution discussion. [verify exact subsection on analysis date]
 
 ## Investment Company Act §17(e) — affiliated brokerage
@@ -92,7 +92,7 @@ Citations and excerpts for the named regulatory anchors this skill relies on. Lo
 - **Citation**: SEC Division of Examinations annual priorities document, current cycle. [verify which cycle is current on the analysis date]
 - **What it carries**: Current-year examination focus areas. Best-execution practices appear annually for advisers and broker-dealers; specific sub-themes (off-exchange routing, payment for order flow, fixed-income markups, fractional-share routing, options retail flow) shift cycle to cycle.
 - **Operative for this skill**: The skill consults the current-cycle priorities to weight the surveillance focus areas and the committee-pack discussion. Older cycle priorities are not authoritative for the current year.
-- **Link**: https://www.sec.gov/about/divisions-offices/division-examinations [navigate to current year priorities]
+- **Link**: https://www.sec.gov/about/divisions-offices/division-examinations [navigate to current year priorities] `[verify section]`
 
 ## SEC Risk Alerts on best execution and trading practices
 

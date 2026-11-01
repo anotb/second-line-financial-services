@@ -18,9 +18,9 @@ NAIC Model Laws and Regulations are model text; what binds the carrier is the st
 
 ## State DOI bulletins on AI in insurance
 
-- **Colorado SB 21-169** (2021) and the **Colorado Division of Insurance Regulation 10-1-1** implementing the Act. Regulation 10-1-1 covers governance and risk management of external consumer data and information sources (ECDIS) and predictive models in life-insurance underwriting; the regulation was amended October 15, 2025 [verify the current scope and any expansion to product lines beyond life-insurance underwriting on the analysis date]. The Colorado posture is the most prescriptive in the United States on ECDIS provenance, governance, monitoring, and consumer-recourse. https://leg.colorado.gov/bills/sb21-169 ; https://doi.colorado.gov/ — verify exact effective date of the October 15, 2025 amendment and the current scope.
+- **Colorado SB 21-169** (2021) and the **Colorado Division of Insurance Regulation 10-1-1** implementing the Act. Regulation 10-1-1 covers governance and risk management of external consumer data and information sources (ECDIS) and predictive models in life-insurance underwriting; the regulation was amended October 15, 2025 [verify the current scope and any expansion to product lines beyond life-insurance underwriting on the analysis date]. The Colorado posture is the most prescriptive in the United States on ECDIS provenance, governance, monitoring, and consumer-recourse. https://leg.colorado.gov/bills/sb21-169 ; https://doi.colorado.gov/ — verify exact effective date of the October 15, 2025 amendment and the current scope. `[verify section]`
 
-- **NY DFS Insurance Circular Letter No. 7 (2024)** on the use of artificial intelligence systems and external consumer data and information sources (ECDIS) in insurance underwriting and pricing [verify final issuance date and any amendment — Circular Letter No. 7 issued in 2024 superseded the earlier proposal; the operative scope covers life-insurance underwriting and pricing and may extend further per subsequent NY DFS guidance]. Sets disclosure, fairness, governance, and consumer-recourse expectations. https://www.dfs.ny.gov/industry_guidance/circular_letters/ — verify URL.
+- **NY DFS Insurance Circular Letter No. 7 (2024)** on the use of artificial intelligence systems and external consumer data and information sources (ECDIS) in insurance underwriting and pricing [verify final issuance date and any amendment — Circular Letter No. 7 issued in 2024 superseded the earlier proposal; the operative scope covers life-insurance underwriting and pricing and may extend further per subsequent NY DFS guidance]. Sets disclosure, fairness, governance, and consumer-recourse expectations. https://www.dfs.ny.gov/industry_guidance/circular_letters/ — verify URL. `[verify section]`
 
 - **California Department of Insurance bulletin on the use of artificial intelligence in insurance** (verify exact bulletin number and issuance date). Broader scope than the CO regulation and the NY DFS Circular Letter; covers multiple lines of business. https://www.insurance.ca.gov/ — verify URL.
 
@@ -30,7 +30,7 @@ NAIC Model Laws and Regulations are model text; what binds the carrier is the st
 
 - **NAIC Life Insurance Illustrations Model Regulation, Model #582**. Illustration-format requirements; self-support and lapse-support tests; illustration-actuary certification; the disciplined-current-scale standard. Applies to ordinary individual life insurance with non-guaranteed elements. https://content.naic.org/ — verify exact section labels and current model revision date.
 
-- **NAIC Suitability in Annuity Transactions Model Regulation, Model #275**. Best-interest standard for annuity transactions; producer training, disclosure, and supervision requirements. Applies to annuity sales rather than rate filings, but bolts on where the change touches annuity-product disclosures or producer-facing illustration material. https://content.naic.org/ — verify exact model number against the live NAIC index (the suitability-in-annuity model has gone through revisions and renumbering; the model number is marked `[verify]` on first cite).
+- **NAIC Suitability in Annuity Transactions Model Regulation, Model #275**. Best-interest standard for annuity transactions; producer training, disclosure, and supervision requirements. Applies to annuity sales rather than rate filings, but bolts on where the change touches annuity-product disclosures or producer-facing illustration material. https://content.naic.org/ — verify exact model number against the live NAIC index (the suitability-in-annuity model has gone through revisions and renumbering; the model number is marked `[verify]` on first cite). `[verify section]`
 
 ## Health-product-specific frame
 
@@ -52,7 +52,7 @@ NAIC Model Laws and Regulations are model text; what binds the carrier is the st
 
 - **NAIC Risk Management and Own Risk and Solvency Assessment Model Act, Model #505** (ORSA). Applies to insurers above the premium threshold (or by group election). The ORSA Summary Report carries the carrier's prospective solvency assessment and risk-management framework; pricing-AI exposure that is enterprise-material belongs in the ORSA Summary Report. https://content.naic.org/ — verify exact section labels and current model revision date.
 
-- **NAIC Corporate Governance Annual Disclosure Model Act, Model #305** (verify model number). Carries the governance-and-control narrative the CGAD reviewer expects; the AIS Program for pricing-AI feeds the CGAD where material. https://content.naic.org/ — verify model number against current NAIC index.
+- **NAIC Corporate Governance Annual Disclosure Model Act, Model #305** (verify model number). Carries the governance-and-control narrative the CGAD reviewer expects; the AIS Program for pricing-AI feeds the CGAD where material. https://content.naic.org/ — verify model number against current NAIC index. `[verify section]`
 
 ## Model-risk frame (analogous)
 
@@ -62,13 +62,13 @@ NAIC Model Laws and Regulations are model text; what binds the carrier is the st
 
 ## Privacy-of-insurance-information frame
 
-- **NAIC Insurance Information and Privacy Protection Model Act, Model #670** (verify model number). State-by-state adoption variable; in adopting states, sets disclosure and consumer-rights obligations for insurance-information practices including underwriting. https://content.naic.org/ — verify exact model number against current NAIC index.
+- **NAIC Insurance Information and Privacy Protection Model Act, Model #670** (verify model number). State-by-state adoption variable; in adopting states, sets disclosure and consumer-rights obligations for insurance-information practices including underwriting. https://content.naic.org/ — verify exact model number against current NAIC index. `[verify section]`
 
 - **State-level insurance information privacy frameworks**. Most states have adopted a version of Model #670 or a related state-specific framework; verify state-by-state on the analysis date.
 
 ## EU overlay (see-also)
 
-- **Solvency II Directive (Directive 2009/138/EC)** as amended. Pillar 1 (capital), Pillar 2 (governance, ORSA), Pillar 3 (disclosure). Cite as **see-also** where the carrier has EU branches or reinsurance with EU cedents; the operative US frame for life-and-health pricing governance is NAIC and state DOI, not Solvency II. https://eur-lex.europa.eu/eli/dir/2009/138/oj .
+- **Solvency II Directive (Directive 2009/138/EC)** as amended. Pillar 1 (capital), Pillar 2 (governance, ORSA), Pillar 3 (disclosure). Cite as **see-also** where the carrier has EU branches or reinsurance with EU cedents; the operative US frame for life-and-health pricing governance is NAIC and state DOI, not Solvency II. https://eur-lex.europa.eu/eli/dir/2009/138/oj . `[verify section]`
 
 - **EU AI Act, Regulation (EU) 2024/1689**. Annex III names insurance pricing and risk-assessment in life and health as a high-risk AI use case. Cite as **see-also** where the carrier has EU exposure; the operative US frame for life-and-health pricing AI governance is the NAIC AI Bulletin December 2023 plus state DOI bulletins. https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32024R1689 .
 

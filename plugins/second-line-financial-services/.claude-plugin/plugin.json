@@ -1,9 +1,8 @@
 {
   "name": "second-line-financial-services",
   "displayName": "Second Line Financial Services",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "68 skills for second-line risk and compliance teams in financial services: GRC, regulatory change, AI and model risk, third-party risk, controls testing, risk reporting, financial crime, and consumer compliance, across banking, insurance, capital markets, and payments.",
-  "icon": "./assets/icon.png",
   "author": {
     "name": "anot",
     "url": "https://unsol.dev"
@@ -11,10 +10,6 @@
   "license": "MIT",
   "homepage": "https://github.com/anotb/second-line-financial-services",
   "repository": "https://github.com/anotb/second-line-financial-services",
-  "documentationUrl": "https://github.com/anotb/second-line-financial-services/tree/main/plugins/second-line-financial-services#readme",
-  "supportUrl": "https://github.com/anotb/second-line-financial-services/issues",
-  "privacyPolicyUrl": "https://github.com/anotb/second-line-financial-services/blob/main/plugins/second-line-financial-services/PRIVACY.md",
-  "termsOfServiceUrl": "https://github.com/anotb/second-line-financial-services/blob/main/plugins/second-line-financial-services/TERMS.md",
   "keywords": [
     "compliance",
     "risk-management",

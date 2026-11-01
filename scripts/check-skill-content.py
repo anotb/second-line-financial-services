@@ -180,11 +180,20 @@ def check_rule_3(skill_dir, violations):
         err(violations, 3, anchors, 'source-anchors.md is empty')
         return
     bad = []
+    block_has_anchor = False
     for lineno, raw in enumerate(text.splitlines(), 1):
         line = raw.rstrip()
+        if not line.strip() or line.startswith('#'):
+            block_has_anchor = False
+            continue
+        if line_has_anchor_token(line):
+            block_has_anchor = True
         if not BULLET_RE.match(line):
             continue
         if not URL_RE.search(line):
+            continue
+        # A Link: bullet shares the Citation: or Anchor: bullet of its block.
+        if line.lstrip('-* ').startswith('Link') and block_has_anchor:
             continue
         if not line_has_anchor_token(line):
             preview = line.strip()[:80]

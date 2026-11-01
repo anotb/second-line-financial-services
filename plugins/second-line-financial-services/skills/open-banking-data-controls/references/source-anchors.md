@@ -27,13 +27,13 @@ The artifact's `s1033_status_note` block carries the firm-specific application o
 
 ## Authentication and tokenised access frame
 
-- **FFIEC Authentication and Access to Financial Institution Services and Systems Guidance** (August 11, 2021). Sets the supervisory expectation for authentication posture, including for high-risk transactions and for customer-permissioned data sharing. Risk-based authentication, layered controls, account-takeover monitoring. https://www.ffiec.gov/press/pr081121.htm .
+- **FFIEC Authentication and Access to Financial Institution Services and Systems Guidance** (August 11, 2021). Sets the supervisory expectation for authentication posture, including for high-risk transactions and for customer-permissioned data sharing. Risk-based authentication, layered controls, account-takeover monitoring. https://www.ffiec.gov/press/pr081121.htm . `[verify section]`
 
-- **NIST SP 800-63B, Digital Identity Guidelines, Authentication and Lifecycle Management** [verify current revision]. Authentication assurance levels (AAL1, AAL2, AAL3) and the lifecycle controls that hold each level. https://pages.nist.gov/800-63-3/sp800-63b.html .
+- **NIST SP 800-63B, Digital Identity Guidelines, Authentication and Lifecycle Management** [verify current revision]. Authentication assurance levels (AAL1, AAL2, AAL3) and the lifecycle controls that hold each level. https://pages.nist.gov/800-63-3/sp800-63b.html . `[verify section]`
 
-- **OAuth 2.0 (RFC 6749)** — the underlying authorisation-server pattern for tokenised access. https://datatracker.ietf.org/doc/html/rfc6749 .
+- **OAuth 2.0 (RFC 6749)** — the underlying authorisation-server pattern for tokenised access. https://datatracker.ietf.org/doc/html/rfc6749 . `[verify section]`
 
-- **OpenID FAPI 1.0 — Financial-grade API Security Profile** [verify whether the firm cites FAPI 1.0 Final, FAPI 2.0, or a later profile on the analysis date]. Security profile for financial-data API access. https://openid.net/specs/openid-financial-api-part-1-1_0.html .
+- **OpenID FAPI 1.0 — Financial-grade API Security Profile** [verify whether the firm cites FAPI 1.0 Final, FAPI 2.0, or a later profile on the analysis date]. Security profile for financial-data API access. https://openid.net/specs/openid-financial-api-part-1-1_0.html . `[verify section]`
 
 - **Financial Data Exchange (FDX) API specification (current major version)** [verify version number and release date on the analysis date]. The de facto US industry standard for tokenised open-banking data exchange; CFPB's January 8, 2025 recognition of FDX as a standard-setting body under the §1033 final rule established a formal CFPB-recognised channel for industry-standard development [verify the current state of FDX's recognition and any subsequent CFPB action on the standard-setting framework]. Citation is conceptual — FDX is industry, not regulator — but alignment with the CFPB-recognised standard is a supervisory expectation in practice. https://financialdataexchange.org/ ; CFPB recognition: https://www.consumerfinance.gov/about-us/newsroom/ — verify exact press-release link.
 
@@ -47,7 +47,7 @@ The artifact's `s1033_status_note` block carries the firm-specific application o
 
 - **California Consumer Privacy Act / California Privacy Rights Act, Cal. Civ. Code §1798.100 et seq.** Consumer rights to know, delete, correct, opt-out of sale and sharing; sensitive-personal-information limits; data-breach private right of action under specific conditions. https://oag.ca.gov/privacy/ccpa .
 
-- **Rolling state-privacy-law landscape** — active comprehensive privacy laws as of analysis include (incomplete; verify currency on the analysis date) Virginia (VCDPA), Colorado (CPA), Connecticut (CTDPA), Utah (UCPA), Texas (TDPSA), Oregon (OCPA), Montana (MTCDPA), and others. Each carries its own consumer-rights set, sensitive-data category, opt-out mechanics, and enforcement posture. https://iapp.org/resources/article/us-state-privacy-legislation-tracker/ [verify currency].
+- **Rolling state-privacy-law landscape** — active comprehensive privacy laws as of analysis include (incomplete; verify currency on the analysis date) Virginia (VCDPA), Colorado (CPA), Connecticut (CTDPA), Utah (UCPA), Texas (TDPSA), Oregon (OCPA), Montana (MTCDPA), and others. Each carries its own consumer-rights set, sensitive-data category, opt-out mechanics, and enforcement posture. https://iapp.org/resources/article/us-state-privacy-legislation-tracker/ [verify currency]. `[verify section]`
 
 - **State breach-notification statutes** — state-by-state; verify per state in the firm's resident footprint. Each carries its own notification trigger (acquisition standard vs access standard), timing window, AG-notification thresholds, and content requirements.
 

@@ -1,6 +1,6 @@
 # Status
 
-Current release: **1.0.2**.
+Current release: **1.0.3**.
 
 ## What ships
 

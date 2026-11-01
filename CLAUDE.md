@@ -2,6 +2,8 @@
 
 This repository contains one Claude plugin for second-line financial-services workflows, at `plugins/second-line-financial-services/`. It is listed in Anthropic's directory from that folder, tracking `main`. Do not split it back into several plugins.
 
+Before pushing anything, read [docs/releasing.md](docs/releasing.md). Every commit on `main` becomes a version the directory scans.
+
 ## Editing rules
 
 - Keep plugin components at the plugin root. Only `plugin.json` belongs under `.claude-plugin/`.
@@ -9,7 +11,7 @@ This repository contains one Claude plugin for second-line financial-services wo
 - Do not recreate `plugins/vertical-plugins`.
 - Prefer `skills/` over legacy `commands/` for new plugin actions.
 - Keep each skill `description` to 120 characters or fewer, so all skills fit Claude Code's listing budget. Longer guidance goes in the skill's `## When to use` section.
-- Keep the plugin at 512 files or fewer, which `scripts/check.py` enforces, because the directory holds larger plugins for review. Add overlays and examples as sections in the skill's existing files, not as new files.
+- Add overlays and examples as sections in the skill's existing files, not as new files. `scripts/check.py` enforces the directory's 512-file limit and other scan rules; `docs/releasing.md` explains them.
 - Raise `version` in `plugin.json` with every release, and don't reference files outside the plugin folder.
 - After editing source skills, run `python3 scripts/check.py` and `python3 scripts/check-skill-content.py`.
 - Keep examples public-source-derived and anonymous.
