@@ -52,9 +52,9 @@ Conduct-relevant test plans carry a consumer-harm read distinct from the substan
 
 - Test-plan conventions: state-adopted UTPA and UCSPA test plans cover the state-specific definitions of unfair practices; multi-state plans carry state-by-state variance. Claims-handling timing test plans cover the state-statutory clocks (acknowledgement, investigation, decision, payment) by sample.
 
-#### Customer-harm framing in the plan's pass and fail criteria
+#### Customer-harm framing in the plan's clear and fail criteria
 
-The plan's pass and fail criteria, when the conduct overlay is loaded, can carry an additional read: the substantive control criterion plus a consumer-harm signal criterion ("consumer-harm signal observed: yes / no / inconclusive" with rationale). This signal read is not a legal conclusion (legal conclusions sit with counsel); it is the testing-program's surfacing of evidence relevant to the legal-conduct dimension. The plan's reviewer-questions section flags any anticipated consumer-harm signal for legal review distinct from control-framework remediation.
+The plan's clear and fail criteria, when the conduct overlay is loaded, can carry an additional read: the substantive control criterion plus a consumer-harm signal criterion ("consumer-harm signal observed: yes / no / inconclusive" with rationale). This signal read is not a legal conclusion (legal conclusions sit with counsel); it is the testing-program's surfacing of evidence relevant to the legal-conduct dimension. The plan's reviewer-questions section flags any anticipated consumer-harm signal for legal review distinct from control-framework remediation.
 
 #### Distinctness from technical control conclusion
 

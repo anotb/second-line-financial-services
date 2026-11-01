@@ -125,7 +125,7 @@ Triage decision (abbreviated):
 
 ### Troubleshooting: ai-act-triage
 
-Recurring failure modes when an AI Act triage looks finished but is not. The reviewer pass should catch these; the triage pass should preempt them.
+Recurring failure modes when an AI Act triage looks finished but is not. The reviewer review should catch these; the triage review should preempt them.
 
 #### The triage skips the row-by-row Annex III walk and asserts a conclusion
 

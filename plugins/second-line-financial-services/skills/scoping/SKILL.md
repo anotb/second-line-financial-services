@@ -23,7 +23,7 @@ Best for:
 - A downstream skill called with contested or unclear scope.
 
 Not the right tool when:
-- A current scope is already on file and the downstream skill is scope-aware (pass the existing record).
+- A current scope is already on file and the downstream skill is scope-aware (clear the existing record).
 - The work is a one-off question rather than a scoped review.
 - The institution and persona are already encoded in a `references/firm-overlay.md` the firm has installed.
 

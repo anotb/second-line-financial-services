@@ -192,7 +192,7 @@ For SEC public registrants, the matrix carries gap rows on the cyber-disclosure 
 - **Cyber-policy gaps are usually `partial` or `outdated`, rarely `missing`.** Most firms have a cybersecurity policy; the question is whether it addresses the named benchmark's content elements at the rigor the rule expects.
 - **The matrix surfaces the materiality-determination workflow as a control, not a fact.** A policy that says "we will determine materiality" is partial until the materiality-determination workflow is named.
 - **Joint ownership is common and explicit.** Cyber-policy gaps for AI models name the CISO function and the model owner together; cyber-policy gaps for vendor controls name the CISO function and the head of TPRM together.
-- **Pre-November-2023 NYDFS policies almost always carry `outdated` rows.** The 2023 amendment expanded enough content that policies untouched since 2017-2022 will not pass the post-amendment expectations.
+- **Pre-November-2023 NYDFS policies almost always carry `outdated` rows.** The 2023 amendment expanded enough content that policies untouched since 2017-2022 will not clear the post-amendment expectations.
 
 #### Anchors used by this overlay
 

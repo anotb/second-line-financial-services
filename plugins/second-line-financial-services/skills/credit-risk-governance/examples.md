@@ -55,7 +55,7 @@ CRE-specific underwriting standards updated for stabilised-vs-construction. Trai
 
 #### Section 3: Risk-rating discipline
 
-CRE-specific rating drivers documented. Reviewer question on whether the granular pass-grade distribution (currently four pass grades) is sufficient to support the ACL segmentation approach in section 5.
+CRE-specific rating drivers documented. Reviewer question on whether the granular pass-grade distribution (currently four pass-rated grades) is sufficient to support the ACL segmentation approach in section 5.
 
 #### Section 4: Concentration governance
 

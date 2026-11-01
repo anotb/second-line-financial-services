@@ -212,7 +212,7 @@ Conduct overlay is default-on for consumer-facing tests where customer-harm fram
 
 ##### Citing without sections
 
-Every regulator citation in the workpaper carries a section reference or a `[verify section]` placeholder. URL alone does not pass the source-anchor depth check. Use `references/source-anchors.md` and the loaded overlays for the canonical citation set; do not restate excerpts in the workpaper body.
+Every regulator citation in the workpaper carries a section reference or a `[verify section]` placeholder. URL alone does not clear the source-anchor depth check. Use `references/source-anchors.md` and the loaded overlays for the canonical citation set; do not restate excerpts in the workpaper body.
 
 ##### Marking unsupported claims silently
 

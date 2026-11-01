@@ -72,7 +72,7 @@ The **recommendation** is one of: no further action, re-open the investigation, 
 
 The **source trace and confidence** records every material claim in the memo, its source (case file pointer, sector-overlay reference, source-anchor file), and a confidence label. Vendor or counterparty self-attestation in the case file carries lower confidence than system-of-record extracts; do not collapse them.
 
-Depth flexes with review type and audience. A pre-exam readiness pass reads long and formal; a sample-based program QA reads tighter with patterns rolled up across files; a targeted typology review goes deep on the typology citations and the evidence chain.
+Depth flexes with review type and audience. A pre-exam readiness review reads long and formal; a sample-based program QA reads tighter with patterns rolled up across files; a targeted typology review goes deep on the typology citations and the evidence chain.
 
 ## Sector and cross-cutting overlays
 

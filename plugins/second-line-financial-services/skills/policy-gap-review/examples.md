@@ -388,7 +388,7 @@ revisions:
 
 ### Troubleshooting: policy-gap-review
 
-Recurring failure modes when a policy gap matrix looks complete but is not. The reviewer pass should catch these; the builder pass should preempt them.
+Recurring failure modes when a policy gap matrix looks complete but is not. The reviewer review should catch these; the builder review should preempt them.
 
 #### 1. The matrix has no external benchmark
 

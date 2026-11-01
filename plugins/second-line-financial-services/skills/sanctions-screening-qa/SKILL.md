@@ -72,7 +72,7 @@ The **recommended decision checkpoints and recommendation** name the recommendat
 
 The **source trace and confidence** records every material claim in the memo, its source (program evidence, sector overlay, source-anchors file, firm overlay where present), the date-as-of for OFAC list citations, and a confidence label. Vendor analytics outputs (blockchain-analytics, fuzzy-match scoring, fraud-decision) are vendor outputs and carry lower confidence than primary system-of-record extracts; do not collapse them. Vendor-diligence on these vendors sits in `vendor-diligence`; the QA cross-references.
 
-Depth flexes with review type and audience. A periodic sample QA reads tighter with patterns rolled up across alerts; a pre-exam readiness pass reads long and formal; a list-event review goes deep on response timing and cross-rail consistency; a cyber-evasion targeted review goes deep on the cross-cutting overlay and address-level screening capability.
+Depth flexes with review type and audience. A periodic sample QA reads tighter with patterns rolled up across alerts; a pre-exam readiness review reads long and formal; a list-event review goes deep on response timing and cross-rail consistency; a cyber-evasion targeted review goes deep on the cross-cutting overlay and address-level screening capability.
 
 ## Sector and cross-cutting overlays
 

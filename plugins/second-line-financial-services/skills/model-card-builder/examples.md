@@ -100,7 +100,7 @@ Card sections produced (abbreviated):
 
 ### Troubleshooting: model-card-builder
 
-Recurring failure modes when a model card looks complete but is not. The reviewer pass should catch these; the builder pass should preempt them.
+Recurring failure modes when a model card looks complete but is not. The reviewer review should catch these; the builder review should preempt them.
 
 #### The card describes the model as it should be, not as it is
 

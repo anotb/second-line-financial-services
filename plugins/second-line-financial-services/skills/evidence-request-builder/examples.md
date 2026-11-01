@@ -238,7 +238,7 @@ Privacy overlay loads whenever the request list will pull artifacts containing N
 
 ##### Citing without sections
 
-Every regulator citation in the criterion-source field carries a section reference or a `[verify section]` placeholder. URL alone does not pass the source-anchor depth check. Use `references/source-anchors.md` and the loaded overlays for the canonical citation set; do not restate excerpts in the request list body.
+Every regulator citation in the criterion-source field carries a section reference or a `[verify section]` placeholder. URL alone does not clear the source-anchor depth check. Use `references/source-anchors.md` and the loaded overlays for the canonical citation set; do not restate excerpts in the request list body.
 
 ##### Marking unsupported claims silently
 

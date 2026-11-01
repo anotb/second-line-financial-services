@@ -316,7 +316,7 @@ revisions:
 
 ### Troubleshooting: control-matrix
 
-Recurring failure modes when a control matrix looks complete but is not. The reviewer pass should catch these; the builder pass should preempt them.
+Recurring failure modes when a control matrix looks complete but is not. The reviewer review should catch these; the builder review should preempt them.
 
 #### 1. Controls listed without an obligation source
 

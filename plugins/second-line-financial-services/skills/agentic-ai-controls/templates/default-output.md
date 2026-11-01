@@ -123,7 +123,7 @@ Prompt-injection-via-tool-output and tool-misuse attack classes. If `prompt-inje
 
 | Attack class | Carrier | Source taxonomy | Method | Dataset / red-team ref | Tester | Success criterion | Result | Date |
 |---|---|---|---|---|---|---|---|---|
-| [name, e.g., tool_hijack / cross_scope_tool_query / excessive_agency_chain / planner_executor_seam / multi_agent_message_injection / memory_poisoning / sandbox_escape / direct_injection / indirect_injection / jailbreak / exfiltration] | [system_prompt / user_prompt / retrieved_content / tool_output / agent_memory / multi_agent_message / multimodal_input] | [MITRE ATLAS technique ID / OWASP LLM identifier / NIST AI 600-1 subcategory] | [direct / indirect / chain / etc.] | [dataset ID, vendor set, firm-internal red-team report] | [firm internal / vendor / third-party / `[evidence needed]`] | [what counts as success against this agent] | [pass or partial / fail / not-tested] | [YYYY-MM-DD] |
+| [name, e.g., tool_hijack / cross_scope_tool_query / excessive_agency_chain / planner_executor_seam / multi_agent_message_injection / memory_poisoning / sandbox_escape / direct_injection / indirect_injection / jailbreak / exfiltration] | [system_prompt / user_prompt / retrieved_content / tool_output / agent_memory / multi_agent_message / multimodal_input] | [MITRE ATLAS technique ID / OWASP LLM identifier / NIST AI 600-1 subcategory] | [direct / indirect / chain / etc.] | [dataset ID, vendor set, firm-internal red-team report] | [firm internal / vendor / third-party / `[evidence needed]`] | [what counts as success against this agent] | [success or partial / fail / not-tested] | [YYYY-MM-DD] |
 
 The agentic-specific attack classes that are non-optional for any agent with tool use:
 

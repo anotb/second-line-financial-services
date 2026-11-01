@@ -149,7 +149,7 @@ See `references/source-anchors.md` for full citations and verification flags.
 
 ### Troubleshooting: fund-board-reporting
 
-Recurring failure modes when a fund-board pack looks complete but is not. The reviewer pass should catch these; the builder pass should preempt them.
+Recurring failure modes when a fund-board pack looks complete but is not. The reviewer review should catch these; the builder review should preempt them.
 
 #### The Rule 38a-1 written report reads as a logbook
 

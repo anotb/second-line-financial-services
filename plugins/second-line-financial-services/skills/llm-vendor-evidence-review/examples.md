@@ -126,7 +126,7 @@ The banking sector overlay loads (FFIEC IT Handbook touchpoint on third-party ap
 
 ### Troubleshooting: llm-vendor-evidence-review
 
-Recurring defects observed in foundation-model vendor evidence reviews. The first three are the failure modes the skill exists to prevent; the rest are rework triggers that show up in second-pass reviews.
+Recurring defects observed in foundation-model vendor evidence reviews. The first three are the failure modes the skill exists to prevent; the rest are rework triggers that show up in second reviews.
 
 #### 1. Vendor evidence treated as authoritative without a sufficiency view
 
@@ -186,7 +186,7 @@ Recurring defects observed in foundation-model vendor evidence reviews. The firs
 
 **Defect.** Vendor eval reports cite scores against named benchmarks (TruthfulQA, MMLU, HellaSwag, sector-specific harm benchmarks) and the review presents these as evidence against regulatory expectations.
 
-**Fix.** Industry benchmarks are vendor self-reported metrics against shared datasets. They are useful as relative comparison and as evidence of the vendor's testing maturity; they are not, in themselves, regulatory pass criteria. Record them in `sufficiency_view[].basis` as what they are, and route to `validation-plan` for in-firm metric definition where the firm's deployment context demands tighter or domain-specific evaluation.
+**Fix.** Industry benchmarks are vendor self-reported metrics against shared datasets. They are useful as relative comparison and as evidence of the vendor's testing maturity; they are not, in themselves, regulatory success criteria. Record them in `sufficiency_view[].basis` as what they are, and route to `validation-plan` for in-firm metric definition where the firm's deployment context demands tighter or domain-specific evaluation.
 
 #### 11. Recommended actions without function-level owners
 

@@ -42,7 +42,7 @@ When the scope record is supplied, the skill consumes it for institution profile
 
 ## How the triage walks
 
-Five passes, in order. Skipping a pass on the assumption the answer is obvious is the most common defect; the artifact records every pass, including the ones that do not apply.
+Five passes, in order. Skipping a review on the assumption the answer is obvious is the most common defect; the artifact records every pass, including the ones that do not apply.
 
 **Article 2 scope and operator role.** EU touch-points are enumerated against `eu_exposure` (eu_users, eu_operations, eu_data_subjects, market_placement). At least one true brings the use case into scope; all false ends the triage with a "no AI Act exposure" record and a route to firm-internal tiering. Operator roles per Article 3 are enumerated for every entity in the chain: provider, deployer, importer, distributor, authorised representative. A firm holding multiple roles is the rule, not the exception. Vendor-built plus firm-fine-tuned plus firm-deployed picks up provider obligations under Article 25 for the fine-tuned variant, deployer obligations under Article 26 for the deployment, and importer obligations where the upstream entity is non-EU.
 

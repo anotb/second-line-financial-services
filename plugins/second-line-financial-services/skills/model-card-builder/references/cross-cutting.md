@@ -50,7 +50,7 @@ A change in target market or distribution channel, a change that materially shif
 
 #### Common pitfalls in conduct-flagged model cards
 
-- Framing fairness as a model property without addressing customer-outcome disparity. A model can pass disparate-impact tests on protected classes and still produce materially different customer outcomes across policy-relevant segments; conduct frames the second lens.
+- Framing fairness as a model property without addressing customer-outcome disparity. A model can clear disparate-impact tests on protected classes and still produce materially different customer outcomes across policy-relevant segments; conduct frames the second lens.
 - Treating SMCR or the firm's conduct framework as compliance overhead rather than as a conduct-risk-management input to the card. The named-manager role is a substantive sign-off, not a signature line.
 - Assuming the model owner is the conduct-accountable manager when the conduct framework names a different role. The two are separable and frequently are separated; the card is explicit.
 - Missing the customer-journey impact when the model affects customer experience but not directly customer pricing or eligibility. A chatbot that handles initial enquiries shapes customer outcome through access and friction, not only through the explicit decision; the conduct lens catches this where a fairness-only lens does not.

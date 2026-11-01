@@ -12,7 +12,7 @@ The named, dated regulatory and methodology sources this skill anchors to. SKILL
 
 - **AICPA AU-C 330, Performing Audit Procedures in Response to Assessed Risks** (current edition) [verify paragraph references]. Frames the linkage from assessed risk to the nature, timing, and extent of testing procedures. Used to anchor the design-and-operating procedure split and the rationale for procedure-level evidence expectations in the plan. https://www.aicpa-cima.com/professional-standards (search "AU-C 330").
 
-- **AICPA AU-C 530, Audit Sampling** (current edition), §A18-§A22 on evaluating sample results and §A02-§A09 on sample design considerations [verify paragraph references against current AICPA codification]. Used in the test plan as the methodology anchor for the population-and-sampling-reference section and for the tolerable deviation rate framing in the pass and fail criteria. https://www.aicpa-cima.com/professional-standards (search "AU-C 530").
+- **AICPA AU-C 530, Audit Sampling** (current edition), §A18-§A22 on evaluating sample results and §A02-§A09 on sample design considerations [verify paragraph references against current AICPA codification]. Used in the test plan as the methodology anchor for the population-and-sampling-reference section and for the tolerable deviation rate framing in the review and fail criteria. https://www.aicpa-cima.com/professional-standards (search "AU-C 530").
 
 ## Bank-supervisory frame — compliance-testing-program planning
 

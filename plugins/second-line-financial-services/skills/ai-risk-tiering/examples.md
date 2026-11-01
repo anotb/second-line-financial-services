@@ -164,7 +164,7 @@ Source trace:
 
 ### Troubleshooting: ai-risk-tiering
 
-Recurring failure modes when a tier decision looks complete but is not. The decider attestation should catch these; the rubric pass should preempt them.
+Recurring failure modes when a tier decision looks complete but is not. The decider attestation should catch these; the rubric review should preempt them.
 
 #### The rubric collapses to a single dominant factor
 
@@ -172,7 +172,7 @@ Symptom: every factor scored, but only `customer_impact` carries the rationale. 
 
 Why it happens: customer impact is the easiest factor to assess and the loudest. The other factors require pulling on threads (vendor evidence, concentration analysis, NYDFS exposure) that take longer to investigate.
 
-Fix: require all named factors to be scored, with `n/a` justified, not blank. The decider attestation block does not pass when more than one factor is unjustifiably `n/a`. The schema enforces it; the reviewer reads it.
+Fix: require all named factors to be scored, with `n/a` justified, not blank. The decider attestation block does not clear when more than one factor is unjustifiably `n/a`. The schema enforces it; the reviewer reads it.
 
 #### Tier inflation or deflation by sponsor pressure
 
@@ -204,7 +204,7 @@ Symptom: every customer-facing use case is tier-1; tier-1 becomes the default an
 
 Why it happens: tier-1 feels safe; the cost of over-tiering is hidden (everyone's time) while the cost of under-tiering is loud (an exam finding).
 
-Fix: tier-1 is reserved for customer-binding decisions or material financial impact; the rationale names the threshold. Customer-facing alone is not a tier-1 trigger; an internal-use GenAI assistant is not tier-1 even if it interacts with customer-data inputs. The decider attestation challenges any tier-1 designation that does not pass the named-threshold test.
+Fix: tier-1 is reserved for customer-binding decisions or material financial impact; the rationale names the threshold. Customer-facing alone is not a tier-1 trigger; an internal-use GenAI assistant is not tier-1 even if it interacts with customer-data inputs. The decider attestation challenges any tier-1 designation that does not clear the named-threshold test.
 
 #### AI Act overlap is set to true reflexively or missed entirely
 

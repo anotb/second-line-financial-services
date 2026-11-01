@@ -111,7 +111,7 @@ Cite `references/source-anchors.md` for canonical citations. OFAC list citations
 
 ---
 
-*Memo depth scales to review type and audience.* A periodic sample QA reads tighter with patterns rolled up across alerts; a pre-exam readiness pass reads long and formal; a list-event review goes deep on response-timing and cross-rail consistency; a cyber-evasion targeted review goes deep on the cross-cutting overlay.
+*Memo depth scales to review type and audience.* A periodic sample QA reads tighter with patterns rolled up across alerts; a pre-exam readiness review reads long and formal; a list-event review goes deep on response-timing and cross-rail consistency; a cyber-evasion targeted review goes deep on the cross-cutting overlay.
 
 *Audience shapes the memo.* A sanctions officer reads for material defensibility issues and program-level patterns. A QA team reads for criterion-by-criterion calibration. A BSA officer reads for governance signal and committee escalation. An examiner-response file reads formal and full source-traced.
 

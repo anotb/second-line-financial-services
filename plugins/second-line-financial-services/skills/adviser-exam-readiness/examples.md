@@ -142,7 +142,7 @@ Public sources include the SEC's published examination process overview at https
 
 ### Troubleshooting: adviser-exam-readiness
 
-Recurring failure modes the readiness sprint should preempt. Each is a finding pattern EXAMS or FINRA staff are likely to surface; the pack is structured to make each visible rather than letting it pass into the document-request submission or the mock interview.
+Recurring failure modes the readiness sprint should preempt. Each is a finding pattern EXAMS or FINRA staff are likely to surface; the pack is structured to make each visible rather than letting it clear into the document-request submission or the mock interview.
 
 #### 1. Form ADV staleness against the firm's actual state
 

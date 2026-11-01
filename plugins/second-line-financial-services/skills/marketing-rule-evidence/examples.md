@@ -110,7 +110,7 @@ Recurring failure modes the drafter should preempt and the reviewer should catch
 
 The Marketing Rule's two-prong "advertisement" definition has carve-outs (one-on-one communications excluded except for hypothetical performance; extemporaneous oral communications excluded; certain regulatory communications excluded). Misclassification at the top of the pack produces the wrong evidence trail end-to-end. Read each component of the artifact independently (a deck routinely contains a performance presentation, a hypothetical-performance section, a third-party-rating logo, and a compensated testimonial in the same file); classify each component against the rule's definitions and apply the relevant disclosure mechanics per component.
 
-#### 2. Treating one-on-one as a free pass for hypothetical performance
+#### 2. Treating one-on-one as a free ride for hypothetical performance
 
 The (d)(6) hypothetical-performance pre-conditions apply regardless of whether the communication is to one client or many. The one-on-one carve-out from the advertisement definition does not eliminate (d)(6); the firm's audience-appropriateness policy and procedure must still be applied. This is the recurring September 2023 enforcement-sweep finding pattern.
 

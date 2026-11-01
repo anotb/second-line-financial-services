@@ -6,7 +6,7 @@ argument-hint: "[workpaper ID, exception register ID, prior QA note for re-QA, o
 
 # QA workpaper
 
-QA review of a completed control-test workpaper is the last step before workpaper closure and the audit trail an examiner reads when sampling the firm's testing program. The bar is the AICPA AU-C 230 experienced-auditor sufficiency standard plus the firm's methodology floors: an experienced reviewer with no prior connection to the engagement should be able to read the workpaper, follow the evidence to the conclusion, and reach the same call. Where the workpaper does not pass that bar, the QA review note carries the named deficiencies, a decision, and the rework items.
+QA review of a completed control-test workpaper is the last step before workpaper closure and the audit trail an examiner reads when sampling the firm's testing program. The bar is the AICPA AU-C 230 experienced-auditor sufficiency standard plus the firm's methodology floors: an experienced reviewer with no prior connection to the engagement should be able to read the workpaper, follow the evidence to the conclusion, and reach the same call. Where the workpaper does not clear that bar, the QA review note carries the named deficiencies, a decision, and the rework items.
 
 This skill produces the QA review pack as two artifacts: an Excel workbook with QA markup tabs over the workpaper, and a Word QA memo summary. The skill does not run the test, re-classify the original exceptions, or close the workpaper. It produces the markdown content spec in `templates/default-output.md` shape; rendering goes to the `xlsx` and `docx` skills in `document-skills`. The skill stops at QA reviewer sign-off; disagreement between the QA reviewer and the workpaper reviewer escalates per the firm's named escalation path.
 
@@ -15,7 +15,7 @@ This skill produces the QA review pack as two artifacts: an Excel workbook with 
 Reviews a completed control-test workpaper for QA along named dimensions: scope alignment to the test plan, source-criteria sufficiency, evidence reliability, procedure execution rigor, exception classification, conclusion support, severity calibration, reviewer separation, and remediation handoff. Output is a QA review pack — Excel workbook with QA markup tabs over the workpaper plus a Word QA memo summary — that lists deficiencies by severity, a decision (accept, return for rework, conditional accept), and required rework before workpaper closure.
 
 Best for:
-- A second-line QA function or independent reviewer is performing the standard QA pass over a completed workpaper before issue closure or examiner sharing.
+- A second-line QA function or independent reviewer is performing the standard QA review over a completed workpaper before issue closure or examiner sharing.
 - An internal-audit director is rolling up workpaper-quality metrics across a testing cycle and needs structured QA notes per workpaper.
 - A targeted Federal Reserve, OCC, FDIC, CFPB, NYDFS, or state DOI exam is imminent and the team is doing a self-QA sweep on the workpaper population the examiner will likely sample.
 - A workpaper failed prior QA, was reworked, and needs a post-rework re-QA before closure.

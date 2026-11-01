@@ -59,7 +59,7 @@ For each attack class tested:
 
 | Attack class | Method | Dataset / red-team ref | Tester | Success criterion | Result | Date |
 |---|---|---|---|---|---|---|
-| [name] | [direct / indirect / jailbreak / exfiltration / tool_hijack / agent_redirect / multimodal / data_poisoning] | [dataset ID, vendor set, firm-internal red-team report] | [firm internal / vendor / third-party / `[evidence needed]`] | [what counts as success against this system] | [pass or partial / fail / not-tested] | [YYYY-MM-DD] |
+| [name] | [direct / indirect / jailbreak / exfiltration / tool_hijack / agent_redirect / multimodal / data_poisoning] | [dataset ID, vendor set, firm-internal red-team report] | [firm internal / vendor / third-party / `[evidence needed]`] | [what counts as success against this system] | [success or partial / fail / not-tested] | [YYYY-MM-DD] |
 
 Empty rows for attack classes that are not applicable to this architecture (e.g., `tool_hijack` on a system with no tools) are explicit "not applicable", not omitted.
 

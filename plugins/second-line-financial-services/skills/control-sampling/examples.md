@@ -250,7 +250,7 @@ Conduct overlay is default-on for consumer-facing tests where stratification by 
 
 ##### Citing without sections
 
-Every regulator citation in the memo carries a section reference or a `[verify section]` placeholder. URL alone does not pass the source-anchor depth check. Use `references/source-anchors.md` and the loaded overlays for the canonical citation set; do not restate excerpts in the memo body.
+Every regulator citation in the memo carries a section reference or a `[verify section]` placeholder. URL alone does not clear the source-anchor depth check. Use `references/source-anchors.md` and the loaded overlays for the canonical citation set; do not restate excerpts in the memo body.
 
 ##### Marking unsupported claims silently
 

@@ -2,7 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://second-line-financial-services/plugins/second-line-financial-services/skills/test-plan-builder/schemas/test-plan.schema.json",
   "title": "test-plan",
-  "description": "Pre-fieldwork test plan record produced for a single control test cycle. Carries scope, test objective, source criteria, population, sampling reference, walkthrough plan, design and operating procedures, evidence-request reference, pass and fail criteria, limitations, downstream consumers, and the reviewer sign-off block. Downstream consumers: control-sampling (writes back sampling_id), evidence-request-builder (writes back evidence_request_list_id), workpaper-drafter (consumes the full plan as the contract for the workpaper), qa-workpaper (reads plan and workpaper together for sufficiency).",
+  "description": "Pre-fieldwork test plan record produced for a single control test cycle. Carries scope, test objective, source criteria, population, sampling reference, walkthrough plan, design and operating procedures, evidence-request reference, clear and fail criteria, limitations, downstream consumers, and the reviewer sign-off block. Downstream consumers: control-sampling (writes back sampling_id), evidence-request-builder (writes back evidence_request_list_id), workpaper-drafter (consumes the full plan as the contract for the workpaper), qa-workpaper (reads plan and workpaper together for sufficiency).",
   "type": "object",
   "required": [
     "test_id",
@@ -314,7 +314,7 @@
           },
           "expected_observable_condition": {
             "type": "string",
-            "description": "What the preparer expects to observe per sample to support a pass or exception read."
+            "description": "What the preparer expects to observe per sample to support a success or exception read."
           },
           "criteria_addressed": {
             "type": "array",

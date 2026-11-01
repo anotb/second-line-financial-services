@@ -596,7 +596,7 @@ human_review_required: true
 
 ### Troubleshooting: human-review-gates
 
-Recurring failure modes when a gate matrix looks complete but is not. The reviewer pass should catch these; the builder pass should preempt them.
+Recurring failure modes when a gate matrix looks complete but is not. The reviewer review should catch these; the builder review should preempt them.
 
 #### 1. One committee owns everything
 
@@ -644,7 +644,7 @@ Symptom: documentation_requirement reads "minutes" or "noted" without naming wha
 
 Why it happens: minute-taking discipline varies; the matrix builder is unsure what the firm's minutes actually carry.
 
-Fix: documentation requirement names what gets captured: the decision (pass or fail / conditional), the rationale, the named attesters, the date, the artifact references, and the system of record that holds the record. "Minutes" is acceptable when the firm's minute discipline is robust and the minutes name attesters and decisions; it is not acceptable when the minutes are summary-only. The matrix's documentation requirement carries the granularity needed for the named system of record (board portal, GRC platform, regulator filing). For board-committee gates, named attesters and recorded dissents are explicit; for line-2 committee gates, the GRC-platform record is named.
+Fix: documentation requirement names what gets captured: the decision (success or fail / conditional), the rationale, the named attesters, the date, the artifact references, and the system of record that holds the record. "Minutes" is acceptable when the firm's minute discipline is robust and the minutes name attesters and decisions; it is not acceptable when the minutes are summary-only. The matrix's documentation requirement carries the granularity needed for the named system of record (board portal, GRC platform, regulator filing). For board-committee gates, named attesters and recorded dissents are explicit; for line-2 committee gates, the GRC-platform record is named.
 
 #### 7. Frequency conflated with cadence
 

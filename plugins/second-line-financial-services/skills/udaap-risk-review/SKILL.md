@@ -65,7 +65,7 @@ The memo has the same spine across products, fees, and enforcement themes. A sen
 - *Critical* — pattern matches a public CFPB or DOJ enforcement theme directly; large population; ongoing harm; remediation cannot wait for the next committee cycle.
 - *High* — pattern matches a Supervisory Highlights focal item or a peer enforcement theme; meaningful population or magnitude; remediation needed within one committee cycle.
 - *Medium* — element analysis surfaces real risk; population or magnitude is bounded or uncertain; remediation enters the controls roadmap.
-- *Low* — element tests pass with no material concerns; the memo records the read and stops.
+- *Low* — element tests clear with no material concerns; the memo records the read and stops.
 
 Severity drift is the single most common audit finding on UDAAP processes. The memo names the rubric and applies it per element, with the severity_rationale field carrying the per-element reasoning. A severity rating without a rubric is a vibe.
 

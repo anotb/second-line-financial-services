@@ -116,7 +116,7 @@ Plan sections produced (abbreviated):
 
 ### Troubleshooting: validation-plan
 
-Recurring failure modes when a validation plan looks complete but is not. The reviewer pass should catch these; the planner pass should preempt them.
+Recurring failure modes when a validation plan looks complete but is not. The reviewer review should catch these; the planner review should preempt them.
 
 #### Validation depth set as a single label across all three pillars
 
@@ -184,7 +184,7 @@ Fix: the dependencies block is for prerequisites and access needs, not just data
 
 #### Plan reads as scope-only, no success criteria
 
-Symptom: outcomes-analysis entries name a test and a method, but no success criterion. The validator runs the test, produces a number, and the reviewer cannot tell whether the result is a pass or a fail.
+Symptom: outcomes-analysis entries name a test and a method, but no success criterion. The validator runs the test, produces a number, and the reviewer cannot tell whether the result is a success or a fail.
 
 Why it happens: the planner defers success criteria to the validation report itself, treating the plan as a scope sketch.
 
@@ -192,7 +192,7 @@ Fix: schema requires `outcomes_analysis[].success_criterion` and `robustness_tes
 
 #### Plan stops at draft, but the draft wraps the validation report
 
-Symptom: the plan reads as if it has executed the validation rather than scoped it. Performance numbers, test pass or fail conclusions, recommendations.
+Symptom: the plan reads as if it has executed the validation rather than scoped it. Performance numbers, test success or fail conclusions, recommendations.
 
 Why it happens: the planner conflates the plan with the report; or the planner is repurposing the prior cycle's report into a new plan.
 

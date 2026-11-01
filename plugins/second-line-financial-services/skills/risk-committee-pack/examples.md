@@ -17,7 +17,7 @@ Public-source-derived. No named institution. The shape mirrors the standing annu
 
 #### Output sketch
 
-- **Cover and decision items requested** — meeting date, committee = Adviser Enterprise Risk Committee (distinct from fund boards), period = full year, classification = internal. Two decisions: (i) approval of the refreshed adviser RAS for the next cycle, including a new RAS metric on cyber tabletop pass rate; (ii) acknowledgement of the Form PF current-event filing posture and the proposed forward escalation path.
+- **Cover and decision items requested** — meeting date, committee = Adviser Enterprise Risk Committee (distinct from fund boards), period = full year, classification = internal. Two decisions: (i) approval of the refreshed adviser RAS for the next cycle, including a new RAS metric on cyber tabletop success rate; (ii) acknowledgement of the Form PF current-event filing posture and the proposed forward escalation path.
 - **CRO summary** — five bullets. Headline: risk profile stable across most types; cyber elevated due to threat-environment shift not firm-specific incidents; vendor concentration narrowing on a single trade-execution vendor flagged as elevated and deteriorating; one Form PF current-event filing during the period; BD net capital headroom adequate.
 - **Heat map by risk type** — adviser-level taxonomy: investment, operational, technology, vendor, regulatory, conduct, financial-crime, cyber, fiduciary. Climate not separately rated this period; rationale documented (climate is not material at the adviser-firm level given product mix). Each cell carries current/prior/direction.
 - **Top risks** — five named risks. Trade-execution vendor concentration; cyber threat environment with named impact pathway through the SaaS portfolio-management platform; Form PF current-event reporting accuracy and timeliness; fiduciary risk on best-execution evidence; regulatory risk around SEC cyber disclosure rule applicability to the public parent (Item 1.05 / Item 106 mechanics) and Reg S-P May 2024 amendments compliance posture.
@@ -109,7 +109,7 @@ See `references/source-anchors.md` for full citations and verification flags.
 
 ### Troubleshooting: risk-committee-pack
 
-Recurring failure modes when a committee pack looks complete but is not. The reviewer pass should catch these; the builder pass should preempt them.
+Recurring failure modes when a committee pack looks complete but is not. The reviewer review should catch these; the builder review should preempt them.
 
 #### The pack reads as a status update, not a committee instrument
 

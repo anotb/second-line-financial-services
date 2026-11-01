@@ -134,7 +134,7 @@ Flow-down does not equal visibility. The pack must show what the firm actually k
 
 ##### Skipping concentration because "it is just one vendor"
 
-Concentration is sector-wide and portfolio-level, not vendor-by-vendor. Raise the flag here and pass the analysis to `concentration-risk-review`. Common single-vendor flags: hyperscaler region, sponsor-bank, BIN sponsor, claims TPA, transfer agent, foundation-model vendor.
+Concentration is sector-wide and portfolio-level, not vendor-by-vendor. Raise the flag here and clear the analysis to `concentration-risk-review`. Common single-vendor flags: hyperscaler region, sponsor-bank, BIN sponsor, claims TPA, transfer agent, foundation-model vendor.
 
 ##### Forgetting the exit-plan handoff
 

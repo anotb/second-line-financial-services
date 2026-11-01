@@ -91,7 +91,7 @@ In the structured object (`schemas/rag-evaluation-review.schema.json`):
 
 #### Common pitfalls in conduct-flagged RAG reviews
 
-- Reporting a single faithfulness number on a customer-facing use case without the population dimension. A pass on the global number can hide systematic failure on a customer segment; the fairness segmentation surfaces it.
+- Reporting a single faithfulness number on a customer-facing use case without the population dimension. A review on the global number can hide systematic failure on a customer segment; the fairness segmentation surfaces it.
 - Treating UDAAP framing as compliance background reading rather than as a load-bearing seam on the evaluation. UDAAP exposure is the load-bearing risk on customer-facing AI output; the residual-risk section carries it explicitly.
 - Omitting the fair-lending function from the reviewer attestation when the use case touches credit decisions. Fair-lending sign-off is a co-acceptance, not a referral.
 - Treating customer-complaint signals as customer-service operational data rather than as AI-quality leading indicators. Complaint-code mapping to RAG-output issues is the routing question.

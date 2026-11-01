@@ -69,7 +69,7 @@ Per-notice rows recording application-completed-at, notice-sent-at, days elapsed
 
 Per-notice rows recording ECOA-notice-text-completeness, the specificity test against the cited reasons, FCRA-overlay applicability, FCRA-overlay content completeness where applicable, the combined-notice version in force at decision time, and a yes / no / partial verdict.
 
-The Staff Commentary on specificity sets the reference standard; the AI / complex-model framing layers on top where any in-scope decision uses a complex model. The combined Reg B / Reg V notice tests against both regimes separately — a notice can pass one and fail the other.
+The Staff Commentary on specificity sets the reference standard; the AI / complex-model framing layers on top where any in-scope decision uses a complex model. The combined Reg B / Reg V notice tests against both regimes separately — a notice can clear one and fail the other.
 
 ### 6. Disparate-impact red flags
 

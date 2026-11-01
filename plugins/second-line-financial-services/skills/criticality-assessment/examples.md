@@ -25,7 +25,7 @@ The skill produces a criticality assessment record. Headlines:
 - **Customer impact** — `severity = severe`; populations = retail-deposit and small-business; harm modes = financial-loss, fairness on disputed transactions, complaint exposure on extended outage. The deposit-account holder cannot reach balances during outage; reputational damage compounds within hours.
 - **Regulatory impact** — `severity = high`; regimes = bank-prudential and consumer-compliance; notification triggers = potential FDIC and state-DFI material-event reporting on sustained outage; Reg E and Reg DD customer-notice exposure if the outage induces a change-in-terms or fee-incidence event.
 - **Operational impact** — `substitutability = hard`; time-to-restore on a forced cutover measured in months, not days; `manual_workaround_viable = false` (paper and IVR fallback exists for inquiry but not for transaction processing at scale beyond a short window).
-- **Concentration considerations** — single core-platform vendor for the institution; raise the flag and pass portfolio analysis to `concentration-risk-review`.
+- **Concentration considerations** — single core-platform vendor for the institution; raise the flag and pass-rated portfolio analysis to `concentration-risk-review`.
 - **Tier** — `critical`. Rationale names the IBS dependency, the customer-impact severity, the substitutability read, and the gap between firm tolerance and vendor commitment.
 - **DORA flag** — `not-in-scope` (US-only firm, no EU nexus). Rationale recorded.
 - **UK IBS flag** — `not-in-scope`.

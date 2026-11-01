@@ -109,7 +109,7 @@ See `references/source-anchors.md`, `references/sector-overlays.md#banking`, `re
 
 ### Example: QA review of a Reg E error-resolution workpaper at a regional bank
 
-Public-source-derived. No named institution. Mirrors the standard QA pass over a completed Reg E §1005.11 error-resolution testing workpaper.
+Public-source-derived. No named institution. Mirrors the standard QA review over a completed Reg E §1005.11 error-resolution testing workpaper.
 
 #### Input
 

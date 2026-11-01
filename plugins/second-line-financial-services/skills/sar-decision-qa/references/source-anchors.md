@@ -30,7 +30,7 @@ The named, dated regulatory sources this skill anchors to. SKILL.md cites this f
 
 ## Joint statements
 
-- **OCC / FRB / FDIC Joint Statement on Risk-Focused BSA/AML Supervision** (July 22, 2021) [verify section / URL]. Supervisory framing that risk-focused examination of BSA/AML programs concentrates on areas of higher ML/TF risk; the QA reads decision quality with risk focus, not a uniform-depth pass on every alert. https://www.federalreserve.gov/newsevents/pressreleases/files/bcreg20210722a1.pdf .
+- **OCC / FRB / FDIC Joint Statement on Risk-Focused BSA/AML Supervision** (July 22, 2021) [verify section / URL]. Supervisory framing that risk-focused examination of BSA/AML programs concentrates on areas of higher ML/TF risk; the QA reads decision quality with risk focus, not a uniform-depth clear on every alert. https://www.federalreserve.gov/newsevents/pressreleases/files/bcreg20210722a1.pdf .
 
 - **FinCEN / Federal Banking Agencies Joint Statement on Innovation in BSA/AML Compliance** (December 3, 2018) [verify section]. Acknowledges and supports BSA/AML innovation including technology-driven detection and decision approaches; the QA does not penalise documented, governed innovation in the alert-decision pipeline as long as the decision file evidences the typology, the evidence, and the rationale. https://www.fincen.gov/news/news-releases/treasurys-financial-crimes-enforcement-network-and-federal-banking-agencies .
 

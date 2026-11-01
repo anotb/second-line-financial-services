@@ -8,7 +8,7 @@ Audience: heads of regulatory affairs, regulatory-change leads, compliance offic
 
 | Skill | What it produces | When to use |
 |---|---|---|
-| `regulatory-impact-assessment` | First-pass scope of firm impact for a new rule, supervisory letter, circular, FIL, bulletin, industry letter, advisory, or enforcement theme. | A regulator has published something and the firm needs a fast read on in-scope businesses, products, obligations, and effective-date posture before logging the change. |
+| `regulatory-impact-assessment` | First-review scope of firm impact for a new rule, supervisory letter, circular, FIL, bulletin, industry letter, advisory, or enforcement theme. | A regulator has published something and the firm needs a fast read on in-scope businesses, products, obligations, and effective-date posture before logging the change. |
 | `rule-to-obligation-extraction` | Atomic obligations parsed from new rule text, with source pins, applicability, actor, frequency, and evidence pattern. | Impact has been scoped; the rule text now needs to be decomposed into the atomic-obligation list before mapping onto firm policy and controls. |
 | `policy-diff` | Gap-and-conflict log between current firm policy text and the applicable regulatory anchors, with proposed redline directions. | Obligations are extracted; the question is what current policy already covers, partially covers, conflicts with, or is silent on. |
 | `implementation-plan` | Sequenced workplan with workstreams, milestones, owner roles, dependencies, acceptance criteria, governance checkpoints, and implementation risks. | Gaps are documented; the firm needs an owner-assigned plan to reach compliance by the effective date. |

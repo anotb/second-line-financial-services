@@ -122,7 +122,7 @@ See `references/source-anchors.md` for full citations and verification flags.
 
 ### Troubleshooting: management-response
 
-Recurring failure modes when a management response looks complete but is not. The reviewer pass should catch these; the builder pass should preempt them.
+Recurring failure modes when a management response looks complete but is not. The reviewer review should catch these; the builder review should preempt them.
 
 #### Finding text paraphrased rather than quoted
 
@@ -178,7 +178,7 @@ Symptom: confidence label is `high` while the action plan has unresolved depende
 
 Why it happens: confidence label is treated as a brand statement rather than as an executability statement.
 
-Fix: confidence label reflects the executability of the action plan, not the desirability of the outcome. A `high` label requires named owner roles on every milestone, dependency-mapped milestones, and demonstrable interim mitigation. Where any of these is absent, the label is medium at best. The skill enforces this; the reviewer pass catches it where the skill misses.
+Fix: confidence label reflects the executability of the action plan, not the desirability of the outcome. A `high` label requires named owner roles on every milestone, dependency-mapped milestones, and demonstrable interim mitigation. Where any of these is absent, the label is medium at best. The skill enforces this; the reviewer review catches it where the skill misses.
 
 #### Stale prior-response history
 
@@ -202,7 +202,7 @@ Symptom: the addressee or signatory blocks name a specific examiner or a specifi
 
 Why it happens: builder uses the most recent correspondence for context and pulls personal names directly.
 
-Fix: the convention across all sectors is roles, not personal names. Personnel rotate; the response may be filed and read months or years after issue. The schema requires owner and signatory fields to be roles. The reviewer pass catches personal-name leakage.
+Fix: the convention across all sectors is roles, not personal names. Personnel rotate; the response may be filed and read months or years after issue. The schema requires owner and signatory fields to be roles. The reviewer review catches personal-name leakage.
 
 #### Linked-issue inconsistency
 

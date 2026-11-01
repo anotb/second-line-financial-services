@@ -103,7 +103,7 @@ Recurring defects in the adverse-action notice review and in the artifact this s
 
 **FCRA risk-based pricing notice not sent where a credit score was used in adverse action.** Reg V §1022.74 sets a separate disclosure obligation that survives whether the Reg B notice content is otherwise compliant. Fix: per-decision FCRA-overlay-applicable flag and a content-compliance check on FCRA disclosure where the flag is true.
 
-**Combined Reg B / Reg V notice tested as a single artifact.** The two regimes carry separate content requirements; a single test conflates the two. Fix: separate content-compliance fields per regime; the combined notice can pass one and fail the other.
+**Combined Reg B / Reg V notice tested as a single artifact.** The two regimes carry separate content requirements; a single test conflates the two. Fix: separate content-compliance fields per regime; the combined notice can clear one and fail the other.
 
 #### Model-supported reasons defects
 

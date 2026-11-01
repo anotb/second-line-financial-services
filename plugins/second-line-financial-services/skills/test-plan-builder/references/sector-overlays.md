@@ -50,7 +50,7 @@ A bank consumer-compliance or operational-risk test plan that an OCC, FDIC, FRB,
 - Reg DD — 12 CFR Part 1030 (TISA disclosures, account fees) [verify subsection labels].
 - Reg E — 12 CFR Part 1005 (electronic fund transfers, error resolution) [verify subsection labels including §1005.11 procedures and §1005.18 prepaid].
 - Reg Z — 12 CFR Part 1026 (Truth in Lending) [verify subsection labels].
-- Test-plan conventions: error-resolution test plans under §1005.11 walk the timeline by sample (notice date, investigation start, provisional credit by day 10 or day 5 for new accounts [verify §1005.11(c) timing], final determination, customer notice); pass criterion is 100% of sampled disputes within the procedural clock; fail criterion is any sampled item outside the clock without escalation evidence. Disclosure-content tests compare the production disclosure to the regulatory model with a redline procedure.
+- Test-plan conventions: error-resolution test plans under §1005.11 walk the timeline by sample (notice date, investigation start, provisional credit by day 10 or day 5 for new accounts [verify §1005.11(c) timing], final determination, customer notice); success criterion is 100% of sampled disputes within the procedural clock; fail criterion is any sampled item outside the clock without escalation evidence. Disclosure-content tests compare the production disclosure to the regulatory model with a redline procedure.
 
 ##### BSA/AML testing
 
@@ -223,7 +223,7 @@ Payments and fintech test plans carry conventions that bank consumer-compliance 
 ##### Reg E error-resolution testing
 
 - Test-plan conventions: criteria section cites §1005.11 and the firm's dispute-handling policy section; population is the Reg E disputes raised in the period; design procedures cover the dispute-management system workflow configuration (does the workflow enforce the day-10 or day-5 provisional-credit clock, the 45-day final-resolution clock, the customer-notice generation [verify §1005.11(c) / (d) timing]); operating procedures cover sample-based reperformance against the procedural clock with the case file as evidence per sample.
-- Pass criterion: 100% of sampled disputes within the procedural clock with current evidence in the case file. Fail criterion: any sampled item outside the clock without escalation evidence.
+- Success criterion: 100% of sampled disputes within the procedural clock with current evidence in the case file. Fail criterion: any sampled item outside the clock without escalation evidence.
 - Prepaid-account test plans under §1005.18 carry additional disclosure-format and access-time provisions; the plan names the prepaid-program subset of the population.
 
 ##### Sponsor-bank end-customer reconciliation testing

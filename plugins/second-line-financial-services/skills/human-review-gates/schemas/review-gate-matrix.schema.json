@@ -50,11 +50,11 @@
       "properties": {
         "primary_committee": {
           "type": "string",
-          "description": "The body that pass or fails the gates in this matrix. Named role or named committee (e.g., 'AI Governance Committee', 'Vendor Risk Committee', 'Issue Review Committee')."
+          "description": "The body that success or fails the gates in this matrix. Named role or named committee (e.g., 'AI Governance Committee', 'Vendor Risk Committee', 'Issue Review Committee')."
         },
         "escalation_committee": {
           "type": "string",
-          "description": "Where a no-pass routes when escalation is invoked. Often the next governance tier (e.g., Operational Risk Committee escalating to Risk Committee of the Board)."
+          "description": "Where a no-go routes when escalation is invoked. Often the next governance tier (e.g., Operational Risk Committee escalating to Risk Committee of the Board)."
         },
         "dissent_path": {
           "type": "string",

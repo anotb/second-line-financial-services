@@ -145,7 +145,7 @@ See `references/source-anchors.md` for full citations and verification flags.
 
 ### Troubleshooting: cyber-disclosure-readiness
 
-Recurring failure modes when a cyber-disclosure-readiness pack looks complete but is not. The reviewer pass should catch these; the builder pass should preempt them.
+Recurring failure modes when a cyber-disclosure-readiness pack looks complete but is not. The reviewer review should catch these; the builder review should preempt them.
 
 #### Disclosure clock conflated with detection
 
@@ -257,7 +257,7 @@ Symptom: the schema's `confidence_label` = "high" while the `verification_flags_
 
 Why it happens: confidence is treated as an aspirational marker, not as a structured claim.
 
-Fix: high confidence is incompatible with a non-empty verification-flag list. The label is medium at best where flags are present; the schema does not enforce this directly but the reviewer pass does. The verification-flag list is the visible record of what is unresolved.
+Fix: high confidence is incompatible with a non-empty verification-flag list. The label is medium at best where flags are present; the schema does not enforce this directly but the reviewer review does. The verification-flag list is the visible record of what is unresolved.
 
 #### Pack stops too late
 

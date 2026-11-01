@@ -68,7 +68,7 @@ Design procedures are walkthrough-and-inspection methodology, not sample-based r
 
 | Procedure ID | Description | Methodology | Expected evidence per sample | Expected observable condition | Criteria addressed |
 |---|---|---|---|---|---|
-| OP1 | | [reperformance | observation | inquiry | confirmation | inspection | recalculation | analytical-procedure] | [case file / system extract / attestation packet / reconciliation] | [what the preparer expects per sample to support pass or exception] | [criterion IDs] |
+| OP1 | | [reperformance | observation | inquiry | confirmation | inspection | recalculation | analytical-procedure] | [case file / system extract / attestation packet / reconciliation] | [what the preparer expects per sample to support success or exception] | [criterion IDs] |
 
 Operating procedures are typically sample-based; the methodology per procedure is named so the workpaper later reads against the planned methodology.
 
@@ -82,9 +82,9 @@ If inline (small test):
 |---|---|---|---|
 | ER1 | | | |
 
-## Pass and fail criteria
+## Clear and fail criteria
 
-- **Pass criterion**: observable condition that supports an effective read. Calibrated in second-line vocabulary (control effectiveness, not legal compliance).
+- **Success criterion**: observable condition that supports an effective read. Calibrated in second-line vocabulary (control effectiveness, not legal compliance).
 - **Fail criterion**: observable condition that supports a not-effective read.
 - **Tolerable deviation rate**: [n% from sampling memo, or inline value]. Zero-tolerable populations (privileged access, sanctions screening, customer-funds segregation) named explicitly with severity-driven aggregation.
 
@@ -128,6 +128,6 @@ Cite `references/source-anchors.md` and the loaded overlays for canonical citati
 
 ---
 
-*Plan depth scales to control complexity, population size, and prior-cycle history.* A familiar low-volume control with a stable prior cycle reads short. A new control area, a regulatory-change-driven cycle, or a control with a recent finding reads longer with a heavier walkthrough plan and richer pass and fail criteria.
+*Plan depth scales to control complexity, population size, and prior-cycle history.* A familiar low-volume control with a stable prior cycle reads short. A new control area, a regulatory-change-driven cycle, or a control with a recent finding reads longer with a heavier walkthrough plan and richer review and fail criteria.
 
 *Audience shapes the plan.* A new pod reads heavier on procedure detail and methodology restatement. An experienced pod reads tighter with the procedure list as a contract rather than a tutorial.

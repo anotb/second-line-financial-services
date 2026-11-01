@@ -326,7 +326,7 @@ revisions:
 
 ### Troubleshooting: issue-writeup
 
-Recurring failure modes when an issue write-up looks complete but is not. The reviewer pass should catch these; the builder pass should preempt them.
+Recurring failure modes when an issue write-up looks complete but is not. The reviewer review should catch these; the builder review should preempt them.
 
 #### 1. Condition reads as a conclusion
 

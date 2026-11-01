@@ -265,7 +265,7 @@ A US D-SIB (consolidated assets in the $100B-$700B band) is notified of an upcom
 
 #### Why this scenario matters
 
-It is the canonical large-bank exam-readiness use of the skill. The horizontal-review trigger forces a full fourteen-principle pass with reconciliation evidence, not a desk-review. The MRA posture forces Principle 13 to read against named open findings rather than as a generic statement. The asset-size band brings 12 CFR Part 30 Appendix D into Principle 1 and Principle 2. Principle 6 (adaptability) carries the heaviest gap commentary, mirroring the BCBS thematic-finding pattern.
+It is the canonical large-bank exam-readiness use of the skill. The horizontal-review trigger forces a full fourteen-principle clear with reconciliation evidence, not a desk-review. The MRA posture forces Principle 13 to read against named open findings rather than as a generic statement. The asset-size band brings 12 CFR Part 30 Appendix D into Principle 1 and Principle 2. Principle 6 (adaptability) carries the heaviest gap commentary, mirroring the BCBS thematic-finding pattern.
 
 #### Output sketch
 
@@ -467,7 +467,7 @@ reviewer_questions:
 
 ### Troubleshooting: bcbs239-gap-assessment
 
-Recurring failure modes when a BCBS 239 gap assessment looks complete but is not. The reviewer pass should catch these; the builder pass should preempt them.
+Recurring failure modes when a BCBS 239 gap assessment looks complete but is not. The reviewer review should catch these; the builder review should preempt them.
 
 #### Rating without testing
 

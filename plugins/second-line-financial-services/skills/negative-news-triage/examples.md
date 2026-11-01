@@ -167,9 +167,9 @@ Recurring defects in adverse-media triage memos and in the upstream hit sets, an
 
 **Symptom**: per-hit triage runs cleanly but the memo carries no aggregated-themes section.
 
-**Why it happens**: the per-hit pass dominates the time budget; the cross-hit synthesis feels redundant.
+**Why it happens**: the per-hit review dominates the time budget; the cross-hit synthesis feels redundant.
 
-**Fix**: aggregated themes is the spine the per-hit pass cannot see. Recurring counterparties across independent hits, escalating timelines, jurisdictional clustering, principal-versus-entity drift, and common-name false-match patterns are the patterns that route the triage downstream. A hit set with no themes carries that observation; do not invent a pattern, but do not skip the section either.
+**Fix**: aggregated themes is the spine the per-hit review cannot see. Recurring counterparties across independent hits, escalating timelines, jurisdictional clustering, principal-versus-entity drift, and common-name false-match patterns are the patterns that route the triage downstream. A hit set with no themes carries that observation; do not invent a pattern, but do not skip the section either.
 
 #### Common-name false matches dispositioned individually
 
@@ -223,7 +223,7 @@ Recurring defects in adverse-media triage memos and in the upstream hit sets, an
 
 **Symptom**: a tier-1 hit implies an undisclosed control or counterparty relationship the customer's CDD file does not reflect, and the triage does not name the inconsistency.
 
-**Why it happens**: the per-hit pass focuses on the hit itself, not on the file the hit bears against.
+**Why it happens**: the per-hit review focuses on the hit itself, not on the file the hit bears against.
 
 **Fix**: the open-questions block carries beneficial-ownership-inconsistency items as `[evidence needed]` for the relationship owner; the routing line to `cdd-risk-review` carries the rationale. The triage does not re-rate or re-certify beneficial ownership; it surfaces the inconsistency.
 

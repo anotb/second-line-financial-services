@@ -18,7 +18,7 @@ Best for:
 - An EU-nexus financial entity scoping the first-cycle register build, where a structured data-quality view and a reviewer-ready build pack matter before the firm's submission tooling formats the official template.
 - An EU subsidiary of a non-EU group where the parent needs visibility into EU register data quality before the subsidiary files individually to its national competent authority.
 - A second-line review of an existing register where data-quality, relational integrity, and the firm's internal-to-ITS service-type taxonomy mapping need a structured check before the accountable executive signs off.
-- An off-cycle preparation pass following a material onboarding, termination, restructuring, or criticality re-classification.
+- An off-cycle preparation review following a material onboarding, termination, restructuring, or criticality re-classification.
 
 Not the right tool when:
 - The output is intended for direct submission to a national competent authority. The skill helps populate fields and surface data-quality gaps; it is not the official Register of Information template.

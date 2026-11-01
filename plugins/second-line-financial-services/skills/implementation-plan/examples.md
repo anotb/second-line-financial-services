@@ -347,7 +347,7 @@ handoff_to_bau:
   monitoring_cadence: monthly KRI review covering data-quality validation rate; quarterly control test on firewall; annual filing submission by March of each year
   obligation_inventory_pointer: firm obligation inventory, Regulation B / 1071 entries OBL-1071-01 through OBL-1071-47
   kri_kpi_pointers:
-    - 1071 data-quality validation pass rate, monthly
+    - 1071 data-quality validation success rate, monthly
     - firewall control test exception count, quarterly
     - applicant-facing notice presentation rate, monthly sample test
 

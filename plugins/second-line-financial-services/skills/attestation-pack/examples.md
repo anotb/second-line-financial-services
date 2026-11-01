@@ -107,7 +107,7 @@ See `references/source-anchors.md` for full citations and verification flags.
 
 ### Troubleshooting: attestation-pack
 
-Recurring failure modes when an attestation pack reads as complete but is not. Reviewer pass should catch these; builder pass should preempt them.
+Recurring failure modes when an attestation pack reads as complete but is not. Reviewer review should catch these; builder review should preempt them.
 
 #### Clean attestation while material exceptions exist elsewhere
 
