@@ -80,13 +80,15 @@ Cyber overlap (account-takeover-adjacent adverse media, ransomware-exposure repo
 
 ## Pointers
 
+`references/sector-overlays.md` and `references/cross-cutting.md` hold one section per sector or topic, and `examples.md` one per example. Find the heading and read only that section.
+
 - `references/source-anchors.md` — citations and excerpts for the named anchors (FFIEC CDD section, FinCEN CDD Final Rule, joint statements, named FinCEN advisories on typologies, Wolfsberg adverse-media guidance as public industry reference).
-- `references/sector-overlays/banking.md`, `payments-fintech.md`, `capital-markets.md`, `insurance.md` — sector-specific adverse-media frames loaded per scope.
-- `references/cross-cutting/conduct.md` — conduct dimension on customer-harm-pattern adverse media; loaded when the engagement names conduct.
+- `references/sector-overlays.md#banking`, `payments-fintech.md`, `capital-markets.md`, `insurance.md` — sector-specific adverse-media frames loaded per scope.
+- `references/cross-cutting.md#conduct` — conduct dimension on customer-harm-pattern adverse media; loaded when the engagement names conduct.
 - `references/firm-overlay.md` — firm policy, vendor-tier mapping, typology library extensions, named systems and owners (consumed when present).
 - `templates/default-output.md` — memo template (named sections, fields).
-- `examples/principal-civil-fraud-commercial-bank.md`, `bulk-rescan-bank-portfolio.md` — public-source-derived scenarios.
-- `TROUBLESHOOTING.md` — recurring defects in adverse-media triage memos.
+- `examples.md#principal-civil-fraud-commercial-bank`, `bulk-rescan-bank-portfolio.md` — public-source-derived scenarios.
+- `examples.md#troubleshooting` — recurring defects in adverse-media triage memos.
 
 The plugin-level shared references (`references/source-map.md`, `references/policy-control-library.md`, `references/review-gates.md`) sit at the plugin root and are consulted alongside the skill-level files.
 

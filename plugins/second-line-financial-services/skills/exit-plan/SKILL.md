@@ -72,18 +72,20 @@ Holds across every plan regardless of arrangement type, audience, or render form
 
 ## Adaptation
 
-Flexes by engagement. Plan depth and length scale to criticality and DORA-in-scope status. An important-tier non-DORA arrangement collapses several sections to a paragraph; a critical or DORA-in-scope arrangement runs full depth with reviewer questions clustered for the operational-resilience committee, the AI risk committee (AI vendors), or the fund board (registered funds). The sector overlay set drives which `references/sector-overlays/<sector>.md` is loaded; a dual-registrant or BaaS arrangement may load two. Cross-cutting overlay loading follows scope plus the rule that cyber and privacy default-on for AI vendors and for any arrangement holding regulated data or IBS controls at termination. Source posture (public-only, public-plus-firm-policy, public-plus-firm-policy-plus-system-of-record-evidence, connector-aware) drives the evidence ask. The transition-engineering depth differs by vendor type (cloud IaaS, core platform, transfer agent, custodian, fund accountant, sub-adviser, claims TPA, processor, BIN sponsor, foundation-model API, AI SaaS, agentic system). Render format (Word, Excel, PowerPoint, Markdown) follows the workflow.
+Flexes by engagement. Plan depth and length scale to criticality and DORA-in-scope status. An important-tier non-DORA arrangement collapses several sections to a paragraph; a critical or DORA-in-scope arrangement runs full depth with reviewer questions clustered for the operational-resilience committee, the AI risk committee (AI vendors), or the fund board (registered funds). The sector overlay set drives which `references/sector-overlays.md#<sector>` is loaded; a dual-registrant or BaaS arrangement may load two. Cross-cutting overlay loading follows scope plus the rule that cyber and privacy default-on for AI vendors and for any arrangement holding regulated data or IBS controls at termination. Source posture (public-only, public-plus-firm-policy, public-plus-firm-policy-plus-system-of-record-evidence, connector-aware) drives the evidence ask. The transition-engineering depth differs by vendor type (cloud IaaS, core platform, transfer agent, custodian, fund accountant, sub-adviser, claims TPA, processor, BIN sponsor, foundation-model API, AI SaaS, agentic system). Render format (Word, Excel, PowerPoint, Markdown) follows the workflow.
 
 ## Pointers
 
+`references/sector-overlays.md` and `references/cross-cutting.md` hold one section per sector or topic, and `examples.md` one per example. Find the heading and read only that section.
+
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
-- `references/sector-overlays/banking.md`, `insurance.md`, `capital-markets.md`, `payments-fintech.md` — sector-specific transition mechanics loaded per scope. Capital-markets carries the substantive fund service-provider transition mechanics under ICA §15 and Rule 38a-1.
-- `references/cross-cutting/cyber.md`, `privacy.md` — cross-cutting flavour for transition; default-on for AI vendors and for any vendor holding regulated data or IBS controls at termination.
+- `references/sector-overlays.md#banking`, `insurance.md`, `capital-markets.md`, `payments-fintech.md` — sector-specific transition mechanics loaded per scope. Capital-markets carries the substantive fund service-provider transition mechanics under ICA §15 and Rule 38a-1.
+- `references/cross-cutting.md#cyber`, `privacy.md` — cross-cutting flavour for transition; default-on for AI vendors and for any vendor holding regulated data or IBS controls at termination.
 - `references/firm-overlay.md` — firm-installed policy, taxonomy, decision forums, and IBS map pointers beyond the regulatory baseline; consumed when present.
 - `templates/default-output.md` — plan template.
 - `schemas/exit-plan.schema.json` — structured-output contract for downstream consumption.
-- `examples/` — core-banking SaaS exit at a community bank; foundation-model API exit at an EU subsidiary (DORA-in-scope, AI vendor).
-- `TROUBLESHOOTING.md` — recurring pitfalls (clause-as-plan, single-trigger-category, single-target, tolerance-test skip, derivative-artifact destruction scope, fourth-party bottleneck, AI-vendor portability assumptions, never-tested as posture).
+- `examples.md` — core-banking SaaS exit at a community bank; foundation-model API exit at an EU subsidiary (DORA-in-scope, AI vendor).
+- `examples.md#troubleshooting` — recurring pitfalls (clause-as-plan, single-trigger-category, single-target, tolerance-test skip, derivative-artifact destruction scope, fourth-party bottleneck, AI-vendor portability assumptions, never-tested as posture).
 
 The plugin-level shared references (`references/source-map.md`, `references/policy-control-library.md`, `references/review-gates.md`) sit at the plugin root and are consulted alongside the skill-level files.
 

@@ -65,12 +65,12 @@ The tail of the artifact carries the evidence-gap flag (yes / no with a one-line
 
 The same CCCE spine carries different criteria sources, different severity calibrations, and different reviewer machinery across sectors and cross-cutting topics. Load only the overlays the scope flags. The MRA / MRIA labelling is banking-specific; insurance, capital-markets, and payments-fintech each carry their own finding-format conventions, so do not reach for MRA / MRIA when the source is, say, an SEC EXAMS deficiency letter.
 
-- `references/sector-overlays/banking.md` carries the OCC / FRB / FDIC supervisory-finding framework (MRA, MRIA, MRBA) and large-bank heightened-standards severity flavour for federally regulated banks.
-- `references/sector-overlays/insurance.md` carries the NAIC examination-findings format, state DOI MOU and consent-agreement language, and ORSA-driven enterprise-risk severity shading for insurer issues.
-- `references/sector-overlays/capital-markets.md` carries the SEC EXAMS deficiency-letter format, FINRA Letter of Caution and examination-finding shape, and broker-dealer / investment-adviser remediation conventions.
-- `references/sector-overlays/payments-fintech.md` carries OCC bank-fintech supervisory-letter conventions, CFPB UDAAP recommendation patterns, and money-transmitter state-by-state remediation flavour.
-- `references/cross-cutting/cyber.md` is the most-loaded cross-cutting overlay. State cyber finding patterns, FFIEC IT conventions, SEC public-company disclosure-process patterns, and customer-information incident-notification severity shading land here. The overlay fires whenever the underlying condition touches information-security controls, which is most issues in practice.
-- `references/cross-cutting/conduct.md` loads when the issue concerns customer-facing harm. UDAAP severity shifts when customer harm is identifiable; restitution scope drives the closure evidence.
+- `references/sector-overlays.md#banking` carries the OCC / FRB / FDIC supervisory-finding framework (MRA, MRIA, MRBA) and large-bank heightened-standards severity flavour for federally regulated banks.
+- `references/sector-overlays.md#insurance` carries the NAIC examination-findings format, state DOI MOU and consent-agreement language, and ORSA-driven enterprise-risk severity shading for insurer issues.
+- `references/sector-overlays.md#capital-markets` carries the SEC EXAMS deficiency-letter format, FINRA Letter of Caution and examination-finding shape, and broker-dealer / investment-adviser remediation conventions.
+- `references/sector-overlays.md#payments-fintech` carries OCC bank-fintech supervisory-letter conventions, CFPB UDAAP recommendation patterns, and money-transmitter state-by-state remediation flavour.
+- `references/cross-cutting.md#cyber` is the most-loaded cross-cutting overlay. State cyber finding patterns, FFIEC IT conventions, SEC public-company disclosure-process patterns, and customer-information incident-notification severity shading land here. The overlay fires whenever the underlying condition touches information-security controls, which is most issues in practice.
+- `references/cross-cutting.md#conduct` loads when the issue concerns customer-facing harm. UDAAP severity shifts when customer harm is identifiable; restitution scope drives the closure evidence.
 
 Privacy and climate overlays follow the same pattern; this skill ships cyber and conduct because they are the most frequent triggers. Granular citations (specific section labels, rule numbers) live in `references/source-anchors.md` and the overlay files. Where firm policy or taxonomy applies (issue-rating ladders specific to the firm, named committee gates, GRC-platform status enums), it lives in `references/firm-overlay.md`.
 
@@ -106,14 +106,16 @@ Downstream consumers: the exception-analysis chain reads `issue_id`, `severity`,
 
 ## Pointers
 
+`references/sector-overlays.md` and `references/cross-cutting.md` hold one section per sector or topic, and `examples.md` one per example. Find the heading and read only that section.
+
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
-- `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md` — sector overlays loaded from scope.
-- `references/cross-cutting/{cyber,conduct}.md` — cross-cutting overlays loaded when the issue touches information-security controls or customer-facing harm.
+- `references/sector-overlays.md` — sector overlays loaded from scope.
+- `references/cross-cutting.md` — cross-cutting overlays loaded when the issue touches information-security controls or customer-facing harm.
 - `references/firm-overlay.md` — firm-installed taxonomy, named role labels, severity-rating ladder, GRC-platform status enums, named committee gates beyond the regulatory baseline; consumed when present.
 - `templates/default-output.md` — write-up template.
 - `schemas/issue.schema.json` — structured-output contract (plugin-level; shared with downstream skills).
-- `examples/` — BCBS 239 risk-reporting completeness exception (internal audit source); TPRM critical-vendor SOC 2 qualified-opinion finding (vendor monitoring source).
-- `TROUBLESHOOTING.md` — recurring defects in issue write-ups.
+- `examples.md` — BCBS 239 risk-reporting completeness exception (internal audit source); TPRM critical-vendor SOC 2 qualified-opinion finding (vendor monitoring source).
+- `examples.md#troubleshooting` — recurring defects in issue write-ups.
 
 ## Human review and AI disclosure
 

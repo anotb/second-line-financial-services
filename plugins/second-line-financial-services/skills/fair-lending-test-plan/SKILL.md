@@ -90,7 +90,7 @@ The overlay is mandatory once triggered. Missing the LDA-search block on a plan 
 
 ### Sector overlays
 
-When the scope names a sector, load the matching `references/sector-overlays/<sector>.md`:
+When the scope names a sector, load the matching `references/sector-overlays.md#<sector>`:
 
 - *Banking* — depository specifics: HMDA-reportable mortgage and HELOC, indirect auto, credit card, deposit overdraft fairness, CRA assessment-area overlap.
 - *Capital markets* — securities-based lending fair-lending scope (limited but in-scope where retail); private-banking and wealth-credit boundary; not principally a fair-lending bucket but the perimeter is named.
@@ -107,17 +107,19 @@ Holds across every plan: every material claim cites a source from `references/so
 
 ## Adaptation
 
-Plan depth and length scale to the trigger and the in-scope inventory. An annual refresh covering one product reads short; a refresh after a regulator signal covering mortgage, indirect auto, and an AI pre-screen reads longer. Audience drives shape: fair-lending committee deck reads structured; outside-counsel direction memo reads denser; statistician working draft reads in test-spec vocabulary. The sector overlay set drives which `references/sector-overlays/<sector>.md` is loaded; a sponsor-bank fintech program may load two. Source posture (public-only through connector-aware) drives the data-required asks; a public-only plan flags the data fields that would be needed but are not yet accessible.
+Plan depth and length scale to the trigger and the in-scope inventory. An annual refresh covering one product reads short; a refresh after a regulator signal covering mortgage, indirect auto, and an AI pre-screen reads longer. Audience drives shape: fair-lending committee deck reads structured; outside-counsel direction memo reads denser; statistician working draft reads in test-spec vocabulary. The sector overlay set drives which `references/sector-overlays.md#<sector>` is loaded; a sponsor-bank fintech program may load two. Source posture (public-only through connector-aware) drives the data-required asks; a public-only plan flags the data fields that would be needed but are not yet accessible.
 
 ## Pointers
 
+`references/sector-overlays.md` and `references/cross-cutting.md` hold one section per sector or topic, and `examples.md` one per example. Find the heading and read only that section.
+
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
-- `references/sector-overlays/banking.md`, `insurance.md`, `capital-markets.md`, `payments-fintech.md` — sector-specific framing loaded per scope.
-- `references/cross-cutting/conduct.md` — UDAAP overlap, loaded where marketing distribution, steering, or dark-pattern themes are in scope.
+- `references/sector-overlays.md#banking`, `insurance.md`, `capital-markets.md`, `payments-fintech.md` — sector-specific framing loaded per scope.
+- `references/cross-cutting.md#conduct` — UDAAP overlap, loaded where marketing distribution, steering, or dark-pattern themes are in scope.
 - `references/firm-overlay.md` — firm-installed taxonomy, named committees, fair-lending statistician roster, system-of-record paths (consumed when present).
 - `templates/default-output.md` — plan template.
 - `schemas/fair-lending-test-plan.schema.json` — structured-output contract.
-- `examples/mortgage-redlining-test.md`, `examples/algorithmic-underwriting-test.md` — public-source-derived worked examples.
+- `examples.md#mortgage-redlining-test`, `examples.md#algorithmic-underwriting-test` — public-source-derived worked examples.
 
 ## Output
 

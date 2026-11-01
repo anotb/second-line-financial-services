@@ -80,13 +80,13 @@ The tail of the matrix earns its keep by what it surfaces:
 
 The same row spine carries different benchmark sources and different severity calibrations across sectors and across cross-cutting topics. Load only the overlays the scope flags. The overlays do not change the row structure; they change which sources the matrix benchmarks against and which gap patterns the practitioner expects to find.
 
-- `references/sector-overlays/banking.md` carries large-bank heightened-standards policy expectations, FRB SR letters and FDIC FILs as policy guidance, and the BSA/AML manual policy-pillar expectations.
-- `references/sector-overlays/insurance.md` carries NAIC Model Audit Rule, ORSA, and state DOI conduct-of-business policy expectations.
-- `references/sector-overlays/capital-markets.md` carries the SEC advisers and fund compliance-program rules and FINRA supervisory-procedures expectations.
-- `references/sector-overlays/payments-fintech.md` carries OCC bank-fintech partnership and CFPB consumer-compliance policy expectations for sponsor-bank arrangements.
-- `references/cross-cutting/cyber.md` is the most-loaded overlay. State cyber policy content elements, FFIEC IT information-security framing, and the SEC public-company governance-disclosure expectations land here. The overlay fires whenever the policy in scope is a cybersecurity policy or includes a cybersecurity section.
-- `references/cross-cutting/privacy.md` loads for privacy or data-handling policies. GLBA Safeguards, state privacy laws, Reg P, and the post-2024 Reg S-P customer-information safeguards land here.
-- `references/cross-cutting/conduct.md` loads for customer-facing policies (product approval, marketing, complaints, fair lending). CFPB UDAAP benchmarks land here.
+- `references/sector-overlays.md#banking` carries large-bank heightened-standards policy expectations, FRB SR letters and FDIC FILs as policy guidance, and the BSA/AML manual policy-pillar expectations.
+- `references/sector-overlays.md#insurance` carries NAIC Model Audit Rule, ORSA, and state DOI conduct-of-business policy expectations.
+- `references/sector-overlays.md#capital-markets` carries the SEC advisers and fund compliance-program rules and FINRA supervisory-procedures expectations.
+- `references/sector-overlays.md#payments-fintech` carries OCC bank-fintech partnership and CFPB consumer-compliance policy expectations for sponsor-bank arrangements.
+- `references/cross-cutting.md#cyber` is the most-loaded overlay. State cyber policy content elements, FFIEC IT information-security framing, and the SEC public-company governance-disclosure expectations land here. The overlay fires whenever the policy in scope is a cybersecurity policy or includes a cybersecurity section.
+- `references/cross-cutting.md#privacy` loads for privacy or data-handling policies. GLBA Safeguards, state privacy laws, Reg P, and the post-2024 Reg S-P customer-information safeguards land here.
+- `references/cross-cutting.md#conduct` loads for customer-facing policies (product approval, marketing, complaints, fair lending). CFPB UDAAP benchmarks land here.
 
 For GenAI, agentic AI, or other AI-system policy scope, the matrix benchmarks against NIST AI RMF 1.0, NIST AI 600-1, ISO/IEC 42001, the EU AI Act, and the firm's AI governance framework — those are out of scope of the joint April 2026 model-risk guidance and route to a separate workstream. Climate overlay follows the same pattern; this skill ships cyber, privacy, and conduct. Granular citations (CFR sections, rule paragraphs) live in `references/source-anchors.md` and the overlay files. Firm-specific severity ladders, named committees, and firm-specific role titles live in `references/firm-overlay.md`.
 
@@ -122,14 +122,16 @@ Downstream consumers: `issue-writeup` consumes `gaps[]` rows whose severity warr
 
 ## Pointers
 
+`references/sector-overlays.md` and `references/cross-cutting.md` hold one section per sector or topic, and `examples.md` one per example. Find the heading and read only that section.
+
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
-- `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md` — sector overlays loaded from scope.
-- `references/cross-cutting/{cyber,privacy,conduct}.md` — cross-cutting overlays loaded from scope.
+- `references/sector-overlays.md` — sector overlays loaded from scope.
+- `references/cross-cutting.md` — cross-cutting overlays loaded from scope.
 - `references/firm-overlay.md` — firm-installed taxonomy, named role labels, severity-rating ladder, named committee sign-offs, firm-specific section labels; consumed when present.
 - `templates/default-output.md` — gap-matrix template.
 - `schemas/policy-gap-matrix.schema.json` — structured-output contract.
-- `examples/` — legacy SR 11-7-aligned MRM policy benchmarked against OCC Bulletin 2026-13; pre-2023 vendor-management policy benchmarked against the June 2023 interagency TPRM guidance.
-- `TROUBLESHOOTING.md` — recurring defects in policy gap reviews.
+- `examples.md` — legacy SR 11-7-aligned MRM policy benchmarked against OCC Bulletin 2026-13; pre-2023 vendor-management policy benchmarked against the June 2023 interagency TPRM guidance.
+- `examples.md#troubleshooting` — recurring defects in policy gap reviews.
 
 ## Human review and AI disclosure
 

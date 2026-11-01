@@ -92,7 +92,7 @@ The overlay is mandatory once triggered. Missing the AI block on a memo where AI
 
 ### Sector overlays
 
-When the scope names a sector, load the matching `references/sector-overlays/<sector>.md`:
+When the scope names a sector, load the matching `references/sector-overlays.md#<sector>`:
 
 - *Banking* — depository-specific themes: overdraft and NSF practices including authorize-positive-settle-negative; deposit-account fee mechanics; surprise-representment fees; mortgage-servicing themes (loss-mitigation conduct, force-placed insurance, fee assessment); credit-card UDAAP themes (deferred-interest promotions, rewards-program changes, balance-transfer mechanics, retention-offer mechanics); auto-loan add-ons (GAP, VSC, debt-cancellation).
 - *Payments-fintech* — sponsor-bank attribution and joint accountability; BNPL UDAAP themes; P2P and Reg E error-resolution conduct; subscription and negative-option mechanics; tip and "instant funding" fee mechanics; junk-fee themes; algorithmic personalisation themes specific to digital-first fintech surfaces.
@@ -109,18 +109,20 @@ Holds across every memo: every material claim cites a source from `references/so
 
 ## Adaptation
 
-Memo depth and length scale to the trigger and the in-scope inventory. A pre-launch review of one new fee reads short; an annual refresh on an overdraft program reads longer; a post-incident review of a complaint cluster across a fintech program with a sponsor bank reads longer still. Audience drives shape: product-committee deck reads structured around the launch decision; conduct-committee read reads denser around the conduct-risk implications; counsel-direction memo carries explicit privilege framing and is more legal in voice. The sector overlay set drives which `references/sector-overlays/<sector>.md` is loaded; a sponsor-bank fintech program may load two. Source posture (public-only through connector-aware) drives the evidence the memo can actually cite; a public-only memo flags the evidence that would be needed but is not yet accessible.
+Memo depth and length scale to the trigger and the in-scope inventory. A pre-launch review of one new fee reads short; an annual refresh on an overdraft program reads longer; a post-incident review of a complaint cluster across a fintech program with a sponsor bank reads longer still. Audience drives shape: product-committee deck reads structured around the launch decision; conduct-committee read reads denser around the conduct-risk implications; counsel-direction memo carries explicit privilege framing and is more legal in voice. The sector overlay set drives which `references/sector-overlays.md#<sector>` is loaded; a sponsor-bank fintech program may load two. Source posture (public-only through connector-aware) drives the evidence the memo can actually cite; a public-only memo flags the evidence that would be needed but is not yet accessible.
 
 ## Pointers
 
+`references/sector-overlays.md` and `references/cross-cutting.md` hold one section per sector or topic, and `examples.md` one per example. Find the heading and read only that section.
+
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
-- `references/sector-overlays/banking.md`, `payments-fintech.md`, `capital-markets.md`, `insurance.md` — sector-specific framing loaded per scope.
-- `references/cross-cutting/conduct.md` — UDAAP-conduct intersection (mandatory on this skill); `references/cross-cutting/privacy.md` — secondary, loaded where the in-scope flow raises a privacy-meets-UDAAP angle.
+- `references/sector-overlays.md#banking`, `payments-fintech.md`, `capital-markets.md`, `insurance.md` — sector-specific framing loaded per scope.
+- `references/cross-cutting.md#conduct` — UDAAP-conduct intersection (mandatory on this skill); `references/cross-cutting.md#privacy` — secondary, loaded where the in-scope flow raises a privacy-meets-UDAAP angle.
 - `references/firm-overlay.md` — firm-installed taxonomy, named committees, conduct-event taxonomy, system-of-record paths (consumed when present).
 - `templates/default-output.md` — memo template.
 - `schemas/udaap-risk-review.schema.json` — structured-output contract.
-- `examples/instant-funding-tip-fee.md`, `examples/overdraft-apsn-annual-refresh.md` — public-source-derived worked examples.
-- `TROUBLESHOOTING.md` — recurring failure modes the drafter should preempt and the reviewer should catch.
+- `examples.md#instant-funding-tip-fee`, `examples.md#overdraft-apsn-annual-refresh` — public-source-derived worked examples.
+- `examples.md#troubleshooting` — recurring failure modes the drafter should preempt and the reviewer should catch.
 
 ## Output
 

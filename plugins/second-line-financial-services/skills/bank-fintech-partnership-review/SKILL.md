@@ -40,7 +40,7 @@ When an scope record is supplied, the skill consumes it for institution profile,
 
 ## How the pack gets built
 
-The pack has six named body sections plus a tail. Walk them in the order the conversation surfaces evidence; the structured record sorts itself. Cite every material claim against `references/source-anchors.md`, `references/sector-overlays/banking.md`, or a loaded cross-cutting overlay by path; mark unsupported items `[evidence needed]` and unconfirmed section references `[verify section]`. Source evidence, bank management assertion, fintech management assertion, public-source obligation, generated inference, and open legal question stay distinguishable. Roles only, never named individuals. No named institutions in narrative beyond a public defendant in a finalised consent order, and only as structural pattern.
+The pack has six named body sections plus a tail. Walk them in the order the conversation surfaces evidence; the structured record sorts itself. Cite every material claim against `references/source-anchors.md`, `references/sector-overlays.md#banking`, or a loaded cross-cutting overlay by path; mark unsupported items `[evidence needed]` and unconfirmed section references `[verify section]`. Source evidence, bank management assertion, fintech management assertion, public-source obligation, generated inference, and open legal question stay distinguishable. Roles only, never named individuals. No named institutions in narrative beyond a public defendant in a finalised consent order, and only as structural pattern.
 
 **Section 1 — Service description and risk classification.** Plain-language description of what the fintech does for the bank and the bank's customers. Where the fintech sits in the customer experience (front-of-app, behind-the-scenes, jointly branded). Customer of record (bank vs fintech vs joint) and the deposit-insurance recordkeeping consequence under the FDIC pass-through framework. Money flow (FBO-account structure, ledgering location, settlement and reconciliation cadence, named-role owner for breaks). Middleware-platform sub-row where applicable. Criticality classification under the June 2023 Interagency Guidance — critical-activity, significant, or lower-risk — driven by customer-facing position, money-flow position, CIP / KYC reliance, and share of bank deposits, fee income, or strategic positioning. A community bank with a single concentrated sponsor-program relationship can carry critical-activity risk independent of asset size; the criticality call is product-and-flow-driven, not asset-driven. BSA / AML risk classification across CIP, CDD, beneficial-ownership, suspicious-activity monitoring, and OFAC. Heightened Standards applicability for covered partner banks.
 
@@ -58,12 +58,12 @@ The pack has six named body sections plus a tail. Walk them in the order the con
 
 ## Sector and cross-cutting overlays
 
-This skill is banking-sector-only; `references/sector-overlays/banking.md` is loaded automatically and carries the bank-side lens differentiators. Cross-cutting overlays load when the scope flags them.
+This skill is banking-sector-only; `references/sector-overlays.md#banking` is loaded automatically and carries the bank-side lens differentiators. Cross-cutting overlays load when the scope flags them.
 
-- `references/cross-cutting/cyber.md` is the load-bearing companion for BaaS sponsor-program and embedded-lending relationships, for any fintech that holds customer NPI or sits in the authentication or fraud-decision path, and for any fintech whose serving environment is examined under FFIEC IT Handbook expectations. The CISO function co-reviews on cyber-flagged partnerships and co-decides on residual-risk acceptance.
-- `references/cross-cutting/privacy.md` loads when the fintech receives consumer financial information from the bank or shares it with the bank. Reg P and the GLBA Safeguards Rule flow down contractually; state privacy laws (CCPA / CPRA, Texas, Virginia, Colorado) reach the partnership where the fintech operates in those footprints.
-- `references/cross-cutting/conduct.md` loads when the fintech is customer-facing on a deposit, payments, or credit product. The CFPB UDAAP examination procedures, the FDIC Compliance Examination Manual deposit-program sections, and the OCC consumer-compliance handbook drive the customer-facing-controls section's depth.
-- `references/cross-cutting/climate.md` does not load.
+- `references/cross-cutting.md#cyber` is the load-bearing companion for BaaS sponsor-program and embedded-lending relationships, for any fintech that holds customer NPI or sits in the authentication or fraud-decision path, and for any fintech whose serving environment is examined under FFIEC IT Handbook expectations. The CISO function co-reviews on cyber-flagged partnerships and co-decides on residual-risk acceptance.
+- `references/cross-cutting.md#privacy` loads when the fintech receives consumer financial information from the bank or shares it with the bank. Reg P and the GLBA Safeguards Rule flow down contractually; state privacy laws (CCPA / CPRA, Texas, Virginia, Colorado) reach the partnership where the fintech operates in those footprints.
+- `references/cross-cutting.md#conduct` loads when the fintech is customer-facing on a deposit, payments, or credit product. The CFPB UDAAP examination procedures, the FDIC Compliance Examination Manual deposit-program sections, and the OCC consumer-compliance handbook drive the customer-facing-controls section's depth.
+- `references/cross-cutting.md#climate` does not load.
 
 Loading an overlay the engagement does not implicate adds noise without challenge value. Loading none when one applies is the more common failure mode.
 
@@ -80,12 +80,14 @@ Loading an overlay the engagement does not implicate adds noise without challeng
 
 ## Pointers
 
+`references/sector-overlays.md` and `references/cross-cutting.md` hold one section per sector or topic, and `examples.md` one per example. Find the heading and read only that section.
+
 - `references/source-anchors.md` — citations and excerpts for the named anchors (June 2023 Interagency Guidance lifecycle, 2024 Joint Agency Statement on Bank-Fintech Arrangements, §1867(c), Reg O, Reg W, Reg E, Reg DD, FBO / Part 330 recordkeeping, BSA / AML).
-- `references/sector-overlays/banking.md` — bank-side lens differentiators (loaded automatically).
-- `references/cross-cutting/cyber.md`, `privacy.md`, `conduct.md` — loaded conditionally on scope cross-cutting set.
+- `references/sector-overlays.md#banking` — bank-side lens differentiators (loaded automatically).
+- `references/cross-cutting.md#cyber`, `privacy.md`, `conduct.md` — loaded conditionally on scope cross-cutting set.
 - `references/firm-overlay.md` — firm-installed taxonomy, partnership-tiering policy, named review-machinery roles, sponsor-program governance SOP; consumed when present.
 - `templates/default-output.md` — pack template carrying the cover, the six body sections, and the tail.
-- Examples and TROUBLESHOOTING.md may be added; see plugin-level `public-regulatory-scenarios.md` for the canonical scenario library.
+- Examples and examples.md#troubleshooting may be added; see plugin-level `public-regulatory-scenarios.md` for the canonical scenario library.
 
 ## Output
 

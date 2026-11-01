@@ -75,7 +75,7 @@ Rows for: hold-policy disclosure, hold application against the §229.12 schedule
 
 ### 7. NSF, overdraft, and fee disclosure
 
-Rows for: truth-in-savings disclosure on fees (§1030.4, §1030.6), periodic-statement fee aggregation, fee-change notice timing (§1030.5), UDAAP screen on representment fees, UDAAP screen on surprise overdraft fees, UDAAP screen on authorised-positive-settled-negative pattern. Cross-link to `cross-cutting/conduct.md` for the theme list.
+Rows for: truth-in-savings disclosure on fees (§1030.4, §1030.6), periodic-statement fee aggregation, fee-change notice timing (§1030.5), UDAAP screen on representment fees, UDAAP screen on surprise overdraft fees, UDAAP screen on authorised-positive-settled-negative pattern. Cross-link to `cross-cutting.md#conduct` for the theme list.
 
 ### 8. Garnishments, levies, and account holds
 

@@ -85,7 +85,7 @@ The overlay is mandatory once triggered. Missing the GenAI sections on a GenAI c
 
 ### Sector and cross-cutting overlays
 
-When the scope names a sector (banking, insurance, capital markets, payments-fintech), load the matching `references/sector-overlays/<sector>.md`. The overlay's named fields and sign-off questions land in the card; treating the overlay as background reading is the failure mode. Same pattern for the cross-cutting overlays this skill carries: cyber, privacy, conduct. Climate is not applicable to model cards.
+When the scope names a sector (banking, insurance, capital markets, payments-fintech), load the matching `references/sector-overlays.md#<sector>`. The overlay's named fields and sign-off questions land in the card; treating the overlay as background reading is the failure mode. Same pattern for the cross-cutting overlays this skill carries: cyber, privacy, conduct. Climate is not applicable to model cards.
 
 Load only the overlays the scope names. Gold-plating a card with overlays the engagement does not implicate adds noise without challenge value.
 
@@ -112,14 +112,16 @@ Downstream consumers: `board-ai-risk-pack` pulls metadata, tier, intended use, p
 
 ## Pointers
 
+`references/sector-overlays.md` and `references/cross-cutting.md` hold one section per sector or topic, and `examples.md` one per example. Find the heading and read only that section.
+
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
-- `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md` — sector overlays loaded from scope.
-- `references/cross-cutting/{cyber,privacy,conduct}.md` — cross-cutting overlays loaded from scope.
+- `references/sector-overlays.md` — sector overlays loaded from scope.
+- `references/cross-cutting.md` — cross-cutting overlays loaded from scope.
 - `references/firm-overlay.md` — firm policy, taxonomy, named owners (consumed when present).
 - `templates/default-output.md` — card template.
 - `schemas/model-card.schema.json` — structured-output contract.
-- `examples/` — anonymised public-source-derived scenarios.
-- `TROUBLESHOOTING.md` — recurring defects.
+- `examples.md` — anonymised public-source-derived scenarios.
+- `examples.md#troubleshooting` — recurring defects.
 
 ## Human review and AI disclosure
 

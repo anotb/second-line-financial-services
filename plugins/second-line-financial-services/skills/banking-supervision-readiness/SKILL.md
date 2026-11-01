@@ -84,12 +84,12 @@ The tail also carries recommended owner actions before entry meeting (concrete, 
 
 ## Sector and cross-cutting overlays
 
-This skill is banking-sector-only. There is no `references/sector-overlays/` directory because the entire skill is the banking sector overlay. Cross-cutting overlays load when the cycle scope implicates them.
+This skill is banking-sector-only. There is no `references/sector-overlays.md` directory because the entire skill is the banking sector overlay. Cross-cutting overlays load when the cycle scope implicates them.
 
-- `cross-cutting/cyber.md` loads when the cycle includes IT examination scope, when the FFIEC IT Examination Handbook drives the request list, or when a cyber incident in the review period shapes the Management or Sensitivity component. Anchors: FFIEC IT Examination Handbook (Information Security booklet, current edition [verify edition]), 23 NYCRR Part 500 for state-chartered banks supervised by NYDFS, the SEC cyber-disclosure framework for the BHC where the BHC is a public registrant.
-- `cross-cutting/conduct.md` loads when the cycle includes consumer-compliance scope. Anchors: CFPB Supervision and Examination Manual (current edition [verify section]), FDIC Compliance Examination Manual, OCC consumer-compliance handbook, UDAAP examiner expectations.
-- `cross-cutting/privacy.md` loads when the cycle includes IT or compliance with information-security overlap. Anchors: GLBA Safeguards Rule (16 CFR 314.4 [verify]), Reg P (12 CFR 1016).
-- `cross-cutting/climate.md` does not load. Climate-related financial-risk supervision is evolving; flag as a `[verify current state]` reviewer question rather than embedding an overlay.
+- `cross-cutting.md#cyber` loads when the cycle includes IT examination scope, when the FFIEC IT Examination Handbook drives the request list, or when a cyber incident in the review period shapes the Management or Sensitivity component. Anchors: FFIEC IT Examination Handbook (Information Security booklet, current edition [verify edition]), 23 NYCRR Part 500 for state-chartered banks supervised by NYDFS, the SEC cyber-disclosure framework for the BHC where the BHC is a public registrant.
+- `cross-cutting.md#conduct` loads when the cycle includes consumer-compliance scope. Anchors: CFPB Supervision and Examination Manual (current edition [verify section]), FDIC Compliance Examination Manual, OCC consumer-compliance handbook, UDAAP examiner expectations.
+- `cross-cutting.md#privacy` loads when the cycle includes IT or compliance with information-security overlap. Anchors: GLBA Safeguards Rule (16 CFR 314.4 [verify]), Reg P (12 CFR 1016).
+- `cross-cutting.md#climate` does not load. Climate-related financial-risk supervision is evolving; flag as a `[verify current state]` reviewer question rather than embedding an overlay.
 
 Loading an overlay the cycle does not implicate adds noise without challenge value. Loading none when one applies is the more common failure mode.
 
@@ -114,11 +114,13 @@ Pack depth scales to cycle type and stakes: a targeted IT exam pack reads short,
 
 ## Pointers
 
+`references/sector-overlays.md` and `references/cross-cutting.md` hold one section per sector or topic, and `examples.md` one per example. Find the heading and read only that section.
+
 - `references/source-anchors.md` — citations and excerpts for the named anchors (federal banking supervisory framework, CAMELS and BHC rated framework, MRA / MRIA framework, Heightened Standards, topical examination manuals, CSI regimes, threshold triggers).
 - `references/firm-overlay.md` — firm-installed supervisory-history, named examination-coordinator role, internal CSI-handling SOP, response-letter style guide, sustained-operation policy threshold; consumed when present.
 - `templates/default-output.md` — pack template carrying cover, Parts A / B / C, and the variable tail.
 - `schemas/supervision-readiness.schema.json` — structured-output contract for downstream consumption (reuses `issue.schema.json` for individual findings and `control.schema.json` for control evidence).
-- `examples/` — public-source-derived scenarios (OCC full-scope at a midsize national bank approaching the Heightened Standards threshold; FRB consent-order quarterly update at a state-member bank with eight articles spanning BSA / AML, third-party risk, and IT).
+- `examples.md` — public-source-derived scenarios (OCC full-scope at a midsize national bank approaching the Heightened Standards threshold; FRB consent-order quarterly update at a state-member bank with eight articles spanning BSA / AML, third-party risk, and IT).
 
 ## Output
 

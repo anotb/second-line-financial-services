@@ -78,9 +78,9 @@ Reviewer questions tie to the decision and cluster for the forum that decides: o
 
 ### Sector and cross-cutting overlay loading
 
-When the scope names a sector, load the matching `references/sector-overlays/<sector>.md`: `banking.md` for the hyperscaler-on-bank, sponsor-bank-on-fintech, and large-bank-cloud-concentration framings; `insurance.md` for policy-administration-system, reinsurance, and claims-TPA concentration; `capital-markets.md` for market-data-vendor, exchange-feed, central-counterparty, and post-trade-processor concentration; `payments-fintech.md` for sponsor-bank, BIN-sponsor, BaaS, and rails-access concentration. A dual-registrant or BaaS arrangement may load two.
+When the scope names a sector, load the matching `references/sector-overlays.md#<sector>`: `banking.md` for the hyperscaler-on-bank, sponsor-bank-on-fintech, and large-bank-cloud-concentration framings; `insurance.md` for policy-administration-system, reinsurance, and claims-TPA concentration; `capital-markets.md` for market-data-vendor, exchange-feed, central-counterparty, and post-trade-processor concentration; `payments-fintech.md` for sponsor-bank, BIN-sponsor, BaaS, and rails-access concentration. A dual-registrant or BaaS arrangement may load two.
 
-The cyber cross-cutting overlay (`references/cross-cutting/cyber.md`) loads when the technology-stack and sub-contractor-chain dimensions surface cyber-risk material to the supervisory read (a single cyber-incident that removes multiple critical arrangements, a shared-utility incident that propagates across the firm and its peers). Privacy considerations are read through the geographic-and-jurisdictional dimension (cross-border data flows, data-residency posture); the deeper privacy treatment lives with `vendor-diligence` and the privacy-overlay file there. Load only the overlays the scope names.
+The cyber cross-cutting overlay (`references/cross-cutting.md#cyber`) loads when the technology-stack and sub-contractor-chain dimensions surface cyber-risk material to the supervisory read (a single cyber-incident that removes multiple critical arrangements, a shared-utility incident that propagates across the firm and its peers). Privacy considerations are read through the geographic-and-jurisdictional dimension (cross-border data flows, data-residency posture); the deeper privacy treatment lives with `vendor-diligence` and the privacy-overlay file there. Load only the overlays the scope names.
 
 ## Quality bar
 
@@ -94,7 +94,7 @@ Holds across every review regardless of cycle type, audience, or render format.
 - **Multi-region is not multi-resilience by default.** Two regions of the same hyperscaler share control plane, identity layer, and billing operation; the substitutability read names what fails together.
 - **Source trace.** Every material claim cites `references/source-anchors.md` (or a loaded overlay) by path. Section references that cannot be confirmed get `[verify section]` rather than fabricated. Unsupported items go to the engagement issue log, not silently into the artifact.
 - **The skill stops at the recommendation.** The artifact carries reviewer questions, named decision checkpoints, and recommended actions. The operational-resilience committee, the head of TPRM, the head of operational resilience, and the CRO office decide. Where the cycle is the EU pre-contract preliminary assessment, the legal artifact is the firm's signed assessment; this skill is the draft input and requires legal and compliance sign-off before becoming the legal record.
-- **No named institutions in narrative unless they are public defendants in a finalised enforcement action with a published consent order.** Sector pattern claims are abstracted from public-source-derived examples in `examples/`.
+- **No named institutions in narrative unless they are public defendants in a finalised enforcement action with a published consent order.** Sector pattern claims are abstracted from public-source-derived examples in `examples.md`.
 
 ## Adaptation
 
@@ -117,14 +117,16 @@ The schema is additive only. Add fields, do not rename or repurpose them. A brea
 
 ## Pointers
 
+`references/sector-overlays.md` and `references/cross-cutting.md` hold one section per sector or topic, and `examples.md` one per example. Find the heading and read only that section.
+
 - `references/source-anchors.md` ... citations and verification posture for the named anchors.
-- `references/sector-overlays/banking.md`, `insurance.md`, `capital-markets.md`, `payments-fintech.md` ... sector-specific concentration framings loaded per scope.
-- `references/cross-cutting/cyber.md` ... cyber cross-cutting frame loaded where the technology-stack and sub-contractor-chain dimensions surface cyber-risk material to the supervisory read.
+- `references/sector-overlays.md#banking`, `insurance.md`, `capital-markets.md`, `payments-fintech.md` ... sector-specific concentration framings loaded per scope.
+- `references/cross-cutting.md#cyber` ... cyber cross-cutting frame loaded where the technology-stack and sub-contractor-chain dimensions surface cyber-risk material to the supervisory read.
 - `references/firm-overlay.md` ... firm policy, named owners, concentration tolerances, internal-to-supervisory threshold mapping (consumed when present).
 - `templates/default-output.md` ... committee narrative template.
 - `schemas/concentration-review.schema.json` ... structured-output contract for downstream consumption.
-- `examples/annual-bank-portfolio-review.md`, `examples/dora-preliminary-assessment-eu-insurer.md` ... anonymised public-source-derived scenarios: an annual portfolio review at a US regional bank surfacing hyperscaler-region and KYC-utility concentration; an EU insurer pre-contract preliminary assessment for a critical-or-important ICT service surfacing sub-contractor-chain and sub-region concentration.
-- `TROUBLESHOOTING.md` ... recurring defects (legal-entity-only counting, treating spend as the metric, multi-region as multi-resilience, ignoring shared utilities, skipping AI-provider concentration, lists without substitutability reads, treating the artifact as the legal preliminary assessment).
+- `examples.md#annual-bank-portfolio-review`, `examples.md#dora-preliminary-assessment-eu-insurer` ... anonymised public-source-derived scenarios: an annual portfolio review at a US regional bank surfacing hyperscaler-region and KYC-utility concentration; an EU insurer pre-contract preliminary assessment for a critical-or-important ICT service surfacing sub-contractor-chain and sub-region concentration.
+- `examples.md#troubleshooting` ... recurring defects (legal-entity-only counting, treating spend as the metric, multi-region as multi-resilience, ignoring shared utilities, skipping AI-provider concentration, lists without substitutability reads, treating the artifact as the legal preliminary assessment).
 
 Plugin-level shared references (`references/source-map.md`, `references/policy-control-library.md`, `references/review-gates.md`) sit at the plugin root and are consulted alongside the skill-level files.
 

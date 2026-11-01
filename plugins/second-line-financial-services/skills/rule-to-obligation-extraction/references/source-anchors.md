@@ -1,6 +1,6 @@
 # Source anchors — rule-to-obligation-extraction
 
-The named, dated regulatory sources this skill anchors to for rule-text decomposition convention. Sector-specific extraction patterns live in the corresponding overlay files in `references/sector-overlays/`. Cross-cutting topical patterns live in `references/cross-cutting/`. SKILL.md cites this file by path and does not restate excerpts.
+The named, dated regulatory sources this skill anchors to for rule-text decomposition convention. Sector-specific extraction patterns live in the corresponding overlay files in `references/sector-overlays.md`. Cross-cutting topical patterns live in `references/cross-cutting.md`. SKILL.md cites this file by path and does not restate excerpts.
 
 ## Federal Register and CFR — citation and structure conventions
 

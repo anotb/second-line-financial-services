@@ -65,7 +65,7 @@ Depth flexes with tier and gate type. A tier-3 recurring-revalidation gate revie
 
 ## Sector and cross-cutting overlays
 
-When the scope names a sector (banking, insurance, capital markets, payments-fintech), load the matching `references/sector-overlays/<sector>.md`. Each overlay carries sector-specific co-reviewers, additional notification triggers, sector-specific monitoring expectations, and recommended-action items. The overlay's named additions land in the memo; treating the overlay as background reading is the failure mode.
+When the scope names a sector (banking, insurance, capital markets, payments-fintech), load the matching `references/sector-overlays.md#<sector>`. Each overlay carries sector-specific co-reviewers, additional notification triggers, sector-specific monitoring expectations, and recommended-action items. The overlay's named additions land in the memo; treating the overlay as background reading is the failure mode.
 
 Cyber should be considered the default cross-cutting overlay for GenAI gate reviews. The CISO function is a co-signer on the gate decision, not a downstream consumer. Privacy loads where regulated personal data is handled (NPI, PHI, biometric data, state-comprehensive-privacy-law-relevant content). Conduct loads where customer-facing communication or decision-affecting output is in scope. Climate is not applicable to pre-prod gate reviews.
 
@@ -101,14 +101,16 @@ Downstream consumers: `board-ai-risk-pack` pulls the residual-risk summary, the 
 
 ## Pointers
 
+`references/sector-overlays.md` and `references/cross-cutting.md` hold one section per sector or topic, and `examples.md` one per example. Find the heading and read only that section.
+
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
-- `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md` — sector overlays loaded from scope.
-- `references/cross-cutting/{cyber,privacy,conduct,ai-ethics}.md` — cross-cutting overlays loaded from scope. Cyber is the default for GenAI gate reviews.
+- `references/sector-overlays.md` — sector overlays loaded from scope.
+- `references/cross-cutting.md` — cross-cutting overlays loaded from scope. Cyber is the default for GenAI gate reviews.
 - `references/firm-overlay.md` — firm policy, taxonomy, named committees, named owners, gate machinery (consumed when present).
 - `templates/default-output.md` — gate-review memo template.
 - `schemas/genai-pre-prod-review.schema.json` — structured-output contract.
-- `examples/` — anonymised public-source-derived scenarios (banking KYC analyst assistant initial release; insurance claims summarisation material expansion).
-- `TROUBLESHOOTING.md` — recurring defects.
+- `examples.md` — anonymised public-source-derived scenarios (banking KYC analyst assistant initial release; insurance claims summarisation material expansion).
+- `examples.md#troubleshooting` — recurring defects.
 
 ## Human review and AI disclosure
 

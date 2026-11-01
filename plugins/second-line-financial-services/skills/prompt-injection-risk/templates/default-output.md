@@ -149,14 +149,14 @@ Vendor red-team results carry vendor-self-attestation confidence (typically low 
 
 ## 11. Sector and cross-cutting overlay notes (when applicable)
 
-When the scope names a sector, the matching `references/sector-overlays/<sector>.md` adds named fields here. Examples:
+When the scope names a sector, the matching `references/sector-overlays.md#<sector>` adds named fields here. Examples:
 
 - Banking: sponsor-bank GenAI shared-responsibility allocation; FFIEC IT Examination Handbook touchpoint; NYDFS Part 500 covered-entity status.
 - Insurance: claims-AI carrier (NAIC Bulletin AIS Program element status); ECDIS-driven underwriting injection surface; HIPAA touch on PHI carriers.
 - Capital markets: Marketing Rule and books-and-records reach for AI-generated client-facing content; surveillance-system injection surface; SR/IA fiduciary-lens framing.
 - Payments and fintech: BaaS GenAI bank-fintech responsibility allocation; account-takeover fraud-model adjacency; transaction-monitoring injection surface.
 
-When the scope flags cross-cutting overlays, add the matching `references/cross-cutting/<topic>.md` fields:
+When the scope flags cross-cutting overlays, add the matching `references/cross-cutting.md#<topic>` fields:
 
 - Cyber: NYDFS October 2024 industry-letter alignment; NYDFS Part 500 incident-notice posture; SEC cyber 8-K and Reg S-K Item 106 for public registrants; tool-boundary and model-supply-chain framing.
 - Privacy: PII / NPI / PHI exfiltration as a privacy event class; GLBA, HIPAA, state privacy law touchpoints; consumer-recourse posture.

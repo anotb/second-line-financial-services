@@ -122,7 +122,7 @@ QA reviewer's own source trace. Distinct from the workpaper's source trace; this
 |---|---|---|---|---|
 | reviewer separation is structural | IIA Standard 2340 [verify] | engagement supervision | January 9, 2025 effective | references/source-anchors.md |
 | severity floor on §1005.11(c) timing | firm methodology | [section] | [version effective] | references/firm-overlay.md |
-| conclusion-language hygiene | conduct cross-cutting overlay | (this skill) | n/a | references/cross-cutting/conduct.md |
+| conclusion-language hygiene | conduct cross-cutting overlay | (this skill) | n/a | references/cross-cutting.md#conduct |
 
 ### Tab 8: `Reviewer-questions`
 

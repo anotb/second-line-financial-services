@@ -6,7 +6,7 @@ Audience: chief risk officer, chief credit officer, chief compliance officer, he
 
 ## Posture
 
-This is a strict sector-overlay plugin. It ships skills that are genuinely banking-only, shaped by the federal banking statutes, interagency guidance, and the OCC Comptroller's Handbook / FFIEC manual / FDIC RMS Manual / FRB BHC Supervision Manual lattice. Capability skills that already cover the underlying second-line function (control matrix, vendor diligence, exit plan, exam brief, risk committee pack, AI use-case intake, and so on) are not duplicated here. Banking nuance for those capability skills lives as a `references/sector-overlays/banking.md` reference inside each capability skill.
+This is a strict sector-overlay plugin. It ships skills that are genuinely banking-only, shaped by the federal banking statutes, interagency guidance, and the OCC Comptroller's Handbook / FFIEC manual / FDIC RMS Manual / FRB BHC Supervision Manual lattice. Capability skills that already cover the underlying second-line function (control matrix, vendor diligence, exit plan, exam brief, risk committee pack, AI use-case intake, and so on) are not duplicated here. Banking nuance for those capability skills lives as a `references/sector-overlays.md#banking` reference inside each capability skill.
 
 ## Skills
 
@@ -45,7 +45,7 @@ The bank-fintech regulatory pipeline has moved repeatedly post-2023 (Interagency
 
 ## Components
 
-- `skills/` — the four skills above. Each ships its own `SKILL.md`, `references/source-anchors.md`, `templates/`, and (where useful) `schemas/` and `examples/`.
+- `skills/` — the four skills above. Each ships its own `SKILL.md`, `references/source-anchors.md`, `templates/`, and (where useful) `schemas/` and `examples.md`.
 - `references/` — plugin-level shared references: banking source map, policy-control library rows, named decision forums.
 - `schemas/` — banking-specific artifacts.
 

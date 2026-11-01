@@ -51,7 +51,7 @@ Source posture is one of public-only, public-plus-firm-policy, public-plus-firm-
 
 Risk lens is the list of risk types in scope, drawn from the firm's taxonomy when the firm has one or from the named risks the engagement targets when it does not. Match the lens to the engagement; an exam-readiness sprint covering credit and BSA does not need the full enterprise taxonomy. Firm-specific taxonomy, owners, and system-of-record paths do not get encoded directly in the charter. Those live in `references/firm-overlay.md` when the firm has installed one; the charter consumes them.
 
-Sector overlay set is which of {banking, insurance, capital-markets, payments-fintech} apply. Usually one. Multi-entity engagements may need two; flag the choice. Cross-cutting overlay set is which of {cyber, privacy, climate, conduct} apply, driven mostly by the risk lens. Both sets are directives to downstream skills, telling them which `references/sector-overlays/<sector>.md` and `references/cross-cutting/<topic>.md` to load. Loading only what the engagement names keeps context clean for the regulators actually in play.
+Sector overlay set is which of {banking, insurance, capital-markets, payments-fintech} apply. Usually one. Multi-entity engagements may need two; flag the choice. Cross-cutting overlay set is which of {cyber, privacy, climate, conduct} apply, driven mostly by the risk lens. Both sets are directives to downstream skills, telling them which `references/sector-overlays.md#<sector>` and `references/cross-cutting.md#<topic>` to load. Loading only what the engagement names keeps context clean for the regulators actually in play.
 
 Primary regulators is who this engagement is actually addressing, not every regulator that touches the institution. Conceivable-but-secondary regulators go in `assumptions_and_dependencies`. Where a regulator's section reference is not known, leave it for verification rather than fabricate; the named regulatory anchors and their citations live in `references/source-anchors.md`.
 
@@ -63,12 +63,14 @@ The revision log is append-only. The first row is the initial scope, every mater
 
 ## Pointers
 
+`references/sector-overlays.md` and `references/cross-cutting.md` hold one section per sector or topic, and `examples.md` one per example. Find the heading and read only that section.
+
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
 - `references/firm-overlay.md` — firm-installed taxonomy, machinery, and policy pointers; consumed when present.
 - `templates/default-output.md` — content spec for the charter (named sections, fields).
 - `schemas/scope.schema.json` — structured-output contract consumed by every downstream second-line skill.
-- `examples/` — advisory exam-readiness sprint at a regional bank; internal AI use-case intake review at a registered investment adviser.
-- `TROUBLESHOOTING.md` — recurring defects in scope records.
+- `examples.md` — advisory exam-readiness sprint at a regional bank; internal AI use-case intake review at a registered investment adviser.
+- `examples.md#troubleshooting` — recurring defects in scope records.
 
 ## Output
 

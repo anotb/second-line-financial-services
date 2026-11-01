@@ -1,6 +1,6 @@
 # Source anchors: evidence-binder
 
-This file holds the named, dated regulatory and professional-standard sources the evidence-binder skill anchors to. SKILL.md cites this file by path; the named anchors are not restated inline. Sector-specific anchors live in `references/sector-overlays/<sector>.md`; cross-cutting anchors live in `references/cross-cutting/<topic>.md`. Firm-specific evidence-handling rules belong in `references/firm-overlay.md` when the firm installs one.
+This file holds the named, dated regulatory and professional-standard sources the evidence-binder skill anchors to. SKILL.md cites this file by path; the named anchors are not restated inline. Sector-specific anchors live in `references/sector-overlays.md#<sector>`; cross-cutting anchors live in `references/cross-cutting.md#<topic>`. Firm-specific evidence-handling rules belong in `references/firm-overlay.md` when the firm installs one.
 
 `[verify section]` placeholders mark anchors where the precise section reference still needs verification against the current edition of the source. They are deliberate, not omissions. The discipline of the binder is the same discipline applied here: a screenshot is not evidence, the system-of-record link is.
 
@@ -120,11 +120,11 @@ Link: https://www.sec.gov/rules/final/2022/34-96034.pdf
 
 ## Cyber, privacy, climate, conduct (when applicable)
 
-When the engagement carries cyber, privacy, climate, or conduct overlay, the cross-cutting overlay files add the relevant anchors. The privacy overlay (`references/cross-cutting/privacy.md`) is the one currently shipped; cyber, climate, and conduct overlays may be added when scope demands.
+When the engagement carries cyber, privacy, climate, or conduct overlay, the cross-cutting overlay files add the relevant anchors. The privacy overlay (`references/cross-cutting.md#privacy`) is the one currently shipped; cyber, climate, and conduct overlays may be added when scope demands.
 
 Specifically:
 - Cyber: NYDFS 23 NYCRR Part 500 §500.16 (incident response) and §500.17 (notice of cybersecurity event) [verify current section labels]; SEC Form 8-K Item 1.05 cyber disclosure [verify rule citation]; SEC Reg S-K Item 106 [verify].
-- Privacy: covered in `references/cross-cutting/privacy.md`.
+- Privacy: covered in `references/cross-cutting.md#privacy`.
 - Climate: not anchored.
 - Conduct: CFPB Examination Manual UDAAP module [verify edition reference]; fair-lending exam evidence patterns under ECOA / Reg B and HMDA / Reg C.
 

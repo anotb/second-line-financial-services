@@ -233,7 +233,7 @@ For covered banks ($50B+ avg total consolidated assets). For banks approaching t
 
 ### Cross-references
 
-- Where a finding has a plausible fair-lending dimension, cross-reference to the consumer-compliance fair-lending skills (per `references/cross-cutting/conduct.md`).
+- Where a finding has a plausible fair-lending dimension, cross-reference to the consumer-compliance fair-lending skills (per `references/cross-cutting.md#conduct`).
 - Where a finding implicates CECL model validation, cross-reference to `validation-plan` (or `model-card-builder`).
 - Where a finding implicates BSA / AML CDD on a borrower, cross-reference to the `financial-crime-governance` skills.
 - Where a finding feeds the broader supervision-readiness asset-quality CAMELS-component preparation, hand off to `banking-supervision-readiness`.

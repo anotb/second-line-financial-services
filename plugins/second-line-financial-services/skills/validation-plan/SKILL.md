@@ -53,9 +53,9 @@ Upstream artifacts come next, before any scope item is drafted: the `ai-use-case
 
 **Outcomes analysis scope** is the test catalogue. Each entry names the test, the method, the dataset, the segment cuts, the success criterion in firm-policy units, the owner, and what it benchmarks against (challenger model, prior version, vendor benchmark, external reference). Deployed-environment metrics dominate where the model is in production; lab-only metrics carry separately and are labelled. For traditional ML: KS, AUC, capture rate, segment-level performance, override analysis. For GenAI: faithfulness, citation precision, refusal rate, hallucination rate, agent-edit rate (when human-in-the-loop), latency, plus task-specific metrics. The validator's outcomes-analysis pillar must finish before robustness work; the failure mode is moving to robustness without a baseline against which to measure degradation.
 
-**Robustness, adversarial, and stress testing scope** is tied to architecture flags. This is the recurring defect: the plan misses the most relevant attack class. For traditional ML: out-of-time backtest, stress scenario, segment robustness, adversarial input. For RAG: add direct prompt injection, indirect prompt injection on retrieved content, and RAG poisoning. For agentic systems: add tool misuse and goal hijack. For vendor-hosted GenAI: add a vendor model-version swap drill (a deliberate test of what happens to performance when the vendor floats the underlying model). For execution algos in capital markets, the SEC market-access pre-trade control set is the alignment point; load `references/sector-overlays/capital-markets.md`. Each entry names the attack class, the method, the success criterion, and the owner.
+**Robustness, adversarial, and stress testing scope** is tied to architecture flags. This is the recurring defect: the plan misses the most relevant attack class. For traditional ML: out-of-time backtest, stress scenario, segment robustness, adversarial input. For RAG: add direct prompt injection, indirect prompt injection on retrieved content, and RAG poisoning. For agentic systems: add tool misuse and goal hijack. For vendor-hosted GenAI: add a vendor model-version swap drill (a deliberate test of what happens to performance when the vendor floats the underlying model). For execution algos in capital markets, the SEC market-access pre-trade control set is the alignment point; load `references/sector-overlays.md#capital-markets`. Each entry names the attack class, the method, the success criterion, and the owner.
 
-**Fairness, explainability, and transparency scope** names the protected and policy-relevant dimensions, the metric, and the method's limitations. For credit decisioning, the validator's scope and the consumer-compliance fair-lending test plan reference each other but stay distinct artifacts; CFPB adverse-action guidance sets the quality bar for explainability output (the algorithm's complexity is not a defence to specific-reason requirements). For insurance pricing or underwriting, frame the test against unfair discrimination using state-insurance-code vocabulary in addition to or in place of generic fairness terminology, and load `references/sector-overlays/insurance.md`.
+**Fairness, explainability, and transparency scope** names the protected and policy-relevant dimensions, the metric, and the method's limitations. For credit decisioning, the validator's scope and the consumer-compliance fair-lending test plan reference each other but stay distinct artifacts; CFPB adverse-action guidance sets the quality bar for explainability output (the algorithm's complexity is not a defence to specific-reason requirements). For insurance pricing or underwriting, frame the test against unfair discrimination using state-insurance-code vocabulary in addition to or in place of generic fairness terminology, and load `references/sector-overlays.md#insurance`.
 
 **Ongoing monitoring scope** is what the validator expects to see in production once the model lands. Each entry names the metric, the threshold, the frequency, the owner, the escalation path, and a `revalidation_trigger` flag. All six fields. The trigger flag is what distinguishes the validator's monitoring view from the model owner's operational monitoring view; the same metric may appear in both, but the validator's view is the one that triggers a re-validation cycle when breached. Validator monitoring copy-pasted from the model card without re-grounding is the recurring defect; the model owner's operational monitoring is not the same as the validator's revalidation triggers.
 
@@ -84,7 +84,7 @@ The overlay is mandatory once triggered. Skipping the indirect-prompt-injection 
 
 ### Sector and cross-cutting overlays
 
-When the scope names a sector (banking, insurance, capital markets, payments-fintech), load the matching `references/sector-overlays/<sector>.md`. The overlay's named scope items land in the plan's sector-overlay-notes section; treating the overlay as background reading is the failure mode. Same pattern for the cross-cutting overlays this skill carries: cyber, privacy, conduct. Climate is not applicable to validation plans.
+When the scope names a sector (banking, insurance, capital markets, payments-fintech), load the matching `references/sector-overlays.md#<sector>`. The overlay's named scope items land in the plan's sector-overlay-notes section; treating the overlay as background reading is the failure mode. Same pattern for the cross-cutting overlays this skill carries: cyber, privacy, conduct. Climate is not applicable to validation plans.
 
 Load only the overlays the scope names. Stuffing every overlay into a plan adds noise that the model risk committee then has to read past.
 
@@ -112,14 +112,16 @@ Downstream consumers: the validation report skill (planned in `ai-validation-and
 
 ## Pointers
 
+`references/sector-overlays.md` and `references/cross-cutting.md` hold one section per sector or topic, and `examples.md` one per example. Find the heading and read only that section.
+
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
-- `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md` — sector overlays loaded from scope.
-- `references/cross-cutting/{cyber,privacy}.md` — cross-cutting overlays loaded from scope.
+- `references/sector-overlays.md` — sector overlays loaded from scope.
+- `references/cross-cutting.md` — cross-cutting overlays loaded from scope.
 - `references/firm-overlay.md` — firm policy, taxonomy, named owners and committees (consumed when present).
 - `templates/default-output.md` — plan template.
 - `schemas/validation-plan.schema.json` — structured-output contract.
-- `examples/` — credit-scoring ML annual revalidation; vendor-hosted GenAI customer-service initial validation.
-- `TROUBLESHOOTING.md` — recurring defects.
+- `examples.md` — credit-scoring ML annual revalidation; vendor-hosted GenAI customer-service initial validation.
+- `examples.md#troubleshooting` — recurring defects.
 
 ## Human review and AI disclosure
 

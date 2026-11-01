@@ -32,7 +32,7 @@ Not the right tool when:
 
 Before drafting, get plain answers to a few things. Most reviews answer them quickly; if not, default and flag.
 
-- **What is the institution and which SAR rule applies.** A bank is read against 31 CFR 1020.320, a broker-dealer against 1023.320, a mutual fund against 1024.320, an insurance company against 1025.320 (covered products only), an FCM/IB against 1026.320, an MSB against 1022.320 (with the lower USD 2,000 threshold). A fintech operating under a sponsor-bank model has a delineation question that must be answered before the QA names a filing-window expectation. Load the matching `references/sector-overlays/<sector>.md` and read the rule from there.
+- **What is the institution and which SAR rule applies.** A bank is read against 31 CFR 1020.320, a broker-dealer against 1023.320, a mutual fund against 1024.320, an insurance company against 1025.320 (covered products only), an FCM/IB against 1026.320, an MSB against 1022.320 (with the lower USD 2,000 threshold). A fintech operating under a sponsor-bank model has a delineation question that must be answered before the QA names a filing-window expectation. Load the matching `references/sector-overlays.md#<sector>` and read the rule from there.
 - **What kind of QA review is this.** Sample-based program QA over a lookback window, targeted typology review, continuing-activity cadence review, or pre-exam readiness pass. The review type drives sample selection, depth, and how findings are framed for the audience (QA team, BSA officer, AML director, audit, examiner response).
 - **Who reads the memo.** A BSA officer reads for material defensibility issues and program-level patterns. A QA team reads for criterion-by-criterion calibration. An AML director reads for governance signal and committee escalation. An examiner-response file reads formal and full source-traced. Audience drives tone and depth.
 - **What is in the file the QA reads.** The alert record (system or referral), the case investigation file, the disposition record, the SAR if filed, the continuing-activity log if applicable, and the evidence pointers. If the file is incomplete, that is itself a finding. Draft against what is there and flag the missing parts in `material_gaps`; do not block.
@@ -103,15 +103,17 @@ Downstream consumers: a sample-level QA roll-up reads the structured record acro
 
 ## Pointers
 
+`references/sector-overlays.md` and `references/cross-cutting.md` hold one section per sector or topic, and `examples.md` one per example. Find the heading and read only that section.
+
 - `references/source-anchors.md` — citations and excerpts for the named anchors (FFIEC SAR section, 31 CFR SAR rules, 31 USC 5318(g), FinCEN form and instructions, applicable advisories, joint statements).
-- `references/sector-overlays/banking.md`, `payments-fintech.md`, `capital-markets.md`, `insurance.md` — sector-specific SAR rule reads loaded per scope.
-- `references/cross-cutting/cyber.md` — cyber-event SAR considerations loaded when the alert is cyber-related.
+- `references/sector-overlays.md#banking`, `payments-fintech.md`, `capital-markets.md`, `insurance.md` — sector-specific SAR rule reads loaded per scope.
+- `references/cross-cutting.md#cyber` — cyber-event SAR considerations loaded when the alert is cyber-related.
 - `references/firm-overlay.md` — firm policy, typology library, named systems, owners, and review machinery (consumed when present).
 - `templates/default-output.md` — single-decision memo template.
 - `templates/sample-roll-up.md` — sample-based program QA roll-up template (executive summary, scope, per-case findings table, themes, recommendations, source trace, decision forum) for the sample-based review type.
 - `schemas/sar-decision-qa.schema.json` — structured-output contract.
-- `examples/structuring-pattern-bank.md`, `crypto-payments-fintech.md` — public-source-derived scenarios.
-- `TROUBLESHOOTING.md` — recurring defects in SAR decision files and in QA memos written against them.
+- `examples.md#structuring-pattern-bank`, `crypto-payments-fintech.md` — public-source-derived scenarios.
+- `examples.md#troubleshooting` — recurring defects in SAR decision files and in QA memos written against them.
 
 The plugin-level shared references (`references/source-map.md`, `references/policy-control-library.md`, `references/review-gates.md`) sit at the plugin root and are consulted alongside the skill-level files.
 

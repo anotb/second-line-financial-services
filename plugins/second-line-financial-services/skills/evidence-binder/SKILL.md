@@ -85,19 +85,21 @@ No fabricated regulatory facts. No named institutions in narrative unless they a
 
 ## Adaptation
 
-Depth and length scale to purpose and audience. A vendor-review binder for a non-critical SaaS may run to ten rows and fit on a page; a regulator-exam binder reconciled against a 60-item RFI runs long, with the sufficiency log and gap section in full. A committee binder leads with headline sufficiency and pushes row-level detail into an appendix; an audit fieldwork binder leads with row-level detail because the auditor will read every row. A model-validation binder groups rows by validation activity (conceptual soundness, ongoing monitoring, outcomes analysis, benchmarking, independent challenge); a vendor-review binder groups rows by the interagency TPRM lifecycle phases. The sector overlay set drives which `references/sector-overlays/<sector>.md` is loaded. The cross-cutting overlay set follows the scope, with the rule that `references/cross-cutting/privacy.md` loads whenever the binder may carry NPI, PHI, PCI, or other regulated personal data, regardless of how the scope reads.
+Depth and length scale to purpose and audience. A vendor-review binder for a non-critical SaaS may run to ten rows and fit on a page; a regulator-exam binder reconciled against a 60-item RFI runs long, with the sufficiency log and gap section in full. A committee binder leads with headline sufficiency and pushes row-level detail into an appendix; an audit fieldwork binder leads with row-level detail because the auditor will read every row. A model-validation binder groups rows by validation activity (conceptual soundness, ongoing monitoring, outcomes analysis, benchmarking, independent challenge); a vendor-review binder groups rows by the interagency TPRM lifecycle phases. The sector overlay set drives which `references/sector-overlays.md#<sector>` is loaded. The cross-cutting overlay set follows the scope, with the rule that `references/cross-cutting.md#privacy` loads whenever the binder may carry NPI, PHI, PCI, or other regulated personal data, regardless of how the scope reads.
 
 ## Pointers
 
+`references/sector-overlays.md` and `references/cross-cutting.md` hold one section per sector or topic, and `examples.md` one per example. Find the heading and read only that section.
+
 - `references/source-anchors.md` — citations and excerpts for the named anchors (BCBS 239, AU-C 500, AU-C 230, IIA Standards, FFIEC IT Audit booklet, SR 11-7, OCC 2026-13, the 2023 interagency third-party guidance, recordkeeping floors).
-- `references/sector-overlays/banking.md`, `insurance.md`, `capital-markets.md`, `payments-fintech.md` — sector-specific supervisory frame loaded per scope.
-- `references/cross-cutting/privacy.md` — loaded whenever the binder may carry regulated personal data; default-on for any binder touching NPI, PHI, PCI, or important-business-service controls.
-- `references/cross-cutting/cyber.md` — loaded when the scope flags cyber or whenever the binder carries cyber-program evidence (NYDFS Part 500 attestations, IR workpapers, vulnerability-scan extracts, SOC 2 evidence, vendor cyber assessments, §500.17 / 36-hour banking notice / 8-K Item 1.05 filings).
+- `references/sector-overlays.md#banking`, `insurance.md`, `capital-markets.md`, `payments-fintech.md` — sector-specific supervisory frame loaded per scope.
+- `references/cross-cutting.md#privacy` — loaded whenever the binder may carry regulated personal data; default-on for any binder touching NPI, PHI, PCI, or important-business-service controls.
+- `references/cross-cutting.md#cyber` — loaded when the scope flags cyber or whenever the binder carries cyber-program evidence (NYDFS Part 500 attestations, IR workpapers, vulnerability-scan extracts, SOC 2 evidence, vendor cyber assessments, §500.17 / 36-hour banking notice / 8-K Item 1.05 filings).
 - `references/firm-overlay.md` — firm-installed policy, taxonomy, named owners, system-of-record naming map (consumed when present).
 - `templates/default-output.md` — binder template.
 - `schemas/evidence-binder.schema.json` — structured-output contract.
-- `examples/exam-response-binder.md`, `control-test-binder.md` — public-source-derived worked examples.
-- `TROUBLESHOOTING.md` — recurring defects (screenshot-as-evidence, request-list-not-reconciled, custodian-set-to-team, stale period coverage, assertion-mixed-with-evidence, non-reproducible provenance, default-sensitivity, hidden gaps, function-level sign-off, skill-invoked-when-work-is-upstream).
+- `examples.md#exam-response-binder`, `control-test-binder.md` — public-source-derived worked examples.
+- `examples.md#troubleshooting` — recurring defects (screenshot-as-evidence, request-list-not-reconciled, custodian-set-to-team, stale period coverage, assertion-mixed-with-evidence, non-reproducible provenance, default-sensitivity, hidden gaps, function-level sign-off, skill-invoked-when-work-is-upstream).
 
 ## Output
 

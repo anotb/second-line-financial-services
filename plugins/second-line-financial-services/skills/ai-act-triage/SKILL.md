@@ -94,14 +94,16 @@ Downstream consumers: `model-card-builder` pulls the Annex IV documentation delt
 
 ## Pointers
 
+`references/sector-overlays.md` and `references/cross-cutting.md` hold one section per sector or topic, and `examples.md` one per example. Find the heading and read only that section.
+
 - `references/source-anchors.md` — citations and section-referenced excerpts for every primary anchor.
-- `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md` — sector overlays loaded from scope. The insurance overlay carries the substance of the deprecated `insurance-ai-act-triage` skill.
-- `references/cross-cutting/conduct.md` — conduct overlay loaded when scope names it. Cyber and privacy framings are inline in the body above (Article 15 robustness × NIS2 / DORA Articles 5 to 14; Article 27 FRIA × GDPR Article 35 DPIA reconciliation); this skill does not ship separate cyber or privacy cross-cutting files because the substance lives at Article level rather than as a parallel domain overlay.
+- `references/sector-overlays.md` — sector overlays loaded from scope. The insurance overlay carries the substance of the deprecated `insurance-ai-act-triage` skill.
+- `references/cross-cutting.md#conduct` — conduct overlay loaded when scope names it. Cyber and privacy framings are inline in the body above (Article 15 robustness × NIS2 / DORA Articles 5 to 14; Article 27 FRIA × GDPR Article 35 DPIA reconciliation); this skill does not ship separate cyber or privacy cross-cutting files because the substance lives at Article level rather than as a parallel domain overlay.
 - `references/firm-overlay.md` — firm policy, taxonomy, named legal/compliance owners (consumed when present).
 - `templates/default-output.md` — triage record template.
 - `schemas/ai-act-triage.schema.json` — structured-output contract.
-- `examples/` — public-source-derived anonymised scenarios (insurance pricing high-risk path; internal tool minimal-risk path).
-- `TROUBLESHOOTING.md` — recurring defects in triage records.
+- `examples.md` — public-source-derived anonymised scenarios (insurance pricing high-risk path; internal tool minimal-risk path).
+- `examples.md#troubleshooting` — recurring defects in triage records.
 
 ## Human review and AI disclosure
 

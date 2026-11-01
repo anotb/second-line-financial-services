@@ -84,7 +84,7 @@ The GenAI overlay is mandatory once triggered. Missing the foundation-model iden
 
 ### Sector and cross-cutting overlays
 
-When the scope names a sector (banking, insurance, capital-markets, payments-fintech), load the matching `references/sector-overlays/<sector>.md`. The overlay's named fields and regulatory flags land in the intake; treating the overlay as background reading is the failure mode. Same pattern for the cross-cutting overlays this skill carries: cyber, privacy, conduct. Climate is not applicable.
+When the scope names a sector (banking, insurance, capital-markets, payments-fintech), load the matching `references/sector-overlays.md#<sector>`. The overlay's named fields and regulatory flags land in the intake; treating the overlay as background reading is the failure mode. Same pattern for the cross-cutting overlays this skill carries: cyber, privacy, conduct. Climate is not applicable.
 
 Load only the overlays the scope names. Gold-plating an intake with overlays the engagement does not implicate adds noise without challenge value.
 
@@ -112,14 +112,16 @@ Downstream consumers: `ai-risk-tiering` reads the structured object to score the
 
 ## Pointers
 
+`references/sector-overlays.md` and `references/cross-cutting.md` hold one section per sector or topic, and `examples.md` one per example. Find the heading and read only that section.
+
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
-- `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md` — sector overlays loaded from scope.
-- `references/cross-cutting/{cyber,privacy,conduct,ai-ethics}.md` — cross-cutting overlays loaded from scope.
+- `references/sector-overlays.md` — sector overlays loaded from scope.
+- `references/cross-cutting.md` — cross-cutting overlays loaded from scope.
 - `references/firm-overlay.md` — firm policy, taxonomy, named owners, AI inventory schema extensions (consumed when present).
 - `templates/default-output.md` — intake-record template.
 - `schemas/ai-use-case-intake.schema.json` — structured-output contract.
-- `examples/` — public-source-derived scenarios: relationship-manager assistant at a regional bank; accelerated-underwriting model at a life insurer.
-- `TROUBLESHOOTING.md` — recurring defects in intake records.
+- `examples.md` — public-source-derived scenarios: relationship-manager assistant at a regional bank; accelerated-underwriting model at a life insurer.
+- `examples.md#troubleshooting` — recurring defects in intake records.
 
 ## Human review and AI disclosure
 

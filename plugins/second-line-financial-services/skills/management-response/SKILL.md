@@ -68,7 +68,7 @@ The sign-off block names the responding role and the firm-level signatory where 
 
 ### Cyber
 
-When the scope flags cyber, the cyber cross-cutting overlay (`references/cross-cutting/cyber.md` when installed) drives evidence-of-effectiveness expectations and the linkage to the cyber-program reporting cadence. Cyber findings frequently turn on whether a control redesign has actually reduced the residual risk, not just whether the control was reissued; the overlay covers the named evidence methods that demonstrate residual-risk reduction and the cross-link to `cyber-disclosure-readiness` where the underlying event has public-disclosure implications.
+When the scope flags cyber, the cyber cross-cutting overlay (`references/cross-cutting.md#cyber` when installed) drives evidence-of-effectiveness expectations and the linkage to the cyber-program reporting cadence. Cyber findings frequently turn on whether a control redesign has actually reduced the residual risk, not just whether the control was reissued; the overlay covers the named evidence methods that demonstrate residual-risk reduction and the cross-link to `cyber-disclosure-readiness` where the underlying event has public-disclosure implications.
 
 ### Privacy
 
@@ -108,14 +108,16 @@ Downstream consumers: the structured object feeds `risk-committee-pack` (the iss
 
 ## Pointers
 
+`references/sector-overlays.md` and `references/cross-cutting.md` hold one section per sector or topic, and `examples.md` one per example. Find the heading and read only that section.
+
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
-- `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md` — sector overlays loaded from scope.
-- `references/cross-cutting/{cyber,privacy,conduct}.md` — cross-cutting overlays loaded from scope.
+- `references/sector-overlays.md` — sector overlays loaded from scope.
+- `references/cross-cutting.md` — cross-cutting overlays loaded from scope.
 - `references/firm-overlay.md` — firm-installed signatory conventions, classification handling, response-file routing (consumed when present).
 - `templates/default-output.md` — response template with the named sections.
 - `schemas/management-response.schema.json` — structured-output contract; reuses `issue.schema.json` for finding linkage.
-- `examples/` — anonymised public-source-derived scenarios.
-- `TROUBLESHOOTING.md` — recurring defects in management responses.
+- `examples.md` — anonymised public-source-derived scenarios.
+- `examples.md#troubleshooting` — recurring defects in management responses.
 
 ## Human review and AI disclosure
 

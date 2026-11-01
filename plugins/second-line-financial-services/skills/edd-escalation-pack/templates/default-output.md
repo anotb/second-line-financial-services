@@ -88,7 +88,7 @@
 
 ## 8. Conduct-risk indicators
 
-> Loaded when the scope flags conduct or when a PEP / wealth / private-banking profile makes conduct exposure material. See `references/cross-cutting/conduct.md`.
+> Loaded when the scope flags conduct or when a PEP / wealth / private-banking profile makes conduct exposure material. See `references/cross-cutting.md#conduct`.
 
 | Indicator | Evidence | Severity | Anchor |
 |---|---|---|---|

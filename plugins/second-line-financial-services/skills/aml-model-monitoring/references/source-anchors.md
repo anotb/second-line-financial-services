@@ -91,8 +91,8 @@ What this skill relies on: that recurring enforcement themes (segmentation refre
 
 ## Cross-cutting overlay — cyber typologies in transaction monitoring
 
-When the scope flags the cyber cross-cutting overlay, the cross-cutting reference loads the OFAC and FinCEN ransomware advisories, the FinCEN virtual-currency-related guidance, and the relevant typology references. See `references/cross-cutting/cyber.md`.
+When the scope flags the cyber cross-cutting overlay, the cross-cutting reference loads the OFAC and FinCEN ransomware advisories, the FinCEN virtual-currency-related guidance, and the relevant typology references. See `references/cross-cutting.md#cyber`.
 
 ## Sector overlays
 
-Sector-specific anchors load from the corresponding `references/sector-overlays/<sector>.md` file when the scope names the sector. The banking and payments-fintech overlays carry the heaviest content; capital-markets and insurance carry narrow scope.
+Sector-specific anchors load from the corresponding `references/sector-overlays.md#<sector>` file when the scope names the sector. The banking and payments-fintech overlays carry the heaviest content; capital-markets and insurance carry narrow scope.

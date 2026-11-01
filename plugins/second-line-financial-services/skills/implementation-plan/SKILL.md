@@ -79,7 +79,7 @@ The workstream cut should match the natural decomposition of the change. For a d
 
 ## Sector and cross-cutting overlays
 
-When the scope names a sector, load `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md`. The overlay carries the sector-specific governance, MRA / MRIA / consent-order convention, and BAU-handoff pattern. Same pattern for cross-cutting overlays where the engagement flags cyber, privacy, climate, or conduct.
+When the scope names a sector, load `references/sector-overlays.md`. The overlay carries the sector-specific governance, MRA / MRIA / consent-order convention, and BAU-handoff pattern. Same pattern for cross-cutting overlays where the engagement flags cyber, privacy, climate, or conduct.
 
 Loading an overlay the trigger does not implicate adds noise without challenge value. Loading none when one applies is the more common failure mode.
 
@@ -93,13 +93,15 @@ Plan depth scales to criticality and audience: a high-criticality MRIA-driven pl
 
 ## Pointers
 
+`references/sector-overlays.md` and `references/cross-cutting.md` hold one section per sector or topic, and `examples.md` one per example. Find the heading and read only that section.
+
 - `references/source-anchors.md` — citations and excerpts for the named anchors (federal banking governance and remediation, CFPB supervision, SEC and FINRA, insurance, cyber and privacy, climate, EU DORA, MRA / MRIA / consent-order convention).
-- `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md` — sector overlays loaded from scope.
-- `references/cross-cutting/{cyber,privacy,climate,conduct}.md` — cross-cutting overlays loaded when the scope flags the topic.
+- `references/sector-overlays.md` — sector overlays loaded from scope.
+- `references/cross-cutting.md` — cross-cutting overlays loaded when the scope flags the topic.
 - `references/firm-overlay.md` — firm-installed PMO conventions, named monitor relationships, board-charter cadence, governance templates; consumed when present.
 - `templates/default-output.md` — plan template.
 - `schemas/implementation-plan.schema.json` — structured-output contract for downstream consumption.
-- `examples/` — public-source-derived scenarios (CFPB Section 1071 community-bank implementation; SEC cybersecurity disclosure rule at a registered investment adviser with a public-company parent).
+- `examples.md` — public-source-derived scenarios (CFPB Section 1071 community-bank implementation; SEC cybersecurity disclosure rule at a registered investment adviser with a public-company parent).
 
 ## Output
 

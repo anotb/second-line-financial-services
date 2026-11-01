@@ -65,11 +65,11 @@ The source trace block and sign-off block close the artifact. Material claims ci
 
 The same row spine carries different source labels and different rigor expectations across sectors and across cross-cutting topics. Load only the overlays the scope flags. The overlays do not change the row structure; they change which sources the matrix cites and which rigor the practitioner expects.
 
-- `references/sector-overlays/banking.md` carries large-bank heightened-standards and FFIEC IT framing for governance and tech-control matrices, plus CRA and fair-lending hooks for lending processes.
-- `references/sector-overlays/insurance.md` carries Model Audit Rule and ORSA control coverage, plus state DOI conduct-of-business flavour for claims and sales matrices.
-- `references/sector-overlays/capital-markets.md` carries SEC and FINRA recordkeeping and supervision controls for broker-dealers, investment advisers, and registered funds, including the trading-process recordkeeping overlap.
-- `references/sector-overlays/payments-fintech.md` carries Reg E / Reg Z control hooks for consumer-payment products and the bank-fintech partnership control posture for sponsor-bank arrangements.
-- `references/cross-cutting/cyber.md` is the most-loaded overlay. State cyber rules, FFIEC IT, and the SEC public-company disclosure-process controls land here. The overlay fires whenever the scoped process touches information-security controls, which is most matrices in practice.
+- `references/sector-overlays.md#banking` carries large-bank heightened-standards and FFIEC IT framing for governance and tech-control matrices, plus CRA and fair-lending hooks for lending processes.
+- `references/sector-overlays.md#insurance` carries Model Audit Rule and ORSA control coverage, plus state DOI conduct-of-business flavour for claims and sales matrices.
+- `references/sector-overlays.md#capital-markets` carries SEC and FINRA recordkeeping and supervision controls for broker-dealers, investment advisers, and registered funds, including the trading-process recordkeeping overlap.
+- `references/sector-overlays.md#payments-fintech` carries Reg E / Reg Z control hooks for consumer-payment products and the bank-fintech partnership control posture for sponsor-bank arrangements.
+- `references/cross-cutting.md#cyber` is the most-loaded overlay. State cyber rules, FFIEC IT, and the SEC public-company disclosure-process controls land here. The overlay fires whenever the scoped process touches information-security controls, which is most matrices in practice.
 
 Privacy, climate, and conduct overlays follow the same pattern; this skill ships cyber as the only cross-cutting file because cyber is the most frequent trigger. Privacy hooks load from the broader plugin reference set when the scoped process touches NPI; climate sits with the committee-pack skills; conduct loads when the matrix scopes customer-facing decisions. Granular citations (CFR sections, SR letter numbers, state rule paragraphs) live in `references/source-anchors.md` and the overlay files; the body cites by path rather than restating.
 
@@ -103,13 +103,15 @@ Downstream consumers: `compliance-testing` reads `controls[*].evidence` and `con
 
 ## Pointers
 
+`references/sector-overlays.md` and `references/cross-cutting.md` hold one section per sector or topic, and `examples.md` one per example. Find the heading and read only that section.
+
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
-- `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md` — sector overlays loaded from scope.
-- `references/cross-cutting/cyber.md` — cyber overlay; loaded whenever the scoped process touches information-security controls.
+- `references/sector-overlays.md` — sector overlays loaded from scope.
+- `references/cross-cutting.md#cyber` — cyber overlay; loaded whenever the scoped process touches information-security controls.
 - `references/firm-overlay.md` — firm-installed taxonomy, named role labels, system-of-record names, internal policy pointers, decision forums and sign-off conditions beyond the regulatory baseline; consumed when present.
 - `templates/default-output.md` — matrix template.
 - `schemas/control-matrix.schema.json` — structured-output contract.
-- `examples/` — credit-risk reporting matrix anchored on BCBS 239; AI-governance controls matrix anchored on SR 11-7 and the AI overlay.
+- `examples.md` — credit-risk reporting matrix anchored on BCBS 239; AI-governance controls matrix anchored on SR 11-7 and the AI overlay.
 
 ## Human review and AI disclosure
 

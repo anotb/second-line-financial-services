@@ -66,7 +66,7 @@
 
 | ID | Cyber-clause topic | Source criterion | Contract reference | Coverage | Gap rationale | Recommended-amendment posture | Severity |
 |---|---|---|---|---|---|---|---|
-| C1 | Cybersecurity-event notification clock (vendor-to-firm, aligned upstream with the tightest applicable regulatory clock) | `references/cross-cutting/cyber.md` | | | | | |
+| C1 | Cybersecurity-event notification clock (vendor-to-firm, aligned upstream with the tightest applicable regulatory clock) | `references/cross-cutting.md#cyber` | | | | | |
 | C2 | Incident-response cooperation and evidence preservation | | | | | | |
 | C3 | Encryption posture (in-transit, at-rest) | | | | | | |
 | C4 | Key-management model (vendor-managed / customer-managed / BYOK / HYOK) | | | | | | |
@@ -81,7 +81,7 @@
 
 | ID | Privacy-clause topic | Source criterion | Contract reference | Coverage | Gap rationale | Recommended-amendment posture | Severity |
 |---|---|---|---|---|---|---|---|
-| P1 | DPA coverage | `references/cross-cutting/privacy.md` | | | | | |
+| P1 | DPA coverage | `references/cross-cutting.md#privacy` | | | | | |
 | P2 | Sub-processor list and change-notice | | | | | | |
 | P3 | Deletion-and-return on termination | | | | | | |
 | P4 | Retention windows aligned to firm policy | | | | | | |

@@ -6,7 +6,7 @@ Audience: chief compliance officer, general counsel, head of compliance, head of
 
 ## Posture
 
-This is a strict sector-overlay plugin. It ships skills that are genuinely capital-markets-only, shaped by the Investment Advisers Act, the Investment Company Act, the Securities Exchange Act, and the FINRA rule set. Capability skills that already cover the underlying second-line function (control matrix, evidence binder, obligation mapping, regulatory impact assessment, exam brief, vendor diligence, AI use-case intake, model card, risk committee pack, and so on) are not duplicated here. Capital-markets nuance for those capability skills lives as a `references/sector-overlays/capital-markets.md` reference inside each capability skill.
+This is a strict sector-overlay plugin. It ships skills that are genuinely capital-markets-only, shaped by the Investment Advisers Act, the Investment Company Act, the Securities Exchange Act, and the FINRA rule set. Capability skills that already cover the underlying second-line function (control matrix, evidence binder, obligation mapping, regulatory impact assessment, exam brief, vendor diligence, AI use-case intake, model card, risk committee pack, and so on) are not duplicated here. Capital-markets nuance for those capability skills lives as a `references/sector-overlays.md#capital-markets` reference inside each capability skill.
 
 ## Skills
 
@@ -34,7 +34,7 @@ Public anchors only. Named anchors include the IA Act, the ICA, the Exchange Act
 
 ## Components
 
-- `skills/` — the four skills above. Each ships its own `SKILL.md`, `references/source-anchors.md`, `templates/`, and (where useful) `schemas/` and `examples/`.
+- `skills/` — the four skills above. Each ships its own `SKILL.md`, `references/source-anchors.md`, `templates/`, and (where useful) `schemas/` and `examples.md`.
 - `references/` — plugin-level shared references: capital-markets source map, named decision forums.
 - `schemas/` — capital-markets-specific artifacts.
 

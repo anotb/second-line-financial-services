@@ -33,7 +33,7 @@ docs/             # Architecture, source map, test strategy, public examples, co
 scripts/          # check.py, check-skill-content.py (validation tooling)
 ```
 
-Each skill is self-contained: `skills/<skill>/` ships its own `SKILL.md`, `references/source-anchors.md`, sector and cross-cutting overlays, default template, optional schema, and worked examples.
+Each skill is self-contained: `skills/<skill>/` ships its own `SKILL.md`, `references/source-anchors.md`, `references/sector-overlays.md`, `references/cross-cutting.md`, a default template, optional schema, and `examples.md` with worked examples and troubleshooting.
 
 ## Install
 

@@ -168,4 +168,4 @@ Link: https://www.consumerfinance.gov/rules-policy/regulations/1016/
 
 ## Sector-specific anchors
 
-The sector-overlay files (`references/sector-overlays/<sector>.md`) enumerate sector-specific policy-expectation anchors. The cross-cutting overlays (`references/cross-cutting/<topic>.md`) enumerate cross-cutting anchors. This file is the foundational set; the overlays add what the scope requires.
+The sector-overlay files (`references/sector-overlays.md#<sector>`) enumerate sector-specific policy-expectation anchors. The cross-cutting overlays (`references/cross-cutting.md#<topic>`) enumerate cross-cutting anchors. This file is the foundational set; the overlays add what the scope requires.

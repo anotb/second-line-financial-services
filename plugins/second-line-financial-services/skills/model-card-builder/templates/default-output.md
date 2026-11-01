@@ -93,7 +93,7 @@ Explainability:
 - Scope: [decision-level, model-level, feature-level]
 - Limitations: [known limitations of the method as applied]
 
-For insurance pricing or underwriting, frame the test against unfair discrimination per state insurance code (NAIC Model #880 vocabulary) in addition to or in place of generic fairness vocabulary. Load `references/sector-overlays/insurance.md`.
+For insurance pricing or underwriting, frame the test against unfair discrimination per state insurance code (NAIC Model #880 vocabulary) in addition to or in place of generic fairness vocabulary. Load `references/sector-overlays.md#insurance`.
 
 ---
 
@@ -192,7 +192,7 @@ For every material claim in the card:
 
 ## 14. Sector overlay notes (when applicable)
 
-When the scope names a sector, the matching `references/sector-overlays/<sector>.md` adds named fields here. Examples:
+When the scope names a sector, the matching `references/sector-overlays.md#<sector>` adds named fields here. Examples:
 
 - Banking: ECOA/Reg B adverse action surface (for credit decisioning); FFIEC manual exposure (for AML/fraud); OCC Heightened Standards 12 CFR Part 30 Appendix D risk-governance touchpoint.
 - Insurance: AIS Program element status against the NAIC Bulletin on the Use of AI Systems by Insurers; per-state DOI bulletin status; ECDIS provenance; ORSA materiality posture; HIPAA touch.

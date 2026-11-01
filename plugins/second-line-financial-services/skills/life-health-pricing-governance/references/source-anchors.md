@@ -1,6 +1,6 @@
 # Source anchors — life-health-pricing-governance
 
-Named, dated regulatory sources this skill anchors to. SKILL.md cites this file by path and does not restate excerpts. Sector flavour for insurance sits in `sector-overlays/insurance.md`; cross-cutting flavour sits in `cross-cutting/<topic>.md`.
+Named, dated regulatory sources this skill anchors to. SKILL.md cites this file by path and does not restate excerpts. Sector flavour for insurance sits in `sector-overlays.md#insurance`; cross-cutting flavour sits in `cross-cutting.md#<topic>`.
 
 NAIC Model Laws and Regulations are model text; what binds the carrier is the state's adoption (which may amend, defer, or replace the model). Cite the NAIC model and the state-specific adoption status separately. Use the NAIC AI Working Group adoption tracker for current state-by-state status; the state list in any artifact is dated and verified-on-engagement, not frozen.
 

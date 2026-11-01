@@ -66,7 +66,7 @@ The pack has a cover, an eight-section body, and a tail. Walk it in the order th
 
 ## Sector and cross-cutting overlays
 
-This skill is banking-sector-only. The `references/sector-overlays/banking.md` file carries the deeper banking-specific nuance the body keeps generic (booklet-by-booklet citation patterns, charter-specific rule cites, Heightened Standards cross-walk lines for covered banks). `references/cross-cutting/conduct.md` loads when the credit program touches consumer or small-business borrowers and second-line review needs to surface UDAAP exposure on lending practices, with an explicit pointer to route the fair-lending lens out to the consumer-compliance plugin. Climate, privacy, and cyber overlays do not load.
+This skill is banking-sector-only. The `references/sector-overlays.md#banking` file carries the deeper banking-specific nuance the body keeps generic (booklet-by-booklet citation patterns, charter-specific rule cites, Heightened Standards cross-walk lines for covered banks). `references/cross-cutting.md#conduct` loads when the credit program touches consumer or small-business borrowers and second-line review needs to surface UDAAP exposure on lending practices, with an explicit pointer to route the fair-lending lens out to the consumer-compliance plugin. Climate, privacy, and cyber overlays do not load.
 
 ## Quality bar
 
@@ -88,13 +88,15 @@ Pack depth scales to the trigger: a quarterly Reg O cycle reads short, organised
 
 ## Pointers
 
+`references/sector-overlays.md` and `references/cross-cutting.md` hold one section per sector or topic, and `examples.md` one per example. Find the heading and read only that section.
+
 - `references/source-anchors.md` — citations and excerpts for the named anchors (Comptroller's Handbook credit booklets, FDIC RMS Manual asset-quality section, interagency credit-risk-review-system guidance, interagency CRE concentration guidance, CECL standard and interagency CECL guidance, Reg O, Reg W, Heightened Standards).
-- `references/sector-overlays/banking.md` — banking-specific deeper detail on charter-by-charter rule cites, booklet edition tracking, and Heightened Standards cross-walk lines for credit.
-- `references/cross-cutting/conduct.md` — UDAAP overlay on lending practices and the explicit route-out to the consumer-compliance fair-lending lens.
+- `references/sector-overlays.md#banking` — banking-specific deeper detail on charter-by-charter rule cites, booklet edition tracking, and Heightened Standards cross-walk lines for credit.
+- `references/cross-cutting.md#conduct` — UDAAP overlay on lending practices and the explicit route-out to the consumer-compliance fair-lending lens.
 - `references/firm-overlay.md` — firm-installed credit policy version, named credit-policy-committee machinery, internal rating-system definitions, sustained-operation policy threshold for closure, response-letter style guide; consumed when present.
 - `templates/default-output.md` — pack template carrying the cover, the eight-section body, and the tail.
-- `examples/` — public-source-derived scenarios (community-bank CRE concentration policy refresh; midsize national bank Reg O quarterly review with director-related-interest transactions).
-- `TROUBLESHOOTING.md` — recurring defects in credit-governance packs.
+- `examples.md` — public-source-derived scenarios (community-bank CRE concentration policy refresh; midsize national bank Reg O quarterly review with director-related-interest transactions).
+- `examples.md#troubleshooting` — recurring defects in credit-governance packs.
 
 ## Output
 

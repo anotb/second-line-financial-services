@@ -38,7 +38,7 @@ US-deep is the default. EU and UK live as overlay reference docs inside the skil
 
 ## Sector overlays
 
-All four sectors apply to every skill in this plugin. Sector reference content lives under each skill's `references/sector-overlays/`:
+All four sectors apply to every skill in this plugin. Sector reference content lives under each skill's `references/sector-overlays.md`:
 
 - Banking: interagency guidance, OCC Heightened Standards, community-bank fintech-partner posture (FFIEC interagency joint statement, August 2023).
 - Insurance: NAIC outsourcing model, state department of insurance expectations, NAIC Model Bulletin on the use of AI by insurers (2023) for AI vendor diligence.
@@ -47,7 +47,7 @@ All four sectors apply to every skill in this plugin. Sector reference content l
 
 ## Cross-cutting overlays
 
-Cyber and privacy live as embedded reference docs inside the skills that touch them, primarily `vendor-diligence`, `contract-gap-review`, `exit-plan`, and `resilience-testing-pack` (`references/cross-cutting/cyber.md` and `references/cross-cutting/privacy.md`). For AI vendors, both overlays apply by default.
+Cyber and privacy live as embedded reference docs inside the skills that touch them, primarily `vendor-diligence`, `contract-gap-review`, `exit-plan`, and `resilience-testing-pack` (`references/cross-cutting.md#cyber` and `references/cross-cutting.md#privacy`). For AI vendors, both overlays apply by default.
 
 ## Boundary with `ai-governance-model-risk`
 
@@ -55,7 +55,7 @@ Cyber and privacy live as embedded reference docs inside the skills that touch t
 
 ## Components
 
-- `skills/` — the seven skills above. Each ships its own `references/`, `templates/`, `examples/`, and (where useful) `schemas/` and `scripts/`.
+- `skills/` — the seven skills above. Each ships its own `references/`, `templates/`, `examples.md`, and (where useful) `schemas/` and `scripts/`.
 - `references/` — plugin-level shared references: source map, policy-control library rows, named decision forums and confidence labels.
 - `schemas/` — `vendor.schema.json` is the primary anchor and carries the AI-vendor extension consumed by `vendor-diligence`.
 

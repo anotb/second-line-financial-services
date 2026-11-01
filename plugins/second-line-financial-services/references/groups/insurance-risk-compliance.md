@@ -4,7 +4,7 @@ US-deep insurance-sector overlay plugin for second-line practitioners at insurer
 
 ## Posture
 
-This is a **strict sector-overlay plugin**. It ships only sector-unique skills. Workflows that already exist as capability skills (AI Act triage, agentic-AI controls, AI risk tiering, LLM vendor evidence review, vendor diligence, risk-committee pack, fair-lending test plan) are not duplicated here. Insurance flavor for those workflows lives as `references/sector-overlays/insurance.md` inside the relevant capability skill.
+This is a **strict sector-overlay plugin**. It ships only sector-unique skills. Workflows that already exist as capability skills (AI Act triage, agentic-AI controls, AI risk tiering, LLM vendor evidence review, vendor diligence, risk-committee pack, fair-lending test plan) are not duplicated here. Insurance flavor for those workflows lives as `references/sector-overlays.md#insurance` inside the relevant capability skill.
 
 ## Skills
 
@@ -37,7 +37,7 @@ The two AI overlays carry the substance previously carved out as standalone `ins
 
 ## Source posture
 
-US-deep first. EU Solvency II is tracked in [ROADMAP.md](https://github.com/anotb/second-line-financial-services/blob/main/ROADMAP.md) for inclusion as a see-also reference inside `risk-committee-pack/references/sector-overlays/insurance.md`. Public sources only: NAIC Model Laws and Regulations, NAIC Bulletins, state DOI bulletins, federal statutes (HIPAA, ACA), and SEC where applicable for publicly-listed carriers.
+US-deep first. EU Solvency II is tracked in [ROADMAP.md](https://github.com/anotb/second-line-financial-services/blob/main/ROADMAP.md) for inclusion as a see-also reference inside `risk-committee-pack/references/sector-overlays.md#insurance`. Public sources only: NAIC Model Laws and Regulations, NAIC Bulletins, state DOI bulletins, federal statutes (HIPAA, ACA), and SEC where applicable for publicly-listed carriers.
 
 ## Operating posture
 

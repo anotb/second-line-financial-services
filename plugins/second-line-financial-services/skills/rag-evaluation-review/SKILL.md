@@ -74,7 +74,7 @@ Depth flexes with tier and audience. A pre-prod-gate review for a tier-2 analyst
 
 ## Sector and cross-cutting overlays
 
-When the scope names a sector (banking, insurance, capital markets, payments-fintech), load the matching `references/sector-overlays/<sector>.md`. Each overlay carries sector-specific corpora considerations, mitigations, monitoring signals, regulator-notification triggers, and co-reviewer expectations. The overlay's named additions land in the memo; treating the overlay as background reading is the failure mode.
+When the scope names a sector (banking, insurance, capital markets, payments-fintech), load the matching `references/sector-overlays.md#<sector>`. Each overlay carries sector-specific corpora considerations, mitigations, monitoring signals, regulator-notification triggers, and co-reviewer expectations. The overlay's named additions land in the memo; treating the overlay as background reading is the failure mode.
 
 The privacy cross-cutting overlay should be considered the default for most regulated-FS RAG reviews. Most corpora contain regulated personal data of one form or another (NPI, PHI, MNPI), and the corpus-governance and minimum-necessary framings are load-bearing. The overlay carries the data-category tagging convention, the retrieval-side minimisation framing, the cross-scope-leakage incident framing, and the regulator-notification triggers per applicable regime.
 
@@ -118,16 +118,18 @@ Downstream consumers: `genai-pre-prod-review` consumes the structured object for
 
 ## Pointers
 
+`references/sector-overlays.md` and `references/cross-cutting.md` hold one section per sector or topic, and `examples.md` one per example. Find the heading and read only that section.
+
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
-- `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md` — sector overlays loaded from scope.
-- `references/cross-cutting/privacy.md` — privacy overlay, the default cross-cutting overlay for regulated-FS RAG reviews.
-- `references/cross-cutting/cyber.md` — cyber overlay; loads alongside privacy where the scope flags it; carries the indirect-injection adjacency to `prompt-injection-risk`.
-- `references/cross-cutting/conduct.md` — conduct overlay; loads where the use case has a population dimension or feeds customer-facing communications.
+- `references/sector-overlays.md` — sector overlays loaded from scope.
+- `references/cross-cutting.md#privacy` — privacy overlay, the default cross-cutting overlay for regulated-FS RAG reviews.
+- `references/cross-cutting.md#cyber` — cyber overlay; loads alongside privacy where the scope flags it; carries the indirect-injection adjacency to `prompt-injection-risk`.
+- `references/cross-cutting.md#conduct` — conduct overlay; loads where the use case has a population dimension or feeds customer-facing communications.
 - `references/firm-overlay.md` — firm policy, taxonomy, named metric framework, named owners (consumed when present).
 - `templates/default-output.md` — memo template.
 - `schemas/rag-evaluation-review.schema.json` — structured-output contract.
-- `examples/` — anonymised public-source-derived scenarios (compliance-policy assistant; insurer claims-summary assistant).
-- `TROUBLESHOOTING.md` — recurring defects.
+- `examples.md` — anonymised public-source-derived scenarios (compliance-policy assistant; insurer claims-summary assistant).
+- `examples.md#troubleshooting` — recurring defects.
 
 ## Human review and AI disclosure
 

@@ -1,6 +1,6 @@
 # Bank-fintech partnership review pack — output template
 
-A draft until the named lead attests. Roles only, never named individuals. Cite every material claim against `references/source-anchors.md`, `references/sector-overlays/banking.md`, or a loaded cross-cutting overlay by path. Mark unsupported items `[evidence needed]`. Mark unconfirmed section references `[verify section]`.
+A draft until the named lead attests. Roles only, never named individuals. Cite every material claim against `references/source-anchors.md`, `references/sector-overlays.md#banking`, or a loaded cross-cutting overlay by path. Mark unsupported items `[evidence needed]`. Mark unconfirmed section references `[verify section]`.
 
 ## Cover and partnership scope
 
@@ -213,7 +213,7 @@ cyber / privacy / conduct / none
 
 ## Source trace
 
-- [Every material claim cites a source from `references/source-anchors.md`, `references/sector-overlays/banking.md`, or a loaded cross-cutting overlay by path.]
+- [Every material claim cites a source from `references/source-anchors.md`, `references/sector-overlays.md#banking`, or a loaded cross-cutting overlay by path.]
 - [Unsupported items: `[evidence needed]`.]
 - [Unconfirmed section references: `[verify section]`.]
 - [CSI references: bound to access population per 12 CFR Part 4 Subpart C / Part 261 / Part 309.]

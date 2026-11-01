@@ -69,18 +69,20 @@ Holds across every pack regardless of subject, audience, or render format. Every
 
 ## Adaptation
 
-Flexes by engagement. Pack depth and length scale to subject criticality, programme-in-scope status, and TLPT-scoping status. An arrangement-level non-DORA pack collapses several sections to a paragraph; an IBS-level pack at a DORA-in-scope firm with TLPT scoping runs full depth with reviewer questions clustered for the operational-resilience committee, the AI risk committee (where AI in scope), the audit committee, and the supervisor. The sector overlay set drives which `references/sector-overlays/<sector>.md` is loaded; a dual-registrant or BaaS arrangement may load two. Cross-cutting overlay loading follows scope plus the rule that cyber default-on for any chain reaching firm controls and customer data, and privacy default-on for any chain reaching personal data. Source posture (public-only, public-plus-firm-policy, public-plus-firm-policy-plus-system-of-record-evidence, connector-aware) drives the evidence ask. Method mix differs by subject (an IBS-level pack mixes more methods than an arrangement-level pack, which usually pivots on one or two methods per scenario). Render format (Word, Excel, PowerPoint, Markdown) follows the workflow.
+Flexes by engagement. Pack depth and length scale to subject criticality, programme-in-scope status, and TLPT-scoping status. An arrangement-level non-DORA pack collapses several sections to a paragraph; an IBS-level pack at a DORA-in-scope firm with TLPT scoping runs full depth with reviewer questions clustered for the operational-resilience committee, the AI risk committee (where AI in scope), the audit committee, and the supervisor. The sector overlay set drives which `references/sector-overlays.md#<sector>` is loaded; a dual-registrant or BaaS arrangement may load two. Cross-cutting overlay loading follows scope plus the rule that cyber default-on for any chain reaching firm controls and customer data, and privacy default-on for any chain reaching personal data. Source posture (public-only, public-plus-firm-policy, public-plus-firm-policy-plus-system-of-record-evidence, connector-aware) drives the evidence ask. Method mix differs by subject (an IBS-level pack mixes more methods than an arrangement-level pack, which usually pivots on one or two methods per scenario). Render format (Word, Excel, PowerPoint, Markdown) follows the workflow.
 
 ## Pointers
 
+`references/sector-overlays.md` and `references/cross-cutting.md` hold one section per sector or topic, and `examples.md` one per example. Find the heading and read only that section.
+
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
-- `references/sector-overlays/banking.md`, `insurance.md`, `capital-markets.md`, `payments-fintech.md` — sector-specific testing-programme nuance loaded per scope.
-- `references/cross-cutting/cyber.md`, `privacy.md` — cross-cutting flavour for testing; cyber default-on for any chain reaching firm controls; privacy default-on for any chain reaching personal data.
+- `references/sector-overlays.md#banking`, `insurance.md`, `capital-markets.md`, `payments-fintech.md` — sector-specific testing-programme nuance loaded per scope.
+- `references/cross-cutting.md#cyber`, `privacy.md` — cross-cutting flavour for testing; cyber default-on for any chain reaching firm controls; privacy default-on for any chain reaching personal data.
 - `references/firm-overlay.md` — firm-installed policy, taxonomy, decision forums, IBS map pointers, and programme-document pointers beyond the regulatory baseline; consumed when present.
 - `templates/default-output.md` — pack template.
 - `schemas/resilience-testing-pack.schema.json` — structured-output contract for downstream consumption.
-- `examples/` — annual resilience-testing pack for the card-payment authorisation IBS at a US bank; DORA resilience-testing pack for an EU subsidiary's customer-onboarding IBS including TLPT scoping and an AI vendor in the chain.
-- `TROUBLESHOOTING.md` — recurring pitfalls (tolerance-vs-SLA conflation, tabletop everywhere, missing safety controls, vendor-participation skipped, read-out template not locked at design, findings as ad-hoc, programme alignment skipped, TLPT collapsed into the operational cycle, AI-scenario set treated as generic-vendor-outage).
+- `examples.md` — annual resilience-testing pack for the card-payment authorisation IBS at a US bank; DORA resilience-testing pack for an EU subsidiary's customer-onboarding IBS including TLPT scoping and an AI vendor in the chain.
+- `examples.md#troubleshooting` — recurring pitfalls (tolerance-vs-SLA conflation, tabletop everywhere, missing safety controls, vendor-participation skipped, read-out template not locked at design, findings as ad-hoc, programme alignment skipped, TLPT collapsed into the operational cycle, AI-scenario set treated as generic-vendor-outage).
 
 The plugin-level shared references (`references/source-map.md`, `references/policy-control-library.md`, `references/review-gates.md`) sit at the plugin root and are consulted alongside the skill-level files.
 

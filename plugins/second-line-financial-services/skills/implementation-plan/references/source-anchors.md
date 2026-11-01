@@ -1,6 +1,6 @@
 # Source anchors — implementation-plan
 
-The named, dated regulatory sources this skill anchors to for implementation-plan structure, governance cadence, evidence-of-completion expectations, and remediation conventions. SKILL.md cites this file by path and does not restate excerpts. Sector-specific anchors live in the corresponding overlay files in `references/sector-overlays/`. Cross-cutting anchors live in `references/cross-cutting/`.
+The named, dated regulatory sources this skill anchors to for implementation-plan structure, governance cadence, evidence-of-completion expectations, and remediation conventions. SKILL.md cites this file by path and does not restate excerpts. Sector-specific anchors live in the corresponding overlay files in `references/sector-overlays.md`. Cross-cutting anchors live in `references/cross-cutting.md`.
 
 ## Federal banking — governance, remediation, and supervisory follow-up
 

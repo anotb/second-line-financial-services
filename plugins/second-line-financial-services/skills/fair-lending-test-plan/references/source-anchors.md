@@ -94,14 +94,14 @@ The bureau's interpretive layer has changed. On May 12, 2025 the CFPB withdrew C
 - Citation: CFPB Supervision and Examination Manual, UDAAP module (current edition) [verify edition date].
 - Excerpt-paraphrase: The UDAAP module sets out the bureau's framework for unfair, deceptive, or abusive acts or practices under sections 1031 and 1036 of the Consumer Financial Protection Act. The framework defines the elements of each prong (unfairness: substantial injury, not reasonably avoidable, not outweighed by benefits; deception: material misrepresentation; abusiveness: interference with the ability to understand, taking unreasonable advantage), and is applied alongside fair-lending review where consumer-outcome themes overlap discrimination themes.
 - Link: https://www.consumerfinance.gov/compliance/supervision-examinations/ — CFPB Supervision and Examination Manual, UDAAP module section [verify section]
-- Notes: UDAAP overlaps fair-lending review on themes such as marketing claims, dark patterns, and steering. See `references/cross-cutting/conduct.md`.
+- Notes: UDAAP overlaps fair-lending review on themes such as marketing claims, dark patterns, and steering. See `references/cross-cutting.md#conduct`.
 
 ### 13. DOJ Combatting Redlining Initiative
 
 - Citation: U.S. Department of Justice, Combatting Redlining Initiative (announced October 22, 2021); subsequent public consent orders and complaints filed jointly with CFPB, OCC, and state AGs (2021 to current).
 - Excerpt-paraphrase: The DOJ initiative addresses lending discrimination on the basis of race, ethnicity, and national origin, focusing on redlining patterns: lenders that avoid providing credit to majority-minority areas. Public consent orders set comparator-MSA selection patterns, peer-set construction, marketing-distribution evidence, and remedial-program design templates that subsequent test plans treat as reference patterns.
 - Link: https://www.justice.gov/crt/combating-redlining-initiative — initiative overview section and case index
-- Notes: Public consent orders are the empirical reference for redlining test scoping; the worked example in `examples/mortgage-redlining-test.md` derives its structural pattern from this body.
+- Notes: Public consent orders are the empirical reference for redlining test scoping; the worked example in `examples.md#mortgage-redlining-test` derives its structural pattern from this body.
 
 ### 14. BISG methodology
 
@@ -145,7 +145,7 @@ The bureau's interpretive layer has changed. On May 12, 2025 the CFPB withdrew C
 - Citation: Gramm-Leach-Bliley Act Safeguards Rule, 16 CFR Part 314 (FTC; financial institutions not under primary federal banking regulator supervision); 12 CFR Part 30 Appendix B (OCC parallel for national banks); 12 CFR Part 364 Appendix B (FDIC parallel).
 - Excerpt-paraphrase: Financial institutions must maintain a written information security program with administrative, technical, and physical safeguards for non-public personal information. The rule addresses data classification, access controls, and incident response; the program reaches NPI used in fair-lending testing (applicant data, model features, BISG inputs).
 - Link: https://www.ecfr.gov/current/title-16/chapter-I/subchapter-C/part-314 — 16 CFR Part 314
-- Notes: Privacy cross-cutting overlay anchor; relevant to how applicant data is moved and processed for test execution. See `references/cross-cutting/privacy.md`.
+- Notes: Privacy cross-cutting overlay anchor; relevant to how applicant data is moved and processed for test execution. See `references/cross-cutting.md#privacy`.
 
 ### 20. NAIC Unfair Trade Practices framing (insurance scope boundary)
 

@@ -76,15 +76,17 @@ What does not flex: every material claim cites a source from `references/source-
 
 ## Pointers
 
+`references/sector-overlays.md` and `references/cross-cutting.md` hold one section per sector or topic, and `examples.md` one per example. Find the heading and read only that section.
+
 - `references/source-anchors.md` — citations and excerpts for the named anchors (federal consumer-EFT regime, truth-in-savings regime, funds-availability regime, CIP rule, beneficial-ownership rule, FBO-account guidance, deposit-insurance regulation, misrepresentation rule, IT-handbook retail payment systems booklet, deposits booklet).
-- `references/cross-cutting/conduct.md` — UDAAP themes on overdraft, NSF, junk-fee enforcement, deposit-insurance misrepresentation, dispute-timing failures presented as both consumer-EFT and UDAAP findings.
-- `references/cross-cutting/cyber.md` — ATM-network, online-banking authentication, ACH-origination cyber exposure (loaded conditionally — payments-fintech-style overlay, where present).
-- `references/cross-cutting/privacy.md` — consumer-financial-information handling under the federal privacy regime (loaded conditionally).
-- `references/sector-overlays/banking.md` — banking-only flavour; sector-overlay loading is fixed for this skill.
+- `references/cross-cutting.md#conduct` — UDAAP themes on overdraft, NSF, junk-fee enforcement, deposit-insurance misrepresentation, dispute-timing failures presented as both consumer-EFT and UDAAP findings.
+- `references/cross-cutting.md#cyber` — ATM-network, online-banking authentication, ACH-origination cyber exposure (loaded conditionally — payments-fintech-style overlay, where present).
+- `references/cross-cutting.md#privacy` — consumer-financial-information handling under the federal privacy regime (loaded conditionally).
+- `references/sector-overlays.md#banking` — banking-only flavour; sector-overlay loading is fixed for this skill.
 - `references/firm-overlay.md` — firm-installed taxonomy, named systems-of-record, fee-policy thresholds beyond the regulatory baseline; consumed when present.
 - `templates/default-output.md` — matrix template denominated by the thirteen process areas with the FBO overlay as a sub-section.
-- `examples/` — public-source-derived scenarios (consumer-EFT dispute-timing control refresh after an internal-audit finding; FBO-account ledgering control overlay for a sponsor-bank deposit program after a peer consent order).
-- `TROUBLESHOOTING.md` — recurring pitfalls (conflating dispute-timing with consumer-liability rows; missing the prepaid sub-regime; treating advertising review as a single control; skipping pass-through deposit-insurance recordkeeping on FBO accounts; citing the small-entity compliance guide instead of the regulation; treating exception governance as hygiene; treating supervisory guidance as regulation).
+- `examples.md` — public-source-derived scenarios (consumer-EFT dispute-timing control refresh after an internal-audit finding; FBO-account ledgering control overlay for a sponsor-bank deposit program after a peer consent order).
+- `examples.md#troubleshooting` — recurring pitfalls (conflating dispute-timing with consumer-liability rows; missing the prepaid sub-regime; treating advertising review as a single control; skipping pass-through deposit-insurance recordkeeping on FBO accounts; citing the small-entity compliance guide instead of the regulation; treating exception governance as hygiene; treating supervisory guidance as regulation).
 
 The plugin-level shared references (`references/source-map.md`, `references/policy-control-library.md`, `references/public-regulatory-scenarios.md`) sit at the plugin root and are consulted alongside the skill-level files.
 

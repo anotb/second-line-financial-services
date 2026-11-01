@@ -72,21 +72,23 @@ The pack has the same spine across advertisements. A senior reviewer walks it ro
 
 ### Sector overlay
 
-This skill is sector-unique to SEC-registered investment advisers and the asset-management entities that operate under that regime. The capital-markets sector overlay at `references/sector-overlays/capital-markets.md` carries the adviser-specific mechanics (the Rule 206(4)-7 written compliance program tie-in; the broker-dealer Rule 2210 boundary for dual registrants; the Rule 482 / Rule 156 boundary for registered-fund advertising; the books-and-records discipline under Rule 204-2). No other sector overlay applies; engagements addressing this skill load the capital-markets overlay by default.
+This skill is sector-unique to SEC-registered investment advisers and the asset-management entities that operate under that regime. The capital-markets sector overlay at `references/sector-overlays.md#capital-markets` carries the adviser-specific mechanics (the Rule 206(4)-7 written compliance program tie-in; the broker-dealer Rule 2210 boundary for dual registrants; the Rule 482 / Rule 156 boundary for registered-fund advertising; the books-and-records discipline under Rule 204-2). No other sector overlay applies; engagements addressing this skill load the capital-markets overlay by default.
 
 ### Cross-cutting overlays
 
-Conduct overlay loads where the substantiation gap, the testimonial framing, or the performance presentation crosses the antifraud "fair and balanced" threshold; the file lives at `references/cross-cutting/conduct.md`. Privacy overlay loads where a testimonial discloses client identity or where account-level details appear in the advertisement; client-consent and Reg S-P treatment live at `references/cross-cutting/privacy.md`. Cyber and climate overlays are not in scope by default; load them only where the advertisement makes claims about firm cybersecurity posture or sustainability / climate characteristics, and route to the broader programs.
+Conduct overlay loads where the substantiation gap, the testimonial framing, or the performance presentation crosses the antifraud "fair and balanced" threshold; the file lives at `references/cross-cutting.md#conduct`. Privacy overlay loads where a testimonial discloses client identity or where account-level details appear in the advertisement; client-consent and Reg S-P treatment live at `references/cross-cutting.md#privacy`. Cyber and climate overlays are not in scope by default; load them only where the advertisement makes claims about firm cybersecurity posture or sustainability / climate characteristics, and route to the broader programs.
 
 ## Pointers
 
+`references/sector-overlays.md` and `references/cross-cutting.md` hold one section per sector or topic, and `examples.md` one per example. Find the heading and read only that section.
+
 - `references/source-anchors.md` — Marketing Rule citations (Rule 206(4)-1; Rule 204-2 books-and-records; Rule 206(4)-7; Marketing Rule Risk Alerts; FINRA Rule 2210 boundary).
-- `references/sector-overlays/capital-markets.md` — adviser-and-asset-manager-specific mechanics (Rule 206(4)-7; Rule 482 / Rule 156 boundary; dual-registrant FINRA Rule 2210 routing; books-and-records discipline).
-- `references/cross-cutting/conduct.md` — "fair and balanced" antifraud overlay and the chained-finding posture; `references/cross-cutting/privacy.md` — testimonial-identity and Reg S-P treatment.
+- `references/sector-overlays.md#capital-markets` — adviser-and-asset-manager-specific mechanics (Rule 206(4)-7; Rule 482 / Rule 156 boundary; dual-registrant FINRA Rule 2210 routing; books-and-records discipline).
+- `references/cross-cutting.md#conduct` — "fair and balanced" antifraud overlay and the chained-finding posture; `references/cross-cutting.md#privacy` — testimonial-identity and Reg S-P treatment.
 - `references/firm-overlay.md` — firm-installed marketing-review committee, marketing-policy, ineligible-person screening process, recordkeeping system-of-record paths (consumed when present).
 - `templates/default-output.md` — pack template (named sections, per-claim and per-statement-type fields).
-- `examples/hypothetical-performance-pitch-deck.md`, `examples/compensated-website-testimonial.md` — public-source-derived worked examples.
-- `TROUBLESHOOTING.md` — recurring failure modes the drafter should preempt and the reviewer should catch.
+- `examples.md#hypothetical-performance-pitch-deck`, `examples.md#compensated-website-testimonial` — public-source-derived worked examples.
+- `examples.md#troubleshooting` — recurring failure modes the drafter should preempt and the reviewer should catch.
 
 ## Output
 

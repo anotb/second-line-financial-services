@@ -35,7 +35,7 @@ Before drafting, get plain answers. Most cycles can answer them from the prior-p
 - **What does the firm already know about this control.** Prior testing results, known issues, recent changes (system migration, new regulator letter, new policy), open remediation. The plan restates what is known so the procedures target the right risk, not last cycle's risk.
 - **Has anything material changed since the last cycle.** Rule renumbering, policy updates, system changes, business-unit reorganisation, regulator priority shift. Reusing a prior plan without restating the criteria for the current period is the most common drafting failure.
 
-When `scope` is supplied, consume it: `institution.type` and `institution.primary_regulators` set the citation focus and tone, `sector_overlay_set` selects which `references/sector-overlays/<sector>.md` loads, `cross_cutting_overlay_set` selects the `references/cross-cutting/<topic>.md` files. When it is not supplied, draft against what is on file (the prior-period plan and the control inventory usually carry enough), default to the testing program's standing posture, and note in the plan that scope was not formalised separately.
+When `scope` is supplied, consume it: `institution.type` and `institution.primary_regulators` set the citation focus and tone, `sector_overlay_set` selects which `references/sector-overlays.md#<sector>` loads, `cross_cutting_overlay_set` selects the `references/cross-cutting.md#<topic>` files. When it is not supplied, draft against what is on file (the prior-period plan and the control inventory usually carry enough), default to the testing program's standing posture, and note in the plan that scope was not formalised separately.
 
 ## How the plan gets built
 
@@ -77,14 +77,16 @@ Plan depth and length scale to control complexity, population size, and the prio
 
 ## Pointers
 
+`references/sector-overlays.md` and `references/cross-cutting.md` hold one section per sector or topic, and `examples.md` one per example. Find the heading and read only that section.
+
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
-- `references/sector-overlays/banking.md`, `insurance.md`, `capital-markets.md`, `payments-fintech.md` — sector-specific test-plan conventions loaded per scope.
-- `references/cross-cutting/cyber.md`, `conduct.md` — cross-cutting flavour; cyber default-on for IAM and Part 500 controls, conduct default-on for consumer-facing tests.
+- `references/sector-overlays.md#banking`, `insurance.md`, `capital-markets.md`, `payments-fintech.md` — sector-specific test-plan conventions loaded per scope.
+- `references/cross-cutting.md#cyber`, `conduct.md` — cross-cutting flavour; cyber default-on for IAM and Part 500 controls, conduct default-on for consumer-facing tests.
 - `references/firm-overlay.md` — firm-installed methodology, taxonomy, decision checkpoints, and template variants beyond the regulatory baseline; consumed when present.
 - `templates/default-output.md` — test-plan template.
 - `schemas/test-plan.schema.json` — structured-output contract for downstream consumption.
-- `examples/` — annual consumer-error-resolution test plan at a regional bank; periodic high-risk customer-due-diligence refresh test plan.
-- `TROUBLESHOOTING.md` — recurring pitfalls (design-and-operating procedures collapsed, procedures without expected evidence, walkthrough skipped on "small" controls, prior-cycle plan reused without restating criteria, first-line owner drafting the plan, plan treated as a one-off rather than the workpaper's contract).
+- `examples.md` — annual consumer-error-resolution test plan at a regional bank; periodic high-risk customer-due-diligence refresh test plan.
+- `examples.md#troubleshooting` — recurring pitfalls (design-and-operating procedures collapsed, procedures without expected evidence, walkthrough skipped on "small" controls, prior-cycle plan reused without restating criteria, first-line owner drafting the plan, plan treated as a one-off rather than the workpaper's contract).
 
 The plugin-level shared references (`references/source-map.md`, `references/policy-control-library.md`, `references/review-gates.md`) sit at the plugin root and are consulted alongside the skill-level files.
 

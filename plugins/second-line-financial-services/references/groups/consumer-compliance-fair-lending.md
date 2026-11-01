@@ -23,8 +23,8 @@ Public-source anchored. Named regulatory sources, dated, with section references
 
 Cross-cutting topics live as reference docs inside the skills they touch, not as separate plugins:
 
-- Privacy: `adverse-action-review/references/cross-cutting/privacy.md` (GLBA Safeguards, state privacy implications), `marketing-claim-review/references/cross-cutting/privacy.md` (privacy-claim substantiation, AdChoices, dark-pattern privacy).
-- Conduct: `udaap-risk-review/references/cross-cutting/conduct.md`, `complaint-theme-analysis/references/cross-cutting/conduct.md`.
+- Privacy: `adverse-action-review/references/cross-cutting.md#privacy` (GLBA Safeguards, state privacy implications), `marketing-claim-review/references/cross-cutting.md#privacy` (privacy-claim substantiation, AdChoices, dark-pattern privacy).
+- Conduct: `udaap-risk-review/references/cross-cutting.md#conduct`, `complaint-theme-analysis/references/cross-cutting.md#conduct`.
 
 AI-related cross-cutting is implicit on `adverse-action-review` and `fair-lending-test-plan`. Both MUST anchor on Reg B §1002.9 and Comment 9(b)(2)-3 of the Official Staff Commentary and the April 2023 Joint Statement on algorithmic discrimination where the underlying decisioning is AI / ML. (CFPB Circulars 2022-03 / 2023-03 are **withdrawn May 12, 2025; historical only.** Reg B §1002.9 and Comment 9(b)(2)-3 of the Official Staff Commentary continue to apply on their own terms.) `marketing-claim-review` and `udaap-risk-review` cite the Joint Statement when AI personalization or AI-generated content is in scope.
 
@@ -41,11 +41,11 @@ Per-skill anatomy (mirrors the Anthropic per-skill layout):
   SKILL.md
   references/
     source-anchors.md
-    sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md
-    cross-cutting/{privacy,conduct}.md     # where applicable
+    sector-overlays.md
+    cross-cutting.md     # where applicable
   templates/default-output.md
   schemas/<skill>.schema.json
-  examples/<scenario>.md
+  examples.md
 ```
 
 ## Operating posture

@@ -64,7 +64,7 @@ The OFAC publication date is the benchmark for response timing, not the institut
 
 ## Cyber-evasion exposure (cross-cutting overlay)
 
-> Loaded when the scope flags cyber. See `references/cross-cutting/cyber.md`.
+> Loaded when the scope flags cyber. See `references/cross-cutting.md#cyber`.
 
 - **Virtual-currency exposure**: [material | limited | none | unknown]. Controls evidence: [blockchain-analytics vendor; address screening; attribution governance]. Vendor outputs are vendor outputs; cite the vendor and route vendor-diligence findings to `vendor-diligence`.
 - **Ransomware-payment exposure**: [material | limited | none | unknown]. Controls evidence aligned to OFAC ransomware advisories and FinCEN ransomware advisories: pre-payment OFAC analysis, voluntary self-disclosure posture, sanctions-officer routing for incident-response, cyber-insurance, and remediation-vendor payment paths.

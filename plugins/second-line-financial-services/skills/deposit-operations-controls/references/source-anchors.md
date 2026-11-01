@@ -1,6 +1,6 @@
 # Source anchors — deposit-operations-controls
 
-Named, dated regulatory sources this skill anchors to. SKILL.md cites this file by path and does not restate excerpts. The banking sector flavour sits in `sector-overlays/banking.md`; cross-cutting flavour sits in `cross-cutting/<topic>.md`. Each entry carries the regulator and the published-source citation; the skill voice in SKILL.md uses generic regulator language and routes to this file for the named regulator.
+Named, dated regulatory sources this skill anchors to. SKILL.md cites this file by path and does not restate excerpts. The banking sector flavour sits in `sector-overlays.md#banking`; cross-cutting flavour sits in `cross-cutting.md#<topic>`. Each entry carries the regulator and the published-source citation; the skill voice in SKILL.md uses generic regulator language and routes to this file for the named regulator.
 
 ## Funds availability
 

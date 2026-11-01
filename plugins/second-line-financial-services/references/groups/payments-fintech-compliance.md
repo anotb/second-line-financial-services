@@ -6,7 +6,7 @@ Audience: head of compliance, BSA officer, head of TPRM (sponsor-bank side), hea
 
 ## Posture
 
-This is a strict sector-overlay plugin. It ships skills that are genuinely payments-fintech-only, shaped by Reg E, Reg II, Reg DD, NACHA Operating Rules, the card-network rulebooks, FedNow and RTP procedures, FinCEN MSB rules, state Money Transmitter laws, the CFPB §1033 Personal Financial Data Rights Final Rule, the Interagency Guidance on Third-Party Relationships, and the OCC / FRB / FDIC joint statements on bank-fintech arrangements. Capability skills that already cover the underlying second-line function (vendor diligence, exit plan, concentration review, AML monitoring, sanctions screening QA, UDAAP review, exam brief, risk assessment, regulatory change management, AI governance, risk reporting) are not duplicated here. Payments-fintech nuance for those capability skills lives as a `references/sector-overlays/payments-fintech.md` reference inside each capability skill.
+This is a strict sector-overlay plugin. It ships skills that are genuinely payments-fintech-only, shaped by Reg E, Reg II, Reg DD, NACHA Operating Rules, the card-network rulebooks, FedNow and RTP procedures, FinCEN MSB rules, state Money Transmitter laws, the CFPB §1033 Personal Financial Data Rights Final Rule, the Interagency Guidance on Third-Party Relationships, and the OCC / FRB / FDIC joint statements on bank-fintech arrangements. Capability skills that already cover the underlying second-line function (vendor diligence, exit plan, concentration review, AML monitoring, sanctions screening QA, UDAAP review, exam brief, risk assessment, regulatory change management, AI governance, risk reporting) are not duplicated here. Payments-fintech nuance for those capability skills lives as a `references/sector-overlays.md#payments-fintech` reference inside each capability skill.
 
 ## Skills
 
@@ -53,7 +53,7 @@ The payments-fintech regulatory pipeline has been unusually active in 2023-2026 
 
 ## Components
 
-- `skills/` — the four skills above. Each ships its own `SKILL.md`, `references/source-anchors.md`, `templates/`, and (where useful) `schemas/` and `examples/`.
+- `skills/` — the four skills above. Each ships its own `SKILL.md`, `references/source-anchors.md`, `templates/`, and (where useful) `schemas/` and `examples.md`.
 - `references/` — plugin-level shared references: payments source map, policy-control library rows, named decision forums.
 - `schemas/` — payments-specific artifacts.
 

@@ -64,7 +64,7 @@ Cite each rail-specific failure mode by file path into `references/source-anchor
 | Cross-border remittance receiver | | | | | | |
 | High-risk vertical | | | | | | |
 
-Segment-level UDAAP themes pull from `references/cross-cutting/conduct.md`. Account-closure / hold, Reg E §1005.11 timing, fee disclosure, FDIC-insurance representation, BNPL, dark patterns are the recurring CFPB Supervisory Highlights themes — verify which are current on the analysis date.
+Segment-level UDAAP themes pull from `references/cross-cutting.md#conduct`. Account-closure / hold, Reg E §1005.11 timing, fee disclosure, FDIC-insurance representation, BNPL, dark patterns are the recurring CFPB Supervisory Highlights themes — verify which are current on the analysis date.
 
 ## Risk universe — by geography
 

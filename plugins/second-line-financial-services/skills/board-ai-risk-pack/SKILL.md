@@ -76,7 +76,7 @@ The appendices carry the data confidence label (with the BCBS 239 posture for fi
 
 ### Sector and cross-cutting overlays
 
-When the scope names a sector, load the matching `references/sector-overlays/<sector>.md`. The overlay's named fields and committee-specific framing land in the pack; treating the overlay as background reading is the failure mode the troubleshooting file calls out.
+When the scope names a sector, load the matching `references/sector-overlays.md#<sector>`. The overlay's named fields and committee-specific framing land in the pack; treating the overlay as background reading is the failure mode the troubleshooting file calls out.
 
 - Banking covered-bank packs carry the OCC Heightened Standards framing on board AI oversight, the joint interagency model-risk guidance for traditional models (with the explicit GenAI/agentic scope exclusion noted), BCBS 239 data-confidence framing on the AI-inventory aggregation, and the CCAR governance-reporting cadence linkage.
 - Insurance packs carry the NAIC Model Bulletin AIS Program elements as the spine of the governance maturity section, ORSA cadence linkage, NYDFS January 2024 Insurance Circular Letter framing for NY life-insurance writers, Colorado SB 21-169 framing for CO writers, and the state-DOI inquiry inventory.
@@ -113,14 +113,16 @@ Downstream consumers: the structured object feeds the firm's committee minutes s
 
 ## Pointers
 
+`references/sector-overlays.md` and `references/cross-cutting.md` hold one section per sector or topic, and `examples.md` one per example. Find the heading and read only that section.
+
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
-- `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md` — sector overlays loaded from scope.
-- `references/cross-cutting/{cyber,conduct,ai-ethics}.md` — cross-cutting overlays loaded from scope.
+- `references/sector-overlays.md` — sector overlays loaded from scope.
+- `references/cross-cutting.md` — cross-cutting overlays loaded from scope.
 - `references/firm-overlay.md` — firm-installed AI policy, taxonomy, named owners, threshold values (consumed when present).
 - `templates/default-output.md` — pack template with the named sections.
 - `schemas/board-ai-risk-pack.schema.json` — structured-output contract.
-- `examples/` — anonymised public-source-derived scenarios.
-- `TROUBLESHOOTING.md` — recurring defects.
+- `examples.md` — anonymised public-source-derived scenarios.
+- `examples.md#troubleshooting` — recurring defects.
 
 ## Human review and AI disclosure
 

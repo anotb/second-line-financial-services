@@ -34,7 +34,7 @@ Before drafting, get plain answers. Most cycles answer them in the test plan and
 - **Did the executed procedures match the test plan.** If yes, draft against the plan. If no, document the divergence as a scope change with the named reviewer's pre-fieldwork sign-off, or flag silent drift as a finding the workpaper itself surfaces. Silent drift is a QA finding.
 - **What is the exception register saying.** Pull the classified exception register from `exception-analysis`. The conclusion language (effective / partially effective / not effective / inconclusive) flows from the register plus the sample-aggregation read, not from the drafter's intuition.
 
-When `scope` is supplied, consume it: `institution.type` and `institution.primary_regulators` set the citation focus and tone, `sector_overlay_set` selects which `references/sector-overlays/<sector>.md` loads, `cross_cutting_overlay_set` selects the `references/cross-cutting/<topic>.md` files. When it is not supplied, draft against what is on file (the test plan usually carries enough), default to the testing program's standing posture, and note in the workpaper that scope was not formalised separately.
+When `scope` is supplied, consume it: `institution.type` and `institution.primary_regulators` set the citation focus and tone, `sector_overlay_set` selects which `references/sector-overlays.md#<sector>` loads, `cross_cutting_overlay_set` selects the `references/cross-cutting.md#<topic>` files. When it is not supplied, draft against what is on file (the test plan usually carries enough), default to the testing program's standing posture, and note in the workpaper that scope was not formalised separately.
 
 ## How the workpaper gets built
 
@@ -78,14 +78,16 @@ Workpaper depth and length scale to control complexity, sample size, and excepti
 
 ## Pointers
 
+`references/sector-overlays.md` and `references/cross-cutting.md` hold one section per sector or topic, and `examples.md` one per example. Find the heading and read only that section.
+
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
-- `references/sector-overlays/banking.md`, `insurance.md`, `capital-markets.md`, `payments-fintech.md` — sector-specific workpaper conventions loaded per scope.
-- `references/cross-cutting/cyber.md`, `conduct.md` — cross-cutting flavour; cyber default-on for IAM and Part 500 controls, conduct default-on for consumer-facing tests.
+- `references/sector-overlays.md#banking`, `insurance.md`, `capital-markets.md`, `payments-fintech.md` — sector-specific workpaper conventions loaded per scope.
+- `references/cross-cutting.md#cyber`, `conduct.md` — cross-cutting flavour; cyber default-on for IAM and Part 500 controls, conduct default-on for consumer-facing tests.
 - `references/firm-overlay.md` — firm-installed methodology, taxonomy, decision checkpoints, and template variants beyond the regulatory baseline; consumed when present.
 - `templates/default-output.md` — workpaper template.
 - `schemas/workpaper.schema.json` — structured-output contract for downstream consumption.
-- `examples/` — HMDA LAR data-integrity workpaper; NYDFS Part 500 access-recertification workpaper.
-- `TROUBLESHOOTING.md` — recurring pitfalls (conclusions untied to evidence, mixing inspection with conclusion, legal-violation language, reviewer-separation breaks, silent test-plan drift).
+- `examples.md` — HMDA LAR data-integrity workpaper; NYDFS Part 500 access-recertification workpaper.
+- `examples.md#troubleshooting` — recurring pitfalls (conclusions untied to evidence, mixing inspection with conclusion, legal-violation language, reviewer-separation breaks, silent test-plan drift).
 
 The plugin-level shared references (`references/source-map.md`, `references/policy-control-library.md`, `references/review-gates.md`) sit at the plugin root and are consulted alongside the skill-level files.
 

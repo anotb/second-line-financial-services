@@ -1,6 +1,6 @@
 # Source anchors — open-banking-data-controls
 
-Named, dated regulatory sources this skill anchors to. SKILL.md cites this file by path and does not restate excerpts in narrative. Sector flavour for payments-fintech sits in `sector-overlays/payments-fintech.md`; cross-cutting flavour sits in `cross-cutting/<topic>.md`.
+Named, dated regulatory sources this skill anchors to. SKILL.md cites this file by path and does not restate excerpts in narrative. Sector flavour for payments-fintech sits in `sector-overlays.md#payments-fintech`; cross-cutting flavour sits in `cross-cutting.md#<topic>`.
 
 The CFPB Personal Financial Data Rights Final Rule is the central anchor. Its docket has been active since finalisation; the `s1033_status_note` field in the artifact carries the verification date for the firm's tier and the current docket posture as of each engagement. The FDX API specification is industry, not regulator; alignment is supervisory expectation, not a legal obligation by itself. Network and card-network rulebooks are paywalled where they appear in adjacent overlays; this skill does not cite them directly.
 

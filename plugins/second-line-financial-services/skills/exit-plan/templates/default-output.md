@@ -107,7 +107,7 @@ A critical or important function exit usually lands on a supervisory clock. Miss
 
 ## Cyber considerations during transition
 
-Detail in `references/cross-cutting/cyber.md`.
+Detail in `references/cross-cutting.md#cyber`.
 
 - Secure data extraction (encrypted transit, integrity verification).
 - Key rotation, credential rotation, token revocation.
@@ -118,7 +118,7 @@ Detail in `references/cross-cutting/cyber.md`.
 
 ## Privacy considerations during transition
 
-Detail in `references/cross-cutting/privacy.md`.
+Detail in `references/cross-cutting.md#privacy`.
 
 - GLBA Safeguards data-handling on transition.
 - State-privacy-law deletion and return obligations (CCPA / CPRA service-provider deletion).

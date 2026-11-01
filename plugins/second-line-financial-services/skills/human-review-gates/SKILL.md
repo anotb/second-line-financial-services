@@ -69,12 +69,12 @@ The source trace block and sign-off block close the artifact. Material claims ci
 
 The same gate spine carries different decision authorities, different independence expectations, and different documentation conventions across sectors and cross-cutting topics. Load only the overlays the scope flags. The overlays change which sources the matrix cites and what the practitioner expects to find; they do not change the column structure.
 
-- `references/sector-overlays/banking.md` carries large-bank heightened-standards expectations on board and risk-committee oversight, FRB supervisory expectations on senior-management oversight, and the enhanced-prudential-standards risk-committee shape for large BHCs.
-- `references/sector-overlays/insurance.md` carries NAIC ORSA governance, the corporate-governance-disclosure model-act gate flavour, and state DOI committee-charter conventions including audit-committee requirements under state insurance-holding-company statutes.
-- `references/sector-overlays/capital-markets.md` carries FINRA supervisory gate posture, the SEC advisers compliance-program annual-review gate framing, and the broker-dealer recordkeeping lens on gate-decision retention.
-- `references/sector-overlays/payments-fintech.md` carries OCC bank-fintech partnership oversight for sponsor-bank gate structures and the money-transmitter state-licensing gate posture for non-bank money-services businesses.
-- `references/cross-cutting/cyber.md` loads when gates cover incident-response decisions, materiality-determination for cyber events, or cyber-disclosure decisions. SEC public-company disclosure-committee posture, state cyber senior-governing-body responsibility, and FFIEC IT incident-response framing land here.
-- `references/cross-cutting/conduct.md` loads when gates cover customer-facing decisions: product approval, fee-change approval, marketing approval, restitution approval, fair-lending second-look. CFPB UDAAP and ECOA second-review conventions land here.
+- `references/sector-overlays.md#banking` carries large-bank heightened-standards expectations on board and risk-committee oversight, FRB supervisory expectations on senior-management oversight, and the enhanced-prudential-standards risk-committee shape for large BHCs.
+- `references/sector-overlays.md#insurance` carries NAIC ORSA governance, the corporate-governance-disclosure model-act gate flavour, and state DOI committee-charter conventions including audit-committee requirements under state insurance-holding-company statutes.
+- `references/sector-overlays.md#capital-markets` carries FINRA supervisory gate posture, the SEC advisers compliance-program annual-review gate framing, and the broker-dealer recordkeeping lens on gate-decision retention.
+- `references/sector-overlays.md#payments-fintech` carries OCC bank-fintech partnership oversight for sponsor-bank gate structures and the money-transmitter state-licensing gate posture for non-bank money-services businesses.
+- `references/cross-cutting.md#cyber` loads when gates cover incident-response decisions, materiality-determination for cyber events, or cyber-disclosure decisions. SEC public-company disclosure-committee posture, state cyber senior-governing-body responsibility, and FFIEC IT incident-response framing land here.
+- `references/cross-cutting.md#conduct` loads when gates cover customer-facing decisions: product approval, fee-change approval, marketing approval, restitution approval, fair-lending second-look. CFPB UDAAP and ECOA second-review conventions land here.
 
 Privacy and climate cross-cutting overlays follow the same pattern; this skill ships cyber and conduct as the cross-cutting files because they are the most frequent triggers. Granular citations (specific section labels, rule numbers) live in `references/source-anchors.md` and the overlay files; the body cites by path. Where firm policy or taxonomy applies (named committees specific to the firm, GRC-platform-specific decision-record fields, internal escalation ladders), it lives in `references/firm-overlay.md` and is consumed when present.
 
@@ -104,14 +104,16 @@ The matrix in `templates/default-output.md` shape and the structured record per 
 
 ## Pointers
 
+`references/sector-overlays.md` and `references/cross-cutting.md` hold one section per sector or topic, and `examples.md` one per example. Find the heading and read only that section.
+
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
-- `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md` — sector overlays loaded from scope.
-- `references/cross-cutting/{cyber,conduct}.md` — cross-cutting overlays loaded when the gates cover information-security or customer-facing decisions.
+- `references/sector-overlays.md` — sector overlays loaded from scope.
+- `references/cross-cutting.md` — cross-cutting overlays loaded when the gates cover information-security or customer-facing decisions.
 - `references/firm-overlay.md` — firm-installed taxonomy, named committees, GRC-platform decision-record fields, escalation ladders, dissent-path mechanics beyond the regulatory baseline; consumed when present.
 - `templates/default-output.md` — gate matrix template.
 - `schemas/review-gate-matrix.schema.json` — structured-output contract.
-- `examples/` — AI use-case lifecycle gates for a regional bank; critical-vendor onboarding gates aligned to interagency TPRM guidance.
-- `TROUBLESHOOTING.md` — recurring defects in gate matrices.
+- `examples.md` — AI use-case lifecycle gates for a regional bank; critical-vendor onboarding gates aligned to interagency TPRM guidance.
+- `examples.md#troubleshooting` — recurring defects in gate matrices.
 
 ## Human review and AI disclosure
 

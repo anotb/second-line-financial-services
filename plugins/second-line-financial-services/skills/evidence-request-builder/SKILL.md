@@ -38,7 +38,7 @@ Before drafting, get plain answers. Most cycles answer them from the signed test
 - **What does the firm already know about the evidence in this control area.** Prior cycle's request list, prior cycle's exceptions on evidence sufficiency, repeat-issue areas, system-of-record changes since last cycle. The previous list is the strongest input; the current list is largely a revision.
 - **Has anything material changed since the last cycle.** System migrations, new vendor relationships, policy updates that changed where evidence sits, regulator letters that shifted what evidence the firm should be able to produce. Reusing a prior list without re-reading the system-of-record landscape is the most common drafting failure.
 
-When `scope` is supplied, consume it: `institution.type` and `institution.primary_regulators` set the citation focus and tone, `sector_overlay_set` selects which `references/sector-overlays/<sector>.md` loads, `cross_cutting_overlay_set` selects the `references/cross-cutting/<topic>.md` files. Privacy overlay loads whenever the request list will pull artifacts containing NPI, PHI, PCI, or other regulated personal data, regardless of how the scope reads. When scope is not supplied, draft against what is on file (the test plan usually carries enough), default to the testing program's standing posture, and note in the request list that scope was not formalised separately.
+When `scope` is supplied, consume it: `institution.type` and `institution.primary_regulators` set the citation focus and tone, `sector_overlay_set` selects which `references/sector-overlays.md#<sector>` loads, `cross_cutting_overlay_set` selects the `references/cross-cutting.md#<topic>` files. Privacy overlay loads whenever the request list will pull artifacts containing NPI, PHI, PCI, or other regulated personal data, regardless of how the scope reads. When scope is not supplied, draft against what is on file (the test plan usually carries enough), default to the testing program's standing posture, and note in the request list that scope was not formalised separately.
 
 ## How the list gets built
 
@@ -78,15 +78,17 @@ When the work is asking for evidence ahead of fieldwork, this skill is the right
 
 ## Pointers
 
+`references/sector-overlays.md` and `references/cross-cutting.md` hold one section per sector or topic, and `examples.md` one per example. Find the heading and read only that section.
+
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
-- `references/sector-overlays/banking.md`, `insurance.md`, `capital-markets.md`, `payments-fintech.md` — sector-specific request-list conventions loaded per scope.
-- `references/cross-cutting/cyber.md` — cross-cutting flavour; cyber default-on for IAM, data-protection, and Part 500 controls.
-- `references/cross-cutting/privacy.md` — cross-cutting flavour; privacy default-on whenever the request list pulls artifacts containing NPI, PHI, PCI, or other regulated personal data.
+- `references/sector-overlays.md#banking`, `insurance.md`, `capital-markets.md`, `payments-fintech.md` — sector-specific request-list conventions loaded per scope.
+- `references/cross-cutting.md#cyber` — cross-cutting flavour; cyber default-on for IAM, data-protection, and Part 500 controls.
+- `references/cross-cutting.md#privacy` — cross-cutting flavour; privacy default-on whenever the request list pulls artifacts containing NPI, PHI, PCI, or other regulated personal data.
 - `references/firm-overlay.md` — firm-installed PBC-template variants, system-of-record naming map, escalation paths, owner-role conventions; consumed when present.
 - `templates/default-output.md` — content spec for the PBC list (named sections, fields, request-row contract). The xlsx render maps the sections to worksheets.
 - `schemas/evidence-request.schema.json` — structured-output contract consumed by `workpaper-drafter` (request_id per evidence row) and `evidence-binder` (closed list as index input).
-- `examples/` — HMDA LAR data-integrity PBC list; NYDFS Part 500 access-recertification PBC list.
-- `TROUBLESHOOTING.md` — recurring pitfalls (under-specific artifact descriptions, mixed criteria per row, default reliance and sensitivity, screenshots on data-integrity tests, generic system-of-record names, fielding before sign-off, request list as workpaper, request list as closure binder, missing not-applicable section).
+- `examples.md` — HMDA LAR data-integrity PBC list; NYDFS Part 500 access-recertification PBC list.
+- `examples.md#troubleshooting` — recurring pitfalls (under-specific artifact descriptions, mixed criteria per row, default reliance and sensitivity, screenshots on data-integrity tests, generic system-of-record names, fielding before sign-off, request list as workpaper, request list as closure binder, missing not-applicable section).
 
 The plugin-level shared references (`references/source-map.md`, `references/policy-control-library.md`, `references/review-gates.md`) sit at the plugin root and are consulted alongside the skill-level files.
 

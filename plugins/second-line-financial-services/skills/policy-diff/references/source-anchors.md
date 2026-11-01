@@ -147,4 +147,4 @@ What this skill relies on: that the diff's communication-plan summary maps to Pr
 
 ## Sector- and cross-cutting-specific anchors
 
-The sector-overlay files (`references/sector-overlays/<sector>.md`) enumerate sector-specific anchors that load when the scope flags that sector. The cross-cutting overlays (`references/cross-cutting/<topic>.md`) enumerate cross-cutting anchors. This file is the foundational set; the overlays add what the scope requires.
+The sector-overlay files (`references/sector-overlays.md#<sector>`) enumerate sector-specific anchors that load when the scope flags that sector. The cross-cutting overlays (`references/cross-cutting.md#<topic>`) enumerate cross-cutting anchors. This file is the foundational set; the overlays add what the scope requires.

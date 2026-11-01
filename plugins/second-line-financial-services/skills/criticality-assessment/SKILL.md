@@ -63,17 +63,19 @@ Holds across every assessment regardless of arrangement type, audience, or rende
 
 ## Adaptation
 
-Flexes by engagement. Assessment depth and length scale to the proposed tier and to whether the engagement is in DORA or UK SS2/21 scope. A `not-critical` arrangement collapses several sections to a paragraph; a `critical` or DORA-in-scope arrangement runs full depth with reviewer questions clustered for the operational-risk committee (or AI risk committee for AI vendors, fund board for registered funds). The sector overlay set drives which `references/sector-overlays/<sector>.md` is loaded; a dual-registrant or BaaS arrangement may load two. Source posture (public-only, public-plus-firm-policy, public-plus-firm-policy-plus-system-of-record-evidence, connector-aware) drives the evidence ask, particularly for the IBS map and the impact-tolerance read. Render format (Word, Excel, PowerPoint, Markdown) follows the workflow.
+Flexes by engagement. Assessment depth and length scale to the proposed tier and to whether the engagement is in DORA or UK SS2/21 scope. A `not-critical` arrangement collapses several sections to a paragraph; a `critical` or DORA-in-scope arrangement runs full depth with reviewer questions clustered for the operational-risk committee (or AI risk committee for AI vendors, fund board for registered funds). The sector overlay set drives which `references/sector-overlays.md#<sector>` is loaded; a dual-registrant or BaaS arrangement may load two. Source posture (public-only, public-plus-firm-policy, public-plus-firm-policy-plus-system-of-record-evidence, connector-aware) drives the evidence ask, particularly for the IBS map and the impact-tolerance read. Render format (Word, Excel, PowerPoint, Markdown) follows the workflow.
 
 ## Pointers
 
+`references/sector-overlays.md` and `references/cross-cutting.md` hold one section per sector or topic, and `examples.md` one per example. Find the heading and read only that section.
+
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
-- `references/sector-overlays/banking.md`, `insurance.md`, `capital-markets.md`, `payments-fintech.md` — sector-specific criticality criteria loaded per scope.
+- `references/sector-overlays.md#banking`, `insurance.md`, `capital-markets.md`, `payments-fintech.md` — sector-specific criticality criteria loaded per scope.
 - `references/firm-overlay.md` — firm-installed IBS map, impact-tolerance taxonomy, criticality-policy thresholds, and decision forums beyond the regulatory baseline; consumed when present.
 - `templates/default-output.md` — assessment template.
 - `schemas/criticality-assessment.schema.json` — structured-output contract for downstream consumption.
-- `examples/` — core-banking SaaS at a community bank (criticality = critical); HRIS payroll at an EU subsidiary of a US insurer (criticality = important, DORA flag = no, in-scope-of-register).
-- `TROUBLESHOOTING.md` — recurring pitfalls (spend-as-criticality, vendor-commitment-as-tolerance, procurement-category-as-tier, manual-workaround skip, DORA-flag-collapsed-with-firm-tier).
+- `examples.md` — core-banking SaaS at a community bank (criticality = critical); HRIS payroll at an EU subsidiary of a US insurer (criticality = important, DORA flag = no, in-scope-of-register).
+- `examples.md#troubleshooting` — recurring pitfalls (spend-as-criticality, vendor-commitment-as-tolerance, procurement-category-as-tier, manual-workaround skip, DORA-flag-collapsed-with-firm-tier).
 
 The plugin-level shared references (`references/source-map.md`, `references/policy-control-library.md`, `references/review-gates.md`) sit at the plugin root and are consulted alongside the skill-level files.
 
