@@ -2,7 +2,7 @@
   "name": "second-line-financial-services",
   "description": "Plugins for second-line and 1.5-line financial-services work: GRC primitives, regulatory change, AI / model risk, third-party / operational resilience, controls testing, risk reporting, financial crime, consumer compliance and fair lending, plus banking, insurance, capital markets, and payments / fintech sector overlays.",
   "owner": {
-    "name": "Second Line Financial Services contributors"
+    "name": "anot"
   },
   "plugins": [
     {

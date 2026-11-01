@@ -3,7 +3,7 @@
   "version": "0.2.0",
   "description": "Banking-sector overlays for supervision readiness, credit risk governance, deposit operations controls, and bank-fintech partnership review.",
   "author": {
-    "name": "Second Line Financial Services contributors"
+    "name": "anot"
   },
   "license": "MIT",
   "homepage": "https://github.com/anotb/second-line-financial-services",

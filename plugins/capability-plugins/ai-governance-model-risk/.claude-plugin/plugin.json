@@ -3,7 +3,7 @@
   "version": "0.2.0",
   "description": "AI governance and model risk skills for AI intake, risk tiering, model cards, validation planning, agentic controls, EU AI Act triage, AI vendor review, and board risk packs.",
   "author": {
-    "name": "Second Line Financial Services contributors"
+    "name": "anot"
   },
   "license": "MIT",
   "homepage": "https://github.com/anotb/second-line-financial-services",
