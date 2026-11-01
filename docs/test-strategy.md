@@ -17,7 +17,7 @@
 `scripts/check-skill-content.py` walks every `plugins/*/skills/*/SKILL.md` and applies four rules.
 
 - Rule 1, placeholder-text ban. Maintains a verbatim list of filler phrases (seven-step Required process, six-bullet Output format, five-bullet Guardrails block, generic description filler). Any hit means the skill has not been rewritten yet.
-- Rule 2, activation-tuned description. Parses the SKILL.md frontmatter `description` field and requires both `Best for:` and `Not the right tool when:` (case-insensitive). This is the activation contract.
+- Rule 2, short listing description. Requires `description` to be 120 characters or fewer, and requires `Best for:` and `Not the right tool when:` (case-insensitive) in the skill body's `When to use` section.
 - Rule 3, source-anchor depth. Requires a sibling `references/source-anchors.md`. Every bullet in that file that contains a URL must also carry a section reference (one of `§`, `Section`, `Bulletin`, `Article`, `Item`, `Principle`, `Rule N`, `Para`, `¶`, `CFR`, `SR`, `FIL`, `FAQ`, or `[verify section]`). URL-only citations fail.
 - Rule 4, duplicate SKILL.md content. Computes pairwise Jaccard similarity over word trigrams of the body text (frontmatter stripped). Flags pairs with more than 50% overlap.
 

@@ -1,0 +1,90 @@
+---
+name: fund-board-reporting
+description: "Assemble a periodic compliance and risk pack for the board of a registered fund."
+argument-hint: "[trust / fund complex name; meeting date; report type (quarterly compliance / annual 38a-1 / 15(c) renewal / ad-hoc); funds in scope; scope record if available]"
+---
+
+# Fund board reporting
+
+The pack is what the trustees of a registered investment company reach for to discharge their oversight under Rule 38a-1 (compliance program), §15(c) (advisory contract approval and renewal), §17 (affiliated transactions), Rule 22e-4 (liquidity), Rule 2a-5 (valuation), and Rule 18f-4 (derivatives). It is the fund chief compliance officer's instrument, drafted by the fund-administration compliance team or the board secretariat, challenged by the independent trustees and their counsel. The named sections (executive summary, Rule 38a-1 written report or quarterly compliance section, §15(c) renewal pack on the renewal cycle, liquidity, valuation, derivatives, affiliated transactions, soft-dollar / §28(e), service-provider compliance summary, cyber events where in scope, open issues, forward-looking, source trace) are not optional; the trust's compliance procedures and the board's charter expect the structure. Depth and tone flex with the report type and the fund complex.
+
+The pack is two artifacts: a board-presentation PowerPoint deck the trustees read at the meeting, and a Word annex carrying the deeper §15(c) factor analysis and the Rule 38a-1 written report that becomes part of the board minutes record. The deck is the primary read; the annex carries the substantive content that the independent trustees and their counsel consult.
+
+The pack is a draft until the fund CCO and the board secretariat review. The skill stops at the draft.
+
+## When to use
+
+Assembles the periodic compliance and risk pack delivered to the board of a registered investment company (mutual fund, ETF, closed-end fund, BDC) and its independent trustees. The pack covers the chief compliance officer's annual written report on the fund and service-provider compliance programs, the advisory contract approval and renewal package built on the §15(c) factor analysis, the standing compliance and risk reporting cadence (material compliance matters, valuation oversight, liquidity program reporting, derivatives risk reporting, affiliated-transactions and soft-dollar / brokerage disclosures), and the per-service-provider compliance program assessment for the adviser, sub-advisers, transfer agent, custodian, fund accountant, distributor, principal underwriter, valuation designee, and pricing services. The deliverable is a board-presentation deck plus a Word annex carrying the §15(c) and Rule 38a-1 written content the board minutes record consumes.
+
+Best for:
+- A fund chief compliance officer is preparing the annual Rule 38a-1(a)(4)(iii) written report to the board on the operation of the fund's and each service provider's compliance program, including any material compliance matters and material policy changes since the prior report.
+- A fund secretary or fund-administration compliance team is preparing the standing quarterly compliance section of the board pack, with the material compliance matters log, the service-provider compliance summary, and the affiliated-transactions and soft-dollar disclosures.
+- An adviser is preparing the §15(c) advisory-contract renewal materials covering the Gartenberg / Jones v. Harris factors (nature, extent, and quality of services; investment performance; profitability; economies of scale; fall-out benefits; comparative fees and expenses) for the independent trustees' deliberation.
+- A fund board secretariat is assembling the per-cycle pack covering material compliance matters, valuation prompt-notification events under Rule 2a-5, liquidity classification changes and breaches under Rule 22e-4, derivatives VaR utilization and breaches under Rule 18f-4, and affiliated-transaction activity under §17 / Rule 17e-1 / Rule 17a-7.
+
+Not the right tool when:
+- The institution is not a registered investment company. Private fund advisers and adviser-firm-level enterprise risk reporting use `risk-committee-pack` with the capital-markets sector overlay.
+- The deliverable is the adviser's enterprise risk committee pack covering firm-wide investment risk, fiduciary risk, vendor risk, and BD net-capital content for dual-registrant firms (use `risk-committee-pack`).
+- The deliverable is a single material-compliance-matter write-up (use `issue-writeup`).
+- The deliverable is the adviser's Rule 206(4)-7 annual review of its own compliance program (use `policy-gap-review` chained with `adviser-exam-readiness` in this plugin).
+- The deliverable is best-execution surveillance content for the best-ex committee or for the §206 / FINRA 5310 review (use `best-execution-surveillance` in this plugin); brokerage-quality content cross-links into this pack but the surveillance itself lives elsewhere.
+- The deliverable is Rule 206(4)-1 marketing-rule evidence and substantiation (use `marketing-rule-evidence` in this plugin); material marketing-rule findings affecting the fund land in this pack as part of the §38a-1 service-provider compliance program assessment for the adviser.
+
+## Ask first
+
+Most of the spine is set by the meeting cycle and the prior-period pack. A few things settle before drafting:
+
+- What is the report type. Quarterly compliance section is the standing cadence; annual Rule 38a-1 written report is the annual cycle's substantive addition; §15(c) advisory contract renewal pack is the renewal cycle's substantive addition; ad-hoc escalation is the off-cycle triggered pack. The report type drives the required-sections set in the deck and the annex.
+- Which funds are in scope and what fund types. Open-end mutual funds, ETFs (with Rule 6c-11 considerations), closed-end funds, and BDCs each carry different rule applicability — Rule 22e-4 applies only to in-scope open-end funds; Rule 2a-7 substitutes for money market funds; Rule 18f-4 applies to all registered investment companies and BDCs with limited-derivatives-user nuance.
+- Who is the audience. Independent trustees and their counsel are the load-bearing readers; the deck is challenge-shaped and the annex carries the documented record that supports any future §36(b) or examination review.
+- What is the source posture and the data confidence label. Service-provider attestations supplemented by independent oversight evidence is the standard; attestation alone does not satisfy Rule 38a-1's "reasonably believes adequate" expectation.
+- What decisions and acknowledgements does the board owe this cycle. Rule 17e-1 quarterly procedure-adequacy determination is on the cycle every cycle; Rule 38a-1 annual program approval is on the annual cycle; §15(c) advisory contract renewal is on the renewal cycle; Rule 22e-4 program approval is the initial and any material change cycle. Surface these up front.
+
+When the scope record is supplied, the skill reads `institution.type`, `institution.primary_regulators`, `persona.role`, `risk_lens`, `sector_overlay_set`, and `cross_cutting_overlay_set` from it, plus `source_posture` for the evidence asks. Otherwise the skill works with what the practitioner names and flags the rest.
+
+## How the pack gets built
+
+The pack has the same spine across cycles. The order below is roughly how the fund CCO and the board secretariat walk it; in practice sections fill out as upstream feeds arrive from the adviser, sub-advisers, the valuation designee, the derivatives risk manager, the liquidity program administrator, and the service-provider population.
+
+Start with the cover, the executive summary for trustees, and the decisions-and-acknowledgements list. The decisions list is what the chair reads first; everything else supports those decisions. Executive summary is up to five bullets in CCO voice covering the headline matter, the material compliance matter posture, the §15(c) recommendation summary on the renewal cycle, the service-provider matter requiring trustee attention, and the decisions or acknowledgements requested. If decisions are not yet known, that absence is itself a sign-off question; surface it rather than ship a status pack.
+
+The Rule 38a-1 written report is the annual cycle's substantive addition. It is a written assessment of the operation and adequacy of the compliance program of the fund and each service provider — not a logbook of incidents. Material compliance matters are assessed (root cause, recurrence risk, remediation status), not merely listed. Each in-scope service provider (adviser, sub-advisers, transfer agent, custodian, fund accountant, distributor, principal underwriter, valuation designee, pricing services) carries program adequacy assessment, material exceptions, and oversight evidence. The CCO's recommendation on adequacy closes the report. Sub-adviser oversight rests on the parent CCO's reasonable belief; a sub-adviser CCO attestation alone is not enough; oversight evidence (testing, examination findings, third-party reports) supports the belief.
+
+The §15(c) advisory contract renewal pack is the renewal cycle's substantive addition. It is built against the Gartenberg / Jones v. Harris factor analysis: nature, extent, and quality of services; investment performance with benchmark and peer comparison; profitability of the adviser from the fund relationship with methodology pin; economies of scale and breakpoints with AUM growth analysis; fall-out benefits substantively catalogued (soft-dollar credits, affiliated-broker revenue, 12b-1 distribution flows, affiliated-bank deposit balances, sub-adviser economics, revenue-sharing); comparative fees and expenses with peer-group methodology pin; and trustee questions and adviser responses that are substantive and period-specific. A bare profitability number without methodology is the §36(b) discovery finding pattern; recycled prior-year trustee questions are themselves a finding pattern.
+
+The standing compliance and risk reporting cadence sits beneath the report-type-driven content. Liquidity (Rule 22e-4): classification distribution with timing, HLIM compliance, 15% illiquid bucket status, breaches and restorations, market-change-trigger reclassifications. A quarterly snapshot in a stressed market is stale; the report addresses the timing. Valuation (Rule 2a-5): valuation designee identification, quarterly written report, prompt-notification log for the period (the rule requires notification no later than five business days after the designee becomes aware of a matter that materially affects fair value), fair-value override summary, testing results. A quarterly summary alone is insufficient if material events occurred mid-period; the prompt-notification log is the test. Derivatives (Rule 18f-4): limited-derivatives-user status with monitoring of the 10% notional threshold, VaR utilization and any limit breaches, stress-test summary, backtesting exceptions, derivatives risk manager annual report on the annual cycle.
+
+Affiliated transactions and soft-dollar / §28(e) disclosure carry the conduct surface. Rule 17e-1 affiliated brokerage with the board's quarterly procedure-adequacy determination; Rule 17a-7 affiliated cross trades with the pricing methodology evidence against the §17a-7 conditions; §17(a) / Rule 17a-8 / §17(d) / Rule 17d-1 in-period activity with the §17 analysis basis; related-person disclosures. Soft-dollar / §28(e): commissions paid for research and brokerage, eligibility analysis under the 2006 SEC interpretive release, CSA / CCA arrangements, MiFID II treatment. Counts without context are insufficient; each item carries the conflict shape, the procedure-adequacy evidence, and any exception.
+
+Service-provider compliance summary is the standing per-service-provider table that supports the §38a-1 program-adequacy assessment. Each provider carries program adequacy, material exceptions, and oversight evidence. SOC 2 Type II reports for the major service-provider categories, third-party attestations supplemented by parent-CCO testing, and any in-period exam findings affecting the service provider populate this section.
+
+Cyber and operational resilience events appear when the scope flags cyber, when a material cyber event affecting the fund or fund shareholders has occurred, or when a service-provider cyber event has reached the §38a-1 material-compliance-matter threshold. Reg S-P customer-notice posture for any in-period customer-information event is on the cycle; the public-parent disclosure-referral status appears where the fund's adviser is a subsidiary of a public-company issuer. Detail lives in the cyber cross-cutting overlay.
+
+Open issues and management actions carry the standing remediation tracker: each issue with severity, owner role, due date, status, and any escalation flag. Forward-looking commentary names regulatory horizon, SEC Division of Examinations focus areas relevant to the fund's product mix and rule reliance, and industry enforcement themes; generic forward-looking content fails the section. The source trace and confidence label close the pack — every material claim mapped to its source, with `[evidence needed]` for any unsupported item; pack confidence is medium at best where any material claim carries that flag.
+
+The pack is a draft until the fund CCO and the board secretariat review. The skill does not assert sign-off, file or distribute, certify the §38a-1 written report under the CCO's name, sign the §15(c) renewal recommendation, or close any issue. The independent trustees' deliberation and the board's recorded determinations close the loop.
+
+Across the pack, every material claim cites a source. Unsupported claims carry `[evidence needed]` and route to the fund-CCO issue log. Evidence is separated from inference; the source-trace appendix in the annex shows the seam. No named institutions appear in narrative or examples beyond public defendants in finalized enforcement actions with published consent orders. Sector and cross-cutting overlays load from the scope; the skill loads only what the engagement names.
+
+## Pointers
+
+- `references/source-anchors.md` — citations and excerpts for the named anchors (ICA §15, Rule 38a-1, ICA §17 / §17(e), Securities Exchange Act §28(e), Rule 22e-4, Rule 2a-5, Rule 18f-4, ICA §10(a), Form N-CEN, Form N-CSR, Rule 35d-1, Reg S-P, SEC EXAMS Annual Examination Priorities, Gartenberg v. Merrill Lynch Asset Management, Jones v. Harris Associates).
+- `references/sector-overlays/capital-markets.md` — capital-markets sector overlay; loaded for every invocation of this skill (the skill is sector-unique).
+- `references/cross-cutting/cyber.md` — cyber overlay (Reg S-P May 2024; service-provider cyber events meeting §38a-1 threshold; public-parent SEC cyber disclosure considerations).
+- `references/cross-cutting/conduct.md` — conduct overlay (fund-board fiduciary lens; §15(c) factor analysis as fiduciary-bargain record; affiliated transactions; soft-dollar / §28(e); code of ethics; 12b-1 oversight).
+- `references/firm-overlay.md` — fund-complex-installed trust documentation, fund-by-fund product list, sub-adviser arrangements, valuation-designee designation, derivatives risk manager designation, peer-group methodology, profitability allocation methodology, committee charter (consumed when present).
+- `templates/default-output.md` — content spec for the deck and the annex (named slides for the deck; named sections for the annex).
+- `examples/` — anonymised public-source-derived scenarios.
+- `TROUBLESHOOTING.md` — recurring defects.
+
+## Output
+
+Default to drafting against `templates/default-output.md`. The typical pair is a board-presentation deck (rendered via the `pptx` skill) plus a Word annex (rendered via the `docx` skill, both in the `document-skills` plugin); render as Excel or Markdown where the audience or workflow asks for it. The annex carries the §15(c) factor analysis at length, the Rule 38a-1 written report at length, the per-service-provider compliance program assessment, and the source trace.
+
+Downstream consumers: the fund-board minutes consume the annex content for the documented determinations on Rule 17e-1 quarterly procedure adequacy, Rule 38a-1 annual program approval, §15(c) advisory contract renewal, Rule 22e-4 program approval, and any in-period prompt-notification or breach response. Material compliance matters at the §38a-1(e)(2) threshold may be written up separately via `issue-writeup`. Adviser exam-readiness work in advance of an SEC EXAMS engagement consumes the most recent §38a-1 written report and the §15(c) renewal pack via `adviser-exam-readiness` in this plugin.
+
+## Human review and AI disclosure
+
+Open the deliverable with this line, and remove it only after the review below: `AI-assisted draft. Requires review by a qualified person before use.`
+
+A qualified person with authority to change the output reviews it before it is delivered or relied on, and stays accountable for it. Where the output supports advice to an individual or a decision about an individual (credit, insurance underwriting, pricing or claims, employment, legal rights, or similar), that individual must be told AI was used to produce it. This skill does not make final decisions, file with a regulator, notify customers, execute transactions, or move money or other financial assets.

@@ -1,0 +1,324 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://second-line-financial-services/plugins/second-line-financial-services/skills/exception-analysis/schemas/exception.schema.json",
+  "title": "exception-register",
+  "description": "Structured exception register produced from a completed control-test cycle. Carries scope, per-exception classification (control-failure / design-gap / evidence-gap / scope-disagreement / data-integrity / anomaly), severity with rationale, root-cause hypothesis, repeat-issue flag, disposition, and the issue handoff package downstream issue write-up consumes via source_exception_id. Downstream consumers: workpaper-drafter (consumes the register by exception_register_id and pulls classification summary into the workpaper); issue-writeup (keys off source_exception_id, pulls the per-exception handoff package without re-discovering criterion / condition / cause / effect / recommendation seed); qa-workpaper (full record review for sufficiency).",
+  "type": "object",
+  "required": [
+    "exception_register_id",
+    "test_id",
+    "workpaper_id",
+    "control_id",
+    "period_start",
+    "period_end",
+    "preparer",
+    "source_posture",
+    "exceptions",
+    "aggregation",
+    "human_review_required",
+    "confidence_label"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "description": "Semver of this schema. Default 1.0.0.",
+      "default": "1.0.0",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "exception_register_id": {
+      "type": "string",
+      "description": "Stable identifier per firm naming convention. Foreign key consumed by workpaper-drafter (exceptions-identified section) and the source for source_exception_id handoffs into issue-writeup.",
+      "minLength": 1
+    },
+    "test_id": {
+      "type": "string",
+      "description": "Foreign key into test-plan-builder output.",
+      "minLength": 1
+    },
+    "workpaper_id": {
+      "type": "string",
+      "description": "Foreign key into workpaper-drafter output.",
+      "minLength": 1
+    },
+    "control_id": {
+      "type": "string",
+      "description": "Firm control register ID for the control under test.",
+      "minLength": 1
+    },
+    "obligation_ids": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Firm obligation register IDs the control addresses."
+    },
+    "engagement_id": {
+      "type": "string",
+      "description": "Pointer to the scope record (scoping output). Optional; absent when scope was not formalised separately from the test plan."
+    },
+    "period_start": {
+      "type": "string",
+      "format": "date"
+    },
+    "period_end": {
+      "type": "string",
+      "format": "date"
+    },
+    "business_unit": {
+      "type": "string",
+      "description": "Role-level business-unit name; not individual-level."
+    },
+    "jurisdictions": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Primary first; secondary jurisdictions follow if multi-jurisdiction."
+    },
+    "source_posture": {
+      "type": "string",
+      "enum": [
+        "public-only",
+        "public-plus-firm-policy",
+        "public-plus-firm-policy-plus-evidence",
+        "connector-aware"
+      ]
+    },
+    "scope_statement": {
+      "type": "string",
+      "description": "Two to three sentences. Population, timeframe, in / out of scope."
+    },
+    "preparer": {
+      "type": "object",
+      "required": ["role", "date"],
+      "additionalProperties": false,
+      "properties": {
+        "role": { "type": "string" },
+        "date": { "type": "string", "format": "date" }
+      }
+    },
+    "reviewer": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["role"],
+      "properties": {
+        "role": {
+          "type": "string",
+          "description": "Separate role from preparer; reviewer separation is structural."
+        },
+        "date": { "type": "string", "format": "date" }
+      }
+    },
+    "exceptions": {
+      "type": "array",
+      "minItems": 0,
+      "items": {
+        "type": "object",
+        "required": [
+          "exception_id",
+          "criterion_source",
+          "condition",
+          "classification",
+          "severity",
+          "severity_rationale",
+          "root_cause_hypothesis",
+          "disposition"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "exception_id": {
+            "type": "string",
+            "description": "Stable across the engagement. Feeds source_exception_id on the issue side."
+          },
+          "sample_id": {
+            "type": "string",
+            "description": "Sample item from the workpaper sample-level results."
+          },
+          "population_reference": {
+            "type": "string",
+            "description": "Stratum or segment label if stratified."
+          },
+          "criterion_source": {
+            "type": "string",
+            "description": "Rule, principle, policy section, or methodology with section reference, cited by file path into references/source-anchors.md or loaded overlays."
+          },
+          "condition": {
+            "type": "string",
+            "description": "Dated, scoped, observable state — what the test actually saw. Specific. Not a conclusion."
+          },
+          "classification": {
+            "type": "string",
+            "enum": [
+              "control-failure",
+              "design-gap",
+              "evidence-gap",
+              "scope-disagreement",
+              "data-integrity",
+              "anomaly"
+            ]
+          },
+          "severity": {
+            "type": "string",
+            "enum": ["low", "medium", "high", "critical"]
+          },
+          "severity_rationale": {
+            "type": "string",
+            "description": "Frequency, customer impact, regulatory exposure, materiality against firm thresholds, compensating controls."
+          },
+          "root_cause_hypothesis": {
+            "type": "object",
+            "required": ["category", "description"],
+            "additionalProperties": false,
+            "properties": {
+              "category": {
+                "type": "string",
+                "enum": ["people", "process", "technology", "data", "governance"]
+              },
+              "description": {
+                "type": "string",
+                "description": "Specific control attribute that failed; 'root cause analysis pending' if genuinely unknown."
+              }
+            }
+          },
+          "repeat_issue": {
+            "type": "boolean",
+            "default": false
+          },
+          "prior_issue_id": {
+            "type": ["string", "null"],
+            "description": "Issue log ID of the prior open or closed issue when repeat_issue is true."
+          },
+          "disposition": {
+            "type": "string",
+            "enum": [
+              "elevated-to-issue",
+              "closed-at-exception",
+              "re-test-required",
+              "expanded-sample-required"
+            ]
+          },
+          "disposition_rationale": {
+            "type": "string",
+            "description": "Why this disposition. For closed-at-exception, the supplemental evidence reviewed. For re-test or expanded-sample, the criteria for what closes it."
+          },
+          "issue_handoff": {
+            "type": "object",
+            "description": "Populated when disposition is elevated-to-issue. Bridge into issue-writeup; that skill keys off source_exception_id and consumes these fields without re-discovery.",
+            "required": ["criterion", "condition", "cause", "effect", "recommendation_seed"],
+            "additionalProperties": false,
+            "properties": {
+              "criterion": { "type": "string" },
+              "condition": { "type": "string" },
+              "cause": { "type": "string" },
+              "effect": {
+                "type": "string",
+                "description": "Impact with unit and time window — financial, customer, regulatory, operational, reputational."
+              },
+              "recommendation_seed": {
+                "type": "string",
+                "description": "Declarative remediation direction; the issue writer refines into the recommendation field."
+              },
+              "rollup_grouping": {
+                "type": "string",
+                "description": "Issue rollup label when multiple exceptions roll up into a single issue."
+              }
+            }
+          },
+          "evidence_gap_flags": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "[evidence needed] markers carried into the engagement issue log."
+          }
+        }
+      }
+    },
+    "aggregation": {
+      "type": "object",
+      "required": ["deviation_rate_observed"],
+      "additionalProperties": false,
+      "properties": {
+        "deviation_rate_observed": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "tolerable_deviation_rate": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "From the test plan. If unset on the test plan, that is a test-plan defect — flag back, do not invent here."
+        },
+        "anomaly_or_systemic": {
+          "type": "string",
+          "enum": ["systemic", "anomaly"],
+          "description": "Default systemic; downgrade to anomaly only with positive evidence the deviation does not recur."
+        },
+        "projection_commentary": {
+          "type": "string",
+          "description": "Concentration in a particular segment, channel, region, process step. Sample-design implications."
+        },
+        "stratum_breakdown": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["stratum_label", "sample_size", "deviations_observed"],
+            "additionalProperties": false,
+            "properties": {
+              "stratum_label": { "type": "string" },
+              "sample_size": { "type": "integer", "minimum": 0 },
+              "deviations_observed": { "type": "integer", "minimum": 0 },
+              "deviation_rate": { "type": "number", "minimum": 0, "maximum": 1 },
+              "tolerable": { "type": "number", "minimum": 0, "maximum": 1 },
+              "notes": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+    "disposition_summary": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["classification", "severity", "count"],
+        "additionalProperties": false,
+        "properties": {
+          "classification": {
+            "type": "string",
+            "enum": [
+              "control-failure",
+              "design-gap",
+              "evidence-gap",
+              "scope-disagreement",
+              "data-integrity",
+              "anomaly"
+            ]
+          },
+          "severity": {
+            "type": "string",
+            "enum": ["low", "medium", "high", "critical"]
+          },
+          "count": { "type": "integer", "minimum": 0 },
+          "elevated": { "type": "integer", "minimum": 0 },
+          "closed_at_exception": { "type": "integer", "minimum": 0 },
+          "re_test_required": { "type": "integer", "minimum": 0 },
+          "expanded_sample_required": { "type": "integer", "minimum": 0 }
+        }
+      }
+    },
+    "reviewer_questions": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Items the preparer wants the named reviewer to consider before sign-off. A question the preparer answers themselves is not a reviewer question."
+    },
+    "limitations_and_reliance": {
+      "type": "string",
+      "description": "What this register does not classify; reliance on prior testing or vendor SOC reliance carried in from the workpaper; source posture limits."
+    },
+    "confidence_label": {
+      "type": "string",
+      "enum": ["high", "medium", "low", "unknown"]
+    },
+    "human_review_required": {
+      "type": "boolean",
+      "const": true,
+      "description": "Always true. Severity assignment and disposition carry human review."
+    }
+  }
+}

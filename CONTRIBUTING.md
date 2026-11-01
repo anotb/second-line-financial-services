@@ -2,10 +2,10 @@
 
 Thanks for thinking about contributing. The repo is set up so a senior practitioner can drop in a new skill, sector overlay, or example without too much ceremony. See [ROADMAP.md](ROADMAP.md) for the planned shape of upcoming work.
 
-## Add a new capability skill
+## Add a new skill
 
-1. Create `plugins/capability-plugins/<plugin>/skills/<skill-name>/`.
-2. Add `SKILL.md` with frontmatter (`name`, `description`, optional `argument-hint`). Description shape is summary + `Best for:` + `Not the right tool when:`. No `Anchored to:` line.
+1. Create `plugins/second-line-financial-services/skills/<skill-name>/`, and add it to the skills table in the plugin README.
+2. Add `SKILL.md` with frontmatter (`name`, `description`, optional `argument-hint`). Keep `description` to 120 characters or fewer, with the key use case first. Put `Best for:` and `Not the right tool when:` in a `## When to use` section. No `Anchored to:` line.
 3. Add `references/source-anchors.md` with named, dated regulatory and standards citations. Public sources only.
 4. Add `templates/default-output.md` for the artifact shape.
 5. Add `references/sector-overlays/<sector>.md` for any sector that adds material nuance, and `references/cross-cutting/<topic>.md` (cyber, privacy, conduct, climate) where the work touches it.
@@ -15,7 +15,7 @@ Thanks for thinking about contributing. The repo is set up so a senior practitio
 
 ## Add a new sector overlay
 
-Sector flavor for an existing capability skill goes inside that skill at `references/sector-overlays/<sector>.md`. Sector plugins ship sector-unique skills only; do not duplicate a capability skill into a sector plugin.
+Sector flavor for an existing capability skill goes inside that skill at `references/sector-overlays/<sector>.md`. Sector skills cover sector-unique work only; do not duplicate a capability skill into a sector plugin.
 
 ## Standalone agent plugins
 

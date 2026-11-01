@@ -1,0 +1,128 @@
+---
+name: rule-to-obligation-extraction
+description: "Break new regulatory rule text into atomic obligations for a compliance register."
+argument-hint: "[discrete piece of new rule text: regulator, instrument type, citation]"
+---
+
+# Rule-to-obligation extraction
+
+A new final rule, supervisory letter, circular, bulletin, FIL, industry letter, advisory, adopting release, or model law arrives. Before any firm-side mapping happens, somebody has to read the operative text and produce the atomic obligation list it imposes. That is what this skill does. One source instrument in, one obligation register out, one row per atomic obligation, each row pinned to the source by section, paragraph, and subsection. The output is the input to `obligation-mapping`, which then overlays firm-specific control objectives, evidence systems, and named owners. The chain reads cleanly: extract first (regulator-side, firm-agnostic, portable across firms), then map (firm-side, firm-specific overlay).
+
+The boundary is sharp. This skill works on a discrete piece of net-new rule text from a named regulator. It does not work on firm policy. It does not work on vendor contracts. It does not work on exam request lists. It does not name a firm-specific control owner; it names the regulator-defined actor (board, senior management, CISO, BSA officer, third-party-risk function, third party itself). It does not name a firm-specific evidence system; it names the evidence shape the rule expects (board minute, attestation, log, periodic report, policy artifact, training roster). Crossing the boundary makes the output non-portable and produces drift between this register and the firm-side register that obligation-mapping owns.
+
+The output is a register in `templates/default-output.md` shape and a structured record per `schemas/rule-to-obligation-extraction.schema.json`. It is a draft until a named reviewer (legal, compliance, or the regulatory-change lead) attests.
+
+## When to use
+
+Decomposes a discrete piece of net-new regulatory rule text into atomic obligations. Input is a named regulator-issued instrument: a Federal Register final rule or adopting release, a CFR codified section, an OCC bulletin, an FRB SR letter, an FDIC FIL, a CFPB circular or bulletin, an NCUA letter to credit unions, an NYDFS industry letter, an EU regulation or implementing technical standard, an FCA handbook chapter, a NAIC model law, a FinCEN advisory, or a published consent order whose remediation requirements the firm should also satisfy. Output is the atomic obligation list as a draft register: each row pinned to a paragraph or subsection, naming the action verb, the party obligated, the condition, the deadline, the exception, and the related obligations. Firm-agnostic and portable across firms; firm-side mapping happens in the next step.
+
+Best for:
+- A new final rule or adopting release has just published in the Federal Register and the firm needs the atomic obligation list before the regulatory-change committee meets.
+- A supervisory letter, FIL, OCC bulletin, CFPB circular, or NYDFS industry letter has landed and the obligation deltas need extracting against the prior cycle.
+- A published consent order describes remediation steps the firm should treat as obligations even though the firm is not the named defendant.
+- An EU regulation or technical standard has entered into force and the firm needs the article-by-article obligation list before the implementation committee scopes work.
+
+Not the right tool when:
+- The source is a firm policy, vendor contract, exam-request list, board minute, or any document other than a regulator-issued rule or guidance instrument; use `obligation-mapping` (it consumes any source and overlays firm context).
+- The output needed is firm-specific control objectives, named control owners, evidence systems-of-record, and policy mapping; that is `obligation-mapping`. This skill stops at the regulator-side obligation; the next skill in the chain overlays firm context.
+- Firm impact has not been scoped yet and the question is whether the rule applies at all; run `regulatory-impact-assessment` first.
+- The question is the delta between the firm's existing policy text and the new rule; run `policy-diff` after this skill produces the obligation list.
+- The work is sequencing remediation milestones across functions; run `implementation-plan` after this skill.
+
+## Ask first
+
+Settle a few facts before drafting. Most extractions answer them in the first conversation; if not, default and flag.
+
+- **Which regulator, which instrument, which citation.** "The new SEC cyber rule" is too loose; "SEC final rule on Cybersecurity Risk Management, Strategy, Governance, and Incident Disclosure (88 FR 51896, July 26 2023), codified at 17 CFR 229.106 and 17 CFR 249.308 with Form 8-K Item 1.05" is the kind of input the register can be honest against. The instrument type matters because it sets the operative-text convention: a Federal Register final rule has a preamble and operative text and only the operative text is binding; an OCC bulletin is interpretive guidance; a CFPB circular is the Bureau's stated interpretation of existing law; an EU regulation has recitals (interpretive) and articles (binding); a NAIC model law is not law until a state adopts it.
+- **What is the publication date, the effective date, and the compliance date.** These are different and the rule is the only source for which one applies to which obligation. Federal Register convention is to publish the rule on the publication date, set an effective date (often 60 days after publication), and set one or more compliance dates (often staged by tier or by topic). Capture all three; the obligation row pins to whichever date the rule attaches to that obligation.
+- **What is the source posture for this extraction.** Public-only is the default for net-new rule text; the rule itself is public. The register can be portable across firms when the source posture is public-only. Firm-policy posture is not relevant to this skill; that posture lives downstream in obligation-mapping.
+- **What is the boundary against the firm.** This skill produces a firm-agnostic register. The firm's risk taxonomy, control library, named owners, system-of-record paths, and review machinery do not belong in any row. If those facts are needed, the work is in obligation-mapping, not here.
+
+When an `scope` record is supplied, the skill consumes it for the source posture and the sector and cross-cutting overlay set. Otherwise it asks the four questions and defaults to public-only posture if the practitioner declines. The register notes when scope was not formalised.
+
+## How the register gets built
+
+The register has the same spine across instruments. The order below is the spine the senior practitioner walks; in practice, rows surface in whatever order the rule reads.
+
+The frame opens with **source identification**. Regulator (named: SEC, CFPB, OCC, FRB, FDIC, FinCEN, NCUA, NYDFS, FCA, ESMA, EBA, EIOPA, NAIC). Regulator office where it matters (SEC Division of Corporation Finance, CFPB Office of Markets, OCC Office of the Comptroller). Instrument type from the enum (`final-rule`, `interim-final-rule`, `proposed-rule`, `adopting-release`, `supervisory-letter`, `bulletin`, `circular`, `fil`, `letter-to-credit-unions`, `industry-letter`, `eu-regulation`, `eu-directive`, `eu-rts-its`, `fca-handbook-chapter`, `naic-model-law`, `advisory`, `consent-order-as-obligation-source`). Full citation: Federal Register volume and page (`__ FR __`); CFR title-part-section where codified (`12 CFR 1002.107`); EU OJ reference (`Regulation (EU) 2022/2554, OJ L 333/1`); FCA handbook block (`SYSC 6.1.1R`); state code where applicable. Publication date. Effective date. Compliance date or dates with phase-in stages. Transition period framing. Pointer to the operative URL (Federal Register, EUR-Lex, FCA handbook, regulator publication page).
+
+The body is **atomic obligation rows**. Each row carries the named columns:
+
+- **Obligation ID.** Stable identifier scoped to the extraction. Downstream skills (`obligation-mapping`, `policy-diff`, `implementation-plan`) key off it.
+- **Source pin.** Section, paragraph, sentence-or-subsection within the operative text. For a CFR rule, that is the codified subsection (`17 CFR 229.106(b)(1)`). For a Federal Register adopting release, the preamble is interpretive only; the codified section is the binding pin. For an EU regulation, the article and paragraph (`Article 17(1)(a)`); recitals carry context but do not anchor obligations. For an FCA sourcebook chapter, the rule label (`SYSC 6.1.1R` carries `R` for binding rule; `G` for guidance). For a supervisory letter, the section reference inside the letter (`SR 11-7 §IV.A`; `OCC Bulletin 2013-29 §III`). The pin is mandatory; a bare URL is not a pin. Where the section is genuinely unknown, the row carries `[verify section]` rather than fabricated detail.
+- **Action verb.** The operative verb the rule uses, preserved. `shall` becomes must in the requirement summary; `should` becomes should; `is required to` becomes must; `may` is permissive and rarely belongs in an obligation row at all (capture it as a permission note if it conditions another obligation).
+- **Party obligated.** The actor the rule names: registrant, covered institution, board, senior management, CISO, BSA officer, third-party-risk function, third party itself, individual associated person, broker-dealer, investment adviser, fund, swap dealer, futures commission merchant, money services business, depository institution, insurer, ICT third-party service provider (DORA term), data controller, data processor. Use the regulator's term verbatim where the rule defines it; capture the defined term with its citation in the defined-terms section.
+- **Requirement statement.** One sentence stating what specifically the party obligated must do, on what condition, by when. Preserves the operative verb and the operative object. "Firm must do CDD" is not a requirement statement; "the bank must obtain and verify the identity of each beneficial owner of a legal-entity customer at the time the customer opens a new account" is. If the rule paragraph says "the registrant shall (i) document the cybersecurity risk management process, (ii) describe the board's oversight, and (iii) describe management's role," that is three rows, not one.
+- **Condition or scope trigger.** What event or threshold makes the obligation fire. Examples: a covered cyber incident is determined material (SEC 8-K Item 1.05); a covered institution exceeds 100 covered originations in each of the two preceding calendar years (1071 tier 1); a notification incident occurs as defined under 12 CFR Part 53; a beneficial-ownership change at a legal-entity customer; an ICT third-party service provider is designated critical (DORA Article 31).
+- **Deadline.** The timing the rule attaches. Calendar deadline (an effective date; a tiered compliance date); event-relative deadline ("within 4 business days of the materiality determination" — SEC Item 1.05; "no later than 36 hours after the determination of a notification incident" — 12 CFR Part 53; "as soon as possible and not later than 72 hours" — NYDFS Part 500.17(a)). Absent a deadline in the rule, the row says so explicitly; do not infer a deadline.
+- **Exception.** Carve-outs, safe harbors, transition relief, exemptions. Examples: SEC Item 1.05 has the Attorney General national-security delay; 1071 has tier-by-tier deferred-effective-date provisions; the 36-hour bank notification rule has business-day clarifications; NYDFS Part 500 has the limited exemption under §500.19. Capture the exception with its source pin; an exception without a pin is unverified.
+- **Frequency.** From the enum: `one_time` (do once, e.g., file an initial registration), `on_event` (do on the trigger, e.g., disclose a material cyber incident on Form 8-K), `periodic` (do on a cadence, e.g., annual board report; quarterly attestation), `continuous` (run as a standing program, e.g., maintain a written cybersecurity program). Frequency drives implementation-plan sequencing downstream.
+- **Action type.** From the enum: `prohibition` (the rule prohibits an act, e.g., a fair-lending disparate-treatment prohibition); `affirmative_act` (the rule requires an act, e.g., obtaining and verifying beneficial-owner identity); `recordkeeping` (the rule requires records to be retained for a period); `notice_or_disclosure` (the rule requires a notice to a customer, counterparty, or the public); `reporting` (the rule requires a report to the regulator); `governance` (the rule requires a governance structure or board action); `training` (the rule requires personnel training); `monitoring` (the rule requires ongoing surveillance, e.g., transaction monitoring under 31 CFR 1020.210). Action type drives evidence-shape expectations.
+- **Evidence expected.** What evidence shape proves operation. Named patterns only, not firm-specific systems: board minute, board-committee resolution, attestation, log, periodic report, policy artifact, training roster, model documentation, vendor file contents, system-of-record output, regulatory filing, customer notice. The evidence column gives obligation-mapping its starting point when the firm-side mapping happens; this skill stops at the shape.
+- **Cross-references.** Other obligation IDs the row depends on or interacts with. Common pattern: a recordkeeping obligation (`retain for 5 years`) cross-refs the affirmative-act obligation that produces the record. Cross-refs are populated as the register builds; they show up in the cross-references-and-dependencies section in the tail of the register.
+- **Defined terms used.** The regulator's defined terms invoked by the row. "Material," "covered institution," "senior management," "covered application," "small business," "ICT third-party service provider," "notification incident," "covered cyber incident." Defined terms change scope; capture each with its source pin in the defined-terms section.
+- **Confidence.** From the enum (`high`, `medium`, `low`, `unknown`). High where the operative text is unambiguous and the row reads directly off the codified section. Medium where the codified section requires interpretation, where the preamble is the only basis for a row that should also live in the codified section, or where the rule cross-references another rule with phrased ambiguity. Low where the practitioner is reading between the lines, where the section ref carries `[verify section]`, or where the rule itself is subject to litigation that may vacate or stay the obligation.
+- **Open questions.** Items requiring legal review before the row moves to `approved` status. Examples: whether the SEC Item 1.05 4-business-day clock starts at the materiality determination or the discovery of the underlying incident; whether a 1071 firewall design is sufficient when a single loan officer performs both intake and underwriting; whether DORA Article 28 critical-third-party designation applies to a particular cloud provider; whether a state has adopted a NAIC model law verbatim or with material amendments.
+- **Status.** From the enum (`draft`, `in-review`, `approved`, `not-applicable`, `open-question`). New rows enter at `draft` or `open-question`. `approved` is reserved for rows the named reviewer has signed off on; the skill does not set that value itself. `not-applicable` is rare in this skill (the rule applies to whoever the rule names; firm-specific applicability is downstream in obligation-mapping); use it only when the rule itself names a carve-out the entire firm sits in.
+
+The tail of the register surfaces what the body cannot. **Cross-references and dependencies** lists obligations that reference each other (recordkeeping rows tied to their operative-act rows; reporting rows tied to the underlying determination; governance rows tied to the substantive program rows). **Defined terms used** captures every defined term the body invokes, with its source pin and the rule's text-of-definition; this is the table the legal review reads first because defined terms change scope. **Effective-date and transition table** stages calendar dates and tier-based compliance with one row per stage; the implementation-plan skill reads this table directly. **Open extraction questions** surfaces the ambiguities flagged for legal review, grouped by reviewer (legal, compliance, function head). **Source trace** records confidence by section, with named anchors from `references/source-anchors.md`. **Reviewer attestation** names the reviewer; the skill stops at draft.
+
+## Sector and cross-cutting overlays
+
+Same row spine across sectors and cross-cutting topics; different source labels and different rigor expectations. Load only the overlays the scope flags. The overlays do not change the row structure; they change which sources the register is permitted to cite and which extraction patterns the practitioner expects to find.
+
+- `references/sector-overlays/banking.md` — banking-rule citation conventions (12 CFR Part X §Y; Title 12 sub-chapter structure); recurrent extraction patterns for OCC bulletins, FRB SR letters, FDIC FILs, NCUA letters; FFIEC inter-agency-statement parsing; the 36-hour bank notification rule (12 CFR Part 53; 12 CFR Part 225; 12 CFR Part 304) as a worked pattern.
+- `references/sector-overlays/insurance.md` — NAIC Model Law adoption tracking (model number plus state-by-state status); how to decompose a model law versus a state-adopted version; ORSA (Model 505) and Cybersecurity Insurance Data Security Model Law (Model 668) as worked patterns; market-conduct extraction conventions.
+- `references/sector-overlays/capital-markets.md` — SEC adopting-release structure (preamble vs operative text); Investment Advisers Act citation conventions (Section X of the Act; Rule 206(4)-Y); 1934 Act conventions; Form ADV instruction parsing; the marketing rule (Rule 206(4)-1) as a worked pattern; FINRA rulebook structure.
+- `references/sector-overlays/payments-fintech.md` — Reg E (12 CFR Part 1005), Reg Z (12 CFR Part 1026), Reg DD (12 CFR Part 1030), CFPB Section 1033 (open banking), CFPB Section 1071 (small business lending data) as worked patterns; money-transmitter state-by-state structure; how to decompose cross-jurisdiction obligations.
+
+Cross-cutting overlays load when the rule is anchored to a cross-cutting topic:
+
+- `references/cross-cutting/cyber.md` — extracting incident-reporting timing obligations: SEC Item 1.05 4-business-day clock; NYDFS Part 500.17 72-hour clock; 12 CFR Part 53 36-hour bank notification rule; DORA Article 19 reporting; FFIEC IT Handbook expectations.
+- `references/cross-cutting/privacy.md` — extracting notice, consent, and disposal obligations from Reg P (12 CFR Part 1016), GLBA Safeguards Rule (16 CFR Part 314), state privacy laws (CCPA/CPRA, VCDPA, CTDPA), and SEC Reg S-P amendments.
+- `references/cross-cutting/climate.md` — extracting from a climate-related disclosure rule (SEC climate disclosure rule history; CSRD; ISSB-aligned standards); load only when the rule under extraction is climate-anchored.
+- `references/cross-cutting/conduct.md` — extracting prohibition vs affirmative-act obligations from UDAAP-adjacent rules; CFPB UDAAP exam manual conventions; fair-lending rule structure (ECOA/Reg B, FHA, Reg C/HMDA).
+
+Loading an overlay the rule does not implicate adds noise without challenge value. Loading none when one applies is the more common failure mode.
+
+## Quality bar
+
+The source pin carries section, paragraph, and subsection where the rule provides them. A bare URL is not a pin. Where the section is genuinely unknown, the row carries `[verify section]` and the open-extraction-questions section picks it up; fabricating a section reference fails the quality bar.
+
+The operative text is the binding text. Federal Register preamble and SEC adopting-release commentary are interpretive; pin to the codified section, with a separate note for preamble context where it changes how the codified section reads. EU regulation recitals are interpretive; pin to the article. FCA handbook `G` paragraphs are guidance; `R` paragraphs are rules; pin accordingly.
+
+The requirement statement preserves substance. Paraphrasing away the operative verb or the operative object loses the obligation. Compressing multiple obligations into one is the most common defect; if a paragraph says "the institution shall (i) document, (ii) test annually, and (iii) report to the board," that is three rows with potentially three actors and three frequencies.
+
+Defined terms travel with their definitions and pins. A rule's defined term ("covered institution," "material," "senior management," "covered application," "ICT third-party service provider," "notification incident," "covered cyber incident") changes scope. The defined-terms section captures each term, the rule's text of definition, and the section pin.
+
+Transition and phase-in language is its own row when the rule stages compliance. An obligation with a 24-month phased applicability is a different obligation in month 1 than in month 25. Capture both states or note the phasing in the effective-date-and-transition table.
+
+The register is firm-agnostic. The actor is whoever the rule names. The evidence column is shape, not system. The owner is the regulator-defined party, not a firm-side role. Crossing into firm-specific control objectives, named owners, evidence systems-of-record, or policy mapping makes the register non-portable; that work belongs in obligation-mapping.
+
+Material claims cite a source from the source list. `[evidence needed]` flags items needing follow-up and routes to the open-extraction-questions section. The register is a draft until a named reviewer attests; the skill stops at draft.
+
+## Adaptation
+
+Audience drives shape: a regulatory-change-committee pre-read clusters open questions to the front; a policy-owner working file pulls cross-references forward; a downstream-handoff package sequences rows by section to match the rule's reading order. Sector and cross-cutting overlays load from the scope. Confidence labels track by row, not as a single overall label, because most extractions have high-confidence rows (codified-section anchors) and lower-confidence rows (preamble-only, contested interpretation) side by side.
+
+## Output
+
+Two artifacts: the register in `templates/default-output.md` shape, and the structured record per `schemas/rule-to-obligation-extraction.schema.json`. The named reviewer attests; the register is a draft until that step.
+
+Downstream consumers: `obligation-mapping` reads `obligations[*].obligation_id` and overlays firm-side control objectives, named owners, evidence systems, and policy mapping. `policy-diff` reads the register against the firm's existing policy text to surface deltas. `implementation-plan` reads the effective-date-and-transition table to sequence remediation milestones across functions. `regulatory-impact-assessment` cross-references the register when the impact assessment was the upstream skill that triggered the extraction. The schema is the cross-skill contract; additive changes only, never silent renames. Breaking changes ship as a versioned migration with downstream skills told in advance.
+
+## Pointers
+
+- `references/source-anchors.md` — citations and excerpts for the named anchors (Federal Register and CFR conventions; SEC and CFPB and OCC and FRB and FDIC and FinCEN and NCUA; EU regulation structure; FCA handbook; NAIC model laws; supervisory-letter formats).
+- `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md` — sector overlays loaded from scope.
+- `references/cross-cutting/{cyber,privacy,climate,conduct}.md` — cross-cutting overlays loaded from scope.
+- `templates/default-output.md` — register template.
+- `schemas/rule-to-obligation-extraction.schema.json` — structured-output contract.
+- `examples/` — SEC cybersecurity disclosure final rule (Item 1.05; Reg S-K Item 106) decomposed into atomic obligations; CFPB Section 1071 small-business-lending data rule (12 CFR 1002.107) decomposed into atomic obligations.
+- `TROUBLESHOOTING.md` — recurring defects in rule-to-obligation extractions.
+
+## Human review and AI disclosure
+
+Open the deliverable with this line, and remove it only after the review below: `AI-assisted draft. Requires review by a qualified person before use.`
+
+A qualified person with authority to change the output reviews it before it is delivered or relied on, and stays accountable for it. Where the output supports advice to an individual or a decision about an individual (credit, insurance underwriting, pricing or claims, employment, legal rights, or similar), that individual must be told AI was used to produce it. This skill does not make final decisions, file with a regulator, notify customers, execute transactions, or move money or other financial assets.

@@ -36,10 +36,9 @@ When the agents land, the marketplace manifest gets the six entries back and the
 
 ### Modular install: README persona recipes
 
-The plugin manifests already declare `risk-compliance-core` as a dependency, so installing any downstream plugin auto-pulls the foundation. The remaining work is on the README install section:
+The repo now ships one plugin, so there is one install line. Remaining work:
 
-- Replace the current single install block with Quick start (everything one-liner), Persona recipes (8 personas with copy-paste install blocks), and Layered install (core / capability / sector explanation).
-- Surface the "sector overlays inside capability skills are free" point so users don't double-install.
+- Add persona recipes to the README: which skills each of the 8 personas should start with.
 - Pure docs change.
 
 Agent-plugin dependency declarations land alongside the agent rebuild.

@@ -1,5 +1,18 @@
 # Changelog
 
+## 1.0.0 — 2026-10-31
+
+### One plugin
+
+The 12 plugins are merged into `plugins/second-line-financial-services/`, so there is one thing to install and one listing to maintain. All 68 skills keep their names. Installs of the earlier plugins need to switch to this one.
+
+- Shared `references/` and `schemas/` are merged: identical copies collapse, `risk-compliance-core`'s schema versions win, and differing references become one file with a section per group. Each old plugin README is now a guide under `references/groups/`.
+- Cross-references such as `risk-compliance-core/skills/issue-writeup` now name the skill, `issue-writeup`.
+
+### Short skill descriptions
+
+Claude Code's skill listing budget is 1% of the context window, and it drops descriptions that don't fit. With 68 skills averaging 2,000 characters, most would have been dropped and stopped triggering. Each `description` is now 110 characters or fewer, and the full text, including `Best for:` and `Not the right tool when:`, moved to a `## When to use` section in the skill body.
+
 ## 0.5.0 — 2026-10-31
 
 ### Directory readiness

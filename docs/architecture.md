@@ -3,8 +3,8 @@
 ## Layers
 
 1. Common references and schemas: public source map, policy-control library, review gates, templates, and shared JSON schemas.
-2. Capability plugins: horizontal second-line workflows that can be installed independently.
-3. Sector plugins: institution-specific overlays that tailor capability workflows to banking, insurance, asset management, capital markets, payments, and fintech.
+2. Capability skill groups: horizontal second-line workflows, all in one plugin.
+3. Sector skill groups: institution-specific skills and overlays that tailor capability workflows to banking, insurance, asset management, capital markets, payments, and fintech.
 4. Agent plugins (planned): self-contained end-to-end workflow agents with bundled skills and focused subagents. Not in the current release; see [ROADMAP.md](../ROADMAP.md).
 
 ## Managed Agent API cookbooks
