@@ -78,14 +78,16 @@ The non-negotiables: every material claim cites a source from the file, the sect
 
 ## Pointers
 
+`references/sector-overlays.md` and `references/cross-cutting.md` hold one section per sector or topic, and `examples.md` one per example. Find the heading and read only that section.
+
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
-- `references/sector-overlays/{banking,payments-fintech,capital-markets,insurance}.md` — sector overlays loaded per scope.
-- `references/cross-cutting/cyber.md` — cyber-typology lens for monitoring scenario coverage; loaded when the scope flags cyber or when the typology evidence is on file.
-- `references/cross-cutting/privacy.md` — privacy frame on the regulated personal data the monitoring stack consumes; loaded when the scope flags privacy and treated as default for any monitoring memo not at public-only source posture (NPI, FCRA-covered, third-party enrichment, vendor-derived, §314.4(f) service-provider data).
+- `references/sector-overlays.md` — sector overlays loaded per scope.
+- `references/cross-cutting.md#cyber` — cyber-typology lens for monitoring scenario coverage; loaded when the scope flags cyber or when the typology evidence is on file.
+- `references/cross-cutting.md#privacy` — privacy frame on the regulated personal data the monitoring stack consumes; loaded when the scope flags privacy and treated as default for any monitoring memo not at public-only source posture (NPI, FCRA-covered, third-party enrichment, vendor-derived, §314.4(f) service-provider data).
 - `references/firm-overlay.md` — firm-installed taxonomy, change-governance procedure, refresh-cycle policy, named systems and owners; consumed when present.
 - `templates/default-output.md` — content spec for the memo (named sections, structured tables for the evidence side).
-- `examples/` — annual second-line monitoring memo at a mid-size US bank; post-tuning review of a structuring-scenario threshold change at a regional bank.
-- `TROUBLESHOOTING.md` — recurring defects in monitoring-review work product.
+- `examples.md` — annual second-line monitoring memo at a mid-size US bank; post-tuning review of a structuring-scenario threshold change at a regional bank.
+- `examples.md#troubleshooting` — recurring defects in monitoring-review work product.
 
 ## Output
 

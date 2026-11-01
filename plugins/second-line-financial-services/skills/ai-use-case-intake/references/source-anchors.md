@@ -60,7 +60,7 @@ The skill cites these by file path. SKILL.md does not restate excerpts.
 - Citation: NYDFS Industry Letter, "Cybersecurity Risks Arising from Artificial Intelligence and Strategies to Combat Related Risks" (October 16, 2024), [verify section] on AI-related cyber threats and on the entity's own AI use.
 - Excerpt-paraphrase: Covered entities under 23 NYCRR Part 500 are expected to address AI-related cybersecurity risks in their cybersecurity program, including AI-enabled threats (deepfake-driven social engineering, AI-enhanced phishing) and risks from the entity's own use of AI (prompt injection, training-data poisoning, model extraction). Intake fields capturing AI-enabled threat surface and the entity's AI use feed the Part 500 risk-assessment chain.
 - Link: https://www.dfs.ny.gov/industry-guidance/industry-letters — Industry Letter October 2024 [verify section]
-- Notes: Cyber cross-cutting overlay anchor; cited from `references/cross-cutting/cyber.md`.
+- Notes: Cyber cross-cutting overlay anchor; cited from `references/cross-cutting.md#cyber`.
 
 ## Secondary anchors (sector and cross-cutting)
 

@@ -76,7 +76,7 @@ The skill cites these by file path. SKILL.md does not restate excerpts.
 - Citation: NYDFS Industry Letter, "Cybersecurity Risks Arising from Artificial Intelligence and Strategies to Combat Related Risks" (October 16, 2024), [verify section] on AI-related cyber threats.
 - Excerpt-paraphrase: Covered entities under 23 NYCRR Part 500 are expected to address AI-related cybersecurity risks in their cybersecurity program, including AI-enabled threats (deepfake-driven social engineering) and risks from the entity's own use of AI (prompt injection, training-data poisoning, model extraction). Tier-up factors apply at the time of the tiering decision; this is a current expectation, not a future one.
 - Link: https://www.dfs.ny.gov/industry-guidance/industry-letters — Industry Letter October 2024 [verify section]
-- Notes: Cyber cross-cutting overlay anchor; cited from `references/cross-cutting/cyber.md`.
+- Notes: Cyber cross-cutting overlay anchor; cited from `references/cross-cutting.md#cyber`.
 
 ### 11. CFPB Circular 2022-03 — Adverse action notification when using complex algorithms (withdrawn May 12, 2025; historical only)
 

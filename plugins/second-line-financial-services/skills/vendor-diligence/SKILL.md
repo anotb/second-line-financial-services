@@ -59,18 +59,20 @@ Holds across every pack regardless of vendor type, audience, or render format. E
 
 ## Adaptation
 
-Flexes by engagement. Pack depth and length scale to criticality and review type. Audience drives shape: a TPRM-forum pack reads short and operational; a risk-committee pack for a critical vendor reads longer with reviewer questions clustered for the forum; a fund-board pack reads differently again. Lead with the decision the audience must make. The sector overlay set drives which `references/sector-overlays/<sector>.md` is loaded; a dual-registrant or BaaS arrangement may load two. Cross-cutting overlay loading follows scope plus the rule that cyber and privacy default-on for AI vendors and for any vendor touching NPI, PHI, PCI, or important-business-service controls. Source posture (public-only, public-plus-firm-policy, public-plus-firm-policy-plus-system-of-record-evidence, connector-aware) drives the evidence ask. AI-vendor sub-fields differ by use-case category (foundation-model API, AI SaaS, embedded-AI feature, agentic system, RAG application, fine-tuned model, specialised classifier). Render format (Word, Excel, PowerPoint, Markdown) follows the workflow.
+Flexes by engagement. Pack depth and length scale to criticality and review type. Audience drives shape: a TPRM-forum pack reads short and operational; a risk-committee pack for a critical vendor reads longer with reviewer questions clustered for the forum; a fund-board pack reads differently again. Lead with the decision the audience must make. The sector overlay set drives which `references/sector-overlays.md#<sector>` is loaded; a dual-registrant or BaaS arrangement may load two. Cross-cutting overlay loading follows scope plus the rule that cyber and privacy default-on for AI vendors and for any vendor touching NPI, PHI, PCI, or important-business-service controls. Source posture (public-only, public-plus-firm-policy, public-plus-firm-policy-plus-system-of-record-evidence, connector-aware) drives the evidence ask. AI-vendor sub-fields differ by use-case category (foundation-model API, AI SaaS, embedded-AI feature, agentic system, RAG application, fine-tuned model, specialised classifier). Render format (Word, Excel, PowerPoint, Markdown) follows the workflow.
 
 ## Pointers
 
+`references/sector-overlays.md` and `references/cross-cutting.md` hold one section per sector or topic, and `examples.md` one per example. Find the heading and read only that section.
+
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
-- `references/sector-overlays/banking.md`, `insurance.md`, `capital-markets.md`, `payments-fintech.md` — sector-specific supervisory frame loaded per scope.
-- `references/cross-cutting/cyber.md`, `privacy.md` — cross-cutting flavour; default-on for AI vendors and for any vendor touching regulated data or IBS controls.
+- `references/sector-overlays.md#banking`, `references/sector-overlays.md#insurance`, `references/sector-overlays.md#capital-markets`, `references/sector-overlays.md#payments-fintech` — sector-specific supervisory frame loaded per scope.
+- `references/cross-cutting.md#cyber`, `references/cross-cutting.md#privacy` — cross-cutting flavour; default-on for AI vendors and for any vendor touching regulated data or IBS controls.
 - `references/firm-overlay.md` — firm-installed policy, taxonomy, decision forums and reviewer roles beyond the regulatory baseline; consumed when present.
 - `templates/default-output.md` — pack template.
 - `schemas/vendor-diligence.schema.json` — structured-output contract for downstream consumption.
-- `examples/` — cloud IaaS for a regional bank's core deposit and loan platform; foundation-model API for a P&C insurer's first-notice-of-loss triage.
-- `TROUBLESHOOTING.md` — recurring pitfalls (system-card-as-substitute, retention defaults, eval coverage, prompts-as-customer-data, the boundary with `llm-vendor-evidence-review`).
+- `examples.md` — cloud IaaS for a regional bank's core deposit and loan platform; foundation-model API for a P&C insurer's first-notice-of-loss triage.
+- `examples.md#troubleshooting` — recurring pitfalls (system-card-as-substitute, retention defaults, eval coverage, prompts-as-customer-data, the boundary with `llm-vendor-evidence-review`).
 
 The plugin-level shared references (`references/source-map.md`, `references/policy-control-library.md`, `references/review-gates.md`) sit at the plugin root and are consulted alongside the skill-level files.
 

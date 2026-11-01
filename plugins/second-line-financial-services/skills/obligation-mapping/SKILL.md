@@ -66,13 +66,13 @@ The tail of the register surfaces what the body cannot. The open-question summar
 
 The same row spine carries different source labels and different rigor expectations across sectors and across cross-cutting topics. Load only the overlays the scope flags. The overlays do not change the row structure; they change which sources the register is permitted to cite and which obligation patterns the practitioner expects to find.
 
-- `references/sector-overlays/banking.md` carries insider-lending and affiliate-transactions rules, large-bank heightened standards, FRB SR letters as obligation sources, and the BSA/AML manual structure for banking processes.
-- `references/sector-overlays/insurance.md` carries state-by-state insurance-code obligations (NAIC model laws as starting point), ORSA obligations, market-conduct exam manuals, and the federal-state interplay specific to insurance.
-- `references/sector-overlays/capital-markets.md` carries SEC adviser and broker-dealer rules, the FINRA rule book, SEC EXAMS priorities as scoping input, and the registered-fund rule set for fund-side work.
-- `references/sector-overlays/payments-fintech.md` carries Reg E / Reg Z / Reg DD obligations for consumer-payment products, OCC bank-fintech partnership expectations, CFPB open-banking obligations when applicable, and sponsor-bank allocation patterns.
-- `references/cross-cutting/cyber.md` loads when source is cyber-anchored (state cyber rules, SEC cyber rules, FFIEC IT, GLBA Safeguards security-program obligations).
-- `references/cross-cutting/privacy.md` loads when source is privacy-anchored (GLBA Privacy, state privacy laws, Reg P).
-- `references/cross-cutting/conduct.md` loads when source is conduct-anchored (CFPB UDAAP, fair-lending rules, complaint-handling expectations).
+- `references/sector-overlays.md#banking` carries insider-lending and affiliate-transactions rules, large-bank heightened standards, FRB SR letters as obligation sources, and the BSA/AML manual structure for banking processes.
+- `references/sector-overlays.md#insurance` carries state-by-state insurance-code obligations (NAIC model laws as starting point), ORSA obligations, market-conduct exam manuals, and the federal-state interplay specific to insurance.
+- `references/sector-overlays.md#capital-markets` carries SEC adviser and broker-dealer rules, the FINRA rule book, SEC EXAMS priorities as scoping input, and the registered-fund rule set for fund-side work.
+- `references/sector-overlays.md#payments-fintech` carries Reg E / Reg Z / Reg DD obligations for consumer-payment products, OCC bank-fintech partnership expectations, CFPB open-banking obligations when applicable, and sponsor-bank allocation patterns.
+- `references/cross-cutting.md#cyber` loads when source is cyber-anchored (state cyber rules, SEC cyber rules, FFIEC IT, GLBA Safeguards security-program obligations).
+- `references/cross-cutting.md#privacy` loads when source is privacy-anchored (GLBA Privacy, state privacy laws, Reg P).
+- `references/cross-cutting.md#conduct` loads when source is conduct-anchored (CFPB UDAAP, fair-lending rules, complaint-handling expectations).
 
 Granular citations (CFR sections, SR letter numbers, NAIC model numbers) live in `references/source-anchors.md` and the overlay files. Firm policy or taxonomy lives in `references/firm-overlay.md` (consumed when present) and never in the register directly. The register carries the obligation source from the regulator and the firm's labelling from the overlay as distinct columns.
 
@@ -102,14 +102,16 @@ The register in `templates/default-output.md` shape and the structured record pe
 
 ## Pointers
 
+`references/sector-overlays.md` and `references/cross-cutting.md` hold one section per sector or topic, and `examples.md` one per example. Find the heading and read only that section.
+
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
-- `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md` — sector overlays loaded from scope.
-- `references/cross-cutting/{cyber,privacy,conduct}.md` — cross-cutting overlays loaded from scope.
+- `references/sector-overlays.md` — sector overlays loaded from scope.
+- `references/cross-cutting.md` — cross-cutting overlays loaded from scope.
 - `references/firm-overlay.md` — firm-installed taxonomy, named role labels, system-of-record names, internal policy pointers, decision forums and sign-off conditions beyond the regulatory baseline; consumed when present.
 - `templates/default-output.md` — register template.
 - `schemas/obligation-register.schema.json` — structured-output contract.
-- `examples/` — CFPB Section 1071 obligation register for a community bank; FFIEC BSA/AML CDD obligation register for a payments fintech bank-sponsor partnership.
-- `TROUBLESHOOTING.md` — recurring defects in obligation registers.
+- `examples.md` — CFPB Section 1071 obligation register for a community bank; FFIEC BSA/AML CDD obligation register for a payments fintech bank-sponsor partnership.
+- `examples.md#troubleshooting` — recurring defects in obligation registers.
 
 ## Human review and AI disclosure
 

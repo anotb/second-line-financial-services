@@ -86,13 +86,13 @@ Required documentation per stage is the row that audit and counsel review for co
 
 ### Climate
 
-When the scope flags climate, the climate cross-cutting overlay (`references/cross-cutting/climate.md`) drives the additional content. The disclosure machinery is shared: the same DCP, the same disclosure committee, the same 8-K mechanic, and the same materiality lens handle climate-related material events and the 10-K climate disclosure. The overlay covers what the SEC Climate Disclosure Rule adds (Item 1500-series of Regulation S-K, financial-statement effects under Article 14 of Regulation S-X) without re-anchoring full climate sources.
+When the scope flags climate, the climate cross-cutting overlay (`references/cross-cutting.md#climate`) drives the additional content. The disclosure machinery is shared: the same DCP, the same disclosure committee, the same 8-K mechanic, and the same materiality lens handle climate-related material events and the 10-K climate disclosure. The overlay covers what the SEC Climate Disclosure Rule adds (Item 1500-series of Regulation S-K, financial-statement effects under Article 14 of Regulation S-X) without re-anchoring full climate sources.
 
 Default posture on the SEC climate rule: never assert current effectiveness without checking the SEC's posture as of the report date. The rule was finalized March 2024, voluntarily stayed by the SEC pending Eighth Circuit consolidated litigation, and current status remains unsettled. Cite the rule with `[verify current effectiveness]` and lean on TCFD for substantive content where the climate overlay applies.
 
 ### Privacy
 
-When customer financial information is implicated, the privacy cross-cutting overlay (`references/cross-cutting/privacy.md`) loads. Privacy notification clocks (GLBA Safeguards Rule, state breach-notification, SEC Reg S-P 30-day customer notice for in-scope entities, HIPAA Breach Notification Rule for in-scope entities) surface in the parallel-clocks table; depth lives in the privacy overlay. Treating privacy clocks as out-of-scope because the work is SEC-anchored is the failure mode.
+When customer financial information is implicated, the privacy cross-cutting overlay (`references/cross-cutting.md#privacy`) loads. Privacy notification clocks (GLBA Safeguards Rule, state breach-notification, SEC Reg S-P 30-day customer notice for in-scope entities, HIPAA Breach Notification Rule for in-scope entities) surface in the parallel-clocks table; depth lives in the privacy overlay. Treating privacy clocks as out-of-scope because the work is SEC-anchored is the failure mode.
 
 ### Sector overlays
 
@@ -131,16 +131,18 @@ Downstream consumers: the structured objects feed the firm's disclosure-committe
 
 ## Pointers
 
+`references/sector-overlays.md` and `references/cross-cutting.md` hold one section per sector or topic, and `examples.md` one per example. Find the heading and read only that section.
+
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
-- `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md` — sector overlays loaded from scope.
-- `references/cross-cutting/{cyber,climate,privacy}.md` — cross-cutting overlays. `cyber.md` is the core anchor set for this skill kept in references so SKILL.md remains a workflow rather than a regulatory primer; `climate.md` is required because the disclosure machinery overlaps; `privacy.md` loads when customer financial information is implicated.
+- `references/sector-overlays.md` — sector overlays loaded from scope.
+- `references/cross-cutting.md` — cross-cutting overlays. `references/cross-cutting.md#cyber` is the core anchor set for this skill kept in references so SKILL.md remains a workflow rather than a regulatory primer; `references/cross-cutting.md#climate` is required because the disclosure machinery overlaps; `references/cross-cutting.md#privacy` loads when customer financial information is implicated.
 - `references/firm-overlay.md` — firm-installed DCP, board-committee structure, disclosure policy, named officers (consumed when present).
 - `templates/default-output.md` — pack template with the named sections for all three artifacts.
 - `schemas/cyber-incident-disclosure.schema.json` — Artifact A structured-output contract.
 - `schemas/item-106-disclosure.schema.json` — Artifact B structured-output contract.
 - `schemas/dcp-readiness.schema.json` — Artifact C structured-output contract.
-- `examples/` — anonymised public-source-derived scenarios.
-- `TROUBLESHOOTING.md` — recurring defects.
+- `examples.md` — anonymised public-source-derived scenarios.
+- `examples.md#troubleshooting` — recurring defects.
 
 ## Human review and AI disclosure
 

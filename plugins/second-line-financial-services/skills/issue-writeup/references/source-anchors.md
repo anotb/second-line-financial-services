@@ -80,7 +80,7 @@ Link: https://www.coso.org/internal-control
 
 ## Sector-specific and cross-cutting anchors
 
-The sector-overlay files (`references/sector-overlays/<sector>.md`) enumerate sector-specific finding-format anchors (NAIC examination findings, SEC EXAMS deficiency letters, FINRA examination findings, CFPB supervisory recommendations, OCC fintech bank-partnership conventions, NYDFS Part 500 finding patterns where sector-tied). The cross-cutting overlays (`references/cross-cutting/<topic>.md`) enumerate cross-cutting anchors (NYDFS Part 500 cyber findings, SEC Reg S-K Item 106 disclosure-process findings, Reg S-P incident-notification findings, CFPB UDAAP customer-harm findings). This file is the foundational set; the overlays add what the scope requires.
+The sector-overlay files (`references/sector-overlays.md#<sector>`) enumerate sector-specific finding-format anchors (NAIC examination findings, SEC EXAMS deficiency letters, FINRA examination findings, CFPB supervisory recommendations, OCC fintech bank-partnership conventions, NYDFS Part 500 finding patterns where sector-tied). The cross-cutting overlays (`references/cross-cutting.md#<topic>`) enumerate cross-cutting anchors (NYDFS Part 500 cyber findings, SEC Reg S-K Item 106 disclosure-process findings, Reg S-P incident-notification findings, CFPB UDAAP customer-harm findings). This file is the foundational set; the overlays add what the scope requires.
 
 ## Risk-data, model-risk, third-party, and AI overlays (referenced when in scope)
 

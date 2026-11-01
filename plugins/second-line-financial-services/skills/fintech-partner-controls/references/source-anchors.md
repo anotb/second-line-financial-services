@@ -1,6 +1,6 @@
 # Source anchors — fintech-partner-controls
 
-Named, dated regulatory sources this skill anchors to. SKILL.md cites this file by path and does not restate excerpts. Sector flavour for payments-fintech sits in `sector-overlays/payments-fintech.md`; cross-cutting flavour sits in `cross-cutting/<topic>.md`.
+Named, dated regulatory sources this skill anchors to. SKILL.md cites this file by path and does not restate excerpts. Sector flavour for payments-fintech sits in `sector-overlays.md#payments-fintech`; cross-cutting flavour sits in `cross-cutting.md#<topic>`.
 
 NACHA Operating Rules and the card-network rulebooks (Visa Core Rules, Visa Product and Service Rules, Mastercard Rules) are paywalled. Citations to those sources are conceptual; the disclaimer "current edition; specific sections to be confirmed against the firm's licensed copy" applies wherever they appear in an artifact.
 

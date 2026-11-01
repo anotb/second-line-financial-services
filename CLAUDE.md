@@ -9,6 +9,7 @@ This repository contains one Claude plugin for second-line financial-services wo
 - Do not recreate `plugins/vertical-plugins`.
 - Prefer `skills/` over legacy `commands/` for new plugin actions.
 - Keep each skill `description` to 120 characters or fewer, so all skills fit Claude Code's listing budget. Longer guidance goes in the skill's `## When to use` section.
+- Keep the plugin at 512 files or fewer, which `scripts/check.py` enforces, because the directory holds larger plugins for review. Add overlays and examples as sections in the skill's existing files, not as new files.
 - Raise `version` in `plugin.json` with every release, and don't reference files outside the plugin folder.
 - After editing source skills, run `python3 scripts/check.py` and `python3 scripts/check-skill-content.py`.
 - Keep examples public-source-derived and anonymous.

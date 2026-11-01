@@ -69,20 +69,22 @@ The committee record block is read by examiners for evidence the committee actua
 
 For the **fund-adviser variant**, the surveillance produces an additional fund-by-fund attestation block feeding the §15(c) board materials. Per fund: the brokerage and best-execution attestation summary, the §17(e) reasonable-and-fair compensation evidence pinned (with the comparable-rate peer-set reference and the §17(e)(2) board-procedure determination on file), the §28(e) soft-dollar review summary (with the eligibility memos and the mixed-use allocation methodology pinned), and the recommendations escalated to the fund board. The fund's CCO and the fund-board independent counsel read this block in the §15(c) materials; the adviser's CCO is not the board's CCO and the escalation routing into the board materials runs separately from the adviser-internal escalation.
 
-The cross-cutting **conduct overlay** (`references/cross-cutting/conduct.md`) is required-on for every engagement under this skill — the duty itself is a conduct duty, the conflict-as-input framing the overlay carries is the doctrinal anchor, and the committee-culture read is the overlay's read of the committee_pack block. The cross-cutting cyber overlay (`references/cross-cutting/cyber.md`) loads when the scope flags execution-quality dependencies on venue connectivity or market-data integrity; for Reg SCI-covered entities the surveillance touches Reg SCI events that affected execution quality during the period.
+The cross-cutting **conduct overlay** (`references/cross-cutting.md#conduct`) is required-on for every engagement under this skill — the duty itself is a conduct duty, the conflict-as-input framing the overlay carries is the doctrinal anchor, and the committee-culture read is the overlay's read of the committee_pack block. The cross-cutting cyber overlay (`references/cross-cutting.md#cyber`) loads when the scope flags execution-quality dependencies on venue connectivity or market-data integrity; for Reg SCI-covered entities the surveillance touches Reg SCI events that affected execution quality during the period.
 
 The artifact closes with **open items and named follow-ups** (items needing legal, portfolio-management, or trading-desk input before the next cycle), the **source citations**, and the **recommended disposition** (`accepted`, `accept-with-conditions`, `re-baseline-after-remediation`, `escalate`). Disposition is a draft recommendation; the named approver — best-ex committee chair, CCO, fund-board CCO for the fund variant — decides. Cite a source for every material claim and mark unsupported items `[evidence needed]`. The skill does not invent thresholds, dates, owners, or evidence; surveillance findings are only as strong as the evidence the workbook can pin.
 
 ## Pointers
 
+`references/sector-overlays.md` and `references/cross-cutting.md` hold one section per sector or topic, and `examples.md` one per example. Find the heading and read only that section.
+
 - `references/source-anchors.md` — citations and excerpts for the named anchors (IA Act §206, IA-5248, ICA §17(e), Exchange Act §28(e) and the 2006 interpretive release, FINRA Rule 5310 with Supplementary Material .01-.09, FINRA Rule 3110, SEC Rules 605 and 606, SEC Release 34-99679, FINRA Regulatory Notice 15-46, current SEC EXAMS priorities and Risk Alerts, Form N-CEN and N-CSR, ICA §15(c), Rule 38a-1).
-- `references/sector-overlays/capital-markets.md` — sector overlay carrying the registration-class flavour (IA / BD / dual / fund adviser), the asset-class flavour, the conflict-as-input framing, the cadence and committee-posture variants. This skill is sector-unique; this is the only sector overlay.
-- `references/cross-cutting/conduct.md` — fiduciary duty / best-interest overlay carrying the conflict-as-input framing, the Reg BI / Form CRS interaction for BD-side recommended-transaction surveillance, and the committee-culture read.
+- `references/sector-overlays.md#capital-markets` — sector overlay carrying the registration-class flavour (IA / BD / dual / fund adviser), the asset-class flavour, the conflict-as-input framing, the cadence and committee-posture variants. This skill is sector-unique; this is the only sector overlay.
+- `references/cross-cutting.md#conduct` — fiduciary duty / best-interest overlay carrying the conflict-as-input framing, the Reg BI / Form CRS interaction for BD-side recommended-transaction surveillance, and the committee-culture read.
 - `references/firm-overlay.md` — firm-installed brokerage allocation methodology, custodian relationships, soft-dollar provider list, PFOF rate schedule, committee membership, KRI thresholds, appetite levels; consumed when present.
 - `templates/default-output.md` — content spec for the workbook (eight sheets) and the memo (eleven sections); the deliverables are an Excel workbook and a Word memo.
 - `schemas/best-execution-review.schema.json` — structured-output contract for the trade-exception, conflict, finding, and KRI records, consumed by the next quarter's surveillance and by ongoing trend tracking.
-- `examples/` — anonymised public-source-derived scenarios.
-- `TROUBLESHOOTING.md` — recurring pitfalls.
+- `examples.md` — anonymised public-source-derived scenarios.
+- `examples.md#troubleshooting` — recurring pitfalls.
 
 The plugin-level shared references (`references/source-map.md`, `references/policy-control-library.md`, `references/review-gates.md`) sit at the plugin root and are consulted alongside the skill-level files.
 

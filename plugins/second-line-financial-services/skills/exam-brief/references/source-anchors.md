@@ -1,6 +1,6 @@
 # Source anchors — exam-brief
 
-The named, dated regulatory sources this skill anchors to for regulator-engagement convention. Sector-specific exam-readiness anchors live in the corresponding overlay files in `references/sector-overlays/` and in the sibling sector-plugin skills (`banking-supervision-readiness`, `adviser-exam-readiness`). SKILL.md cites this file by path and does not restate excerpts.
+The named, dated regulatory sources this skill anchors to for regulator-engagement convention. Sector-specific exam-readiness anchors live in the corresponding overlay files in `references/sector-overlays.md` and in the sibling sector-plugin skills (`banking-supervision-readiness`, `adviser-exam-readiness`). SKILL.md cites this file by path and does not restate excerpts.
 
 ## Federal banking supervision — engagement convention
 

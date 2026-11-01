@@ -105,7 +105,7 @@ The overlay is mandatory once triggered. Missing the AI handling on themes where
 
 ### Sector overlays
 
-When the scope names a sector, load the matching `references/sector-overlays/<sector>.md`:
+When the scope names a sector, load the matching `references/sector-overlays.md#<sector>`:
 
 - *Banking* — depository-specific theme catalogue (overdraft, NSF, deposit-fee, mortgage-servicing, credit-card, indirect auto, HELOC); CFPB Complaint Database scope and limits; bank-size-and-CFPB-authority framing; sponsor-bank attribution; mortgage-servicing rules intersection (Reg X / Reg Z); CRA and HMDA cross-walk for mortgage and small-business themes.
 - *Payments-fintech* — P2P / BNPL / neobank theme catalogue; app-store reviews as a non-CFPB complaint channel; sponsor-bank attribution per theme; Reg E §1005.11 error-resolution framework; junk-fee theme intersection; AI-agent and AI-generated-communication themes; payments-fintech evidence sources.
@@ -118,13 +118,15 @@ Conduct overlay is mandatory on this skill. Complaints are the canonical conduct
 
 ## Pointers
 
+`references/sector-overlays.md` and `references/cross-cutting.md` hold one section per sector or topic, and `examples.md` one per example. Find the heading and read only that section.
+
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
-- `references/sector-overlays/banking.md`, `payments-fintech.md`, `capital-markets.md`, `insurance.md` — sector-specific framing loaded per scope.
-- `references/cross-cutting/conduct.md` — conduct overlay (mandatory on this skill).
+- `references/sector-overlays.md#banking`, `references/sector-overlays.md#payments-fintech`, `references/sector-overlays.md#capital-markets`, `references/sector-overlays.md#insurance` — sector-specific framing loaded per scope.
+- `references/cross-cutting.md#conduct` — conduct overlay (mandatory on this skill).
 - `references/firm-overlay.md` — firm-installed taxonomy (active themes, coding rules, taxonomy version), named committees, conduct-event taxonomy, complaint-system path, denominator data sources (consumed when present).
 - `templates/default-output.md` — content spec for the theme matrix (Excel) and the narrative memo (Word).
-- `examples/credit-card-fee-disclosure-quarterly.md`, `examples/mortgage-servicing-loss-mit-cluster.md` — public-source-derived worked examples.
-- `TROUBLESHOOTING.md` — recurring failure modes the drafter should preempt and the reviewer should catch.
+- `examples.md#credit-card-fee-disclosure-quarterly`, `examples.md#mortgage-servicing-loss-mit-cluster` — public-source-derived worked examples.
+- `examples.md#troubleshooting` — recurring failure modes the drafter should preempt and the reviewer should catch.
 
 ## Output
 

@@ -68,14 +68,16 @@ Across the pack, every material claim cites a source. Unsupported claims carry `
 
 ## Pointers
 
+`references/sector-overlays.md` and `references/cross-cutting.md` hold one section per sector or topic, and `examples.md` one per example. Find the heading and read only that section.
+
 - `references/source-anchors.md` — citations and excerpts for the named anchors (ICA §15, Rule 38a-1, ICA §17 / §17(e), Securities Exchange Act §28(e), Rule 22e-4, Rule 2a-5, Rule 18f-4, ICA §10(a), Form N-CEN, Form N-CSR, Rule 35d-1, Reg S-P, SEC EXAMS Annual Examination Priorities, Gartenberg v. Merrill Lynch Asset Management, Jones v. Harris Associates).
-- `references/sector-overlays/capital-markets.md` — capital-markets sector overlay; loaded for every invocation of this skill (the skill is sector-unique).
-- `references/cross-cutting/cyber.md` — cyber overlay (Reg S-P May 2024; service-provider cyber events meeting §38a-1 threshold; public-parent SEC cyber disclosure considerations).
-- `references/cross-cutting/conduct.md` — conduct overlay (fund-board fiduciary lens; §15(c) factor analysis as fiduciary-bargain record; affiliated transactions; soft-dollar / §28(e); code of ethics; 12b-1 oversight).
+- `references/sector-overlays.md#capital-markets` — capital-markets sector overlay; loaded for every invocation of this skill (the skill is sector-unique).
+- `references/cross-cutting.md#cyber` — cyber overlay (Reg S-P May 2024; service-provider cyber events meeting §38a-1 threshold; public-parent SEC cyber disclosure considerations).
+- `references/cross-cutting.md#conduct` — conduct overlay (fund-board fiduciary lens; §15(c) factor analysis as fiduciary-bargain record; affiliated transactions; soft-dollar / §28(e); code of ethics; 12b-1 oversight).
 - `references/firm-overlay.md` — fund-complex-installed trust documentation, fund-by-fund product list, sub-adviser arrangements, valuation-designee designation, derivatives risk manager designation, peer-group methodology, profitability allocation methodology, committee charter (consumed when present).
 - `templates/default-output.md` — content spec for the deck and the annex (named slides for the deck; named sections for the annex).
-- `examples/` — anonymised public-source-derived scenarios.
-- `TROUBLESHOOTING.md` — recurring defects.
+- `examples.md` — anonymised public-source-derived scenarios.
+- `examples.md#troubleshooting` — recurring defects.
 
 ## Output
 

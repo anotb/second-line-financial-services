@@ -70,7 +70,7 @@ Depth flexes with deployment form, tier, and sector. A hosted-API tier-1 review 
 
 ## Sector and cross-cutting overlays
 
-When the scope names a sector (banking, insurance, capital-markets, payments-fintech), load the matching `references/sector-overlays/<sector>.md`. Each overlay carries sector-specific evidence asks, co-reviewer expectations, re-review triggers, and the named additions to the structured-output `sector_overlay_notes` block. Treating the overlay as background reading is the failure mode; the overlay's named additions land in the review.
+When the scope names a sector (banking, insurance, capital-markets, payments-fintech), load the matching `references/sector-overlays.md#<sector>`. Each overlay carries sector-specific evidence asks, co-reviewer expectations, re-review triggers, and the named additions to the structured-output `sector_overlay_notes` block. Treating the overlay as background reading is the failure mode; the overlay's named additions land in the review.
 
 The cyber cross-cutting overlay should be considered the default for foundation-model evidence reviews. The threat surface a foundation-model vendor exposes is, in the named regulatory anchors' framing, a cybersecurity risk class; the CISO function co-reviews the security and privacy criteria. The privacy and conduct overlays load when the scope flags them: privacy where regulated personal data may flow to vendor-side processing; conduct where the use case touches consumer-facing communications, recommendation, or decisioning. Climate is not applicable.
 
@@ -104,14 +104,16 @@ Downstream consumers: `genai-pre-prod-review` consumes the structured object for
 
 ## Pointers
 
+`references/sector-overlays.md` and `references/cross-cutting.md` hold one section per sector or topic, and `examples.md` one per example. Find the heading and read only that section.
+
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
-- `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md` — sector overlays loaded from scope.
-- `references/cross-cutting/{cyber,privacy,conduct}.md` — cross-cutting overlays; cyber is the default for GenAI reviews.
+- `references/sector-overlays.md` — sector overlays loaded from scope.
+- `references/cross-cutting.md` — cross-cutting overlays; cyber is the default for GenAI reviews.
 - `references/firm-overlay.md` — firm policy, taxonomy, named owners (consumed when present).
 - `templates/default-output.md` — review template.
 - `schemas/llm-vendor-evidence-review.schema.json` — structured-output contract.
-- `examples/` — anonymised public-source-derived scenarios (regional bank reviewing a major-vendor hosted-API for a tier-1 KYC assistant; regional life insurer reviewing an open-weights model for a claims-summarisation pilot).
-- `TROUBLESHOOTING.md` — recurring defects.
+- `examples.md` — anonymised public-source-derived scenarios (regional bank reviewing a major-vendor hosted-API for a tier-1 KYC assistant; regional life insurer reviewing an open-weights model for a claims-summarisation pilot).
+- `examples.md#troubleshooting` — recurring defects.
 
 ## Human review and AI disclosure
 

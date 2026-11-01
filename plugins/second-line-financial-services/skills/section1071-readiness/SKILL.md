@@ -93,7 +93,7 @@ Each gap rolls up to a separate gap-list row with severity (`blocking` / `high` 
 
 ### Sector and cross-cutting overlay loading
 
-When the scope names a sector, load the matching `references/sector-overlays/<sector>.md`: `banking.md` for depository institutions (the heaviest overlay), `payments-fintech.md` for fintech small-business lenders and sponsor-bank arrangements. `capital-markets.md` and `insurance.md` carry out-of-scope flags so reviewers do not over-extend. Cross-cutting overlays: `privacy.md` for the GLBA Safeguards posture on customer demographic data and the CFPB modified-data publication and re-identification considerations; `conduct.md` for the lender-conduct dimension where 1071 readiness gaps surface conduct themes (data-collection misrepresentation to applicants, firewall failures, vendor mismanagement). Load only the overlays the scope names.
+When the scope names a sector, load the matching `references/sector-overlays.md#<sector>`: `references/sector-overlays.md#banking` for depository institutions (the heaviest overlay), `references/sector-overlays.md#payments-fintech` for fintech small-business lenders and sponsor-bank arrangements. `references/sector-overlays.md#capital-markets` and `references/sector-overlays.md#insurance` carry out-of-scope flags so reviewers do not over-extend. Cross-cutting overlays: `privacy.md` for the GLBA Safeguards posture on customer demographic data and the CFPB modified-data publication and re-identification considerations; `conduct.md` for the lender-conduct dimension where 1071 readiness gaps surface conduct themes (data-collection misrepresentation to applicants, firewall failures, vendor mismanagement). Load only the overlays the scope names.
 
 ## Quality bar
 
@@ -125,17 +125,19 @@ Downstream consumers: `fair-lending-test-plan` reads the data-point matrix to co
 
 ## Pointers
 
+`references/sector-overlays.md` and `references/cross-cutting.md` hold one section per sector or topic, and `examples.md` one per example. Find the heading and read only that section.
+
 - `references/source-anchors.md` — citations for the May 1, 2026 revised final rule, the 1,000-transaction threshold, the June 30, 2026 effective date, the January 1, 2028 compliance date, the 1002.107 data points, the FIG, and the superseded litigation history.
-- `references/sector-overlays/banking.md` — depository-institution overlay (heaviest); SBA 7(a) / 504 inclusion, business credit cards, trade finance, CFI tier-classification mechanics for banks.
-- `references/sector-overlays/payments-fintech.md` — fintech small-business lending; merchant cash advance and sales-based financing; sponsor-bank attribution; vendor LOS readiness; BNPL-for-business edge cases.
-- `references/sector-overlays/capital-markets.md` — out-of-scope flag with the boundary explicitly named so reviewers do not over-extend.
-- `references/sector-overlays/insurance.md` — out-of-scope flag with the boundary explicitly named.
-- `references/cross-cutting/privacy.md` — GLBA Safeguards (16 CFR Part 314) on customer demographic data; CFPB modified-data publication and re-identification considerations; state-privacy applicability `[verify state-specific scope]`.
-- `references/cross-cutting/conduct.md` — lender-conduct dimension; how 1071 readiness gaps (data-collection misrepresentation, firewall failures, vendor mismanagement) surface conduct themes for the conduct committee and the broader risk-and-conduct posture.
+- `references/sector-overlays.md#banking` — depository-institution overlay (heaviest); SBA 7(a) / 504 inclusion, business credit cards, trade finance, CFI tier-classification mechanics for banks.
+- `references/sector-overlays.md#payments-fintech` — fintech small-business lending; merchant cash advance and sales-based financing; sponsor-bank attribution; vendor LOS readiness; BNPL-for-business edge cases.
+- `references/sector-overlays.md#capital-markets` — out-of-scope flag with the boundary explicitly named so reviewers do not over-extend.
+- `references/sector-overlays.md#insurance` — out-of-scope flag with the boundary explicitly named.
+- `references/cross-cutting.md#privacy` — GLBA Safeguards (16 CFR Part 314) on customer demographic data; CFPB modified-data publication and re-identification considerations; state-privacy applicability `[verify state-specific scope]`.
+- `references/cross-cutting.md#conduct` — lender-conduct dimension; how 1071 readiness gaps (data-collection misrepresentation, firewall failures, vendor mismanagement) surface conduct themes for the conduct committee and the broader risk-and-conduct posture.
 - `templates/default-output.md` — content spec for the narrative gap memo (named sections, fields).
 - `schemas/section1071-readiness.schema.json` — structured-output contract for the readiness matrix and gap list (downstream remediation-tracker consumption).
-- `examples/community-bank-pre-go-live.md`, `examples/fintech-mca-sponsor-bank.md` — anonymised public-source-derived scenarios.
-- `TROUBLESHOOTING.md` — recurring defects in §1071 readiness work.
+- `examples.md#community-bank-pre-go-live`, `examples.md#fintech-mca-sponsor-bank` — anonymised public-source-derived scenarios.
+- `examples.md#troubleshooting` — recurring defects in §1071 readiness work.
 
 Plugin-level shared references (`references/source-map.md`, `references/policy-control-library.md`, `references/review-gates.md`) sit at the plugin root and are consulted alongside the skill-level files.
 

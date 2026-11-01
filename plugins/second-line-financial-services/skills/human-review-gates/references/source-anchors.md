@@ -133,7 +133,7 @@ Link: https://www.consumerfinance.gov/compliance/supervision-examinations/
 
 ## Sector-specific and cross-cutting anchors
 
-The sector-overlay files (`references/sector-overlays/<sector>.md`) enumerate sector-specific gate anchors (NAIC ORSA and Corporate Governance Annual Disclosure Model Act, FINRA 3110 supervisory gates, SEC Rule 206(4)-7 advisers compliance gates, OCC fintech bank-partnership sponsor-bank gates). The cross-cutting overlays (`references/cross-cutting/<topic>.md`) enumerate cross-cutting anchors (NYDFS Part 500 §500.4 senior-governing-body responsibility for cyber gates, SEC 8-K Item 1.05 disclosure-committee gates for materiality determination, CFPB UDAAP exam manual and ECOA second-look conventions for conduct gates). This file is the foundational set; the overlays add what the scope requires.
+The sector-overlay files (`references/sector-overlays.md#<sector>`) enumerate sector-specific gate anchors (NAIC ORSA and Corporate Governance Annual Disclosure Model Act, FINRA 3110 supervisory gates, SEC Rule 206(4)-7 advisers compliance gates, OCC fintech bank-partnership sponsor-bank gates). The cross-cutting overlays (`references/cross-cutting.md#<topic>`) enumerate cross-cutting anchors (NYDFS Part 500 §500.4 senior-governing-body responsibility for cyber gates, SEC 8-K Item 1.05 disclosure-committee gates for materiality determination, CFPB UDAAP exam manual and ECOA second-look conventions for conduct gates). This file is the foundational set; the overlays add what the scope requires.
 
 ## Cross-plugin overlays (referenced when in scope)
 

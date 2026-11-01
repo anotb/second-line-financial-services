@@ -69,7 +69,7 @@ Per-notice rows recording application-completed-at, notice-sent-at, days elapsed
 
 Per-notice rows recording ECOA-notice-text-completeness, the specificity test against the cited reasons, FCRA-overlay applicability, FCRA-overlay content completeness where applicable, the combined-notice version in force at decision time, and a yes / no / partial verdict.
 
-The Staff Commentary on specificity sets the reference standard; the AI / complex-model framing layers on top where any in-scope decision uses a complex model. The combined Reg B / Reg V notice tests against both regimes separately — a notice can pass one and fail the other.
+The Staff Commentary on specificity sets the reference standard; the AI / complex-model framing layers on top where any in-scope decision uses a complex model. The combined Reg B / Reg V notice tests against both regimes separately — a notice can clear one and fail the other.
 
 ### 6. Disparate-impact red flags
 
@@ -109,14 +109,16 @@ Adaptation: audience and depth flex. A working-group memo reads short; a fair-le
 
 ## Pointers
 
+`references/sector-overlays.md` and `references/cross-cutting.md` hold one section per sector or topic, and `examples.md` one per example. Find the heading and read only that section.
+
 - `references/source-anchors.md` — citations and excerpts for the named anchors (ECOA / Reg B §1002.9, Staff Commentary, CFPB Circulars 2022-03 and 2023-03, the April 2023 Joint Statement, FHA, FCRA / Reg V §1022.74, third-party guidance, BNPL interpretive rule, SR 11-7, GLBA Safeguards Rule, NAIC Model #880).
-- `references/sector-overlays/banking.md` (heaviest overlay), `payments-fintech.md`, `capital-markets.md` (narrow), `insurance.md` (scope boundary) — loaded per `scope.sector_overlay_set`.
-- `references/cross-cutting/privacy.md` — GLBA Safeguards Rule on the review's own data handling, state-privacy interaction, BISG-derived attribute treatment; loaded when `scope.cross_cutting_set` includes `privacy`.
-- `references/cross-cutting/conduct.md` — UDAAP, FTC §5, April 2023 Joint Statement, CFPB Supervisory Highlights, FCA SMCR / Consumer Duty, NAIC Models #880 / #900 frame on the AAN population: comprehensibility read on cited reasons, sample-form-substitution and reason-suppression at population scale, disclosure-consistency against marketing and front-line representations, conduct-event-candidate flagging on AI / complex-model defects, conduct-framework-cohort signals alongside protected-class disparate-impact; loaded when `scope.cross_cutting_set` includes `conduct`.
+- `references/sector-overlays.md#banking` (heaviest overlay), `references/sector-overlays.md#payments-fintech`, `references/sector-overlays.md#capital-markets` (narrow), `references/sector-overlays.md#insurance` (scope boundary) — loaded per `scope.sector_overlay_set`.
+- `references/cross-cutting.md#privacy` — GLBA Safeguards Rule on the review's own data handling, state-privacy interaction, BISG-derived attribute treatment; loaded when `scope.cross_cutting_set` includes `privacy`.
+- `references/cross-cutting.md#conduct` — UDAAP, FTC §5, April 2023 Joint Statement, CFPB Supervisory Highlights, FCA SMCR / Consumer Duty, NAIC Models #880 / #900 frame on the AAN population: comprehensibility read on cited reasons, sample-form-substitution and reason-suppression at population scale, disclosure-consistency against marketing and front-line representations, conduct-event-candidate flagging on AI / complex-model defects, conduct-framework-cohort signals alongside protected-class disparate-impact; loaded when `scope.cross_cutting_set` includes `conduct`.
 - `references/firm-overlay.md` — firm-installed notice-template version, reason-code dictionary, named first-line controls, MRM model-risk inventory paths, and named owners; consumed when present.
 - `templates/default-output.md` — content spec for the memo (named sections, per-decision tables, recommended-action routing).
-- `examples/xgboost-personal-loan-decline-sample.md`, `examples/mortgage-decline-redlining-flag.md` — public-source-derived worked examples.
-- `TROUBLESHOOTING.md` — recurring defects in notice-population scope, timing, content, model-supported reasons, and disparate-impact panels.
+- `examples.md#xgboost-personal-loan-decline-sample`, `examples.md#mortgage-decline-redlining-flag` — public-source-derived worked examples.
+- `examples.md#troubleshooting` — recurring defects in notice-population scope, timing, content, model-supported reasons, and disparate-impact panels.
 
 ## Output
 

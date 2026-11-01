@@ -65,12 +65,12 @@ The tail of the artifact carries what the rows cannot. Cross-policy ripple is wh
 
 The change-log spine is the same across sectors. What flexes is the kind of policy in scope and the approver expectations. Load only the overlay the scope flags.
 
-- `references/sector-overlays/banking.md` carries OCC heightened-standards expectations on written framework reviews and the federal-banking-agency expectation that material policy changes route to the board or a delegated committee with documented rationale.
-- `references/sector-overlays/insurance.md` carries NAIC Corporate Governance Annual Disclosure expectations, ORSA policy lifecycle, and state market-conduct policy considerations.
-- `references/sector-overlays/capital-markets.md` carries SEC IAA Rule 206(4)-7 annual-review obligations for compliance policies, FINRA Rule 3110 written supervisory procedures, and the Investment Company Act compliance-program lifecycle for funds.
-- `references/sector-overlays/payments-fintech.md` carries Reg E, Reg Z, Reg DD policy considerations for consumer-payment products and the CFPB CMS expectation that policy changes are visible in the compliance management system's change record.
-- `references/cross-cutting/cyber.md` loads when the policy is cyber-anchored: NYDFS Part 500 §500.3 cybersecurity-policy elements and the SEC Reg S-P safeguards-policy expectation.
-- `references/cross-cutting/conduct.md` loads when the policy is a UDAAP or conduct-risk policy and the materiality lens covers customer harm.
+- `references/sector-overlays.md#banking` carries OCC heightened-standards expectations on written framework reviews and the federal-banking-agency expectation that material policy changes route to the board or a delegated committee with documented rationale.
+- `references/sector-overlays.md#insurance` carries NAIC Corporate Governance Annual Disclosure expectations, ORSA policy lifecycle, and state market-conduct policy considerations.
+- `references/sector-overlays.md#capital-markets` carries SEC IAA Rule 206(4)-7 annual-review obligations for compliance policies, FINRA Rule 3110 written supervisory procedures, and the Investment Company Act compliance-program lifecycle for funds.
+- `references/sector-overlays.md#payments-fintech` carries Reg E, Reg Z, Reg DD policy considerations for consumer-payment products and the CFPB CMS expectation that policy changes are visible in the compliance management system's change record.
+- `references/cross-cutting.md#cyber` loads when the policy is cyber-anchored: NYDFS Part 500 §500.3 cybersecurity-policy elements and the SEC Reg S-P safeguards-policy expectation.
+- `references/cross-cutting.md#conduct` loads when the policy is a UDAAP or conduct-risk policy and the materiality lens covers customer harm.
 
 Where firm policy or taxonomy applies (named approver titles, a defined committee structure, a particular policy-management system), it lives in `references/firm-overlay.md` and the change log pulls from there.
 
@@ -96,14 +96,16 @@ The change log in `templates/default-output.md` shape and the structured record 
 
 ## Pointers
 
+`references/sector-overlays.md` and `references/cross-cutting.md` hold one section per sector or topic, and `examples.md` one per example. Find the heading and read only that section.
+
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
-- `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md` — sector overlays loaded from scope.
-- `references/cross-cutting/{cyber,conduct}.md` — cross-cutting overlays loaded from scope.
+- `references/sector-overlays.md` — sector overlays loaded from scope.
+- `references/cross-cutting.md` — cross-cutting overlays loaded from scope.
 - `references/firm-overlay.md` — firm-installed taxonomy, named approver titles, committee structure, policy-management system labels, internal cross-policy references; consumed when present.
 - `templates/default-output.md` — change-log template.
 - `schemas/policy-diff.schema.json` — structured-output contract.
-- `examples/` — TPRM policy annual review with material rewording of subcontractor notification rights; cybersecurity policy MRA-driven amendment with new asset-inventory and data-classification provisions.
-- `TROUBLESHOOTING.md` — recurring defects in policy diffs.
+- `examples.md` — TPRM policy annual review with material rewording of subcontractor notification rights; cybersecurity policy MRA-driven amendment with new asset-inventory and data-classification provisions.
+- `examples.md#troubleshooting` — recurring defects in policy diffs.
 
 ## Human review and AI disclosure
 

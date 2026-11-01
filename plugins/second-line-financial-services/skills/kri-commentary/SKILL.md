@@ -76,8 +76,8 @@ When the `scope` record is supplied:
 - `institution.type` and `institution.primary_regulators` set tone, citation focus, and which sector overlay loads.
 - `persona.role` sets the artifact audience and the named sign-off owner.
 - `risk_lens` constrains which KRI populations are in scope for the wrapper.
-- `sector_overlay_set` loads the matching `references/sector-overlays/<sector>.md`.
-- `cross_cutting_overlay_set` loads matching `references/cross-cutting/<topic>.md`. The cyber overlay carries the disclosure-controls leading-indicator referral protocol; the climate overlay upgrades the data-confidence note from optional to required.
+- `sector_overlay_set` loads the matching `references/sector-overlays.md#<sector>`.
+- `cross_cutting_overlay_set` loads matching `references/cross-cutting.md#<topic>`. The cyber overlay carries the disclosure-controls leading-indicator referral protocol; the climate overlay upgrades the data-confidence note from optional to required.
 - `source_posture` constrains the source-trace discipline and the achievable confidence label.
 
 When the record is not supplied, the skill asks: what is the firm type, who is the primary regulator constellation, what is the persona consuming the block, and what is the source posture. Defaults to public posture if the practitioner declines, and the wrapper carries a note that scope was not formalized.
@@ -104,14 +104,16 @@ Downstream consumers: the structured wrapper feeds `risk-committee-pack` (the KR
 
 ## Pointers
 
+`references/sector-overlays.md` and `references/cross-cutting.md` hold one section per sector or topic, and `examples.md` one per example. Find the heading and read only that section.
+
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
-- `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md` — sector overlays loaded from scope.
-- `references/cross-cutting/{cyber,climate}.md` — cross-cutting overlays loaded from scope.
+- `references/sector-overlays.md` — sector overlays loaded from scope.
+- `references/cross-cutting.md` — cross-cutting overlays loaded from scope.
 - `references/firm-overlay.md` — firm-installed RAS structure, taxonomy, named owners, escalation machinery (consumed when present).
 - `templates/default-output.md` — per-KRI block template with the named sections and the wrapper.
 - `schemas/kri-commentary.schema.json` — structured-output contract.
-- `examples/` — anonymised public-source-derived scenarios.
-- `TROUBLESHOOTING.md` — recurring defects in commentary blocks.
+- `examples.md` — anonymised public-source-derived scenarios.
+- `examples.md#troubleshooting` — recurring defects in commentary blocks.
 
 ## Human review and AI disclosure
 

@@ -38,7 +38,7 @@ Before drafting, get plain answers. Most engagements answer them in the test pla
 - **What method does the test objective support.** Statistical attribute sampling sizes against confidence and tolerable rate; monetary-unit sampling targets dollar coverage; judgmental sampling rests on a documented basis; haphazard is rarely defensible and should be flagged when proposed; full-population testing is appropriate for small populations or zero-tolerable scopes. The method choice is part of the memo, with the reasoning.
 - **What is the tolerable deviation rate, and where does it come from.** Firm methodology, professional standard, regulator expectation, or a population-specific zero-tolerable convention (privileged access, sanctions screening, customer-funds segregation). The criterion source is named; the number alone does not pass.
 
-When `scope` is supplied, consume it: `institution.type` and `institution.primary_regulators` set the citation focus and tone, `sector_overlay_set` selects which `references/sector-overlays/<sector>.md` loads, `cross_cutting_overlay_set` selects the `references/cross-cutting/<topic>.md` files. When it is not supplied, draft against what is on file (the test plan and the control description usually carry enough), default to the testing program's standing posture, and note in the memo that scope was not formalised separately.
+When `scope` is supplied, consume it: `institution.type` and `institution.primary_regulators` set the citation focus and tone, `sector_overlay_set` selects which `references/sector-overlays.md#<sector>` loads, `cross_cutting_overlay_set` selects the `references/cross-cutting.md#<topic>` files. When it is not supplied, draft against what is on file (the test plan and the control description usually carry enough), default to the testing program's standing posture, and note in the memo that scope was not formalised separately.
 
 ## How the sampling memo gets built
 
@@ -80,14 +80,16 @@ Memo depth scales to control complexity, population size, and the regulator the 
 
 ## Pointers
 
+`references/sector-overlays.md` and `references/cross-cutting.md` hold one section per sector or topic, and `examples.md` one per example. Find the heading and read only that section.
+
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
-- `references/sector-overlays/banking.md`, `insurance.md`, `capital-markets.md`, `payments-fintech.md` — sector-specific population, stratification, and tolerable-rate conventions loaded per scope.
-- `references/cross-cutting/cyber.md`, `conduct.md`, `privacy.md` — cross-cutting flavour; cyber default-on for IAM and covered-entity-cybersecurity controls, conduct default-on for consumer-facing tests, privacy when safeguards regimes apply.
+- `references/sector-overlays.md#banking`, `references/sector-overlays.md#insurance`, `references/sector-overlays.md#capital-markets`, `references/sector-overlays.md#payments-fintech` — sector-specific population, stratification, and tolerable-rate conventions loaded per scope.
+- `references/cross-cutting.md#cyber`, `references/cross-cutting.md#conduct`, `references/cross-cutting.md#privacy` — cross-cutting flavour; cyber default-on for IAM and covered-entity-cybersecurity controls, conduct default-on for consumer-facing tests, privacy when safeguards regimes apply.
 - `references/firm-overlay.md` — firm-installed methodology, sample-size tables, tolerable-rate floors, and template variants beyond the regulatory baseline; consumed when present.
 - `templates/default-output.md` — sampling-memo template.
 - `schemas/sampling.schema.json` — structured-output contract for downstream consumption.
-- `examples/` — overdraft-fee-disclosure compliance-testing sample at a regional bank; quarterly logical-access-recertification sample for a critical core-banking application.
-- `TROUBLESHOOTING.md` — recurring pitfalls (population defined as the source system, no completeness reconciliation, judgmental basis missing, tolerable rate without a criterion source, sample treated as projecting to a population it cannot project to).
+- `examples.md` — overdraft-fee-disclosure compliance-testing sample at a regional bank; quarterly logical-access-recertification sample for a critical core-banking application.
+- `examples.md#troubleshooting` — recurring pitfalls (population defined as the source system, no completeness reconciliation, judgmental basis missing, tolerable rate without a criterion source, sample treated as projecting to a population it cannot project to).
 
 The plugin-level shared references (`references/source-map.md`, `references/policy-control-library.md`, `references/review-gates.md`) sit at the plugin root and are consulted alongside the skill-level files.
 

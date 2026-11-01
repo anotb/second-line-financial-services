@@ -150,11 +150,11 @@ State thresholds, content requirements, and timing windows vary; verify per stat
 | State breach-notification statutes | state-by-state trigger | | | program operator |
 | GLBA Safeguards Rule notification (FTC-supervised) | affected-customer threshold (verify) | | | program operator |
 
-Cross-link to `cyber-disclosure-readiness` for the disclosure-track artifact. The cross-cutting cyber overlay (`references/cross-cutting/cyber.md`) carries the parallel-clock detail.
+Cross-link to `cyber-disclosure-readiness` for the disclosure-track artifact. The cross-cutting cyber overlay (`references/cross-cutting.md#cyber`) carries the parallel-clock detail.
 
 ### Personal-data notification triggers (where applicable)
 
-Cross-link to `references/cross-cutting/privacy.md` for state breach-notification rows, CCPA / CPRA exposure flag, and §1033 implications.
+Cross-link to `references/cross-cutting.md#privacy` for state breach-notification rows, CCPA / CPRA exposure flag, and §1033 implications.
 
 ## Root cause
 

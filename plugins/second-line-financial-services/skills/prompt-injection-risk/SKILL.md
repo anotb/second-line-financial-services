@@ -71,7 +71,7 @@ Depth flexes with tier and audience. A pre-prod-gate review for a tier-2 custome
 
 ## Sector and cross-cutting overlays
 
-When the scope names a sector (banking, insurance, capital markets, payments-fintech), load the matching `references/sector-overlays/<sector>.md`. Each overlay carries sector-specific carriers, mitigations, monitoring signals, regulator-notification triggers, and co-reviewer expectations. The overlay's named additions land in the memo; treating the overlay as background reading is the failure mode.
+When the scope names a sector (banking, insurance, capital markets, payments-fintech), load the matching `references/sector-overlays.md#<sector>`. Each overlay carries sector-specific carriers, mitigations, monitoring signals, regulator-notification triggers, and co-reviewer expectations. The overlay's named additions land in the memo; treating the overlay as background reading is the failure mode.
 
 The cyber cross-cutting overlay should be considered the default for GenAI reviews. Prompt injection is, in NYDFS framing, a cybersecurity risk class; the CISO function co-reviews and co-decides on residual-risk acceptance. The overlay carries the cyber-side mitigations expected (authentication, audit logging, network controls, secrets handling, supply-chain controls, IR runbook integration), the cyber-tagged monitoring signals (authentication anomalies, tool-invocation patterns, output-anomaly detection), and the regulator-notification triggers most likely to apply.
 
@@ -108,16 +108,18 @@ Downstream consumers: `genai-pre-prod-review` consumes the structured object for
 
 ## Pointers
 
+`references/sector-overlays.md` and `references/cross-cutting.md` hold one section per sector or topic, and `examples.md` one per example. Find the heading and read only that section.
+
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
-- `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md` — sector overlays loaded from scope.
-- `references/cross-cutting/cyber.md` — cyber overlay, the default cross-cutting overlay for GenAI reviews.
-- `references/cross-cutting/privacy.md` — privacy overlay loaded when the scope flags privacy (default for any use case touching NPI, PHI, PCI, biometric data, or customer prompts that may carry regulated personal data inadvertently); covers training-data extraction, retrieval exfiltration, and tool-driven personal-data egress paths.
-- `references/cross-cutting/conduct.md` — conduct overlay loaded when the scope flags conduct or when the use case generates customer-facing communications, distribution materials, marketing assets, or recommendation surfaces; covers UDAAP, Marketing Rule, FINRA 2210 / 2111, Reg BI, NAIC Models #880 / #900 exposure on injection-driven outcomes.
+- `references/sector-overlays.md` — sector overlays loaded from scope.
+- `references/cross-cutting.md#cyber` — cyber overlay, the default cross-cutting overlay for GenAI reviews.
+- `references/cross-cutting.md#privacy` — privacy overlay loaded when the scope flags privacy (default for any use case touching NPI, PHI, PCI, biometric data, or customer prompts that may carry regulated personal data inadvertently); covers training-data extraction, retrieval exfiltration, and tool-driven personal-data egress paths.
+- `references/cross-cutting.md#conduct` — conduct overlay loaded when the scope flags conduct or when the use case generates customer-facing communications, distribution materials, marketing assets, or recommendation surfaces; covers UDAAP, Marketing Rule, FINRA 2210 / 2111, Reg BI, NAIC Models #880 / #900 exposure on injection-driven outcomes.
 - `references/firm-overlay.md` — firm policy, taxonomy, named owners (consumed when present).
 - `templates/default-output.md` — memo template.
 - `schemas/prompt-injection-review.schema.json` — structured-output contract.
-- `examples/` — anonymised public-source-derived scenarios (customer-support assistant; agentic research assistant).
-- `TROUBLESHOOTING.md` — recurring defects.
+- `examples.md` — anonymised public-source-derived scenarios (customer-support assistant; agentic research assistant).
+- `examples.md#troubleshooting` — recurring defects.
 
 ## Human review and AI disclosure
 

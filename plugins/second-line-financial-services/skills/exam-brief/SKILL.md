@@ -68,7 +68,7 @@ The brief has the same spine across regulators. The order below is the spine; in
 
 ## Sector and cross-cutting overlays
 
-When the scope names a sector, load the matching overlay in `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md`. The overlay carries the regulator-specific engagement convention, examiner-in-charge model, document-handling posture, MRA/MRIA/consent-order convention, and response-window calculation for that sector. Same pattern for cross-cutting overlays where present (cyber, privacy, conduct).
+When the scope names a sector, load the matching overlay in `references/sector-overlays.md`. The overlay carries the regulator-specific engagement convention, examiner-in-charge model, document-handling posture, MRA/MRIA/consent-order convention, and response-window calculation for that sector. Same pattern for cross-cutting overlays where present (cyber, privacy, conduct).
 
 The boundary the overlay enforces: a banking sector overlay loaded inside this skill covers the engagement-side scaffolding for a non-full-scope engagement at a bank (a CFPB exam at a bank, an NYDFS cyber exam at a state-chartered bank, a coordinated trust exam, an IT-focused exam, a topic-targeted OCC review). For a full-scope federal banking exam at a bank carrying the Heightened Standards, the overlay routes to `banking-supervision-readiness` instead. Same pattern for capital-markets: the overlay covers a niche review (cyber-only at an adviser, an exchange-rule examination, a transfer-agent review) where `adviser-exam-readiness` is too broad.
 
@@ -84,12 +84,14 @@ Brief depth scales to engagement type and stakes: a horizontal review brief read
 
 ## Pointers
 
+`references/sector-overlays.md` holds one section per sector, and `examples.md` one per example. Find the heading and read only that section.
+
 - `references/source-anchors.md` — citations and excerpts for the named anchors (federal banking, CFPB, SEC and FINRA, NYDFS and state DOIs, privilege and CSI, MRA/MRIA/consent-order convention, AI-and-cyber-targeted anchors).
-- `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md` — sector overlays loaded from scope.
+- `references/sector-overlays.md` — sector overlays loaded from scope.
 - `references/firm-overlay.md` — firm-installed regulator-relationship history, named privilege-review counsel, approved redaction tools, internal CSI-handling SOP, response-letter style guide; consumed when present.
 - `templates/default-output.md` — brief template.
 - `schemas/exam-brief.schema.json` — structured-output contract for downstream consumption.
-- `examples/` — public-source-derived scenarios (OCC targeted exam at a regional bank covering third-party risk and cyber; further scenarios as overlays land).
+- `examples.md` — public-source-derived scenarios (OCC targeted exam at a regional bank covering third-party risk and cyber; further scenarios as overlays land).
 
 ## Output
 

@@ -32,7 +32,7 @@ OFAC list citations and FinCEN advisory citations are dated as-of in every artif
 
 ## Components
 
-- `skills/` — the six skills above. Each ships its own `SKILL.md`, `references/source-anchors.md`, sector and cross-cutting overlays where applicable, `templates/default-output.md`, and (where useful) `schemas/` and `examples/`.
+- `skills/` — the six skills above. Each ships its own `SKILL.md`, `references/source-anchors.md`, sector and cross-cutting overlays where applicable, `templates/default-output.md`, and (where useful) `schemas/` and `examples.md`.
 - `references/` — plugin-level shared references: source map (trimmed to financial-crime), policy and control library, named review forums (EDD committee, SAR review committee, sanctions release, model validation), shared output conventions.
 - `schemas/` — `issue.schema.json` plus financial-crime artifacts (`cdd-file`, `alert-disposition`, `sanctions-alert`).
 

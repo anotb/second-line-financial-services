@@ -1,6 +1,6 @@
 # Source anchors — negative-news-triage
 
-The named, dated regulatory and public-industry sources this skill anchors to. SKILL.md cites this file by path and does not restate excerpts. Sector-specific anchors live in the corresponding overlay files; the conduct anchor set lives in `references/cross-cutting/conduct.md`.
+The named, dated regulatory and public-industry sources this skill anchors to. SKILL.md cites this file by path and does not restate excerpts. Sector-specific anchors live in the corresponding overlay files; the conduct anchor set lives in `references/cross-cutting.md#conduct`.
 
 ## Primary frame — ongoing CDD and adverse-information escalation
 

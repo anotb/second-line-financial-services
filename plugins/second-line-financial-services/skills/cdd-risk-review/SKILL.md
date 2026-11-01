@@ -30,7 +30,7 @@ Not the right tool when:
 
 Before drafting, get plain answers to a few things. Most reviews answer them quickly; if not, default and flag.
 
-- **What is the institution and which CIP / CDD rule applies.** A bank is read against `31 CFR §1020.220` for CIP; a broker-dealer against `§1023.220`; a mutual fund against `§1024.220`; a covered-product life insurer against `§1025.220`; an FCM/IB against `§1026.220`; an MSB against the parallel rules. The CDD Final Rule applies across covered financial institutions; correspondent and private-banking enhanced due diligence sit at `§1010.610` and `§1010.620`. A fintech operating under a sponsor-bank model carries the sponsor's CIP/CDD obligations under the program contract; the QA reads the operative program. Load the matching `references/sector-overlays/<sector>.md`.
+- **What is the institution and which CIP / CDD rule applies.** A bank is read against `31 CFR §1020.220` for CIP; a broker-dealer against `§1023.220`; a mutual fund against `§1024.220`; a covered-product life insurer against `§1025.220`; an FCM/IB against `§1026.220`; an MSB against the parallel rules. The CDD Final Rule applies across covered financial institutions; correspondent and private-banking enhanced due diligence sit at `§1010.610` and `§1010.620`. A fintech operating under a sponsor-bank model carries the sponsor's CIP/CDD obligations under the program contract; the QA reads the operative program. Load the matching `references/sector-overlays.md#<sector>`.
 - **What kind of CDD review is this.** New-account, periodic refresh on the customer's risk-tier cycle, or event-driven refresh on a named trigger. The review type drives which evidence to weigh hardest. New-account work weighs CIP completeness, beneficial-ownership identification, and the initial expected-activity profile. Periodic refresh weighs whether risk-rating drivers and expected activity still match the customer's reality. Event-driven refresh weighs the trigger and what it changes about rating, EDD posture, or monitoring scope.
 - **Who reads the memo.** A BSA officer reads for material defensibility issues and program-level patterns. An AML QA team reads for criterion-by-criterion calibration. The customer-onboarding compliance lead reads for backlog-and-quality signal across the new-account pipeline. The EDD committee reads only the cases the QA flags as escalation candidates. Audience drives tone and depth.
 - **What is in the file.** The customer record, the CIP evidence (identifying information collected, verification method documentary or non-documentary, discrepancies), the beneficial-ownership certification (control prong and ownership prong), the documented expected-activity profile, the recorded risk rating with its drivers, the monitoring trigger set, and the refresh history. If the file is incomplete, that is itself a finding. Draft against what is there and flag the missing parts in `material_gaps`; do not block.
@@ -102,13 +102,15 @@ Downstream consumers: a sample-level QA roll-up reads the structured record acro
 
 ## Pointers
 
+`references/sector-overlays.md` holds one section per sector, and `examples.md` one per example. Find the heading and read only that section.
+
 - `references/source-anchors.md` — citations and excerpts for the named anchors (FFIEC CDD section, FinCEN CDD Final Rule, `§1010.230`, CIP rules, `§1010.380` BOI reporting rule, `§1010.610` / `§1010.620` correspondent and private-banking EDD, FinCEN investment-adviser rule, joint statements).
-- `references/sector-overlays/banking.md`, `payments-fintech.md`, `capital-markets.md`, `insurance.md` — sector-specific CDD reads loaded per scope.
+- `references/sector-overlays.md#banking`, `references/sector-overlays.md#payments-fintech`, `references/sector-overlays.md#capital-markets`, `references/sector-overlays.md#insurance` — sector-specific CDD reads loaded per scope.
 - `references/firm-overlay.md` — firm policy, customer-segmentation taxonomy, risk-rating model, refresh intervals, named systems and owners (consumed when present).
 - `templates/default-output.md` — memo template.
 - `schemas/cdd-file.schema.json` — structured-output contract.
-- `examples/cash-intensive-llc-community-bank.md`, `periodic-refresh-broker-dealer-hni.md` — public-source-derived scenarios.
-- `TROUBLESHOOTING.md` — recurring defects in CDD files and in QA memos written against them.
+- `examples.md#cash-intensive-llc-community-bank`, `periodic-refresh-broker-dealer-hni.md` — public-source-derived scenarios.
+- `examples.md#troubleshooting` — recurring defects in CDD files and in QA memos written against them.
 
 The plugin-level shared references (`references/source-map.md`, `references/policy-control-library.md`, `references/review-gates.md`) sit at the plugin root and are consulted alongside the skill-level files.
 

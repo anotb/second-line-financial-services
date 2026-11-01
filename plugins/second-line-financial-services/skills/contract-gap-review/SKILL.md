@@ -30,7 +30,7 @@ Not the right tool when:
 
 Before drafting, get plain answers to four things. Most engagements answer them in the first conversation; if not, default and flag.
 
-- **What tier is the arrangement.** Sourced from `criticality-assessment`. Do not re-set it here. Tier drives clause depth and which mandatory-clause overlay loads. A non-critical arrangement gets a lighter pass on operational-resilience and exit clauses; a critical arrangement gets the full set with reviewer questions clustered for the forum that decides.
+- **What tier is the arrangement.** Sourced from `criticality-assessment`. Do not re-set it here. Tier drives clause depth and which mandatory-clause overlay loads. A non-critical arrangement gets a lighter review on operational-resilience and exit clauses; a critical arrangement gets the full set with reviewer questions clustered for the forum that decides.
 - **Is the arrangement in scope of the EU digital-operational-resilience act as a critical-or-important-function ICT service.** Treat as a boolean. The mandatory-clause overlay is a real branch, not a side-note: when on, the gap matrix surfaces the enhanced clause set (termination triggers tied to supervisory recommendation, full description of services, locations of data processing, sub-outsourcing notification timing, exit-strategy and transitional support, audit-and-access for the firm and the competent authority).
 - **What is the firm's regulatory profile.** Institution type and primary regulators determine which sector overlay loads. Banking is not insurance is not capital markets is not payments-fintech. A dual-registrant or a sponsor-bank-program contract may need two sector overlays; flag the choice.
 - **What is the review type.** Pre-signature, renewal, assignment or change-of-control, material amendment, exit-triggered re-review, post-incident re-review, regulatory-change-driven re-review. Each carries a different evidence-ask and a different decision-forum context.
@@ -63,18 +63,20 @@ Holds across every gap matrix regardless of contract type, audience, or render f
 
 ## Adaptation
 
-Flexes by engagement. Matrix depth and length scale to criticality and review type. Audience drives shape: a TPRM-forum matrix reads short and operational; a risk-committee matrix for a critical vendor reads longer with reviewer questions clustered for the forum; a general-counsel-facing matrix reads as a redline-readiness brief. The sector overlay set drives which `references/sector-overlays/<sector>.md` is loaded; a dual-registrant or sponsor-bank-program arrangement may load two. Cross-cutting overlay loading follows scope plus the rule that cyber and privacy default-on for AI vendors and for any contract touching NPI, PHI, PCI, or important-business-service controls. The mandatory-clause overlay loads only when the digital-operational-resilience-act in-scope flag is true. Render format (Word, Excel, PowerPoint, Markdown) follows the workflow.
+Flexes by engagement. Matrix depth and length scale to criticality and review type. Audience drives shape: a TPRM-forum matrix reads short and operational; a risk-committee matrix for a critical vendor reads longer with reviewer questions clustered for the forum; a general-counsel-facing matrix reads as a redline-readiness brief. The sector overlay set drives which `references/sector-overlays.md#<sector>` is loaded; a dual-registrant or sponsor-bank-program arrangement may load two. Cross-cutting overlay loading follows scope plus the rule that cyber and privacy default-on for AI vendors and for any contract touching NPI, PHI, PCI, or important-business-service controls. The mandatory-clause overlay loads only when the digital-operational-resilience-act in-scope flag is true. Render format (Word, Excel, PowerPoint, Markdown) follows the workflow.
 
 ## Pointers
 
+`references/sector-overlays.md` and `references/cross-cutting.md` hold one section per sector or topic, and `examples.md` one per example. Find the heading and read only that section.
+
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
-- `references/sector-overlays/banking.md`, `insurance.md`, `capital-markets.md`, `payments-fintech.md` — sector-specific clause expectations loaded per scope.
-- `references/cross-cutting/cyber.md`, `privacy.md` — cross-cutting clause clusters; default-on for AI vendors and for any contract touching regulated data or IBS controls.
+- `references/sector-overlays.md#banking`, `references/sector-overlays.md#insurance`, `references/sector-overlays.md#capital-markets`, `references/sector-overlays.md#payments-fintech` — sector-specific clause expectations loaded per scope.
+- `references/cross-cutting.md#cyber`, `references/cross-cutting.md#privacy` — cross-cutting clause clusters; default-on for AI vendors and for any contract touching regulated data or IBS controls.
 - `references/firm-overlay.md` — firm-installed contract policy, paper standards, named legal-review forums beyond the regulatory baseline; consumed when present.
 - `templates/default-output.md` — gap matrix template.
 - `schemas/contract-gap-review.schema.json` — structured-output contract for downstream consumption.
-- `examples/` — cloud IaaS contract for a regional U.S. bank; digital-operational-resilience-act-in-scope SaaS contract for an EU subsidiary's collections platform.
-- `TROUBLESHOOTING.md` — recurring pitfalls (audit-rights reservation, notification-clock mismatch, sub-processor flow-down conflated with visibility, exit clauses skipped on non-critical, liability cap below expected loss, mandatory-clause overlay missed).
+- `examples.md` — cloud IaaS contract for a regional U.S. bank; digital-operational-resilience-act-in-scope SaaS contract for an EU subsidiary's collections platform.
+- `examples.md#troubleshooting` — recurring pitfalls (audit-rights reservation, notification-clock mismatch, sub-processor flow-down conflated with visibility, exit clauses skipped on non-critical, liability cap below expected loss, mandatory-clause overlay missed).
 
 The plugin-level shared references (`references/source-map.md`, `references/policy-control-library.md`, `references/review-gates.md`) sit at the plugin root and are consulted alongside the skill-level files.
 

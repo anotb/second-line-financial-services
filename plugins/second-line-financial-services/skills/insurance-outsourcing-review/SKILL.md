@@ -62,14 +62,16 @@ The pack closes with gaps, issues, and a recommended disposition: approve, appro
 
 ## Pointers
 
+`references/sector-overlays.md` and `references/cross-cutting.md` hold one section per sector or topic, and `examples.md` one per example. Find the heading and read only that section.
+
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
-- `references/sector-overlays/insurance.md` — the insurance frame this skill walks; load with every invocation.
-- `references/cross-cutting/cyber.md` — Model #668 cyber components, NYDFS 500.11 where applicable; load whenever the function touches information systems or policyholder data.
-- `references/cross-cutting/privacy.md` — HIPAA business-associate posture for life and health flows; state insurance information-and-privacy framework; load whenever PHI or NPI is in scope.
+- `references/sector-overlays.md#insurance` — the insurance frame this skill walks; load with every invocation.
+- `references/cross-cutting.md#cyber` — Model #668 cyber components, NYDFS 500.11 where applicable; load whenever the function touches information systems or policyholder data.
+- `references/cross-cutting.md#privacy` — HIPAA business-associate posture for life and health flows; state insurance information-and-privacy framework; load whenever PHI or NPI is in scope.
 - `references/firm-overlay.md` — firm-installed policy, taxonomy, named approvers, ORSA materiality threshold, internal AI register; consumed when present.
 - `templates/default-output.md` — pack template.
-- `examples/` — binding-authority MGA renewal across 12 states; life carrier renewing a TPA for closed-block claims administration.
-- `TROUBLESHOOTING.md` — recurring defects.
+- `examples.md` — binding-authority MGA renewal across 12 states; life carrier renewing a TPA for closed-block claims administration.
+- `examples.md#troubleshooting` — recurring defects.
 
 The plugin-level shared references (`references/source-map.md`, `references/policy-control-library.md`, `references/public-regulatory-scenarios.md`) sit at the plugin root and are consulted alongside the skill-level files.
 

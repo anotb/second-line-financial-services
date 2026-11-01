@@ -5,6 +5,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+MAX_PLUGIN_FILES = 512
 NAME_RE = re.compile(r'^[a-z0-9][a-z0-9-]*[a-z0-9]$|^[a-z0-9]$')
 errors = []
 
@@ -137,8 +138,16 @@ for plugin_dir in sorted(p for p in (ROOT / 'plugins').iterdir() if p.is_dir()):
             check_skill(skill_dir)
     check_agents(plugin_dir)
 
+def check_directory_limits():
+    # The plugin directory holds a plugin with more files than this for review.
+    for plugin_dir in sorted(p for p in (ROOT / 'plugins').iterdir() if p.is_dir()):
+        count = sum(1 for p in plugin_dir.rglob('*') if p.is_file())
+        if count > MAX_PLUGIN_FILES:
+            err(f'{plugin_dir}: {count} files, over the directory limit of {MAX_PLUGIN_FILES}')
+
 check_marketplace()
 check_no_removed_patterns()
+check_directory_limits()
 
 if errors:
     print('Validation failed:')

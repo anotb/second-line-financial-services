@@ -71,17 +71,17 @@ The tail of the register surfaces what the body cannot. **Cross-references and d
 
 Same row spine across sectors and cross-cutting topics; different source labels and different rigor expectations. Load only the overlays the scope flags. The overlays do not change the row structure; they change which sources the register is permitted to cite and which extraction patterns the practitioner expects to find.
 
-- `references/sector-overlays/banking.md` — banking-rule citation conventions (12 CFR Part X §Y; Title 12 sub-chapter structure); recurrent extraction patterns for OCC bulletins, FRB SR letters, FDIC FILs, NCUA letters; FFIEC inter-agency-statement parsing; the 36-hour bank notification rule (12 CFR Part 53; 12 CFR Part 225; 12 CFR Part 304) as a worked pattern.
-- `references/sector-overlays/insurance.md` — NAIC Model Law adoption tracking (model number plus state-by-state status); how to decompose a model law versus a state-adopted version; ORSA (Model 505) and Cybersecurity Insurance Data Security Model Law (Model 668) as worked patterns; market-conduct extraction conventions.
-- `references/sector-overlays/capital-markets.md` — SEC adopting-release structure (preamble vs operative text); Investment Advisers Act citation conventions (Section X of the Act; Rule 206(4)-Y); 1934 Act conventions; Form ADV instruction parsing; the marketing rule (Rule 206(4)-1) as a worked pattern; FINRA rulebook structure.
-- `references/sector-overlays/payments-fintech.md` — Reg E (12 CFR Part 1005), Reg Z (12 CFR Part 1026), Reg DD (12 CFR Part 1030), CFPB Section 1033 (open banking), CFPB Section 1071 (small business lending data) as worked patterns; money-transmitter state-by-state structure; how to decompose cross-jurisdiction obligations.
+- `references/sector-overlays.md#banking` — banking-rule citation conventions (12 CFR Part X §Y; Title 12 sub-chapter structure); recurrent extraction patterns for OCC bulletins, FRB SR letters, FDIC FILs, NCUA letters; FFIEC inter-agency-statement parsing; the 36-hour bank notification rule (12 CFR Part 53; 12 CFR Part 225; 12 CFR Part 304) as a worked pattern.
+- `references/sector-overlays.md#insurance` — NAIC Model Law adoption tracking (model number plus state-by-state status); how to decompose a model law versus a state-adopted version; ORSA (Model 505) and Cybersecurity Insurance Data Security Model Law (Model 668) as worked patterns; market-conduct extraction conventions.
+- `references/sector-overlays.md#capital-markets` — SEC adopting-release structure (preamble vs operative text); Investment Advisers Act citation conventions (Section X of the Act; Rule 206(4)-Y); 1934 Act conventions; Form ADV instruction parsing; the marketing rule (Rule 206(4)-1) as a worked pattern; FINRA rulebook structure.
+- `references/sector-overlays.md#payments-fintech` — Reg E (12 CFR Part 1005), Reg Z (12 CFR Part 1026), Reg DD (12 CFR Part 1030), CFPB Section 1033 (open banking), CFPB Section 1071 (small business lending data) as worked patterns; money-transmitter state-by-state structure; how to decompose cross-jurisdiction obligations.
 
 Cross-cutting overlays load when the rule is anchored to a cross-cutting topic:
 
-- `references/cross-cutting/cyber.md` — extracting incident-reporting timing obligations: SEC Item 1.05 4-business-day clock; NYDFS Part 500.17 72-hour clock; 12 CFR Part 53 36-hour bank notification rule; DORA Article 19 reporting; FFIEC IT Handbook expectations.
-- `references/cross-cutting/privacy.md` — extracting notice, consent, and disposal obligations from Reg P (12 CFR Part 1016), GLBA Safeguards Rule (16 CFR Part 314), state privacy laws (CCPA/CPRA, VCDPA, CTDPA), and SEC Reg S-P amendments.
-- `references/cross-cutting/climate.md` — extracting from a climate-related disclosure rule (SEC climate disclosure rule history; CSRD; ISSB-aligned standards); load only when the rule under extraction is climate-anchored.
-- `references/cross-cutting/conduct.md` — extracting prohibition vs affirmative-act obligations from UDAAP-adjacent rules; CFPB UDAAP exam manual conventions; fair-lending rule structure (ECOA/Reg B, FHA, Reg C/HMDA).
+- `references/cross-cutting.md#cyber` — extracting incident-reporting timing obligations: SEC Item 1.05 4-business-day clock; NYDFS Part 500.17 72-hour clock; 12 CFR Part 53 36-hour bank notification rule; DORA Article 19 reporting; FFIEC IT Handbook expectations.
+- `references/cross-cutting.md#privacy` — extracting notice, consent, and disposal obligations from Reg P (12 CFR Part 1016), GLBA Safeguards Rule (16 CFR Part 314), state privacy laws (CCPA/CPRA, VCDPA, CTDPA), and SEC Reg S-P amendments.
+- `references/cross-cutting.md#climate` — extracting from a climate-related disclosure rule (SEC climate disclosure rule history; CSRD; ISSB-aligned standards); load only when the rule under extraction is climate-anchored.
+- `references/cross-cutting.md#conduct` — extracting prohibition vs affirmative-act obligations from UDAAP-adjacent rules; CFPB UDAAP exam manual conventions; fair-lending rule structure (ECOA/Reg B, FHA, Reg C/HMDA).
 
 Loading an overlay the rule does not implicate adds noise without challenge value. Loading none when one applies is the more common failure mode.
 
@@ -113,13 +113,15 @@ Downstream consumers: `obligation-mapping` reads `obligations[*].obligation_id` 
 
 ## Pointers
 
+`references/sector-overlays.md` and `references/cross-cutting.md` hold one section per sector or topic, and `examples.md` one per example. Find the heading and read only that section.
+
 - `references/source-anchors.md` — citations and excerpts for the named anchors (Federal Register and CFR conventions; SEC and CFPB and OCC and FRB and FDIC and FinCEN and NCUA; EU regulation structure; FCA handbook; NAIC model laws; supervisory-letter formats).
-- `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md` — sector overlays loaded from scope.
-- `references/cross-cutting/{cyber,privacy,climate,conduct}.md` — cross-cutting overlays loaded from scope.
+- `references/sector-overlays.md` — sector overlays loaded from scope.
+- `references/cross-cutting.md` — cross-cutting overlays loaded from scope.
 - `templates/default-output.md` — register template.
 - `schemas/rule-to-obligation-extraction.schema.json` — structured-output contract.
-- `examples/` — SEC cybersecurity disclosure final rule (Item 1.05; Reg S-K Item 106) decomposed into atomic obligations; CFPB Section 1071 small-business-lending data rule (12 CFR 1002.107) decomposed into atomic obligations.
-- `TROUBLESHOOTING.md` — recurring defects in rule-to-obligation extractions.
+- `examples.md` — SEC cybersecurity disclosure final rule (Item 1.05; Reg S-K Item 106) decomposed into atomic obligations; CFPB Section 1071 small-business-lending data rule (12 CFR 1002.107) decomposed into atomic obligations.
+- `examples.md#troubleshooting` — recurring defects in rule-to-obligation extractions.
 
 ## Human review and AI disclosure
 

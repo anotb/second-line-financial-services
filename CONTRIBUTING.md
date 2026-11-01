@@ -8,14 +8,14 @@ Thanks for thinking about contributing. The repo is set up so a senior practitio
 2. Add `SKILL.md` with frontmatter (`name`, `description`, optional `argument-hint`). Keep `description` to 120 characters or fewer, with the key use case first. Put `Best for:` and `Not the right tool when:` in a `## When to use` section. No `Anchored to:` line.
 3. Add `references/source-anchors.md` with named, dated regulatory and standards citations. Public sources only.
 4. Add `templates/default-output.md` for the artifact shape.
-5. Add `references/sector-overlays/<sector>.md` for any sector that adds material nuance, and `references/cross-cutting/<topic>.md` (cyber, privacy, conduct, climate) where the work touches it.
-6. Add `examples/<scenario>.md` derived from public regulatory or enforcement material. No named institutions unless they are public defendants in a finalized enforcement action with a published consent order.
+5. Add a `## <sector>` section to `references/sector-overlays.md` for any sector that adds material nuance, and a `## <topic>` section to `references/cross-cutting.md` (cyber, privacy, conduct, climate) where the work touches it.
+6. Add a `## <scenario>` section to `examples.md` derived from public regulatory or enforcement material. No named institutions unless they are public defendants in a finalized enforcement action with a published consent order.
 7. Optional: `schemas/<skill>.schema.json` if a downstream skill or automated consumer benefits from a structured record. Schemas are not required and should not be added for their own sake.
 8. Run `python3 scripts/check.py` and `python3 scripts/check-skill-content.py` to validate.
 
 ## Add a new sector overlay
 
-Sector flavor for an existing capability skill goes inside that skill at `references/sector-overlays/<sector>.md`. Sector skills cover sector-unique work only; do not duplicate a capability skill into a sector plugin.
+Sector flavor for an existing capability skill goes inside that skill, as a `## <sector>` section in `references/sector-overlays.md`. Sector skills cover sector-unique work only; do not duplicate a capability skill into a sector plugin.
 
 ## Standalone agent plugins
 

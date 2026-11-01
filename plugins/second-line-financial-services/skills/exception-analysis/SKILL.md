@@ -33,10 +33,10 @@ Before classifying, get plain answers. Most cycles answer them in the test plan 
 - **Whose register is this for.** The testing manager closing the cycle, the QA reviewer challenging exception treatment, the issue-writeup author opening tracked findings, the internal audit lead deciding reliance, the examiner who reads the file later. Audience drives how heavily the rationale fields read and which dispositions get the most attention.
 - **Has fieldwork actually finished.** All sample items inspected, all procedures executed, walkthrough complete. A register built on partial fieldwork mis-projects deviation rate and mis-ranks severity. If fieldwork is open, route back to `workpaper-drafter` and stop.
 - **What is the criterion the test was measured against.** Pull it from the test plan and the workpaper's source criteria block. Classification turns on whether the condition deviates from the criterion or from the tester's reading of it; without the criterion in hand, scope-disagreement classifications cannot be defended.
-- **Is there a prior cycle with similar deviations.** A repeat-issue flag changes severity calibration and the issue-writeup handoff. Check the issue log for the same control or population before classifying; do not let "looks new" pass when the prior issue is still open.
+- **Is there a prior cycle with similar deviations.** A repeat-issue flag changes severity calibration and the issue-writeup handoff. Check the issue log for the same control or population before classifying; do not let "looks new" review when the prior issue is still open.
 - **What does the firm's tolerable deviation rate say.** Pulled from the test plan. Aggregation reads against tolerable, not against the preparer's intuition. If the rate is unset, that is a test-plan defect to flag back, not a number to invent here.
 
-When `scope` (per `scoping`) is supplied, consume it: `institution.type` and `institution.primary_regulators` set the supervisory framing for severity rationale and dispositional language, `sector_overlay_set` selects which `references/sector-overlays/<sector>.md` loads, `cross_cutting_overlay_set` selects the `references/cross-cutting/<topic>.md` files, `persona.role` sets which decision forum the register passes through, `source_posture` constrains what the body can carry. When it is not supplied, draft against what the test plan and workpaper carry, default to the testing program's standing posture, and note in the register that scope was not formalised separately.
+When `scope` (per `scoping`) is supplied, consume it: `institution.type` and `institution.primary_regulators` set the supervisory framing for severity rationale and dispositional language, `sector_overlay_set` selects which `references/sector-overlays.md#<sector>` loads, `cross_cutting_overlay_set` selects the `references/cross-cutting.md#<topic>` files, `persona.role` sets which decision forum the register passes through, `source_posture` constrains what the body can carry. When it is not supplied, draft against what the test plan and workpaper carry, default to the testing program's standing posture, and note in the register that scope was not formalised separately.
 
 ## How the register gets built
 
@@ -73,12 +73,12 @@ The sign-off block carries preparer, reviewer (separate role), and a confidence 
 
 The same classification spine carries different criteria sources, different severity calibrations, and different reviewer machinery across sectors and cross-cutting topics. Load only the overlays the scope flags:
 
-- `references/sector-overlays/banking.md` carries large-bank supervisory-finding terminology context (the firm drafts in the same shape so its records align to examiner vocabulary; the firm does not invent a regulator-issued matter), heightened-standards severity flavour, and the BSA/AML and consumer-compliance exception conventions.
-- `references/sector-overlays/insurance.md` carries state DOI market-conduct exception conventions and the model-audit-rule severity framing for ICFR-relevant findings.
-- `references/sector-overlays/capital-markets.md` carries supervision-rule exception treatment for broker-dealer and investment-adviser testing, and enforcement-style language hygiene (the register concludes on control effectiveness, not on legal violation).
-- `references/sector-overlays/payments-fintech.md` carries sponsor-bank oversight exception conventions and Reg E error-resolution exception treatment.
-- `references/cross-cutting/cyber.md` is the most-loaded cross-cutting overlay. Cyber exceptions need careful classification because evidence gaps (no log) often look like control failures; the overlay carries the disambiguation pattern, IAM-recertification exception flavour, and incident-response control-effectiveness language.
-- `references/cross-cutting/conduct.md` loads when the test sampled a consumer-impact population. Conduct exceptions need consumer-harm framing distinct from technical control deviation; severity calibration shifts when customer harm is identifiable.
+- `references/sector-overlays.md#banking` carries large-bank supervisory-finding terminology context (the firm drafts in the same shape so its records align to examiner vocabulary; the firm does not invent a regulator-issued matter), heightened-standards severity flavour, and the BSA/AML and consumer-compliance exception conventions.
+- `references/sector-overlays.md#insurance` carries state DOI market-conduct exception conventions and the model-audit-rule severity framing for ICFR-relevant findings.
+- `references/sector-overlays.md#capital-markets` carries supervision-rule exception treatment for broker-dealer and investment-adviser testing, and enforcement-style language hygiene (the register concludes on control effectiveness, not on legal violation).
+- `references/sector-overlays.md#payments-fintech` carries sponsor-bank oversight exception conventions and Reg E error-resolution exception treatment.
+- `references/cross-cutting.md#cyber` is the most-loaded cross-cutting overlay. Cyber exceptions need careful classification because evidence gaps (no log) often look like control failures; the overlay carries the disambiguation pattern, IAM-recertification exception flavour, and incident-response control-effectiveness language.
+- `references/cross-cutting.md#conduct` loads when the test sampled a consumer-impact population. Conduct exceptions need consumer-harm framing distinct from technical control deviation; severity calibration shifts when customer harm is identifiable.
 
 Privacy and climate cross-cutting overlays follow the same pattern; this skill ships cyber and conduct as the cross-cutting files because they are the most frequent triggers for exception classification. Where firm policy or taxonomy applies (severity ladder specific to the firm, named committee gates, policy-floor severity overrides for privileged access or critical data), it lives in `references/firm-overlay.md` and is consumed when present.
 
@@ -101,14 +101,16 @@ Register depth and length scale to deviation volume and severity range. A clean 
 
 ## Pointers
 
+`references/sector-overlays.md` and `references/cross-cutting.md` hold one section per sector or topic, and `examples.md` one per example. Find the heading and read only that section.
+
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
-- `references/sector-overlays/banking.md`, `insurance.md`, `capital-markets.md`, `payments-fintech.md` — sector-specific exception conventions loaded per scope.
-- `references/cross-cutting/cyber.md`, `conduct.md` — cross-cutting flavour; cyber default-on for IAM, data-protection, and security-rule-mandated controls; conduct default-on for consumer-facing populations.
+- `references/sector-overlays.md#banking`, `references/sector-overlays.md#insurance`, `references/sector-overlays.md#capital-markets`, `references/sector-overlays.md#payments-fintech` — sector-specific exception conventions loaded per scope.
+- `references/cross-cutting.md#cyber`, `references/cross-cutting.md#conduct` — cross-cutting flavour; cyber default-on for IAM, data-protection, and security-rule-mandated controls; conduct default-on for consumer-facing populations.
 - `references/firm-overlay.md` — firm-installed methodology, taxonomy, severity ladder, named committee gates, and policy-floor overrides beyond the regulatory baseline; consumed when present.
 - `templates/default-output.md` — exception register template.
 - `schemas/exception.schema.json` — structured-output contract for downstream consumption.
-- `examples/` — Reg E error-resolution exception classification at a regional bank; access-recertification exception classification at an entity under a state security-rule.
-- `TROUBLESHOOTING.md` — recurring pitfalls (treating every deviation as a finding, confusing evidence gap with control failure, skipping root cause, projecting anomalies, severity inflation, empty handoff packages).
+- `examples.md` — Reg E error-resolution exception classification at a regional bank; access-recertification exception classification at an entity under a state security-rule.
+- `examples.md#troubleshooting` — recurring pitfalls (treating every deviation as a finding, confusing evidence gap with control failure, skipping root cause, projecting anomalies, severity inflation, empty handoff packages).
 
 The plugin-level shared references (`references/source-map.md`, `references/policy-control-library.md`, `references/review-gates.md`) sit at the plugin root and are consulted alongside the skill-level files.
 

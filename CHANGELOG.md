@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.1 — 2026-10-31
+
+### Under the directory's file limit
+
+The plugin goes from 852 files to 483, which clears the directory's hold on plugins over 512 files. No content is removed. In each skill, `references/sector-overlays/*.md` becomes `references/sector-overlays.md`, `references/cross-cutting/*.md` becomes `references/cross-cutting.md`, and `examples/*.md` plus `TROUBLESHOOTING.md` become `examples.md`, with one section per former file. Skills now say to read only the section they need. `scripts/check.py` fails if the plugin goes over 512 files.
+
 ## 1.0.0 — 2026-10-31
 
 ### One plugin

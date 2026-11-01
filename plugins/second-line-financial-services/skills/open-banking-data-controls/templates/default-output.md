@@ -160,7 +160,7 @@ Hashed-but-recoverable credentials are still credentials. The recoverability is 
 | Account-takeover detection | | | | |
 | Breach-response chain | | | | |
 
-Cross-link to `references/cross-cutting/cyber.md` for the parallel-clock and assurance-level detail.
+Cross-link to `references/cross-cutting.md#cyber` for the parallel-clock and assurance-level detail.
 
 ## Privacy controls
 
@@ -182,7 +182,7 @@ Cross-link to `references/cross-cutting/cyber.md` for the parallel-clock and ass
 | Global Privacy Control signal handling | | | | |
 | Vendor DPA-vs-actual reconciliation | | | | |
 
-Cross-link to `references/cross-cutting/privacy.md` for the named anchors and the state-by-state detail.
+Cross-link to `references/cross-cutting.md#privacy` for the named anchors and the state-by-state detail.
 
 ## Vendor and fourth-party register
 

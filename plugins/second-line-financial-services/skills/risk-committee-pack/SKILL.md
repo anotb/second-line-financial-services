@@ -67,7 +67,7 @@ The appendices carry the data confidence and BCBS 239 posture (label, known limi
 
 ### Climate
 
-When the scope flags climate, the climate cross-cutting overlay (`references/cross-cutting/climate.md` when installed) drives placement and depth. Climate is part of the enterprise heat map, not a separate appendix; either as a separately-rated cell or under strategic with rationale documented in the cell commentary. The Climate section in the body carries governance summary, physical and transition risk summary, scenarios used (NGFS Net Zero 2050, NGFS Delayed Transition, NGFS Current Policies, FRB pilot scenarios where applicable), and the link to the firm's external climate disclosure (10-K Item 1500 series, CSRD-aligned report, voluntary TCFD report). The SEC climate disclosure rule has been subject to legal challenges and stay actions; never assert current effectiveness without checking the SEC's posture as of the report date. Default posture is to lean on TCFD for substantive content and flag the SEC rule status in source trace.
+When the scope flags climate, the climate cross-cutting overlay (`references/cross-cutting.md#climate` when installed) drives placement and depth. Climate is part of the enterprise heat map, not a separate appendix; either as a separately-rated cell or under strategic with rationale documented in the cell commentary. The Climate section in the body carries governance summary, physical and transition risk summary, scenarios used (NGFS Net Zero 2050, NGFS Delayed Transition, NGFS Current Policies, FRB pilot scenarios where applicable), and the link to the firm's external climate disclosure (10-K Item 1500 series, CSRD-aligned report, voluntary TCFD report). The SEC climate disclosure rule has been subject to legal challenges and stay actions; never assert current effectiveness without checking the SEC's posture as of the report date. Default posture is to lean on TCFD for substantive content and flag the SEC rule status in source trace.
 
 ### Cyber
 
@@ -101,14 +101,16 @@ Downstream consumers: the structured object feeds the firm's committee minutes s
 
 ## Pointers
 
+`references/sector-overlays.md` and `references/cross-cutting.md` hold one section per sector or topic, and `examples.md` one per example. Find the heading and read only that section.
+
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
-- `references/sector-overlays/{banking,insurance,capital-markets}.md` — sector overlays loaded from scope.
-- `references/cross-cutting/climate.md` — climate cross-cutting overlay (when installed).
+- `references/sector-overlays.md` — sector overlays loaded from scope.
+- `references/cross-cutting.md#climate` — climate cross-cutting overlay (when installed).
 - `references/firm-overlay.md` — firm-installed taxonomy, RAS structure, governance machinery (consumed when present).
 - `templates/default-output.md` — pack template with the named sections.
 - `schemas/risk-committee-pack.schema.json` — structured-output contract.
-- `examples/` — anonymised public-source-derived scenarios.
-- `TROUBLESHOOTING.md` — recurring defects.
+- `examples.md` — anonymised public-source-derived scenarios.
+- `examples.md#troubleshooting` — recurring defects.
 
 ## Human review and AI disclosure
 

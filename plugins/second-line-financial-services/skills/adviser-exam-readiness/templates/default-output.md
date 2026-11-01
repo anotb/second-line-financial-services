@@ -199,7 +199,7 @@ For each lane in scope, the same internal shape: a lane summary, the public-crit
 
 ### Cybersecurity / Reg S-P / NYDFS Part 500 (where applicable)
 
-(See `references/cross-cutting/cyber.md` for anchors and detail.)
+(See `references/cross-cutting.md#cyber` for anchors and detail.)
 
 **Lane summary.** [Reg S-P program version and approval; breach-notification capability test; cyber rule for advisers / funds — current state; NYDFS 500 status if applicable; vendor security posture; most recent penetration test / vulnerability assessment.]
 

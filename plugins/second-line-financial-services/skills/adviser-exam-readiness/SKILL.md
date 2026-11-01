@@ -38,7 +38,7 @@ Settle these before drafting. Most exam cycles answer them in the first conversa
 - **What does the firm inherit at the start of the cycle.** Prior exam findings (open, partially-remediated, closed-pending-confirmation, closed); recent self-identified issues; recent enforcement themes from EXAMS or FINRA touching the firm's business. EXAMS revisits prior findings; the readiness check on prior-finding remediation status is high-priority.
 - **What is the source posture and access population for the pack.** Public-only, public-plus-firm-policy, public-plus-firm-policy-plus-evidence, or connector-aware. Prior supervisory letters, prior deficiency letters, and Form ADV-NR responses constrain the pack's access population; do not carry CSI into a pack reading at a lower population.
 
-When an `scope` record is supplied, consume it for firm registration constellation, persona, source posture, sector overlay (always capital-markets for this skill — see `references/sector-overlays/capital-markets.md`), and cross-cutting overlay set. When it is not supplied, ask the questions and default; flag the defaults in the pack.
+When an `scope` record is supplied, consume it for firm registration constellation, persona, source posture, sector overlay (always capital-markets for this skill — see `references/sector-overlays.md#capital-markets`), and cross-cutting overlay set. When it is not supplied, ask the questions and default; flag the defaults in the pack.
 
 ## How the pack gets built
 
@@ -48,20 +48,20 @@ The pack has a four-part body around a cover. Walk it in the order the conversat
 
 **Part A — Document-request response matrix.** Per requested item: request item, source location (system of record), evidence pin, reviewer role, status (`open` / `in-progress` / `ready-for-review` / `submitted`), due date, redaction-required flag. The matrix is the reviewer's working artifact; renderable as a tab-per-domain Excel workbook (Form ADV / 206(4)-7 / 204A-1 / 206(4)-2 / 206(4)-1 / 204-2 / Form PF / Reg BI-CRS / FINRA 3110-3310 / cyber-Reg S-P) so each domain reviewer works the slice they own.
 
-**Part B — Domain-by-domain readiness.** One subsection per applicable rule lane; lanes the firm does not run drop out. Same internal shape: lane summary, public-criteria pin (citation by path to `references/source-anchors.md`), evidence inventory (system of record and named-role owner, not screenshots), open issues with trend, reviewer questions, confidence label. The lane structure is in `references/sector-overlays/capital-markets.md`. The Marketing Rule lane chains to `marketing-rule-evidence`; the best-execution lane (where in scope) chains to `best-execution-surveillance`; the fund-board side (where in scope) chains to `fund-board-reporting`.
+**Part B — Domain-by-domain readiness.** One subsection per applicable rule lane; lanes the firm does not run drop out. Same internal shape: lane summary, public-criteria pin (citation by path to `references/source-anchors.md`), evidence inventory (system of record and named-role owner, not screenshots), open issues with trend, reviewer questions, confidence label. The lane structure is in `references/sector-overlays.md#capital-markets`. The Marketing Rule lane chains to `marketing-rule-evidence`; the best-execution lane (where in scope) chains to `best-execution-surveillance`; the fund-board side (where in scope) chains to `fund-board-reporting`.
 
-**Part C — Mock-interview prep.** EXAMS reads for posture, not just paperwork; the mock interview is where firms underperform. For each interviewee role (CCO, CEO, CFO, head of trading, head of marketing, valuation designee chair, designated FINRA supervisor, BSA officer as applicable), the pack carries likely questions, prepared response anchors that pin to evidence (not scripted answers), and the rehearsal status. Conduct themes — IA Act §206 fiduciary duty, Reg BI care obligation, conflict disclosure, code-of-ethics escalation — sit across roles and load from `references/cross-cutting/conduct.md`.
+**Part C — Mock-interview prep.** EXAMS reads for posture, not just paperwork; the mock interview is where firms underperform. For each interviewee role (CCO, CEO, CFO, head of trading, head of marketing, valuation designee chair, designated FINRA supervisor, BSA officer as applicable), the pack carries likely questions, prepared response anchors that pin to evidence (not scripted answers), and the rehearsal status. Conduct themes — IA Act §206 fiduciary duty, Reg BI care obligation, conflict disclosure, code-of-ethics escalation — sit across roles and load from `references/cross-cutting.md#conduct`.
 
 **Part D — Gap and remediation list.** Per gap: gap ID, domain, severity (`critical` / `high` / `medium` / `low`), description, owner role, due date, evidence required, status. Severity calibrates to exam-exposure risk: `critical` for items the document-request submission would expose without remediation; `high` for items the mock interview would expose; `medium` for items routinely flagged in EXAMS Risk Alerts that the firm has not yet hardened; `low` for hygiene.
 
 ## Sector and cross-cutting overlays
 
-This skill is capital-markets-only. The registration-class branching (IA / BD / dual registrant / private-fund adviser / fund adviser) lives in `references/sector-overlays/capital-markets.md`. There is no banking, insurance, or payments-fintech overlay file. Cross-cutting overlays load when the cycle scope implicates them.
+This skill is capital-markets-only. The registration-class branching (IA / BD / dual registrant / private-fund adviser / fund adviser) lives in `references/sector-overlays.md#capital-markets`. There is no banking, insurance, or payments-fintech overlay file. Cross-cutting overlays load when the cycle scope implicates them.
 
-- `cross-cutting/cyber.md` loads when the document-request scope includes Reg S-P, cybersecurity, or information-security topics, or when the firm is NY-licensed and NYDFS Part 500 is in scope. The SEC's separately-proposed adviser-and-fund cyber rule (2022) was withdrawn in 2025 and is not in force; Reg S-P is the operative anchor.
-- `cross-cutting/conduct.md` loads by default for retail-customer-serving firms and on demand for institutional firms with material conflict-of-interest topics in scope. Anchors: IA Act §206 fiduciary duty (SEC Commission Interpretation, June 5, 2019); Reg BI; Form CRS; FINRA Rule 2111 suitability.
-- `cross-cutting/privacy.md` does not load. Privacy-specific obligations under Reg S-P and GLBA load through the cyber overlay.
-- `cross-cutting/climate.md` loads only when ESG-labeled product disclosures or Names Rule 35d-1 amendments are specifically in exam scope; otherwise carry as a reviewer question and skip the overlay.
+- `cross-cutting.md#cyber` loads when the document-request scope includes Reg S-P, cybersecurity, or information-security topics, or when the firm is NY-licensed and NYDFS Part 500 is in scope. The SEC's separately-proposed adviser-and-fund cyber rule (2022) was withdrawn in 2025 and is not in force; Reg S-P is the operative anchor.
+- `cross-cutting.md#conduct` loads by default for retail-customer-serving firms and on demand for institutional firms with material conflict-of-interest topics in scope. Anchors: IA Act §206 fiduciary duty (SEC Commission Interpretation, June 5, 2019); Reg BI; Form CRS; FINRA Rule 2111 suitability.
+- `cross-cutting.md#privacy` does not load. Privacy-specific obligations under Reg S-P and GLBA load through the cyber overlay.
+- `cross-cutting.md#climate` loads only when ESG-labeled product disclosures or Names Rule 35d-1 amendments are specifically in exam scope; otherwise carry as a reviewer question and skip the overlay.
 
 ## Non-negotiables
 
@@ -73,10 +73,12 @@ This skill is capital-markets-only. The registration-class branching (IA / BD / 
 
 ## Pointers
 
+`references/sector-overlays.md` and `references/cross-cutting.md` hold one section per sector or topic, and `examples.md` one per example. Find the heading and read only that section.
+
 - `references/source-anchors.md` — citations and excerpts for the named anchors (IA Act / ICA / Exchange Act / FINRA / SEC EXAMS Priorities and Risk Alerts; Reg S-P 2024; SEC cyber rule [verify state]; PFA Rule vacatur context; Form PF amendments; Names Rule; Rule 605 / 606).
-- `references/sector-overlays/capital-markets.md` — registration-class branching (IA, BD, dual registrant, private-fund adviser, fund adviser), document-request lane structure, exam-type calibration.
-- `references/cross-cutting/cyber.md` — Reg S-P 2024 amendments, SEC cyber rule for advisers / funds [verify state], NYDFS Part 500, EXAMS cyber Risk Alerts, FINRA cyber guidance.
-- `references/cross-cutting/conduct.md` — IA Act §206 fiduciary duty, Reg BI four obligations, Form CRS, FINRA Rule 2111 suitability, conflict-register structure, mock-interview conduct themes.
+- `references/sector-overlays.md#capital-markets` — registration-class branching (IA, BD, dual registrant, private-fund adviser, fund adviser), document-request lane structure, exam-type calibration.
+- `references/cross-cutting.md#cyber` — Reg S-P 2024 amendments, SEC cyber rule for advisers / funds [verify state], NYDFS Part 500, EXAMS cyber Risk Alerts, FINRA cyber guidance.
+- `references/cross-cutting.md#conduct` — IA Act §206 fiduciary duty, Reg BI four obligations, Form CRS, FINRA Rule 2111 suitability, conflict-register structure, mock-interview conduct themes.
 - `templates/default-output.md` — Word-memo named sections plus the Excel matrix tab structure.
 
 ## Output

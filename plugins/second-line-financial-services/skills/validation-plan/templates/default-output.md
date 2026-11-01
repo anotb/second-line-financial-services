@@ -76,7 +76,7 @@ Attack class catalogue is tied to architecture flags; missing the most relevant 
 |---|---|---|---|
 | [out-of-time / stress scenario / adversarial input / direct prompt injection / indirect prompt injection via retrieved content / jailbreak / RAG poisoning / model extraction / tool misuse / goal hijack] | [method] | [criterion] | [function] |
 
-For traditional ML: out-of-time backtest, stress scenario, segment robustness, adversarial input. For RAG: add indirect prompt injection on retrieved content, RAG poisoning. For agentic: add tool misuse, goal hijack. For vendor-hosted GenAI: add a vendor model-version swap drill. For execution algos in capital markets: align with SEC Rule 15c3-5 controls (load `references/sector-overlays/capital-markets.md`).
+For traditional ML: out-of-time backtest, stress scenario, segment robustness, adversarial input. For RAG: add indirect prompt injection on retrieved content, RAG poisoning. For agentic: add tool misuse, goal hijack. For vendor-hosted GenAI: add a vendor model-version swap drill. For execution algos in capital markets: align with SEC Rule 15c3-5 controls (load `references/sector-overlays.md#capital-markets`).
 
 ---
 
@@ -86,9 +86,9 @@ For traditional ML: out-of-time backtest, stress scenario, segment robustness, a
 |---|---|---|---|
 | [protected or policy-relevant dimension] | [method] | [criterion] | [known limitations of the method as applied] |
 
-For insurance pricing or underwriting, frame the test against unfair discrimination per state insurance code (NAIC Model #880 vocabulary) in addition to or in place of generic fairness vocabulary. Load `references/sector-overlays/insurance.md`.
+For insurance pricing or underwriting, frame the test against unfair discrimination per state insurance code (NAIC Model #880 vocabulary) in addition to or in place of generic fairness vocabulary. Load `references/sector-overlays.md#insurance`.
 
-For credit decisioning under ECOA / Reg B: load `references/sector-overlays/banking.md` and integrate with the firm's fair-lending test plan; the validator's scope and the consumer-compliance test plan reference each other but stay distinct artifacts.
+For credit decisioning under ECOA / Reg B: load `references/sector-overlays.md#banking` and integrate with the firm's fair-lending test plan; the validator's scope and the consumer-compliance test plan reference each other but stay distinct artifacts.
 
 ---
 
@@ -160,7 +160,7 @@ Vendor self-attestation carries low to medium confidence. Firm-independent evalu
 
 ## 13. Sector overlay notes (when applicable)
 
-When the scope names a sector, the matching `references/sector-overlays/<sector>.md` adds named scope items here. Examples:
+When the scope names a sector, the matching `references/sector-overlays.md#<sector>` adds named scope items here. Examples:
 
 - Banking: ECOA / Reg B fair-lending integration; CCAR / DFAST overlap if model is stress-eligible; FFIEC BSA/AML manual scope for AML models; OCC Heightened Standards governance touchpoint.
 - Insurance: AIS Program element coverage per NAIC Bulletin Dec 2023; per-state DOI bulletin alignment (CO, NY DFS, CA); unfair-discrimination framing under Model #880; ORSA materiality.
@@ -173,7 +173,7 @@ If no sector overlay is loaded, this section is omitted.
 
 ## 14. Cross-cutting overlay notes (when applicable)
 
-When the scope flags cyber, privacy, or conduct, the matching `references/cross-cutting/<topic>.md` adds named scope items here.
+When the scope flags cyber, privacy, or conduct, the matching `references/cross-cutting.md#<topic>` adds named scope items here.
 
 - Cyber: prompt-injection robustness scope, RAG poisoning, model extraction, NYDFS October 2024 letter alignment.
 - Privacy: PII memorisation tests, training-data leak tests, retrieval over inappropriate corpora.

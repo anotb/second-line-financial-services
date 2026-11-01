@@ -239,11 +239,11 @@
           "criterion": { "type": "string" },
           "metric": {
             "type": "string",
-            "description": "What is measured (recovery time, data integrity check pass rate, customer-impact volume, decisioning latency, comms cycle time)."
+            "description": "What is measured (recovery time, data integrity check success rate, customer-impact volume, decisioning latency, comms cycle time)."
           },
           "threshold": {
             "type": "string",
-            "description": "The pass or fail line. Tied to the impact tolerance, not to the vendor's published SLA."
+            "description": "The success or fail line. Tied to the impact tolerance, not to the vendor's published SLA."
           },
           "tolerance_link": {
             "type": "string",

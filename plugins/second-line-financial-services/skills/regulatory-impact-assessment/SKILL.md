@@ -76,7 +76,7 @@ The assessment has the same spine across regulators and source types. The order 
 
 ## Sector and cross-cutting overlays
 
-When the scope names a sector, load the matching overlay in `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md`. The overlay carries the regulator-specific scoping convention, threshold tier semantics, named-policy and named-control patterns, sector-specific cost-to-comply patterns, and sector-specific strategy posture (industry-association alignment, agency-engagement convention, peer-firm patterns). Same pattern for cross-cutting overlays where present (`cyber.md`, `privacy.md`, `climate.md`, `conduct.md`).
+When the scope names a sector, load the matching overlay in `references/sector-overlays.md`. The overlay carries the regulator-specific scoping convention, threshold tier semantics, named-policy and named-control patterns, sector-specific cost-to-comply patterns, and sector-specific strategy posture (industry-association alignment, agency-engagement convention, peer-firm patterns). Same pattern for cross-cutting overlays where present (`cyber.md`, `privacy.md`, `climate.md`, `conduct.md`).
 
 The overlay enforces a boundary the generic skill cannot. A banking overlay carries OCC, FRB, FDIC supervisory framing, Heightened Standards thresholds, CRA scoping where relevant, and the federal banking response-letter convention; it does not carry SEC marketing-rule framing. An insurance overlay carries NAIC model-law adoption mechanics (state-by-state effective-date variance) and NYDFS overlays; it does not carry CFPB authority. A capital-markets overlay carries SEC adopting-release mechanics, FINRA rule-filing alignment, IAA Rule 206(4)-7 implications, and the AUM threshold mechanics; it does not carry banking heightened-standards framing. A payments-fintech overlay carries CFPB larger-participant authority, state money-transmitter overlays, and bank-fintech partnership framing.
 
@@ -92,14 +92,16 @@ Depth scales to the source: a 48-hour read on an FIL is shorter than a 30-day re
 
 ## Pointers
 
+`references/sector-overlays.md` and `references/cross-cutting.md` hold one section per sector or topic, and `examples.md` one per example. Find the heading and read only that section.
+
 - `references/source-anchors.md` — citations and excerpts for the named anchors (federal banking, CFPB, SEC and FINRA, NYDFS and state regulators, FinCEN, NCUA, NAIC, OMB Circular A-4, ISO/IEC 42001, NIST AI RMF, federal-register impact-analysis convention).
-- `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md` — sector overlays loaded from scope.
-- `references/cross-cutting/{cyber,privacy,climate,conduct}.md` — cross-cutting overlays loaded from scope where the rule touches the topic.
+- `references/sector-overlays.md` — sector overlays loaded from scope.
+- `references/cross-cutting.md` — cross-cutting overlays loaded from scope where the rule touches the topic.
 - `references/firm-overlay.md` — firm-installed regulator-relationship history, named policy taxonomy, named control taxonomy, named cost-baseline references, internal escalation triggers, named industry-association memberships; consumed when present.
 - `templates/default-output.md` — assessment template.
 - `schemas/regulatory-impact-assessment.schema.json` — structured-output contract for downstream consumption.
-- `examples/` — public-source-derived scenarios.
-- `TROUBLESHOOTING.md` — recurring defects in impact assessments.
+- `examples.md` — public-source-derived scenarios.
+- `examples.md#troubleshooting` — recurring defects in impact assessments.
 
 ## Output
 

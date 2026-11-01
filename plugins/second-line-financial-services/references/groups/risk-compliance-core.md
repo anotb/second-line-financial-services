@@ -34,11 +34,11 @@ Skills cite by anchor file path; the regulator and section references live in `r
 
 ## Sector and cross-cutting overlays
 
-All four sectors and the cyber / privacy / conduct cross-cutting topics apply to most skills here. Overlays load conditionally from the scope record and live under each skill's `references/sector-overlays/` and `references/cross-cutting/` folders.
+All four sectors and the cyber / privacy / conduct cross-cutting topics apply to most skills here. Overlays load conditionally from the scope record and live under each skill's `references/sector-overlays.md` and `references/cross-cutting.md` folders.
 
 ## Components
 
-- `skills/` — the seven skills above. Each ships its own `SKILL.md`, `references/source-anchors.md`, sector and cross-cutting overlays where applicable, `templates/default-output.md`, and (where useful) `schemas/` and `examples/`.
+- `skills/` — the seven skills above. Each ships its own `SKILL.md`, `references/source-anchors.md`, sector and cross-cutting overlays where applicable, `templates/default-output.md`, and (where useful) `schemas/` and `examples.md`.
 - `references/` — plugin-level shared references: source map, policy and control library, named decision forums and confidence labels.
 - `schemas/` — structured-output templates for obligations, controls, and issues. Each plugin self-ships the schemas its skills use, matching Anthropic's first-party self-contained pattern. Schema dedup (drop schemas a plugin's skills don't actually use) is tracked in [ROADMAP.md](https://github.com/anotb/second-line-financial-services/blob/main/ROADMAP.md).
 

@@ -42,7 +42,7 @@ When the scope record is supplied, the skill consumes it for institution profile
 
 ## How the triage walks
 
-Five passes, in order. Skipping a pass on the assumption the answer is obvious is the most common defect; the artifact records every pass, including the ones that do not apply.
+Five passes, in order. Skipping a review on the assumption the answer is obvious is the most common defect; the artifact records every pass, including the ones that do not apply.
 
 **Article 2 scope and operator role.** EU touch-points are enumerated against `eu_exposure` (eu_users, eu_operations, eu_data_subjects, market_placement). At least one true brings the use case into scope; all false ends the triage with a "no AI Act exposure" record and a route to firm-internal tiering. Operator roles per Article 3 are enumerated for every entity in the chain: provider, deployer, importer, distributor, authorised representative. A firm holding multiple roles is the rule, not the exception. Vendor-built plus firm-fine-tuned plus firm-deployed picks up provider obligations under Article 25 for the fine-tuned variant, deployer obligations under Article 26 for the deployment, and importer obligations where the upstream entity is non-EU.
 
@@ -94,14 +94,16 @@ Downstream consumers: `model-card-builder` pulls the Annex IV documentation delt
 
 ## Pointers
 
+`references/sector-overlays.md` and `references/cross-cutting.md` hold one section per sector or topic, and `examples.md` one per example. Find the heading and read only that section.
+
 - `references/source-anchors.md` — citations and section-referenced excerpts for every primary anchor.
-- `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md` — sector overlays loaded from scope. The insurance overlay carries the substance of the deprecated `insurance-ai-act-triage` skill.
-- `references/cross-cutting/conduct.md` — conduct overlay loaded when scope names it. Cyber and privacy framings are inline in the body above (Article 15 robustness × NIS2 / DORA Articles 5 to 14; Article 27 FRIA × GDPR Article 35 DPIA reconciliation); this skill does not ship separate cyber or privacy cross-cutting files because the substance lives at Article level rather than as a parallel domain overlay.
+- `references/sector-overlays.md` — sector overlays loaded from scope. The insurance overlay carries the substance of the deprecated `insurance-ai-act-triage` skill.
+- `references/cross-cutting.md#conduct` — conduct overlay loaded when scope names it. Cyber and privacy framings are inline in the body above (Article 15 robustness × NIS2 / DORA Articles 5 to 14; Article 27 FRIA × GDPR Article 35 DPIA reconciliation); this skill does not ship separate cyber or privacy cross-cutting files because the substance lives at Article level rather than as a parallel domain overlay.
 - `references/firm-overlay.md` — firm policy, taxonomy, named legal/compliance owners (consumed when present).
 - `templates/default-output.md` — triage record template.
 - `schemas/ai-act-triage.schema.json` — structured-output contract.
-- `examples/` — public-source-derived anonymised scenarios (insurance pricing high-risk path; internal tool minimal-risk path).
-- `TROUBLESHOOTING.md` — recurring defects in triage records.
+- `examples.md` — public-source-derived anonymised scenarios (insurance pricing high-risk path; internal tool minimal-risk path).
+- `examples.md#troubleshooting` — recurring defects in triage records.
 
 ## Human review and AI disclosure
 

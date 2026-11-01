@@ -6,7 +6,7 @@ argument-hint: "[workpaper ID, exception register ID, prior QA note for re-QA, o
 
 # QA workpaper
 
-QA review of a completed control-test workpaper is the last step before workpaper closure and the audit trail an examiner reads when sampling the firm's testing program. The bar is the AICPA AU-C 230 experienced-auditor sufficiency standard plus the firm's methodology floors: an experienced reviewer with no prior connection to the engagement should be able to read the workpaper, follow the evidence to the conclusion, and reach the same call. Where the workpaper does not pass that bar, the QA review note carries the named deficiencies, a decision, and the rework items.
+QA review of a completed control-test workpaper is the last step before workpaper closure and the audit trail an examiner reads when sampling the firm's testing program. The bar is the AICPA AU-C 230 experienced-auditor sufficiency standard plus the firm's methodology floors: an experienced reviewer with no prior connection to the engagement should be able to read the workpaper, follow the evidence to the conclusion, and reach the same call. Where the workpaper does not clear that bar, the QA review note carries the named deficiencies, a decision, and the rework items.
 
 This skill produces the QA review pack as two artifacts: an Excel workbook with QA markup tabs over the workpaper, and a Word QA memo summary. The skill does not run the test, re-classify the original exceptions, or close the workpaper. It produces the markdown content spec in `templates/default-output.md` shape; rendering goes to the `xlsx` and `docx` skills in `document-skills`. The skill stops at QA reviewer sign-off; disagreement between the QA reviewer and the workpaper reviewer escalates per the firm's named escalation path.
 
@@ -15,7 +15,7 @@ This skill produces the QA review pack as two artifacts: an Excel workbook with 
 Reviews a completed control-test workpaper for QA along named dimensions: scope alignment to the test plan, source-criteria sufficiency, evidence reliability, procedure execution rigor, exception classification, conclusion support, severity calibration, reviewer separation, and remediation handoff. Output is a QA review pack — Excel workbook with QA markup tabs over the workpaper plus a Word QA memo summary — that lists deficiencies by severity, a decision (accept, return for rework, conditional accept), and required rework before workpaper closure.
 
 Best for:
-- A second-line QA function or independent reviewer is performing the standard QA pass over a completed workpaper before issue closure or examiner sharing.
+- A second-line QA function or independent reviewer is performing the standard QA review over a completed workpaper before issue closure or examiner sharing.
 - An internal-audit director is rolling up workpaper-quality metrics across a testing cycle and needs structured QA notes per workpaper.
 - A targeted Federal Reserve, OCC, FDIC, CFPB, NYDFS, or state DOI exam is imminent and the team is doing a self-QA sweep on the workpaper population the examiner will likely sample.
 - A workpaper failed prior QA, was reworked, and needs a post-rework re-QA before closure.
@@ -36,7 +36,7 @@ Before reviewing, get plain answers. Most reviews answer them in the workpaper h
 - **What is the firm methodology floor for severity calibration.** Pulled from `references/firm-overlay.md` if installed, else from `references/source-anchors.md` (AICPA AU-C 265 deficiency / significant deficiency / material weakness hierarchy). Severity inflation and severity deflation are both calibration findings; the floor is the discipline that catches both.
 - **Does this workpaper carry open issues.** A clean workpaper does not necessarily mean a closeable issue. The QA review note's decision (accept / return / conditional accept) is distinct from the issue closure approval status; both are filled separately at sign-off.
 
-When `scope` (per `scoping`) is supplied, consume it: `institution.type` and `institution.primary_regulators` set the supervisory framing, `sector_overlay_set` selects which `references/sector-overlays/<sector>.md` loads, `cross_cutting_overlay_set` selects the `references/cross-cutting/<topic>.md` files, `persona.role` sets which decision forum the QA pack passes through, `source_posture` constrains what the body can carry. When it is not supplied, draft against what the workpaper carries, default to the testing program's standing posture, and note in the QA review note that scope was not formalised separately.
+When `scope` (per `scoping`) is supplied, consume it: `institution.type` and `institution.primary_regulators` set the supervisory framing, `sector_overlay_set` selects which `references/sector-overlays.md#<sector>` loads, `cross_cutting_overlay_set` selects the `references/cross-cutting.md#<topic>` files, `persona.role` sets which decision forum the QA pack passes through, `source_posture` constrains what the body can carry. When it is not supplied, draft against what the workpaper carries, default to the testing program's standing posture, and note in the QA review note that scope was not formalised separately.
 
 ## How the QA review gets built
 
@@ -72,12 +72,12 @@ The sign-off block carries the QA reviewer role and date and the escalation path
 
 The same QA spine carries different conventions across sectors and cross-cutting topics. Load only the overlays the scope flags:
 
-- `references/sector-overlays/banking.md` is the heaviest overlay in the file set. Bank-supervisory expectations on independent QA over the testing program are explicit in the CFPB CMS examination procedures, the OCC Comptroller's Handbook CMS module, and SR 08-8. The overlay carries the population-definition and extract-integrity QA scope items, the consumer-compliance control-area QA notes (HMDA, CRA, Reg B, Reg DD, Reg E, Reg Z, BSA/AML), and the sponsor-bank examiner-prep-sweep posture.
-- `references/sector-overlays/insurance.md` carries the Model Audit Rule ICFR documentation review conventions and the state DOI market-conduct workpaper-review conventions.
-- `references/sector-overlays/capital-markets.md` carries the FINRA 3120 / 3130 supervisory-controls QA conventions, the Rule 206(4)-7 annual-review QA conventions, and the conclusion-language hygiene posture (especially important in capital-markets QA because of the enforcement environment).
-- `references/sector-overlays/payments-fintech.md` carries the sponsor-bank QA conventions, the Reg E error-resolution clock-driven QA dimensions, the NACHA edition-sensitivity conventions, and the end-customer reconciliation responsibility-split conventions.
-- `references/cross-cutting/cyber.md` is the most-loaded cross-cutting overlay. Cyber workpapers fail QA on evidence-reliability more often than financial-control workpapers; the overlay carries the vendor-supplied-scan-result reliance pattern, the screenshot-only access-review pattern, the production-versus-test environment evidence pattern, and the privileged-access tolerable-rate-floor pattern.
-- `references/cross-cutting/conduct.md` loads when the workpaper sampled a consumer-impact population. The overlay carries the conclusion-language hygiene pattern (rewriting legal-violation framing to control-effectiveness framing), the customer-harm-distinct-from-technical-control-conclusion pattern, and the UDAAP all-three-prongs consideration pattern.
+- `references/sector-overlays.md#banking` is the heaviest overlay in the file set. Bank-supervisory expectations on independent QA over the testing program are explicit in the CFPB CMS examination procedures, the OCC Comptroller's Handbook CMS module, and SR 08-8. The overlay carries the population-definition and extract-integrity QA scope items, the consumer-compliance control-area QA notes (HMDA, CRA, Reg B, Reg DD, Reg E, Reg Z, BSA/AML), and the sponsor-bank examiner-prep-sweep posture.
+- `references/sector-overlays.md#insurance` carries the Model Audit Rule ICFR documentation review conventions and the state DOI market-conduct workpaper-review conventions.
+- `references/sector-overlays.md#capital-markets` carries the FINRA 3120 / 3130 supervisory-controls QA conventions, the Rule 206(4)-7 annual-review QA conventions, and the conclusion-language hygiene posture (especially important in capital-markets QA because of the enforcement environment).
+- `references/sector-overlays.md#payments-fintech` carries the sponsor-bank QA conventions, the Reg E error-resolution clock-driven QA dimensions, the NACHA edition-sensitivity conventions, and the end-customer reconciliation responsibility-split conventions.
+- `references/cross-cutting.md#cyber` is the most-loaded cross-cutting overlay. Cyber workpapers fail QA on evidence-reliability more often than financial-control workpapers; the overlay carries the vendor-supplied-scan-result reliance pattern, the screenshot-only access-review pattern, the production-versus-test environment evidence pattern, and the privileged-access tolerable-rate-floor pattern.
+- `references/cross-cutting.md#conduct` loads when the workpaper sampled a consumer-impact population. The overlay carries the conclusion-language hygiene pattern (rewriting legal-violation framing to control-effectiveness framing), the customer-harm-distinct-from-technical-control-conclusion pattern, and the UDAAP all-three-prongs consideration pattern.
 
 Privacy and climate cross-cutting overlays follow the same pattern; this skill ships cyber and conduct as the cross-cutting files because they are the most frequent triggers for QA deficiencies. Where firm policy or taxonomy applies (severity floors specific to the firm, named QA-committee gates, escalation paths for QA disagreement, template variants), it lives in `references/firm-overlay.md` and is consumed when present.
 
@@ -99,13 +99,15 @@ QA depth and length scale to the workpaper depth and the QA scope. A targeted re
 
 ## Pointers
 
+`references/sector-overlays.md` and `references/cross-cutting.md` hold one section per sector or topic, and `examples.md` one per example. Find the heading and read only that section.
+
 - `references/source-anchors.md` — citations and excerpts for the named anchors (AICPA AU-C 220 / 230 / 265 / 530, IIA Standard 1300 and 2340, FFIEC IT Audit booklet, SR 08-8, OCC PPM 5310-3, COSO 2013 Principle 17, PCAOB QC 1000, sector-specific anchors).
-- `references/sector-overlays/banking.md`, `insurance.md`, `capital-markets.md`, `payments-fintech.md` — sector-specific QA conventions loaded per scope. Banking is the heaviest overlay.
-- `references/cross-cutting/cyber.md`, `conduct.md` — cross-cutting flavour. Cyber default-on for IAM, data-protection, and Part 500-mandated controls; conduct default-on for consumer-facing populations.
+- `references/sector-overlays.md#banking`, `references/sector-overlays.md#insurance`, `references/sector-overlays.md#capital-markets`, `references/sector-overlays.md#payments-fintech` — sector-specific QA conventions loaded per scope. Banking is the heaviest overlay.
+- `references/cross-cutting.md#cyber`, `references/cross-cutting.md#conduct` — cross-cutting flavour. Cyber default-on for IAM, data-protection, and Part 500-mandated controls; conduct default-on for consumer-facing populations.
 - `references/firm-overlay.md` — firm-installed QA methodology, severity floors, named QA-committee gates, escalation paths, and template variants beyond the regulatory baseline; consumed when present.
 - `templates/default-output.md` — content spec for both artifacts (Excel QA markup tabs, Word QA memo summary).
-- `examples/` — Reg E error-resolution QA at a regional bank; examiner-prep TPRM sweep at a mid-size bank holding company.
-- `TROUBLESHOOTING.md` — recurring pitfalls (QA as proofreading, QA reviewer is also the workpaper reviewer, severity inflation, skipping sample re-perform, confusing workpaper closure with issue closure, adversarial tone, scope creep into re-running the test, empty methodology references, missed population-level themes, confidence label always high).
+- `examples.md` — Reg E error-resolution QA at a regional bank; examiner-prep TPRM sweep at a mid-size bank holding company.
+- `examples.md#troubleshooting` — recurring pitfalls (QA as proofreading, QA reviewer is also the workpaper reviewer, severity inflation, skipping sample re-perform, confusing workpaper closure with issue closure, adversarial tone, scope creep into re-running the test, empty methodology references, missed population-level themes, confidence label always high).
 
 The plugin-level shared references (`references/source-map.md`, `references/policy-control-library.md`, `references/review-gates.md`) sit at the plugin root and are consulted alongside the skill-level files.
 

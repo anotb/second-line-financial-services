@@ -87,7 +87,7 @@ Depth flexes with tier and audience. A pre-prod-gate review for a tier-3 interna
 
 ## Sector and cross-cutting overlays
 
-When the scope names a sector (banking, insurance, capital markets, payments-fintech), load the matching `references/sector-overlays/<sector>.md`. Each overlay carries sector-specific authority-statement constraints, tool-inventory expectations, oversight-design bars, monitoring signals, regulator-notification triggers, and co-reviewer expectations. The overlay's named additions land in the artifact; treating the overlay as background reading is the failure mode.
+When the scope names a sector (banking, insurance, capital markets, payments-fintech), load the matching `references/sector-overlays.md#<sector>`. Each overlay carries sector-specific authority-statement constraints, tool-inventory expectations, oversight-design bars, monitoring signals, regulator-notification triggers, and co-reviewer expectations. The overlay's named additions land in the artifact; treating the overlay as background reading is the failure mode.
 
 The insurance overlay is written deeper than the others because this skill absorbs the deprecated `claims-ai-controls` skill. For any agentic system in claims handling, FNOL, agent / producer co-pilot, or policyholder-facing actuation, the insurance overlay carries: NAIC Unfair Trade Practices Act (Model #880) and state Unfair Claims Settlement Practices Acts as the fair-claims-settlement bar (which an agent cannot move); NAIC Model Bulletin on AI Systems (December 2023) AIS Program element-by-element coverage; state DOI AI bulletins (Colorado SB 21-169 implementing regulation, NY DFS Insurance Circular Letter on AI/ECDIS January 2024, California DOI bulletin); HIPAA Privacy and Security Rules where the agent reads or writes PHI; NAIC Insurance Data Security Model Law (Model #668) §4.F where a TPA or claims administrator runs the agent; UPL boundary check on consumer-facing claims chatbots; Marketing Rule analogues and state insurance advertising rules for any customer-facing communication; ORSA materiality check for enterprise-material agents. The insurance overlay also carries the claims-specific control families: prompt-acknowledgement, reasoned-denial drafting, complaint flow, supervisor-override path, audit trail, denial-letter human review.
 
@@ -129,14 +129,16 @@ Downstream consumers: `genai-pre-prod-review` consumes the structured object for
 
 ## Pointers
 
+`references/sector-overlays.md` and `references/cross-cutting.md` hold one section per sector or topic, and `examples.md` one per example. Find the heading and read only that section.
+
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
-- `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md` — sector overlays loaded from scope; the insurance overlay carries the absorbed claims-AI control bar.
-- `references/cross-cutting/{cyber,privacy,conduct,ai-ethics}.md` — cross-cutting overlays loaded from scope; cyber is the default for tool-using agents.
+- `references/sector-overlays.md` — sector overlays loaded from scope; the insurance overlay carries the absorbed claims-AI control bar.
+- `references/cross-cutting.md` — cross-cutting overlays loaded from scope; cyber is the default for tool-using agents.
 - `references/firm-overlay.md` — firm policy, taxonomy, named owners (consumed when present).
 - `templates/default-output.md` — controls-review template.
 - `schemas/agentic-controls-review.schema.json` — structured-output contract.
-- `examples/` — anonymised public-source-derived scenarios (customer-service agent in a regional bank; insurance claims-AI agent absorbing the claims-ai-controls scenario).
-- `TROUBLESHOOTING.md` — recurring defects.
+- `examples.md` — anonymised public-source-derived scenarios (customer-service agent in a regional bank; insurance claims-AI agent absorbing the claims-ai-controls scenario).
+- `examples.md#troubleshooting` — recurring defects.
 
 ## Human review and AI disclosure
 

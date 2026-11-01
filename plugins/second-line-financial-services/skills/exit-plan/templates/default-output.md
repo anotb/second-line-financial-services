@@ -107,7 +107,7 @@ A critical or important function exit usually lands on a supervisory clock. Miss
 
 ## Cyber considerations during transition
 
-Detail in `references/cross-cutting/cyber.md`.
+Detail in `references/cross-cutting.md#cyber`.
 
 - Secure data extraction (encrypted transit, integrity verification).
 - Key rotation, credential rotation, token revocation.
@@ -118,7 +118,7 @@ Detail in `references/cross-cutting/cyber.md`.
 
 ## Privacy considerations during transition
 
-Detail in `references/cross-cutting/privacy.md`.
+Detail in `references/cross-cutting.md#privacy`.
 
 - GLBA Safeguards data-handling on transition.
 - State-privacy-law deletion and return obligations (CCPA / CPRA service-provider deletion).
@@ -168,7 +168,7 @@ A plan never tested has unknown viability. Document the test posture honestly.
 - **Cadence**: [tabletop / walkthrough / partial-simulation / full-live; aligned to criticality tier and the firm's policy].
 - **Methods planned**: [tabletop, walkthrough, partial-simulation, full-live-exercise, data-extraction-rehearsal, shadow-cutover].
 - **Last test date**: [date or "never tested"].
-- **Last test outcome**: [pass or pass-with-findings / fail; summarise findings; "never tested" gets surfaced as a reviewer question].
+- **Last test outcome**: [success or pass-with-findings / fail; summarise findings; "never tested" gets surfaced as a reviewer question].
 - **Next test due**: [date].
 - **resilience-testing-pack record**: [ID where the exit rehearsal sits in the integrated test programme].
 

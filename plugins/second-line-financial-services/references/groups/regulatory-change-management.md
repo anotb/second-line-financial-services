@@ -8,7 +8,7 @@ Audience: heads of regulatory affairs, regulatory-change leads, compliance offic
 
 | Skill | What it produces | When to use |
 |---|---|---|
-| `regulatory-impact-assessment` | First-pass scope of firm impact for a new rule, supervisory letter, circular, FIL, bulletin, industry letter, advisory, or enforcement theme. | A regulator has published something and the firm needs a fast read on in-scope businesses, products, obligations, and effective-date posture before logging the change. |
+| `regulatory-impact-assessment` | First-review scope of firm impact for a new rule, supervisory letter, circular, FIL, bulletin, industry letter, advisory, or enforcement theme. | A regulator has published something and the firm needs a fast read on in-scope businesses, products, obligations, and effective-date posture before logging the change. |
 | `rule-to-obligation-extraction` | Atomic obligations parsed from new rule text, with source pins, applicability, actor, frequency, and evidence pattern. | Impact has been scoped; the rule text now needs to be decomposed into the atomic-obligation list before mapping onto firm policy and controls. |
 | `policy-diff` | Gap-and-conflict log between current firm policy text and the applicable regulatory anchors, with proposed redline directions. | Obligations are extracted; the question is what current policy already covers, partially covers, conflicts with, or is silent on. |
 | `implementation-plan` | Sequenced workplan with workstreams, milestones, owner roles, dependencies, acceptance criteria, governance checkpoints, and implementation risks. | Gaps are documented; the firm needs an owner-assigned plan to reach compliance by the effective date. |
@@ -40,7 +40,7 @@ Public anchors only. The substantive set varies by skill: the FRB / OCC / FDIC S
 
 ## Components
 
-- `skills/` — the five skills above. Each ships its own `SKILL.md`, `references/source-anchors.md`, sector overlays where applicable, `templates/default-output.md`, and (where useful) `schemas/` and `examples/`.
+- `skills/` — the five skills above. Each ships its own `SKILL.md`, `references/source-anchors.md`, sector overlays where applicable, `templates/default-output.md`, and (where useful) `schemas/` and `examples.md`.
 - `references/` — plugin-level shared references: source map, policy and control library, public regulatory scenarios, named decision forums.
 - `schemas/` — JSON schemas. `obligation.schema.json` is the cross-skill anchor; artifact-specific schemas live with each skill under `<skill>/schemas/`. Schema dedup is tracked in [ROADMAP.md](https://github.com/anotb/second-line-financial-services/blob/main/ROADMAP.md).
 

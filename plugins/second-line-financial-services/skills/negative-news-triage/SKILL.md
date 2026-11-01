@@ -42,7 +42,7 @@ When the scope record is supplied, the skill consumes it for institution type, p
 The memo has the same spine across triage types. A senior reviewer fills it in roughly in the order the hit set offers it, not in a lockstep sequence. Two parts of the order are load-bearing and explicitly sequenced:
 
 1. **Run identity confidence before anything else on each hit.** Source reliability and materiality are wasted work when the hit is not about this subject. Common-name false matches dominate bulk re-scan output; the identity cut is what makes the rest of the workflow worth doing.
-2. **Aggregate themes after the per-hit pass, not before.** The patterns across a hit set (a recurring counterparty surfaced in three independent reports; an escalating timeline across vintage and recent hits; a jurisdictional clustering) are visible only once each hit has been individually scored. Theme-spotting before the per-hit pass produces narrative instead of finding.
+2. **Aggregate themes after the per-hit pass, not before.** The patterns across a hit set (a recurring counterparty surfaced in three independent reports; an escalating timeline across vintage and recent hits; a jurisdictional clustering) are visible only once each hit has been individually scored. Theme-spotting before the per-hit review produces narrative instead of finding.
 
 Beyond those two anchors the work is judgement-led. The senior reviewer walks the file in this shape.
 
@@ -58,7 +58,7 @@ The **materiality read against a financial-crime typology** is where the triage 
 
 The **linkage strength** distinguishes direct involvement (the subject is named as defendant, respondent, indictee, or actor in the conduct), association (the subject is named alongside a directly involved party in a relationship that bears on the conduct), and mention only (the subject's name appears but the substance is about someone else). Linkage drives downstream routing as much as materiality does: a tier-1 hit with direct involvement on a fraud-ring typology routes differently from a tier-1 hit where the subject is named as a counterparty without alleged involvement.
 
-The **aggregated themes** read across the hit set after the per-hit pass. Recurring counterparties across independent hits, escalating timelines (the same subject moving from civil to regulatory to criminal exposure across the date range), jurisdictional clustering (concentration in a single foreign jurisdiction or sanctions-relevant geography), or principal-versus-entity drift (the subject's principals appearing where the entity does not) are the patterns the per-hit pass cannot see. A hit set with no themes is a hit set with no themes; do not invent a pattern.
+The **aggregated themes** read across the hit set after the per-hit pass. Recurring counterparties across independent hits, escalating timelines (the same subject moving from civil to regulatory to criminal exposure across the date range), jurisdictional clustering (concentration in a single foreign jurisdiction or sanctions-relevant geography), or principal-versus-entity drift (the subject's principals appearing where the entity does not) are the patterns the per-hit review cannot see. A hit set with no themes is a hit set with no themes; do not invent a pattern.
 
 The **downstream routing** names which artifact the triage hands off to and why. Routing options are: no further action with the date the next re-scan is expected; route to `cdd-risk-review` for an event-driven refresh because the hit reaches a CDD-pillar question (expected-activity profile change, beneficial-ownership change implied by the hit, jurisdiction or counterparty pattern that re-rates); route to `edd-escalation-pack` because the hit raises EDD posture for the customer (PEP-adjacency surfaced, tier-1 direct involvement on a typology, escalating-timeline pattern); route to `sar-decision-qa` because the hit is evidence relevant to an in-flight or recent alert decision on the same customer; route to `sanctions-screening-qa` because the hit overlaps a sanctions-screening match (named OFAC-listed party, sanctions-evasion typology). A single hit set can route to more than one downstream artifact; the memo names each routing line with its rationale.
 
@@ -68,7 +68,7 @@ The **source trace and confidence** records every material claim in the memo, it
 
 The skill stops at the routing recommendation. The CDD reviewer, the EDD analyst, the BSA officer, or the SAR review committee owns the decision the routing points to. A recommendation that proposes the rating change, the EDD upgrade, the SAR filing, or the exit is itself a finding to remove. Cite a source for every material claim from the file or the hit set; mark unsupported items `[evidence needed]` rather than letting them pass; do not fabricate regulatory facts (unknown section references carry `[verify section]` in `references/source-anchors.md`, never in the memo body); do not name institutions in the narrative unless they are public defendants in a finalised enforcement action with a published consent order. Source evidence, customer-record assertion, vendor self-tagging, public-source reporting, and generated inference each carry their own line so the memo shows the seams.
 
-Depth flexes with triage scope and audience. An onboarding triage on a single hit reads tight; a bulk re-scan with hundreds of hits rolls up the noise and details only the material subset and the aggregated themes. A pre-exam readiness pass reads long and formal. A SAR-investigation evidence input reads compact and pointed at the alert in front of the investigator.
+Depth flexes with triage scope and audience. An onboarding triage on a single hit reads tight; a bulk re-scan with hundreds of hits rolls up the noise and details only the material subset and the aggregated themes. A pre-exam readiness review reads long and formal. A SAR-investigation evidence input reads compact and pointed at the alert in front of the investigator.
 
 ## Sector and cross-cutting overlays
 
@@ -80,13 +80,15 @@ Cyber overlap (account-takeover-adjacent adverse media, ransomware-exposure repo
 
 ## Pointers
 
+`references/sector-overlays.md` and `references/cross-cutting.md` hold one section per sector or topic, and `examples.md` one per example. Find the heading and read only that section.
+
 - `references/source-anchors.md` — citations and excerpts for the named anchors (FFIEC CDD section, FinCEN CDD Final Rule, joint statements, named FinCEN advisories on typologies, Wolfsberg adverse-media guidance as public industry reference).
-- `references/sector-overlays/banking.md`, `payments-fintech.md`, `capital-markets.md`, `insurance.md` — sector-specific adverse-media frames loaded per scope.
-- `references/cross-cutting/conduct.md` — conduct dimension on customer-harm-pattern adverse media; loaded when the engagement names conduct.
+- `references/sector-overlays.md#banking`, `references/sector-overlays.md#payments-fintech`, `references/sector-overlays.md#capital-markets`, `references/sector-overlays.md#insurance` — sector-specific adverse-media frames loaded per scope.
+- `references/cross-cutting.md#conduct` — conduct dimension on customer-harm-pattern adverse media; loaded when the engagement names conduct.
 - `references/firm-overlay.md` — firm policy, vendor-tier mapping, typology library extensions, named systems and owners (consumed when present).
 - `templates/default-output.md` — memo template (named sections, fields).
-- `examples/principal-civil-fraud-commercial-bank.md`, `bulk-rescan-bank-portfolio.md` — public-source-derived scenarios.
-- `TROUBLESHOOTING.md` — recurring defects in adverse-media triage memos.
+- `examples.md#principal-civil-fraud-commercial-bank`, `bulk-rescan-bank-portfolio.md` — public-source-derived scenarios.
+- `examples.md#troubleshooting` — recurring defects in adverse-media triage memos.
 
 The plugin-level shared references (`references/source-map.md`, `references/policy-control-library.md`, `references/review-gates.md`) sit at the plugin root and are consulted alongside the skill-level files.
 

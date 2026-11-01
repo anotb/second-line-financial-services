@@ -32,7 +32,7 @@ Not the right tool when:
 Before drafting, get plain answers to a few things. Most escalations answer them quickly; if not, default and flag.
 
 - **What surfaced the EDD trigger.** A CDD QA finding flagged escalation; a periodic high-risk refresh fell due; an event hit (adverse media, sanctions exposure, ownership change, regulatory inquiry); a relationship-exit deliberation needs the pack as its basis. The trigger drives the pack's load on each section.
-- **Which rule frame applies.** Foreign correspondent EDD under `§1010.610` and Section 312; private-banking EDD under `§1010.620` and Section 312; PEP risk-based EDD; cash-intensive business EDD on the firm's program; complex-structure entity EDD; MSB-affiliated customer EDD on the bank's program; covered-insurance high-premium EDD on the insurer's program. Load the matching `references/sector-overlays/<sector>.md`. The 2020 joint statement frames PEP status as a risk indicator, not an automatic EDD trigger.
+- **Which rule frame applies.** Foreign correspondent EDD under `§1010.610` and Section 312; private-banking EDD under `§1010.620` and Section 312; PEP risk-based EDD; cash-intensive business EDD on the firm's program; complex-structure entity EDD; MSB-affiliated customer EDD on the bank's program; covered-insurance high-premium EDD on the insurer's program. Load the matching `references/sector-overlays.md#<sector>`. The 2020 joint statement frames PEP status as a risk indicator, not an automatic EDD trigger.
 - **Who reads the pack.** The EDD committee reads for the decision; the relationship owner reads for the conditions and the asks; the BSA officer reads for the program-level pattern across packs. Audience drives depth and the lead.
 - **What upstream and adjacent records are on file.** The pack consumes the CDD review record where present, the `negative-news-triage` triaged hits where present, and the `sanctions-screening-qa` dispositions where present. Where any is missing, draft against what is on file and flag the absence as a finding; do not block.
 - **What the source posture supports.** A public-only posture limits the pack to public-source corroboration on SoW / SoF and on the ownership chain; a posture with firm-system-of-record evidence carries more. Set the posture to what the engagement has, not to what it would prefer.
@@ -77,13 +77,15 @@ Depth flexes with trigger and customer profile. A correspondent-bank EDD pack re
 
 ## Pointers
 
+`references/sector-overlays.md` and `references/cross-cutting.md` hold one section per sector or topic, and `examples.md` one per example. Find the heading and read only that section.
+
 - `references/source-anchors.md` — citations and excerpts for the named anchors (FFIEC PEP / private-banking / correspondent / CDD sections; CDD Final Rule; `§1010.230`; `§1010.620`; `§1010.610`; 31 USC §5318(i) and §5318A; `§1010.380` BOI rule; FinCEN PEP advisory and the 2020 joint statement; OCC/FRB/FDIC/NCUA risk-focused supervision joint statement; Wolfsberg PEP / SoW / CBDDQ as public industry standard).
-- `references/sector-overlays/banking.md`, `payments-fintech.md`, `capital-markets.md`, `insurance.md` — sector overlays loaded per scope.
-- `references/cross-cutting/conduct.md` — conduct overlay loaded per scope or per customer-profile materiality.
+- `references/sector-overlays.md#banking`, `references/sector-overlays.md#payments-fintech`, `references/sector-overlays.md#capital-markets`, `references/sector-overlays.md#insurance` — sector overlays loaded per scope.
+- `references/cross-cutting.md#conduct` — conduct overlay loaded per scope or per customer-profile materiality.
 - `references/firm-overlay.md` — firm policy, EDD trigger set, named systems and owners, decision-machinery composition (consumed when present).
 - `templates/default-output.md` — pack template (named sections, fields).
-- `examples/private-banking-pep-family-foreign-procurement.md`, `foreign-correspondent-respondent-bank-higher-risk-jurisdiction.md` — public-source-derived scenarios.
-- `TROUBLESHOOTING.md` — recurring defects in EDD packs.
+- `examples.md#private-banking-pep-family-foreign-procurement`, `foreign-correspondent-respondent-bank-higher-risk-jurisdiction.md` — public-source-derived scenarios.
+- `examples.md#troubleshooting` — recurring defects in EDD packs.
 
 The plugin-level shared references (`references/source-map.md`, `references/policy-control-library.md`, `references/review-gates.md`) sit at the plugin root and are consulted alongside the skill-level files.
 

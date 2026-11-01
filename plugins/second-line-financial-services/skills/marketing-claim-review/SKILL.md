@@ -86,7 +86,7 @@ When AI is in the production path or the personalisation path on any in-scope as
 
 ### Sector overlays
 
-When the scope names a sector, load the matching `references/sector-overlays/<sector>.md`:
+When the scope names a sector, load the matching `references/sector-overlays.md#<sector>`:
 
 - *Banking* — deposit-advertising specifics under the truth-in-savings rule; FDIC insurance representation under the FDIC advertising rule; mortgage advertising under the TILA / RESPA / TRID interplay; CRA-related advertising; deposit-account fee mechanics on the asset.
 - *Payments-fintech* — sponsor-bank attribution of marketing claims; BNPL marketing observations; app-store ad rules; Reg E error-resolution claims in marketing; influencer and creator endorsements under the FTC Endorsement Guides for non-bank fintech surfaces.
@@ -95,17 +95,19 @@ When the scope names a sector, load the matching `references/sector-overlays/<se
 
 ### Cross-cutting overlays
 
-Conduct overlap with UDAAP is in `references/cross-cutting/conduct.md` and loads where the asset-level finding chains up to a product-level UDAAP read; cross-reference `udaap-risk-review`. Privacy overlay loads on every digital-channel review because privacy-claim accuracy, AdChoices representation, dark-pattern privacy, and state-privacy-law interaction are recurring asset-level findings; the privacy file lives at `references/cross-cutting/privacy.md`. Climate is not applicable.
+Conduct overlap with UDAAP is in `references/cross-cutting.md#conduct` and loads where the asset-level finding chains up to a product-level UDAAP read; cross-reference `udaap-risk-review`. Privacy overlay loads on every digital-channel review because privacy-claim accuracy, AdChoices representation, dark-pattern privacy, and state-privacy-law interaction are recurring asset-level findings; the privacy file lives at `references/cross-cutting.md#privacy`. Climate is not applicable.
 
 ## Pointers
 
+`references/sector-overlays.md` and `references/cross-cutting.md` hold one section per sector or topic, and `examples.md` one per example. Find the heading and read only that section.
+
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
-- `references/sector-overlays/banking.md`, `payments-fintech.md`, `capital-markets.md`, `insurance.md` — sector-specific framing loaded per scope.
-- `references/cross-cutting/conduct.md` — UDAAP overlap with the asset-level finding; `references/cross-cutting/privacy.md` — privacy-claim substantiation, AdChoices, dark-pattern privacy, and state-privacy-law interaction.
+- `references/sector-overlays.md#banking`, `references/sector-overlays.md#payments-fintech`, `references/sector-overlays.md#capital-markets`, `references/sector-overlays.md#insurance` — sector-specific framing loaded per scope.
+- `references/cross-cutting.md#conduct` — UDAAP overlap with the asset-level finding; `references/cross-cutting.md#privacy` — privacy-claim substantiation, AdChoices, dark-pattern privacy, and state-privacy-law interaction.
 - `references/firm-overlay.md` — firm-installed marketing taxonomy, named MAP, marketing-compliance committee, AI-personalisation governance, system-of-record paths (consumed when present).
 - `templates/default-output.md` — memo template (named sections, asset-level fields).
-- `examples/credit-card-prelaunch-mobile-disclosure.md`, `examples/fintech-paid-social-superlative-and-targeting.md` — public-source-derived worked examples.
-- `TROUBLESHOOTING.md` — recurring failure modes the drafter should preempt and the reviewer should catch.
+- `examples.md#credit-card-prelaunch-mobile-disclosure`, `examples.md#fintech-paid-social-superlative-and-targeting` — public-source-derived worked examples.
+- `examples.md#troubleshooting` — recurring failure modes the drafter should preempt and the reviewer should catch.
 
 ## Output
 

@@ -137,7 +137,7 @@ Vendor-authored documents default to vendor-self-attestation confidence. Third-p
 
 ## 10. Sector and cross-cutting overlay notes (when applicable)
 
-When the scope names a sector, the matching `references/sector-overlays/<sector>.md` adds named fields here. When cross-cutting overlays are loaded (cyber, privacy, conduct), the matching `references/cross-cutting/<topic>.md` adds named fields here.
+When the scope names a sector, the matching `references/sector-overlays.md#<sector>` adds named fields here. When cross-cutting overlays are loaded (cyber, privacy, conduct), the matching `references/cross-cutting.md#<topic>` adds named fields here.
 
 The overlay-specific structured-output blocks (`sector_overlay_notes`, `cross_cutting_overlay_notes.cyber`, `cross_cutting_overlay_notes.privacy`, `cross_cutting_overlay_notes.conduct`) populate from the loaded overlays.
 

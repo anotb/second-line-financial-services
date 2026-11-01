@@ -340,11 +340,11 @@
     },
     "cyber_considerations": {
       "type": "string",
-      "description": "Cyber overlay during transition: secure data extraction; key rotation; access revocation choreography; vendor-side destruction certification; SEC cyber-disclosure exposure on a forced or contested termination; SIEM and DLP rule updates. Detail in references/cross-cutting/cyber.md."
+      "description": "Cyber overlay during transition: secure data extraction; key rotation; access revocation choreography; vendor-side destruction certification; SEC cyber-disclosure exposure on a forced or contested termination; SIEM and DLP rule updates. Detail in references/cross-cutting.md#cyber."
     },
     "privacy_considerations": {
       "type": "string",
-      "description": "Privacy overlay during transition: GLBA Safeguards data-handling on transition; state-privacy-law deletion and return obligations; HIPAA business-associate transition where in scope; cross-border data flows during transition. Detail in references/cross-cutting/privacy.md."
+      "description": "Privacy overlay during transition: GLBA Safeguards data-handling on transition; state-privacy-law deletion and return obligations; HIPAA business-associate transition where in scope; cross-border data flows during transition. Detail in references/cross-cutting.md#privacy."
     },
     "supervisory_readiness_during_transition": {
       "type": "string",
@@ -428,7 +428,7 @@
         },
         "last_test_outcome": {
           "type": "string",
-          "description": "Pass or pass-with-findings / fail; summarise findings. 'Never tested' is honest and gets surfaced."
+          "description": "Success or pass-with-findings / fail; summarise findings. 'Never tested' is honest and gets surfaced."
         },
         "next_test_due": {
           "type": "string",

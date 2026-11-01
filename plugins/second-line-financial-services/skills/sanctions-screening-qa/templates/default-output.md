@@ -64,7 +64,7 @@ The OFAC publication date is the benchmark for response timing, not the institut
 
 ## Cyber-evasion exposure (cross-cutting overlay)
 
-> Loaded when the scope flags cyber. See `references/cross-cutting/cyber.md`.
+> Loaded when the scope flags cyber. See `references/cross-cutting.md#cyber`.
 
 - **Virtual-currency exposure**: [material | limited | none | unknown]. Controls evidence: [blockchain-analytics vendor; address screening; attribution governance]. Vendor outputs are vendor outputs; cite the vendor and route vendor-diligence findings to `vendor-diligence`.
 - **Ransomware-payment exposure**: [material | limited | none | unknown]. Controls evidence aligned to OFAC ransomware advisories and FinCEN ransomware advisories: pre-payment OFAC analysis, voluntary self-disclosure posture, sanctions-officer routing for incident-response, cyber-insurance, and remediation-vendor payment paths.
@@ -111,7 +111,7 @@ Cite `references/source-anchors.md` for canonical citations. OFAC list citations
 
 ---
 
-*Memo depth scales to review type and audience.* A periodic sample QA reads tighter with patterns rolled up across alerts; a pre-exam readiness pass reads long and formal; a list-event review goes deep on response-timing and cross-rail consistency; a cyber-evasion targeted review goes deep on the cross-cutting overlay.
+*Memo depth scales to review type and audience.* A periodic sample QA reads tighter with patterns rolled up across alerts; a pre-exam readiness review reads long and formal; a list-event review goes deep on response-timing and cross-rail consistency; a cyber-evasion targeted review goes deep on the cross-cutting overlay.
 
 *Audience shapes the memo.* A sanctions officer reads for material defensibility issues and program-level patterns. A QA team reads for criterion-by-criterion calibration. A BSA officer reads for governance signal and committee escalation. An examiner-response file reads formal and full source-traced.
 

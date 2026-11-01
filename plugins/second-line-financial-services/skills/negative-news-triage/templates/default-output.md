@@ -98,6 +98,6 @@ Cite `references/source-anchors.md` for canonical citations and named typology a
 
 ---
 
-*Memo depth scales to triage scope and audience.* An onboarding triage on a single hit reads tight. A bulk re-scan with hundreds of hits rolls up the noise and details only the material subset and the aggregated themes. A pre-exam readiness pass reads long and formal. A SAR-investigation evidence input reads compact and pointed at the alert in front of the investigator.
+*Memo depth scales to triage scope and audience.* An onboarding triage on a single hit reads tight. A bulk re-scan with hundreds of hits rolls up the noise and details only the material subset and the aggregated themes. A pre-exam readiness review reads long and formal. A SAR-investigation evidence input reads compact and pointed at the alert in front of the investigator.
 
 *Audience shapes the memo.* A CDD reviewer reads to decide on a refresh. An EDD analyst reads to decide on opening or updating an EDD pack. A SAR investigator reads as evidence on an alert. A sanctions QA reviewer reads when the hit overlaps a screening alert. Lead with what the audience must decide.

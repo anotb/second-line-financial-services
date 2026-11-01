@@ -19,8 +19,8 @@ Confidence: <high | medium | low | unknown>
 
 | Field | Value |
 |---|---|
-| Primary committee | <named body that pass or fails the gates> |
-| Escalation committee | <where a no-pass routes> |
+| Primary committee | <named body that success or fails the gates> |
+| Escalation committee | <where a no-go routes> |
 | Dissent path | <how an individual reviewer's challenge gets recorded and adjudicated> |
 | Board oversight | <board body and reporting cadence, when in scope of Heightened Standards / Reg YY / NAIC ORSA> |
 
@@ -40,7 +40,7 @@ One row per gate. Compress freely on rows that warrant it; do not delete require
 
 > Independence is named per reviewer. A gate where the artifact's producer is also the gate's decider is not a gate; it is self-attestation. Where source guidance demands independence (SR 11-7 validation independence, interagency TPRM line-1 / line-2 separation, EU AI Act Article 14 competent oversight), the matrix carries the independence requirement and the source anchor that grounds it.
 >
-> Stop conditions are declarative and binary. "Should be reviewed", "consider whether", and "as appropriate" are not stop conditions; "no pass if any open critical issue" is.
+> Stop conditions are declarative and binary. "Should be reviewed", "consider whether", and "as appropriate" are not stop conditions; "no go if any open critical issue" is.
 >
 > Each gate names required inputs by artifact ID. A gate that reviews "what is available" is unauditable.
 

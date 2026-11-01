@@ -104,6 +104,6 @@ Cite `references/source-anchors.md` for canonical citations. Use `[verify sectio
 
 ---
 
-*Memo depth scales to review type and customer risk.* A new-account QA on a low-risk consumer customer reads tighter than a periodic refresh on a high-net-worth customer with international exposure. An event-driven refresh on negative news reads differently again. A pre-exam readiness pass reads long and formal.
+*Memo depth scales to review type and customer risk.* A new-account QA on a low-risk consumer customer reads tighter than a periodic refresh on a high-net-worth customer with international exposure. An event-driven refresh on negative news reads differently again. A pre-exam readiness review reads long and formal.
 
 *Audience shapes the memo.* A BSA officer reads for material defensibility issues and program-level patterns. An AML QA team lead reads for criterion-by-criterion calibration. A customer-onboarding compliance lead reads for backlog-and-quality signal across the new-account pipeline. Lead with what the audience must decide.

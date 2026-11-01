@@ -34,7 +34,7 @@ Not the right tool when:
 A handful of facts settle before drafting. Most of them are on the table by the time someone is naming gates, but the discipline is to name them.
 
 - What workflow, artifact, or decision is being gated. AI use-case lifecycle, vendor onboarding lifecycle, model lifecycle, issue lifecycle, customer-impact action, SAR filing, regulator-response sign-off, change-management gate. Scope tight; "the governance program" produces a matrix nobody can adopt.
-- Who has decision authority. The primary committee (the body that passes or fails the gate), the escalation committee (where a no-pass routes), the dissent path (how an individual reviewer's challenge gets recorded and adjudicated). Without a named decision authority, the matrix reads as suggestion.
+- Who has decision authority. The primary committee (the body that passes or fails the gate), the escalation committee (where a no-go routes), the dissent path (how an individual reviewer's challenge gets recorded and adjudicated). Without a named decision authority, the matrix reads as suggestion.
 - What source posture the engagement runs at. Public-only sets the ceiling at named-role and decision-criteria description. Firm-policy-overlay or mixed lets named committees, internal-policy section references, GRC-platform record names, and committee charter references land in the body.
 - Whether independence is regulatorily required, advisory, or absent. SR 11-7 demands validation independence from development. Interagency TPRM expects line-1 vs. line-2 separation on critical-vendor decisions. EU AI Act Article 14 expects human oversight by persons with the competence, authority, and resources to fulfil it. The matrix captures independence as a per-reviewer attribute, not a global one.
 - Whether the engagement is standing up a new gate set or auditing an existing workflow. New gate set is a green-field design from the source guidance; audit of an existing workflow surfaces under-specified gates, missing independence, stop conditions that are not stops, and decision criteria that are not criteria.
@@ -56,8 +56,8 @@ Gates are workflow-anchored. Each row starts with a stable gate ID and works lef
 - **Required inputs.** Artifacts that must be present at the gate, by ID. The model card, the validation report, the vendor SOC 2 Type II, the due-diligence pack, the issue write-up, the closure-evidence binder. A gate that says "review what's available" is unauditable.
 - **Decision criteria.** Named criteria, each traceable to source. Criteria are declarative ("validation independence is established", "no open critical or high issues against the model", "exit plan exists and has been tested in the last 12 months", "complaint volume is within risk-appetite tolerance"). A criterion that reads as guidance ("review for completeness") is not a criterion.
 - **Stop conditions.** What blocks pass. Stop conditions are declarative and binary: "no go-live if any open critical issue", "no contract if no exit plan", "no SAR filing without BSA Officer attestation", "no customer-impact action without CCO sign-off". "Should be reviewed" is not a stop condition.
-- **Escalation path.** Where a no-pass goes. The escalation committee, the time-to-escalate, and the escalation owner (the role that takes the case from the gate to the escalation forum). Without an escalation path, a no-pass strands.
-- **Documentation requirement.** What gets captured. The decision (pass or fail / conditional), the rationale, the named attesters, the date, the artifact references, and the system of record that holds the record. "Minutes" is acceptable when the firm's minute discipline names attesters and decisions; "noted" is not.
+- **Escalation path.** Where a no-go goes. The escalation committee, the time-to-escalate, and the escalation owner (the role that takes the case from the gate to the escalation forum). Without an escalation path, a no-go strands.
+- **Documentation requirement.** What gets captured. The decision (success or fail / conditional), the rationale, the named attesters, the date, the artifact references, and the system of record that holds the record. "Minutes" is acceptable when the firm's minute discipline names attesters and decisions; "noted" is not.
 - **Frequency.** Event-based or periodic. Event-based gates name the event; periodic gates name the cadence (daily, weekly, monthly, quarterly, annual).
 - **Source anchor.** The named source for the gate's existence — model-risk effective-challenge framing for validation gates, the interagency TPRM lifecycle for vendor-onboarding gates, EU AI Act and NIST AI RMF for AI-governance scaffolding. Granular section refs live in `references/source-anchors.md`. Firm-policy-only gates source to the policy by version and section.
 
@@ -69,12 +69,12 @@ The source trace block and sign-off block close the artifact. Material claims ci
 
 The same gate spine carries different decision authorities, different independence expectations, and different documentation conventions across sectors and cross-cutting topics. Load only the overlays the scope flags. The overlays change which sources the matrix cites and what the practitioner expects to find; they do not change the column structure.
 
-- `references/sector-overlays/banking.md` carries large-bank heightened-standards expectations on board and risk-committee oversight, FRB supervisory expectations on senior-management oversight, and the enhanced-prudential-standards risk-committee shape for large BHCs.
-- `references/sector-overlays/insurance.md` carries NAIC ORSA governance, the corporate-governance-disclosure model-act gate flavour, and state DOI committee-charter conventions including audit-committee requirements under state insurance-holding-company statutes.
-- `references/sector-overlays/capital-markets.md` carries FINRA supervisory gate posture, the SEC advisers compliance-program annual-review gate framing, and the broker-dealer recordkeeping lens on gate-decision retention.
-- `references/sector-overlays/payments-fintech.md` carries OCC bank-fintech partnership oversight for sponsor-bank gate structures and the money-transmitter state-licensing gate posture for non-bank money-services businesses.
-- `references/cross-cutting/cyber.md` loads when gates cover incident-response decisions, materiality-determination for cyber events, or cyber-disclosure decisions. SEC public-company disclosure-committee posture, state cyber senior-governing-body responsibility, and FFIEC IT incident-response framing land here.
-- `references/cross-cutting/conduct.md` loads when gates cover customer-facing decisions: product approval, fee-change approval, marketing approval, restitution approval, fair-lending second-look. CFPB UDAAP and ECOA second-review conventions land here.
+- `references/sector-overlays.md#banking` carries large-bank heightened-standards expectations on board and risk-committee oversight, FRB supervisory expectations on senior-management oversight, and the enhanced-prudential-standards risk-committee shape for large BHCs.
+- `references/sector-overlays.md#insurance` carries NAIC ORSA governance, the corporate-governance-disclosure model-act gate flavour, and state DOI committee-charter conventions including audit-committee requirements under state insurance-holding-company statutes.
+- `references/sector-overlays.md#capital-markets` carries FINRA supervisory gate posture, the SEC advisers compliance-program annual-review gate framing, and the broker-dealer recordkeeping lens on gate-decision retention.
+- `references/sector-overlays.md#payments-fintech` carries OCC bank-fintech partnership oversight for sponsor-bank gate structures and the money-transmitter state-licensing gate posture for non-bank money-services businesses.
+- `references/cross-cutting.md#cyber` loads when gates cover incident-response decisions, materiality-determination for cyber events, or cyber-disclosure decisions. SEC public-company disclosure-committee posture, state cyber senior-governing-body responsibility, and FFIEC IT incident-response framing land here.
+- `references/cross-cutting.md#conduct` loads when gates cover customer-facing decisions: product approval, fee-change approval, marketing approval, restitution approval, fair-lending second-look. CFPB UDAAP and ECOA second-review conventions land here.
 
 Privacy and climate cross-cutting overlays follow the same pattern; this skill ships cyber and conduct as the cross-cutting files because they are the most frequent triggers. Granular citations (specific section labels, rule numbers) live in `references/source-anchors.md` and the overlay files; the body cites by path. Where firm policy or taxonomy applies (named committees specific to the firm, GRC-platform-specific decision-record fields, internal escalation ladders), it lives in `references/firm-overlay.md` and is consumed when present.
 
@@ -82,7 +82,7 @@ Privacy and climate cross-cutting overlays follow the same pattern; this skill s
 
 Independence is named per reviewer. A gate where the artifact's producer is also the gate's decider is not a gate; the producer's review is self-attestation. Where the source guidance demands independence (SR 11-7 validation independence, interagency TPRM line-1 / line-2 separation, EU AI Act Article 14 oversight by competent persons), the `independence_required` field is true and the matrix names the independence boundary.
 
-Stop conditions are declarative and binary. "Should be reviewed," "consider whether," and "as appropriate" are not stop conditions; "no pass if any open critical issue" is.
+Stop conditions are declarative and binary. "Should be reviewed," "consider whether," and "as appropriate" are not stop conditions; "no go if any open critical issue" is.
 
 Each gate names required inputs by artifact ID. A gate that reviews "what is available" is unauditable; the inputs list is the contract between upstream artifact-builders and the gate.
 
@@ -104,14 +104,16 @@ The matrix in `templates/default-output.md` shape and the structured record per 
 
 ## Pointers
 
+`references/sector-overlays.md` and `references/cross-cutting.md` hold one section per sector or topic, and `examples.md` one per example. Find the heading and read only that section.
+
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
-- `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md` — sector overlays loaded from scope.
-- `references/cross-cutting/{cyber,conduct}.md` — cross-cutting overlays loaded when the gates cover information-security or customer-facing decisions.
+- `references/sector-overlays.md` — sector overlays loaded from scope.
+- `references/cross-cutting.md` — cross-cutting overlays loaded when the gates cover information-security or customer-facing decisions.
 - `references/firm-overlay.md` — firm-installed taxonomy, named committees, GRC-platform decision-record fields, escalation ladders, dissent-path mechanics beyond the regulatory baseline; consumed when present.
 - `templates/default-output.md` — gate matrix template.
 - `schemas/review-gate-matrix.schema.json` — structured-output contract.
-- `examples/` — AI use-case lifecycle gates for a regional bank; critical-vendor onboarding gates aligned to interagency TPRM guidance.
-- `TROUBLESHOOTING.md` — recurring defects in gate matrices.
+- `examples.md` — AI use-case lifecycle gates for a regional bank; critical-vendor onboarding gates aligned to interagency TPRM guidance.
+- `examples.md#troubleshooting` — recurring defects in gate matrices.
 
 ## Human review and AI disclosure
 

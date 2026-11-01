@@ -55,7 +55,7 @@ Monitoring readiness, incident-response readiness, human oversight design, and f
 
 Sector and cross-cutting overlay sign-offs land before the consolidated sign-off block. Each loaded overlay names a co-reviewer or co-signer; the gate review records the status (signed, signed-with-conditions, dissent, pending, or not-applicable) for every loaded overlay. Pending sign-off is recorded explicitly rather than absent.
 
-The recommended decision lands once the residual risk, the open conditions, and the deployment-readiness sections are filled. Four options: `go` (no blocking conditions, all overlays signed, monitoring live, IR drilled, off-switch documented, swap policy explicit where applicable), `go_with_conditions` (no blocking conditions, tracking conditions accepted with named owners and SLAs), `hold` (one or more blocking conditions exist or one or more upstream artefacts is stale or missing or one or more deployment-readiness item is not exercisable before go-live), `no_go` (the use case does not pass second-line judgement at this gate). The rationale paragraph names the conditions that drove the call. For `go_with_conditions`, the blocking-versus-tracking distinction is explicit; "go" with a long blocking list is no-go in disguise.
+The recommended decision lands once the residual risk, the open conditions, and the deployment-readiness sections are filled. Four options: `go` (no blocking conditions, all overlays signed, monitoring live, IR drilled, off-switch documented, swap policy explicit where applicable), `go_with_conditions` (no blocking conditions, tracking conditions accepted with named owners and SLAs), `hold` (one or more blocking conditions exist or one or more upstream artefacts is stale or missing or one or more deployment-readiness item is not exercisable before go-live), `no_go` (the use case does not clear second-line judgement at this gate). The rationale paragraph names the conditions that drove the call. For `go_with_conditions`, the blocking-versus-tracking distinction is explicit; "go" with a long blocking list is no-go in disguise.
 
 The sign-off block names the reviewers across the relevant functions. A single-name sign-off block on a tier-1 or tier-2 GenAI use case is itself a finding. The committee assumes broader sign-off than exists when only one role is named. Dissent is recorded explicitly with a basis; the gate decision proceeds with the dissent visible to the committee.
 
@@ -65,7 +65,7 @@ Depth flexes with tier and gate type. A tier-3 recurring-revalidation gate revie
 
 ## Sector and cross-cutting overlays
 
-When the scope names a sector (banking, insurance, capital markets, payments-fintech), load the matching `references/sector-overlays/<sector>.md`. Each overlay carries sector-specific co-reviewers, additional notification triggers, sector-specific monitoring expectations, and recommended-action items. The overlay's named additions land in the memo; treating the overlay as background reading is the failure mode.
+When the scope names a sector (banking, insurance, capital markets, payments-fintech), load the matching `references/sector-overlays.md#<sector>`. Each overlay carries sector-specific co-reviewers, additional notification triggers, sector-specific monitoring expectations, and recommended-action items. The overlay's named additions land in the memo; treating the overlay as background reading is the failure mode.
 
 Cyber should be considered the default cross-cutting overlay for GenAI gate reviews. The CISO function is a co-signer on the gate decision, not a downstream consumer. Privacy loads where regulated personal data is handled (NPI, PHI, biometric data, state-comprehensive-privacy-law-relevant content). Conduct loads where customer-facing communication or decision-affecting output is in scope. Climate is not applicable to pre-prod gate reviews.
 
@@ -101,14 +101,16 @@ Downstream consumers: `board-ai-risk-pack` pulls the residual-risk summary, the 
 
 ## Pointers
 
+`references/sector-overlays.md` and `references/cross-cutting.md` hold one section per sector or topic, and `examples.md` one per example. Find the heading and read only that section.
+
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
-- `references/sector-overlays/{banking,insurance,capital-markets,payments-fintech}.md` — sector overlays loaded from scope.
-- `references/cross-cutting/{cyber,privacy,conduct,ai-ethics}.md` — cross-cutting overlays loaded from scope. Cyber is the default for GenAI gate reviews.
+- `references/sector-overlays.md` — sector overlays loaded from scope.
+- `references/cross-cutting.md` — cross-cutting overlays loaded from scope. Cyber is the default for GenAI gate reviews.
 - `references/firm-overlay.md` — firm policy, taxonomy, named committees, named owners, gate machinery (consumed when present).
 - `templates/default-output.md` — gate-review memo template.
 - `schemas/genai-pre-prod-review.schema.json` — structured-output contract.
-- `examples/` — anonymised public-source-derived scenarios (banking KYC analyst assistant initial release; insurance claims summarisation material expansion).
-- `TROUBLESHOOTING.md` — recurring defects.
+- `examples.md` — anonymised public-source-derived scenarios (banking KYC analyst assistant initial release; insurance claims summarisation material expansion).
+- `examples.md#troubleshooting` — recurring defects.
 
 ## Human review and AI disclosure
 

@@ -39,7 +39,7 @@ A practitioner note before the list: foundation-model vendor evidence-pack revie
 - Citation: NIST AI 600-1, "Artificial Intelligence Risk Management Framework: Generative Artificial Intelligence Profile" (July 2024), Govern subcategories on third-party considerations and Manage subcategories on third-party risks for foundation-model dependence [verify exact subcategory numbering for the foundation-model and vendor-evidence entries].
 - Excerpt-paraphrase: The Generative AI Profile extends the NIST AI RMF for GenAI-specific concerns. The Govern function carries guidance on third-party considerations specific to foundation-model providers, including system-card review and content-provenance expectations. The Manage function carries guidance on third-party risk management for GenAI, including monitoring for upstream changes that affect deployment and incident-disclosure expectations from vendors. The profile treats foundation-model dependence as a third-party-risk concern with named documentation expectations.
 - Link: https://www.nist.gov/itl/ai-risk-management-framework — Generative AI Profile (NIST AI 600-1), Govern and Manage sections [verify subcategory numbering for foundation-model and vendor-evidence-specific entries]
-- Notes: Voluntary, not binding. The most current leading-practice anchor for GenAI third-party considerations as of the skill's authoring. Subcategory numbering carries `[verify section]` flags pending second-pass confirmation.
+- Notes: Voluntary, not binding. The most current leading-practice anchor for GenAI third-party considerations as of the skill's authoring. Subcategory numbering carries `[verify section]` flags pending second-review confirmation.
 
 ### 6. ISO/IEC 42001:2023 — Artificial Intelligence Management System
 

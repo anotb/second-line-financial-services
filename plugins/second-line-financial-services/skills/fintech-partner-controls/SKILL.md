@@ -60,7 +60,7 @@ The pack has the same spine across program-operator types. Walk it in the order 
 
 **Customer-protection controls.** Reg DD periodic-statement disclosure, fee-schedule disclosure, APY disclosure where the fintech surface presents a deposit-like product; account-closure and account-hold procedures with notice-timing and customer-recourse channel (the most-frequent fintech UDAAP theme per CFPB Supervisory Highlights); complaint intake and routing to the sponsor bank within program-agreement timing; complaint-data triangulation against CFPB Consumer Complaint Database; fee-disclosure-vs-actual reconciliation; FDIC misrepresentation review.
 
-**Cyber and resilience controls.** Sponsor-bank cyber-notification chain and the operator's contractual notification clock (often tighter than 24 hours, timed against the sponsor bank's 36-hour prudential clock under the Computer-Security Incident Notification Rule effective May 1, 2022); BCP / DR coverage and tabletop cadence; third-party / fourth-party register; vendor-stack SOC 2 currency. NYDFS Part 500 §500.17(a) 72-hour clock where the operator is a Covered Entity. Detail in `references/cross-cutting/cyber.md`.
+**Cyber and resilience controls.** Sponsor-bank cyber-notification chain and the operator's contractual notification clock (often tighter than 24 hours, timed against the sponsor bank's 36-hour prudential clock under the Computer-Security Incident Notification Rule effective May 1, 2022); BCP / DR coverage and tabletop cadence; third-party / fourth-party register; vendor-stack SOC 2 currency. NYDFS Part 500 §500.17(a) 72-hour clock where the operator is a Covered Entity. Detail in `references/cross-cutting.md#cyber`.
 
 **Subcontractor and fourth-party register.** Each material vendor — processor, KYC vendor, fraud-decision vendor, sanctions-screening vendor, ledger provider, dispute-management vendor — with function, criticality, evidence-of-oversight artifact (most-recent SOC 2 with audit period, last-tested control gaps, contract clause coverage). The Interagency Guidance on Third-Party Relationships (June 6, 2023) treats these as fourth parties to the sponsor bank's relationship with the fintech; the bank's TPRM expects to see them.
 
@@ -78,19 +78,21 @@ Cite a source for every material claim by file path into `references/source-anch
 
 ## Adaptation
 
-Depth and length flex to the trigger and the audience. A sponsor-bank annual review reads longer than a sponsor-questionnaire response; a state-MTL exam pack leads with the state geography row and the MTL / NMLS posture; a new-rail delta pack focuses on the affected rail, the affected program-agreement clauses, and the customer-dispute-pathway change. Sector overlay loading is fixed (this skill is the payments-fintech sector flagship; the overlay is `references/sector-overlays/payments-fintech.md`). Cross-cutting overlay loading: cyber and conduct are default-on for any consumer-facing program on payment rails; privacy is default-on where customer NPI flows for fraud or AML monitoring beyond baseline.
+Depth and length flex to the trigger and the audience. A sponsor-bank annual review reads longer than a sponsor-questionnaire response; a state-MTL exam pack leads with the state geography row and the MTL / NMLS posture; a new-rail delta pack focuses on the affected rail, the affected program-agreement clauses, and the customer-dispute-pathway change. Sector overlay loading is fixed (this skill is the payments-fintech sector flagship; the overlay is `references/sector-overlays.md#payments-fintech`). Cross-cutting overlay loading: cyber and conduct are default-on for any consumer-facing program on payment rails; privacy is default-on where customer NPI flows for fraud or AML monitoring beyond baseline.
 
 ## Pointers
 
+`references/sector-overlays.md` and `references/cross-cutting.md` hold one section per sector or topic, and `examples.md` one per example. Find the heading and read only that section.
+
 - `references/source-anchors.md` — citations and excerpts for the named anchors.
-- `references/sector-overlays/payments-fintech.md` — the payments-fintech sector flavour, required-on for every engagement (rail-by-rail control families, sponsor-bank construct, FBO mechanics, the §1033 status note, the MSB-vs-not discipline).
-- `references/cross-cutting/cyber.md` — sponsor-bank cyber-notification chain, GLBA Safeguards passed through the program agreement, FFIEC IT booklets used by sponsor-bank examiners.
-- `references/cross-cutting/privacy.md` — sponsor-bank GLBA posture on customer data, state privacy laws, §1033 implications.
+- `references/sector-overlays.md#payments-fintech` — the payments-fintech sector flavour, required-on for every engagement (rail-by-rail control families, sponsor-bank construct, FBO mechanics, the §1033 status note, the MSB-vs-not discipline).
+- `references/cross-cutting.md#cyber` — sponsor-bank cyber-notification chain, GLBA Safeguards passed through the program agreement, FFIEC IT booklets used by sponsor-bank examiners.
+- `references/cross-cutting.md#privacy` — sponsor-bank GLBA posture on customer data, state privacy laws, §1033 implications.
 - `references/firm-overlay.md` — firm-installed policy, taxonomy, decision forums and sign-off owners, control-family thresholds beyond the regulatory baseline; consumed when present.
 - `templates/default-output.md` — content spec for the memo and inventory.
 - `schemas/fintech-partner-controls.schema.json` — structured-output contract; the controls-evidence record consumed by the sponsor-bank TPRM system and by downstream skills (`payment-operations-incident-review` reads the control inventory when an incident lands; `payments-risk-assessment` reads the program-agreement control map; `concentration-risk-review` reads the subcontractor register).
-- `examples/` — BaaS program operator preparing for an annual sponsor-bank review post-2024 deposit-arrangement guidance; mid-stage neobank adding FedNow-funded instant payouts under an existing sponsor-bank ACH agreement.
-- `TROUBLESHOOTING.md` — recurring pitfalls.
+- `examples.md` — BaaS program operator preparing for an annual sponsor-bank review post-2024 deposit-arrangement guidance; mid-stage neobank adding FedNow-funded instant payouts under an existing sponsor-bank ACH agreement.
+- `examples.md#troubleshooting` — recurring pitfalls.
 
 ## Output
 
